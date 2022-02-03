@@ -76,16 +76,9 @@ Style testing is done manually. Run `npm start` from root folder in this project
 
 ### Production Deployment
 
-The Core Styles built stylesheets are acquired or accessed by other repositories.
+The Core Styles are not deployed alone yet. The stylesheets will be acquired or accessed by other repositories.
 
 > __Warning__: No repository uses these styles yet. The process to do so has not been designed.
-
-
-## Deployment Steps
-
-1. Build and publish portal image with [Jenkins](https://jenkins01.tacc.utexas.edu/view/WMA%20CEP/job/Core_CMS/)
-2. Update deployment settings, particularly the `CMS_TAG` environment variable in [Core Portal Deployments](https://github.com/TACC/Core-Portal-Deployments) with new tag name
-3. Deploy new image with [Jenkins](https://jenkins01.tacc.utexas.edu/view/WMA%20CEP/job/Core_Portal_Deploy/)
 
 
 ## Contributing
