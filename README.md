@@ -2,7 +2,7 @@
 
 The shared stylesheets for TACC WMA Workspace Portals & Websites
 
-> __Warning__: No repository uses these styles yet. The process to do so has not been designed.
+> __⚠️ Warning__: No repository uses these styles yet. The process to do so has not been designed.
 
 
 ## Related Repositories
@@ -78,7 +78,7 @@ Style testing is done manually. Run `npm start` from root folder in this project
 
 The Core Styles are not deployed alone yet. The stylesheets will be acquired or accessed by other repositories.
 
-> __Warning__: No repository uses these styles yet. The process to do so has not been designed.
+> __⚠️ Warning__: No repository uses these styles yet. The process to do so has not been designed.
 
 
 ## Contributing
