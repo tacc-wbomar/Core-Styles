@@ -17,7 +17,7 @@ function execCallback(err, stdout, stderr) {
  * Build styles from external CSS
  * @param {string} inputDir - Parse CSS files from which directory
  * @param {string} outputDir - Output CSS files to which directory
- * @param {object} [opts={}] - Parse CSS files from which directory
+ * @param {object} [opts={}] - Options
  * @param {object} [opts.fileExt='css'] - Extension of CSS files to parse
  * @param {string} [opts.configDir] - Custom config directory
  * @param {boolean} [opts.verbose=false] - To print more info from build log
