@@ -1,22 +1,31 @@
 plugins:
+
+
   postcss-import:
     path:
       - './source'
+
+
   postcss-extend: {}
-  # Using `importFrom` via `postcss-preset-env` fails (but should work)
-  # FAQ: So it is used directly with plugin (not via `postcss-preset-env`)
-  # SEE: https://github.com/csstools/postcss-preset-env/issues/202
-  # NOTE: Using `postcss-preset-env`'s install of `postcss-env-function` works
+
+
+  # https://github.com/TACC/Core-CMS/blob/70a1ca3/conf/css/.postcssrc.yml#L6-L12
   postcss-env-function:
     importFrom:
       - './source/_themes/export.js'
+
+
   postcss-preset-env:
-    # SEE: https://github.com/csstools/postcss-preset-env#features
+
+    # https://github.com/csstools/postcss-preset-env#features
     stage: false
-    # SEE: https://github.com/csstools/postcss-preset-env/blob/master/src/lib/plugins-by-id.js#L35
+
+    # https://github.com/csstools/postcss-preset-env/blob/master/src/lib/plugins-by-id.js#L35
     features:
       custom-media-queries: true
       media-query-ranges: true
+
+
   cssnano:
     preset:
       - 'default'

@@ -7,9 +7,13 @@
     "build": "postcss \"source/*.css\" --base \"source/\" --dir \"dist\" --verbose --colors --config \"./\""
   },
   "// scripts": {
-    "build": "Output static stylesheets from CSS source code",
+    "build": "Build static stylesheets from CSS source code",
     "build:quotes-why": "Quote globbed paths to prevent OS from parsing them",
     "build:quotes-ref": "https://github.com/postcss/postcss-cli/issues/142#issuecomment-310681302"
+  },
+  "engines": {
+    "node": ">=12.x",
+    "npm": ">=6.x"
   },
   "repository": "git@github.com:tacc-wbomar/Core-Styles.git",
   "devDependencies": {
@@ -19,6 +23,15 @@
     "postcss-import": "^12.0.1",
     "postcss-preset-env": "^6.7.0",
     "yarn": "^1.22.5"
+  },
+  "// devDependencies": {
+    "cssnano": "To minify CSS",
+    "postcss-cli": "To process CSS",
+    "postcss-cli:note": "This is the simplest and cheapest 'PostCSS Runner'",
+    "postcss-import": "To import CSS files at build-time",
+    "postcss-extend": "To import/extend CSS rule sets at build-time",
+    "postcss-preset-env": "To use future CSS features now",
+    "yarn": "Alternative to NPM"
   },
   "author": "Wesley Bomar <wbomar@tacc.utexas.edu>"
 }
