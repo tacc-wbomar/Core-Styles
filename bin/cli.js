@@ -17,7 +17,7 @@ program
         'print the version of this software')
     .option('--verbose',
         'print more information from build log')
-	.option('-c, --config <path>',
+	.option('-c, --config-dir <path>',
         `load custom config file from which directory¹ (advanced feature)`);
 
 program.addHelpText('after', `
