@@ -7,7 +7,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "postcss \"source/*.css\" --base \"source/\" --dir \"dist\" --verbose --colors --config \"./\""
+    "build": "postcss \"source/*.css\" --base \"source/\" --dir \"dist\" --verbose --colors --config \"./\"",
+    "update-version": "bin/update-version.js"
   },
   "// scripts": {
     "build": "Build static stylesheets from CSS source code",

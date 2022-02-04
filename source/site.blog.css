@@ -1,3 +1,6 @@
+@import url("_version.css");
+/*! site.blog.css */
+
 /* DO NOT ADD STYLES HERE; ONLY IMPORT OTHER STYLESHEETS */
 
 /* NOTE: This file exists so that the Blog/News styles can be loaded only if feature is enabled */

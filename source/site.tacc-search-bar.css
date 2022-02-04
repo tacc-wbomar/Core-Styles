@@ -1,3 +1,6 @@
+@import url("_version.css");
+/*! site.tacc-search-bar.css */
+
 /* DO NOT ADD STYLES HERE; ONLY IMPORT OTHER STYLESHEETS */
 
 /* NOTE: This file exists so <tacc-search-bar> can load internal styles */
