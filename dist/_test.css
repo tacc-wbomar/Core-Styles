@@ -1,0 +1,28 @@
+/*! tacc-core-styles v0.1.0 | MIT License | github.com/tacc-wbomar/Core-Styles */
+/*! _test.css */
+/*! Class Selector */
+/*! Goal: */._test_1,._test_mixin_1{color:red}
+/*! Test: */._test_1,._test_mixin_1{color:red}
+/*! Placeholder Selector */
+/*! Goal: */._test_2{color:#ff0}
+/*! Test: */._test_2{color:#ff0}
+/*! Class & Placeholder Selector, Use Class Selector */
+/*! Goal: */._test_3,._test_mixin_3{color:green}
+/*! Test: */._test_3,._test_mixin_3{color:green}
+/*! Class & Placeholder Selector, Use Placeholder Selector */
+/*! Goal: */._test_4{color:#00f}
+/*! Test: */._test_4,._test_mixin_4{color:#00f}
+/*! Define Placeholder */
+/*! Goal: */._test_5{color:#fff}
+/*! Test: */._test_5{color:#fff}
+/*! Custom Media Queries */
+/*! Goal: */@media (max-width:30em){._test{background-color:red}}
+/*! Test: */@media (max-width:30em){._test{background-color:red}}
+/*! Goal: */@media (max-width:60em){._test{background-color:red}}@media (max-width:60em){._test{background-color:#00f}}
+/*! Test: */@media (min-width:60em){._test{background-color:red}}@media (min-width:60em){._test{background-color:#00f}}
+/*! Media Query Ranges */
+/*! Goal: */@media (max-width:479px){._test{background-color:red}}@media (min-width:480px) and (max-width:767px){._test{background-color:#00f}}@media (min-width:768px){._test{background-color:#0f0}}
+/*! Test: */@media (max-width:479px){._test{background-color:red}}@media (min-width:480px) and (max-width:767px){._test{background-color:#00f}}@media (min-width:768px){._test{background-color:#0f0}}
+/*! Custom Media Queries & Media Query Ranges */
+/*! Goal: */@media (min-width:992px) and (max-width:1199px){._test{background-color:red}}
+/*! Test: */@media (min-width:992px) and (max-width:1199px){._test{background-color:red}}
