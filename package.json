@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "license": "MIT",
   "description": "CSS source and processor for TACC Core-CMS and Core-Portal.",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "postcss \"source/*.css\" --base \"source/\" --dir \"dist\" --verbose --colors --config \"./\""
   },
