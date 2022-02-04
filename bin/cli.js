@@ -22,10 +22,10 @@ program
 
 program.addHelpText('after', `
 Note:
-    the dir structure within '--input-dir' will be mirrored in '--output-dir'
+    The dir structure within '--input-dir' will be mirrored in '--output-dir'.
 
 Footnotes:
-    ¹ See stand-alone files supported by https://github.com/postcss/postcss-load-config`);
+    ¹ A directory with stand-alone config file that is supported by https://github.com/postcss/postcss-load-config.`);
 
 program.showHelpAfterError('(add --help for additional information)');
 
@@ -39,6 +39,7 @@ if (opts.version) {
 }
 
 const buildOpts = {
+    baseImportDir: ((opts.baseImportDir) ? resolve(opts.baseImportDir) : null),
     configDir: ((opts.configDir) ? resolve(opts.configDir) : null),
     fileExt: opts.fileExt,
     verbose: opts.verbose || null,
