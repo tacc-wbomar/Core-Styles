@@ -1,8 +1,6 @@
-/**
- * Export appropriate theme file based on settings value
- */
-const rootPath = __dirname + '/../..';
-const settings = require( rootPath + '/settings.json');
+/** Export appropriate theme file based on settings value */
+
+const settings = require(`${__dirname}/../../settings.json`);
 const theme = settings.THEME || 'default';
 
 /**

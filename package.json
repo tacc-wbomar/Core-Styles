@@ -2,12 +2,14 @@
   "name": "tacc-core-styles",
   "version": "0.1.0",
   "license": "MIT",
+  "author": "Wesley Bomar <wbomar@tacc.utexas.edu>",
   "description": "CSS source and processor for TACC Core-CMS and Core-Portal.",
   "files": [
     "dist"
   ],
+  "bin": "bin/cli.js",
   "scripts": {
-    "build": "postcss \"source/*.css\" --base \"source/\" --dir \"dist\" --verbose --colors --config \"./\"",
+    "build": "node bin/cli.js -i \"./source\" -o \"./dist\" --verbose",
     "update-version": "bin/update-version.js"
   },
   "// scripts": {
@@ -37,5 +39,10 @@
     "postcss-preset-env": "To use future CSS features now",
     "yarn": "Alternative to NPM"
   },
-  "author": "Wesley Bomar <wbomar@tacc.utexas.edu>"
+  "dependencies": {
+    "commander": "^9.0.0"
+  },
+  "// dependencies": {
+    "commander": "To create CLI"
+  }
 }
