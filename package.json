@@ -4,6 +4,7 @@
   "license": "MIT",
   "author": "Wesley Bomar <wbomar@tacc.utexas.edu>",
   "description": "CSS source and processor for TACC Core-CMS and Core-Portal.",
+  "main": "index.js",
   "files": [
     "dist"
   ],
