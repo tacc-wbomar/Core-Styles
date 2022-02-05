@@ -3,7 +3,7 @@ plugins:
 
   postcss-import:
     path:
-      - './source'
+      - 'source'
 
 
   postcss-extend: {}
