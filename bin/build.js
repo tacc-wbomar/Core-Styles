@@ -29,11 +29,10 @@ function build(inputDir, outputDir, opts = {}) {
   const configDir = opts.configDir || `${__dirname}/../`;
   const verbose = (opts.verbose === true) ? '--verbose' : '';
 
-  const command = `postcss "${inputDir}/*.${fileExt}" --base "${sourceDir}" --dir "${outputDir}" ${verbose} --config "${configDir}"`;
-
-  console.log(command);
+  const command = `postcss "${inputDir}/*.${fileExt}" --dir "${outputDir}" ${verbose} --config "${configDir}"`;
 
   exec(command, execCallback);
+  // console.log(command); // only shown if command execution is commented out
 }
 
 module.exports = build;
