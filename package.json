@@ -26,28 +26,28 @@
   },
   "repository": "git@github.com:tacc-wbomar/Core-Styles.git",
   "devDependencies": {
+    "yarn": "^1.22.5"
+  },
+  "// devDependencies": {
+    "yarn": "Alternative to NPM"
+  },
+  "dependencies": {
+    "commander": "^9.0.0",
     "cssnano": "^4.1.10",
     "js-yaml": "^3.13.1",
     "merge-lite": "^1.0.2",
     "postcss-cli": "^7.1.2",
     "postcss-extend": "^1.0.5",
     "postcss-import": "^12.0.1",
-    "postcss-preset-env": "^6.7.0",
-    "yarn": "^1.22.5"
+    "postcss-preset-env": "^6.7.0"
   },
-  "// devDependencies": {
+  "// dependencies": {
+    "commander": "To create CLI",
     "cssnano": "To minify CSS",
     "postcss-cli": "To process CSS",
     "postcss-cli:note": "This is the simplest and cheapest 'PostCSS Runner'",
     "postcss-import": "To import CSS files at build-time",
     "postcss-extend": "To import/extend CSS rule sets at build-time",
-    "postcss-preset-env": "To use future CSS features now",
-    "yarn": "Alternative to NPM"
-  },
-  "dependencies": {
-    "commander": "^9.0.0"
-  },
-  "// dependencies": {
-    "commander": "To create CLI"
+    "postcss-preset-env": "To use future CSS features now"
   }
 }
