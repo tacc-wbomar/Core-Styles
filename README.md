@@ -2,7 +2,7 @@
 
 The shared stylesheets for TACC WMA Workspace Portals & Websites
 
-> __Warning__: No repository uses these styles yet. The process to do so has not been designed.
+> __Notice__: Currently only [Core CMS] is using these stylesheets.
 
 
 ## Related Repositories
@@ -76,9 +76,19 @@ Style testing is done manually. Run `npm start` from root folder in this project
 
 ### Production Deployment
 
-The Core Styles are not deployed alone yet. The stylesheets will be acquired or accessed by other repositories.
+The Core Styles are not deployed alone _yet_. ¹
 
-> __Warning__: No repository uses these styles yet. The process to do so has not been designed.
+_For now_, the stylesheets are acquired or accessed by other repositories.
+
+| Repo | Usage |
+| - | - |
+| __[Core CMS]__ | [via CLI installed on test branch](https://github.com/TACC/Core-CMS/compare/test/core-styles) |
+| __[Core CMS Pattern Library]__ | not accessing styles [_yet_][research-pattern-lib] ¹ |
+
+<sub>¹ A repo that is, or will be, in [Core CMS Pattern Library] should load these styles __and__ build a pattern library.</sub>
+
+[Core CMS Pattern Library]: https://github.com/tacc-wbomar?tab=repositories&q=Core-CMS-Pattern-Library
+[research-pattern-lib]: https://confluence.tacc.utexas.edu/x/FADMBQ
 
 
 ## Contributing
