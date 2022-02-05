@@ -4,6 +4,7 @@ const { resolve } = require('path');
 const { program } = require('commander');
 
 const build = require('./build.js');
+const config = require('./config.js');
 const { version } = require('../package.json')
 
 program
@@ -17,15 +18,15 @@ program
         'print the version of this software')
     .option('--verbose',
         'print more information from build log')
-	.option('-c, --config-dir <path>',
-        `load custom config file from which directory¹ (advanced feature)`);
+	.option('-c, --custom-config-file <path>',
+        `overwrite base config with values from YAML file¹ (advanced feature)`);
 
 program.addHelpText('after', `
 Note:
     The dir structure within '--input-dir' will be mirrored in '--output-dir'.
 
 Footnotes:
-    ¹ A directory with stand-alone config file that is supported by https://github.com/postcss/postcss-load-config.`);
+    ¹ Like an '.postcssrc.yml' from https://github.com/postcss/postcss-load-config#postcssrc.`);
 
 program.showHelpAfterError('(add --help for additional information)');
 
@@ -40,13 +41,9 @@ if (opts.version) {
 
 const buildOpts = {
     baseImportDir: ((opts.baseImportDir) ? resolve(opts.baseImportDir) : null),
-    configDir: ((opts.configDir) ? resolve(opts.configDir) : null),
     fileExt: opts.fileExt,
     verbose: opts.verbose || null,
 };
 
-build(
-    resolve(opts.inputDir),
-    resolve(opts.outputDir),
-    buildOpts
-);
+config((opts.customConfigFile) ? resolve(opts.customConfigFile) : null);
+build(resolve(opts.inputDir), resolve(opts.outputDir), buildOpts);

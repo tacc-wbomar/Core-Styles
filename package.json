@@ -24,6 +24,8 @@
   "repository": "git@github.com:tacc-wbomar/Core-Styles.git",
   "devDependencies": {
     "cssnano": "^4.1.10",
+    "js-yaml": "^3.13.1",
+    "merge-lite": "^1.0.2",
     "postcss-cli": "^7.1.2",
     "postcss-extend": "^1.0.5",
     "postcss-import": "^12.0.1",

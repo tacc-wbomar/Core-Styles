@@ -1019,6 +1019,11 @@ mdn-data@2.0.4:
   resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.4.tgz#699b3c38ac6f1d728091a64650b65d388502fd5b"
   integrity sha512-iV3XNKw06j5Q7mi6h+9vbx23Tv7JkjEVgKHW4pimwyDGWm0OIQntJJ+u1C6mg6mK1EaTv42XQ7w76yuzH7M2cA==
 
+merge-lite@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/merge-lite/-/merge-lite-1.0.2.tgz#b9feafd2428b5352e1f258201e6ff4c0b5e1d749"
+  integrity sha512-28Q9aFRLzLCSp/2MLV49sbilBcCw7pIxq9YfOuX8+g/cMbPgYcAZgI0BLHnsb7ZRgvYOuaEGQPYJk8OWcGHk4A==
+
 merge2@^1.3.0, merge2@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/merge2/-/merge2-1.4.1.tgz#4368892f885e907455a6fd7dc55c0c9d404990ae"
