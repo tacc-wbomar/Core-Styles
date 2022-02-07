@@ -18,15 +18,17 @@ program
         'print the version of this software')
     .option('--verbose',
         'print more information from build log')
-	.option('-c, --custom-config-file <path>',
-        `overwrite base config with values from YAML file¹ (advanced feature)`);
+	.option('-c, --custom-config-files <paths...>',
+        `overwrite base config with values from YAML files¹² (advanced)`);
 
 program.addHelpText('after', `
 Note:
     The dir structure within '--input-dir' will be mirrored in '--output-dir'.
 
 Footnotes:
-    ¹ Like an '.postcssrc.yml' from https://github.com/postcss/postcss-load-config#postcssrc.`);
+    ¹ The file formats are like '.postcssrc.yml' from https://github.com/postcss/postcss-load-config#postcssrc.
+    ² The first file overwrites the base. Each successive file overwrites the file to its left.
+`);
 
 program.showHelpAfterError('(add --help for additional information)');
 
@@ -45,5 +47,12 @@ const buildOpts = {
     verbose: opts.verbose || null,
 };
 
-config((opts.customConfigFile) ? resolve(opts.customConfigFile) : null);
-build(resolve(opts.inputDir), resolve(opts.outputDir), buildOpts);
+const inputDir = resolve(opts.inputDir);
+const outputDir = resolve(opts.outputDir);
+const customConfigFiles = (opts.customConfigFiles) ?
+    opts.customConfigFiles.map(file =>
+        (file) ? resolve(file) : null
+    ) : null;
+
+config(customConfigFiles);
+build(inputDir, outputDir, buildOpts);
