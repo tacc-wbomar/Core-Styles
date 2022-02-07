@@ -70,7 +70,7 @@ You can build stylesheets __from__ source files __in__ `source` directory __to__
 
 ## Testing
 
-Plugin testing is done manually. Run `npm run build` from root folder in this project, then review output in `/dist/_test.css`, to ensure plugins are working correctly.
+Plugin testing is done manually. Run `npm run build` from root folder in this project, then review output in `/dist/_tests.css`, to ensure plugins are working correctly.
 
 Style testing is done manually. Run `npm start` from root folder in this project, then review output at web interface, to ensure styles are rendering correctly.
 

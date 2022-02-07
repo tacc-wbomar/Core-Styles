@@ -1,5 +1,6 @@
 # Project
 node_modules
+.postcssrc.yml
 
 # IDE
 .vscode

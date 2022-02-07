@@ -23,8 +23,6 @@ function execCallback(err, stdout, stderr) {
  * @param {boolean} [opts.verbose=false] - To print more info from build log
  */
 function build(inputDir, outputDir, opts = {}) {
-  const sourceDir = `${__dirname}/../source`;
-
   const fileExt = opts.fileExt || 'css';
   const configDir = opts.configDir || `${__dirname}/../`;
   const verbose = (opts.verbose === true) ? '--verbose' : '';
