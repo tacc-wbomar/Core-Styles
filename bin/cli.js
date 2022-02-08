@@ -1,15 +1,13 @@
 #!/usr/bin/env node
 
-const { resolve } = require('path');
 const { program } = require('commander');
 
-const build = require('./build.js');
-const config = require('./config.js');
+const taccCoreStyles = require('../index.js');
 
 program
-	.requiredOption('-i, --input-dir <path>',
+    .requiredOption('-i, --input-dir <path>',
         'parse CSS files from which directory')
-	.requiredOption('-o, --output-dir <path>',
+    .requiredOption('-o, --output-dir <path>',
         'output CSS files to which directory')
     .option('-e, --file-ext <ext>',
         'extension of CSS files to parse (default: "css")', 'css')
@@ -35,23 +33,8 @@ program.showHelpAfterError('(add --help for additional information)');
 program.parse(process.argv);
 
 const opts = program.opts();
-// console.log('CLI opts:', opts);
+// console.log('[cli.js] opts:', opts);
 
-if (opts.version) {
-    console.log(process.env.npm_package_version);
-}
+const { inputDir, outputDir, ...buildOpts } = opts;
 
-const buildOpts = {
-    fileExt: opts.fileExt,
-    verbose: opts.verbose || null,
-};
-
-const inputDir = resolve(opts.inputDir);
-const outputDir = resolve(opts.outputDir);
-const customConfigFiles = (opts.customConfigFiles) ?
-    opts.customConfigFiles.map(file =>
-        (file) ? resolve(file) : null
-    ) : null;
-
-config(customConfigFiles);
-build(inputDir, outputDir, buildOpts);
+taccCoreStyles( inputDir, outputDir, opts );

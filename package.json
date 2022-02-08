@@ -6,11 +6,13 @@
   "author": "Wesley Bomar <wbomar@tacc.utexas.edu>",
   "description": "CSS source and processor for TACC Core-CMS and Core-Portal.",
   "files": [
+    "bin",
     "dist",
     "source",
     ".postcssrc.base.yml",
     "settings.json"
   ],
+  "main": "index.js",
   "bin": "bin/cli.js",
   "scripts": {
     "build": "node bin/cli.js -i \"./source\" -o \"./dist\" --verbose",
@@ -37,6 +39,7 @@
     "cssnano": "^4.1.10",
     "js-yaml": "^3.13.1",
     "merge-lite": "^1.0.2",
+    "node-cmd": "^5.0.0",
     "postcss-cli": "^7.1.2",
     "postcss-extend": "^1.0.5",
     "postcss-import": "^12.0.1",
@@ -45,6 +48,7 @@
   "// dependencies": {
     "commander": "To create CLI",
     "cssnano": "To minify CSS",
+    "node-cmd": "To run `postcss-cli` from script",
     "postcss-cli": "To process CSS",
     "postcss-cli:note": "This is the simplest and cheapest 'PostCSS Runner'",
     "postcss-import": "To import CSS files at build-time",
