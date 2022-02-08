@@ -2,24 +2,46 @@
 
 The shared stylesheets for TACC WMA Workspace Portals & Websites
 
-> __⚠️ Warning__: No repository uses these styles yet. The process to do so has not been designed.
+> __Notice__: Currently only [Core CMS] is using these styles.
 
 
 ## Related Repositories
 
-- [Camino], a Docker container-based deployment scheme
 - [Core CMS], the base CMS code for TACC WMA CMS Websites
-- [Core Portal], the base Portal code for TACC WMA CMS Websites
-- [Core Portal Deployments], private repository that facilitates deployments of [Core Portal] images via [Camino] and Jenkins
+
+## External Project Usage
+
+### Quick Start
+
+```bash
+Usage: cli [options]
+
+Options:
+  -i, --input-dir <path>                parse CSS files from which directory
+  -o, --output-dir <path>               output CSS files to which directory
+  -e, --file-ext <ext>                  extension of CSS files to parse (default: "css") (default: "css")
+  -v, --version                         print the version of this software
+  --verbose                             print more information from build log
+  -c, --custom-config-files <paths...>  overwrite base config with values from YAML files¹² (advanced)
+  -h, --help                            display help for command
+
+Note:
+    The dir structure within '--input-dir' will be mirrored in '--output-dir'.
+
+Footnotes:
+    ¹ The file formats are like '.postcssrc.yml' from https://github.com/postcss/postcss-load-config#postcssrc.
+    ² The first file is merged on top of the base config.
+      Each successive file overwrites the file before it.
+```
 
 
 ## Local Development Setup
 
-### Prequisites for Reviewing the Styles
+### Prequisites for Building the Styles
 
 * Nodejs 12.x (LTS)
 
-The Core Styles can be previewed using a Pattern Library powered by Node.
+> __Future__: The Core Styles will be previewable using a pattern library software.
 
 ### Code Configuration
 
@@ -30,18 +52,20 @@ Code configuration happens in repos that use these styles.
 1. [Install][yarn-install] the dependencies:
 
     ```bash
-    yarn install
+    yarn # a.k.a. yarn install
     ```
 
-2. Build stylesheets + Run the pattern library:
-
-    ```bash
-    npm start
-    ```
-
-3. Open the web interface.
-
-    The build command will output the URL (and may even open it for you).
+> __Future__:
+>
+> 2. Build stylesheets + Run the pattern library:
+> 
+>     ```bash
+>     npm start
+>     ```
+> 
+> 3. Open the web interface.
+> 
+>     The build command will output the URL (and may even open it for you).
 
 
 [yarn-install]: https://classic.yarnpkg.com/en/docs/cli/install/
@@ -49,12 +73,15 @@ Code configuration happens in repos that use these styles.
 
 ### Source Files
 
-If you changes files in any `source/` directory, you may need to follow some of these steps.
+If you changes files in a `source/` directory, you may need to follow some of these steps.
 
 #### Quick Start
 
 1. _(optional)_ Make changes to `/source` files.
-2. Build and preview the styles: `npm start`
+2. Build the styles: `yarn build`
+
+    > __Future__: 2. Build and preview the styles: `yarn start`
+
 3. _(to debug)_ Review respective `/dist` files' content.
 
 #### How to Just Build Stylesheets
@@ -70,15 +97,25 @@ You can build stylesheets __from__ source files __in__ `source` directory __to__
 
 ## Testing
 
-Plugin testing is done manually. Run `npm run build` from root folder in this project, then review output in `/dist/_test.css`, to ensure plugins are working correctly.
+Plugin testing is done manually. Run `npm run build` from root folder in this project, then review output in `/dist/_tests.css`, to ensure plugins are working correctly.
 
 Style testing is done manually. Run `npm start` from root folder in this project, then review output at web interface, to ensure styles are rendering correctly.
 
 ### Production Deployment
 
-The Core Styles are not deployed alone yet. The stylesheets will be acquired or accessed by other repositories.
+The Core Styles are not deployed alone _yet_. ¹
 
-> __⚠️ Warning__: No repository uses these styles yet. The process to do so has not been designed.
+_For now_, the stylesheets are acquired or accessed by other repositories.
+
+| Repo | Usage |
+| - | - |
+| __[Core CMS]__ | [via CLI installed on test branch](https://github.com/TACC/Core-CMS/compare/test/core-styles) |
+| __[Core CMS Pattern Library]__ | not accessing styles [_yet_][research-pattern-lib] ¹ |
+
+<sub>¹ A repo that is, or will be, in [Core CMS Pattern Library] should load these styles __and__ build a pattern library.</sub>
+
+[Core CMS Pattern Library]: https://github.com/tacc-wbomar?tab=repositories&q=Core-CMS-Pattern-Library
+[research-pattern-lib]: https://confluence.tacc.utexas.edu/x/FADMBQ
 
 
 ## Contributing

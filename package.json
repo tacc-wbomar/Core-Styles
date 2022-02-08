@@ -1,10 +1,20 @@
 {
-  "name": "tacc-core-styles",
+  "name": "@tacc-wbomar/core-styles",
   "version": "0.1.0",
   "license": "MIT",
+  "author": "Wesley Bomar <wbomar@tacc.utexas.edu>",
   "description": "CSS source and processor for TACC Core-CMS and Core-Portal.",
+  "files": [
+    "bin",
+    "dist",
+    "source",
+    ".postcssrc.base.yml",
+    "settings.json"
+  ],
+  "main": "index.js",
+  "bin": "cli.js",
   "scripts": {
-    "build": "postcss \"source/*.css\" --base \"source/\" --dir \"dist\" --verbose --colors --config \"./\"",
+    "build": "node bin/cli.js -i \"./source\" -o \"./dist\" --verbose",
     "update-version": "bin/update-version.js"
   },
   "// scripts": {
@@ -16,23 +26,36 @@
     "node": ">=12.x",
     "npm": ">=6.x"
   },
+  "bugs": {
+    "url": "https://github.com/tacc-wbomar/Core-Styles/issues"
+  },
+  "homepage": "https://github.com/tacc-wbomar/Core-Styles#readme",
   "repository": "git@github.com:tacc-wbomar/Core-Styles.git",
   "devDependencies": {
+    "yarn": "^1.22.17"
+  },
+  "// devDependencies": {
+    "yarn": "Alternative to NPM"
+  },
+  "dependencies": {
+    "commander": "^9.0.0",
     "cssnano": "^4.1.10",
+    "js-yaml": "^3.13.1",
+    "merge-lite": "^1.0.2",
+    "node-cmd": "^5.0.0",
     "postcss-cli": "^7.1.2",
     "postcss-extend": "^1.0.5",
     "postcss-import": "^12.0.1",
-    "postcss-preset-env": "^6.7.0",
-    "yarn": "^1.22.5"
+    "postcss-preset-env": "^6.7.0"
   },
-  "// devDependencies": {
+  "// dependencies": {
+    "commander": "To create CLI",
     "cssnano": "To minify CSS",
+    "node-cmd": "To run `postcss-cli` from script",
     "postcss-cli": "To process CSS",
     "postcss-cli:note": "This is the simplest and cheapest 'PostCSS Runner'",
     "postcss-import": "To import CSS files at build-time",
     "postcss-extend": "To import/extend CSS rule sets at build-time",
-    "postcss-preset-env": "To use future CSS features now",
-    "yarn": "Alternative to NPM"
-  },
-  "author": "Wesley Bomar <wbomar@tacc.utexas.edu>"
+    "postcss-preset-env": "To use future CSS features now"
+  }
 }

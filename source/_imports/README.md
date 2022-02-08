@@ -1,18 +1,16 @@
-# TACC CMS - Stylesheets - Imports
+# TACC Styles - Imports
 
-AUTHOR ACTUAL STYLES HERE!
-
-These styles are only to be imported by other stylesheets.
+Styles here should be isolated UI patterns and be imported by other stylesheets.
 
 ## Rules
 
-1. Files __must__ be [located in appropriate directory](#directories).
-1. Files __must__ be [documented in appropriate format](#documentation-format).
-1. Files __must__ follow the [style guide](#style-guide).
+1. Files __must__ be [organized appropriately](#directory-organization).
+1. Files __must__ be [documented appropriately](#documentation-format).
+1. Files __must__ follow the [style guide][tacc-style-guide].
 
-1. Styles __should__ be [structural](#structure-vs-skin) and __may__ be a [skin](#structure-vs-skin).
+- Styles __should__ be for [structure](#structure-vs-skin) and __may__ be for [skin](#structure-vs-skin).
 
-## Directories
+## Directory Organization
 
 These directories are based on [ITCSS][tacc-itcss].
 
@@ -38,11 +36,12 @@ Styleguide __StylesSection__.__StylesName__
 
 ## Style Guide
 
-See [TACC: CSS Style Guide](https://confluence.tacc.utexas.edu/x/ZQALBg).
+See [TACC: CSS Style Guide][tacc-style-guide].
 
 ## Structure vs. Skin
 
 - Most Core styles will be _only __or__ mostly_ for [structure][tacc-oocss].
 - Some core styles may be [skin][tacc-oocss].
 
-[tacc-oocss]: https://confluence.tacc.utexas.edu/x/VwALBg
+[tacc-oocss]: https://confluence.tacc.utexas.edu/x/VwALBg "TACC: Object-Oriented CSS"
+[tacc-style-guide]: https://confluence.tacc.utexas.edu/x/ZQALBg "TACC: CSS Style Guide"

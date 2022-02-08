@@ -3,7 +3,7 @@ plugins:
 
   postcss-import:
     path:
-      - './source'
+      - 'source'
 
 
   postcss-extend: {}
@@ -12,7 +12,7 @@ plugins:
   # https://github.com/TACC/Core-CMS/blob/70a1ca3/conf/css/.postcssrc.yml#L6-L12
   postcss-env-function:
     importFrom:
-      - './source/_themes/export.js'
+      - 'source/_themes/default.json'
 
 
   postcss-preset-env:
