@@ -2,7 +2,7 @@
   "name": "@tacc-wbomar/core-styles",
   "version": "0.1.0",
   "license": "MIT",
-  "author": "Wesley Bomar <wbomar@tacc.utexas.edu>",
+  "author": "TACC ACI WMA <wma-portals@gmail.com>",
   "description": "CSS source and processor for TACC Core-CMS and Core-Portal.",
   "files": [
     "bin",
