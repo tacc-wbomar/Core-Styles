@@ -17,7 +17,7 @@ const config = require('./bin/config.js');
  * @param {boolean} [opts.version=false] - Print the version of this software
  * @param {boolean} [opts.verbose=false] - Print more info from build log
  */
- module.exports = function taccCoreStyles(inputDir, outputDir, opts = {}) {
+ module.exports = function coreStyles(inputDir, outputDir, opts = {}) {
     // console.log('[index.js] opts:', opts);
 
     if (opts.version) {

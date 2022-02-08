@@ -2,7 +2,7 @@
 
 const { program } = require('commander');
 
-const taccCoreStyles = require('../index.js');
+const coreStyles = require('../index.js');
 
 program
     .requiredOption('-i, --input-dir <path>',
@@ -37,4 +37,4 @@ const opts = program.opts();
 
 const { inputDir, outputDir, ...buildOpts } = opts;
 
-taccCoreStyles( inputDir, outputDir, opts );
+coreStyles( inputDir, outputDir, opts );
