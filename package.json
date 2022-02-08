@@ -13,7 +13,7 @@
     "settings.json"
   ],
   "main": "index.js",
-  "bin": "bin/cli.js",
+  "bin": "cli.js",
   "scripts": {
     "build": "node bin/cli.js -i \"./source\" -o \"./dist\" --verbose",
     "update-version": "bin/update-version.js"

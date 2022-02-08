@@ -2,7 +2,7 @@
 
 const { program } = require('commander');
 
-const coreStyles = require('../index.js');
+const coreStyles = require('./index.js');
 
 program
     .requiredOption('-i, --input-dir <path>',
