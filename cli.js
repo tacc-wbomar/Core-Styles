@@ -5,6 +5,7 @@ const { program } = require('commander');
 const coreStyles = require('./index.js');
 
 program
+    .name('core-styles')
     .requiredOption('-i, --input-dir <path>',
         'parse CSS files from which directory')
     .requiredOption('-o, --output-dir <path>',
@@ -23,7 +24,9 @@ Note:
     The dir structure within '--input-dir' will be mirrored in '--output-dir'.
 
 Footnotes:
-    ¹ The file formats are like '.postcssrc.yml' from https://github.com/postcss/postcss-load-config#postcssrc.
+    ¹ The file formats are like '.postcssrc.yml' from:
+      https://github.com/postcss/postcss-load-config#postcssrc
+
     ² The first file is merged on top of the base config.
       Each successive file overwrites the file before it.
 `);

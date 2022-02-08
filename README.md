@@ -2,24 +2,46 @@
 
 The shared stylesheets for TACC WMA Workspace Portals & Websites
 
-> __Notice__: Currently only [Core CMS] is using these stylesheets.
+> __Notice__: Currently only [Core CMS] is using these styles.
 
 
 ## Related Repositories
 
-- [Camino], a Docker container-based deployment scheme
 - [Core CMS], the base CMS code for TACC WMA CMS Websites
-- [Core Portal], the base Portal code for TACC WMA CMS Websites
-- [Core Portal Deployments], private repository that facilitates deployments of [Core Portal] images via [Camino] and Jenkins
+
+## External Project Usage
+
+### Quick Start
+
+```bash
+Usage: cli [options]
+
+Options:
+  -i, --input-dir <path>                parse CSS files from which directory
+  -o, --output-dir <path>               output CSS files to which directory
+  -e, --file-ext <ext>                  extension of CSS files to parse (default: "css") (default: "css")
+  -v, --version                         print the version of this software
+  --verbose                             print more information from build log
+  -c, --custom-config-files <paths...>  overwrite base config with values from YAML files¹² (advanced)
+  -h, --help                            display help for command
+
+Note:
+    The dir structure within '--input-dir' will be mirrored in '--output-dir'.
+
+Footnotes:
+    ¹ The file formats are like '.postcssrc.yml' from https://github.com/postcss/postcss-load-config#postcssrc.
+    ² The first file is merged on top of the base config.
+      Each successive file overwrites the file before it.
+```
 
 
 ## Local Development Setup
 
-### Prequisites for Reviewing the Styles
+### Prequisites for Building the Styles
 
 * Nodejs 12.x (LTS)
 
-The Core Styles can be previewed using a Pattern Library powered by Node.
+> __Future__: The Core Styles will be previewable using a pattern library software.
 
 ### Code Configuration
 
@@ -30,18 +52,20 @@ Code configuration happens in repos that use these styles.
 1. [Install][yarn-install] the dependencies:
 
     ```bash
-    yarn install
+    yarn # a.k.a. yarn install
     ```
 
-2. Build stylesheets + Run the pattern library:
-
-    ```bash
-    npm start
-    ```
-
-3. Open the web interface.
-
-    The build command will output the URL (and may even open it for you).
+> __Future__:
+>
+> 2. Build stylesheets + Run the pattern library:
+> 
+>     ```bash
+>     npm start
+>     ```
+> 
+> 3. Open the web interface.
+> 
+>     The build command will output the URL (and may even open it for you).
 
 
 [yarn-install]: https://classic.yarnpkg.com/en/docs/cli/install/
@@ -49,12 +73,15 @@ Code configuration happens in repos that use these styles.
 
 ### Source Files
 
-If you changes files in any `source/` directory, you may need to follow some of these steps.
+If you changes files in a `source/` directory, you may need to follow some of these steps.
 
 #### Quick Start
 
 1. _(optional)_ Make changes to `/source` files.
-2. Build and preview the styles: `npm start`
+2. Build the styles: `yarn build`
+
+    > __Future__: 2. Build and preview the styles: `yarn start`
+
 3. _(to debug)_ Review respective `/dist` files' content.
 
 #### How to Just Build Stylesheets

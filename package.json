@@ -1,6 +1,5 @@
 {
-  "// todo": "publish this package under @tacc-wbomar",
-  "name": "core-styles",
+  "name": "@tacc-wbomar/core-styles",
   "version": "0.1.0",
   "license": "MIT",
   "author": "Wesley Bomar <wbomar@tacc.utexas.edu>",
@@ -27,6 +26,10 @@
     "node": ">=12.x",
     "npm": ">=6.x"
   },
+  "bugs": {
+    "url": "https://github.com/tacc-wbomar/Core-Styles/issues"
+  },
+  "homepage": "https://github.com/tacc-wbomar/Core-Styles#readme",
   "repository": "git@github.com:tacc-wbomar/Core-Styles.git",
   "devDependencies": {
     "yarn": "^1.22.17"
