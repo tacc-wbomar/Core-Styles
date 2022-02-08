@@ -5,7 +5,6 @@ const { program } = require('commander');
 
 const build = require('./build.js');
 const config = require('./config.js');
-const { version } = require('../package.json')
 
 program
 	.requiredOption('-i, --input-dir <path>',
@@ -27,7 +26,8 @@ Note:
 
 Footnotes:
     ¹ The file formats are like '.postcssrc.yml' from https://github.com/postcss/postcss-load-config#postcssrc.
-    ² The first file overwrites the base. Each successive file overwrites the file to its left.
+    ² The first file is merged on top of the base config.
+      Each successive file overwrites the file before it.
 `);
 
 program.showHelpAfterError('(add --help for additional information)');
@@ -38,11 +38,10 @@ const opts = program.opts();
 // console.log('CLI opts:', opts);
 
 if (opts.version) {
-    console.log(version);
+    console.log(process.env.npm_package_version);
 }
 
 const buildOpts = {
-    baseImportDir: ((opts.baseImportDir) ? resolve(opts.baseImportDir) : null),
     fileExt: opts.fileExt,
     verbose: opts.verbose || null,
 };

@@ -19,12 +19,10 @@ function execCallback(err, stdout, stderr) {
  * @param {string} outputDir - Output CSS files to which directory
  * @param {object} [opts={}] - Options
  * @param {object} [opts.fileExt='css'] - Extension of CSS files to parse
- * @param {string} [opts.configDir] - Custom config directory
  * @param {boolean} [opts.verbose=false] - To print more info from build log
  */
 function build(inputDir, outputDir, opts = {}) {
   const fileExt = opts.fileExt || 'css';
-  const configDir = opts.configDir || `${__dirname}/../`;
   const verbose = (opts.verbose === true) ? '--verbose' : '';
 
   const command = `postcss "${inputDir}/*.${fileExt}" --dir "${outputDir}" ${verbose} --config "${configDir}"`;

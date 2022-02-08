@@ -8,6 +8,9 @@ const newConfigFile = `${__dirname}/../.postcssrc.yml`;
 /**
  * Save base config as auto-loaded file (also can overwrite with custom values)
  * @param {array.string} [customConfigFiles] - List of YAML config files
+ * (The first file is merged on top of the base config.)
+ * (Each successive file overwrites the file before it.)
+ * @see https://github.com/postcss/postcss-load-config#postcssrc
  */
 function config(customConfigFiles) {
     let prevFile = baseConfigFile;
