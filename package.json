@@ -29,7 +29,7 @@
   },
   "repository": "git@github.com:tacc-wbomar/Core-Styles.git",
   "devDependencies": {
-    "yarn": "^1.22.5"
+    "yarn": "^1.22.17"
   },
   "// devDependencies": {
     "yarn": "Alternative to NPM"
