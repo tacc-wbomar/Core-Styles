@@ -35,9 +35,7 @@ program.showHelpAfterError('(add --help for additional information)');
 
 program.parse(process.argv);
 
-const opts = program.opts();
-// console.log('[cli.js] opts:', opts);
+const { inputDir, outputDir, ...buildOpts } = program.opts();
 
-const { inputDir, outputDir, ...buildOpts } = opts;
-
-coreStyles( inputDir, outputDir, opts );
+console.log('[cli.js]', { inputDir, outputDir, buildOpts });
+coreStyles( inputDir, outputDir, buildOpts );
