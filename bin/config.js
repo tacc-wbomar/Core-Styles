@@ -15,14 +15,16 @@ const newConfigFile = `${__dirname}/../.postcssrc.yml`;
  * @see https://github.com/postcss/postcss-load-config#postcssrc
  */
 function config(customConfigFiles) {
-    let prevFile = baseConfigFile;
+    let baseFile = baseConfigFile;
     let newYaml;
 
     if (customConfigFiles) {
         customConfigFiles.forEach(nextFile => {
             if (nextFile && fs.existsSync(nextFile)) {
-                newYaml = getMergedConfig(prevFile, nextFile);
-                prevFile = nextFile;
+                newYaml = getMergedConfig(baseFile, nextFile);
+                baseFile = newConfigFile;
+            } else {
+              console.info(`Custom config ${nextFile} not found. Skipping`);
             }
         });
     } else {
