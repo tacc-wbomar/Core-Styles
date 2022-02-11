@@ -8,6 +8,7 @@
     "bin",
     "dist",
     "source",
+    "yarn.lock",
     ".postcssrc.base.yml",
     "settings.json"
   ],
