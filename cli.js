@@ -12,11 +12,11 @@ program
         'output CSS files to which directory')
     .option('-e, --file-ext <ext>',
         'extension of CSS files to parse (default: "css")', 'css')
-	.option('-v, --version',
+    .option('-v, --version',
         'print the version of this software')
     .option('--verbose',
         'print more information from build log')
-	.option('-c, --custom-config-files <paths...>',
+    .option('-c, --custom-config-files <paths...>',
         `overwrite base config with values from YAML files¹² (advanced)`);
 
 program.addHelpText('after', `
