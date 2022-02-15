@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+/** Export internal function used by this package to build styles */
+
 const cmd = require('node-cmd');
 
 // SEE: https://stackoverflow.com/a/63530170

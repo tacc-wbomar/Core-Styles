@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+/** Export internal function used by this package to configure build */
+
 const fs = require('fs');
 const merge = require('merge-lite');
 const yaml = require('js-yaml');

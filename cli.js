@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+/** A user-facing CLI to build styles and configure build */
+
 const { program } = require('commander');
 
 const coreStyles = require('./index.js');

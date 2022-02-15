@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+/** Export user-facing function to build styles and configure build */
+
 const { resolve } = require('path');
 
 const build = require('./bin/build.js');

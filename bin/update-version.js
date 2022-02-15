@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+/** Internal tool to update CSS version comment imported by internal files */
+
 const fs = require('fs');
 
 const root = __dirname;
