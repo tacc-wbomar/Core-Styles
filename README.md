@@ -14,7 +14,7 @@ The shared stylesheets for TACC WMA Workspace Portals & Websites
 
 ### Quick Start
 
-#### CLI `--help`
+#### CLI
 
 ```bash
 Usage: cli [options]
@@ -37,7 +37,7 @@ Footnotes:
       Each successive file overwrites the file before it.
 ```
 
-#### Module Example
+#### Module
 
 ```js
 const coreStyles = require('core-styles');
