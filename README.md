@@ -14,6 +14,29 @@ The shared stylesheets for TACC WMA Workspace Portals & Websites
 
 ### Quick Start
 
+#### CLI `--help`
+
+```bash
+Usage: cli [options]
+
+Options:
+  -i, --input-dir <path>                parse CSS files from which directory
+  -o, --output-dir <path>               output CSS files to which directory
+  -e, --file-ext <ext>                  extension of CSS files to parse (default: "css") (default: "css")
+  -v, --version                         print the version of this software
+  --verbose                             print more information from build log
+  -c, --custom-config-files <paths...>  overwrite base config with values from YAML files¹² (advanced)
+  -h, --help                            display help for command
+
+Note:
+    The dir structure within '--input-dir' will be mirrored in '--output-dir'.
+
+Footnotes:
+    ¹ The file formats are like '.postcssrc.yml' from https://github.com/postcss/postcss-load-config#postcssrc.
+    ² The first file is merged on top of the base config.
+      Each successive file overwrites the file before it.
+```
+
 #### Module Example
 
 ```js
@@ -41,29 +64,6 @@ coreStyles(
     fileExt: 'css'
   }
 );
-```
-
-#### CLI `--help`
-
-```bash
-Usage: cli [options]
-
-Options:
-  -i, --input-dir <path>                parse CSS files from which directory
-  -o, --output-dir <path>               output CSS files to which directory
-  -e, --file-ext <ext>                  extension of CSS files to parse (default: "css") (default: "css")
-  -v, --version                         print the version of this software
-  --verbose                             print more information from build log
-  -c, --custom-config-files <paths...>  overwrite base config with values from YAML files¹² (advanced)
-  -h, --help                            display help for command
-
-Note:
-    The dir structure within '--input-dir' will be mirrored in '--output-dir'.
-
-Footnotes:
-    ¹ The file formats are like '.postcssrc.yml' from https://github.com/postcss/postcss-load-config#postcssrc.
-    ² The first file is merged on top of the base config.
-      Each successive file overwrites the file before it.
 ```
 
 
