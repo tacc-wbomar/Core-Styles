@@ -20,11 +20,11 @@ The shared stylesheets for TACC WMA Workspace Portals & Websites
 const coreStyles = require('core-styles');
 
 coreStyles(
-  // Parse CSS files from which directory
+  // Parse CSS files from which directory (required)
   `path/to/your/css/src`,
-  // Output CSS files to which directory
+  // Output CSS files to which directory (required)
   `path/to/put/css/output`, {
-    // List of YAML config files
+    // List of YAML config files (optional)
     // (The first file is merged on top of the base config.)
     // (Each successive file overwrites the file before it.)
     // SEE: https://github.com/postcss/postcss-load-config#postcssrc
@@ -33,10 +33,12 @@ coreStyles(
       `path/to/custom/configthat/extends/base/.postcssrc.yml`,
       `path/to/custom/config/that/extends/above/.postcssrc.yml`
     ],
-    // Print more info from build log
+    // Print more info from build log (optional, default: false)
     verbose: true,
-    // Print version of this software
+    // Print version of this software (optional, default: false)
     version: true,
+    // Extension of CSS files to parse (optional, default: "css")
+    fileExt: 'css'
   }
 );
 ```
