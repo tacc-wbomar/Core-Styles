@@ -9,9 +9,39 @@ The shared stylesheets for TACC WMA Workspace Portals & Websites
 
 - [Core CMS], the base CMS code for TACC WMA CMS Websites
 
+
 ## External Project Usage
 
 ### Quick Start
+
+#### Module Example
+
+```js
+const coreStyles = require('core-styles');
+
+coreStyles(
+  // Parse CSS files from which directory
+  `path/to/your/css/src`,
+  // Output CSS files to which directory
+  `path/to/put/css/output`, {
+    // List of YAML config files
+    // (The first file is merged on top of the base config.)
+    // (Each successive file overwrites the file before it.)
+    // SEE: https://github.com/postcss/postcss-load-config#postcssrc
+    customConfigFiles: [
+      // The "base" config is `/.postcssrc.base.yml`
+      `path/to/custom/configthat/extends/base/.postcssrc.yml`,
+      `path/to/custom/config/that/extends/above/.postcssrc.yml`
+    ],
+    // Print more info from build log
+    verbose: true,
+    // Print version of this software
+    version: true,
+  }
+);
+```
+
+#### CLI `--help`
 
 ```bash
 Usage: cli [options]
@@ -69,7 +99,6 @@ Code configuration happens in repos that use these styles.
 
 
 [yarn-install]: https://classic.yarnpkg.com/en/docs/cli/install/
-
 
 ### Source Files
 
