@@ -16,7 +16,7 @@
   "bin": "cli.js",
   "scripts": {
     "build": "bin/update-version.js && npm run build:via-cli",
-    "build:via-cli": "node cli.js -i \"./source\" -o \"./dist\" --verbose"
+    "build:via-cli": "node cli.js -i \"./source\" -o \"./dist\""
   },
   "engines": {
     "node": ">=12.x",

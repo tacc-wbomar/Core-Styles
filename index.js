@@ -20,7 +20,9 @@ const config = require('./bin/config.js');
  * @param {boolean} [opts.verbose=false] - Print more info from build log
  */
  module.exports = function coreStyles(inputDir, outputDir, opts = {}) {
-    console.log('[index.js]', { inputDir, outputDir, opts });
+    if (opts.verbose) {
+        console.log('[index.js]', { inputDir, outputDir, opts });
+    }
 
     if (opts.version) {
         console.log(process.env.npm_package_version);
