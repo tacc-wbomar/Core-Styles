@@ -15,13 +15,8 @@
   "main": "index.js",
   "bin": "cli.js",
   "scripts": {
-    "build": "node cli.js -i \"./source\" -o \"./dist\" --verbose",
-    "update-version": "bin/update-version.js"
-  },
-  "// scripts": {
-    "build": "Build static stylesheets from CSS source code",
-    "build:quotes-why": "Quote globbed paths to prevent OS from parsing them",
-    "build:quotes-ref": "https://github.com/postcss/postcss-cli/issues/142#issuecomment-310681302"
+    "build": "bin/update-version.js && npm run build:via-cli",
+    "build:via-cli": "node cli.js -i \"./source\" -o \"./dist\" --verbose"
   },
   "engines": {
     "node": ">=12.x",
