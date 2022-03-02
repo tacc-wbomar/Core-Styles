@@ -39,5 +39,7 @@ program.parse(process.argv);
 
 const { inputDir, outputDir, ...buildOpts } = program.opts();
 
-console.log('[cli.js]', { inputDir, outputDir, buildOpts });
+if (buildOpts.verbose) {
+    console.log('[cli.js]', { inputDir, outputDir, buildOpts });
+}
 coreStyles( inputDir, outputDir, buildOpts );
