@@ -11,5 +11,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-CMS/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/TACC/Core-CMS/releases/tag/v0.1.0
+[unreleased]: https://github.com/tacc-wbomar/Core-Styles/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/tacc-wbomar/Core-Styles/releases/tag/v0.1.0
