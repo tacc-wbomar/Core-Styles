@@ -3,22 +3,14 @@
 /** Create CSS file to import that prints project version */
 
 const fs = require('fs');
-const childProcess = require('child_process');
 
 const root = __dirname;
 const outFile = root + '/../source/_version.css';
 
-/**
- * Whether a Git revision look like something we can use
- * @param {string} rev - The revision to check
- * @return {boolean}
- */
-function isGitRevOkay(rev) {
-  console.debug(rev);
-  const isOkay = /[\da-z]+/.test(rev);
+const ver = process.env.npm_package_version;
+const rev = getGitRev().substring(0, 7);
 
-  return isOkay;
-}
+const output = `/*! @tacc/core-styles#${rev} (≥ v${ver}) | MIT License | github.com/TACC/Core-Styles */`;
 
 /**
  * Get the Git revision of the current working directory code
@@ -26,30 +18,16 @@ function isGitRevOkay(rev) {
  * @see https://stackoverflow.com/a/34518749/11817077
  */
 function getGitRev() {
-  const rev = childProcess.execSync('git rev-parse HEAD').toString();
-  const isRevOkay = isGitRevOkay(rev);
+  let rev = fs.readFileSync('.git/HEAD').toString().trim();
+  const revFile = '.git/' + rev.substring(5);
 
-  if ( ! isRevOkay) {
-    console.warn(`Revision looks odd. Is this okay?` + rev);
+  if (rev.indexOf(':') !== -1) {
+    console.log('Reading Git revision from: ' + revFile);
+    rev = fs.readFileSync(revFile).toString().trim();
   }
 
   return rev;
 }
 
-/**
- * Get data and write content to version file
- * @return {string}
- * @see https://stackoverflow.com/a/34518749/11817077
- */
-(async function writeRevToFile() {
-  const ver = process.env.npm_package_version;
-  const rev = await getGitRev().substring(0, 7);
-  const output = `/*! @tacc/core-styles#${rev} (≥ v${ver}) | MIT License | github.com/TACC/Core-Styles */`;
-
-  console.log('Updating CSS version to' +
-    `package version ${ver} and` +
-    `Git revision ${rev}[...]`
-  );
-
-  fs.writeFileSync(outFile, output, 'utf8');
-})();
+console.log(`Updating CSS version to package version ${ver} and Git revision ${rev}[...]`);
+fs.writeFileSync(outFile, output, 'utf8');
