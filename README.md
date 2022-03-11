@@ -1,6 +1,6 @@
 # TACC Core Styles
 
-The shared stylesheets for TACC WMA Workspace Portals & Websites
+The shared styles for TACC WMA Workspace Portals & Websites
 
 > __Notice__: Currently only [Core CMS] is using these styles.
 
