@@ -3,7 +3,6 @@
 /** Create CSS file to import that prints project version */
 
 const fs = require('fs');
-const childProcess = require('child_process');
 
 const root = __dirname;
 const outFile = root + '/../source/_version.css';
