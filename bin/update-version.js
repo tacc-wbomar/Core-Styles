@@ -15,7 +15,6 @@ const outFile = root + '/../source/_version.css';
  */
 (async function writeRevToFile() {
   const ver = process.env.npm_package_version;
-  const rev = await getGitRev().substring(0, 7);
   const output = `/*! @tacc/core-styles (≥ v${ver}) | MIT License | github.com/TACC/Core-Styles */`;
 
   console.log(`Updating CSS version to package version ${ver}`);
