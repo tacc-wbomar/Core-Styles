@@ -9,21 +9,23 @@ const yaml = require('js-yaml');
 const baseConfigFile = `${__dirname}/../.postcssrc.base.yml`;
 const newConfigFile = `${__dirname}/../.postcssrc.yml`;
 
+
+
 /**
  * Save base config as auto-loaded file (also can overwrite with custom values)
- * @param {array.string} [customConfigFiles] - List of YAML config files
+ * @param {array.string} [customConfigs] - List of YAML config file paths
  * (The first file is merged on top of the base config.)
  * (Each successive file overwrites the file before it.)
  * @see https://github.com/postcss/postcss-load-config#postcssrc
  */
-function config(customConfigFiles) {
+function config(customConfigs) {
     // Get data
     let baseFile = baseConfigFile;
     let newYaml;
 
     // Either extend base config with any custom configs
-    if (customConfigFiles) {
-        customConfigFiles.forEach(nextFile => {
+    if (customConfigs) {
+        customConfigs.forEach(nextFile => {
             if (nextFile && fs.existsSync(nextFile)) {
                 newYaml = getMergedConfig(baseFile, nextFile);
                 baseFile = newConfigFile;
@@ -43,6 +45,8 @@ function config(customConfigFiles) {
     // Write file
     fs.writeFileSync(newConfigFile, newYaml, 'utf8');
 }
+
+
 
 /**
  * Get content of merging one config file atop another
@@ -72,4 +76,7 @@ function config(customConfigFiles) {
     return newYaml;
 }
 
+
+
+// Export
 module.exports = config;

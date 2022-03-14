@@ -1,40 +1,62 @@
 #!/usr/bin/env node
 
-/** A user-facing CLI to build styles and configure build */
+/** CLI to custom build stylesheets and create a version stylesheet */
 
 const { program } = require('commander');
 
 const package = require('./package.json');
 
-const { buildStylesheets, createVersionStylesheet } = require('./index.js');
+const {
+    buildStylesheets,
+    createVersionStylesheet
+} = require('./index.js');
 
+
+
+// Setup
 program
     .name('core-styles')
     .version(package.version)
+    .showHelpAfterError('(add --help for additional information)');
 
+
+
+// Build Command
 program
     .command('build')
-    .description('build stylesheets using core-styles build process (default)')
+    .description(`build stylesheets with TACC standard process:
+- "post-css" plugins
+- custom input dir
+- custom output dir
+- custom configs
+    `)
     .requiredOption('-i, --input-dir <path>',
-        'parse CSS files from which directory')
+        'parse source from which directory¹')
     .requiredOption('-o, --output-dir <path>',
-        'output CSS files to which directory')
+        'output CSS files to which directory¹')
     .option('-e, --file-ext <ext>',
-        'extension of CSS files to parse (default: "css")', 'css')
+        'extensions to parse', 'css')
     .option('-v, --verbose',
-        'print more information from build log')
-    .option('-c, --custom-config-files <paths...>',
-        `overwrite base config with values from YAML files¹² (advanced)`)
+        'print more info during build process')
+    .option('-c, --custom-configs <paths...>',
+        `extend base config with YAML files²³`)
     .addHelpText('after', `
-Note:
-    The dir structure within '--input-dir' will be mirrored in '--output-dir'.
+Notes:
+  ¹ Folder structure of "--input-dir" mirrored in "--output-dir" e.g.
+  
+    given input
+    - "input_dir/x.css"
+    - "input_dir/sub_dir_a/y.css"
 
-Footnotes:
-    ¹ The file formats are like '.postcssrc.yml' from:
-        https://github.com/postcss/postcss-load-config#postcssrc
+    expect output
+    - "output_dir/x.css"
+    - "output_dir/sub_dir_a/y.css"
 
-    ² The first file is merged on top of the base config.
-        Each successive file overwrites the file before it.
+  ² The file formats are like ".postcssrc.yml" from
+    https://github.com/postcss/postcss-load-config#postcssrc
+
+  ³ The first file is merged on top of the base config.
+    Each successive file overwrites the file before it.
     `).action( programOpts => {
         const { inputDir, outputDir, ...opts } = programOpts;
 
@@ -44,13 +66,21 @@ Footnotes:
         buildStylesheets( inputDir, outputDir, opts );
     });
 
+
+
+// Version Command
 program
     .command('version')
-    .description('output a stylesheet that has comment describing CSS version')
+    .description(`create a stylesheet with preserved comment w/
+- app name
+- app version (via "git describe")
+- app license
+- custom output path
+    `)
     .requiredOption('-o, --output-path <path>',
         'output version stylesheet at what path')
     .option('-v, --verbose',
-        'print more information from build log')
+        'print more info during file creation')
     .action( programOpts => {
         const { outputPath, ...opts } = programOpts;
 
@@ -60,7 +90,7 @@ program
         createVersionStylesheet( outputPath, opts );
     });
 
-program.showHelpAfterError('(add --help for additional information)');
 
+
+// Parse
 program.parse(process.argv);
-

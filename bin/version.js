@@ -6,6 +6,8 @@ const fs = require('fs');
 const path = require('../package.json');
 const childProcess = require('child_process');
 
+
+
 /**
  * Create version stylesheet at specificed path
  * @param {string} outputPath - Output version file at which path
@@ -24,4 +26,7 @@ function create(outputPath) {
     fs.writeFileSync( outputPath, fileContent );
 }
 
+
+
+// Export
 module.exports = create;

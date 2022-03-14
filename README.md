@@ -17,32 +17,92 @@ The shared styles for TACC WMA Workspace Portals & Websites
 #### CLI
 
 ```bash
-Usage: cli [options]
+Usage: core-styles [options] [command]
 
 Options:
-  -i, --input-dir <path>                parse CSS files from which directory
-  -o, --output-dir <path>               output CSS files to which directory
-  -e, --file-ext <ext>                  extension of CSS files to parse (default: "css") (default: "css")
-  -v, --version                         print the version of this software
-  --verbose                             print more information from build log
-  -c, --custom-config-files <paths...>  overwrite base config with values from YAML files¹² (advanced)
-  -h, --help                            display help for command
+  -V, --version      output the version number
+  -h, --help         display help for command
 
-Note:
-    The dir structure within '--input-dir' will be mirrored in '--output-dir'.
+Commands:
+  build [options]    build stylesheets with TACC standard process:
+  - "post-css" plugins
+  - custom input dir
+  - custom output dir
+  - custom configs
+      
+  version [options]  create a stylesheet with preserved comment w/
+  - app name
+  - app version (via "git describe")
+  - app license
+  - custom output path
+      
+  help [command]     display help for command
+```
 
-Footnotes:
-    ¹ The file formats are like '.postcssrc.yml' from https://github.com/postcss/postcss-load-config#postcssrc.
-    ² The first file is merged on top of the base config.
-      Each successive file overwrites the file before it.
+##### Build Command
+
+```bash
+Usage: core-styles build [options]
+
+build stylesheets with TACC standard process:
+- "post-css" plugins
+- custom input dir
+- custom output dir
+- custom configs
+    
+
+Options:
+  -i, --input-dir <path>           parse source from which directory¹
+  -o, --output-dir <path>          output CSS files to which directory¹
+  -e, --file-ext <ext>             extensions to parse (default: "css")
+  -v, --verbose                    print more info during build process
+  -c, --custom-configs <paths...>  extend base config with YAML files²³
+  -h, --help                       display help for command
+
+Notes:
+  ¹ Folder structure of "--input-dir" mirrored in "--output-dir" e.g.
+
+    given input
+    - "input_dir/x.css"
+    - "input_dir/sub_dir_a/y.css"
+
+    expect output
+    - "output_dir/x.css"
+    - "output_dir/sub_dir_a/y.css"
+
+  ² The file formats are like ".postcssrc.yml" from
+    https://github.com/postcss/postcss-load-config#postcssrc
+
+  ³ The first file is merged on top of the base config.
+    Each successive file overwrites the file before it.
+```
+
+##### Version Command
+
+```bash
+Usage: core-styles version [options]
+
+create a stylesheet with preserved comment w/
+- app name
+- app version (via "git describe")
+- app license
+- custom output path
+    
+
+Options:
+  -o, --output-path <path>  output version stylesheet at what path
+  -v, --verbose             print more info during file creation
+  -h, --help                display help for command
 ```
 
 #### Module
 
-```js
-const coreStyles = require('core-styles');
+##### Build Script
 
-coreStyles(
+```js
+const buildStylesheets = require('core-styles');
+
+buildStylesheets(
   // Parse CSS files from which directory (required)
   `path/to/your/css/src`,
   // Output CSS files to which directory (required)
@@ -51,7 +111,7 @@ coreStyles(
     // (The first file is merged on top of the base config.)
     // (Each successive file overwrites the file before it.)
     // SEE: https://github.com/postcss/postcss-load-config#postcssrc
-    customConfigFiles: [
+    customConfigs: [
       // The "base" config is `/.postcssrc.base.yml`
       `path/to/custom/configthat/extends/base/.postcssrc.yml`,
       `path/to/custom/config/that/extends/above/.postcssrc.yml`
@@ -66,6 +126,19 @@ coreStyles(
 );
 ```
 
+##### Version Script
+
+```js
+const createVersionStylesheet = require('core-styles');
+
+createVersionStylesheet(
+  // Output version file at which path (required)
+  `path/to/put/_version.css`, {
+    // Print more info from build log (optional, default: false)
+    verbose: true
+  }
+);
+```
 
 ## Local Development Setup
 
