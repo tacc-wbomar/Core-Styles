@@ -17,25 +17,30 @@ const newConfigFile = `${__dirname}/../.postcssrc.yml`;
  * @see https://github.com/postcss/postcss-load-config#postcssrc
  */
 function config(customConfigFiles) {
+    // Get data
     let baseFile = baseConfigFile;
     let newYaml;
 
+    // Either extend base config with any custom configs
     if (customConfigFiles) {
         customConfigFiles.forEach(nextFile => {
             if (nextFile && fs.existsSync(nextFile)) {
                 newYaml = getMergedConfig(baseFile, nextFile);
                 baseFile = newConfigFile;
             } else {
-              console.info(`Custom config ${nextFile} not found. Skipping`);
+              console.info(`Skipping custom config ${nextFile} (not found)`);
             }
         });
-    } else {
-        console.info('No custom files passed. Using only base config.');
+    }
+    // Or just use the base config
+    else {
+        console.info('Using only base config (no custom configs provided)');
         const baseConfig = fs.readFileSync(baseConfigFile, 'utf8');
         const baseJson = yaml.load(baseConfig);
         newYaml = yaml.dump(baseJson);
     }
 
+    // Write file
     fs.writeFileSync(newConfigFile, newYaml, 'utf8');
 }
 
@@ -46,12 +51,15 @@ function config(customConfigFiles) {
  * @return {string} - Merged YAML
  */
  function getMergedConfig(baseFile, customFile) {
+    // Get data
     const baseConfig = fs.readFileSync(baseFile, 'utf8');
     const baseJson = yaml.load(baseConfig);
     const baseYaml = yaml.dump(baseJson);
 
+    // Default to base config content
     let newYaml = baseYaml;
 
+    // Any custom configs are merged onto the content
     if (customFile) {
         const customConfig = fs.readFileSync(customFile, 'utf8');
         const customJson = yaml.load(customConfig);
@@ -60,6 +68,7 @@ function config(customConfigFiles) {
         newYaml = yaml.dump(newJson);
     }
 
+    // Return content
     return newYaml;
 }
 
