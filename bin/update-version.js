@@ -3,20 +3,17 @@
 /** Create CSS file to import that prints project version */
 
 const fs = require('fs');
+const path = require('../package.json');
+const childProcess = require('child_process');
 
-const root = __dirname;
-const outFile = root + '/../source/_version.css';
+// Get data
+const appLicense = path.license;
+const appGitRef = childProcess.execSync('git describe --always').toString();
+const filePath = __dirname + '/../source/_version.css';
+const fileContent = `/*! @tacc/core-styles ${appGitRef} | ${appLicense} | github.com/TACC/Core-Styles */` + "\n";
 
-/**
- * Get data and write content to version file
- * @return {string}
- * @see https://stackoverflow.com/a/34518749/11817077
- */
-(async function writeRevToFile() {
-  const ver = process.env.npm_package_version;
-  const output = `/*! @tacc/core-styles (≥ v${ver}) | MIT License | github.com/TACC/Core-Styles */`;
+// Tell user
+console.log(`Updating CSS version to ${appGitRef}`);
 
-  console.log(`Updating CSS version to package version ${ver}`);
-
-  fs.writeFileSync(outFile, output, 'utf8');
-})();
+// Write version
+fs.writeFileSync( filePath, fileContent );
