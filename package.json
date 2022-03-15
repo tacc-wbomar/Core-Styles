@@ -8,7 +8,6 @@
     "bin",
     "dist",
     "source",
-    "yarn.lock",
     ".postcssrc.base.yml",
     "settings.json"
   ],
@@ -29,12 +28,6 @@
   },
   "homepage": "https://github.com/tacc-wbomar/Core-Styles",
   "repository": "git@github.com:tacc-wbomar/Core-Styles.git",
-  "devDependencies": {
-    "yarn": "^1.22.17"
-  },
-  "// devDependencies": {
-    "yarn": "Alternative to NPM"
-  },
   "dependencies": {
     "commander": "^9.0.0",
     "cssnano": "^4.1.10",
