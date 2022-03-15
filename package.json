@@ -21,8 +21,8 @@
     "version": "node cli.js version -o \"./source/_version.css\""
   },
   "engines": {
-    "node": ">=12.x",
-    "npm": ">=6.x"
+    "node": ">=15.x",
+    "npm": ">=7.x"
   },
   "bugs": {
     "url": "https://github.com/tacc-wbomar/Core-Styles/issues"
