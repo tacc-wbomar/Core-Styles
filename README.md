@@ -95,6 +95,10 @@ Options:
 
 ### Module
 
+Install the package with any package manager e.g.:
+- `npm install tacc-wbomar/Core-Styles`
+- `yarn add tacc-wbomar/Core-Styles`
+
 #### Build Script
 
 ```js
