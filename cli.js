@@ -43,7 +43,7 @@ program
     .addHelpText('after', `
 Notes:
   ¹ Folder structure of "--input-dir" mirrored in "--output-dir" e.g.
-  
+
     given input
     - "input_dir/x.css"
     - "input_dir/sub_dir_a/y.css"
