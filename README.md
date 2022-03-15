@@ -27,13 +27,13 @@ Commands:
   - custom input dir
   - custom output dir
   - custom configs
-      
+
   version [options]  create a stylesheet with preserved comment w/
   - app name
   - app version (via "git describe")
   - app license
   - custom output path
-      
+
   help [command]     display help for command
 ```
 
@@ -47,7 +47,6 @@ build stylesheets with TACC standard process:
 - custom input dir
 - custom output dir
 - custom configs
-    
 
 Options:
   -i, --input-dir <path>           parse source from which directory¹
@@ -85,7 +84,6 @@ create a stylesheet with preserved comment w/
 - app version (via "git describe")
 - app license
 - custom output path
-    
 
 Options:
   -o, --output-path <path>  output version stylesheet at what path
@@ -165,13 +163,13 @@ Code configuration happens in repos that use these styles.
 > __Future__:
 >
 > 2. Build stylesheets + Run the pattern library:
-> 
+>
 >     ```bash
 >     npm start
 >     ```
-> 
+>
 > 3. Open the web interface.
-> 
+>
 >     The build command will output the URL (and may even open it for you).
 
 
