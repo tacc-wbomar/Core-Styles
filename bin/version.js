@@ -17,7 +17,9 @@ function create(outputPath) {
     const appName = process.env.npm_package_name;
     const appLicense = path.license;
     const appGitRef = childProcess.execSync('git describe --always').toString();
-    const fileContent = `/*! ${appName} ${appGitRef} | ${appLicense} | github.com/TACC/Core-Styles */` + "\n";
+    const fileContent = `/*! ${appName} ${appGitRef.replace("\n", "")} `
+                        + `| ${appLicense} | github.com/TACC/Core-Styles */`
+                        + "\n";
 
     // Tell user
     console.log(`Updating CSS version to ${appGitRef}`);
