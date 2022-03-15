@@ -14,9 +14,9 @@
   "main": "index.js",
   "bin": "cli.js",
   "scripts": {
-    "build": "npm run version && npm run build:via-cli",
+    "prebuild": "npm run version",
+    "build": "node cli.js build -i \"./source\" -o \"./dist\"",
     "build:verbose": "npm run version -- --verbose && npm run build:via-cli -- --verbose",
-    "build:via-cli": "node cli.js build -i \"./source\" -o \"./dist\"",
     "version": "node cli.js version -o \"./source/_version.css\""
   },
   "engines": {
