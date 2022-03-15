@@ -15,8 +15,10 @@
   "main": "index.js",
   "bin": "cli.js",
   "scripts": {
-    "build": "bin/update-version.js && npm run build:via-cli",
-    "build:via-cli": "node cli.js -i \"./source\" -o \"./dist\""
+    "build": "npm run version && npm run build:via-cli",
+    "build:verbose": "npm run version -- --verbose && npm run build:via-cli -- --verbose",
+    "build:via-cli": "node cli.js build -i \"./source\" -o \"./dist\"",
+    "version": "node cli.js version -o \"./source/_version.css\""
   },
   "engines": {
     "node": ">=12.x",

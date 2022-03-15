@@ -9,35 +9,44 @@ const yaml = require('js-yaml');
 const baseConfigFile = `${__dirname}/../.postcssrc.base.yml`;
 const newConfigFile = `${__dirname}/../.postcssrc.yml`;
 
+
+
 /**
  * Save base config as auto-loaded file (also can overwrite with custom values)
- * @param {array.string} [customConfigFiles] - List of YAML config files
+ * @param {array.string} [customConfigs] - List of YAML config file paths
  * (The first file is merged on top of the base config.)
  * (Each successive file overwrites the file before it.)
  * @see https://github.com/postcss/postcss-load-config#postcssrc
  */
-function config(customConfigFiles) {
+function config(customConfigs) {
+    // Get data
     let baseFile = baseConfigFile;
     let newYaml;
 
-    if (customConfigFiles) {
-        customConfigFiles.forEach(nextFile => {
+    // Either extend base config with any custom configs
+    if (customConfigs) {
+        customConfigs.forEach(nextFile => {
             if (nextFile && fs.existsSync(nextFile)) {
                 newYaml = getMergedConfig(baseFile, nextFile);
                 baseFile = newConfigFile;
             } else {
-              console.info(`Custom config ${nextFile} not found. Skipping`);
+              console.info(`Skipping custom config ${nextFile} (not found)`);
             }
         });
-    } else {
-        console.info('No custom files passed. Using only base config.');
+    }
+    // Or just use the base config
+    else {
+        console.info('Using only base config (no custom configs provided)');
         const baseConfig = fs.readFileSync(baseConfigFile, 'utf8');
         const baseJson = yaml.load(baseConfig);
         newYaml = yaml.dump(baseJson);
     }
 
+    // Write file
     fs.writeFileSync(newConfigFile, newYaml, 'utf8');
 }
+
+
 
 /**
  * Get content of merging one config file atop another
@@ -46,12 +55,15 @@ function config(customConfigFiles) {
  * @return {string} - Merged YAML
  */
  function getMergedConfig(baseFile, customFile) {
+    // Get data
     const baseConfig = fs.readFileSync(baseFile, 'utf8');
     const baseJson = yaml.load(baseConfig);
     const baseYaml = yaml.dump(baseJson);
 
+    // Default to base config content
     let newYaml = baseYaml;
 
+    // Any custom configs are merged onto the content
     if (customFile) {
         const customConfig = fs.readFileSync(customFile, 'utf8');
         const customJson = yaml.load(customConfig);
@@ -60,7 +72,11 @@ function config(customConfigFiles) {
         newYaml = yaml.dump(newJson);
     }
 
+    // Return content
     return newYaml;
 }
 
+
+
+// Export
 module.exports = config;
