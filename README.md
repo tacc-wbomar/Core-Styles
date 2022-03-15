@@ -12,9 +12,7 @@ The shared styles for TACC WMA Workspace Portals & Websites
 
 ## External Project Usage
 
-### Quick Start
-
-#### CLI
+### CLI
 
 ```bash
 Usage: core-styles [options] [command]
@@ -39,7 +37,7 @@ Commands:
   help [command]     display help for command
 ```
 
-##### Build Command
+#### Build Command
 
 ```bash
 Usage: core-styles build [options]
@@ -77,7 +75,7 @@ Notes:
     Each successive file overwrites the file before it.
 ```
 
-##### Version Command
+#### Version Command
 
 ```bash
 Usage: core-styles version [options]
@@ -95,9 +93,9 @@ Options:
   -h, --help                display help for command
 ```
 
-#### Module
+### Module
 
-##### Build Script
+#### Build Script
 
 ```js
 const buildStylesheets = require('core-styles');
@@ -126,7 +124,7 @@ buildStylesheets(
 );
 ```
 
-##### Version Script
+#### Version Script
 
 ```js
 const createVersionStylesheet = require('core-styles');
