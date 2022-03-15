@@ -4,6 +4,12 @@
 
 const { program } = require('commander');
 
+// TEST: Catch failure that will happen on '../package.json'
+process.on('uncaughtException', err => {
+  console.error(err);
+  process.exit(1);
+});
+
 // WARNING: Fallback assumes `package.json` location
 // FAQ: Fallback required to support NPM v6–
 // SEE: https://github.com/npm/cli/issues/2609
