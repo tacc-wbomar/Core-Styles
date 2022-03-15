@@ -144,9 +144,9 @@ createVersionStylesheet(
 
 ### Prequisites for Building the Styles
 
-* Nodejs 12.x (LTS)
+* Nodejs 16.x
 
-> __Future__: The Core Styles will be previewable using a pattern library software.
+> __Future__: The Core Styles will be rendered via a pattern library software.
 
 ### Code Configuration
 
@@ -154,10 +154,10 @@ Code configuration happens in repos that use these styles.
 
 ### Previewing the Styles
 
-1. [Install][yarn-install] the dependencies:
+1. [Install][npm-install] the dependencies:
 
     ```bash
-    yarn # a.k.a. yarn install
+    npm ci
     ```
 
 > __Future__:
@@ -173,7 +173,7 @@ Code configuration happens in repos that use these styles.
 >     The build command will output the URL (and may even open it for you).
 
 
-[yarn-install]: https://classic.yarnpkg.com/en/docs/cli/install/
+[npm-install]: https://docs.npmjs.com/cli/v8/commands/npm-ci
 
 ### Source Files
 
@@ -182,9 +182,9 @@ If you changes files in a `source/` directory, you may need to follow some of th
 #### Quick Start
 
 1. _(optional)_ Make changes to `/source` files.
-2. Build the styles: `yarn build`
+2. Build the styles: `npm run build`
 
-    > __Future__: 2. Build and preview the styles: `yarn start`
+    > __Future__: 2. Build and preview the styles: `npm start`
 
 3. _(to debug)_ Review respective `/dist` files' content.
 
