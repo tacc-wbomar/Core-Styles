@@ -12,9 +12,7 @@ The shared styles for TACC WMA Workspace Portals & Websites
 
 ## External Project Usage
 
-### Quick Start
-
-#### CLI
+### CLI
 
 ```bash
 Usage: core-styles [options] [command]
@@ -29,17 +27,17 @@ Commands:
   - custom input dir
   - custom output dir
   - custom configs
-      
+
   version [options]  create a stylesheet with preserved comment w/
   - app name
   - app version (via "git describe")
   - app license
   - custom output path
-      
+
   help [command]     display help for command
 ```
 
-##### Build Command
+#### Build Command
 
 ```bash
 Usage: core-styles build [options]
@@ -49,7 +47,6 @@ build stylesheets with TACC standard process:
 - custom input dir
 - custom output dir
 - custom configs
-    
 
 Options:
   -i, --input-dir <path>           parse source from which directory¹
@@ -77,7 +74,7 @@ Notes:
     Each successive file overwrites the file before it.
 ```
 
-##### Version Command
+#### Version Command
 
 ```bash
 Usage: core-styles version [options]
@@ -87,7 +84,6 @@ create a stylesheet with preserved comment w/
 - app version (via "git describe")
 - app license
 - custom output path
-    
 
 Options:
   -o, --output-path <path>  output version stylesheet at what path
@@ -95,9 +91,13 @@ Options:
   -h, --help                display help for command
 ```
 
-#### Module
+### Module
 
-##### Build Script
+Install the package with any package manager e.g.:
+- `npm install tacc-wbomar/Core-Styles`
+- `yarn add tacc-wbomar/Core-Styles`
+
+#### Build Script
 
 ```js
 const buildStylesheets = require('core-styles');
@@ -126,7 +126,7 @@ buildStylesheets(
 );
 ```
 
-##### Version Script
+#### Version Script
 
 ```js
 const createVersionStylesheet = require('core-styles');
@@ -163,13 +163,13 @@ Code configuration happens in repos that use these styles.
 > __Future__:
 >
 > 2. Build stylesheets + Run the pattern library:
-> 
+>
 >     ```bash
 >     npm start
 >     ```
-> 
+>
 > 3. Open the web interface.
-> 
+>
 >     The build command will output the URL (and may even open it for you).
 
 
