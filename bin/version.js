@@ -3,7 +3,8 @@
 /** Create CSS file to import that prints project version */
 
 const fs = require('fs');
-const childProcess = require('child_process');
+
+const cmd = require('node-cmd');
 
 const package = require(process.env.npm_package_json);
 
@@ -17,7 +18,7 @@ function create(outputPath) {
     // Get data
     const appName = package.name;
     const appLicense = package.license;
-    const appGitRef = childProcess.execSync('git describe --always').toString();
+    const appGitRef = cmd.runSync('git describe --always').data;
     const appWebsite = package.homepage.replace('https://', '');
     const fileContent = `/*! ${appName} ${appGitRef.replace("\n", "")} `
                         + `| ${appLicense} | ${appWebsite} */`
