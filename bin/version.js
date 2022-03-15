@@ -3,8 +3,9 @@
 /** Create CSS file to import that prints project version */
 
 const fs = require('fs');
-const path = require('../package.json');
 const childProcess = require('child_process');
+
+const package = require(process.env.npm_package_json);
 
 
 
@@ -14,11 +15,12 @@ const childProcess = require('child_process');
  */
 function create(outputPath) {
     // Get data
-    const appName = process.env.npm_package_name;
-    const appLicense = path.license;
+    const appName = package.name;
+    const appLicense = package.license;
     const appGitRef = childProcess.execSync('git describe --always').toString();
+    const appWebsite = package.homepage.replace('https://', '');
     const fileContent = `/*! ${appName} ${appGitRef.replace("\n", "")} `
-                        + `| ${appLicense} | github.com/TACC/Core-Styles */`
+                        + `| ${appLicense} | ${appWebsite} */`
                         + "\n";
 
     // Tell user

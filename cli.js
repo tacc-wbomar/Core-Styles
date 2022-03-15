@@ -4,7 +4,7 @@
 
 const { program } = require('commander');
 
-const package = require('./package.json');
+const package = require(process.env.npm_package_json);
 
 const {
     buildStylesheets,
