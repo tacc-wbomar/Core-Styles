@@ -15,14 +15,22 @@ const package = require(process.env.npm_package_json);
  * @param {string} outputPath - Output version file at which path
  */
 function create(outputPath) {
+    // Get ref or leave (i.e. use last comitted version stylesheet)
+    // BUG: FP-1548: Can get locally, but not on build server
+    let appGitRef = cmd.runSync('git describe --always').data;
+    if ( appGitRef ) {
+        appGitRef = appGitRef.replace("\n", '');
+    } else {
+        console.warn('Skipping CSS version update due to error');
+        console.log('Letting existing CSS version file be used');
+        return;
+    }
+
     // Get data
     const appName = package.name;
     const appLicense = package.license;
-    const appGitRef = cmd.runSync('git describe --always').data;
     const appWebsite = package.homepage.replace('https://', '');
-    const fileContent = `/*! ${appName} ${appGitRef.replace("\n", "")} `
-                        + `| ${appLicense} | ${appWebsite} */`
-                        + "\n";
+    const fileContent = `/*! ${appName} ${appGitRef} | ${appLicense} | ${appWebsite} */` + "\n";
 
     // Tell user
     console.log(`Updating CSS version to ${appGitRef}`);
