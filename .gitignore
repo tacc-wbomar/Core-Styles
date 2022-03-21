@@ -2,7 +2,7 @@
 node_modules
 .postcssrc.yml
 dist/_tests.css
-dist/_version.css
+_version.css
 
 # IDE
 .vscode
