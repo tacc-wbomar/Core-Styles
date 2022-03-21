@@ -73,12 +73,14 @@ program
     .command('version')
     .description(`create a stylesheet with preserved comment w/
 - app name
-- app version (via "git describe")
 - app license
+- app version (or custom build id)
 - custom output path
     `)
     .requiredOption('-o, --output-path <path>',
         'output version stylesheet at what path')
+    .option('-b, --build-id <identifier>',
+        'any value to identify the build')
     .option('-v, --verbose',
         'print more info during file creation')
     .action( programOpts => {

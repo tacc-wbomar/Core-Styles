@@ -4,8 +4,6 @@
 
 const fs = require('fs');
 
-const cmd = require('node-cmd');
-
 const package = require(process.env.npm_package_json);
 
 
@@ -13,27 +11,18 @@ const package = require(process.env.npm_package_json);
 /**
  * Create version stylesheet at specificed path
  * @param {string} outputPath - Output version file at which path
+ * @param {string} [buildId] - Any value to identify the build
  */
-function create(outputPath) {
-    // Get ref or leave (i.e. use last comitted version stylesheet)
-    // BUG: FP-1548: Can get locally, but not on build server
-    let appGitRef = cmd.runSync('git describe --always').data;
-    if ( appGitRef ) {
-        appGitRef = appGitRef.replace("\n", '');
-    } else {
-        console.warn('Skipping CSS version update due to error');
-        console.log('Letting existing CSS version file be used');
-        return;
-    }
-
+function create(outputPath, buildId) {
     // Get data
     const appName = package.name;
+    const appVersion = buildId || package.version + '+';
     const appLicense = package.license;
     const appWebsite = package.homepage.replace('https://', '');
-    const fileContent = `/*! ${appName} ${appGitRef} | ${appLicense} | ${appWebsite} */` + "\n";
+    const fileContent = `/*! ${appName} ${appVersion} | ${appLicense} | ${appWebsite} */` + "\n";
 
     // Tell user
-    console.log(`Updating CSS version to ${appGitRef}`);
+    console.log(`Updating CSS version to ${appVersion}`);
 
     // Write version
     fs.writeFileSync( outputPath, fileContent );

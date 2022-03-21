@@ -30,8 +30,8 @@ Commands:
 
   version [options]  create a stylesheet with preserved comment w/
   - app name
-  - app version (via "git describe")
   - app license
+  - app version (or custom build id)
   - custom output path
 
   help [command]     display help for command
@@ -81,12 +81,13 @@ Usage: core-styles version [options]
 
 create a stylesheet with preserved comment w/
 - app name
-- app version (via "git describe")
 - app license
+- app version (or custom build id)
 - custom output path
 
 Options:
   -o, --output-path <path>  output version stylesheet at what path
+  -b, --build-id <identifier>  any value to identify the build
   -v, --verbose             print more info during file creation
   -h, --help                display help for command
 ```
@@ -191,6 +192,12 @@ If you changes files in a `source/` directory, you may need to follow some of th
 #### How to Just Build Stylesheets
 
 You can build stylesheets __from__ source files __in__ `source` directory __to__ compiled files __in__ `dist` directory.
+
+0. (Optional) Set version (for preserved comment):
+
+    ```bash
+    npm run version -- --build-id="$(git describe --always)"
+    ```
 
 1. Build stylesheets:
 
