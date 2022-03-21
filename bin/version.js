@@ -4,7 +4,7 @@
 
 const fs = require('fs');
 
-const package = require(process.env.npm_package_json);
+const package = require(process.env.npm_package_json || '../package.json');
 
 
 
