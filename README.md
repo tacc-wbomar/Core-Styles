@@ -27,12 +27,7 @@ Commands:
   - custom input dir
   - custom output dir
   - custom configs
-
-  version [options]  create a stylesheet with preserved comment w/
-  - app name
-  - app license
-  - app version (or custom build id)
-  - custom output path
+  - prepend build id
 
   help [command]     display help for command
 ```
@@ -54,6 +49,7 @@ Options:
   -e, --file-ext <ext>             extensions to parse (default: "css")
   -v, --verbose                    print more info during build process
   -c, --custom-configs <paths...>  extend base config with YAML files²³
+  -b, --build-id <identifier>      any value to identify the build (default: "(app version)")
   -h, --help                       display help for command
 
 Notes:
@@ -72,23 +68,6 @@ Notes:
 
   ³ The first file is merged on top of the base config.
     Each successive file overwrites the file before it.
-```
-
-#### Version Command
-
-```bash
-Usage: core-styles version [options]
-
-create a stylesheet with preserved comment w/
-- app name
-- app license
-- app version (or custom build id)
-- custom output path
-
-Options:
-  -o, --output-path <path>  output version stylesheet at what path
-  -b, --build-id <identifier>  any value to identify the build
-  -h, --help                display help for command
 ```
 
 ### Module
@@ -121,21 +100,9 @@ buildStylesheets(
     // Print version of this software (optional, default: false)
     version: true,
     // Extension of CSS files to parse (optional, default: "css")
-    fileExt: 'css'
-  }
-);
-```
-
-#### Version Script
-
-```js
-const createVersionStylesheet = require('core-styles');
-
-createVersionStylesheet(
-  // Output version file at which path (required)
-  `path/to/put/_version.css`, {
-    // Print more info from build log (optional, default: false)
-    buildId: process.env.npm_package_version
+    fileExt: 'css',
+    // Any value to help identify the build (optional, default: app version)
+    buildId: process.env.npm_package_version + someUniqueId
   }
 );
 ```

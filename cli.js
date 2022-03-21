@@ -6,10 +6,7 @@ const { program } = require('commander');
 
 const package = require(process.env.npm_package_json || './package.json');
 
-const {
-    buildStylesheets,
-    createVersionStylesheet
-} = require('./index.js');
+const { buildStylesheets } = require('./index.js');
 
 
 
@@ -29,6 +26,7 @@ program
 - custom input dir
 - custom output dir
 - custom configs
+- prepend build id
     `)
     .requiredOption('-i, --input-dir <path>',
         'parse source from which directory¹')
@@ -40,6 +38,8 @@ program
         'print more info during build process')
     .option('-c, --custom-configs <paths...>',
         `extend base config with YAML files²³`)
+    .option('-b, --build-id <identifier>',
+        'any value to identify the build', '(app version)')
     .addHelpText('after', `
 Notes:
   ¹ Folder structure of "--input-dir" mirrored in "--output-dir" e.g.
@@ -61,27 +61,6 @@ Notes:
         const { inputDir, outputDir, ...opts } = programOpts;
 
         buildStylesheets( inputDir, outputDir, opts );
-    });
-
-
-
-// Version Command
-program
-    .command('version')
-    .description(`create a stylesheet with preserved comment w/
-- app name
-- app license
-- app version (or custom build id)
-- custom output path
-    `)
-    .requiredOption('-o, --output-path <path>',
-        'output version stylesheet at what path')
-    .option('-b, --build-id <identifier>',
-        'any value to identify the build')
-    .action( programOpts => {
-        const { outputPath, ...opts } = programOpts;
-
-        createVersionStylesheet( outputPath, opts );
     });
 
 

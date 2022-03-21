@@ -19,6 +19,7 @@ const version = require('./bin/version.js');
  * @param {array.string} [opts.customConfigs] - List of YAML config file paths
  * (The first file is merged on top of the base config.)
  * (Each successive file overwrites the file before it.)
+ * @param {string} [opts.buildId] - Any value to identify the build
  * @param {boolean} [opts.verbose=false] - Print more in log output
  */
 function buildStylesheets(inputDir, outputDir, opts = {}) {
@@ -33,26 +34,12 @@ function buildStylesheets(inputDir, outputDir, opts = {}) {
         opts.customConfigs.map(filePath =>
             (filePath) ? resolve(filePath) : null
         ) : null;
-
-    config(customConfigs);
+console.log({ VERSION: version(opts.buildId) });
+    config(customConfigs, version(opts.buildId));
     build(inputDirResolved, outputDirResolved, buildOpts);
 }
 
 
 
-/**
- * Create version stylesheet at specificed path
- * @param {string} outputPath - Output version file at which path
- * @param {object} [opts={}] - Options
- * @param {string} [opts.buildId] - Any value to identify the build
- */
-function createVersionStylesheet(outputPath, opts = {}) {
-    const outputPathResolved = resolve(outputPath);
-
-    version(outputPathResolved, opts.buildId);
-}
-
-
-
 // Export
-module.exports = { buildStylesheets, createVersionStylesheet };
+module.exports = { buildStylesheets };

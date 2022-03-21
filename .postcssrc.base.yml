@@ -36,3 +36,10 @@ plugins:
           exclude: true
         mergeRules:
           exclude: true
+
+
+
+  postcss-banner:
+    banner: 'DSFSFDS'
+    inline: true
+    important: true
