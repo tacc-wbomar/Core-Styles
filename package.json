@@ -16,7 +16,7 @@
   "scripts": {
     "prebuild": "npm run version",
     "build": "node cli.js build -i \"./source\" -o \"./dist\"",
-    "build:verbose": "npm run version -- --verbose && npm run build:via-cli -- --verbose",
+    "build:verbose": "npm run version -- --verbose && npm run build -- --verbose",
     "version": "node cli.js version -o \"./source/_version.css\""
   },
   "engines": {
