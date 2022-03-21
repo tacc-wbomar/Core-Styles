@@ -60,9 +60,6 @@ Notes:
     `).action( programOpts => {
         const { inputDir, outputDir, ...opts } = programOpts;
 
-        if (opts.verbose) {
-            console.log('cli.js > build:', programOpts);
-        }
         buildStylesheets( inputDir, outputDir, opts );
     });
 
@@ -81,14 +78,9 @@ program
         'output version stylesheet at what path')
     .option('-b, --build-id <identifier>',
         'any value to identify the build')
-    .option('-v, --verbose',
-        'print more info during file creation')
     .action( programOpts => {
         const { outputPath, ...opts } = programOpts;
 
-        if (opts.verbose) {
-            console.log('cli.js > version:', programOpts);
-        }
         createVersionStylesheet( outputPath, opts );
     });
 

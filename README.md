@@ -88,7 +88,6 @@ create a stylesheet with preserved comment w/
 Options:
   -o, --output-path <path>  output version stylesheet at what path
   -b, --build-id <identifier>  any value to identify the build
-  -v, --verbose             print more info during file creation
   -h, --help                display help for command
 ```
 
@@ -136,7 +135,7 @@ createVersionStylesheet(
   // Output version file at which path (required)
   `path/to/put/_version.css`, {
     // Print more info from build log (optional, default: false)
-    verbose: true
+    buildId: process.env.npm_package_version
   }
 );
 ```
