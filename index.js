@@ -22,10 +22,6 @@ const version = require('./bin/version.js');
  * @param {boolean} [opts.verbose=false] - Print more in log output
  */
 function buildStylesheets(inputDir, outputDir, opts = {}) {
-    if (opts.verbose) {
-        console.log('index.js > buildStyles..():', { inputDir, outputDir, opts });
-    }
-
     const buildOpts = {
         fileExt: opts.fileExt,
         verbose: opts.verbose || null,
@@ -49,13 +45,8 @@ function buildStylesheets(inputDir, outputDir, opts = {}) {
  * @param {string} outputPath - Output version file at which path
  * @param {object} [opts={}] - Options
  * @param {string} [opts.buildId] - Any value to identify the build
- * @param {boolean} [opts.verbose=false] - Print more in log output
  */
 function createVersionStylesheet(outputPath, opts = {}) {
-    if (opts.verbose) {
-        console.log('index.js > createVersion...():', { outputPath, opts });
-    }
-
     const outputPathResolved = resolve(outputPath);
 
     version(outputPathResolved, opts.buildId);
