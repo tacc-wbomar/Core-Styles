@@ -48,6 +48,7 @@ function buildStylesheets(inputDir, outputDir, opts = {}) {
  * Create version stylesheet at specificed path
  * @param {string} outputPath - Output version file at which path
  * @param {object} [opts={}] - Options
+ * @param {string} [opts.buildId] - Any value to identify the build
  * @param {boolean} [opts.verbose=false] - Print more in log output
  */
 function createVersionStylesheet(outputPath, opts = {}) {
@@ -57,7 +58,7 @@ function createVersionStylesheet(outputPath, opts = {}) {
 
     const outputPathResolved = resolve(outputPath);
 
-    version(outputPathResolved);
+    version(outputPathResolved, opts.buildId);
 }
 
 
