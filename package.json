@@ -14,10 +14,7 @@
   "main": "index.js",
   "bin": "cli.js",
   "scripts": {
-    "prebuild": "npm run version",
-    "build": "node cli.js build -i \"./source\" -o \"./dist\"",
-    "build:verbose": "npm run version -- --verbose && npm run build -- --verbose",
-    "version": "node cli.js version -o \"./source/_version.css\""
+    "build": "node cli.js build -i \"./source\" -o \"./dist\""
   },
   "engines": {
     "node": ">=15.x",
@@ -34,6 +31,7 @@
     "js-yaml": "^3.13.1",
     "merge-lite": "^1.0.2",
     "node-cmd": "^5.0.0",
+    "postcss-banner": "^3.0.1",
     "postcss-cli": "^7.1.2",
     "postcss-extend": "^1.0.5",
     "postcss-import": "^12.0.1",
@@ -43,6 +41,7 @@
     "commander": "To create CLI",
     "cssnano": "To minify CSS",
     "node-cmd": "To run `postcss-cli` from script",
+    "postcss-banner": "To prepend version comment to built stylesheets",
     "postcss-cli": "To process CSS",
     "postcss-cli:note": "This is the simplest and cheapest 'PostCSS Runner'",
     "postcss-import": "To import CSS files at build-time",
