@@ -40,6 +40,6 @@ plugins:
 
 
   postcss-banner:
-    banner: 'DSFSFDS'
+    banner: 'no build id'
     inline: true
     important: true
