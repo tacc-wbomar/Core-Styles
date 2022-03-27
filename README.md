@@ -49,7 +49,7 @@ Options:
   -e, --file-ext <ext>             extensions to parse (default: "css")
   -v, --verbose                    print more info during build process
   -c, --custom-configs <paths...>  extend base config with YAML files²³
-  -b, --build-id <identifier>      any value to identify the build (default: "(app version)")
+  -b, --build-id <identifier>      any value to identify the build (default: version of app)
   -h, --help                       display help for command
 
 Notes:

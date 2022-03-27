@@ -39,7 +39,7 @@ program
     .option('-c, --custom-configs <paths...>',
         `extend base config with YAML files²³`)
     .option('-b, --build-id <identifier>',
-        'any value to identify the build', '(app version)')
+        'any value to identify the build (default: version of app)')
     .addHelpText('after', `
 Notes:
   ¹ Folder structure of "--input-dir" mirrored in "--output-dir" e.g.

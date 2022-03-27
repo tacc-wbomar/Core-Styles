@@ -33,8 +33,8 @@ function buildStylesheets(inputDir, outputDir, opts = {}) {
     const customConfigs = (opts.customConfigs) ?
         opts.customConfigs.map(filePath =>
             (filePath) ? resolve(filePath) : null
-        ) : null;
-console.log({ VERSION: version(opts.buildId) });
+        ) : undefined;
+
     config(customConfigs, version(opts.buildId));
     build(inputDirResolved, outputDirResolved, buildOpts);
 }
