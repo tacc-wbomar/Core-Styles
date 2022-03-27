@@ -6,62 +6,69 @@ const fs = require('fs');
 const merge = require('merge-lite');
 const yaml = require('js-yaml');
 
-const baseConfigFile = `${__dirname}/../.postcssrc.base.yml`;
-const newConfigFile = `${__dirname}/../.postcssrc.yml`;
+const BASE_CONFIG_FILE = `${__dirname}/../.postcssrc.base.yml`;
+const NEW_CONFIG_FILE = `${__dirname}/../.postcssrc.yml`;
 
 
 
 /**
  * Save base config as auto-loaded file (also can overwrite with custom values)
- * @param {array.string} [customConfigs] - List of YAML config file paths
+ * @param {array.string} [customConfigFiles=[]] - List of YAML config file paths
  * (The first file is merged on top of the base config.)
  * (Each successive file overwrites the file before it.)
  * @param {string} [cssVersion] - A versioning identifier for this build
  * @see https://github.com/postcss/postcss-load-config#postcssrc
  */
-function config(customConfigs, cssVersion) {
-    // Get data
-    let baseFile = baseConfigFile;
-    let newYaml;
+function config(customConfigFiles = [], cssVersion) {
+    // Prepare data
+    const configFiles = [ BASE_CONFIG_FILE, ...customConfigFiles ];
+    const configObjects = [];
+    let newJson;
 
-    // Either extend base config with any custom configs
-    if (customConfigs) {
-        customConfigs.forEach(nextFile => {
-            if (nextFile && fs.existsSync(nextFile)) {
-                newYaml = getMergedConfig(baseFile, nextFile, cssVersion);
-                baseFile = newConfigFile;
-            } else {
-              console.info(`Skipping custom config ${nextFile} (not found)`);
-            }
-        });
-    }
-    // Or just use the base config
-    else {
-        console.info('Using only base config (no custom configs provided)');
+    // Initialize final config file
+    emptyOrCreateFile( NEW_CONFIG_FILE );
 
-        const baseConfig = fs.readFileSync(baseConfigFile, 'utf8');
-        const baseJson = yaml.load(baseConfig);
-        const newJson = updateVersion(baseJson, cssVersion);
+    // Merge configs in order
+    configFiles.forEach( nextFile => {
+        newJson = getConfigObject( nextFile );
+        configObjects.push( newJson );
+    });
+    mergedJson = merge( ...configObjects );
 
-        newYaml = yaml.dump(newJson);
-    }
+    // Update version property
+    const updatedJson = updateVersion( mergedJson, cssVersion );
+    const configYaml = yaml.dump( updatedJson );
 
-    // Write file
-    fs.writeFileSync(newConfigFile, newYaml, 'utf8');
+    // Write final config file
+    fs.writeFileSync( NEW_CONFIG_FILE, configYaml, 'utf8');
 }
 
 
 
 /**
- * Update the value for the CSS version in given config
- * @param {object} json - The JOSN object in which to update the version
+ * Update the value for the CSS version in given config data
+ * @param {object} config - The config data in which to update the version
  * @param {string} version - The version identifier
- * @return {object} - Updated JSON
+ * @return {object} - Updated config
  */
-function updateVersion(json, version) {
+function updateVersion( config, version ) {
     console.log(`Tagging CSS version as ${version}`);
 
-    json['plugins']['postcss-banner']['banner'] = version;
+    config['plugins']['postcss-banner']['banner'] = version;
+
+    return config;
+}
+
+
+
+/**
+ * Get JSON from YAML config file
+ * @param {string} filePath - YAML config file
+ * @return {object} - Config as JSON
+ */
+ function getConfigObject( filePath ) {
+    const config = fs.readFileSync( filePath, 'utf8');
+    const json = yaml.load( config );
 
     return json;
 }
@@ -69,32 +76,12 @@ function updateVersion(json, version) {
 
 
 /**
- * Get content of merging one config file atop another
- * @param {array.string} baseFile - YAML config file to be extended
- * @param {array.string} customFile - YAML config file to merge onto base
- * @param {string} [cssVersion] - A versioning identifier for this build
- * @return {string} - Merged YAML
+ * If file exists, empty it; otherwise, create it
+ * @param {string} [filePath] - The file to empty or create
+ * @see https://stackoverflow.com/a/29016268/11817077
  */
- function getMergedConfig(baseFile, customFile, cssVersion) {
-    // Get data
-    const baseConfig = fs.readFileSync(baseFile, 'utf8');
-    const baseJson = yaml.load(baseConfig);
-    const baseYaml = yaml.dump(baseJson);
-
-    // Default to base config content
-    let newYaml = baseYaml;
-
-    // Any custom configs are merged onto the content
-    if (customFile) {
-        const customConfig = fs.readFileSync(customFile, 'utf8');
-        const customJson = yaml.load(customConfig);
-        const newJson = updateVersion(merge(baseJson, customJson), cssVersion);
-
-        newYaml = yaml.dump(newJson);
-    }
-
-    // Return content
-    return newYaml;
+function emptyOrCreateFile( filePath ) {
+    fs.closeSync( fs.openSync( filePath, 'w') );
 }
 
 
