@@ -9,7 +9,8 @@ Styles that allow visible link hover for article lists.
 %x-article-link-stretch--gapless - Make link box fix gapless layout
 %x-article-link-hover            - Give link a hover state
 %x-article-link-hover--gapless   - Make link hover state fix gapless layout
-%x-article-link-active          - Give link an active (click, enter) state
+%x-article-link-active           - Give link an active (click, enter) state
+%x-article-link-text             - Hide link text
 
 Styleguide Tools.ExtendsAndMixins.ArticleLink
 */
@@ -37,16 +38,25 @@ Styleguide Tools.ExtendsAndMixins.ArticleLink
 /* To give link state (pseudo-class) feedback */
 .x-article-link-hover,
 %x-article-link-hover {
+  --outline-offset: 1em;
+
   outline: 1px solid var(--global-color-accent--normal);
 
-  outline-offset: 1em;
+  outline-offset: var(--outline-offset, 1em);
 }
 .x-article-link-hover--gapless,
 %x-article-link-hover--gapless {
-  outline-offset: 0;
+  --outline-offset: 0;
 }
 
 /* To give link active state feedback */
 %x-article-link-active {
   outline: 1px dotted var(--global-color-accent--normal);
+}
+
+/* To hide link text but retain link element */
+%x-article-link-text {
+  line-height: 0;
+  font-size: 0;
+  color: transparent;
 }
