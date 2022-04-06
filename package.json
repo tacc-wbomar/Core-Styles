@@ -20,11 +20,8 @@
     "node": ">=15.x",
     "npm": ">=7.x"
   },
-  "bugs": {
-    "url": "https://github.com/tacc-wbomar/Core-Styles/issues"
-  },
-  "homepage": "https://github.com/tacc-wbomar/Core-Styles",
-  "repository": "git@github.com:tacc-wbomar/Core-Styles.git",
+  "homepage": "https://github.com/TACC/Core-Styles",
+  "repository": "git@github.com:TACC/Core-Styles.git",
   "dependencies": {
     "commander": "^9.0.0",
     "cssnano": "^4.1.10",

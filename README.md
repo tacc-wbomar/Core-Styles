@@ -73,8 +73,8 @@ Notes:
 ### Module
 
 Install the package with any package manager e.g.:
-- `npm install tacc-wbomar/Core-Styles`
-- `yarn add tacc-wbomar/Core-Styles`
+- `npm install TACC/Core-Styles`
+- `yarn add TACC/Core-Styles`
 
 #### Build Script
 
@@ -191,7 +191,7 @@ _For now_, the stylesheets are acquired or accessed by other repositories.
 
 <sub>¹ A repo that is, or will be, in [Core CMS Pattern Library] should load these styles __and__ build a pattern library.</sub>
 
-[Core CMS Pattern Library]: https://github.com/tacc-wbomar?tab=repositories&q=Core-CMS-Pattern-Library
+[Core CMS Pattern Library]: https://github.com/wesleyboar/Core-CMS-Pattern-Library
 [research-pattern-lib]: https://confluence.tacc.utexas.edu/x/FADMBQ
 
 
