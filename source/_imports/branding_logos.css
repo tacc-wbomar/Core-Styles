@@ -41,7 +41,9 @@
   padding: 0;
   border: none;
 }
-
+.branding-logo--short {
+  height: var(--branding-logo-height);
+}
 .branding-logo--tall {
   height: 35px;
 }
