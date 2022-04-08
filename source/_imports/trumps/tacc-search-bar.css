@@ -101,3 +101,7 @@ Styleguide Scopes.SearchBar
   color: env(--header-text-color);
   font-size: var(--input-font-size);
 }
+:host [part="input"]::placeholder {
+  color: env(--header-text-color);
+  opacity: 0.5;
+}
