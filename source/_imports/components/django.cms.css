@@ -18,7 +18,7 @@ Styleguide Components.DjangoCMS
   /* FAQ: CMS dynamically adds `margin-top` to `head` to fit toolbar height *\/
   /* WARNING: If the dynamic(!) header margin changes, then so should this *\/
   /* RFC: Consider creating JavaScript snippet (via CMS?) to solve this *\/
-  height: calc(100vh - 46px);
+  height: calc(100vh - env(--cms-toolbar-height));
 }
 */
 
