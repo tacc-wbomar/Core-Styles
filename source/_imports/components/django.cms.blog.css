@@ -13,13 +13,15 @@ Styleguide Components.DjangoCMS.Blog
 @import url("_imports/tools/x-truncate.css");
 @import url("_imports/tools/x-article-link.css");
 
+@import url("./django.cms.blog.bootstrap.pagination.css");
+
 
 
 
 /* Blog */
 
 .app-blog {
-  --item-buffer: 20px;
+  --post-buffer: 20px;
 }
 
 
@@ -29,7 +31,7 @@ Styleguide Components.DjangoCMS.Blog
 /* List */
 
 .blog-list header {
-  margin-bottom: var(--item-buffer);
+  margin-bottom: var(--post-buffer);
 }
 
 
@@ -136,9 +138,9 @@ ul.post-detail {
 :--article-item .blog-lead    { grid-area: desc }
 
 :--article-item + article {
-  margin-top: var(--item-buffer);
+  margin-top: var(--post-buffer);
   border-top: var(--global-border-width--normal) solid var(--global-color-primary--dark);
-  padding-top: var(--item-buffer);
+  padding-top: var(--post-buffer);
 }
 
 
@@ -274,7 +276,7 @@ ul.post-detail {
 /* Article Item - Footer */
 
 .read-more a:hover {
-  --outline-offset: var(--item-buffer);
+  --outline-offset: var(--post-buffer);
   @extend %x-article-link-hover;
 }
 .read-more a:active {
