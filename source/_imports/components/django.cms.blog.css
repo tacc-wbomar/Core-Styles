@@ -39,6 +39,9 @@ Styleguide Components.DjangoCMS.Blog
 
 /* Article */
 
+/* FAQ: Distinguishing these in selectors in not intuitive */
+/* FAQ: Wesley B avoids changing blog templates to limit upgrade maintenance */
+@custom-selector :--article article;
 @custom-selector :--article-page article.post-detail;
 @custom-selector :--article-item .blog-list article;
 
@@ -156,9 +159,9 @@ ul.post-detail {
   min-width: 0; /* to support truncation */
 
   grid-template-areas:
-    'cats tags'
-    'attr attr'
-    'head subh';
+    var(--row-one-areas, 'cats tags')
+                         'attr attr'
+                         'head subh';
   /* To truncate 'subh' fully before truncating 'head' */
   /* CAVEAT: 'cats' is truncated but 'tags' never is */
   grid-template-columns: minmax(0, max-content) 1fr;
@@ -206,6 +209,22 @@ ul.post-detail {
 :--article-item .categories::before { @extend %x-truncate--one-line }
 
 :--article-item .date { order: -1; }
+
+/* To disable content */
+/* FAQ: Display none is not enough on grid instances */
+.app-blog.no-tags :--article .tags,
+.app-blog.no-categories :--article .categories {
+  display: none;
+}
+.app-blog.no-categories:not(.no-tags) :--article-item header {
+  --row-one-areas: 'tags tags';
+}
+.app-blog.no-tags:not(.no-categories) :--article-item header {
+  --row-one-areas: 'cats cats';
+}
+.app-blog.no-categories.no-tags :--article-item header {
+  --row-one-areas: 'none none';
+}
 
 /* Article Item - Header - Content (Skin) */
 :--article-item :is(.attr, .tags) {
