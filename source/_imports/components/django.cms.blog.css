@@ -140,7 +140,7 @@ ul.post-detail {
 :--article-item .blog-visual  { grid-area: media }
 :--article-item .blog-lead    { grid-area: desc }
 
-:--article-item + article {
+:--article-item + :--article-item {
   margin-top: var(--post-buffer);
   border-top: var(--global-border-width--normal) solid var(--global-color-primary--dark);
   padding-top: var(--post-buffer);
