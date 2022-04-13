@@ -132,9 +132,13 @@ ul.post-detail {
 
 :--article-item {
   display: grid;
+
   grid-template-areas:
     'media head'
     'media desc';
+
+  /* To have shrinkwrapped media and flexible text content */
+  grid-template-columns: minmax(0, max-content) 1fr;
 }
 :--article-item header        { grid-area: head }
 :--article-item .blog-visual  { grid-area: media }
@@ -163,6 +167,7 @@ ul.post-detail {
     var(--row-one-areas, 'cats tags')
                          'attr attr'
                          'head subh';
+
   /* To truncate 'subh' fully before truncating 'head' */
   /* CAVEAT: 'cats' is truncated but 'tags' never is */
   grid-template-columns: minmax(0, max-content) 1fr;
