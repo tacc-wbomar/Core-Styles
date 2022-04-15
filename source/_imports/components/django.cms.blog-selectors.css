@@ -1,0 +1,5 @@
+/* FAQ: Distinguishing these in selectors in not intuitive */
+/* FAQ: Wesley B avoids changing blog templates to limit upgrade maintenance */
+@custom-selector :--article article;
+@custom-selector :--article-page article.post-detail;
+@custom-selector :--article-item .blog-list article;
