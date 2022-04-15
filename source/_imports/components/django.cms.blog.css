@@ -79,7 +79,7 @@ ul.post-detail {
 /* Article Page - Header */
 
 :--article-page header {
-  width: 620px;
+  max-width: 620px;
 }
 
 :--article-page .attr {
