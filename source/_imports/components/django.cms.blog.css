@@ -82,16 +82,16 @@ ul.post-detail {
   justify-content: space-between;
 }
 
-:--article-page h2 {
+:--article-page header h2 {
   font-size: var(--global-font-size--xxx-large);
 }
-:--article-page h3 {
+:--article-page header h3 {
   font-style: italic;
   font-weight: normal;
   font-size: var(--global-font-size--large);
 }
 
-:--article-page :is(h3, h2 + .attr) {
+:--article-page header :is(h3, h2 + .attr) {
   padding-top: 17px;
   border-top: var(--global-border-width--normal) solid var(--global-color-primary--dark);
 }
