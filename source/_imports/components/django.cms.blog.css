@@ -109,6 +109,11 @@ ul.post-detail {
 
   margin-block: var(--post-main-image-buffer);
 }
+
+
+
+/* Article Page - Media */
+
 :--article-page .blog-visual {
   float: left;
   margin-right: var(--post-main-image-buffer);
