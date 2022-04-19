@@ -105,7 +105,18 @@ ul.post-detail {
 /* Article Page - Media & Content */
 
 :--article-page :is(.blog-visual, .blog-content) {
-  margin-block: 45px;
+  --post-main-image-buffer: 45px;
+
+  margin-block: var(--post-main-image-buffer);
+}
+:--article-page .blog-visual {
+  float: left;
+  margin-right: var(--post-main-image-buffer);
+}
+/* To mimic Bootstrap `.img-fluid` */
+:--article-page .blog-visual img {
+  max-width: 100%;
+  height: auto;
 }
 
 
