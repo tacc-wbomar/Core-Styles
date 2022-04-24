@@ -265,7 +265,6 @@ Styleguide Objects.Section
 [class*="o-section--style"] { z-index: 1; }
 
 /* HACK: To hide `.o-section__banner-image` overflow */
-main /* SEE: https://github.com/TACC/Core-CMS/pull/151 */,
-#content-wrap /* HACK: Using ID selector until <main> exists */ {
+main {
   overflow-x: clip; /* support position sticky on element in section */
 }
