@@ -23,6 +23,16 @@ Styleguide Components.Nav
 
 
 
+/* Block */
+
+nav.c-nav {
+  --link-padding: 0.5em;
+}
+
+
+
+
+
 /* Modifiers */
 
 
@@ -34,11 +44,8 @@ nav.c-nav--boxed {
   --large-indent: var(--global-space--list-indent);
 
   width: fit-content;
-  padding-block: var(--small-indent);
 
   border: var(--global-border--normal);
-
-  line-height: 2em;
 }
 
 /* any list */
@@ -51,24 +58,33 @@ nav.c-nav--boxed :is(ul,ol) {
 /* unordered list */
 nav.c-nav--boxed ul {
   list-style-type: none; /* to remove bullets (must then reduce padding left) */
-  padding-left: var(--small-indent); /* overwrite `html-elements.css` */
+  padding-left: var(--small-indent);
   padding-right: var(--large-indent);
 }
 
-/* ordered list (wide) */
+/* wide screen */
 @media (--medium-and-above) {
+  nav.c-nav--boxed {
+    padding-block: var(--small-indent);
+  }
+
   nav.c-nav--boxed ol {
     /* We retain bullets, which (wide screen) need large padding (so keep it) */
-    /* padding-left: var(--large-indent); *//* comes from `html-elements.css` */
-    padding-right: var(--large-indent);
+    padding-left: var(--large-indent);
+    padding-right: calc( var(--large-indent) - var(--link-padding) );
   }
 }
-/* ordered list (narrow) */
+
+/* narrow screen */
 @media (--medium-and-below) {
+  nav.c-nav--boxed {
+    padding-block: calc( var(--small-indent) - var(--link-padding) );
+  }
+
   nav.c-nav--boxed ol {
     /* We retain bullets, which (narrow screen) don't need large padding left */
-    padding-left: var(--small-indent); /* overwrite `html-elements.css` */
-    padding-right: var(--large-indent);
+    padding-left: calc( var(--small-indent) - var(--link-padding) );
+    padding-right: calc( var(--large-indent) - var(--link-padding) );
   }
 }
 
@@ -97,15 +113,15 @@ nav.c-nav--boxed.c-nav--no-list {
 nav.c-nav {
   --space-between-inline-items: 0.5em;
 }
+nav.c-nav :is(ul,ol) a {
+  display: inline-block;
+  padding-inline: var(--link-padding);
+}
 
 /* no list */
 nav.c-nav--no-list > a {
-  display: inline-block;
-
-  /* To space content via margin (must then be re-aligned with container) */
-  margin-left: var(--space-between-inline-items);
-  /* To re-align content to container (after they were spaced via margin) */
-  transform: translateX(calc(-1 * var(--space-between-inline-items)));
+  /* To space items via margin (use `-right` to not increase left indent) */
+  margin-right: var(--space-between-inline-items);
 }
 
 
@@ -113,6 +129,10 @@ nav.c-nav--no-list > a {
 /* Elements: Narrow Screen */
 
 @media (--medium-and-below) {
+
+  nav.c-nav a {
+    line-height: 2.5;
+  }
 
   /* any list */
   nav.c-nav :is(ul,ol) {
@@ -127,10 +147,8 @@ nav.c-nav--no-list > a {
     padding-left: unset;
   }
   nav.c-nav :is(ul,ol) li {
-    /* To space content via margin (must then be re-aligned with container) */
-    margin-left: var(--space-between-inline-items);
-    /* To re-align content to container (after they were spaced via margin) */
-    transform: translateX(calc(-1 * var(--space-between-inline-items)));
+    /* To space items via margin (use `-right` to not increase left indent) */
+    margin-right: var(--space-between-inline-items);
   }
 
   /* unordered list */
