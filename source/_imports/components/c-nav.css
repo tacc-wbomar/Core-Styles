@@ -40,6 +40,7 @@ nav.c-nav {
 /* Modifiers: Boxed */
 
 nav.c-nav--boxed {
+  --x-small-indent: calc(var(--global-space--list-indent) / 4);
   --small-indent: calc(var(--global-space--list-indent) / 2);
   --large-indent: var(--global-space--list-indent);
 
@@ -65,6 +66,7 @@ nav.c-nav--boxed ul {
 /* wide screen */
 @media (--medium-and-above) {
   nav.c-nav--boxed {
+    /* Normal vertical padding */
     padding-block: var(--small-indent);
   }
 
@@ -78,7 +80,8 @@ nav.c-nav--boxed ul {
 /* narrow screen */
 @media (--medium-and-below) {
   nav.c-nav--boxed {
-    padding-block: calc( var(--small-indent) - var(--link-padding) );
+    /* Reduced vertical padding because of narrow screen link line-height */
+    padding-block: var(--x-small-indent);
   }
 
   nav.c-nav--boxed ol {
@@ -114,12 +117,14 @@ nav.c-nav {
   --space-between-inline-items: 0.5em;
 }
 nav.c-nav a {
+  display: inline-block; /* to let line-height define clickable area */
   padding-inline: var(--link-padding);
 }
 
 /* no list */
 nav.c-nav--no-list {
   display: flex; /* to remove whitespace between items */
+  flex-wrap: wrap;
 }
 nav.c-nav--no-list > a {
   /* To space items via margin (use `-right` to not increase left indent) */
