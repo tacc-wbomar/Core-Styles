@@ -113,7 +113,7 @@ nav.c-nav--boxed.c-nav--no-list {
 nav.c-nav {
   --space-between-inline-items: 0.5em;
 }
-nav.c-nav :is(ul,ol) a {
+nav.c-nav a {
   display: inline-block;
   padding-inline: var(--link-padding);
 }
