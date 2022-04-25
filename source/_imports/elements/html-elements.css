@@ -74,15 +74,20 @@ h1 {
 h2 {
   font-size: var(--global-font-size--xx-large);
 }
-h3 {
-  font-size: var(--global-font-size--x-large);
+h3, h4, h5, h6 {
   margin-bottom: 15px; /* overwrite Bootstrap */
 }
-h4, h5, h6 {
-  font-size: var(--global-font-size--small);
-  margin-bottom: 7px; /* overwrite Bootstrap */
-
+h3 {
+  font-size: var(--global-font-size--x-large);
+}
+h4 {
+  font-size: var(--global-font-size--large);
+}
+h4, h5 {
   text-transform: uppercase;
+}
+h5, h6 {
+  font-size: var(--global-font-size--medium);
 }
 
 
@@ -105,6 +110,8 @@ Reference:
 Styleguide Elements.TextContent
 */
 
+/* Lists */
+
 ol, ul,
 dl dl /* Treat nested definition lists like other nested lists */ {
   padding-left: var(--global-space--list-indent);
@@ -116,6 +123,16 @@ ol ol, ol ul, ul ol, ul ul {
 dt {
   margin-bottom: .5rem; /* overwrite Bootstrap */
   font-weight: initial; /* overwrite Bootstrap */
+}
+
+li {
+  line-height: 1.6;
+}
+
+/* Misc. */
+
+hr {
+  margin-block: var(--global-space--hr-margin);
 }
 
 
@@ -143,7 +160,6 @@ Styleguide Elements.InlineTextSemantics
 a,
 a:hover { color: var(--global-color-link-on-light--normal); /* overwrite Bootstrap */ }
 a:focus { text-decoration: underline dotted; }
-a:active { position: relative; top: 0.1em; /* to simulate "depress" of link */ }
 
 /* FAQ: Bootstrap already provides basic text-decoration */
 /*
