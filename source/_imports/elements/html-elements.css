@@ -143,7 +143,6 @@ Styleguide Elements.InlineTextSemantics
 a,
 a:hover { color: var(--global-color-link-on-light--normal); /* overwrite Bootstrap */ }
 a:focus { text-decoration: underline dotted; }
-a:active { position: relative; top: 0.1em; /* to simulate "depress" of link */ }
 
 /* FAQ: Bootstrap already provides basic text-decoration */
 /*
