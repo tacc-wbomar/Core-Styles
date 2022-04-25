@@ -55,7 +55,7 @@ nav.c-nav--boxed ul {
 }
 
 /* ordered list (wide) */
-@media (--narrow-and-above) {
+@media (--medium-and-above) {
   nav.c-nav--boxed ol {
     /* We retain bullets, which (wide screen) need large padding (so keep it) */
     /* padding-left: var(--large-indent); *//* comes from `html-elements.css` */
@@ -63,7 +63,7 @@ nav.c-nav--boxed ul {
   }
 }
 /* ordered list (narrow) */
-@media (--narrow-and-below) {
+@media (--medium-and-below) {
   nav.c-nav--boxed ol {
     /* We retain bullets, which (narrow screen) don't need large padding left */
     padding-left: var(--small-indent); /* overwrite `html-elements.css` */
@@ -89,7 +89,7 @@ nav.c-nav--boxed.c-nav--no-list {
 
 
 
-/* Content */
+/* Elements */
 
 
 
@@ -109,9 +109,9 @@ nav.c-nav--no-list > a {
 
 
 
-/* Content: Narrow Screen */
+/* Elements: Narrow Screen */
 
-@media (--narrow-and-below) {
+@media (--medium-and-below) {
 
   /* any list */
   nav.c-nav :is(ul,ol) {
