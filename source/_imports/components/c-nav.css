@@ -40,9 +40,9 @@ nav.c-nav {
 /* Modifiers: Boxed */
 
 nav.c-nav--boxed {
-  --x-small-indent: calc(var(--global-space--list-indent) / 4);
-  --small-indent: calc(var(--global-space--list-indent) / 2);
-  --large-indent: var(--global-space--list-indent);
+  --indent-small: calc(var(--global-space--list-indent) / 4);
+  --indent-medium: calc(var(--global-space--list-indent) / 2);
+  --indent-large: var(--global-space--list-indent);
 
   width: fit-content;
 
@@ -59,21 +59,21 @@ nav.c-nav--boxed :is(ul,ol) {
 /* unordered list */
 nav.c-nav--boxed ul {
   list-style-type: none; /* to remove bullets (must then reduce padding left) */
-  padding-left: var(--small-indent);
-  padding-right: var(--large-indent);
+  padding-left: var(--indent-medium);
+  padding-right: var(--indent-large);
 }
 
 /* wide screen */
 @media (--medium-and-above) {
   nav.c-nav--boxed {
     /* Normal vertical padding */
-    padding-block: var(--small-indent);
+    padding-block: var(--indent-medium);
   }
 
   nav.c-nav--boxed ol {
     /* We retain bullets, which (wide screen) need large padding (so keep it) */
-    padding-left: var(--large-indent);
-    padding-right: calc( var(--large-indent) - var(--link-padding) );
+    padding-left: var(--indent-large);
+    padding-right: calc( var(--indent-large) - var(--link-padding) );
   }
 }
 
@@ -81,21 +81,21 @@ nav.c-nav--boxed ul {
 @media (--medium-and-below) {
   nav.c-nav--boxed {
     /* Reduced vertical padding because of narrow screen link line-height */
-    padding-block: var(--x-small-indent);
+    padding-block: var(--indent-small);
   }
 
   nav.c-nav--boxed ol {
     /* We retain bullets, which (narrow screen) don't need large padding left */
-    padding-left: calc( var(--small-indent) - var(--link-padding) );
-    padding-right: calc( var(--large-indent) - var(--link-padding) );
+    padding-left: calc( var(--indent-medium) - var(--link-padding) );
+    padding-right: calc( var(--indent-large) - var(--link-padding) );
   }
 }
 
 /* no list */
 nav.c-nav--boxed.c-nav--no-list {
   /* Has no bullets, thus smaller padding left */
-  padding-left: var(--small-indent);
-  padding-right: var(--large-indent);
+  padding-left: var(--indent-medium);
+  padding-right: var(--indent-large);
 }
 
 
