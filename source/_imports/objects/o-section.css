@@ -266,5 +266,5 @@ Styleguide Objects.Section
 
 /* HACK: To hide `.o-section__banner-image` overflow */
 main {
-  overflow-x: hidden;
+  overflow-x: clip; /* support position sticky on element in section */
 }
