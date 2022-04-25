@@ -114,11 +114,13 @@ nav.c-nav {
   --space-between-inline-items: 0.5em;
 }
 nav.c-nav a {
-  display: inline-block;
   padding-inline: var(--link-padding);
 }
 
 /* no list */
+nav.c-nav--no-list {
+  display: flex; /* to remove whitespace between items */
+}
 nav.c-nav--no-list > a {
   /* To space items via margin (use `-right` to not increase left indent) */
   margin-right: var(--space-between-inline-items);
