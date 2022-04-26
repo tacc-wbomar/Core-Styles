@@ -242,9 +242,9 @@ ul.post-detail {
 :--article-item .categories::before { @extend %x-truncate--one-line }
 
 :--article-item .tags:empty,
-:--article-item .categories:empty { display: none; }
+:--article-item .categories:empty { display: none }
 
-:--article-item .date { order: -1; }
+:--article-item .date { order: -1 }
 
 /* Article Item - Header - Content (Skin) */
 :--article-item h3,
