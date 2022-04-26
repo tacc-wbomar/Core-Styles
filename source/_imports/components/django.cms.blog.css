@@ -231,12 +231,6 @@ ul.post-detail {
 :--article-item .date { order: -1; }
 
 /* Article Item - Header - Content (Skin) */
-:--article-item .attr {
-  font-size: var(--global-font-size--x-small);
-  color: var(--global-color-primary--dark);
-}
-:--article-item .attr a { color: inherit }
-
 :--article-item h3,
 :--article-item h4 {
   @extend %x-truncate--one-line;
@@ -256,6 +250,12 @@ ul.post-detail {
 :--article-item h3 a {
   color: var(--global-color-primary--xx-dark);
 }
+
+:--article-item .attr {
+  font-size: var(--global-font-size--x-small);
+  color: var(--global-color-primary--dark);
+}
+:--article-item .attr a { color: inherit }
 
 :--article-item .categories {
   font-weight: var(--bold);
