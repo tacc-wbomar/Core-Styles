@@ -272,11 +272,25 @@ ul.post-detail {
 
 /* Article Item - Visual */
 
+:--article-item .blog-visual {
+  --post-image-buffer: 50px;
+  --post-image-width: 255px; /* should be max width of "MAIN IMAGE THUMBNAIL" */
+
+  /* To have image box widths all the same width (design requirement) */
+  width: calc( var(--post-image-width) + var(--post-image-buffer) );
+
+  /* To align any image inside */
+  /* FAQ: Images SHOULD use cropped thumbnail option, which makes this moot,
+          but user MIGHT instead use thumbnail option with incosistent width */
+  display: grid;
+  justify-items: left; /* to discourage user from using uncropped images */
+}
 /* NOTE: Space added to content not container cuz container is always present */
+/* NOTE: If added to container, and no image, space would exist (bad design) */
 /* HELP: How to add space to omni-present container only if image exists
          and not need to duplicate, maintain, and edit `blog_item.html`? */
 :--article-item .blog-visual * {
-  margin-right: 50px;
+  margin-right: var(--post-image-buffer);
 }
 
 
