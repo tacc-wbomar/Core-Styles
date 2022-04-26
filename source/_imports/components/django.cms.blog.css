@@ -63,6 +63,22 @@ ul.post-detail {
   margin-top: 0.5em;
 }
 
+/* To (optionally) hide tags & categories */
+.app-blog.no-tags :--article .tags,
+.app-blog.no-categories :--article .categories {
+  display: none;
+}
+.app-blog.no-categories:not(.no-tags) :--article-item header {
+  --row-one-areas: 'tags tags';
+}
+.app-blog.no-tags:not(.no-categories) :--article-item header {
+  --row-one-areas: 'cats cats';
+}
+.app-blog.no-categories.no-tags :--article-item header {
+  --row-one-areas: 'none none';
+}
+
+
 
 
 
