@@ -225,6 +225,9 @@ ul.post-detail {
 :--article-item .categories li,
 :--article-item .categories::before { @extend %x-truncate--one-line }
 
+:--article-item .tags:empty,
+:--article-item .categories:empty { display: none; }
+
 :--article-item .date { order: -1; }
 
 /* Article Item - Header - Content (Skin) */
@@ -259,14 +262,7 @@ ul.post-detail {
   font-size: var(--global-font-size--x-small);
   text-transform: uppercase;
 }
-:--article-item .categories /* to color `::before` */,
-:--article-item .categories a {
-  color: var(--global-color-primary--xx-dark);
-}
-:--article-item .categories:empty:before {
-  /* CAVEAT: This text can not be truncated */
-  content: 'Uncategorized';
-}
+:--article-item .categories a { color: var(--global-color-primary--xx-dark) }
 
 
 
