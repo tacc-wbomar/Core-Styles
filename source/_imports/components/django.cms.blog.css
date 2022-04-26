@@ -283,7 +283,7 @@ ul.post-detail {
   /* FAQ: Images SHOULD use cropped thumbnail option, which makes this moot,
           but user MIGHT instead use thumbnail option with incosistent width */
   display: grid;
-  justify-items: left; /* to discourage user from using uncropped images */
+  justify-items: center;
 }
 /* NOTE: Space added to content not container cuz container is always present */
 /* NOTE: If added to container, and no image, space would exist (bad design) */
