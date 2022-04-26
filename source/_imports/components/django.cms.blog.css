@@ -231,11 +231,11 @@ ul.post-detail {
 :--article-item .date { order: -1; }
 
 /* Article Item - Header - Content (Skin) */
-:--article-item :is(.attr, .tags) {
+:--article-item .attr {
   font-size: var(--global-font-size--x-small);
   color: var(--global-color-primary--dark);
 }
-:--article-item :is(.attr, .tags) a { color: inherit }
+:--article-item .attr a { color: inherit }
 
 :--article-item h3,
 :--article-item h4 {
@@ -263,6 +263,13 @@ ul.post-detail {
   text-transform: uppercase;
 }
 :--article-item .categories a { color: var(--global-color-primary--xx-dark) }
+
+/* NOTE: Mimicking .attr styles until we have a design */
+:--article-item .tags {
+  font-size: var(--global-font-size--x-small);
+  color: var(--global-color-primary--dark);
+}
+:--article-item .tags a { color: inherit }
 
 
 
