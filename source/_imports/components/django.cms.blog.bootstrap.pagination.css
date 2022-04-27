@@ -28,26 +28,3 @@ Styleguide Components.Bootstrap.Pagination
 
   padding-block: 0;
 }
-
-
-
-/* HACK: To hide the « and » of "« Previous" / "Next »" */
-/* FAQ: This lets us limit override of `post_list.html` template */
-.pagination {
-  height: 2em;             /* to register overflow (should match line-height) */
-  line-height: 2;          /* to increase height w/out child padding */
-  overflow: hidden;        /* to hide « and » */
-}
-.pagination a,
-.pagination span {
-  padding-block: 0;         /* to let parent control child height */
-}
-.pagination a {
-  width: min-content;       /* to force wrap of « / » and "Previous" / "Next" */
-}
-.pagination a:first-child {
-  align-self: end;          /* to direct text wrap ↑-ward so « and » overflow */
-}
-.pagination a:last-child {
-  align-self: start;        /* to direct text wrap ↓-ward so « and » overflow */
-}
