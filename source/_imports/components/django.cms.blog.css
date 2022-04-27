@@ -75,13 +75,13 @@ ul.post-detail {
 
 /* Article Page */
 
+:--article-page {
+  max-width: 665px;
+}
+
 
 
 /* Article Page - Header */
-
-:--article-page header {
-  max-width: 620px;
-}
 
 :--article-page .attr {
   display: flex;
@@ -135,10 +135,8 @@ ul.post-detail {
 /* Article Page - Content */
 
 :--article-page .blog-content {
-  max-width: 665px;
-
-  font-size: var(--global-font-size--large);
-  line-height: 1.65;
+  font-size: var(--global-font-size--normal);
+  line-height: 2;
 }
 
 
