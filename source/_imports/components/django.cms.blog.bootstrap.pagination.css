@@ -10,15 +10,44 @@ Styleguide Components.Bootstrap.Pagination
 */
 @import url("_imports/components/c-page.css");
 
+
+
+/* To extend and tweak `c-page` */
 .pagination {
   @extend .c-page-list;
 
-  margin-block: var(--post-buffer);
-  padding-block: 1rem;
+  margin-block: calc( var(--post-buffer) * 2 ); /* WARNING: Dev designed this */
 
   /* FAQ: Do not use "justify-content" / Do not assume .c-page-list is "flex" */
   width: fit-content;
   margin-inline: auto;
 }
 .pagination a,
-.pagination span { @extend .c-page-end; }
+.pagination span {
+  @extend .c-page-end;
+
+  padding-block: 0;
+}
+
+
+
+/* HACK: To hide the « and » of "« Previous" / "Next »" */
+/* FAQ: This lets us limit override of `post_list.html` template */
+.pagination {
+  height: 2em;             /* to register overflow (should match line-height) */
+  line-height: 2;          /* to increase height w/out child padding */
+  overflow: hidden;        /* to hide « and » */
+}
+.pagination a,
+.pagination span {
+  padding-block: 0;         /* to let parent control child height */
+}
+.pagination a {
+  width: min-content;       /* to force wrap of « / » and "Previous" / "Next" */
+}
+.pagination a:first-child {
+  align-self: end;          /* to direct text wrap ↑-ward so « and » overflow */
+}
+.pagination a:last-child {
+  align-self: start;        /* to direct text wrap ↓-ward so « and » overflow */
+}
