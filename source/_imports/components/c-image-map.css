@@ -20,7 +20,7 @@ Markup: ../../../../../../snippets/image-map-whats-in-a-node.html
 Styleguide Components.ImageMap
 */
 
-/* To organized by OOCSS methodology */
+/* Styles are organized by OOCSS methodology */
 /* SEE: https://confluence.tacc.utexas.edu/x/VwALBg */
 @import url("./c-image-map.structure.css");
 @import url("./c-image-map.skin.css");
