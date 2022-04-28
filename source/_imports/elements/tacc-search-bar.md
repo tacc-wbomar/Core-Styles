@@ -15,8 +15,5 @@ Certain styles need to load **after** all search bar styles and markup:
 ```
 
 This avoids [FOUC] by hiding the search bar _until_ all styles and markup are loaded.
-
-
-
 [TACC/Core-CMS#101]: https://github.com/TACC/Core-CMS/issues/101
 [FOUC]: https://en.wikipedia.org/wiki/Flash_of_unstyled_content
