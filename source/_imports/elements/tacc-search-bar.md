@@ -1,6 +1,6 @@
 # TACC - Stylesheets - Search Bar
 
-The actual search bar markup (in TACC/Core-CMS) currently has a caveat (that will be resolved via [TACC/Core-CMS#101]).
+The search bar (as implemented in TACC/Core-CMS) _currently_ has a caveat (that will be resolved via [TACC/Core-CMS#101]).
 
 Certain styles need to load **before** all search bar styles and markup:
 
