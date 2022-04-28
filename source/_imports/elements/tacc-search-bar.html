@@ -1,0 +1,19 @@
+<form part="form" method="get" action="/search">
+  <label for="header-search" class="u-hide--visually" part="label">
+    Search
+  </label>
+
+  <input part="input"
+    id="header-search"
+    type="search"
+    name="query_string"
+    placeholder="Search"
+    data-testid="input"
+    autocomplete="off" minlength="3"
+    value="" />
+  <input type="hidden" name="page" value="1" />
+
+  <button part="button" type="submit" class="icon icon-search">
+    <span class="u-hide--visually">Search</span>
+  </button>
+</form>

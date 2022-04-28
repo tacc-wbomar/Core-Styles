@@ -1,21 +1,19 @@
-/* WARNING: This file is copied from Portal repo */
-/* TODO: Share source code between CMS, Portal, & User Guide */
-/* SEE: https://github.com/TACC/Frontera-Portal/blob/master/client/src/styles/trumps/icon.css */
-
 /* TRUMPS: Icons */
 @import url('./icon.fonts.css');
 
 .icon {
   width: 1em;
   height: 1em;
-  font-size: 1.125em; /* ~18px (16px design * 1.2 design-to-app ratio) (rounded) */
+  font-size: 1.125em; /* ~18px (16px design * 1.2 design-to-app ratio) */
   vertical-align: middle;
-  display: inline-flex; /* `flex` to align `::before`; `inline` to not trigger new line */
-                        /* a modern slimmer alternative to `&::before { display: block; }` */
+  /* A modern slimmer alternative to `&::before { display: block; }` */
+  /* FAQ: Use `flex` to align `::before`; `inline` to not trigger new line */
+  display: inline-flex;
 }
 
 /* Aliases */
-/* .icon-contract */.icon-collapse::before {
+/* .icon-contract */
+.icon-collapse::before {
   content: "\e915";
 }
 
@@ -23,7 +21,7 @@
 
 /* Overrides */
 
-/* Align wrapped button text in buttons that have icons */
+/* In Bootstrap buttons that have icons, align wrapped button text */
 /* HACK: Placeholder style until UI is finalized and componetized */
 .btn .icon + span,
 .btn .loading-icon + span {
