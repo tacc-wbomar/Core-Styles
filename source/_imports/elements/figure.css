@@ -1,11 +1,19 @@
 /*
-Figure (Bootstrap)
+Text Content (Figure & Figcaption)
 
-Add to Bootstrap styles. See:
+Element that represents self-contained content, potentially with an optional caption.
 
-- [Bootstrap Figures](https://getbootstrap.com/docs/4.0/content/figures/)
+```
+<figcaption> <figure>
+```
 
-Styleguide Components.Bootstrap.Figure
+Reference:
+
+- [HTML element reference: Text content | MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Text_content)
+- [HTML: Figure | MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure)
+- [HTML: Figcaption | MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption)
+
+Styleguide Elements.TextContent.Figure
 */
 
 figure > img {
