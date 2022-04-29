@@ -23,12 +23,12 @@ Styleguide Components.DjangoCMS
 */
 
 /* Prevent anchor links from scrolling behind Django CMS header */
-:--cms-logged-in :target {
+.cms-ready :target {
   scroll-margin-top: env(--cms-toolbar-height);
 }
 
 /* Prevent top-sticking content from scrolling behind Django CMS header */
-:--cms-logged-in .sticky-top /* Bootstrap class */,
-:--cms-logged-in .position-sticky.fixed-top /* Bootstrap class */ {
+.cms-ready .sticky-top /* Bootstrap class */,
+.cms-ready .position-sticky.fixed-top /* Bootstrap class */ {
   top: env(--cms-toolbar-height);
 }
