@@ -10,6 +10,7 @@ For list-like navigation, use `<ul>` or `<ol>` (with children `<li>`). Inside th
 To support a navigation not as a list and with direct `<a>` children, add class `c-nav--no-list`. Inside this kind of nav, markup whitespace __is__ rendered.﹡
 
 ﹡ To remove whitespace with CSS would break or complicate font-size cascade.
+
 - c-nav--boxed - Surrounded by a box
 
 Markup: c-nav.html
