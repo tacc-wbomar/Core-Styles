@@ -4,6 +4,9 @@
   "name": "default",
 
   "environment-variables": {
+    "// CMS": "",
+    "--cms-toolbar-height": "46px",
+
     "// HEADER": "",
     "--header-text-color": "var(--global-color-primary--xx-light)",
     "--header-bkgd-color": "var(--global-color-primary--xx-dark)",
