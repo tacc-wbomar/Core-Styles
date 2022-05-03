@@ -1,11 +1,8 @@
+/* SEE: _imports/trumps/tacc-search-bar.css */
 /*
 Search Bar
 
-Styles for search bar cloned from Portal codebase, but also relying on Bootstrap ([whose version usage is complicated][bootstrap-versions]):
-- Bootstrap 4.0.0 (loaded as external file in CMS via `<link>` in template)
-- relevant delta (manually built) from Bootstrap 4.0.0 (CMS) to 4.3.1 (Portal)
-
-[bootstrap-versions]: https://confluence.tacc.utexas.edu/x/OAACBw
+Unopinionated styles for TACC search bar.
 
 Markup: tacc-search-bar.html
 
@@ -18,7 +15,5 @@ Styleguide Elements.TACC.SearchBar
   height: 100%;
 }
 
-/* Show search bar after all relevant styles have loaded */
-/* FAQ: Manage visibility of search bar to avoid FOUC */
-/* HACK: GH-101: Resolve via  dynamically-added `[data-status="loaded"]` */
+/* SEE: https://github.com/TACC/Core-Styles/blob/main/source/_imports/elements/tacc-search-bar.md */
 :host { visibility: visible; height: auto; }
