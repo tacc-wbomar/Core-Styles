@@ -72,9 +72,13 @@ Notes:
 
 ### Module
 
-Install the package with any package manager e.g.:
-- `npm install TACC/Core-Styles`
-- `yarn add TACC/Core-Styles`
+1. Install the package with any package manager e.g.:
+  - `npm install TACC/Core-Styles`
+  - `yarn add TACC/Core-Styles`
+
+2. Import stylesheets of either type:
+    - pre-compiled, from `/dist`
+    - source files, from `/source`
 
 #### Build Script
 
@@ -186,7 +190,7 @@ _For now_, the stylesheets are acquired or accessed by other repositories.
 
 | Repo | Usage |
 | - | - |
-| __[Core CMS]__ | [via CLI installed on test branch](https://github.com/TACC/Core-CMS/compare/test/core-styles) |
+| __[Core CMS]__ | via CLI installed on test branch |
 | __[Core CMS Pattern Library]__ | not accessing styles [_yet_][research-pattern-lib] ¹ |
 
 <sub>¹ A repo that is, or will be, in [Core CMS Pattern Library] should load these styles __and__ build a pattern library.</sub>
