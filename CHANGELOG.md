@@ -12,12 +12,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - feat(branding): new class .branding-logo--short (#4)
-- feat(search): input placeholder matches bkgd
-- feat(fp-1596): pagination component
-- feat(fp-1491): button component
-- feat(fp-1596): pagination component (#5)
-- feat(fp-1491): button component (#6)
-- feat(postcss): custom selectors
+- feat(search): input placeholder matches bkgd (310e969)
+- feat(fp-1596): pagination component (b9e2eca, #5)
+- feat(fp-1491): button component (c1bd33f / #6)
+- feat(postcss): custom selectors (847d0e2)
 - feat(ecep-114): tweak typography (#14)
 - feat(ecep-113): article link mixin new features (#15)
 - feat: nav component (#12)
@@ -28,10 +26,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- fix: no depress UX for links
-- chore(github): add pull request template
-- docs(markup): c-image-map
-- docs(readme): updates [learned from active use of repo]
+- fix: no depress UX for links (53a3a6c)
+- docs(readme): updates [learned from active use of repo] (69bf862)
+- chore(github): add pull request template (6037687)
+- docs(markup): c-image-map (b8ed629)
 
 ### Fixed
 
