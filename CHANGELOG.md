@@ -7,6 +7,40 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0] - 2022-05-11: Return Some CMS Styles, Many New Patterns
+
+### Added
+
+- feat(branding): new class .branding-logo--short (#4)
+- feat(search): input placeholder matches bkgd
+- feat(fp-1596): pagination component
+- feat(fp-1491): button component
+- feat(fp-1596): pagination component (#5)
+- feat(fp-1491): button component (#6)
+- feat(postcss): custom selectors
+- feat(ecep-114): tweak typography (#14)
+- feat(ecep-113): article link mixin new features (#15)
+- feat: nav component (#12)
+- feat(ecep-114): position sticky support on CMS (#13)
+- feat(ecep-113): style news & related patterns (#16)
+- feat(fp-1378): add new space prop --section-gap (#10)
+- feat(object): o-flex-item-table-wrap (Core-Portal) (#18)
+
+### Changed
+
+- fix: no depress UX for links
+- chore(github): add pull request template
+- docs(markup): c-image-map
+- docs(readme): updates [learned from active use of repo]
+
+### Fixed
+
+- fix(tup-231): move some core-styles back to core-cms (#17)
+
+## Deleted
+
+- chore(gh-149): remove deleted id selector (#7)
+
 ## [1.0.0] - 2022-04-06: Initial Release
 
 ### Added
@@ -49,7 +83,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v1.0.0...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.0.0...HEAD
+[2.0.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.0.0
 [1.0.0]: https://github.com/TACC/Core-Styles/releases/tag/v1.0.0
 [0.2.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.2.0
 [0.1.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.1.0
