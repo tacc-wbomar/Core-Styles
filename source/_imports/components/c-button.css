@@ -7,6 +7,7 @@ A button that may have icon(s) before and/or after its text.
 .c-button--secondary - For an optional user action
 .c-button--is-active - A button that represents the current state
 .c-button--as-link - A button that visually resembles a link
+.c-button--is-busy - A clicked button that started an incomplete process
 
 Markup: c-button.html
 
@@ -40,8 +41,11 @@ Styleguide Components.Button
   white-space: nowrap;
 }
 
-.c-button:disabled {
-  opacity: 0.5;
+.c-button:disabled:not(.c-button--is-busy) {
+  color: var(--global-color-primary--dark);
+  background-color: var(--global-color-primary--xx-light);
+  border-color: var(--global-color-primary--dark);
+
   pointer-events: none;
 }
 /* WARNING: Opinionated: Add "hand" cursor if not disabled */
@@ -83,7 +87,8 @@ Styleguide Components.Button
   border-color: var(--global-color-accent--dark);
 
   border-width: var(--global-border-width--normal);
-  outline: var(--global-border-width--normal) solid var(--global-color-accent--dark);
+  outline: var(--global-border-width--normal) solid
+    var(--global-color-accent--dark);
 }
 
 .c-button--primary:focus:not(:active) {
@@ -91,13 +96,16 @@ Styleguide Components.Button
   background-color: var(--global-color-accent--normal);
   border-color: var(--global-color-primary--xx-light);
 
-  outline: var(--global-border-width--normal) solid var(--global-color-accent--light);
+  outline: var(--global-border-width--normal) solid
+    var(--global-color-accent--light);
 }
 
+.c-button--primary.c-button--is-busy,
 .c-button--primary:not(
   .c-button:hover,
   .c-button:focus,
-  .c-button:active
+  .c-button:active,
+  .c-button:disabled
 ) {
   color: var(--global-color-primary--xx-light);
   background-color: var(--global-color-accent--normal);
@@ -118,7 +126,8 @@ Styleguide Components.Button
   border-color: var(--global-color-accent--dark);
 
   border-width: var(--global-border-width--normal);
-  outline: var(--global-border-width--normal) solid var(--global-color-accent--dark);
+  outline: var(--global-border-width--normal) solid
+    var(--global-color-accent--dark);
 }
 
 .c-button--secondary:focus:not(:active) {
@@ -126,13 +135,16 @@ Styleguide Components.Button
   background-color: var(--global-color-primary--light);
   border-color: var(--global-color-primary--xx-dark);
 
-  outline: var(--global-border-width--thick) solid var(--global-color-accent--light);
+  outline: var(--global-border-width--thick) solid
+    var(--global-color-accent--light);
 }
 
+.c-button--secondary.c-button--is-busy,
 .c-button--secondary:not(
   .c-button:hover,
   .c-button:focus,
-  .c-button:active
+  .c-button:active,
+  .c-button:disabled
 ) {
   color: var(--global-color-primary--xx-dark);
   background-color: var(--global-color-primary--xx-light);
@@ -152,7 +164,7 @@ Styleguide Components.Button
 /* Modifiers: Types: As Link */
 
 .c-button--as-link {
-  color: var(--global-color-accent--dark);
+  color: var(--global-color-accent--normal);
 
   background: unset;
   border: unset;
@@ -162,7 +174,14 @@ Styleguide Components.Button
   text-decoration: underline;
 }
 
+/* Modifiers: Types: Is Busy */
 
+.c-button--is-busy {
+  opacity: 0.5;
+}
+.c-button--is-busy .c-button__text {
+  opacity: 0.3;
+}
 
 /* Modifiers: Sizes */
 
@@ -186,11 +205,6 @@ Styleguide Components.Button
 
 
 /* Elements */
-
-.c-button__icon--before,
-.c-button__icon--after {
-  /* … */
-}
 
 .c-button__icon--before {
   margin-right: 0.5em;
