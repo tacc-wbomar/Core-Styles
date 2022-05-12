@@ -11,6 +11,11 @@ Styleguide Components.Cortal.Icon
 
 
 
+/* IMPORTANT: Do not add support for icons that neglect `.icon` class */
+/* FAQ: Users should build their icons to spec */
+
+
+
 /* Aliases */
 /* SEE: https://github.com/TACC/Core-Portal/blob/22405ca/client/src/styles/trumps/icon.css#L57 */
 
