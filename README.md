@@ -47,7 +47,6 @@ build stylesheets with TACC standard process:
 Options:
   -i, --input <path>               parse source at which path¹
   -o, --output <path>              output CSS files to which path¹
-  -e, --file-ext <ext>             extensions to parse (default: "css")
   -v, --verbose                    print more info during build process
   -c, --custom-configs <paths...>  extend base config with YAML files²³
   -b, --build-id <identifier>      any value to identify the build (default: version of app)

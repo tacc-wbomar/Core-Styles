@@ -16,7 +16,6 @@ const version = require('./bin/version.js');
  * @param {string} output - Output CSS files to which directory
  * @param {object} [opts={}] - Options
  * @param {string} [opts.baseMirrorDir] - Do not add this path when mirroring
- * @param {object} [opts.fileExt='css'] - Extension of CSS files to parse
  * @param {array.string} [opts.customConfigs] - List of YAML config file paths
  * (The first file is merged on top of the base config.)
  * (Each successive file overwrites the file before it.)
@@ -25,7 +24,6 @@ const version = require('./bin/version.js');
  */
 function buildStylesheets(input, output, opts = {}) {
     const buildOpts = {
-        fileExt: opts.fileExt,
         verbose: opts.verbose || null,
         baseMirrorDir: opts.baseMirrorDir || null,
     };

@@ -32,8 +32,6 @@ program
         'parse source at which path¹')
     .requiredOption('-o, --output <path>',
         'output CSS files to which path¹')
-    .option('-e, --file-ext <ext>',
-        'extensions to parse', 'css')
     .option('-v, --verbose',
         'print more info during build process')
     .option('-c, --custom-configs <paths...>',

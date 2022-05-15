@@ -15,20 +15,18 @@ process.env.FORCE_COLOR = true
  * @param {string} output - Output CSS files to which path
  * @param {object} [opts={}] - Options
  * @param {string} [opts.baseMirrorDir] - Do not add this path when mirroring
- * @param {object} [opts.fileExt='css'] - Extension of CSS files to parse
  * @param {string} [opts.configDir] - Custom config directory
  * @param {boolean} [opts.verbose=false] - To print more info from build log
  * @param {boolean} [opts.verbose=false] - To print more info from build log
  */
 function build(input, output, opts = {}) {
   // Get data
-  const fileExt = (opts.fileExt) ? '/*.' + opts.fileExt : '/*.css';
   const configDir = opts.configDir || `${__dirname}/../`;
   const verbose = (opts.verbose === true) ? '--verbose' : '';
   const base = (opts.baseMirrorDir) ? `--base "${opts.baseMirrorDir}"` : '';
 
   // Build command
-  const command = `postcss "${input}${fileExt}" --dir "${output}" ${verbose} --config "${configDir}" ${base}`;
+  const command = `postcss "${input}" --dir "${output}" ${verbose} --config "${configDir}" ${base}`;
 
   console.log(`Building stylesheet(s) to ${output}`);
 
