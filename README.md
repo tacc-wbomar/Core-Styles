@@ -24,8 +24,8 @@ Options:
 Commands:
   build [options]    build stylesheets with TACC standard process:
   - "post-css" plugins
-  - custom input dir
-  - custom output dir
+  - custom input path
+  - custom output path
   - custom configs
   - prepend build id
 
@@ -39,14 +39,14 @@ Usage: core-styles build [options]
 
 build stylesheets with TACC standard process:
 - "post-css" plugins
-- custom input dir
-- custom output dir
+- custom input path
+- custom output path
 - custom configs
 - prepend build id
 
 Options:
-  -i, --input-dir <path>           parse source from which directory¹
-  -o, --output-dir <path>          output CSS files to which directory¹
+  -i, --input <path>               parse source at which path¹
+  -o, --output <path>              output CSS files to which path¹
   -e, --file-ext <ext>             extensions to parse (default: "css")
   -v, --verbose                    print more info during build process
   -c, --custom-configs <paths...>  extend base config with YAML files²³

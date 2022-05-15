@@ -23,15 +23,15 @@ program
     .command('build')
     .description(`build stylesheets with TACC standard process:
 - "post-css" plugins
-- custom input dir
-- custom output dir
+- custom input path
+- custom output path
 - custom configs
 - prepend build id
     `)
-    .requiredOption('-i, --input-dir <path>',
-        'parse source from which directory¹')
-    .requiredOption('-o, --output-dir <path>',
-        'output CSS files to which directory¹')
+    .requiredOption('-i, --input <path>',
+        'parse source at which path¹')
+    .requiredOption('-o, --output <path>',
+        'output CSS files to which path¹')
     .option('-e, --file-ext <ext>',
         'extensions to parse', 'css')
     .option('-v, --verbose',
@@ -68,9 +68,9 @@ Notes:
     Given '-i "a/b*" -o "x/" -m "a/b/"' output is "x/...".
     Given '-i "a/b*" -o "x/" -m "not-a/"' output is "x/abs-path-to-input/...".
     `).action( programOpts => {
-        const { inputDir, outputDir, ...opts } = programOpts;
+        const { input, output, ...opts } = programOpts;
 
-        buildStylesheets( inputDir, outputDir, opts );
+        buildStylesheets( input, output, opts );
     });
 
 
