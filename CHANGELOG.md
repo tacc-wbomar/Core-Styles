@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [3.0.0] - 2022-25-11: Simpler CLI API, Fixes, Updates, Cleanup
 
+### Added
+
+- FP-1648: Build Individual Stylesheets — ⚠️ API Change (#23)
+
 ### Changed
 
 - feat(tup-151): offset content less offset (#21)
