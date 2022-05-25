@@ -16,7 +16,7 @@ Styleguide Objects.OffsetContent
 
 
 :--o-offset-content {
-  --offset-distance: min(30vw, 410px);
+  --offset-distance: min(15vw, 410px);
 	--buffer: calc( 2 * var(--global-space--grid-gap) );
 }
 
