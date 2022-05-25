@@ -14,7 +14,8 @@
   "main": "index.js",
   "bin": "cli.js",
   "scripts": {
-    "build": "node cli.js build -i \"./source\" -o \"./dist\""
+    "build": "node cli.js build -i \"./source/_imports/**/*!(README).css\" -o \"./dist\" -m \"source/_imports\"",
+    "test": "node cli.js build -i \"./source/_tests\" -o \"./dist\" -m \"source\" && echo \"Test output at 'dist/_tests' (compare to test input)\""
   },
   "engines": {
     "node": ">=15.x",
