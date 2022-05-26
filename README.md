@@ -222,6 +222,15 @@ We use a modifed version of [GitFlow](https://datasift.github.io/gitflow/Introdu
 
 Sign your commits ([see this link](https://help.github.com/en/github/authenticating-to-github/managing-commit-signature-verification) for help)
 
+### Publishing Workflow
+
+1. Create new branch for version bump.
+1. Update `CHANGELOG.md`.
+1. Update version in `package.json`.
+1. Run `npm i --package-lock-only` to update version in `package-lock.json`.
+1. Commit, push, PR, review, merge.
+1. Create new GitHub Release.
+
 ### Resources
 
 * [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
