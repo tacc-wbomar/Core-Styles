@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [3.0.0] - 2022-25-11: Simpler CLI API, Fixes, Updates, Cleanup
+## [0.5.0] - 2022-25-11: Simpler CLI API, Fixes, Updates, Cleanup
 
 ### Added
 
@@ -29,7 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - chore(gitignore): remove outdated file
 
-## [2.0.0] - 2022-05-11: Return Some CMS Styles, Many New Patterns
+## [0.4.0] - 2022-05-11: Return Some CMS Styles, Many New Patterns
 
 ### Added
 
@@ -61,7 +61,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - chore(gh-149): remove deleted id selector (#7)
 
-## [1.0.0] - 2022-04-06: Initial Release
+## [0.3.0] - 2022-04-06: Initial Release
 
 ### Added
 
@@ -103,9 +103,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v3.0.0...HEAD
-[3.0.0]: https://github.com/TACC/Core-Styles/releases/tag/v3.0.0
-[2.0.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.0.0
-[1.0.0]: https://github.com/TACC/Core-Styles/releases/tag/v1.0.0
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v0.5.0...HEAD
+[0.5.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.5.0
+[0.4.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.4.0
+[0.3.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.3.0
 [0.2.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.2.0
 [0.1.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.1.0
