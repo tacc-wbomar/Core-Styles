@@ -227,7 +227,7 @@ Sign your commits ([see this link](https://help.github.com/en/github/authenticat
 1. Create new branch for version bump.
 1. Update `CHANGELOG.md`.
 1. Update version in `package.json`.
-1. Run `npm i --package-lock-only` to update version in `package-lock.json`.
+1. Update version in `package-lock.json` by running `npm i --package-lock-only`.
 1. Commit, push, PR, review, merge.
 1. Create new GitHub Release.
 

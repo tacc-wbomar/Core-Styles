@@ -7,7 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.5.0] - 2022-25-11: Simpler CLI API, Fixes, Updates, Cleanup
+## [0.5.1] - 2022-05-26: Version Rewrite
+
+### Changed
+
+- chore(version): v3.0→v0.5 & publish instructions (#28)
+
+## [0.5.0] - 2022-05-25: Simpler CLI API, Fixes, Updates, Cleanup
 
 ### Added
 
@@ -103,7 +109,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v0.5.0...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v0.5.1...HEAD
+[0.5.1]: https://github.com/TACC/Core-Styles/releases/tag/v0.5.1
 [0.5.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.5.0
 [0.4.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.4.0
 [0.3.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.3.0
