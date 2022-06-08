@@ -2,12 +2,11 @@
 
 The shared styles for TACC WMA Workspace Portals & Websites
 
-> __Notice__: Currently only [Core CMS] is using these styles.
-
 
 ## Related Repositories
 
 - [Core CMS], the base CMS code for TACC WMA CMS Websites
+- [Core Portal], the base Portal code for TACC WMA CMS Websites
 
 
 ## External Project Usage
