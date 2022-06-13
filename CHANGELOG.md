@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.5.2] - 2022-06-13: Missing Button State; Fix an Import, Button Size, Docs
+
+### Fixed
+
+- feat(FP-1596): design button "--is-active" type (#24)
+- fix(FP-1596): missing import for truncate extend
+- fix(fp-1678): small button a bit more vert pad (#30)
+
+### Changed
+
+- docs(README): module usage: fix typo, drop old opt
+- docs(styles): readme, related repos & old callout
+
 ## [0.5.1] - 2022-05-26: Version Rewrite
 
 ### Changed
@@ -109,7 +122,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v0.5.1...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v0.5.2...HEAD
+[0.5.2]: https://github.com/TACC/Core-Styles/releases/tag/v0.5.2
 [0.5.1]: https://github.com/TACC/Core-Styles/releases/tag/v0.5.1
 [0.5.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.5.0
 [0.4.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.4.0
