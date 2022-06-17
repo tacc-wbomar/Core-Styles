@@ -7,7 +7,48 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [2.0.0] - 2022-05-11: Return Some CMS Styles, Many New Patterns
+## [0.5.2] - 2022-06-13: Missing Button State; Fix an Import, Button Size, Docs
+
+### Fixed
+
+- feat(FP-1596): design button "--is-active" type (#24)
+- fix(FP-1596): missing import for truncate extend
+- fix(fp-1678): small button a bit more vert pad (#30)
+
+### Changed
+
+- docs(README): module usage: fix typo, drop old opt
+- docs(styles): readme, related repos & old callout
+
+## [0.5.1] - 2022-05-26: Version Rewrite
+
+### Changed
+
+- chore(version): v3.0→v0.5 & publish instructions (#28)
+
+## [0.5.0] - 2022-05-25: Simpler CLI API, Fixes, Updates, Cleanup
+
+### Added
+
+- FP-1648: Build Individual Stylesheets — ⚠️ API Change (#23)
+
+### Changed
+
+- feat(tup-151): offset content less offset (#21)
+- FP-1648: Build Individual Stylesheets — ⚠️ API Change (#23)
+- feat(fp-1491): c-button updates from portal & use x-truncate (#20)
+
+### Fixed
+
+- fix(x-truncate): typo kills x-truncate--one-line (#22)
+- fix(FP-1596): pagination @import used external url
+- fix(fp-1542): figure img margin for link img's too (#25)
+
+### Deleted
+
+- chore(gitignore): remove outdated file
+
+## [0.4.0] - 2022-05-11: Return Some CMS Styles, Many New Patterns
 
 ### Added
 
@@ -39,7 +80,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - chore(gh-149): remove deleted id selector (#7)
 
-## [1.0.0] - 2022-04-06: Initial Release
+## [0.3.0] - 2022-04-06: Initial Release
 
 ### Added
 
@@ -81,8 +122,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.0.0...HEAD
-[2.0.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.0.0
-[1.0.0]: https://github.com/TACC/Core-Styles/releases/tag/v1.0.0
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v0.5.2...HEAD
+[0.5.2]: https://github.com/TACC/Core-Styles/releases/tag/v0.5.2
+[0.5.1]: https://github.com/TACC/Core-Styles/releases/tag/v0.5.1
+[0.5.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.5.0
+[0.4.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.4.0
+[0.3.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.3.0
 [0.2.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.2.0
 [0.1.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.1.0
