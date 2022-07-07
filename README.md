@@ -1,3 +1,7 @@
+**⚠ Core Styles was moved to [TACC/tup-ui](https://github.com/TACC/tup-ui/tree/main/libs/core-styles). ⚠️**
+
+---
+
 # TACC Core Styles
 
 The shared styles for TACC WMA Workspace Portals & Websites
