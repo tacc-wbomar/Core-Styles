@@ -6,6 +6,10 @@
   "description": "CSS source and processor for TACC Core-CMS and Core-Portal.",
   "files": [
     "dist",
+    "docs",
+    "fractal.config.js",
+    "fractal.theme.js",
+    "src/cli.js",
     "src/bin",
     "src/lib",
     "src/.postcssrc.base.yml"
@@ -13,8 +17,11 @@
   "main": "src/main.js",
   "bin": "src/cli.js",
   "scripts": {
-    "build": "node src/cli.js build -i \"src/lib/_imports/**/*!(README).css\" -o \"./dist\" -m \"src/lib/_imports\"",
-    "test": "node src/cli.js build -i \"src/lib/_tests\" -o \"./dist\" -m \"src/lib\" && echo \"Test output at 'dist/_tests' (compare to test input)\"",
+    "start": "fractal start --sync",
+    "build": "npm run build:css && npm run build:demo",
+    "build:css": "bin/build-css.js",
+    "build:demo": "fractal build",
+    "test": "bin/test-css.js && echo \"Test output at 'dist/_tests' (compare to test input)",
     "prepublishOnly": "npm run build # && npm test && npm run lint"
   },
   "engines": {
@@ -46,5 +53,9 @@
     "postcss-import": "To import CSS files at build-time",
     "postcss-extend": "To extend CSS rule sets at build-time",
     "postcss-preset-env": "To use future CSS features now"
+  },
+  "devDependencies": {
+    "@frctl/fractal": "^1.5.13",
+    "@frctl/mandelbrot": "^1.10.1"
   }
 }
