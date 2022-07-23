@@ -1,21 +1,21 @@
 {
   "name": "@tacc/core-styles",
-  "version": "0.5.2-c",
+  "version": "0.7.0",
   "license": "MIT",
   "author": "TACC ACI WMA <wma-portals@gmail.com>",
   "description": "CSS source and processor for TACC Core-CMS and Core-Portal.",
   "files": [
-    "bin",
     "dist",
-    "source",
-    ".postcssrc.base.yml",
-    "settings.json"
+    "src/bin",
+    "src/lib",
+    "src/.postcssrc.base.yml"
   ],
-  "main": "index.js",
-  "bin": "cli.js",
+  "main": "src/main.js",
+  "bin": "src/cli.js",
   "scripts": {
-    "build": "node cli.js build -i \"./source/_imports/**/*!(README).css\" -o \"./dist\" -m \"source/_imports\"",
-    "test": "node cli.js build -i \"./source/_tests\" -o \"./dist\" -m \"source\" && echo \"Test output at 'dist/_tests' (compare to test input)\""
+    "build": "node src/cli.js build -i \"src/lib/_imports/**/*!(README).css\" -o \"./dist\" -m \"src/lib/_imports\"",
+    "test": "node src/cli.js build -i \"src/lib/_tests\" -o \"./dist\" -m \"src/lib\" && echo \"Test output at 'dist/_tests' (compare to test input)\"",
+    "prepublishOnly": "npm run build # && npm test && npm run lint"
   },
   "engines": {
     "node": ">=15.x",
@@ -38,12 +38,13 @@
   "// dependencies": {
     "commander": "To create CLI",
     "cssnano": "To minify CSS",
-    "node-cmd": "To run `postcss-cli` from script",
-    "postcss-banner": "To prepend version comment to built stylesheets",
-    "postcss-cli": "To process CSS",
-    "postcss-cli:note": "This is the simplest and cheapest 'PostCSS Runner'",
+    "js-yaml": "To parse PostCSS configs",
+    "merge-lite": "To merge PostCSS configs",
+    "node-cmd": "To run PostCSS CLI from script",
+    "postcss-banner": "To prepend preserved comment to built stylesheets",
+    "postcss-cli": "To process CSS (the simplest and cheapest PostCSS runner)",
     "postcss-import": "To import CSS files at build-time",
-    "postcss-extend": "To import/extend CSS rule sets at build-time",
+    "postcss-extend": "To extend CSS rule sets at build-time",
     "postcss-preset-env": "To use future CSS features now"
   }
 }

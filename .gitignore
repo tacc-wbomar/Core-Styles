@@ -1,7 +1,9 @@
-# Project
+# Node
 node_modules
+
+# PostCSS
 .postcssrc.yml
-dist/_tests
+dist
 
 # IDE
 .vscode
