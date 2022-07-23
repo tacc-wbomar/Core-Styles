@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - noop(core-styles): comments & new lines
 - chore(core-styles): [class*=c-button] → .c-button
+- docs: github pr template tweak
 
 ### Fixed
 
