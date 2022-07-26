@@ -82,7 +82,11 @@ ul.c-page-list {
 
 /* Pagination: End */
 
-.c-page-end { padding: 4px 12px }
+/* FAQ: Selectors are extra specific to overwrite .c-button--as-link */
+.c-page-end:not(.c-button--as-link),
+.c-page-end.c-button--as-link {
+  padding: 4px 12px;
+}
 
 
 
