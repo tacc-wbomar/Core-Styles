@@ -35,7 +35,7 @@ function config(customConfigFiles = [], cssVersion) {
 
   // Update properties
   let updatedJson = updateVersion(mergedJson, cssVersion);
-      updatedJson = resolveImportFromPaths(updatedJson);
+  updatedJson = resolveImportFromPaths(updatedJson);
   const configYaml = yaml.dump(updatedJson);
 
   // Write final config file
