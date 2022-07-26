@@ -1,0 +1,27 @@
+@import url("./c-tag.css");
+
+/* Base */
+
+.c-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 0.75em;
+  align-items: center;
+
+  font-size: var(--global-font-size--small);
+}
+
+/* To let nav lists not require `c-tag` on every child */
+nav.c-tag-list > a {
+  @extend .c-tag;
+}
+
+/* To overwrite browser styles */
+ol.c-tag-list,
+ul.c-tag-list {
+  list-style: none;
+
+  padding-inline-start: 0;
+  margin-block: 0;
+}

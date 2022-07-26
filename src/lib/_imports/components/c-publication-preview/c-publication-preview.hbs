@@ -1,0 +1,24 @@
+<style>
+  @import url('{{ path "/components/c-tag-list.css" }}');
+</style>
+
+{{#each items}}
+  <article class="c-publication-preview">
+    {{#if tags}}
+      <ul class="c-pub-item__tags  c-tag-list">
+      {{#each tags}}
+        <li><a class="c-tag" href="#">{{this}}</a></li>
+      {{/each}}
+      </ul>
+    {{/if}}
+    <h3>
+      {{#if url}}
+        <a href="{{url}}">{{title}}</a>
+      {{else}}
+        {{title}}
+      {{/if}}
+    </h3>
+    <p><strong>Authors:</strong> {{citation}}</p>
+    <span class="c-pub-item__status">{{status}}</span>
+  </article>
+{{/each}}

@@ -1,0 +1,64 @@
+/* Base */
+
+.c-publication-preview {
+  --buffer: 15px;
+
+  padding-block: var(--buffer);
+
+  border-bottom: var(--global-border-width--normal) solid var(--global-color-primary--dark);
+}
+.c-publication-preview:first-child {
+  border-top: var(--global-border-width--normal) solid var(--global-color-primary--dark);
+}
+
+
+
+/* Elements */
+
+/* Tags */
+
+.c-tag-list/* ← to overwrite via specificity */.c-pub-item__tags {
+  margin-block-end: var(--buffer);
+}
+
+/* Title */
+
+.c-publication-preview h3 {
+  margin-block: 0;
+
+  font-size: var(--global-font-size--large);
+}
+
+.c-publication-preview h3,
+.c-publication-preview h3 a {
+  color: var(--global-color-primary--xx-dark);
+}
+.o-section--style-dark .c-publication-preview h3,
+.o-section--style-dark .c-publication-preview h3 a {
+  color: var(--global-color-primary--xx-light);
+}
+
+/* Citation */
+
+.c-publication-preview p {
+  margin-block: 0.25em 0.5em;
+
+  color: var(--global-color-accent--dark);
+  font-size: var(--global-font-size--medium);
+}
+
+/* Status */
+
+.c-pub-item__status {
+  /* To collapse sibling margin, do not use `inline-block` */
+  display: block;
+  width: fit-content;
+
+  padding-inline: var(--buffer);
+  padding-block: 0.25em;
+  margin-block-start: var(--buffer);
+
+  border: var(--global-border-width--normal) solid var(--global-color-accent--dark);
+
+  font-size: var(--global-font-size--small);
+}
