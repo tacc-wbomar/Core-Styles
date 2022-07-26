@@ -40,7 +40,7 @@
 
 /* Citation */
 
-.c-publication-preview p {
+.c-publication-preview p:first-of-type {
   margin-block: 0.25em 0.5em;
 
   color: var(--global-color-accent--dark);
@@ -49,7 +49,7 @@
 
 /* Status */
 
-.c-pub-item__status {
+.c-publication-preview p:last-of-type:not(:first-of-type) {
   /* To collapse sibling margin, do not use `inline-block` */
   display: block;
   width: fit-content;
@@ -57,8 +57,16 @@
   padding-inline: var(--buffer);
   padding-block: 0.25em;
   margin-block-start: var(--buffer);
+  margin-block-end: 0; /* overwrite html-elements.css */
 
-  border: var(--global-border-width--normal) solid var(--global-color-accent--dark);
+  border: var(--global-border-width--normal) solid var(--global-color-primary--dark);
 
   font-size: var(--global-font-size--small);
+  color: var(--global-color-primary--xx-dark);
+}
+
+/* any random extra paragraph */
+
+.c-publication-preview p:not(:last-of-type, :first-of-type) {
+  margin-block: 0.25em 0.5em;
 }
