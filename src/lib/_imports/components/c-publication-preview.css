@@ -7,7 +7,7 @@
 
   border-bottom: var(--global-border-width--normal) solid var(--global-color-primary--dark);
 }
-.c-publication-preview:first-child {
+.c-publication-preview:first-of-type {
   border-top: var(--global-border-width--normal) solid var(--global-color-primary--dark);
 }
 
