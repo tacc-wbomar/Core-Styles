@@ -2,7 +2,7 @@
 
 .c-tag {
   --pad-inline: 0.5em;
-  --pad-block: 0.25em;
+  --pad-block: 0;
 
   display: inline-block;
 
