@@ -12,14 +12,20 @@
   font-size: var(--global-font-size--small);
 }
 
-/* To let nav lists not require `c-tag` on every child */
+/* To let lists not require `c-tag` on every child */
+ul.c-tag-list--auto-item > li,
+ul.c-tag-list--auto-text > li > *,
+ul.c-tag-list--auto-link > li > a, /* alias for `c-tag-list--auto-text` */
+ol.c-tag-list--auto-item > li,
+ol.c-tag-list--auto-text > li > *,
+ol.c-tag-list--auto-link > li > a, /* alias for `c-tag-list--auto-text` */
 nav.c-tag-list > a {
   @extend .c-tag;
 }
 
 /* To overwrite browser styles */
-ol.c-tag-list,
-ul.c-tag-list {
+ul.c-tag-list,
+ol.c-tag-list {
   list-style: none;
 
   padding-inline-start: 0;

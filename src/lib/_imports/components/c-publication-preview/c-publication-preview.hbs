@@ -5,9 +5,9 @@
 {{#each items}}
   <article class="c-publication-preview">
     {{#if tags}}
-      <ul class="c-pub-item__tags  c-tag-list">
+      <ul class="c-tag-list c-tag-list--auto-text">
       {{#each tags}}
-        <li><a class="c-tag" href="#">{{this}}</a></li>
+        <li><a href="#">{{this}}</a></li>
       {{/each}}
       </ul>
     {{/if}}

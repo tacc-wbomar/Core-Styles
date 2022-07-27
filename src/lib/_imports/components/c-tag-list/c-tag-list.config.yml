@@ -10,7 +10,7 @@ variants:
   - name: nav
     label: '&lt;nav&gt;'
     notes: |
-      A list of tags for navigation. The `<a>` does __not__ need `.c-tag` class.
+      A list of tags for navigation. The `<a>` does __not__ need the `.c-tag` class.
 
       Use Cases:
       - manage layout via parent (e.g. using flex or grid)
@@ -19,7 +19,14 @@ variants:
   - name: ul
     label: 'Unordered &lt;ul&gt;'
     notes: |
-      An _unordered_ list of tags. Each tag must have the `.c-tag` class.
+      An _unordered_ list of tags.
+      
+      Options:
+      - each tag has the `.c-tag` class
+      - the list has appropriate `auto` class
+        - `c-tag--auto-item` for `<li>` with plain text
+        - `c-tag--auto-text` for `<li>` with any element (including link)
+        - `c-tag--auto-link` or `c-tag--auto-text` for `<li>` with a link
 
       Use Cases:
       - manage layout via parent (e.g. using flex or grid)
@@ -27,7 +34,14 @@ variants:
   - name: ol
     label: 'Ordered &lt;ol&gt;'
     notes: |
-      An _ordered_ list of tags. Each tag must have the `.c-tag` class.
+      An _ordered_ list of tags.
+      
+      Options:
+      - each tag has the `.c-tag` class
+      - the list has appropriate `auto` class:
+        - `c-tag--auto-item` for `<li>` with plain text
+        - `c-tag--auto-text` for `<li>` with any element (including link)
+        - `c-tag--auto-link` or `c-tag--auto-text` for `<li>` with a link
 
       Use Cases:
       - manage layout via parent (e.g. using flex or grid)

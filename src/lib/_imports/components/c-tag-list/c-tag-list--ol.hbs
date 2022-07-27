@@ -1,5 +1,6 @@
+<h2>Manual Tags <small>(add <code>c-tag</code> class to each tag)</small></h2>
 <dl>
-  <dt>Default <small>(each list item is a tag)</small></dt>
+  <dt>Item <small>(no child)</small></dt>
   <dd>
     <ol class="c-tag-list">
       {{#each tags}}
@@ -7,7 +8,7 @@
       {{/each}}
     </ol>
   </dd>
-  <dt>Default <small>(each list item child is a tag)</small></dt>
+  <dt>Text <small>within Item</small></dt>
   <dd>
     <ol class="c-tag-list">
       {{#each tags}}
@@ -17,7 +18,7 @@
       {{/each}}
     </ol>
   </dd>
-  <dt>Link</dt>
+  <dt>Link <small>within Item</small></dt>
   <dd>
     <ol class="c-tag-list">
       {{#each tags}}
@@ -29,9 +30,41 @@
   </dd>
 </dl>
 
-{{#> @misuse }}
+<h2>Automatic Tags <small>(add matching <code>auto</code> class to list)</small></h2>
 <dl>
-    <dt>No Explicit Tag Elements</dt>
+  <dt>Item <small>(no child)</small></dt>
+  <dd>
+    <ol class="c-tag-list c-tag-list--auto-item">
+      {{#each tags}}
+        <li>{{this}}</li>
+      {{/each}}
+    </ol>
+  </dd>
+  <dt>Text <small>within Item</small></dt>
+  <dd>
+    <ol class="c-tag-list c-tag-list--auto-text">
+      {{#each tags}}
+        <li>
+          <span>{{this}}</span>
+        </li>
+      {{/each}}
+    </ol>
+  </dd>
+  <dt>Link <small>within Item</small></dt>
+  <dd>
+    <ol class="c-tag-list c-tag-list--auto-link">
+      {{#each tags}}
+        <li>
+          <a class="c-tag" href="#">{{this}}</a>
+        </li>
+      {{/each}}
+    </ol>
+  </dd>
+</dl>
+
+{{#> @misuse }}
+  <dl>
+    <dt>No Explicit Tag Elements & No Auto Class</dt>
     <dd>
       <ol class="c-tag-list">
         {{#each tags}}
