@@ -27,6 +27,7 @@
 .c-tag:hover:where(a) {
   background-color: var(--global-color-accent--dark);
   border-color: var(--global-color-accent--dark);
+  color: var(--global-color-primary--xx-light);
 }
 .c-tag:active:where(a) {
   background-color: var(--global-color-accent--x-dark);
