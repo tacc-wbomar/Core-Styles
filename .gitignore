@@ -3,7 +3,7 @@ node_modules
 
 # PostCSS
 .postcssrc.yml
-# dist # temp. disable so we can install from repo until better solution
+dist
 
 # Fractal
 demo
