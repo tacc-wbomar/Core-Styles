@@ -4,6 +4,6 @@
 
 const { buildStylesheets } = require('../src/main');
 
-buildStylesheets('src/lib/_tests', './dist', {
+buildStylesheets('src/lib/_tests/**/*!(README).css', './dist', {
   baseMirrorDir: 'src/lib',
 });
