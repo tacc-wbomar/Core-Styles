@@ -1,5 +1,8 @@
 @import url("../tools/x-truncate.css");
 
+@custom-selector :--disabled
+  :disabled,
+  :where(a[disabled]);
 
 
 
@@ -21,17 +24,20 @@
 
   @extend %x-truncate--one-line;
 }
+a.c-button {
+  text-decoration: none;
+}
 
-.c-button:not(:disabled) {
+.c-button:not(:--disabled) {
   cursor: pointer; /* WARNING: Opinionated */
 }
-.c-button:disabled:not(.c-button--is-busy) {
+.c-button:--disabled:not(.c-button--is-busy) {
   color: var(--global-color-primary--dark);
   border-color: var(--global-color-primary--dark);
 
   pointer-events: none;
 }
-.c-button:disabled:not(.c-button--is-busy, .c-button--as-link) {
+.c-button:--disabled:not(.c-button--is-busy, .c-button--as-link) {
   background-color: var(--global-color-primary--xx-light);
 }
 
@@ -86,7 +92,7 @@
   .c-button:hover,
   .c-button:focus,
   .c-button:active,
-  .c-button:disabled
+  .c-button:--disabled
 ) {
   color: var(--global-color-primary--xx-light);
   background-color: var(--global-color-accent--normal);
@@ -121,13 +127,13 @@
 }
 
 .c-button--secondary.c-button--is-busy,
-.c-button--secondary:not(.c-button:hover, .c-button:focus, .c-button:active, .c-button:disabled) {
+.c-button--secondary:not(.c-button:hover, .c-button:focus, .c-button:active, .c-button:--disabled) {
   color: var(--global-color-primary--xx-dark);
   background-color: var(--global-color-primary--x-light);
   border-color: var(--global-color-primary--xx-dark);
 }
 
-.c-button/* for specificity to override */.c-button--secondary:disabled {
+.c-button/* for specificity to override */.c-button--secondary:--disabled {
   background-color: var(--global-color-primary--x-light);
 }
 
@@ -163,7 +169,7 @@
   .c-button:hover,
   .c-button:focus,
   .c-button:active,
-  .c-button:disabled
+  .c-button:--disabled
 ) {
   color: var(--global-color-primary--xx-dark);
   background-color: var(--global-color-primary--xx-light);
@@ -202,7 +208,7 @@
   .c-button:hover,
   .c-button:focus,
   .c-button:active,
-  .c-button:disabled
+  .c-button:--disabled
 ) {
   color: var(--global-color-primary--xx-dark);
   background-color: var(--global-color-accent--x-light);
@@ -218,7 +224,7 @@
   border: unset;
   padding-inline: unset;
 }
-.c-button--as-link:not(:disabled):hover {
+.c-button--as-link:not(:--disabled):hover {
   text-decoration: underline;
 }
 
