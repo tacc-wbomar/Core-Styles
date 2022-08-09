@@ -7,6 +7,12 @@ The shared styles for TACC WMA Workspace Portals & Websites
 - [Core CMS], the base CMS code for TACC WMA CMS Websites
 - [Core Portal], the base Portal code for TACC WMA CMS Websites
 
+## Local Development Setup
+
+### Prequisites for Running
+
+* Nodejs 15.x
+
 ## External Project Usage
 
 ### CLI
