@@ -38,3 +38,8 @@ Styleguide Objects.FloatContent
     padding-right: 125px;
   }
 }
+@media only screen and (--medium-and-above) and (--max-wide-and-below) {
+  :--o-float-content {
+    max-width: 560px;
+  }
+}
