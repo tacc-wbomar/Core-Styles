@@ -6,6 +6,10 @@
   "description": "CSS source and processor for TACC Core-CMS and Core-Portal.",
   "files": [
     "dist",
+    "docs",
+    "fractal.config.js",
+    "fractal.theme.js",
+    "src/cli.js",
     "src/bin",
     "src/lib",
     "src/.postcssrc.base.yml"
@@ -13,8 +17,11 @@
   "main": "src/main.js",
   "bin": "src/cli.js",
   "scripts": {
-    "build": "bin/build.js",
+    "start": "fractal start --sync",
+    "build": "npm run build:css && npm run build:demo",
     "postbuild": "cp -r src/lib/fonts dist/fonts",
+    "build:css": "bin/build.js",
+    "build:demo": "fractal build",
     "test": "bin/test.js && echo \"Test output at 'dist/_tests' (compare to test input)\"",
     "prepublishOnly": "npm run build # && npm test && npm run lint"
   },
@@ -49,5 +56,9 @@
     "postcss-extend": "To extend CSS rule sets at build-time",
     "postcss-preset-env": "To use future CSS features now",
     "postcss-replace": "To edit relative paths to fonts"
+  },
+  "devDependencies": {
+    "@frctl/fractal": "^1.5.13",
+    "@frctl/mandelbrot": "^1.10.1"
   }
 }
