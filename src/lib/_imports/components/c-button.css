@@ -1,21 +1,8 @@
-/*
-Button
-
-A button that may have icon(s) before and/or after its text.
-
-.c-button--primary - A primary (expected) user action
-.c-button--secondary - For an optional user action
-.c-button--tertiary - A button that represents inactive buttons among many
-.c-button--is-active - A button that represents the one active button among many
-.c-button--as-link - A button that visually resembles a link
-.c-button--is-busy - A clicked button that started an incomplete process
-
-Markup: c-button.html
-
-Styleguide Components.Button
-*/
 @import url("../tools/x-truncate.css");
 
+@custom-selector :--disabled
+  :disabled,
+  :where(a[disabled]);
 
 
 
@@ -37,17 +24,20 @@ Styleguide Components.Button
 
   @extend %x-truncate--one-line;
 }
+a.c-button {
+  text-decoration: none;
+}
 
-.c-button:not(:disabled) {
+.c-button:not(:--disabled) {
   cursor: pointer; /* WARNING: Opinionated */
 }
-.c-button:disabled:not(.c-button--is-busy) {
+.c-button:--disabled:not(.c-button--is-busy) {
   color: var(--global-color-primary--dark);
   border-color: var(--global-color-primary--dark);
 
   pointer-events: none;
 }
-.c-button:disabled:not(.c-button--is-busy, .c-button--as-link) {
+.c-button:--disabled:not(.c-button--is-busy, .c-button--as-link) {
   background-color: var(--global-color-primary--xx-light);
 }
 
@@ -102,7 +92,7 @@ Styleguide Components.Button
   .c-button:hover,
   .c-button:focus,
   .c-button:active,
-  .c-button:disabled
+  .c-button:--disabled
 ) {
   color: var(--global-color-primary--xx-light);
   background-color: var(--global-color-accent--normal);
@@ -137,13 +127,13 @@ Styleguide Components.Button
 }
 
 .c-button--secondary.c-button--is-busy,
-.c-button--secondary:not(.c-button:hover, .c-button:focus, .c-button:active, .c-button:disabled) {
+.c-button--secondary:not(.c-button:hover, .c-button:focus, .c-button:active, .c-button:--disabled) {
   color: var(--global-color-primary--xx-dark);
   background-color: var(--global-color-primary--x-light);
   border-color: var(--global-color-primary--xx-dark);
 }
 
-.c-button/* for specificity to override */.c-button--secondary:disabled {
+.c-button/* for specificity to override */.c-button--secondary:--disabled {
   background-color: var(--global-color-primary--x-light);
 }
 
@@ -179,7 +169,7 @@ Styleguide Components.Button
   .c-button:hover,
   .c-button:focus,
   .c-button:active,
-  .c-button:disabled
+  .c-button:--disabled
 ) {
   color: var(--global-color-primary--xx-dark);
   background-color: var(--global-color-primary--xx-light);
@@ -218,7 +208,7 @@ Styleguide Components.Button
   .c-button:hover,
   .c-button:focus,
   .c-button:active,
-  .c-button:disabled
+  .c-button:--disabled
 ) {
   color: var(--global-color-primary--xx-dark);
   background-color: var(--global-color-accent--x-light);
@@ -234,7 +224,7 @@ Styleguide Components.Button
   border: unset;
   padding-inline: unset;
 }
-.c-button--as-link:not(:disabled):hover {
+.c-button--as-link:not(:--disabled):hover {
   text-decoration: underline;
 }
 

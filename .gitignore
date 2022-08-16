@@ -5,6 +5,9 @@ node_modules
 .postcssrc.yml
 dist
 
+# Fractal
+demo
+
 # IDE
 .vscode
 
