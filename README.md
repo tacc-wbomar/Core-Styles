@@ -227,9 +227,7 @@ Only authorized team members may publish.
 1. Update `CHANGELOG.md`.
 1. Update version via `npm version N.N.N`.
 1. Commit, push, PR, review, merge.
-1. Tag version i.e.
-   1. `git tag -a vN.N.N`
-   2. `git push origin vN.N.N`
+1. Create release and tag on GitHub.
 1. Publish to NPM via `npm publish --access public`.
 
 > **Notice**: Project build will automatically occur before publish.

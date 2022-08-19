@@ -7,6 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.8.0] - 2022-08-16: Pattern Demo, New Patterns, Relative Paths, Retire CLI
+
+### Added
+
+- feat: updates from tup-ui (except paths)
+  - bootstrap form & bootstrap modal
+  - c-button default width
+  - cortal icons
+  - o-fixed-header-table
+  - default values for font family variable
+- feat: use relative paths like tup-ui (#36) (#38)
+- feat: fp-1499 ui pattern demo (#34)
+
+### Deprecated
+
+- feat: retire internal usage of cli (#39)
+
 ## [0.7.1] - 2022-07-23: Fix v0.5.2 → v0.7.0 Migration
 
 ### Changed
@@ -223,7 +240,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v0.7.1...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v0.8.0...HEAD
+[0.8.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.8.0
 [0.7.1]: https://github.com/TACC/Core-Styles/releases/tag/v0.7.1
 [0.7.0]: https://github.com/TACC/tup-ui/releases/tag/core-styles-v0.7.0
 [0.7.0-beta]: https://github.com/TACC/tup-ui/releases/tag/core-styles-v0.7.0-beta
