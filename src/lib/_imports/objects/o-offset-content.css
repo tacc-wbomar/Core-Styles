@@ -1,7 +1,9 @@
 /*
-Offset Content
+Offset Content (Responsive)
 
-Content that should be offset from the flow of text within which it is placed.
+Content that should be:
+1. offset from the flow of text within which it is placed
+2. not offset at certain viewports
 
 Styleguide Objects.OffsetContent
 */
@@ -16,7 +18,7 @@ Styleguide Objects.OffsetContent
 
 
 :--o-offset-content {
-  --offset-distance: min(15vw, 410px);
+  	--offset-distance: min(15vw, 410px);
 	--buffer: calc( 2 * var(--global-space--grid-gap) );
 }
 
