@@ -1,0 +1,10 @@
+.u-mailto-text-replace[data-user][data-domain] {
+    visibility: hidden;
+    font-size: 0;
+}
+.u-mailto-text-replace[data-user][data-domain]::before {
+    display: inline;
+    content: attr(data-user) "@" attr(data-domain);
+    font-size: initial;
+    visibility: visible;
+}
