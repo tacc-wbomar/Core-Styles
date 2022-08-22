@@ -2,7 +2,7 @@
 {{#unless styles.shouldSkipBase}}
   <link
     rel='stylesheet'
-    href='{{path "/components/{{ _target.baseHandle }}.css"}}'
+    href='{{path "/{{ subdir }}/{{ _target.baseHandle }}.css"}}'
   />
 {{/unless}}
 
