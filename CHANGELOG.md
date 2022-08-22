@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.8.2] - 2022-08-21: Missing 0.8.0 Pattern, No Executable Stylesheet
+
+### Fixed
+
+- Task/ecepweb 215 o float content (#42) [see [0.8.0] "o-float-content"]
+- fix(elements): html-elements was executable
+
 ## [0.8.0] - 2022-08-16: Pattern Demo, New Patterns, Relative Paths, Retire CLI
 
 ### Added
@@ -16,6 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - c-button default width
   - cortal icons
   - o-fixed-header-table
+  - ~~o-float-content~~ [see [0.8.2] "Task/ecepweb 215 o float content"]
   - default values for font family variable
 - feat: use relative paths like tup-ui (#36) (#38)
 - feat: fp-1499 ui pattern demo (#34)
@@ -240,7 +248,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v0.8.0...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v0.8.2...HEAD
+[0.8.2]: https://github.com/TACC/Core-Styles/releases/tag/v0.8.2
 [0.8.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.8.0
 [0.7.1]: https://github.com/TACC/Core-Styles/releases/tag/v0.7.1
 [0.7.0]: https://github.com/TACC/tup-ui/releases/tag/core-styles-v0.7.0
