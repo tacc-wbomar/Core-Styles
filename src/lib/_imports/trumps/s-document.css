@@ -16,17 +16,6 @@ Styleguide Trumps.Scopes.Document
 
 /* ELEMENTS */
 
-
-/* ELEMENTS: Content Sectioning */
-
-.s-document h2 {
-  margin-bottom: var(--global-space--normal);
-}
-
-.s-document h3 {
-  margin-bottom: var(--global-space--normal);
-}
-
 /* ELEMENTS: Text Content */
 
 .s-document blockquote {
