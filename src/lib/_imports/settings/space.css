@@ -47,4 +47,8 @@ Styleguide Settings.CustomProperties.Space
     var(--global-space--section-right)
     var(--global-space--section-bottom)
     var(--global-space--section-left);
+
+  /* CMS Pages */
+  --global-space--hr-buffer-above: 10px;
+  --global-space--hr-buffer-below: 30px;
 }
