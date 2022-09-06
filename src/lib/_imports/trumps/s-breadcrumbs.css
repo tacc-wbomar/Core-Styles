@@ -45,11 +45,11 @@ nav.s-breadcrumbs {
 
 /* Elements i.e. Content */
 
-/* To undo default list styles ONLY for major breadcrumbs */
-/* FAQ: Minor breadcrumbs have not been designed, so we should not unstyle it */
+/* To undo default list styles */
 nav.s-breadcrumbs ol {
   list-style: none; /* overwrite browser styles */
-  padding-left: 0; /* overwrite html-elements.css */
+  padding-left: unset; /* undo html-elements.css */
+  margin-bottom: unset; /* undo html-elements.css */
 
   font-weight: var(--global-font-weight--medium);
 }
