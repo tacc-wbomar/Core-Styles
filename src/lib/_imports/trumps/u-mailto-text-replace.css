@@ -1,0 +1,7 @@
+/* Create utility class from `x-mailto-text-replace` */
+
+@import url("@tacc/core-styles/src/lib/_imports/tools/x-mailto-text-replace.css");
+
+.u-mailto-text-replace[data-user][data-domain] {
+    @extend %x-mailto-text-replace;
+}
