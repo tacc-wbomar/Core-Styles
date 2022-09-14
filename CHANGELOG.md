@@ -5,7 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [Unreleased][unreleased]
+
+## [0.8.6] - 2022-09-14: Document Styles, Mailto Text Replacement, Misc. Fixes
+
+### Added
+
+- Task/fp 1801 guides breadcrumbs headings (#45)
+- feat(trumps): u-mailto-text-replace (for ecep 214) (#44)
+
+### Fixed
+
+- fix(o-float-content): missing setting import
+- fix(demo): subdir now explicitely loads from self
 
 ## [0.8.2] - 2022-08-21: Missing 0.8.0 Pattern, No Executable Stylesheet
 
@@ -248,7 +260,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v0.8.2...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v0.8.6...HEAD
+[0.8.6]: https://github.com/TACC/Core-Styles/releases/tag/v0.8.6
 [0.8.2]: https://github.com/TACC/Core-Styles/releases/tag/v0.8.2
 [0.8.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.8.0
 [0.7.1]: https://github.com/TACC/Core-Styles/releases/tag/v0.7.1
