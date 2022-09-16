@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
-## [0.8.7] - 2022-09-16: Fix Bad Import Path
+## [0.8.7] - 2022-09-16: Fix Bad Import Path, NPM Run Command Doc Tweaks
 
 ### Changed
 
