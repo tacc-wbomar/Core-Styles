@@ -137,10 +137,10 @@ Code configuration happens in repos that use these styles.
    npm ci
    ```
 
-2. Build stylesheets:
+2. Build stylesheets and demo:
 
    ```bash
-   npm run build:css
+   npm run build
    ```
 
 3. Run the pattern library:
@@ -148,6 +148,8 @@ Code configuration happens in repos that use these styles.
    ```bash
    npm start
    ```
+
+   <sup>Live reloads on demo file change, but **not** source file change.</sup>
 
 4. Open the web interface.
    The build command will output the URL (and may even open it for you).
