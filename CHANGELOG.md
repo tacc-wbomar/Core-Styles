@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [0.8.7] - 2022-09-16: Fix Bad Import Path
+
+### Changed
+
+- docs: npm run build (no :css), run start (note) (75e4046)
+
+### Fixed
+
+- fix: bad import path for x-mailto-text-replace (adf85ff)
+
 ## [0.8.6] - 2022-09-14: Document Styles, Mailto Text Replacement, Misc. Fixes
 
 ### Added
@@ -260,7 +270,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v0.8.6...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v0.8.7...HEAD
+[0.8.7]: https://github.com/TACC/Core-Styles/releases/tag/v0.8.7
 [0.8.6]: https://github.com/TACC/Core-Styles/releases/tag/v0.8.6
 [0.8.2]: https://github.com/TACC/Core-Styles/releases/tag/v0.8.2
 [0.8.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.8.0
