@@ -1,0 +1,18 @@
+/*
+Mailto Link Text Replacement
+
+Replace mailto link rendered text with virtual text from data-attributes
+
+Styleguide Tools.ExtendsAndMixins.MailtoTextReplace
+*/
+
+%x-mailto-text-replace {
+    visibility: hidden;
+    font-size: 0;
+}
+%x-mailto-text-replace::before {
+    display: inline;
+    content: attr(data-user) "@" attr(data-domain);
+    font-size: initial;
+    visibility: visible;
+}
