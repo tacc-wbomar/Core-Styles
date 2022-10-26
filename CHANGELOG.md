@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [0.9.0] - 2022-10-26: Fonts, C-Message, Generic CMS Form, A11y Color Tweak
+
+### Added
+
+- feat: support (and add) fonts (#41)
+- feat: add c-message component (#41)
+- feat: add and edit cms form styles (#41)
+- feat!: rename and edit cms element styles (#41)
+- feat: add postcss-replace (to manage font paths) (#41)
+
+### Fixed
+
+- fix: accessible error colors (#41)
+
 ## [0.8.7] - 2022-09-16: Fix Bad Import Path, NPM Run Command Doc Tweaks
 
 ### Changed
@@ -270,7 +284,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v0.8.7...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v0.9.0...HEAD
+[0.9.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.9.0
 [0.8.7]: https://github.com/TACC/Core-Styles/releases/tag/v0.8.7
 [0.8.6]: https://github.com/TACC/Core-Styles/releases/tag/v0.8.6
 [0.8.2]: https://github.com/TACC/Core-Styles/releases/tag/v0.8.2
