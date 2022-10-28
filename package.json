@@ -1,6 +1,6 @@
 {
   "name": "@tacc/core-styles",
-  "version": "0.8.2",
+  "version": "0.9.0",
   "license": "MIT",
   "author": "TACC ACI WMA <wma-portals@gmail.com>",
   "description": "CSS source and processor for TACC Core-CMS and Core-Portal.",
@@ -19,6 +19,7 @@
   "scripts": {
     "start": "fractal start --sync",
     "build": "npm run build:css && npm run build:demo",
+    "postbuild": "cp -r src/lib/fonts dist/fonts",
     "build:css": "bin/build.js",
     "build:demo": "fractal build",
     "test": "bin/test.js && echo \"Test output at 'dist/_tests' (compare to test input)\"",
@@ -40,7 +41,8 @@
     "postcss-cli": "^7.1.2",
     "postcss-extend": "^1.0.5",
     "postcss-import": "^12.0.1",
-    "postcss-preset-env": "^6.7.0"
+    "postcss-preset-env": "^6.7.0",
+    "postcss-replace": "1.1.3"
   },
   "// peerDependencies": {
     "commander": "To create CLI",
@@ -52,7 +54,8 @@
     "postcss-cli": "To process CSS (the simplest and cheapest PostCSS runner)",
     "postcss-import": "To import CSS files at build-time",
     "postcss-extend": "To extend CSS rule sets at build-time",
-    "postcss-preset-env": "To use future CSS features now"
+    "postcss-preset-env": "To use future CSS features now",
+    "postcss-replace": "To edit relative paths to fonts"
   },
   "devDependencies": {
     "@frctl/fractal": "^1.5.13",
