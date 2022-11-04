@@ -1,7 +1,6 @@
-label: Override & Extend Bootstrap Modals
+label: Bootstrap Modal
 notes: |
-  Reference:
-  - [Bootstrap Modals](https://getbootstrap.com/docs/4.3/components/modal/)
+  To override and extend [Bootstrap Modals](https://getbootstrap.com/docs/4.3/components/modal/).
 
   <script>
   Array.from(document.links)
