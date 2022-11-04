@@ -1,9 +1,0 @@
-label: Bootstrap Modal
-notes: |
-  To override and extend [Bootstrap Modals](https://getbootstrap.com/docs/4.3/components/modal/).
-
-  <script>
-  Array.from(document.links)
-    .filter(link => link.hostname != window.location.hostname)
-    .forEach(link => link.target = '_blank');
-  </script>
