@@ -1,1 +1,2 @@
-preview: "@components.preview"
+context:
+  subdir: "components"
