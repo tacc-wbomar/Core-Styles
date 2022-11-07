@@ -1,1 +1,2 @@
-preview: "@trumps.preview"
+context:
+  subdir: "trumps"
