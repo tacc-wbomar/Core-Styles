@@ -369,6 +369,11 @@ th {
   border: var(--global-border--normal);
 }
 
+caption {
+  font-size: var(--global-font-size--small);
+  text-align: unset; /* undo Bootstrap _reboot.css */
+}
+
 
 
 
