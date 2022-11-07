@@ -12,6 +12,7 @@ fractal.set('project.title', 'TACC UI Patterns');
 fractal.components.set('label', 'Patterns'); // default is 'Components'
 fractal.components.set('title', 'Patterns'); // default is 'Components'
 fractal.components.set('default.status', 'wip'); // default is 'ready'
+fractal.components.set('statuses.wip.label', 'Under Development'); // overwrite
 
 // Set source paths
 // (for components)
