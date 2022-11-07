@@ -1,1 +1,2 @@
-preview: "@objects.preview"
+context:
+  subdir: "objects"
