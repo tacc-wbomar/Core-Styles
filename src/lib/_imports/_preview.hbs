@@ -33,6 +33,9 @@
   <link rel='stylesheet' href='{{path this}}' />
 {{/each}}
 
+{{! styles: specific to pattern library (so pattern library can override any) }}
+{{> @css }}
+
 {{! scripts: local (for current component) }}
 {{! (automatically found) }}
 {{#each _target.resources.assets}}

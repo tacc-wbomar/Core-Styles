@@ -1,0 +1,27 @@
+{{!-- To render library basics consistently regardless of external styles --}}
+{{!-- FAQ: overwrite CMS and/or Bootstrap (if present) --}}
+<style>
+  dl dl {
+    margin-block: 0;
+  }
+  dt, dd {
+    font-family: Arial, sans;
+    color: #484848;
+    line-height: normal;
+  }
+  dt {
+    font-weight: normal;
+    margin-bottom: 10px;
+  }
+  dt:not(:first-of-type) {
+    margin-top: 20px;
+  }
+  dd {
+    margin-bottom: 10px;
+    margin-left: 25px;
+  }
+  dd > * {
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+</style>
