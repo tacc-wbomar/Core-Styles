@@ -1,1 +1,2 @@
-preview: "@generics.preview"
+context:
+  subdir: "generics"
