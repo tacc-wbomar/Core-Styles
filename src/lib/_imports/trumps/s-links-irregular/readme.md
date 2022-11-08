@@ -6,18 +6,18 @@ This allows us to satisfy clients who strongly prefer [standard CMS links]¹ are
 
 **Instructions**
 
-1. Add `s-links-irregular` class to an ancestor element.
+1. Add `s-irregular-links` class to an ancestor element.
 
 **Examples**
 
 ```
-<main class="s-links-irregular">
+<main class="s-irregular-links">
     ... <a href="...">Click me</a> ...
 </main>
 ```
 
 ```
-<section class="some-unique-content s-links-irregular">
+<section class="some-unique-content s-irregular-links">
     ... <a href="...">Click me</a> ...
 </section>
 ```

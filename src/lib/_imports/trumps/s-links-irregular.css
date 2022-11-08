@@ -1,9 +1,9 @@
-.s-links-irregular a {
+.s-irregular-links a {
   text-decoration-line: underline;
 }
-.s-links-irregular a:hover {
+.s-irregular-links a:hover {
   text-decoration-style: dashed;
 }
-.s-links-irregular a:active {
+.s-irregular-links a:active {
   text-decoration-style: dotted;
 }
