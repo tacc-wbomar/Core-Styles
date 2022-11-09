@@ -348,37 +348,6 @@ Styleguide Elements.DemarcatingEdits
 
 
 /*
-Table Content
-
-Elements that create and handle tabular data.
-
-```
-<table> <thead> <tbody> <th> <td> <tfoot> <colgroup> <col> <caption>
-```
-
-Reference:
-
-- [HTML element reference: Table content | MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Table_content)
-
-Styleguide Elements.Tables
-*/
-
-table,
-td,
-th {
-  border: var(--global-border--normal);
-}
-
-caption {
-  font-size: var(--global-font-size--small);
-  text-align: unset; /* undo Bootstrap _reboot.css */
-}
-
-
-
-
-
-/*
 Interactive Elements
 
 Elements that help to create interactive user interface objects.
