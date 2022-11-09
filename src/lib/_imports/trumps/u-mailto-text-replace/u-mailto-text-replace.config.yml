@@ -1,7 +1,0 @@
-label: Mailto Link Text Replacement
-notes: |-
-  Replaces the display text of an `<a href="mailto:…" data-user="bob" data-domain="">` link with the e-mail address constructed from the `data-user` and `data-domain` attributes.
-
-  This can be used to render an accurate e-mail that will not be recognized by a generic web scraper. The default display text should be an inaccurate e-mail address.
-
-  _To make sure link is accessible if CSS does not load, make it obvious to humans what part of an e-mail is inaccurate, e.g. `__REMOVE_THIS__`._
