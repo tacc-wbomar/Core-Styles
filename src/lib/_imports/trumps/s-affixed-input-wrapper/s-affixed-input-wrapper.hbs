@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="{{path '/elements/form.cms.css'}}" />
+
+<dl>
+  <dt>Prefix</dt>
+  <dd class="s-affixed-input-wrapper">
+    <label for="field-dollars">How many dollars to you have?</label>
+
+    <span class="s-affixed-input-wrapper__prefix">$</span>
+    <input
+      type="number"
+      name="dollars"
+      id="field-dollars"
+      inputmode="numeric"
+      step="0.01"
+      min="0.01"
+    />
+  </dd>
+  <dt>Suffix</dt>
+  <dd class="s-affixed-input-wrapper">
+    <label for="field-usd">How many US Dollars to you have?</label>
+
+    <input
+      type="number"
+      name="usd"
+      id="field-usd"
+      inputmode="numeric"
+      step="0.01"
+      min="0.01"
+    />
+    <span class="s-affixed-input-wrapper__suffix">$</span>
+  </dd>
+</dl>
