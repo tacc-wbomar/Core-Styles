@@ -1,0 +1,18 @@
+@import url('../settings/color.css');
+@import url('../settings/border.css');
+
+.x-link {
+  color: var(--global-color-link-on-light--normal);
+
+  text-decoration: none;
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: var(--global-border-width--normal);
+}
+.x-link--hover {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+}
+.x-link--active {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+}
