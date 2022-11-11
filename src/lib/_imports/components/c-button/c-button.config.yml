@@ -5,6 +5,7 @@ context:
     width: true
     size: true
     size-small: true
+    link-tag: true
 variants:
   # type
   - name: default
@@ -30,6 +31,7 @@ variants:
       supports:
         width: false
         size: false
+        link-tag: false
   # state
   - name: is-busy
     notes: For a button whose being clicked started an incomplete process (should have `disabled` attribute)
