@@ -4,15 +4,33 @@ table {
   font-family: var(--global-font-family--sans--portal);
 }
 
-table,
-td,
-th {
-  border: var(--global-border--normal);
+thead tr,
+tr:not(:last-of-type) {
+  border-bottom: var(--global-border--normal);
+}
+tr:nth-child(even) {
+  background: var(--global-color-primary--x-light);
 }
 
 th,
 td {
   vertical-align: top;
+  padding-block: 7.5px;
+  padding-inline: 15px;
+
+  color: var(--global-color-primary--dark);
+}
+
+th {
+  color: var(--global-color-primary--x-dark);
+
+  text-align: inherit; /* copied from Bootstrap 4.0.0 */
+}
+thead th {
+  font-weight: var(--bold);
+}
+tbody th {
+  font-weight: var(--normal);
 }
 
 /* To override browser */
@@ -21,13 +39,11 @@ td ul {
   padding-inline-start: 0;
   margin-block: 0;
 }
+td li:not(:last-of-type) {
+  margin-bottom: 0.25em;
+}
 td button {
   font-size: inherit;
-}
-
-th {
-  text-align: inherit; /* copied from Bootstrap 4.0.0 */
-  font-weight: var(--bold);
 }
 
 caption {
