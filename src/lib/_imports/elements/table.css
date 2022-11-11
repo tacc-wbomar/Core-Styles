@@ -2,6 +2,7 @@ table {
   border-collapse: collapse; /* copied from Bootstrap 4.0.0 */
 
   font-family: var(--global-font-family--sans--portal);
+  font-size: var(--global-font-size--small);
 }
 
 thead tr,
