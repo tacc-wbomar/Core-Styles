@@ -1,7 +1,33 @@
+table {
+  border-collapse: collapse; /* copied from Bootstrap 4.0.0 */
+
+  font-family: var(--global-font-family--sans--portal);
+}
+
 table,
 td,
 th {
   border: var(--global-border--normal);
+}
+
+th,
+td {
+  vertical-align: top;
+}
+
+/* To override browser */
+td ul {
+  list-style: none;
+  padding-inline-start: 0;
+  margin-block: 0;
+}
+td button {
+  font-size: inherit;
+}
+
+th {
+  text-align: inherit; /* copied from Bootstrap 4.0.0 */
+  font-weight: var(--bold);
 }
 
 caption {

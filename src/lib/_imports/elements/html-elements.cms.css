@@ -156,7 +156,7 @@ dt {
   font-weight: initial; /* overwrite Bootstrap */
 }
 
-li {
+li:not(td li) {
   line-height: 1.6;
 }
 
