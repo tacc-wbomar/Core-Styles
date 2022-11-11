@@ -4,45 +4,32 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Size</th>
-      <th>Time</th>
-      <th>Actions</th>
+      {{#each cols}}<th>{{ this }}</th>{{/each}}
     </tr>
   </thead>
   <tbody>
+  {{#each rows}}
     <tr>
-      <th>apple-sauce</th>
-      <td>0.5 KB</td>
-      <td><time>12/01/2019 11:04:19</time></td>
+      {{#if id }}<th>{{ id }}</th>{{/if}}
+      {{#if nameLink }}<th><a href="#">{{ nameLink }}</a></th>{{/if}}
+      {{#if name}}<th>{{ name }}</th>{{/if}}
+      {{#if size}}<td>{{ size }}</td>{{/if}}
+      {{#if time}}<td><time>{{ time }}</time></td>{{/if}}
+      {{#if acts}}
       <td>
         <ul>
-          <li><a href="#">View Details</a></li>
-          <li><button href="#" class="c-button c-button--as-link">Delete</button></li>
+        {{#each acts}}
+          {{#if isLink }}<li><a href="#">{{ text }}</a></li>{{/if}}
+          {{#if isButton}}<li>
+            <button href="#" class="c-button c-button--as-link">
+              {{ text }}
+            </button>
+          </li>{{/if}}
+        {{/each}}
         </ul>
       </td>
+    {{/if}}
     </tr>
-    <tr>
-      <th>milk-shake-032</th>
-      <td>300.0 KB</td>
-      <td><time>03/22/2021 05:23:01</time></td>
-      <td>
-        <ul>
-          <li><a href="#">View Details</a></li>
-          <li><button href="#" class="c-button c-button--as-link">Delete</button></li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <th>white-candy-5</th>
-      <td>1.5 MB</td>
-      <td><time>07/12/2022 07:34:53</time></td>
-      <td>
-        <ul>
-          <li><a href="#">View Details</a></li>
-          <li><button href="#" class="c-button c-button--as-link">Delete</button></li>
-        </ul>
-      </td>
-    </tr>
+  {{/each}}
   </tbody>
 </table>
