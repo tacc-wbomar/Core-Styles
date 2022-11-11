@@ -6,13 +6,15 @@ Replace mailto link rendered text with virtual text from data-attributes
 Styleguide Tools.ExtendsAndMixins.MailtoTextReplace
 */
 
+/* To replace actual link text with generated link text */
 %x-mailto-text-replace {
-    visibility: hidden;
-    font-size: 0;
+    /* FAQ: Using `display: none` would hide pseudo element text */
+    visibility: hidden; /* to hide actual link text */
+    font-size: 0; /* to remove space of hidden text */
 }
 %x-mailto-text-replace::before {
     display: inline;
     content: attr(data-user) "@" attr(data-domain);
-    font-size: initial;
-    visibility: visible;
+    font-size: initial; /* to restore font size */
+    visibility: visible; /* to restore visibility */
 }

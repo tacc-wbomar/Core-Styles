@@ -9,3 +9,7 @@ Replaces the display text of an `<a href="mailto:…" data-user="bob" data-domai
 > **⚠️ Important**
 >
 > To make sure link is discernable if CSS does not load, make it obvious to users what part of an e-mail is inaccurate, e.g. `__REMOVE_THIS__`.
+
+**Known Bugs**
+
+1. The underline (on hover) is not offset from generated text (because the font-size of actual text is zero).
