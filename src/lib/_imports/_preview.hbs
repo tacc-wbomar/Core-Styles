@@ -1,4 +1,8 @@
-{{! styles: base (the current component) }}
+{{! To ensure HTML comments that follow are within the head, not before it }}
+{{! FAQ: Any <link>s, and comments AFTER the first, are migrated to <head> }}
+<link rel='author' href='https://github.com/TACC/Core-Styles' />
+
+<!-- styles: base (the current component) -->
 {{#unless styles.shouldSkipBase}}
   <link
     rel='stylesheet'
@@ -6,8 +10,9 @@
   />
 {{/unless}}
 
-{{! styles: global (for every component) }}
-{{! (manually configured) }}
+
+<!-- styles: global (for every component) -->
+<!-- (manually configured) -->
 {{#each styles.external.global}}
   <link rel='stylesheet' href='{{this}}' />
 {{/each}}
@@ -15,8 +20,8 @@
   <link rel='stylesheet' href='{{path this}}' />
 {{/each}}
 
-{{! styles: local (for current component) }}
-{{! (automatically found) }}
+<!-- styles: local (for current component) -->
+<!-- (automatically found) -->
 {{#each _target.resources.assets}}
   {{#if isCSS}}
     <link
@@ -25,7 +30,7 @@
     />
   {{/if}}
 {{/each}}
-{{! (manually configured) }}
+<!-- (manually configured) -->
 {{#each styles.external.local}}
   <link rel='stylesheet' href='{{this}}' />
 {{/each}}
@@ -36,8 +41,8 @@
 {{! styles: specific to pattern library (so pattern library can override any) }}
 {{> @css }}
 
-{{! scripts: local (for current component) }}
-{{! (automatically found) }}
+<!-- scripts: local (for current component) -->
+<!-- (automatically found) -->
 {{#each _target.resources.assets}}
   {{#if isJS}}
     <script
