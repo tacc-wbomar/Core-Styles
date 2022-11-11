@@ -129,24 +129,18 @@ buildStylesheets(
 
 Code configuration happens in repos that use these styles.
 
-### Previewing the Styles
+### Previewing Built Demo
 
-1. [Install][npm-install] the dependencies:
-
-   ```bash
-   npm ci
-   ```
-
-2. Build stylesheets and demo:
+1. Build stylesheets and build static demo:
 
    ```bash
    npm run build
    ```
 
-3. Run the pattern library:
+2. Run the static demo:
 
    ```bash
-   npm start
+   npx serve demo
    ```
 
    <sup>Live reloads on demo file change, but **not** source file change.</sup>
@@ -154,7 +148,23 @@ Code configuration happens in repos that use these styles.
 4. Open the web interface.
    The build command will output the URL (and may even open it for you).
 
-[npm-install]: https://docs.npmjs.com/cli/v8/commands/npm-ci
+### Previewing During Development
+
+Run each of these commands in its own terminal.
+
+1. Build stylesheets and re-build on change:
+
+   ```bash
+   npm run build:watch
+   ```
+
+2. Run the auto-refresh demo:
+
+   ```bash
+   npm start
+   ```
+
+<sup>Source file change causes **two** demo refreshes. The **second** reload will show changes.</sup>
 
 ### Source Files
 
