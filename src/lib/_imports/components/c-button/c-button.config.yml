@@ -1,11 +1,11 @@
 context:
-  showLinkTag: true
   supports:
     states: true
     icons: true
     width: true
     size: true
     size-small: true
+    link-tag: true
 variants:
   # type
   - name: default
@@ -28,10 +28,10 @@ variants:
   - name: as-link
     notes: For a button that resembles a link
     context:
-      showLinkTag: false
       supports:
         width: false
         size: false
+        link-tag: false
   # state
   - name: is-busy
     notes: For a button whose being clicked started an incomplete process (should have `disabled` attribute)
