@@ -1,5 +1,4 @@
 preview: '@preview.cms'
-label: Table Elements
 context:
   cols:
     - ID
@@ -8,8 +7,7 @@ context:
     - Time
     - Actions
   rows:
-    -
-      id: n234as
+    - id: n234as
       nameLink: apple-sauce
       size: 0.5 KB
       time: 12/01/2019 11:04:19
@@ -18,8 +16,7 @@ context:
           text: View Details
         - isButton: true
           text: Delete
-    -
-      id: 56l810
+    - id: 56l810
       nameLink: milk-shake-032
       size: 300.0 KB
       time: 03/22/2021 05:23:01
@@ -28,8 +25,7 @@ context:
           text: View Details
         - isButton: true
           text: Delete
-    -
-      id: 3r56xc
+    - id: 3r56xc
       nameLink: white-candy-5
       size: 1.5 MB
       time: 12/01/2019 11:04:19
