@@ -23,7 +23,9 @@
     "build:css": "bin/build.js",
     "build:demo": "fractal build",
     "test": "bin/test.js && echo \"Test output at 'dist/_tests' (compare to test input)\"",
-    "prepublishOnly": "npm run build # && npm test && npm run lint"
+    "build:watch": "npm run build:css && touch src/lib/_imports/fractal.server.refresh.css",
+    "prepublishOnly": "npm run build # && npm test && npm run lint",
+    "watch": "npm-watch"
   },
   "engines": {
     "node": ">=15.x",
@@ -43,7 +45,8 @@
     "postcss-extend": "^1.0.5",
     "postcss-import": "^15.0.0",
     "postcss-preset-env": "^7.8.2",
-    "postcss-replace": "^2.0.0"
+    "postcss-replace": "^2.0.0",
+    "npm-watch": "^0.11.0"
   },
   "// peerDependencies": {
     "commander": "To create CLI",
@@ -57,10 +60,18 @@
     "postcss-import": "To import CSS files at build-time",
     "postcss-extend": "To extend CSS rule sets at build-time",
     "postcss-preset-env": "To use future CSS features now",
-    "postcss-replace": "To edit relative paths to fonts"
+    "postcss-replace": "To edit relative paths to fonts",
+    "npm-watch": "To live build on source file change"
   },
   "devDependencies": {
     "@frctl/fractal": "^1.5.13",
     "@frctl/mandelbrot": "^1.10.1"
+  },
+  "watch": {
+    "build:watch": {
+      "patterns": "src/**/*",
+      "extensions": "css",
+      "ignore": "fractal.server.refresh.css"
+    }
   }
 }
