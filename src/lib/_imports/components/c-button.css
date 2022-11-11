@@ -1,4 +1,5 @@
 @import url("../tools/x-truncate.css");
+@import url('../tools/x-link.css');
 
 @custom-selector :--disabled
   :disabled,
@@ -218,14 +219,19 @@ a.c-button {
 /* Modifiers: Types: As Link */
 
 .c-button--as-link {
-  color: var(--global-color-accent--normal);
+  @extend .x-link;
 
   background: unset;
   border: unset;
   padding-inline: unset;
+
+  font-size: inherit;
 }
-.c-button--as-link:not(:--disabled):hover {
-  text-decoration: underline;
+.c-button--as-link:where(:not(:--disabled)):hover {
+  @extend .x-link--hover;
+}
+.c-button--as-link:active {
+  @extend .x-link--active;
 }
 
 /* Modifiers: Types: Is Busy */

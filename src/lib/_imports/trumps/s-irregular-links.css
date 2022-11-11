@@ -7,3 +7,13 @@
 .s-irregular-links a:active {
   text-decoration-style: dotted;
 }
+
+.s-irregular-links .c-button--as-link {
+  text-decoration-line: underline;
+}
+.s-irregular-links .c-button--as-link:hover {
+  text-decoration-style: dashed;
+}
+.s-irregular-links .c-button--as-link:active {
+  text-decoration-style: dotted;
+}
