@@ -1,4 +1,5 @@
 context:
+  showLinkTag: true
   supports:
     states: true
     icons: true
@@ -27,6 +28,7 @@ variants:
   - name: as-link
     notes: For a button that resembles a link
     context:
+      showLinkTag: false
       supports:
         width: false
         size: false
