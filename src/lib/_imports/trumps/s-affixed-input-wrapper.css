@@ -20,11 +20,21 @@
     "help help"
     "error error";
 }
-.s-affixed-input-wrapper:has(.s-affixed-input-wrapper__prefix) {
-  --input-row: "prefix input";
+@supports selector(:has(table)) {
+  .s-affixed-input-wrapper:has(.s-affixed-input-wrapper__prefix) {
+    --input-row: "prefix input";
+  }
+  .s-affixed-input-wrapper:has(.s-affixed-input-wrapper__suffix) {
+    --input-row: "input suffix";
+  }
 }
-.s-affixed-input-wrapper:has(.s-affixed-input-wrapper__suffix) {
-  --input-row: "input suffix";
+@supports not selector(:has(table)) {
+  .s-affixed-input-wrapper--prefix {
+    --input-row: "prefix input";
+  }
+  .s-affixed-input-wrapper--suffix {
+    --input-row: "input suffix";
+  }
 }
 .s-affixed-input-wrapper label { grid-area: label; }
 .s-affixed-input-wrapper input { grid-area: input; }
