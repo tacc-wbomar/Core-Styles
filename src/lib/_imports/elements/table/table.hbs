@@ -1,26 +1,25 @@
-<link rel="stylesheet" href="{{path '/elements/links.css'}}" />
-<link rel="stylesheet" href="{{path '/components/c-button.css'}}" />
-
-<table>
+<table {{#if data.has-nested-table }}class="has-nested-table"{{/if}}>
   <thead>
     <tr>
-      {{#each cols}}<th>{{ this }}</th>{{/each}}
+      {{#each data.cols}}<th>{{ this }}</th>{{/each}}
     </tr>
   </thead>
   <tbody>
-  {{#each rows}}
+  {{#each data.rows}}
     <tr>
-      {{#if id }}<th>{{ id }}</th>{{/if}}
-      {{#if nameLink }}<th><a href="#">{{ nameLink }}</a></th>{{/if}}
+      {{#if id}}<th>{{ id }}</th>{{/if}}
       {{#if name}}<th>{{ name }}</th>{{/if}}
-      {{#if size}}<td>{{ size }}</td>{{/if}}
+      {{#if name-link}}<th><a href="#">{{ name-link }}</a></th>{{/if}}
+      {{#if custom-1}}<td>{{{ custom-1 }}}</td>{{/if}}
+      {{#if custom-2}}<td>{{{ custom-2 }}}</td>{{/if}}
+      {{#if custom-3}}<td>{{{ custom-3 }}}</td>{{/if}}
       {{#if time}}<td><time>{{ time }}</time></td>{{/if}}
       {{#if acts}}
       <td>
         <ul>
         {{#each acts}}
-          {{#if isLink }}<li><a href="#">{{ text }}</a></li>{{/if}}
-          {{#if isButton}}<li>
+          {{#if is-link }}<li><a href="#">{{ text }}</a></li>{{/if}}
+          {{#if is-button}}<li>
             <button href="#" class="c-button c-button--as-link">
               {{ text }}
             </button>
@@ -28,7 +27,12 @@
         {{/each}}
         </ul>
       </td>
-    {{/if}}
+      {{/if}}
+      {{#if table}}
+      <td class="has-table">
+        {{> @table data=table }}
+      </td>
+      {{/if}}
     </tr>
   {{/each}}
   </tbody>

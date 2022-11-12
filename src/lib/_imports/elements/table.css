@@ -1,4 +1,10 @@
+@import url('../tools/x-truncate.css');
+
+/* Basic */
+
 table {
+  --thead-height: 33px; /* manually calculated *//* used for "Nested" table */
+
   border-collapse: collapse; /* copied from Bootstrap 4.0.0 */
 
   font-family: var(--global-font-family--sans--portal);
@@ -16,10 +22,16 @@ tr:nth-child(even) {
 th,
 td {
   vertical-align: top;
-  padding-block: 7.5px;
-  padding-inline: 15px;
+  padding-block: 8px;
+  padding-inline: 16px;
 
   color: var(--global-color-primary--dark);
+
+  /* To ensure <thead> height matches between browsers */
+  /* FAQ: A line-height > font-size accomodates ascender & descender letters */
+  /* HACK: Units for line-height are discouraged */
+  /* NOTE: Firefox and Chrome give different height if unit-less line-height */
+  line-height: var(--global-font-size--medium);
 }
 
 th {
@@ -27,10 +39,10 @@ th {
 
   text-align: inherit; /* copied from Bootstrap 4.0.0 */
 }
-thead th {
+thead > tr > th {
   font-weight: var(--bold);
 }
-tbody th {
+tbody > tr > th {
   font-weight: var(--normal);
 }
 
@@ -50,4 +62,49 @@ td button {
 caption {
   font-size: var(--global-font-size--small);
   text-align: unset; /* undo Bootstrap _reboot.css */
+}
+
+
+
+/* Nested */
+
+table.has-nested-table :is(td, th) {
+  white-space: nowrap;
+}
+
+td:has(table) {
+  padding: 0;
+}
+/* https://caniuse.com/css-has */
+td.has-table {
+  padding: 0;
+}
+
+/* To replace parent table columns above with nested table columns */
+/* FAQ: Pulls nested table up by the height of the parent table head */
+tr table {
+  --offset: calc(-1 * var(--thead-height));
+
+  transform: translateY(var(--offset));
+  margin-bottom: var(--offset);
+}
+/* FAQ: Hides any parent table head underneath nested table head */
+tr:first-of-type thead {
+  background: var(--global-color-background--app);
+}
+/* FAQ: Hides all successive (thus redundant) nested table heads */
+tr:not(:first-of-type) thead {
+  visibility: hidden;
+}
+
+/* To reduce inline padding
+   at start and end of nested table
+   unless at start or end of parent table */
+td:not(:first-child) th:first-child,
+td:not(:first-child) td:first-child {
+  padding-inline-start: 8px;
+}
+td:not(:last-child) th:last-child,
+td:not(:last-child) td:last-child {
+  padding-inline-end: 8px;
 }
