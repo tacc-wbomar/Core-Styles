@@ -7,12 +7,16 @@ table.has-nested-table :is(td, th) {
   white-space: nowrap;
 }
 
-td:has(table) {
-  padding: 0;
-}
 /* https://caniuse.com/css-has */
-td.has-table {
-  padding: 0;
+@supports selector(:has(table)) {
+  td:has(table) {
+    padding: 0;
+  }
+}
+@supports not selector(:has(table)) {
+  td.has-table {
+    padding: 0;
+  }
 }
 
 tr table {
@@ -22,7 +26,7 @@ tr table {
 /* To replace parent table columns above with nested table columns */
 /* FAQ: Pulls nested table up by the height of the parent table head */
 tr table {
-  --offset: calc(-1 * var(--thead-height));
+  --offset: calc(-1 * 33px); /* WARNING: manually calculated */
 
   transform: translateY(var(--offset));
   margin-bottom: var(--offset);

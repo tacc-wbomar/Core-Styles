@@ -1,33 +1,27 @@
-table {
-  --thead-height: 33px; /* manually calculated *//* used for "Nested" table */
+@import url("../tools/media-queries.css");
 
-  border-collapse: collapse; /* copied from Bootstrap 4.0.0 */
+table {
+  border-collapse: separate; /* overwrite Bootstrap */
+  border-spacing: 0;
 
   font-family: var(--global-font-family--sans--portal);
   font-size: var(--global-font-size--small);
 }
 
-thead tr,
-tr:not(:last-of-type) {
+thead tr :is(td, th),
+tr:not(:last-of-type) > :is(td, th) {
   border-bottom: var(--global-border--normal);
 }
 tr:nth-child(even) {
   background: var(--global-color-primary--x-light);
 }
 
-th,
-td {
+:is(td, th) {
   vertical-align: top;
   padding-block: 8px;
   padding-inline: 16px;
 
   color: var(--global-color-primary--dark);
-
-  /* To ensure <thead> height matches between browsers */
-  /* FAQ: A line-height > font-size accomodates ascender & descender letters */
-  /* HACK: Units for line-height are discouraged */
-  /* NOTE: Firefox and Chrome give different height if unit-less line-height */
-  line-height: var(--global-font-size--medium);
 }
 
 th {
@@ -54,8 +48,49 @@ td ul {
   margin-block: 0;
 }
 td li:not(:last-of-type) {
-  margin-bottom: 0.25em;
+  margin-bottom: 0.5em;
 }
 td button {
   font-size: inherit;
+}
+
+
+
+/* Wide */
+
+@media (--narrow-and-above) {
+  :is(td, th) {
+    /* To ensure <thead> height matches between browsers */
+    /* FAQ: A line-height > font-size accomodates ascender & descender letters */
+    /* HACK: Units for line-height are discouraged */
+    /* NOTE: Firefox and Chrome give different height if unit-less line-height */
+    line-height: var(--global-font-size--medium);
+  }
+}
+
+
+
+/* Narrow */
+
+@media (--narrow-and-below) {
+  table {
+    width: 100%;
+  }
+
+  /* To pin first column to left of table even during scroll */
+  :is(th, td):first-child {
+    position: sticky;
+    left: 0;
+
+    border-right: var(--global-border--normal);
+  }
+
+  /* To hide any sibling column cell underneath any pinned column cell */
+  /* NOTE: Nested table pinned column can overlap parent table pinned column */
+  tr:nth-child(odd) :is(th, td) {
+    background: var(--global-color-background--app);
+  }
+  tr:nth-child(even) :is(th, td) {
+    background: var(--global-color-primary--x-light);
+  }
 }

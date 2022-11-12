@@ -4,7 +4,6 @@ context:
     - /elements/links.css
     - /components/c-button.css
   data:
-    has-nested-table: true
     cols:
       - ID
       - Name
@@ -41,11 +40,14 @@ context:
             text: Delete
 variants:
   - name: default
+    hidden: true
+  - name: basic
     label: Basic
   - name: nested
     notes: A [table](/components/detail/table) nested inside a [table](/components/detail/table).
     context:
       data:
+        has-nested-table: true
         cols:
           - Title
           - Principal Investigator
