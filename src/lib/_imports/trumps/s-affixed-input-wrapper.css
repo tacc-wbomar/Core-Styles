@@ -20,7 +20,7 @@
     "help help"
     "error error";
 }
-@supports selector(:has(table)) {
+@supports selector(:has(*)) {
   .s-affixed-input-wrapper:has(.s-affixed-input-wrapper__prefix) {
     --input-row: "prefix input";
   }
@@ -28,7 +28,7 @@
     --input-row: "input suffix";
   }
 }
-@supports not selector(:has(table)) {
+@supports not selector(:has(*)) {
   .s-affixed-input-wrapper--prefix {
     --input-row: "prefix input";
   }
