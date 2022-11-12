@@ -1,0 +1,61 @@
+table {
+  --thead-height: 33px; /* manually calculated *//* used for "Nested" table */
+
+  border-collapse: collapse; /* copied from Bootstrap 4.0.0 */
+
+  font-family: var(--global-font-family--sans--portal);
+  font-size: var(--global-font-size--small);
+}
+
+thead tr,
+tr:not(:last-of-type) {
+  border-bottom: var(--global-border--normal);
+}
+tr:nth-child(even) {
+  background: var(--global-color-primary--x-light);
+}
+
+th,
+td {
+  vertical-align: top;
+  padding-block: 8px;
+  padding-inline: 16px;
+
+  color: var(--global-color-primary--dark);
+
+  /* To ensure <thead> height matches between browsers */
+  /* FAQ: A line-height > font-size accomodates ascender & descender letters */
+  /* HACK: Units for line-height are discouraged */
+  /* NOTE: Firefox and Chrome give different height if unit-less line-height */
+  line-height: var(--global-font-size--medium);
+}
+
+th {
+  color: var(--global-color-primary--x-dark);
+
+  text-align: inherit; /* copied from Bootstrap 4.0.0 */
+}
+thead > tr > th {
+  font-weight: var(--bold);
+}
+tbody > tr > th {
+  font-weight: var(--normal);
+}
+
+caption {
+  font-size: var(--global-font-size--small);
+  text-align: unset; /* undo Bootstrap _reboot.css */
+}
+
+/* To override browser */
+td ul {
+  list-style: none;
+  padding-inline-start: 0;
+  margin-block: 0;
+}
+td li:not(:last-of-type) {
+  margin-bottom: 0.25em;
+}
+td button {
+  font-size: inherit;
+}

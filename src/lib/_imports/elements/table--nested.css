@@ -1,0 +1,49 @@
+@import url('../tools/x-truncate.css');
+
+table.has-nested-table {
+  width: 100%;
+}
+table.has-nested-table :is(td, th) {
+  white-space: nowrap;
+}
+
+td:has(table) {
+  padding: 0;
+}
+/* https://caniuse.com/css-has */
+td.has-table {
+  padding: 0;
+}
+
+tr table {
+  width: 100%;
+}
+
+/* To replace parent table columns above with nested table columns */
+/* FAQ: Pulls nested table up by the height of the parent table head */
+tr table {
+  --offset: calc(-1 * var(--thead-height));
+
+  transform: translateY(var(--offset));
+  margin-bottom: var(--offset);
+}
+/* FAQ: Hides any parent table head underneath nested table head */
+tr:first-of-type thead {
+  background: var(--global-color-background--app);
+}
+/* FAQ: Hides all successive (thus redundant) nested table heads */
+tr:not(:first-of-type) thead {
+  visibility: hidden;
+}
+
+/* To reduce inline padding
+   at start and end of nested table
+   unless at start or end of parent table */
+td:not(:first-child) th:first-child,
+td:not(:first-child) td:first-child {
+  padding-inline-start: 8px;
+}
+td:not(:last-child) th:last-child,
+td:not(:last-child) td:last-child {
+  padding-inline-end: 8px;
+}
