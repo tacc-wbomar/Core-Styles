@@ -34,6 +34,22 @@ tr:nth-child(even) :is(th, td) {
 
   color: var(--global-color-primary--dark);
 }
+/* To ensure <thead> height matches between browsers */
+:is(td, th) {
+  /* FAQ: Line-height > font-size accomodates ascender & descender letters */
+  /* HACK: Units for line-height are discouraged */
+  /* NOTE: If line-height unitless, Firefox & Chrome give different height */
+  /* IMPORTANT: More than for consistency; `table--nested.css` requires this */
+  line-height: var(--global-font-size--medium);
+}
+/* To pin first column to left of table even during scroll */
+/* WARNING: Design has not reviewed this (but not designed responsive table) */
+:is(th, td):first-child {
+  position: sticky;
+  left: 0;
+
+  border-right: var(--global-border-width--normal) solid var(--global-color-primary--light);
+}
 
 th {
   color: var(--global-color-primary--x-dark);
@@ -65,32 +81,4 @@ td li:not(:last-of-type) {
 td button {
   /* To match font-size of table cell text and links */
   font-size: inherit;
-}
-
-
-
-/* Wide */
-
-@media (--narrow-and-above) {
-  :is(td, th) {
-    /* To ensure <thead> height matches between browsers */
-    /* FAQ: Line-height > font-size accomodates ascender & descender letters */
-    /* HACK: Units for line-height are discouraged */
-    /* NOTE: If line-height unitless, Firefox & Chrome give different height */
-    line-height: var(--global-font-size--medium);
-  }
-}
-
-
-
-/* Narrow */
-
-@media (--narrow-and-below) {
-  /* To pin first column to left of table even during scroll */
-  :is(th, td):first-child {
-    position: sticky;
-    left: 0;
-
-    border-right: var(--global-border--normal);
-  }
 }
