@@ -1,4 +1,4 @@
-@import url("../tools/media-queries.css");
+@import url("../tools/x-truncate.css");
 
 table {
   /* To prevent borders from being hidden */
@@ -68,6 +68,10 @@ caption {
   text-align: unset; /* undo Bootstrap _reboot.css */
 }
 
+
+
+/* Cell Content */
+
 /* To override browser */
 td ul {
   list-style: none;
@@ -78,7 +82,21 @@ td li:not(:last-of-type) {
   /* To match line-height of other cells, but still allow space between items */
   margin-bottom: 0.5em;
 }
+
+/* To override browser */
 td button {
   /* To match font-size of table cell text and links */
   font-size: inherit;
+}
+
+/* To override `site.css` or browser */
+table p {
+  margin-top: 0;
+}
+table p:last-child {
+  margin-bottom: 0;
+}
+
+table p {
+  @extend %x-truncate--many-lines;
 }
