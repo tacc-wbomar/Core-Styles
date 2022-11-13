@@ -4,11 +4,43 @@
   table:has(table) { width: 100%; }
   table:has(table) :is(td, th) { white-space: nowrap; }
 
+  /* To move even row background to nested table only */
+  table:has(table) tr:nth-child(even) {
+    background: unset;
+  }
+  td:has(table) tr:nth-child(even) {
+    background: var(--global-color-primary--x-light);
+  }
+  @media (--narrow-and-below) {
+    table:has(table) tr:nth-child(even) :is(th, td) {
+      background: var(--global-color-background--app);
+    }
+    td:has(table) tr:nth-child(even) :is(th, td) {
+      background: var(--global-color-primary--x-light);
+    }
+  }
+
   td:has(table) { padding: 0; }
 }
 @supports not selector(:has(table)) {
   table.has-table { width: 100%; }
   table.has-table :is(td, th) { white-space: nowrap; }
+
+  /* To move even row background to nested table only */
+  table.has-table tr:nth-child(even) {
+    background: unset;
+  }
+  td.has-table tr:nth-child(even) {
+    background: var(--global-color-primary--x-light);
+  }
+  @media (--narrow-and-below) {
+    table.has-table tr:nth-child(even) :is(th, td) {
+      background: var(--global-color-background--app);
+    }
+    td.has-table tr:nth-child(even) :is(th, td) {
+      background: var(--global-color-primary--x-light);
+    }
+  }
 
   td.has-table { padding: 0; }
 }
