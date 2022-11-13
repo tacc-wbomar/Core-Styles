@@ -11,26 +11,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-* docs(components): tup-354 bootstrap.modal; assets, loremipsum by @wesleyboar (#51)
-* docs(components): tup-356 bootstrap.form by @wesleyboar (#52)
-* docs: tup-356 bootstrap preview & easy subdir var by @wesleyboar (#53)
-* docs(components): tup-356 bootstrap.container by @wesleyboar (#54)
-* feat: tup-355 links (redo #57) by @wesleyboar (#58)
-* feat(elements): fp-1828 move apcd styles to core by @wesleyboar (#56) (#62)
-* feat(c-button): do not show <a> tag button for `--as-link` by @wesleyboar (#59)
-* feat: x-link, used by c-button--as-link & links by @wesleyboar (#60)
-* feat: npm watch synced with live-refresh demo by @wesleyboar (#61)
+* docs(components): tup-354 bootstrap.modal; assets, loremipsum (#51)
+* docs(components): tup-356 bootstrap.form (#52)
+* docs: tup-356 bootstrap preview & easy subdir var (#53)
+* docs(components): tup-356 bootstrap.container (#54)
+* feat: tup-355 links (redo #57) (#58)
+* feat(elements): fp-1828 move apcd styles to core (#56) (#62)
+* feat(c-button): do not show <a> tag button for `--as-link` (#59)
+* feat: x-link, used by c-button--as-link & links (#60)
+* feat: npm watch synced with live-refresh demo (#61)
 
 ### Changed
 
-* feat: tup-274 peerDeps not deps by @wesleyboar (#46)
-* chore: tup-293 dependency updates by @wesleyboar (#50)
-* fix(trumps, and unused): complex subdir var made easy by @wesleyboar (#55)
+* feat: tup-274 peerDeps not deps (#46)
+* chore: tup-293 dependency updates (#50)
+* fix(trumps, and unused): complex subdir var made easy (#55)
 
 ### Fixed
 
-* fix(c-button): fp-1791 auto width by default by @wesleyboar (#49)
-* fix: fp-1828 s-affixed-input-wrapper fallback by @wesleyboar (#62)
+* fix(c-button): fp-1791 auto width by default (#49)
+* fix: fp-1828 s-affixed-input-wrapper fallback (#62)
 
 ## [0.9.0] - 2022-10-26: Fonts, C-Message, Generic CMS Form, A11y Color Tweak
 
