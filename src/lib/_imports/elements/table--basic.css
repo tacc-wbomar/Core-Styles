@@ -12,7 +12,14 @@ thead tr :is(td, th),
 tr:not(:last-of-type) > :is(td, th) {
   border-bottom: var(--global-border--normal);
 }
-tr:nth-child(even) {
+
+/* To alternate table row colors (by coloring cells, not rows) */
+/* FAQ: Colored cells hide sibling column cells scrolled underneath */
+/* NOTE: On narrow screens, first column is pinned and others scroll under it */
+tr:nth-child(odd) :is(th, td) {
+  background: var(--global-color-background--app);
+}
+tr:nth-child(even) :is(th, td) {
   background: var(--global-color-primary--x-light);
 }
 
@@ -83,14 +90,5 @@ td button {
     left: 0;
 
     border-right: var(--global-border--normal);
-  }
-
-  /* To hide any sibling column cell underneath any pinned column cell */
-  /* NOTE: Nested table pinned column can overlap parent table pinned column */
-  tr:nth-child(odd) :is(th, td) {
-    background: var(--global-color-background--app);
-  }
-  tr:nth-child(even) :is(th, td) {
-    background: var(--global-color-primary--x-light);
   }
 }
