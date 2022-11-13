@@ -1,22 +1,16 @@
 @import url('../tools/x-truncate.css');
 
-table.has-nested-table {
-  width: 100%;
-}
-table.has-nested-table :is(td, th) {
-  white-space: nowrap;
-}
-
-/* https://caniuse.com/css-has */
 @supports selector(:has(table)) {
-  td:has(table) {
-    padding: 0;
-  }
+  table:has(table) { width: 100%; }
+  table:has(table) :is(td, th) { white-space: nowrap; }
+
+  td:has(table) { padding: 0; }
 }
 @supports not selector(:has(table)) {
-  td.has-table {
-    padding: 0;
-  }
+  table.has-table { width: 100%; }
+  table.has-table :is(td, th) { white-space: nowrap; }
+
+  td.has-table { padding: 0; }
 }
 
 tr table {

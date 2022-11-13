@@ -44,10 +44,9 @@ variants:
   - name: basic
     label: Basic
   - name: nested
-    notes: A [table](/components/detail/table) nested inside a [table](/components/detail/table).
     context:
       data:
-        has-nested-table: true
+        has-table: true
         cols:
           - Title
           - Principal Investigator
