@@ -7,6 +7,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [0.10.0] - 2022-11-12: New Docs, Patterns, Features; Major Dependency Bumps
+
+### Added
+
+* docs(components): tup-354 bootstrap.modal; assets, loremipsum (#51)
+* docs(components): tup-356 bootstrap.form (#52)
+* docs: tup-356 bootstrap preview & easy subdir var (#53)
+* docs(components): tup-356 bootstrap.container (#54)
+* feat: tup-355 links (redo #57) (#58)
+* feat(elements): fp-1828 move apcd styles to core (#56) (#62)
+* feat(c-button): do not show <a> tag button for `--as-link` (#59)
+* feat: x-link, used by c-button--as-link & links (#60)
+* feat: npm watch synced with live-refresh demo (#61)
+
+### Changed
+
+* feat: tup-274 peerDeps not deps (#46)
+* chore: tup-293 dependency updates (#50)
+* fix(trumps, and unused): complex subdir var made easy (#55)
+
+### Fixed
+
+* fix(c-button): fp-1791 auto width by default (#49)
+* fix: fp-1828 s-affixed-input-wrapper fallback (#62)
+
 ## [0.9.0] - 2022-10-26: Fonts, C-Message, Generic CMS Form, A11y Color Tweak
 
 ### Added
@@ -284,7 +309,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v0.9.0...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v0.10.0...HEAD
+[0.10.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.10.0
 [0.9.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.9.0
 [0.8.7]: https://github.com/TACC/Core-Styles/releases/tag/v0.8.7
 [0.8.6]: https://github.com/TACC/Core-Styles/releases/tag/v0.8.6
