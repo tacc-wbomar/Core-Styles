@@ -1,7 +1,7 @@
 @import url('../tools/x-truncate.css');
 
 @supports selector(:has(table)) {
-  table:has(table) { width: 100%; }
+  /* To ensure matching row height of nested table and parent table */
   table:has(table) :is(td, th) { white-space: nowrap; }
 
   /* To move even row background to nested table only */
@@ -12,10 +12,11 @@
     background: var(--global-color-primary--x-light);
   }
 
+  /* To align nested table cells with parent table cells */
   td:has(table) { padding: 0; }
 }
 @supports not selector(:has(table)) {
-  table.has-table { width: 100%; }
+  /* To ensure matching row height of nested table and parent table */
   table.has-table :is(td, th) { white-space: nowrap; }
 
   /* To move even row background to nested table only */
@@ -26,6 +27,7 @@
     background: var(--global-color-primary--x-light);
   }
 
+  /* To align nested table cells with parent table cells */
   td.has-table { padding: 0; }
 }
 
