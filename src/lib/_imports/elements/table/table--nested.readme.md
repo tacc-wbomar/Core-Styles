@@ -1,6 +1,6 @@
 A [table](/components/detail/table) nested inside a [table](/components/detail/table).
 
-> **⚠️ Important**
+> **⚠️ Workaround**
 >
 > Nested tables require `.has-table` class on **both** parent table **and** containing cell.
 >
