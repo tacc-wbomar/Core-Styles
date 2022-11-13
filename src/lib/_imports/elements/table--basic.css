@@ -1,0 +1,102 @@
+@import url("../tools/x-truncate.css");
+
+table {
+  /* To prevent borders from being hidden */
+  /* NOTE: Specifically, the right border of pinned columns (narrow windows) */
+  border-collapse: separate; /* overwrite Bootstrap */
+  border-spacing: 0;
+
+  font-family: var(--global-font-family--sans--portal);
+  font-size: var(--global-font-size--small);
+}
+
+/* To add border to bottom of all rows */
+/* FAQ: Added to cell, not row, because `border-collapse: separate` */
+thead tr :is(td, th),
+tr:not(:last-of-type) > :is(td, th) {
+  border-bottom: var(--global-border--normal);
+}
+
+/* To alternate table row colors (by coloring cells, not rows) */
+/* FAQ: Colored cells hide sibling column cells scrolled underneath */
+/* NOTE: On narrow screens, first column is pinned and others scroll under it */
+tr:nth-child(odd) :is(th, td) {
+  background: var(--global-color-background--app);
+}
+tr:nth-child(even) :is(th, td) {
+  background: var(--global-color-primary--x-light);
+}
+
+:is(td, th) {
+  vertical-align: top;
+  padding-block: 8px;
+  padding-inline: 16px;
+
+  color: var(--global-color-primary--dark);
+}
+/* To ensure <thead> height matches between browsers */
+:is(td, th) {
+  /* FAQ: Line-height > font-size accomodates ascender & descender letters */
+  /* HACK: Units for line-height are discouraged */
+  /* NOTE: If line-height unitless, Firefox & Chrome give different height */
+  /* IMPORTANT: More than for consistency; `table--nested.css` requires this */
+  line-height: var(--global-font-size--medium);
+}
+/* To pin first column to left of table even during scroll */
+/* WARNING: Design has not reviewed this (but not designed responsive table) */
+:is(th, td):first-child {
+  position: sticky;
+  left: 0;
+
+  border-right: var(--global-border-width--normal) solid var(--global-color-primary--light);
+}
+
+th {
+  color: var(--global-color-primary--x-dark);
+
+  text-align: inherit; /* copied from Bootstrap 4.0.0 */
+}
+thead > tr > th {
+  font-weight: var(--bold);
+}
+tbody > tr > th {
+  font-weight: var(--normal);
+}
+
+caption {
+  font-size: var(--global-font-size--small);
+  text-align: unset; /* undo Bootstrap _reboot.css */
+}
+
+
+
+/* Cell Content */
+
+/* To override browser */
+td ul {
+  list-style: none;
+  padding-inline-start: 0;
+  margin-block: 0;
+}
+td li:not(:last-of-type) {
+  /* To match line-height of other cells, but still allow space between items */
+  margin-bottom: 0.5em;
+}
+
+/* To override browser */
+td button {
+  /* To match font-size of table cell text and links */
+  font-size: inherit;
+}
+
+/* To override `site.css` or browser */
+table p {
+  margin-top: 0;
+}
+table p:last-child {
+  margin-bottom: 0;
+}
+
+table p {
+  @extend %x-truncate--many-lines;
+}

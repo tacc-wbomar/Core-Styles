@@ -1,0 +1,44 @@
+<table {{#if data.has-table }}class="has-table"{{/if}}>
+  <thead>
+    <tr>
+      {{#each data.cols}}<th>{{ this }}</th>{{/each}}
+    </tr>
+  </thead>
+  <tbody>
+  {{#each data.rows}}
+    <tr>
+      {{#if id}}<th>{{ id }}</th>{{/if}}
+      {{#if name}}<th>{{ name }}</th>{{/if}}
+      {{#if name-link}}<th><a href="#">{{ name-link }}</a></th>{{/if}}
+      {{#if paragraph}}
+      <td title="{{> @text-of-one-paragraph }}">
+        <p>{{> @text-of-one-paragraph }}</p>
+      </td>
+      {{/if}}
+      {{#if custom-1}}<td>{{{ custom-1 }}}</td>{{/if}}
+      {{#if custom-2}}<td>{{{ custom-2 }}}</td>{{/if}}
+      {{#if custom-3}}<td>{{{ custom-3 }}}</td>{{/if}}
+      {{#if time}}<td><time>{{ time }}</time></td>{{/if}}
+      {{#if acts}}
+      <td>
+        <ul>
+        {{#each acts}}
+          {{#if is-link }}<li><a href="#">{{ text }}</a></li>{{/if}}
+          {{#if is-button}}<li>
+            <button href="#" class="c-button c-button--as-link">
+              {{ text }}
+            </button>
+          </li>{{/if}}
+        {{/each}}
+        </ul>
+      </td>
+      {{/if}}
+      {{#if table}}
+      <td class="has-table">
+        {{> @table data=table }}
+      </td>
+      {{/if}}
+    </tr>
+  {{/each}}
+  </tbody>
+</table>
