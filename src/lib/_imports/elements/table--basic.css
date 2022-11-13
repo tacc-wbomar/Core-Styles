@@ -86,10 +86,6 @@ td button {
 /* Narrow */
 
 @media (--narrow-and-below) {
-  table {
-    width: 100%;
-  }
-
   /* To pin first column to left of table even during scroll */
   :is(th, td):first-child {
     position: sticky;

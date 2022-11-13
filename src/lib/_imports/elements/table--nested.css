@@ -31,10 +31,6 @@
   td.has-table { padding: 0; }
 }
 
-tr table {
-  width: 100%;
-}
-
 /* To replace parent table columns above with nested table columns */
 /* FAQ: Pulls nested table up by the height of the parent table head */
 tr table {
