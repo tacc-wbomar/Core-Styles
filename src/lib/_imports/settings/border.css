@@ -1,7 +1,7 @@
 /* SETTINGS: Border */
 
 /* Usage: `var(--global-border-width--normal)` */
-/* SEE: https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom-properties */
+/* SEE: https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
 
 :root {
     --global-border-width--normal: 1px;

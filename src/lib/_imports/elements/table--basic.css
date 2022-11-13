@@ -1,6 +1,8 @@
 @import url("../tools/media-queries.css");
 
 table {
+  /* To prevent borders from being hidden */
+  /* NOTE: Specifically, the right border of pinned columns (narrow windows) */
   border-collapse: separate; /* overwrite Bootstrap */
   border-spacing: 0;
 
@@ -8,6 +10,8 @@ table {
   font-size: var(--global-font-size--small);
 }
 
+/* To add border to bottom of all rows */
+/* FAQ: Added to cell, not row, because `border-collapse: separate` */
 thead tr :is(td, th),
 tr:not(:last-of-type) > :is(td, th) {
   border-bottom: var(--global-border--normal);
@@ -55,9 +59,11 @@ td ul {
   margin-block: 0;
 }
 td li:not(:last-of-type) {
+  /* To match line-height of other cells, but still allow space between items */
   margin-bottom: 0.5em;
 }
 td button {
+  /* To match font-size of table cell text and links */
   font-size: inherit;
 }
 
@@ -68,9 +74,9 @@ td button {
 @media (--narrow-and-above) {
   :is(td, th) {
     /* To ensure <thead> height matches between browsers */
-    /* FAQ: A line-height > font-size accomodates ascender & descender letters */
+    /* FAQ: Line-height > font-size accomodates ascender & descender letters */
     /* HACK: Units for line-height are discouraged */
-    /* NOTE: Firefox and Chrome give different height if unit-less line-height */
+    /* NOTE: If line-height unitless, Firefox & Chrome give different height */
     line-height: var(--global-font-size--medium);
   }
 }
