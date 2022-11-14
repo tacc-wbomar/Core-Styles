@@ -175,10 +175,10 @@ hr {
 /*
 Inline Text Semantics
 
-Elements that define the meaning, structure, or style of a word, line, or any arbitrary piece of text.
+Elements that define the meaning, structure, or style of a word, line, or any arbitrary piece of text. (The [<a>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) is styled in `../links.css`.)
 
 ```
-<a> <abbr> <b> <bdi> <bdo> <br> <cite> <code> <data> <dfn> <em> <i> <kbd> <mark> <q> <rb> <rp> <rt> <rtc> <ruby> <s> <samp> <small> <span> <strong> <sub> <sup> <time> <u> <var> <wbr>
+<abbr> <b> <bdi> <bdo> <br> <cite> <code> <data> <dfn> <em> <i> <kbd> <mark> <q> <rb> <rp> <rt> <rtc> <ruby> <s> <samp> <small> <span> <strong> <sub> <sup> <time> <u> <var> <wbr>
 ```
 
 Reference:
@@ -187,21 +187,6 @@ Reference:
 
 Styleguide Elements.InlineTextSemantics
 */
-
-/* Links */
-
-a {
-  color: var(--global-color-link-on-light--normal);
-  text-decoration-thickness: var(--global-border-width--normal);
-}
-a:hover {
-  text-decoration-line: underline;
-  text-decoration-style: dashed;
-}
-a:focus {
-  text-decoration-line: underline;
-  text-decoration-style: dotted;
-}
 
 /* Monospace */
 
