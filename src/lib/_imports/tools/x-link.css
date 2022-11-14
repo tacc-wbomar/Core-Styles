@@ -9,6 +9,8 @@
   text-decoration-thickness: var(--global-border-width--normal);
 }
 .x-link--hover {
+  color: var(--global-color-link-on-light--normal); /* overwrite Bootstrap */
+
   text-decoration-line: underline;
   text-decoration-style: solid;
 }
