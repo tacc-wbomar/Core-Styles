@@ -1,4 +1,4 @@
 label: Mailto Link Text Replacement
 context:
   supportStyles:
-    - /elements/links.css
+    - /assets/elements/links.css
