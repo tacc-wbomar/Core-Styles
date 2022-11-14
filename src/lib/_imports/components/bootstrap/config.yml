@@ -1,0 +1,10 @@
+preview: '@preview.bootstrap'
+variants:
+  - name: default
+    hidden: true
+  - name: container
+    status: ready
+  - name: modal
+  - name: form
+    label: (Portal) Form
+    status: prototype
