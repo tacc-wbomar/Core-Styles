@@ -1,8 +1,8 @@
 preview: '@preview.cms'
 context:
   supportStyles:
-    - /elements/links.css
-    - /components/c-button.css
+    - /assets/elements/links.css
+    - /assets/components/c-button.css
 variants:
   - name: default
     label: Basic

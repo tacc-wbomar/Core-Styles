@@ -32,11 +32,11 @@ fractal.components.set('default.context', {
   styles: {
     internal: {
       local: [
-        '/settings/border.css',
-        '/settings/color.css',
-        '/settings/font.css',
-        '/settings/max-width.css',
-        '/settings/space.css',
+        '/assets/settings/border.css',
+        '/assets/settings/color.css',
+        '/assets/settings/font.css',
+        '/assets/settings/max-width.css',
+        '/assets/settings/space.css',
       ],
     },
   },
@@ -45,6 +45,7 @@ fractal.components.set('default.context', {
 // Set website paths
 fractal.docs.set('path', __dirname + '/docs');
 fractal.web.set('static.path', __dirname + '/dist');
+fractal.web.set('static.mount', 'assets');
 fractal.web.set('builder.dest', __dirname + '/demo');
 
 // Customize theme

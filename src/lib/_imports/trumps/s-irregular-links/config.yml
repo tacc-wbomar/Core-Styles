@@ -1,8 +1,8 @@
 context:
   supportStyles:
-    - /elements/links.css
-    - /elements/links/docs.css
-    - /components/c-button.css
+    - /assets/elements/links.css
+    - /assets/elements/links/docs.css
+    - /assets/components/c-button.css
 label: Links (Irregular)
 variants:
   - name: default
