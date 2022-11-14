@@ -255,7 +255,7 @@ a.c-button {
   .c-button--as-link
 ) {
   width: auto;
-  --max-width: 100%;
+  --max-width: auto;
 }
 .c-button--width-short {
   width: var(--min-width);
