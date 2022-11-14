@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [0.11.0] - 2022-11-14: Table Pattern, Many Demo Fixes, Demo Build Dir Clarity
+
+### Added
+
+* feat(elements): fp-1878 table pattern (#64) (b3bc511)
+
+### Changed
+
+* docs: nest demo assets in `/assets` directory (#65)
+
+### Fixed
+
+* fix(bootstrap): broken paths in static build (47047a4)
+* fix: pattern demo repair suite (#66)
+
 ## [0.10.0] - 2022-11-12: New Docs, Patterns, Features; Major Dependency Bumps
 
 ### Added
@@ -309,7 +324,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v0.10.0...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v0.11.0...HEAD
+[0.11.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.11.0
 [0.10.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.10.0
 [0.9.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.9.0
 [0.8.7]: https://github.com/TACC/Core-Styles/releases/tag/v0.8.7
