@@ -9,10 +9,12 @@
   text-decoration-thickness: var(--global-border-width--normal);
 }
 .x-link--hover {
-  color: var(--global-color-link-on-light--normal); /* overwrite Bootstrap */
-
   text-decoration-line: underline;
   text-decoration-style: solid;
+
+  /* To overwrite Bootstrap (on Client) */
+  color: var(--global-color-link-on-light--normal);
+  text-decoration-thickness: var(--global-border-width--normal);
 }
 .x-link--active {
   text-decoration-line: underline;
