@@ -1,4 +1,4 @@
-A [table](/components/detail/table) nested inside a [table](/components/detail/table).
+A [table]({{path './table' }}) nested inside a [table]({{path './table' }}).
 
 > **⚠️ Workaround**
 >

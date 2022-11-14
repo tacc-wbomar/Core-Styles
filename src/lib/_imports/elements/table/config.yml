@@ -5,8 +5,7 @@ context:
     - /components/c-button.css
 variants:
   - name: default
-    hidden: true
-  - name: basic
+    label: Basic
     context:
       data:
         cols:
