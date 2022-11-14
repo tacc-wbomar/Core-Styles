@@ -5,6 +5,12 @@ variants:
   - name: container
     status: ready
   - name: modal
+    context:
+      supportStyles:
+        - /assets/components/c-button.css
   - name: form
     label: (Portal) Form
     status: prototype
+    context:
+      supportStyles:
+        - /assets/components/c-button.css

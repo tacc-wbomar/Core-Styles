@@ -21,12 +21,17 @@
   border-width: var(--global-border-width--normal);
   border-style: solid;
 
-  font-weight: 500;
-
   @extend %x-truncate--one-line;
+}
+.c-button:not(.c-button--as-link) {
+  font-weight: var(--medium);
 }
 a.c-button {
   text-decoration: none;
+  text-align: center;
+}
+a.c-button--is-busy {
+  cursor: default;
 }
 
 .c-button:not(:--disabled) {
@@ -79,7 +84,7 @@ a.c-button {
     var(--global-color-accent--dark);
 }
 
-.c-button--primary:focus:not(:active) {
+.c-button--primary:focus:not(:active, .c-button--is-busy) {
   color: var(--global-color-primary--xx-light);
   background-color: var(--global-color-accent--normal);
   border-color: var(--global-color-primary--xx-light);
@@ -118,7 +123,7 @@ a.c-button {
     var(--global-color-accent--dark);
 }
 
-.c-button--secondary:focus:not(:active) {
+.c-button--secondary:focus:not(:active, .c-button--is-busy) {
   color: var(--global-color-primary--xx-dark);
   background-color: var(--global-color-accent--weak);
   border-color: var(--global-color-primary--xx-dark);
@@ -156,7 +161,7 @@ a.c-button {
     var(--global-color-accent--dark);
 }
 
-.c-button--tertiary:focus:not(:active) {
+.c-button--tertiary:focus:not(:active, .c-button--is-busy) {
   color: var(--global-color-primary--xx-dark);
   background-color: var(--global-color-primary--light);
   border-color: var(--global-color-primary--xx-dark);
@@ -226,6 +231,7 @@ a.c-button {
   padding-inline: unset;
 
   font-size: inherit;
+  font-family: inherit;
 }
 .c-button--as-link:where(:not(:--disabled)):hover {
   @extend .x-link--hover;
@@ -255,7 +261,7 @@ a.c-button {
   .c-button--as-link
 ) {
   width: auto;
-  --max-width: 100%;
+  --max-width: auto;
 }
 .c-button--width-short {
   width: var(--min-width);
