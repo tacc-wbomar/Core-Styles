@@ -21,9 +21,10 @@
   border-width: var(--global-border-width--normal);
   border-style: solid;
 
-  font-weight: 500;
-
   @extend %x-truncate--one-line;
+}
+.c-button:not(.c-button--as-link) {
+  font-weight: var(--medium);
 }
 a.c-button {
   text-decoration: none;
