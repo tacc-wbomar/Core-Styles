@@ -1,19 +1,14 @@
-.s-irregular-links a {
-  text-decoration-line: underline;
-}
-.s-irregular-links a:hover {
-  text-decoration-style: dashed;
-}
-.s-irregular-links a:active {
-  text-decoration-style: dotted;
-}
+@import url('../tools/x-link.css');
 
+.s-irregular-links a,
 .s-irregular-links .c-button--as-link {
-  text-decoration-line: underline;
+  @extend .x-link--irregular;
 }
+.s-irregular-links a:hover,
 .s-irregular-links .c-button--as-link:hover {
-  text-decoration-style: dashed;
+  @extend .x-link--irregular--hover;
 }
+.s-irregular-links a:active,
 .s-irregular-links .c-button--as-link:active {
-  text-decoration-style: dotted;
+  @extend .x-link--irregular--active;
 }

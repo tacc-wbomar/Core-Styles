@@ -18,3 +18,19 @@
   text-decoration-line: underline;
   text-decoration-style: dotted;
 }
+
+.x-link--irregular {
+  @extend .x-link;
+
+  text-decoration-line: underline;
+}
+.x-link--irregular--hover {
+  @extend .x-link--hover;
+
+  text-decoration-style: dashed;
+}
+.x-link--irregular--active {
+  @extend .x-link--active;
+
+  text-decoration-style: dotted;
+}
