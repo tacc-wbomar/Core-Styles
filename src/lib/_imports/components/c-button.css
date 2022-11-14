@@ -27,6 +27,7 @@
 }
 a.c-button {
   text-decoration: none;
+  text-align: center;
 }
 
 .c-button:not(:--disabled) {
