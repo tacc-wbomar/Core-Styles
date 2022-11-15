@@ -6,7 +6,7 @@ A [table]({{path './table' }}) that scrolls horizontally.
 
 > **ⓘ Notice**
 >
-> Use this class on a table _wrapper_. It has **no** affect when used on tables.
+> Use this class on a table _wrapper_. It has **no** affect when used on table directly.
 
 [source]: https://stackoverflow.com/a/19794391/11817077 "Stack Overflow: Horizontal scroll on overflow of table (answer)"
 
