@@ -4,6 +4,10 @@ A [table]({{path './table' }}) that scrolls horizontally.
 >
 > Table cells do not scroll as a whole. The trick is to [wrap the table in a `<div>` and scroll the div][source].
 
+> **ⓘ Notice**
+>
+> Use this class on a table _wrapper_. It has **no** affect when used on tables.
+
 [source]: https://stackoverflow.com/a/19794391/11817077 "Stack Overflow: Horizontal scroll on overflow of table (answer)"
 
 <script>

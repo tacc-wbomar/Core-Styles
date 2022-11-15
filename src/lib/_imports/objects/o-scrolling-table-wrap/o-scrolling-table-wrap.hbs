@@ -1,3 +1,18 @@
-<div class="o-scrolling-table-wrap">
-  {{> @table data=data caption=caption }}
-</div>
+<dl class="demo-vert">
+  <dt>Vertical</dt>
+  <dd class="o-scrolling-table-wrap">
+    {{> @table data=data caption="Constrained to height smaller than its minimum content height." }}
+  </dd>
+</dl>
+<dl class="demo-horz">
+  <dt>Horizontal</dt>
+  <dd class="o-scrolling-table-wrap">
+    {{> @table data=data caption="Constrained to width smaller than its minimum content width." }}
+  </dd>
+</dl>
+<dl class="demo-horz demo-vert">
+  <dt>Horizontal & Vertical</dt>
+  <dd class="o-scrolling-table-wrap">
+    {{> @table data=data caption="Constrained to width and height smaller than its minimum content width and height." }}
+  </dd>
+</dl>

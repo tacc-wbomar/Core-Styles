@@ -1,3 +1,5 @@
 .o-scrolling-table-wrap {
-  overflow-x: auto;
+  /* NOTE: Setting `auto` for `overflow-x` or `…-y` will invisibly set both */
+  /* SEE: https://stackoverflow.com/a/6433475/11817077 */
+  overflow: auto;
 }

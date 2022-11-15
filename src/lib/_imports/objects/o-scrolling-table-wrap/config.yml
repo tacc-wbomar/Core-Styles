@@ -3,7 +3,6 @@ context:
   supportStyles:
     - /assets/elements/table.css
   data:
-    caption: The table is constrained to an arbitrary width smaller than its minimum content width.
     cols:
       - ID
       - Name
@@ -22,3 +21,11 @@ context:
         name-link: white-candy-5
         custom-1: 1.5 MB
         time: 12/01/2019 11:04:19
+      - id: 7ysnw3
+        name-link: butter-balls
+        custom-1: 0.5 KB
+        time: 09/11/2010 10:54:09
+      - id: 20ksdf
+        name-link: lemon-cookies-30
+        custom-1: 250.0 MB
+        time: 04/20/2020 15:03:10

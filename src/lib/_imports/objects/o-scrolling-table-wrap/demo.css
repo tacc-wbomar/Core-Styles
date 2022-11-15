@@ -1,10 +1,27 @@
 /* This CSS is ONLY for the pattern library. It is NOT part of the pattern. */
 
-@import url("../tools/x-truncate.css");
+/* To force render of horizontal scrollbar */
+.demo-horz dd { max-width: 400px; }
+.demo-horz table { white-space: nowrap; }
 
-div {
-  width: 400px;
+/* To force render of vertical scrollbar */
+.demo-vert dd { max-height: 175px; }
+
+/* To lay out examples */
+body {
+  display: grid;
+  column-gap: 25px;
+  padding-inline: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  justify-items: center;
 }
-table {
-  white-space: nowrap;
+dd {
+  /* To overwrite _preview.hbs */
+  margin-bottom: unset !important;
+  margin-left: unset !important;
+}
+dl {
+  display: grid;
+  justify-items: center;
+  grid-auto-rows: minmax(min-content, max-content);
 }
