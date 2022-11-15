@@ -1,13 +1,15 @@
 /* This CSS is ONLY for the pattern library. It is NOT part of the pattern. */
 
-/* To force render of vertical scrollbar */
 div {
-  height: 300px;
-  max-width: 100%;
-  overflow: auto;
+  /* To force render of vertical scrollbar */
+  max-height: 300px;
+  overflow-y: scroll;
+
+  /* To avoid duplicate vertical scrollbars */
+  height: 100%;
 }
 
-/* To illustrate that the scrollbar wraps the table */
+/* To illustrate that the scrollbar is for the table (not the window) */
 body {
   display: grid;
   align-items: center;
