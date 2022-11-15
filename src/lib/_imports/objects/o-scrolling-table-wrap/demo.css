@@ -1,11 +1,13 @@
 /* This CSS is ONLY for the pattern library. It is NOT part of the pattern. */
 
-/* To force render of horizontal scrollbar */
+/* Force Horizontal Scrollbar */
 .demo-horz dd { max-width: 400px; }
 .demo-horz table { white-space: nowrap; }
 
-/* To force render of vertical scrollbar */
+/* Force Vertical Scrollbar */
 .demo-vert dd { max-height: 175px; }
+
+
 
 /* To lay out examples */
 body {
