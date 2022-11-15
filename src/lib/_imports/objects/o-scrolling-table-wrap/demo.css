@@ -1,0 +1,10 @@
+/* This CSS is ONLY for the pattern library. It is NOT part of the pattern. */
+
+@import url("../tools/x-truncate.css");
+
+div {
+  width: 400px;
+}
+table {
+  white-space: nowrap;
+}
