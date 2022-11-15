@@ -66,6 +66,10 @@ tbody > tr > th {
 caption {
   font-size: var(--global-font-size--small);
   text-align: unset; /* undo Bootstrap _reboot.css */
+
+  /* To mimic table cell */
+  padding-block: 8px;
+  padding-inline: 16px;
 }
 
 
