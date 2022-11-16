@@ -1,4 +1,4 @@
-preview: '@preview.cms'
+preview: '@preview.bootstrap-cms'
 status: ready
 order: 1
 context:
