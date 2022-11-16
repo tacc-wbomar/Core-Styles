@@ -1,4 +1,6 @@
 preview: '@preview.cms'
+status: ready
+order: 1
 context:
   supportStyles:
     - /assets/elements/table.css
