@@ -5,7 +5,7 @@ module.exports = {
   skin: {
     accent: '#000000',
     complement: '#ffffff',
-    links: '#003399', // match tup-cms
+    links: '#784fe8',
   },
   panels: ['notes', 'html', 'resources', 'context', 'info'],
   nav: ['search', 'docs', 'components'],
