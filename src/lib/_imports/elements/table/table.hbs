@@ -1,4 +1,7 @@
 <table {{#if data.has-table }}class="has-table"{{/if}}>
+  {{#if caption }}
+  <caption>{{{ caption }}}</catpion>
+  {{/if}}
   <thead>
     <tr>
       {{#each data.cols}}<th>{{ this }}</th>{{/each}}
@@ -13,6 +16,11 @@
       {{#if paragraph}}
       <td title="{{> @text-of-one-paragraph }}">
         <p>{{> @text-of-one-paragraph }}</p>
+      </td>
+      {{/if}}
+      {{#if sentence}}
+      <td title="{{> @text-of-one-sentence }}">
+        <span>{{> @text-of-one-sentence }}</span>
       </td>
       {{/if}}
       {{#if custom-1}}<td>{{{ custom-1 }}}</td>{{/if}}

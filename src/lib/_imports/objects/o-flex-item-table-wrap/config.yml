@@ -1,0 +1,30 @@
+preview: '@preview.portal'
+label: (Portal) O Flex Item Table Wrap
+order: 2
+status: deprecated
+context:
+  supportStyles:
+    - /assets/elements/table.css
+  data:
+    cols:
+      - ID
+      - Name
+      - Description
+      - Size
+      - Time
+    rows:
+      - id: n234as
+        name: apple-sauce
+        sentence: true
+        custom-1: 0.5 KB
+        time: 12/01/2019 11:04:19
+      - id: 56l810
+        name: milk-shake-032
+        sentence: true
+        custom-1: 300.0 KB
+        time: 03/22/2021 05:23:01
+      - id: 3r56xc
+        name: white-candy-5
+        sentence: true
+        custom-1: 1.5 MB
+        time: 12/01/2019 11:04:19
