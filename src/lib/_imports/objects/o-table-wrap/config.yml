@@ -1,4 +1,4 @@
-preview: '@preview.cms'
+preview: '@preview.bootstrap-cms'
 status: prototype
 order: 1
 variants:
@@ -10,7 +10,7 @@ variants:
     label: Overflow Hidden
   - name: overflow-scroll
     label: Overflow Scroll
-  - name: overflow-scroll.extra
+  - name: overflow-scroll-extra
     label: Overflow Scroll (Extra)
     context:
       data:
