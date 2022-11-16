@@ -9,10 +9,31 @@ const theme = mandelbrot(themeConfig);
 
 // Configure UI
 fractal.set('project.title', 'TACC UI Patterns');
-fractal.components.set('label', 'Patterns'); // default is 'Components'
-fractal.components.set('title', 'Patterns'); // default is 'Components'
-fractal.components.set('default.status', 'wip'); // default is 'ready'
-fractal.components.set('statuses.wip.label', 'Under Development'); // overwrite
+fractal.components.set('label', 'Patterns');
+fractal.components.set('title', 'Patterns');
+fractal.components.set('default.status', 'wip');
+fractal.components.set('statuses', {
+  prototype: {
+    label: "Prototype",
+    description: "Do not implement.",
+    color: "#999999"
+  },
+  wip: {
+    label: "Work in Progress",
+    description: "Work in progress. Implement with caution.",
+    color: "#CC9933"
+  },
+  ready: {
+    label: "Ready",
+    description: "Ready to implement.",
+    color: "#339933"
+  },
+  deprecated: {
+    label: 'Deprecated',
+    description: 'Do not implement.',
+    color: '#990000'
+  }
+});
 
 // Set source paths
 // (for components)
