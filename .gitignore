@@ -3,7 +3,6 @@ node_modules
 
 # PostCSS
 .postcssrc.yml
-dist
 
 # Fractal
 demo
