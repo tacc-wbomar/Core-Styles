@@ -1,6 +1,6 @@
 {
   "name": "@tacc/core-styles",
-  "version": "0.7.1-75-gf35b9e2",
+  "version": "0.11.0-7-g34c8c4c",
   "license": "MIT",
   "author": "TACC ACI WMA <wma-portals@gmail.com>",
   "description": "CSS source and processor for TACC Core-CMS and Core-Portal.",
