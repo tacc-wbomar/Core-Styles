@@ -8,6 +8,7 @@ Examples:
 
 Styleguide Trumps.Utilities.NestedTextContent
 */
+@import url("../settings/space.css");
 
 .u-nested-text-content {
   padding-left: var(--global-space--list-indent);

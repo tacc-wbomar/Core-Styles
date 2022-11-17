@@ -8,6 +8,7 @@ Styles for System Specifications content which assumes external code:
 
 Styleguide Trumps.Scopes.SystemSpecs
 */
+@import url("../settings/font.css");
 @import url("../tools/media-queries.css");
 
 

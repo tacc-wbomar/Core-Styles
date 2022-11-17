@@ -1,3 +1,4 @@
+@import url("../settings/color.css");
 @import url('../tools/x-truncate.css');
 
 @supports selector(:has(table)) {

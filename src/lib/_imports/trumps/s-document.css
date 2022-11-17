@@ -5,6 +5,9 @@ Styles for elements within a document page or section
 
 Styleguide Trumps.Scopes.Document
 */
+@import url("../settings/border.css");
+@import url("../settings/color.css");
+@import url("../settings/space.css");
 
 .s-document {
   margin-bottom: var(--global-space--large);

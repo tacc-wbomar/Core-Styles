@@ -48,20 +48,6 @@ fractal.components.set('resources', {
     match: ['**/*.css', '**/*.js'],
   },
 });
-// (for stylesheets)
-fractal.components.set('default.context', {
-  styles: {
-    internal: {
-      local: [
-        '/assets/settings/border.css',
-        '/assets/settings/color.css',
-        '/assets/settings/font.css',
-        '/assets/settings/max-width.css',
-        '/assets/settings/space.css',
-      ],
-    },
-  },
-});
 
 // Set website paths
 fractal.docs.set('path', __dirname + '/docs');

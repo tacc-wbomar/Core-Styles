@@ -1,3 +1,6 @@
+@import url("../settings/border.css");
+@import url("../settings/color.css");
+@import url("../settings/font.css");
 @import url("../tools/x-truncate.css");
 @import url('../tools/x-link.css');
 

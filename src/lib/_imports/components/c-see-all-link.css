@@ -11,6 +11,7 @@ Markup:
 
 Styleguide Components.SeeAllLink
 */
+@import url("../settings/font.css");
 @import url("../tools/x-truncate.css");
 
 

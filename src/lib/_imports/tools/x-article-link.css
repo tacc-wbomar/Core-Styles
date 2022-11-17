@@ -14,6 +14,7 @@ Styles that allow visible link hover for article lists.
 
 Styleguide Tools.ExtendsAndMixins.ArticleLink
 */
+@import url("../settings/color.css");
 
 /* To expand link to cover container */
 .x-article-link-stretch,
