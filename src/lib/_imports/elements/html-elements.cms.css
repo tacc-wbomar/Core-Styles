@@ -31,6 +31,8 @@ body {
 }
 
 body {
+  margin: 0;
+
   /* To avoid negative whitespace at right on horz scroll on tiny screen */
   min-width: 290px; /* developer-decided value */
 
