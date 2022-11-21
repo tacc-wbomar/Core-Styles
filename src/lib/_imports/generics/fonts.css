@@ -6,9 +6,9 @@ Load standard fonts for a TACC website.
 Usage:
   ```
   .something {
-    // BentonSans-MediumItalic
+    // BentonSans-RegularItalic
     font-family: 'Benton Sans';
-    font-weight: 500;
+    font-weight: 400;
     font-style: italic;
   }
   ```
@@ -28,6 +28,28 @@ Styleguide Generics.Fonts
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: 'Benton Sans';
+  src: url("../../BentonSans-RegularItalic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Benton Sans';
+  src: url("../../fonts/BentonSans-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Benton Sans';
+  src: url("../../fonts/BentonSans-MediumItalic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
 
 @font-face {
   font-family: 'Benton Sans';
@@ -39,16 +61,8 @@ Styleguide Generics.Fonts
 
 @font-face {
   font-family: 'Benton Sans';
-  src: url("../../fonts/BentonSans-Medium.otf") format("opentype");
-  font-weight: 500;
+  src: url("../../fonts/BentonSans-Black.otf") format("opentype");
+  font-weight: 800;
   font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Benton Sans';
-  src: url("../../fonts/BentonSans-MediumItalic.otf") format("opentype");
-  font-weight: 500;
-  font-style: italic;
   font-display: swap;
 }
