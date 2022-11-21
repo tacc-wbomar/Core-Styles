@@ -16,3 +16,7 @@ Styleguide Trumps.Utilities.Empty
 .u-empty {
   /* FAQ: This class should NOT have any styles on its own. It is a unique class that allows non-empty content to appear empty to TACC stylesheets that recognize it. Any TACC stylesheet selector that recognizes `:empty` elements should also recognize `u-empty` elements. */
 }
+
+/* IMPORTANT: When major browsers support `:empty` to mean
+              "Matches elements with whitespace", then
+              this stylesheet and its guidance are moot. */
