@@ -61,3 +61,6 @@
 .modal-header.has-MuiTabs .close {
   transform: translate(-25%, 25%);
 }
+.modal-header.has-MuiTabs .MuiTabs-indicator {
+  background-color: white;
+}

@@ -1,0 +1,53 @@
+/* DO NOT ADD STYLES HERE; ONLY IMPORT OTHER STYLESHEETS */
+
+/* Organize via ITCSS */
+/* https://confluence.tacc.utexas.edu/x/IAA9Cw */
+
+/* SETTINGS */
+@import url("./_imports/settings/border.css");
+@import url("./_imports/settings/color.css");
+@import url("./_imports/settings/font.css");
+@import url("./_imports/settings/max-width.css");
+@import url("./_imports/settings/space.css");
+
+/* GENERICS */
+/* Mostly from Bootstrap */
+/* https://confluence.tacc.utexas.edu/x/b53tDg */
+
+/* ELEMENTS */
+/* To override Bootstrap */
+@import url("./_imports/elements/links.css");
+@import url("./_imports/elements/table.css");
+
+/* OBJECTS */
+@import url("./_imports/objects/o-fixed-header-table.css");
+@import url("./_imports/objects/o-float-content.css");
+@import url("./_imports/objects/o-grid.css");
+@import url("./_imports/objects/o-offset-content.css");
+@import url("./_imports/objects/o-section.css");
+@import url("./_imports/objects/o-site.css");
+@import url("./_imports/objects/o-table-wrap.css");
+
+/* COMPONENTS */
+@import url("./_imports/components/bootstrap.container.css");
+@import url("./_imports/components/bootstrap.figure.css");
+@import url("./_imports/components/bootstrap.modal.css");
+@import url("./_imports/components/c-button.css");
+@import url("./_imports/components/c-card.css");
+@import url("./_imports/components/c-callout.css");
+@import url("./_imports/components/c-data-list.css");
+@import url("./_imports/components/c-footer.css");
+@import url("./_imports/components/c-nav.css");
+@import url("./_imports/components/c-page.css");
+@import url("./_imports/components/c-recognition.css");
+@import url("./_imports/components/c-see-all-link.css");
+@import url("./_imports/components/cortal.icon.css");
+
+/* TRUMPS */
+@import url("./_imports/trumps/s-affixed-input-wrapper.css");
+@import url("./_imports/trumps/s-blockquote.css");
+@import url("./_imports/trumps/s-breadcrumbs.css");
+@import url("./_imports/trumps/s-footer.css");
+@import url("./_imports/trumps/u-empty.css");
+@import url("./_imports/trumps/s-irregular-links.css");
+@import url("./_imports/trumps/u-mailto-text-replace.css");
