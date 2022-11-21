@@ -27,10 +27,10 @@
         - the Portal nav
         - the CMS nav
 */
-@import url("_imports/trumps/s-header.css");
-@import url("_imports/trumps/s-portal-nav.css");
-@import url("_imports/trumps/s-cms-nav.css");
+@import url("./trumps/s-header.css");
+@import url("./trumps/s-portal-nav.css");
+@import url("./trumps/s-cms-nav.css");
 
 /* UNORGANIZED */
 /* TODO: Convert to a component */
-@import url("_imports/branding_logos.css");
+@import url("./branding_logos.css");

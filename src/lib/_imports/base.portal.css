@@ -15,10 +15,10 @@
 /* (none) */
 
 /* OBJECTS */
-@import url("./_imports/objects/o-flex-item-table-wrap.css");
+@import url("./objects/o-flex-item-table-wrap.css");
 
 /* COMPONENTS */
-@import url("./_imports/components/mui.tabs.css");
+@import url("./components/mui.tabs.css");
 
 /* TRUMPS */
 /* (none) */

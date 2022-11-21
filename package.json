@@ -19,7 +19,7 @@
   "scripts": {
     "start": "fractal start --sync",
     "build": "npm run build:css && npm run build:demo",
-    "postbuild": "cp -r src/lib/fonts dist/fonts",
+    "postbuild:css": "cp -r src/lib/fonts dist/fonts",
     "build:css": "bin/build.js",
     "build:demo": "fractal build",
     "test": "bin/test.js && echo \"Test output at 'dist/_tests' (compare to test input)\"",

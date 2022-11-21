@@ -12,18 +12,14 @@
 
 /* ELEMENTS */
 /* To override Bootstrap */
-@import url("./_imports/elements/html-elements.cms.css");
-@import url("./_imports/elements/form.cms.css");
+@import url("./elements/html-elements.cms.css");
+@import url("./elements/form.cms.css");
 
 /* OBJECTS */
 /* (none) */
 
 /* COMPONENTS */
-@import url("./_imports/components/django.cms.css");
-@import url("./_imports/components/django.cms.blog.css");
-@import url("./_imports/components/django.cms.forms.css");
-@import url("./_imports/components/django.cms.post.css");
-@import url("./_imports/components/django.cms.picture.css");
+/* (none) */
 
 /* TRUMPS */
 /* To teach developers about the in-limbo Core-CMS doc page styles */

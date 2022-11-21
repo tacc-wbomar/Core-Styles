@@ -4,11 +4,11 @@
 /* https://confluence.tacc.utexas.edu/x/IAA9Cw */
 
 /* SETTINGS */
-@import url("./_imports/settings/border.css");
-@import url("./_imports/settings/color.css");
-@import url("./_imports/settings/font.css");
-@import url("./_imports/settings/max-width.css");
-@import url("./_imports/settings/space.css");
+@import url("./settings/border.css");
+@import url("./settings/color.css");
+@import url("./settings/font.css");
+@import url("./settings/max-width.css");
+@import url("./settings/space.css");
 
 /* GENERICS */
 /* Mostly from Bootstrap */
@@ -16,38 +16,38 @@
 
 /* ELEMENTS */
 /* To override Bootstrap */
-@import url("./_imports/elements/links.css");
-@import url("./_imports/elements/table.css");
+@import url("./elements/links.css");
+@import url("./elements/table.css");
 
 /* OBJECTS */
-@import url("./_imports/objects/o-fixed-header-table.css");
-@import url("./_imports/objects/o-float-content.css");
-@import url("./_imports/objects/o-grid.css");
-@import url("./_imports/objects/o-offset-content.css");
-@import url("./_imports/objects/o-section.css");
-@import url("./_imports/objects/o-site.css");
-@import url("./_imports/objects/o-table-wrap.css");
+@import url("./objects/o-fixed-header-table.css");
+@import url("./objects/o-float-content.css");
+@import url("./objects/o-grid.css");
+@import url("./objects/o-offset-content.css");
+@import url("./objects/o-section.css");
+@import url("./objects/o-site.css");
+@import url("./objects/o-table-wrap.css");
 
 /* COMPONENTS */
-@import url("./_imports/components/bootstrap.container.css");
-@import url("./_imports/components/bootstrap.figure.css");
-@import url("./_imports/components/bootstrap.modal.css");
-@import url("./_imports/components/c-button.css");
-@import url("./_imports/components/c-card.css");
-@import url("./_imports/components/c-callout.css");
-@import url("./_imports/components/c-data-list.css");
-@import url("./_imports/components/c-footer.css");
-@import url("./_imports/components/c-nav.css");
-@import url("./_imports/components/c-page.css");
-@import url("./_imports/components/c-recognition.css");
-@import url("./_imports/components/c-see-all-link.css");
-@import url("./_imports/components/cortal.icon.css");
+@import url("./components/bootstrap.container.css");
+@import url("./components/bootstrap.figure.css");
+@import url("./components/bootstrap.modal.css");
+@import url("./components/c-button.css");
+@import url("./components/c-card.css");
+@import url("./components/c-callout.css");
+@import url("./components/c-data-list.css");
+@import url("./components/c-footer.css");
+@import url("./components/c-nav.css");
+@import url("./components/c-page.css");
+@import url("./components/c-recognition.css");
+@import url("./components/c-see-all-link.css");
+@import url("./components/cortal.icon.css");
 
 /* TRUMPS */
-@import url("./_imports/trumps/s-affixed-input-wrapper.css");
-@import url("./_imports/trumps/s-blockquote.css");
-@import url("./_imports/trumps/s-breadcrumbs.css");
-@import url("./_imports/trumps/s-footer.css");
-@import url("./_imports/trumps/u-empty.css");
-@import url("./_imports/trumps/s-irregular-links.css");
-@import url("./_imports/trumps/u-mailto-text-replace.css");
+@import url("./trumps/s-affixed-input-wrapper.css");
+@import url("./trumps/s-blockquote.css");
+@import url("./trumps/s-breadcrumbs.css");
+@import url("./trumps/s-footer.css");
+@import url("./trumps/u-empty.css");
+@import url("./trumps/s-irregular-links.css");
+@import url("./trumps/u-mailto-text-replace.css");
