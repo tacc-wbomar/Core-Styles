@@ -14,9 +14,14 @@ Reference:
 
 Styleguide Elements.MainSectioningRoots
 */
+
+/* To track used settings, but not import them */
+/* FAQ: This avoids duplicate custom-properties in `core-styles.cms.css` */
+/*
 @import url('../settings/color.css');
 @import url('../settings/font.css');
 @import url('../settings/space.css');
+*/
 
 html {
   /* Set base font but support user-defined browser font size */

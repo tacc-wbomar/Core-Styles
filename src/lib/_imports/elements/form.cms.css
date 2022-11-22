@@ -18,9 +18,14 @@ Reference:
 
 Styleguide Elements.Forms
 */
+
+/* To track used settings, but not import them */
+/* FAQ: This avoids duplicate custom-properties in `core-styles.cms.css` */
+/*
 @import url("../settings/border.css");
 @import url("../settings/color.css");
 @import url("../settings/font.css");
+*/
 
 
 
