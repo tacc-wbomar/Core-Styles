@@ -36,3 +36,8 @@ plugins:
     banner: 'no build id'
     inline: true
     important: true
+
+  postcss-replace:
+    pattern: ../../fonts/
+    data:
+      replaceAll: ../fonts/
