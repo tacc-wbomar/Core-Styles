@@ -2,8 +2,6 @@
 {{! FAQ: Any <link>s, and comments AFTER the first, are migrated to <head> }}
 <link rel='author' href='https://github.com/TACC/Core-Styles' />
 
-<link rel='stylesheet' href='{{path "/assets/core-styles.base.css"}}' />
-
 <!-- styles: support (the current component) -->
 {{#each _target.context.supportStyles}}
   <link rel='stylesheet' href='{{path this}}' />
