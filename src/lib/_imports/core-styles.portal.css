@@ -1,0 +1,24 @@
+/* DO NOT ADD STYLES HERE; ONLY IMPORT OTHER STYLESHEETS */
+
+/* Organize via ITCSS */
+/* https://confluence.tacc.utexas.edu/x/IAA9Cw */
+
+/* SETTINGS */
+/* To get these, client should load `./base.css` first */
+
+/* GENERICS */
+/* Mostly from Bootstrap */
+/* https://confluence.tacc.utexas.edu/x/b53tDg */
+
+/* ELEMENTS */
+/* To override Bootstrap */
+/* (none) */
+
+/* OBJECTS */
+@import url("./objects/o-flex-item-table-wrap.css");
+
+/* COMPONENTS */
+@import url("./components/mui.tabs.css");
+
+/* TRUMPS */
+/* (none) */

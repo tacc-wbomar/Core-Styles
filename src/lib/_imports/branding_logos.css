@@ -5,7 +5,11 @@
             `em` nor `rem` was not allowed because results were not consistent.
             UPDATE: As of PR #312, this has likely changed (untested). */
 
-/* Shared by All Templates */
+/* To track used settings, but not import them */
+/* FAQ: This avoids duplicate custom-properties in `core-styles.header.css` */
+/*
+@import url("../settings/color.css");
+*/
 
 /* Branding Selectors  */
 
