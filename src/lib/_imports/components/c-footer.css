@@ -7,7 +7,6 @@ Markup: c-footer.html
 
 Styleguide Components.Footer
 */
-@import url("../settings/color.css");
 
 .c-footer {
   /* TODO: Use global custom property when available */

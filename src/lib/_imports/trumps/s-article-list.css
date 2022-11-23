@@ -7,7 +7,6 @@ Markup: s-article-list.html
 
 Styleguide Trumps.Scopes.ArticleList
 */
-@import url("../settings/color.css");
 @import url("../tools/x-truncate.css");
 @import url("../tools/x-layout.css");
 @import url("../tools/x-article-link.css");

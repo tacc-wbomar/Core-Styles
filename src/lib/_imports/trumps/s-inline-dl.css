@@ -12,7 +12,6 @@ Markup:
 
 Styleguide Trumps.Scopes.InlineDescriptionList
 */
-@import url("../settings/font.css");
 
 dl.s-inline-dl dt {
   display: block;

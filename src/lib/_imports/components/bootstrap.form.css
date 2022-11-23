@@ -1,4 +1,3 @@
-@import url('../settings/border.css');
 
 .form-control {
   border: var(--global-border--normal);
