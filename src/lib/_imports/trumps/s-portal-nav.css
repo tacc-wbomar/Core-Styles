@@ -23,7 +23,7 @@ ul.s-portal-nav {
   padding-left: 0; /* copied from Bootstrap */
 }
 
-.s-cms-nav a:hover {
+.s-portal-nav a:hover {
   /* To overwrite @tacc/core-styles */
   text-decoration: none; /* copied from Bootstrap */
 }

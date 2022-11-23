@@ -9,22 +9,22 @@ Markup: s-header.html
 Styleguide Trumps.Scopes.Header.Bootstrap
 */
 
-.dropdown-item {
+.s-header .dropdown-item {
   color: #212529;
 }
-.dropdown-item:focus,
-.dropdown-item:hover {
+.s-header .dropdown-item:focus,
+.s-header .dropdown-item:hover {
   color: #16181b;
   text-decoration: none;
   background-color: #f8f9fa;
 }
-.dropdown-item.active,
-.dropdown-item:active {
+.s-header .dropdown-item.active,
+.s-header .dropdown-item:active {
   color: #fff;
   text-decoration: none;
   background-color: #007bff
 }
 
-input {
+.s-header input {
   font-family: inherit;
 }
