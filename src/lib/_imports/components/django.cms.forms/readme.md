@@ -2,7 +2,7 @@ To style forms built by [Django CMS forms][djcms-forms].
 
 > **⚠️ Important**
 >
-> Only intended for [Django CMS forms][djcms-forms]. **If you are building a form without that plugin, use [TACC form component]({{path './c-form' }}) instead.**
+> **Only** intended for [Django CMS forms][djcms-forms]. To style a form **not** using that plugin, use [TACC form component]({{path './c-form' }}).
 
 > **ⓘ Notice**
 >
