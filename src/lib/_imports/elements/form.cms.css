@@ -24,6 +24,7 @@ textarea {
 
 label {
   font-size: var(--global-font-size--small);
+  font-weight: var(--medium);
 
   line-height: normal;
   margin-bottom: 0.75em;
