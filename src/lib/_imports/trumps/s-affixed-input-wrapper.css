@@ -6,11 +6,11 @@
 /* Layout */
 
 .s-affixed-input-wrapper:not(
-  .checkboxinput,
-  .radio,
-  .select,
-  .checkboxselectmultiple,
-  .textarea
+  .checkboxinput, .has-type-check
+  .radio, .has-type-radio
+  .select, .has-type-select
+  .checkboxselectmultiple, .has-select
+  .textarea, .has-textarea
 ) {
   display: grid;
   align-items: start;
@@ -41,8 +41,10 @@
 .s-affixed-input-wrapper input { grid-area: input; }
 .s-affixed-input-wrapper__prefix { grid-area: prefix; }
 .s-affixed-input-wrapper__suffix { grid-area: suffix; }
-.s-affixed-input-wrapper .help-text { grid-area: help; }
-.s-affixed-input-wrapper .field-errors { grid-area: error; }
+.s-affixed-input-wrapper .help-text,
+.s-affixed-input-wrapper .c-form__help { grid-area: help; }
+.s-affixed-input-wrapper .field-errors,
+.s-affixed-input-wrapper .c-form__errors { grid-area: error; }
 
 
 
