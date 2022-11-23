@@ -1,24 +1,3 @@
-/*
-Forms
-
-Elements that create forms which the user can fill out and submit to the Web site or application.
-
-```
-<form> <fieldset> <legend> <label> <input> <select> <optgroup> <option> <textarea> <button> <output> <progress> <meter> <datalist>
-```
-
-> **⚠️ Warning**
->
-> Relies on Bootstrap.
-
-Reference:
-
-- [HTML element reference: Forms | MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Forms)
-- [Bootstrap Reboot: Forms](https://getbootstrap.com/docs/4.0/content/reboot/#forms)
-
-Styleguide Elements.Forms
-*/
-
 /* To track used settings, but not import them */
 /* FAQ: This avoids duplicate custom-properties in `core-styles.cms.css` */
 /*
