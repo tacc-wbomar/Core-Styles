@@ -1,6 +1,3 @@
-@import url('../settings/color.css');
-@import url('../settings/border.css');
-
 .x-link {
   color: var(--global-color-link-on-light--normal);
 

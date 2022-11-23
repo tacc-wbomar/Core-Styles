@@ -15,13 +15,6 @@ Markup: s-header.html
 
 Styleguide Trumps.Scopes.Header
 */
-
-/* To track used settings, but not import them */
-/* FAQ: This avoids duplicate custom-properties in `core-styles.header.css` */
-/*
-@import url("../settings/font.css");
-*/
-
 @import url("./s-header.bootstrap.css");
 
 /* WARNING: NO-R/EM: Until Frontera CMS drops Bootstrap 3.7.1 (for old design)…
