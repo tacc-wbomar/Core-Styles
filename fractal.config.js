@@ -52,7 +52,7 @@ fractal.components.set('default.context', {
   styles: {
     shouldSkipBase: true, // true, because site.css includes components
     internal: {
-      global: ['assets/core-styles.base.css']
+      global: ['/assets/core-styles.base.css']
     }
   }
 });
