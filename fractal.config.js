@@ -50,7 +50,7 @@ fractal.components.set('resources', {
 });
 fractal.components.set('default.context', {
   styles: {
-    shouldSkipBase: true, // true, because site.css includes components
+    shouldSkipBase: true, // true, because ….base.css includes most components
     internal: {
       global: ['/assets/core-styles.base.css']
     }
