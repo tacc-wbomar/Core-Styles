@@ -53,6 +53,7 @@
 {{#each _target.resources.assets}}
 {{#if isJS}}
 <script
+  type="module"
   src='{{path "/components/raw/{{ _target.baseHandle }}/{{ this.base }}"}}'
 ></script>
 {{/if}}
