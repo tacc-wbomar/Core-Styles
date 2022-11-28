@@ -7,7 +7,7 @@
 
   <div class="c-form__errors" style="display:none;"></div>
 
-  <div class="c-form__field textinput has-required">
+  <div class="c-form__field has-required">
     <div class="c-form__errors" style="display:none;"></div>
 
     <label for="name">
@@ -22,12 +22,12 @@
       id="name"
     />
 
-    <div id="help-text-name" class="c-form__help">
+    <div class="c-form__help">
       We use this to identify your submission.
     </div>
   </div>
 
-  <div class="c-form__field select">
+  <div class="c-form__field">
     <div class="c-form__errors" style="display:none;"></div>
 
     <label for="favorite-fruit">Favorite Fruit</label>
@@ -44,7 +44,7 @@
       <option value="Whatever">Whatever</option>
     </select>
 
-    <div id="help-text-favorite-fruit" class="c-form__help">
+    <div class="c-form__help">
       Choose your favorite fruit.
     </div>
   </div>
@@ -60,7 +60,7 @@
       id="wake-up-time"
     />
 
-    <div id="help-text-wake-up-time" class="c-form__help">
+    <div class="c-form__help">
       We use this to know when to wake you up.
     </div>
   </div>
@@ -68,45 +68,45 @@
   <div class="c-form__field">
     <div class="c-form__errors" style="display:none;"></div>
 
-    <label for="radio-stations_0">Radio stations</label>
+    <label>Radio stations</label>
 
     <ul id="radio-stations">
       <li>
-        <label for="radio-stations_0">
+        <label for="radio-stations-0">
           <input
             type="radio"
             name="radio-stations"
             value="LX 1234"
-            id="radio-stations_0"
+            id="radio-stations-0"
           />
           LX 1234
         </label>
       </li>
       <li>
-        <label for="radio-stations_1">
+        <label for="radio-stations-1">
           <input
             type="radio"
             name="radio-stations"
             value="LOVE 45"
-            id="radio-stations_1"
+            id="radio-stations-1"
           />
           LOVE 45
         </label>
       </li>
       <li>
-        <label for="radio-stations_2">
+        <label for="radio-stations-2">
           <input
             type="radio"
             name="radio-stations"
             value="OLD 555"
-            id="radio-stations_2"
+            id="radio-stations-2"
           />
           OLD 555
         </label>
       </li>
     </ul>
 
-    <div id="help-text-radio-stations" class="c-form__help">
+    <div class="c-form__help">
       Which radio stations do you prefer?
     </div>
   </div>
@@ -122,7 +122,7 @@
 
     <label for="checking-out">Checking Out?</label>
 
-    <div id="help-text-checking-out" class="c-form__help">
+    <div class="c-form__help">
       Are you checking out today?
     </div>
   </div>
@@ -136,61 +136,61 @@
 
     <ul id="which-fish-do-you-want">
       <li>
-        <label for="which-fish-do-you-want_0">
+        <label for="which-fish-do-you-want-0">
           <input
             type="checkbox"
             name="which-fish-do-you-want"
             value="one fish"
             required="required"
-            id="which-fish-do-you-want_0"
+            id="which-fish-do-you-want-0"
           />
           one fish
         </label>
       </li>
       <li>
-        <label for="which-fish-do-you-want_1">
+        <label for="which-fish-do-you-want-1">
           <input
             type="checkbox"
             name="which-fish-do-you-want"
             value="two fish"
             required="required"
-            id="which-fish-do-you-want_1"
+            id="which-fish-do-you-want-1"
           />
           two fish
         </label>
       </li>
       <li>
-        <label for="which-fish-do-you-want_2">
+        <label for="which-fish-do-you-want-2">
           <input
             type="checkbox"
             name="which-fish-do-you-want"
             value="red fish"
             required="required"
-            id="which-fish-do-you-want_2"
+            id="which-fish-do-you-want-2"
           />
           red fish
         </label>
       </li>
       <li>
-        <label for="which-fish-do-you-want_3">
+        <label for="which-fish-do-you-want-3">
           <input
             type="checkbox"
             name="which-fish-do-you-want"
             value="blue fish"
             required="required"
-            id="which-fish-do-you-want_3"
+            id="which-fish-do-you-want-3"
           />
           blue fish
         </label>
       </li>
       <li>
-        <label for="which-fish-do-you-want_4">
+        <label for="which-fish-do-you-want-4">
           <input
             type="checkbox"
             name="which-fish-do-you-want"
             value="all the fish"
             required="required"
-            id="which-fish-do-you-want_4"
+            id="which-fish-do-you-want-4"
           />
           all the fish
         </label>
@@ -215,7 +215,7 @@
       <option value="Midnight">Midnight</option>
     </select>
 
-    <div id="help-text-hangry-time" class="c-form__help">
+    <div class="c-form__help">
       At which time of day do you get hangry?
     </div>
   </div>
@@ -232,7 +232,7 @@
       id="life-story"
     ></textarea>
 
-    <div id="help-text-life-story" class="c-form__help">
+    <div class="c-form__help">
       Go on, tell me everything.
     </div>
   </div>
@@ -248,7 +248,7 @@
       id="what-day-is-it"
     />
 
-    <div id="help-text-what-day-is-it" class="c-form__help">
+    <div class="c-form__help">
       Please enter today's date.
     </div>
   </div>
@@ -264,7 +264,7 @@
       id="your-favorite-picture"
     />
 
-    <div id="help-text-your-favorite-picture" class="c-form__help">
+    <div class="c-form__help">
       Upload your favorite image.
       <small>
         Supported types:
@@ -273,7 +273,7 @@
     </div>
   </div>
 
-  <div class="c-form__field recaptchav2checkbox has-required">
+  <div class="c-form__field has-spam-check has-required">
     <div class="c-form__errors" style="display:none;"></div>
 
     <label for="recaptcha_g9y93gP8">
