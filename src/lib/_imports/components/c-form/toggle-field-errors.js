@@ -6,7 +6,6 @@
  * @type {object.<string,*>}
  */
  const DEFAULT_CLASS_NAMES = {
-  errorList: null,
   jsShow: 'js-show-errors',
   jsHide: 'js-hide-errors'
 };
@@ -68,19 +67,17 @@ function showErrorList( list, classNames, callback ) {
 /**
  * Toggle error lists' visibility
  * @param {Document|HTMLElement} [scope=document] - where to search for lists
- * @param {string} [className] - class on error lists
+ * @param {string} [selector] - selector to find error lists
  * @param {object.<string,function>} [optCallbacks]
  * @param {onEach} [optCallbacks.showEach] - on each list show
  * @param {onEach} [optCallbacks.hideEach] - on each list hide
  * @param {afterAll} [optCallbacks.showAll] - on all lists shown
  * @param {afterAll} [optCallbacks.hideAll] - on all lists hidden
  */
-export default function toggleErrorLists( scope, className, optCallbacks ) {
-  const classNames = Object.assign( DEFAULT_CLASS_NAMES, {
-    errorList: className
-  });
+export default function toggleErrorLists( scope, selector, optCallbacks ) {
+  const classNames = DEFAULT_CLASS_NAMES;
   const callbacks = Object.assign( DEFAULT_CALLBACKS, optCallbacks );
-  const lists = scope.getElementsByClassName( classNames.errorList );
+  const lists = scope.querySelectorAll( selector );
 
   let didHide = false;
   let didShow = false;
