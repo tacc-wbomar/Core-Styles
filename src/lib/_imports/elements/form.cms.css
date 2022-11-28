@@ -50,6 +50,10 @@ textarea {
 ::placeholder {
   color: var(--global-color-primary--dark);
 }
+input, select {
+  height: 1.4em;
+  box-sizing: content-box;
+}
 
 input[type="time"],
 input[type="date"] {
