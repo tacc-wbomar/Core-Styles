@@ -79,10 +79,10 @@ ul.checkboxselectmultiple li:last-child label {
 
 /* Field: Required, Asterisk, Important */
 
-.field-wrapper.required > label {
+.field-wrapper > label {
   font-weight: var(--bold);
 }
-.field-wrapper.required > label .asterisk {
+.field-wrapper > label .asterisk {
   font-weight: var(--regular);
 }
 
@@ -150,8 +150,21 @@ ul.checkboxselectmultiple {
 
 /* Button */
 
-.form-button,
+/* To style obvious buttons that neglect class */
 .button-wrapper button[type="submit"] {
   @extend .c-button;
   @extend .c-button--primary;
+}
+
+.form-button {
+  @extend .c-button;
+}
+.form-button[type="submit"] {
+  @extend .c-button--primary;
+}
+.form-button:where(:not([type="submit"], [type="reset"])) {
+  @extend .c-button--secondary;
+}
+.form-button[type="reset"] {
+  @extend .c-button--tertiary;
 }

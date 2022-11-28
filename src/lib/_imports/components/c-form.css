@@ -83,10 +83,10 @@
 
 /* Field: Required, Asterisk, Important */
 
-.c-form__field.has-required > label {
+.c-form__field > label {
   font-weight: var(--bold);
 }
-.c-form__field.has-required > label .c-form__star {
+.c-form__field > label .c-form__star {
   font-weight: var(--regular);
 }
 
@@ -149,6 +149,12 @@ ul.c-form__errors {
 
 .c-form__buttons {
   margin-top: 35px;
+}
+
+/* To style obvious buttons that neglect class */
+.c-form__buttons button[type="submit"] {
+  @extend .c-button;
+  @extend .c-button--primary;
 }
 
 .c-form__button {
