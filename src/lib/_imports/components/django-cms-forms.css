@@ -1,15 +1,3 @@
-/*
-Django CMS Form Components
-
-These styles are only for forms created by the Django CMS Form plugin.
-
-Reference:
-
-- [Django CMS Form Default Template](https://github.com/avryhof/djangocms-forms/blob/master/djangocms_forms/templates/djangocms_forms/form_template/default.html)
-- [TACC's Django CMS Form Default Template](https://github.com/TACC/Core-CMS/blob/master/taccsite_cms/templates/djangocms_forms/form_template/default.html)
-
-Styleguide Components.DjangoCMS.Forms
-*/
 @import url("../components/c-button.css");
 @import url("./django-cms-forms-hacks.css");
 

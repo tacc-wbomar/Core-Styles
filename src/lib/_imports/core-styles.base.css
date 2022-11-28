@@ -16,6 +16,7 @@
 
 /* ELEMENTS */
 /* To override Bootstrap */
+@import url("./elements/html-elements.css"); /* load before specific elements */
 @import url("./elements/links.css");
 @import url("./elements/table.css");
 

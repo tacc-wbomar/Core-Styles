@@ -1,4 +1,4 @@
-[Form elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#table_content) allow users to enter and submit data.
+[Form elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#forms) allow users to enter and submit data.
 
 ```
 <form> <fieldset> <legend> <label> <input> <select> <optgroup> <option> <textarea> <button> <output> <progress> <meter> <datalist>
