@@ -2,58 +2,63 @@
 {{! FAQ: Any <link>s, and comments AFTER the first, are migrated to <head> }}
 <link rel='author' href='https://github.com/TACC/Core-Styles' />
 
-<!-- styles: support (the current component) -->
-{{#each _target.context.supportStyles}}
-  <link rel='stylesheet' href='{{path this}}' />
-{{/each}}
-<!-- styles: base (the current component) -->
-{{#unless styles.shouldSkipBase}}
-  <link
-    rel='stylesheet'
-    href='{{path "/assets/{{ _target.context.subdir }}/{{ _target.baseHandle }}.css"}}'
-  />
-{{/unless}}
 
 
-<!-- styles: global (for every component) -->
-<!-- (manually configured) -->
+<!-- Styles: Layers -->
+{{!-- https://confluence.tacc.utexas.edu/x/b53tDg --}}
+<style>
+@layer foundation, base, project, cosmetic;
+@layer foundation.external, foundation.internal;
+</style>
+
+<!-- Styles: Global (for every component) -->
+<style>
 {{#each styles.external.global}}
-  <link rel='stylesheet' href='{{this}}' />
+@import url('{{this}}') layer(foundation.external);
 {{/each}}
 {{#each styles.internal.global}}
-  <link rel='stylesheet' href='{{path this}}' />
+@import url('{{path this}}') layer(foundation.internal);
+{{/each}}
+</style>
+
+<!-- Styles: Base (for current component) -->
+<style>
+/* Supporting Components {{#unless _target.context.supportStyles}} (none) {{/unless}}*/
+{{#each _target.context.supportStyles}}
+@import url('{{path this}}') layer(base);
 {{/each}}
 
-<!-- styles: local (for current component) -->
-<!-- (automatically found) -->
+/* Current Component {{#if styles.shouldSkipBase}} (skipped) {{else}}*/
+@import url('{{path "/assets/{{ _target.context.subdir }}/{{ _target.baseHandle }}.css"}}') layer(base);
+{{/if}}
+</style>
+
+<!-- Styles: Demo (for current component) -->
+<style>
 {{#each _target.resources.assets}}
-  {{#if isCSS}}
-    <link
-      rel='stylesheet'
-      href='{{path "/components/raw/{{ _target.baseHandle }}/{{ this.base }}"}}'
-    />
-  {{/if}}
+{{#if isCSS}}
+@import url('{{path "/components/raw/{{ _target.baseHandle }}/{{ this.base }}"}}') layer(project);
+{{/if}}
 {{/each}}
-<!-- (manually configured) -->
-{{#each styles.external.local}}
-  <link rel='stylesheet' href='{{this}}' />
-{{/each}}
-{{#each styles.internal.local}}
-  <link rel='stylesheet' href='{{path this}}' />
-{{/each}}
+</style>
 
-{{! styles: specific to pattern library (so pattern library can override any) }}
+
+
+<!-- Styles: Demo (for every component) -->
 {{> @css }}
 
-<!-- scripts: local (for current component) -->
-<!-- (automatically found) -->
+
+
+<!-- Scripts: Local (for current component) -->
 {{#each _target.resources.assets}}
-  {{#if isJS}}
-    <script
-      src='{{path "/components/raw/{{ _target.baseHandle }}/{{ this.base }}"}}'
-    ></script>
-  {{/if}}
+{{#if isJS}}
+<script
+  src='{{path "/components/raw/{{ _target.baseHandle }}/{{ this.base }}"}}'
+></script>
+{{/if}}
 {{/each}}
 
-<!-- markup (for current component) -->
+
+
+<!-- Markup (for current component) -->
 {{{yield}}}
