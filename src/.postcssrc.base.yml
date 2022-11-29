@@ -38,6 +38,7 @@ plugins:
     important: true
 
   postcss-replace:
+    # @tacc/core-styles 'demo/' expects `./fonts`, but src uses `../../fonts`
     pattern: ../../fonts/
     data:
-      replaceAll: ../fonts/
+      replaceAll: ./fonts/

@@ -11,7 +11,7 @@ Reference:
 Styleguide Components.DjangoCMS.Forms
 */
 @import url("../components/c-button.css");
-@import url("./django.cms.forms.hacks.css");
+@import url("./django-cms-forms.hacks.css");
 
 
 
