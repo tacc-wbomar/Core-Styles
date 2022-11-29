@@ -41,4 +41,6 @@ plugins:
     # @tacc/core-styles 'demo/' expects `./fonts`, but src uses `../../fonts`
     pattern: ../../fonts/
     data:
-      replaceAll: ./fonts/
+      # FAQ: Do not prepend './', cuz downstream postcss-import will strip it
+      # FAQ: A string matching any final output simplifies downstream testing
+      replaceAll: fonts/
