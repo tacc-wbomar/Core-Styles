@@ -1,10 +1,5 @@
 /* This CSS is ONLY for the pattern library. It is NOT part of the pattern. */
 
-dd > * {
-  margin-right: 0.5em;
-  vertical-align: middle;
-}
-
 .c-button > i {
   font-style: normal;
 }

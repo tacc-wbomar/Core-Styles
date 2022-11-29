@@ -49,12 +49,12 @@ fractal.components.set('resources', {
   },
 });
 fractal.components.set('default.context', {
-  styles: {
-    shouldSkipBase: true, // true, because ….base.css includes most components
-    internal: {
-      global: ['/assets/core-styles.base.css']
-    }
-  }
+  shouldSkipPattern: true, // true, because …base.css loads most components
+  globalStyles: [{
+    isInternal: true,
+    layer: 'base',
+    path: '/assets/core-styles.base.css'
+  }]
 });
 
 // Set website paths

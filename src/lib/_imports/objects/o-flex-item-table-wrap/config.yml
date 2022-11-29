@@ -1,10 +1,7 @@
-preview: '@preview.portal'
 label: (Portal) O Flex Item Table Wrap
 order: 2
 status: deprecated
 context:
-  supportStyles:
-    - /assets/elements/table.css
   data:
     cols:
       - ID

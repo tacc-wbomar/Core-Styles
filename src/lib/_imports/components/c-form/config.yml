@@ -1,1 +1,3 @@
-preview: '@preview.cms'
+context:
+  shouldLoadCMS: true # temporary dependence, until proven to work on Portal
+  shouldSkipPattern: false # because …base.css does not load this CMS pattern

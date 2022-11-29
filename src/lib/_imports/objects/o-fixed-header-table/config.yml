@@ -1,9 +1,8 @@
-preview: '@preview.bootstrap-cms'
 status: ready
 order: 1
 context:
-  supportStyles:
-    - /assets/elements/table.css
+  shouldLoadBootstrap: true # not yet tested without Bootstrap
+  shouldLoadCMS: true # temporary dependence, until proven to work on Portal
   data:
     cols:
       - ID

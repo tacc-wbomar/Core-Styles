@@ -1,4 +1,3 @@
-preview: '@preview.bootstrap-cms'
 status: prototype
 order: 1
 variants:
@@ -47,9 +46,8 @@ variants:
             custom-1: 250.0 MB
             time: 04/20/2020 15:03:10
 context:
-  supportStyles:
-    - /assets/elements/table.css
-    - /assets/components/c-message.css
+  shouldLoadBootstrap: true # not yet tested without Bootstrap
+  shouldLoadCMS: true # temporary dependence, until proven to work on Portal
   data:
     cols:
       - ID
