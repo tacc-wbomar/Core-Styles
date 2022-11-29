@@ -15,9 +15,15 @@ table {
 
 /* To add border to bottom of all rows */
 /* FAQ: Added to cell, not row, because `border-collapse: separate` */
-thead tr :is(td, th),
+thead tr :is(td, th) {
+  border-bottom-width: var(--global-border-width--normal);
+  border-bottom-style: solid;
+  border-bottom-color: var(--global-color-primary--x-dark);
+}
 tr:not(:last-of-type) > :is(td, th) {
-  border-bottom: var(--global-border--normal);
+  border-bottom-width: var(--global-border-width--normal);
+  border-bottom-style: solid;
+  border-bottom-color: var(--global-color-primary--light);
 }
 
 /* To alternate table row colors (by coloring cells, not rows) */
