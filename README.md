@@ -9,8 +9,11 @@ The shared styles for TACC WMA Workspace Portals & Websites
 
 ## Table of Contents
 
-- [External Project Usage](external-project-usage)
-- [Local Development Setup](local-development-setup)
+- [External Project Usage](#external-project-usage)
+- [Local Development Setup](#local-development-setup)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
 
 
 ## External Project Usage
