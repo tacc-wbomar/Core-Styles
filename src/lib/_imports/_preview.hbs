@@ -59,19 +59,19 @@
 
 
 
-<!-- Styles: Demo (for every component) -->
-<style>
-  @import url('{{path "/assets/core-styles.demo.css"}}') layer(project);
-</style>
-
 <!-- Styles: Demo (for current component) -->
 {{#each _target.resources.assets}}
 {{#if this.isCSS}}
 <style>
-  @import url('{{path "/components/raw/{{ _target.baseHandle }}/{{ this.base }}"}}') layer(project);
+  @import url('{{path "/components/raw/{{ _target.baseHandle }}/{{ this.base }}"}}') layer(base);
 </style>
 {{/if}}
 {{/each}}
+
+<!-- Styles: Demo (for every component) -->
+<style>
+  @import url('{{path "/assets/core-styles.demo.css"}}') layer(project);
+</style>
 
 
 
