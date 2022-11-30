@@ -11,7 +11,7 @@
 /* (none) */
 
 /* ELEMENTS */
-@import url("./elements/demo.css");
+@import url("./elements/demo.css") layer(elements);
 
 /* OBJECTS */
 /* (none) */
