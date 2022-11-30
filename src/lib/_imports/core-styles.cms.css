@@ -13,8 +13,8 @@
 
 /* ELEMENTS */
 /* To override Bootstrap */
-@import url("./elements/html-elements.cms.css");
-@import url("./elements/form.cms.css");
+@import url("./elements/html-elements.cms.css") layer(elements);
+@import url("./elements/form.cms.css") layer(elements);
 
 /* OBJECTS */
 /* (none) */
@@ -27,8 +27,8 @@
 /* FAQ: Commented out because Core-CMS doc pages load these directly */
 /* IMPORTANT: If CMS docs are moved to TACC-Docs, then kill these stylesheets */
 /*
-@import url("_imports/trumps/s-document.css");
-@import url("_imports/trumps/s-guide-doc.css");
-@import url("_imports/trumps/s-inline-dl.css");
-@import url("_imports/trumps/u-nested-text-content.css");
+@import url("_imports/trumps/s-document.css") layer(trumps);
+@import url("_imports/trumps/s-guide-doc.css") layer(trumps);
+@import url("_imports/trumps/s-inline-dl.css") layer(trumps);
+@import url("_imports/trumps/u-nested-text-content.css") layer(trumps);
 */
