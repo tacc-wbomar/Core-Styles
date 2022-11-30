@@ -84,7 +84,7 @@
 /* Field: Required, Asterisk, Important */
 
 .c-form__field > label {
-  font-weight: var(--bold);
+  font-weight: var(--medium);
 }
 .c-form__field > label .c-form__star {
   font-weight: var(--regular);
@@ -123,9 +123,14 @@
 
 /* Errors */
 
-.c-form__field ul.c-form__errors {
-  margin-top: 1rem; /* mimic ul margin-bottom */
-  margin-bottom: 0; /* overwrite ul margin-bottom */
+.c-form > .c-form__error,
+.c-form > .c-form__errors {
+  margin-block: 20px;
+}
+.c-form__field .c-form__error,
+.c-form__field .c-form__errors {
+  margin-top: 20px;
+  margin-bottom: 0; /* overrides html-elements.css ul margin-bottom */
 }
 
 ul.c-form__errors {
@@ -133,12 +138,14 @@ ul.c-form__errors {
   padding-inline: 0;
 }
 
+.c-form > .c-form__error,
 .c-form > .c-form__errors {
   @extend .c-message;
   @extend .c-message--type-error;
   @extend .c-message--scope-section;
   @extend .c-message--scope-section.c-message--type-error;
 }
+.c-form__field .c-form__error,
 .c-form__field .c-form__errors li {
   @extend .c-message;
   @extend .c-message--type-error;
