@@ -5,11 +5,8 @@
 /* https://confluence.tacc.utexas.edu/x/IAA9Cw */
 
 /* SETTINGS */
-@import url("./settings/border.css");
-@import url("./settings/color.css");
-@import url("./settings/font.css");
-@import url("./settings/max-width.css");
-@import url("./settings/space.css");
+@import url("./core-styles.settings.css");
+/*! core-styles.base.css (continued) */
 
 /* GENERICS */
 /* Mostly from Bootstrap */

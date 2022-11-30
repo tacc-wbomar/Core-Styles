@@ -1,0 +1,8 @@
+/*! core-styles.settings.css */
+/* DO NOT ADD STYLES HERE; ONLY IMPORT OTHER STYLESHEETS */
+
+@import url("./settings/border.css");
+@import url("./settings/color.css");
+@import url("./settings/font.css");
+@import url("./settings/max-width.css");
+@import url("./settings/space.css");
