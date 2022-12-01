@@ -27,7 +27,7 @@
 /* To prevent help text font-style from affecting any tags */
 /* FAQ: Help text can contain inline elements like <samp> */
 /* FAQ: Help text can be (ab)used to add headings between form fields */
-.c-form__help > :not(details, a, samp) {
+.c-form__help > :not(details, a, samp, small) {
   font-style: initial;
 }
 
