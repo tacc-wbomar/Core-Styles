@@ -190,3 +190,11 @@ ul.checkboxselectmultiple {
 .form-button[type="reset"] {
   @extend .c-button--tertiary;
 }
+
+/* TODO: Test whether this fixes size difference between demo and cms */
+/*
+::file-selector-button {
+  @extend .c-button;
+  @extend .c-button--secondary;
+}
+*/
