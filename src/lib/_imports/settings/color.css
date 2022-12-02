@@ -21,8 +21,11 @@
   --global-color-primary--x-light: #F4F4F4;
     --global-color-primary--x-light-rgb: 244, 244, 244;
   --global-color-primary--light: #D7D7D7;
+    --global-color-primary--light-rgb: 198, 198, 198;
   --global-color-primary--normal: #AFAFAF;
+    --global-color-primary--normal-rgb: 175, 175, 175;
   --global-color-primary--dark: #707070;
+    --global-color-primary--dark-rgb: 112, 112, 112;
   --global-color-primary--x-dark: #484848;
     --global-color-primary--x-dark-rgb: 72, 72, 72;
   --global-color-primary--xx-dark: #222222;
@@ -39,21 +42,36 @@
   --global-color-accent--weak: #6039cc40; /* similar to #E3D7FD on #f4f4f4 */
 
   /* State */
+  --global-color-info--x-dark: var(--global-color-primary--xx-dark);
   --global-color-info--dark: var(--global-color-primary--x-dark);
   --global-color-info--normal: var(--global-color-primary--normal);
-  --global-color-info--light: var(--global-color-primary--x-light);
-  --global-color-success--dark: #237119;
+  --global-color-info--light: var(--global-color-primary--light);
+  --global-color-info--x-light: var(--global-color-primary--x-light);
+
+  --global-color-info--weak: rgba( var(--global-color-primary--normal), 0.125 );
+
+  --global-color-success--x-light: #E7F9E5;
+  --global-color-success--light: #AFECA7;
   --global-color-success--normal: #43d130;
+  --global-color-success--dark: #237119;
+  --global-color-success--x-dark: #263824;
+
   --global-color-success--weak: #43d13020;
-  --global-color-success--alt: var(--global-color-warning--normal);
-  --global-color-success--alt-weak: var(--global-color-warning--weak);
-  --global-color-warning--dark: #717411;
-  --global-color-warning--normal: #c7ce1d;
-  --global-color-warning--weak: #c7ce1d20;
-  --global-color-warning--alt: var(--global-color-accent--dark);
-  --global-color-warning--alt-weak: var(--global-color-accent--weak);
-  --global-color-danger--dark: #AF1818;
+
+  --global-color-warning--x-light: #FBF4E1;
+  --global-color-warning--light: #FAE19E;
+  --global-color-warning--normal: #DFA70C;
+  --global-color-warning--dark: #735911;
+  --global-color-warning--x-dark: #3A3320;
+
+  --global-color-warning--weak: #DFA70C20;
+
+  --global-color-danger--x-light: #FDF1F1;
+  --global-color-danger--light: #F8C9C9;
   --global-color-danger--normal: #F09393;
+  --global-color-danger--dark: #AF1818;
+  --global-color-danger--x-dark: #3C3030;
+
   --global-color-danger--weak: #F0939320;
 
   /* Generic */

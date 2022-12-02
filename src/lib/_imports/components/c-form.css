@@ -1,4 +1,6 @@
 @import url("../components/c-button.css");
+@import url("../components/c-message.css");
+@import url('../tools/x-link.css');
 
 
 
@@ -69,26 +71,17 @@
   margin-bottom: 0; /* overwrite forms.css label */
 }
 
-.c-form__field > ul:where(:not(.c-form__errors ul)) label,
-.c-form__field > ul:where(:not(ul.c-form__errors)) label {
+.c-form__field > ul:where(:not(.c-form__errors)) label {
   display: flex;
   gap: 0.5em;
   align-items: center;
   font-weight: revert; /* undo html-elements.cms.css */
 }
-.c-form__field > ul:where(:not(.c-form__errors ul)) li:last-child label,
-.c-form__field > ul:where(:not(ul.c-form__errors)) li:last-child label {
+.c-form__field > ul:where(:not(.c-form__errors)) li:last-child label {
   margin-bottom: 0; /* overwrite forms.css label */
 }
 
 /* Field: Required, Asterisk, Important */
-
-.c-form__field.has-required > label {
-  font-weight: var(--bold);
-}
-.c-form__field.has-required > label .c-form__star {
-  font-weight: var(--regular);
-}
 
 .c-form__field .c-form__star {
   margin-left: 0.5em;
@@ -123,21 +116,33 @@
 
 /* Errors */
 
-.c-form__errors {
-  font-size: var(--global-font-size--small);
-}
-.c-form__errors ul,
-ul.c-form__errors {
+.c-form__field ul.c-form__errors {
   margin-top: 1rem; /* mimic ul margin-bottom */
   margin-bottom: 0; /* overwrite ul margin-bottom */
+}
+
+ul.c-form__errors {
+  list-style: none;
+  padding-inline: 0;
+}
+
+.c-form > .c-form__errors {
+  @extend .c-message;
+  @extend .c-message--type-error;
+  @extend .c-message--scope-section;
+  @extend .c-message--scope-section.c-message--type-error;
+}
+.c-form__field .c-form__errors li {
+  @extend .c-message;
+  @extend .c-message--type-error;
+  @extend .c-message--scope-inline;
 }
 
 
 
 /* Lists */
 
-.c-form__field > ul:where(:not(.c-form__errors ul)),
-.c-form__field > ul:where(:not(ul.c-form__errors)) {
+.c-form__field > ul:where(:not(.c-form__errors)) {
   list-style: none;
 
   padding-left: 0;
@@ -149,6 +154,12 @@ ul.c-form__errors {
 
 .c-form__buttons {
   margin-top: 35px;
+}
+
+/* To style obvious buttons that neglect class */
+.c-form__buttons button[type="submit"] {
+  @extend .c-button;
+  @extend .c-button--primary;
 }
 
 .c-form__button {
