@@ -6,6 +6,8 @@ This is the demo and source of [TACC shared CSS][tacc shared css].
 
 The pattern CSS is available via [@tacc/core-styles].
 
+The patterns are organized by [ITCSS][tacc itcss].
+
 ---
 
 Known Clients:
@@ -20,6 +22,7 @@ Known Clients:
 [@tacc/core-styles]: https://www.npmjs.com/package/@tacc/core-styles
 
 [tacc shared css]: https://confluence.tacc.utexas.edu/x/eJR9E
+[tacc itcss]: https://confluence.tacc.utexas.edu/x/IAA9Cw
 
 <script type="module">
 Array.from(document.body.querySelectorAll('a'))
