@@ -83,13 +83,6 @@
 
 /* Field: Required, Asterisk, Important */
 
-.c-form__field > label {
-  font-weight: var(--medium);
-}
-.c-form__field > label .c-form__star {
-  font-weight: var(--regular);
-}
-
 .c-form__field .c-form__star {
   margin-left: 0.5em;
 }
