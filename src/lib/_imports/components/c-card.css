@@ -11,9 +11,6 @@ Markup: c-card.html
 
 Styleguide Components.Card
 */
-@import url("../settings/border.css");
-@import url("../settings/color.css");
-@import url("../settings/font.css");
 @import url("../tools/x-article-link.css");
 
 /* Modifiers */

@@ -1,0 +1,30 @@
+/*
+Header
+
+Bootstrap styles that `s-header.css` expects exist in the same layer
+(i.e. desinger may expect to not change until a new header design):
+
+Markup: s-header.html
+
+Styleguide Trumps.Scopes.Header.Bootstrap
+*/
+
+.s-header .dropdown-item {
+  color: #212529;
+}
+.s-header .dropdown-item:focus,
+.s-header .dropdown-item:hover {
+  color: #16181b;
+  text-decoration: none;
+  background-color: #f8f9fa;
+}
+.s-header .dropdown-item.active,
+.s-header .dropdown-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #007bff
+}
+
+.s-header input {
+  font-family: inherit;
+}

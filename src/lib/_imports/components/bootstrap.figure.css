@@ -9,8 +9,6 @@ Add to Bootstrap styles. See:
 
 Styleguide Components.Bootstrap.Figure
 */
-@import url("../settings/border.css");
-@import url("../settings/color.css");
 
 .figure > a > img,
 .figure > img {

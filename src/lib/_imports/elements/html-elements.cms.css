@@ -14,9 +14,6 @@ Reference:
 
 Styleguide Elements.MainSectioningRoots
 */
-@import url('../settings/color.css');
-@import url('../settings/font.css');
-@import url('../settings/space.css');
 
 html {
   /* Set base font but support user-defined browser font size */

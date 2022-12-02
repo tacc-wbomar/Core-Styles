@@ -1,4 +1,3 @@
-@import url("../settings/max-width.css");
 @import url("../tools/media-queries.css");
 
 @media (--xx-wide-and-above) {

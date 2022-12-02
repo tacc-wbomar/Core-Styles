@@ -48,6 +48,14 @@ fractal.components.set('resources', {
     match: ['**/*.css', '**/*.js'],
   },
 });
+fractal.components.set('default.context', {
+  styles: {
+    shouldSkipBase: true, // true, because ….base.css includes most components
+    internal: {
+      global: ['/assets/core-styles.base.css']
+    }
+  }
+});
 
 // Set website paths
 fractal.docs.set('path', __dirname + '/docs');

@@ -7,8 +7,6 @@ Markup: s-article-preview.html
 
 Styleguide Trumps.Scopes.ArticlePreview
 */
-@import url("../settings/color.css");
-@import url("../settings/font.css");
 @import url("../tools/x-truncate.css");
 @import url("../tools/x-article-link.css");
 
