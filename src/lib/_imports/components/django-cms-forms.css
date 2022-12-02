@@ -1,12 +1,23 @@
+/*
+Django CMS Form Components
+
+These styles are only for forms created by the Django CMS Form plugin.
+
+Reference:
+
+- [Django CMS Form Default Template](https://github.com/avryhof/djangocms-forms/blob/master/djangocms_forms/templates/djangocms_forms/form_template/default.html)
+- [TACC's Django CMS Form Default Template](https://github.com/TACC/Core-CMS/blob/master/taccsite_cms/templates/djangocms_forms/form_template/default.html)
+
+Styleguide Components.DjangoCMS.Forms
+*/
 @import url("../components/c-button.css");
-
-
+@import url("./django-cms-forms.hacks.css");
 
 
 
 /* Title & Description */
 
-.c-form__desc {
+.description {
   margin-block: 25px;
 }
 
@@ -14,45 +25,40 @@
 
 /* Help Text */
 
-.c-form__help {
+.help-text {
   font-size: var(--global-font-size--small);
   font-style: italic;
 }
 :not(
   ul, /* FAQ: Lists already have margin-bottom */
   label /* FAQ: Labels already have margin-bottom */
-) + .c-form__help {
+) + .help-text {
     margin-top: 0.3em; /* mimic Bootstrap _reboot.css label margin-bottom */
 }
 /* To prevent help text font-style from affecting any tags */
 /* FAQ: Help text can contain inline elements like <samp> */
 /* FAQ: Help text can be (ab)used to add headings between form fields */
-.c-form__help > :not(details, a, samp) {
+.help-text > :not(details, a, samp) {
   font-style: initial;
 }
 
 
 
 /* Fields */
-/* TODO: Make fieldset-child <div>s be opt-out automatic field-wrappers.
-    0. [ ] Define `fieldset > div { @extend .c-form__field; }` ruleset.
-    1. [ ] Create `.c-form--no-auto-wrappers`.
-    2. [ ] Define `.c-form:not(.c-form--no-auto-wrappers) fieldset > div` rules.
-*/
 
-.c-form__field {
+.field-wrapper {
   margin-bottom: 2rem; /* mimic <p> `margin-bottom` */
 }
 
-.c-form__field:not(.has-type-check) {
+.field-wrapper:not(.checkboxinput) {
   display: flex;
   flex-direction: column;
 }
-.c-form__field:not(.has-type-check) > .c-form__errors {
+.field-wrapper:not(.checkboxinput) > .field-errors {
   order: 1; /* i.e. move to end */
 }
 
-.c-form__field.has-type-check {
+.field-wrapper.checkboxinput {
   display: inline-grid;
 
   column-gap: 0.5em;
@@ -63,60 +69,60 @@
     'input label'
     'notes notes';
 }
-.c-form__field.has-type-check .c-form__errors { grid-area: error; }
-.c-form__field.has-type-check input           { grid-area: input; }
-.c-form__field.has-type-check label           { grid-area: label; }
-.c-form__field.has-type-check .c-form__help   { grid-area: notes; }
-.c-form__field.has-type-check label {
+.field-wrapper.checkboxinput .field-errors { grid-area: error; }
+.field-wrapper.checkboxinput input         { grid-area: input; }
+.field-wrapper.checkboxinput label         { grid-area: label; }
+.field-wrapper.checkboxinput .help-text    { grid-area: notes; }
+.field-wrapper.checkboxinput label {
   margin-bottom: 0; /* overwrite forms.css label */
 }
 
-.c-form__field > ul:where(not(.c-form__errors)) label,
-.c-form__field > ul:where(not(.c-form__errors)) label {
+ul.radioselect label,
+ul.checkboxselectmultiple label {
   display: flex;
   gap: 0.5em;
   align-items: center;
   font-weight: revert; /* undo html-elements.cms.css */
 }
-.c-form__field > ul:where(not(.c-form__errors)) li:last-child label,
-.c-form__field > ul:where(not(.c-form__errors)) li:last-child label {
+ul.radioselect li:last-child label,
+ul.checkboxselectmultiple li:last-child label {
   margin-bottom: 0; /* overwrite forms.css label */
 }
 
 /* Field: Required, Asterisk, Important */
 
-.c-form__field.has-required > label {
+.field-wrapper.required > label {
   font-weight: var(--bold);
 }
-.c-form__field.has-required > label .c-form__star {
+.field-wrapper.required > label .asterisk {
   font-weight: var(--regular);
 }
 
-.c-form__field .c-form__star {
+.field-wrapper .asterisk {
   margin-left: 0.5em;
 }
-.c-form__field.has-required .c-form__star {
+.field-wrapper.required .asterisk {
   color: var(--global-color-danger--dark);
 }
-.c-form__field:not(.has-required) .c-form__star
+.field-wrapper:not(.required) .asterisk
 /* NOTE: Manual markup ONLY; form plugin can't render non-required asterisk */ {
   color: var(--global-color-warning--dark);
 }
 /* To replace asterisk character with text */
-.c-form__field .c-form__star {
+.field-wrapper .asterisk {
   width: 0;
   display: inline-block;
   visibility: hidden;
   line-height: 0;
 }
-.c-form__field .c-form__star::after {
+.field-wrapper .asterisk::after {
   visibility: visible;
   line-height: initial;
 }
-.c-form__field.has-required .c-form__star::after {
+.field-wrapper.required .asterisk::after {
   content: '(required)';
 }
-.c-form__field:not(.has-required) .c-form__star::after
+.field-wrapper:not(.required) .asterisk::after
 /* NOTE: Manual markup ONLY; form plugin can't render non-required asterisk */ {
   content: '(important)';
 }
@@ -125,11 +131,10 @@
 
 /* Errors */
 
-.c-form__errors {
+.field-errors {
   font-size: var(--global-font-size--small);
 }
-.c-form__errors ul,
-ul.c-form__errors {
+.field-errors ul {
   margin-top: 1rem; /* mimic ul margin-bottom */
   margin-bottom: 0; /* overwrite ul margin-bottom */
 }
@@ -138,8 +143,8 @@ ul.c-form__errors {
 
 /* Lists */
 
-.c-form__field > ul:where(not(.c-form__errors)),
-.c-form__field > ul:where(not(.c-form__errors)) {
+ul.radioselect,
+ul.checkboxselectmultiple {
   list-style: none;
 
   padding-left: 0;
@@ -147,21 +152,18 @@ ul.c-form__errors {
 
 
 
-/* Buttons */
+/* Layout */
 
-.c-form__buttons {
+.button-wrapper {
   margin-top: 35px;
 }
 
-.c-form__button {
+
+
+/* Button */
+
+.form-button,
+.button-wrapper button[type="submit"] {
   @extend .c-button;
-}
-.c-form__button[type="submit"] {
   @extend .c-button--primary;
-}
-.c-form__button:where(:not([type="submit"], [type="reset"])) {
-  @extend .c-button--secondary;
-}
-.c-form__button[type="reset"] {
-  @extend .c-button--tertiary;
 }
