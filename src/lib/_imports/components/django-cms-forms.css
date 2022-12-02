@@ -82,13 +82,6 @@ ul.checkboxselectmultiple li:last-child label {
 
 /* Field: Required, Asterisk, Important */
 
-.field-wrapper > label {
-  font-weight: var(--bold);
-}
-.field-wrapper > label .asterisk {
-  font-weight: var(--regular);
-}
-
 .field-wrapper .asterisk {
   margin-left: 0.5em;
 }
