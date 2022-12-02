@@ -3,3 +3,4 @@ context:
   styles:
     shouldSkipBase: false
 label: Django CMS Forms
+status: prototype
