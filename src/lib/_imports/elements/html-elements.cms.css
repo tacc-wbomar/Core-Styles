@@ -205,7 +205,7 @@ code kbd {
 
 /* Code (<code>, <samp>, <pre>) */
 
-/* Code: any content or context) */ code,
+/* Code: any content or context */ code,
 /* Code: content has only output */ pre > samp {
   /* Undo Bootstrap */
   color: unset;

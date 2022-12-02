@@ -3,13 +3,13 @@
 /* Truncate Cell Text: - Verbose i.e. Custom */
 .o-table-wrap--flexible-horz > table :is(td, th) /* plain text cell */,
 .o-table-wrap--flexible-horz > table :is(td, th) > :is(a, span) /* element in cell */ {
-  /* NOTE: If multiple lines are okay, omit rule) */
+  /* NOTE: If multiple lines are okay, omit rule */
   white-space: nowrap;
 
-  /* NOTE: To clip: either use 'clip' value or omit rule) */
+  /* NOTE: To clip: either use 'clip' value or omit rule */
   text-overflow: ellipsis;
 
-  /* NOTE: If overlap is okay, omit rule) */
+  /* NOTE: If overlap is okay, omit rule */
   overflow: hidden;
 }
 
