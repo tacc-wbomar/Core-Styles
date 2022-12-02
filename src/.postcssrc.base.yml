@@ -16,6 +16,7 @@ plugins:
 
     # https://github.com/csstools/postcss-preset-env/blob/master/src/lib/plugins-by-id.js#L35
     features:
+      cascade-layers: true
       custom-media-queries: true
       media-query-ranges: true
       # RFE: Fix bug on the Internet so we can use these reliably
