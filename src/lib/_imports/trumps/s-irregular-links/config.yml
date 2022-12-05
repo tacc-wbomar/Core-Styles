@@ -1,8 +1,4 @@
 context:
   supportStyles:
-    - /assets/elements/links.css
-    - /assets/elements/links/docs.css
-    - /assets/components/c-button.css
+    - /assets/tools/x-link/demo.css
 label: Links (Irregular)
-variants:
-  - name: default

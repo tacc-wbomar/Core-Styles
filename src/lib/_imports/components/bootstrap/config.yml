@@ -1,16 +1,12 @@
-preview: '@preview.bootstrap'
+context:
+  shouldLoadBootstrap: true
 variants:
   - name: default
     hidden: true
   - name: container
     status: ready
   - name: modal
-    context:
-      supportStyles:
-        - /assets/components/c-button.css
+    status: prototype
   - name: form
     label: (Portal) Form
     status: prototype
-    context:
-      supportStyles:
-        - /assets/components/c-button.css

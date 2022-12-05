@@ -1,1 +1,2 @@
-preview: '@preview.cms'
+context:
+  shouldLoadCMS: true # temporary dependence, until proven to work on Portal

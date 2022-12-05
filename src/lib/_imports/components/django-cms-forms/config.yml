@@ -1,5 +1,5 @@
-preview: '@preview.cms'
 context:
-  styles:
-    shouldSkipBase: false
+  # only for temp demo instance of this pattern (which should be in CMS)
+  shouldLoadCMS: true # because this is demo but this is CMS pattern
+  shouldSkipPattern: false # because …base.css does not load this CMS pattern
 label: Django CMS Forms

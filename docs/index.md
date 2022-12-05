@@ -1,23 +1,28 @@
 ---
-title: TACC UI Patterns
+title: TACC UI Pattern Library
 ---
 
-This is the UI pattern library for TACC.
+This is the demo and source of [TACC shared CSS][tacc shared css].
 
-The CSS for these patterns is available from [@tacc/core-styles].
+The pattern CSS is available via [@tacc/core-styles].
+
+The patterns are organized by [ITCSS][tacc itcss].
 
 ---
 
 Known Clients:
 
+- [TACC/tup-ui]
 - [TACC/Core-CMS]
 - [TACC/Core-Portal]
-- [@tacc/core-components]
 
+[tacc/tup-ui]: https://github.com/TACC/tup-ui
 [tacc/core-cms]: https://github.com/TACC/Core-CMS
 [tacc/core-portal]: https://github.com/TACC/Core-Portal
-[@tacc/core-components]: https://www.npmjs.com/package/@tacc/core-components
 [@tacc/core-styles]: https://www.npmjs.com/package/@tacc/core-styles
+
+[tacc shared css]: https://confluence.tacc.utexas.edu/x/eJR9E
+[tacc itcss]: https://confluence.tacc.utexas.edu/x/IAA9Cw
 
 <script type="module">
 Array.from(document.body.querySelectorAll('a'))

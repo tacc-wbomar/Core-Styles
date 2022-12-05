@@ -1,5 +1,3 @@
-# The form elements used rely on Bootstrap and CMS
-preview: '@preview.bootstrap-cms'
 context:
-  supportStyles:
-    - /assets/elements/form.cms.css
+  shouldLoadBootstrap: true # not yet tested without Bootstrap
+  shouldLoadCMS: true # temporary dependence, until proven to work on Portal

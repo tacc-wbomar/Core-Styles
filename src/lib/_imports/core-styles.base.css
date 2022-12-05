@@ -1,14 +1,11 @@
+/*! core-styles.base.css */
 /* DO NOT ADD STYLES HERE; ONLY IMPORT OTHER STYLESHEETS */
 
 /* Organize via ITCSS */
 /* https://confluence.tacc.utexas.edu/x/IAA9Cw */
 
 /* SETTINGS */
-@import url("./settings/border.css");
-@import url("./settings/color.css");
-@import url("./settings/font.css");
-@import url("./settings/max-width.css");
-@import url("./settings/space.css");
+@import url("./core-styles.settings.css");
 
 /* GENERICS */
 /* Mostly from Bootstrap */
@@ -16,7 +13,8 @@
 
 /* ELEMENTS */
 /* To override Bootstrap */
-@import url("./elements/html-elements.css"); /* load before specific elements */
+/* NOTE: Load generic html-elements.css before specific elements/….css */
+@import url("./elements/html-elements.css");
 @import url("./elements/links.css");
 @import url("./elements/table.css");
 
@@ -41,6 +39,7 @@
 @import url("./components/c-form.css");
 @import url("./components/c-nav.css");
 @import url("./components/c-page.css");
+@import url("./components/c-message.css");
 @import url("./components/c-recognition.css");
 @import url("./components/c-see-all-link.css");
 @import url("./components/cortal.icon.css");

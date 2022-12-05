@@ -1,8 +1,5 @@
-preview: '@preview.cms'
 context:
-  supportStyles:
-    - /assets/elements/links.css
-    - /assets/components/c-button.css
+  shouldLoadCMS: true # temporary dependence, until proven to work on Portal
 variants:
   - name: default
     label: Basic

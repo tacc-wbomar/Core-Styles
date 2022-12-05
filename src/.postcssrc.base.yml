@@ -18,9 +18,10 @@ plugins:
     features:
       custom-media-queries: true
       media-query-ranges: true
-      # RFE: Fix bug on the Internet so we can use these reliably
-      # SEE: https://github.com/postcss/postcss-custom-selectors/issues/40
       custom-selectors: true
+      # This feature (to come in v8) is not ready yet
+      # https://github.com/csstools/postcss-plugins/issues/481#issuecomment-1335678359
+      cascade-layers: false
 
   cssnano:
     preset:
@@ -41,4 +42,6 @@ plugins:
     # @tacc/core-styles 'demo/' expects `./fonts`, but src uses `../../fonts`
     pattern: ../../fonts/
     data:
-      replaceAll: ./fonts/
+      # FAQ: Do not prepend './', cuz downstream postcss-import will strip it
+      # FAQ: A string matching any final output simplifies downstream testing
+      replaceAll: fonts/

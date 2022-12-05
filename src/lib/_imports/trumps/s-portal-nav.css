@@ -21,6 +21,7 @@ Styleguide Trumps.Scopes.PortalNav
 ul.s-portal-nav {
   /* To overwrite @tacc/core-styles */
   padding-left: 0; /* copied from Bootstrap */
+  margin-bottom: 0; /* overwrite html-elements.css */
 }
 
 .s-portal-nav a:hover {
