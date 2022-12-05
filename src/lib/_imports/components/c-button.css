@@ -18,6 +18,9 @@
 
   display: inline-block;
 
+  /* To ensure identical <button> and <a> instances have same width */
+  box-sizing: border-box;
+
   border-width: var(--global-border-width--normal);
   border-style: solid;
 

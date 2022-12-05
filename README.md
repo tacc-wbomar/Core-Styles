@@ -191,13 +191,13 @@ Run each of these commands in its own terminal.
 1. Build stylesheets and re-build on change:
 
    ```bash
-   npm run build:watch
+   npm run watch
    ```
 
 2. Run the auto-refresh demo:
 
    ```bash
-   npm start
+   npm run start
    ```
 
 <sup>Web page will live-reload **twice** on change of source files. The **second** reload will show changes.</sup>

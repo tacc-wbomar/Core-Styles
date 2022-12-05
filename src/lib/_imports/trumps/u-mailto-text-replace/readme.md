@@ -1,4 +1,4 @@
-To render an accurate e-mail that is unlikely to read by read by a robot thus recieve spam.
+To render an accurate e-mail that avoids receiving spam.
 
 Replaces the display text of an `<a href="mailto:…" data-user="bob" data-domain="">` link with the e-mail address constructed from the `data-user` and `data-domain` attributes.
 

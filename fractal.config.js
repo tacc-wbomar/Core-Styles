@@ -8,7 +8,7 @@ const themeConfig = require('./fractal.theme.js');
 const theme = mandelbrot(themeConfig);
 
 // Configure UI
-fractal.set('project.title', 'TACC UI Patterns');
+fractal.set('project.title', 'TACC UI Pattern Library');
 fractal.components.set('label', 'Patterns');
 fractal.components.set('title', 'Patterns');
 fractal.components.set('default.status', 'wip');

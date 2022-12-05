@@ -6,6 +6,7 @@ variants:
   - name: container
     status: ready
   - name: modal
+    status: prototype
   - name: form
     label: (Portal) Form
     status: prototype
