@@ -3,10 +3,8 @@
 
 /* Organize via ITCSS */
 /* https://confluence.tacc.utexas.edu/x/IAA9Cw */
-@layer settings, tools, generics, elements, objects, components, trumps;
 
 /* SETTINGS */
-/* NOTE: The layer(settings) is already used within core-styles.settings.css */
 @import url("./core-styles.settings.css");
 
 /* GENERICS */
@@ -16,41 +14,41 @@
 /* ELEMENTS */
 /* To override Bootstrap */
 /* NOTE: Load generic html-elements.css before specific elements/….css */
-@import url("./elements/html-elements.css") layer(elements);
-@import url("./elements/links.css") layer(elements);
-@import url("./elements/table.css") layer(elements);
+@import url("./elements/html-elements.css");
+@import url("./elements/links.css");
+@import url("./elements/table.css");
 
 /* OBJECTS */
-@import url("./objects/o-fixed-header-table.css") layer(objects);
-@import url("./objects/o-float-content.css") layer(objects);
-@import url("./objects/o-grid.css") layer(objects);
-@import url("./objects/o-offset-content.css") layer(objects);
-@import url("./objects/o-section.css") layer(objects);
-@import url("./objects/o-site.css") layer(objects);
-@import url("./objects/o-table-wrap.css") layer(objects);
+@import url("./objects/o-fixed-header-table.css");
+@import url("./objects/o-float-content.css");
+@import url("./objects/o-grid.css");
+@import url("./objects/o-offset-content.css");
+@import url("./objects/o-section.css");
+@import url("./objects/o-site.css");
+@import url("./objects/o-table-wrap.css");
 
 /* COMPONENTS */
-@import url("./components/bootstrap.container.css") layer(components);
-@import url("./components/bootstrap.figure.css") layer(components);
-@import url("./components/bootstrap.modal.css") layer(components);
-@import url("./components/c-button.css") layer(components);
-@import url("./components/c-card.css") layer(components);
-@import url("./components/c-callout.css") layer(components);
-@import url("./components/c-data-list.css") layer(components);
-@import url("./components/c-footer.css") layer(components);
-@import url("./components/c-form.css") layer(components);
-@import url("./components/c-nav.css") layer(components);
-@import url("./components/c-page.css") layer(components);
-@import url("./components/c-message.css") layer(components);
-@import url("./components/c-recognition.css") layer(components);
-@import url("./components/c-see-all-link.css") layer(components);
-@import url("./components/cortal.icon.css") layer(components);
+@import url("./components/bootstrap.container.css");
+@import url("./components/bootstrap.figure.css");
+@import url("./components/bootstrap.modal.css");
+@import url("./components/c-button.css");
+@import url("./components/c-card.css");
+@import url("./components/c-callout.css");
+@import url("./components/c-data-list.css");
+@import url("./components/c-footer.css");
+@import url("./components/c-form.css");
+@import url("./components/c-nav.css");
+@import url("./components/c-page.css");
+@import url("./components/c-message.css");
+@import url("./components/c-recognition.css");
+@import url("./components/c-see-all-link.css");
+@import url("./components/cortal.icon.css");
 
 /* TRUMPS */
-@import url("./trumps/s-affixed-input-wrapper.css") layer(trumps);
-@import url("./trumps/s-blockquote.css") layer(trumps);
-@import url("./trumps/s-breadcrumbs.css") layer(trumps);
-@import url("./trumps/s-footer.css") layer(trumps);
-@import url("./trumps/u-empty.css") layer(trumps);
-@import url("./trumps/s-irregular-links.css") layer(trumps);
-@import url("./trumps/u-mailto-text-replace.css") layer(trumps);
+@import url("./trumps/s-affixed-input-wrapper.css");
+@import url("./trumps/s-blockquote.css");
+@import url("./trumps/s-breadcrumbs.css");
+@import url("./trumps/s-footer.css");
+@import url("./trumps/u-empty.css");
+@import url("./trumps/s-irregular-links.css");
+@import url("./trumps/u-mailto-text-replace.css");

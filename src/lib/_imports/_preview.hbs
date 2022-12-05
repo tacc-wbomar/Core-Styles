@@ -14,7 +14,7 @@
 {{#unless _target.context.shouldSkipBootstrap }}
 <!-- Styles: Global (for current component): Bootstrap -->
 <style>
-  @import url('https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css') layer(foundation);
+  @import url('https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
 </style>
 {{/unless}}
 {{/if}}
@@ -23,9 +23,9 @@
 <style>
 {{#each globalStyles}}
   {{#if this.isInternal}}
-  @import url('{{path this.path}}') layer({{ this.layer }});
+  @import url('{{path this.path}}');
   {{else}}
-  @import url('{{this.path}}') layer({{ this.layer }});
+  @import url('{{this.path}}');
   {{/if}}
 {{/each}}
 </style>
@@ -34,7 +34,7 @@
 {{#unless _target.context.shouldSkipCMS }}
 <!-- Styles: Global (for current component): CMS -->
 <style>
-@import url('{{path "/assets/core-styles.cms.css"}}') layer(base);
+@import url('{{path "/assets/core-styles.cms.css"}}');
 </style>
 {{/unless}}
 {{/if}}
@@ -45,7 +45,7 @@
 <!-- Styles: Local (for current component): Supporting Patterns -->
 <style>
   {{#each _target.context.supportStyles}}
-  @import url('{{path this}}') layer(base);
+  @import url('{{path this}}');
   {{/each}}
 </style>
 {{/if}}
@@ -53,7 +53,7 @@
 {{#unless _target.context.shouldSkipPattern}}
 <!-- Styles: Local (for current component): Current Pattern -->
 <style>
-  @import url('{{path "/assets/{{ _target.context.subdir }}/{{ _target.baseHandle }}.css"}}') layer(base);
+  @import url('{{path "/assets/{{ _target.context.subdir }}/{{ _target.baseHandle }}.css"}}');
 </style>
 {{/unless}}
 
@@ -63,14 +63,14 @@
 {{#each _target.resources.assets}}
 {{#if this.isCSS}}
 <style>
-  @import url('{{path "/components/raw/{{ _target.baseHandle }}/{{ this.base }}"}}') layer(base);
+  @import url('{{path "/components/raw/{{ _target.baseHandle }}/{{ this.base }}"}}');
 </style>
 {{/if}}
 {{/each}}
 
 <!-- Styles: Demo (for every component) -->
 <style>
-  @import url('{{path "/assets/core-styles.demo.css"}}') layer(project);
+  @import url('{{path "/assets/core-styles.demo.css"}}');
 </style>
 
 

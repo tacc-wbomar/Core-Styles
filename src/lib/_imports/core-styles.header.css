@@ -28,9 +28,9 @@
         - the Portal nav
         - the CMS nav
 */
-@import url("./trumps/s-header.css") layer(trumps);
-@import url("./trumps/s-portal-nav.css") layer(trumps);
-@import url("./trumps/s-cms-nav.css") layer(trumps);
+@import url("./trumps/s-header.css");
+@import url("./trumps/s-portal-nav.css");
+@import url("./trumps/s-cms-nav.css");
 
 /* UNORGANIZED */
 /* TODO: Convert to a component */
