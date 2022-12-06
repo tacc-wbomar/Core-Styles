@@ -1,6 +1,8 @@
 A [table]({{path './table' }}) with its header pinned during vertical scroll.
 
-_Do not add the class to a wrapper unless your use case demands one. Do not create a wrapper unless your use case demands it. (One may already exist.)_
+> **⚠️ Important**
+>
+> The `<div>` wrapper is **not** required. Do not add unless your use case demands one.
 
 > **?&#x20DD; Explanation**
 >
