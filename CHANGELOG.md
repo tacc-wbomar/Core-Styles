@@ -7,6 +7,36 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [1.0.0] - 2022-12-05: Polish, Table Objects, Form Patterns, Dist Files, Fonts
+
+### Added
+
+* **feat!: ease use of core-styles (#81)**
+* feat!: provide CDN-style deliverable stylesheets (#78)
+* feat(components): form patterns (c-form, django.cms.forms) (#77, #79, #80)
+* feat(components): c-form updates & base html-elements (#79)
+* feat(dist): commit dist for clients relying on it (#70)
+* fix(o-table-wrap): …scroll.extra → …scroll-extra (#69)
+* feat(objects): o-table, o-fixed-header-table, o-flex-item-table-wrap (#68)
+
+### Changed
+
+* **feat(settings): lighter `…primary--light` color (#76)**
+
+### Removed
+
+* **feat!: provide CDN-style deliverable stylesheets (#78)**
+  * removed settings load from ALL _import source files (#78)
+  * removed icon(.…).css
+  * removed font settings from header
+
+### Fixed
+
+* fix(table): border colors (#75)
+* fix(fonts)!: support font load on demo (#74)
+* **fix(demo)!: font path change in dist (#73)**
+* fix(fonts): fp-1891 add regular italic, also add black (#71, #72)
+
 ## [0.11.0] - 2022-11-14: Table Pattern, Many Demo Fixes, Demo Build Dir Clarity
 
 ### Added
@@ -324,7 +354,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v0.11.0...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/TACC/Core-Styles/releases/tag/v1.0.0
 [0.11.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.11.0
 [0.10.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.10.0
 [0.9.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.9.0
