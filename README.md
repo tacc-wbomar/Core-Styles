@@ -256,6 +256,7 @@ Only authorized team members may publish.
 1. Create new branch for version bump.
 1. Update `CHANGELOG.md`.
 1. Update version via `npm version N.N.N`.
+1. Update dist via `npm run build:css --build-id=vN.N.N`.
 1. Commit, push, PR, review, merge.
 1. Create release and tag on GitHub.
 1. Publish to NPM via `npm publish --access public`.
