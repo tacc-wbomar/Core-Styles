@@ -1,12 +1,16 @@
 <dl>
   <dt>Class Directly on Table</dt>
   <dd>
-    {{> @table data=data caption="Header stays pinned top top of container on scroll." class="o-fixed-header-table" }}
+    <div>
+      {{> @table data=data caption="Header stays pinned top top of container on scroll." class="o-fixed-header-table" }}
+    </div>
   </dd>
 </dl>
 <dl>
   <dt>Class on Table Wrapper</dt>
-  <dd class="o-fixed-header-table">
-    {{> @table data=data caption="Header stays pinned top top of container on scroll." }}
+  <dd>
+    <div class="o-fixed-header-table">
+      {{> @table data=data caption="Header stays pinned top top of container on scroll." }}
+    </div>
   </dd>
 </dl>
