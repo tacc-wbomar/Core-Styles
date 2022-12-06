@@ -3,10 +3,11 @@ node_modules
 
 # PostCSS
 .postcssrc.yml
-dist
 
 # Fractal
 demo
+## Empty file touched after auto-rebuild to trigger server live-refresh */
+fractal.server.refresh.css
 
 # IDE
 .vscode

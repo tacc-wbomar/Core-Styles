@@ -7,15 +7,73 @@ The shared styles for TACC WMA Workspace Portals & Websites
 - [Core CMS], the base CMS code for TACC WMA CMS Websites
 - [Core Portal], the base Portal code for TACC WMA CMS Websites
 
-## Local Development Setup
+## Table of Contents
 
-### Prequisites for Running
+- [External Project Usage](#external-project-usage)
+- [Local Development Setup](#local-development-setup)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
 
-* Nodejs 15.x
 
 ## External Project Usage
 
-### CLI
+### Install This Package
+
+1. Installwith any package manager e.g.:
+
+    - `npm install @tacc/core-styles`
+    - `yarn add @tacc/core-styles`
+
+2. Import stylesheets of either type:
+   - pre-compiled, from `/dist`
+   - source files, from `/src/lib/_imports`
+
+### Build from Source
+
+#### Via Your Environment's [PostCSS](https://github.com/postcss/postcss#readme)
+
+Please review [the plugins expected](./src/.postcssrc.base.yml).
+
+#### Via Core-Styles API
+
+##### JavaScript
+
+<details><summary><code>require('core-styles').buildStylesheets</code></summary>
+
+```js
+const buildStylesheets = require('core-styles').buildStylesheets;
+
+buildStylesheets(
+  // Parse CSS files from which directory (required)
+  `path/to/your/css/src`,
+  // Output CSS files to which directory (required)
+  `path/to/put/css/output`,
+  {
+    // List of YAML config files (optional)
+    // (The first file is merged on top of the base config.)
+    // (Each successive file overwrites the file before it.)
+    // SEE: https://github.com/postcss/postcss-load-config#postcssrc
+    customConfigs: [
+      // The "base" config is `/.postcssrc.base.yml`
+      `path/to/custom/config/that/extends/base/.postcssrc.yml`,
+      `path/to/custom/config/that/extends/above/.postcssrc.yml`,
+    ],
+    // Print more info from build log (optional, default: false)
+    verbose: true,
+    // Print version of this software (optional, default: false)
+    version: true,
+    // Any value to help identify the build (optional, default: app version)
+    buildId: process.env.npm_package_version + someUniqueId,
+  }
+);
+```
+
+</details>
+
+##### CLI
+
+<details><summary><code>core-styles</code></summary>
 
 ```bash
 Usage: core-styles [options] [command]
@@ -35,7 +93,9 @@ Commands:
   help [command]     display help for command
 ```
 
-#### Build Command
+</details>
+
+<details><summary><code>core-styles build</code></summary>
 
 ```bash
 Usage: core-styles build [options]
@@ -82,126 +142,96 @@ Notes:
     Given '-i "a/b*" -o "x/" -m "not-a/"' output is "x/abs-path-to-input/...".
 ```
 
-### Module
+</details>
 
-1. Install the package with any package manager e.g.:
-
-- `npm install @tacc/core-styles`
-- `yarn add @tacc/core-styles`
-
-2. Import stylesheets of either type:
-   - pre-compiled, from `/dist`
-   - source files, from `/src/lib/_imports`
-
-#### Build Script
-
-```js
-const buildStylesheets = require('core-styles').buildStylesheets;
-
-buildStylesheets(
-  // Parse CSS files from which directory (required)
-  `path/to/your/css/src`,
-  // Output CSS files to which directory (required)
-  `path/to/put/css/output`,
-  {
-    // List of YAML config files (optional)
-    // (The first file is merged on top of the base config.)
-    // (Each successive file overwrites the file before it.)
-    // SEE: https://github.com/postcss/postcss-load-config#postcssrc
-    customConfigs: [
-      // The "base" config is `/.postcssrc.base.yml`
-      `path/to/custom/configthat/extends/base/.postcssrc.yml`,
-      `path/to/custom/config/that/extends/above/.postcssrc.yml`,
-    ],
-    // Print more info from build log (optional, default: false)
-    verbose: true,
-    // Print version of this software (optional, default: false)
-    version: true,
-    // Any value to help identify the build (optional, default: app version)
-    buildId: process.env.npm_package_version + someUniqueId,
-  }
-);
-```
 
 ## Local Development Setup
 
-### Code Configuration
+### Prequisites for Running
 
-Code configuration happens in repos that use these styles.
+* Nodejs 15.x
 
-### Previewing the Styles
+### Quick Start
 
-1. [Install][npm-install] the dependencies:
+0. _(initially)_ Install dependencies:\
+    `npm ci`
+1. _(optional)_ Make changes to `/src/lib` files.
+    
+2. Build the styles*:\
+    `npm run build:css`
+3. Build and preview the styles*:\
+    `npm start`
+4. _(to debug)_ Review output in respective `/dist` or `/demo` files.*
+
+<sub>* Stylesheets are built **from** source files **in** `src/lib` directory **to** compiled files **in** `dist` directory.</sub>
+
+### Preview **After** Development
+
+1. Build stylesheets and build static demo:
 
    ```bash
-   npm ci
+   npm run build
    ```
 
-2. Build stylesheets:
+2. Run the static demo:
 
    ```bash
-   npm run build:css
+   npx serve demo
    ```
 
-3. Run the pattern library:
-
-   ```bash
-   npm start
-   ```
+   <sup>Web page will live-reload on demo build, but **not** on change of source files.</sup>
 
 4. Open the web interface.
    The build command will output the URL (and may even open it for you).
 
-[npm-install]: https://docs.npmjs.com/cli/v8/commands/npm-ci
+### Preview **During** Development
 
-### Source Files
+Run each of these commands in its own terminal.
 
-If you changes files in a `src/lib/` directory, you may need to follow some of these steps.
-
-#### Quick Start
-
-1. _(optional)_ Make changes to `/src/lib` files.
-2. Build the styles: `npm run build:css`
-3. Build and preview the styles: `npm start`
-4. _(to debug)_ Review respective `/dist` or `/demo` files' content.
-
-#### How to Just Build Stylesheets
-
-You can build stylesheets **from** source files **in** `src/lib` directory **to** compiled files **in** `dist` directory.
-
-1. Build stylesheets:
+1. Build stylesheets and re-build on change:
 
    ```bash
-   npm run build:css
+   npm run watch
    ```
 
-   **or**, for custom build id:
+2. Run the auto-refresh demo:
 
    ```bash
-   npm run build:css -- --build-id="..."
+   npm run start
    ```
+
+<sup>Web page will live-reload **twice** on change of source files. The **second** reload will show changes.</sup>
+
+#### Build Options
+
+##### Regular CSS Build
+
+```bash
+npm run build:css
+```
+
+##### Custom Build ID
+
+```bash
+npm run build:css -- --build-id="..."
+```
+
 
 ## Testing
 
-Plugin testing is done manually. Run `npm run test`, then review output in `/dist/_tests.css`, to ensure plugins are working correctly.
+All testing is done manually.
 
-Style testing is done manually. Run `npm start`, then review output at web interface, to ensure styles are rendering correctly.
+
+## Deployment
 
 ### Production Deployment
 
-The Core Styles are not deployed alone _yet_. ¹
+The Core Styles are not independently deployed.
 
-_For now_, the stylesheets are acquired or accessed by other repositories.
+_Currently_, the demo is served by [Core CMS] (since [v3.9.0](https://github.com/TACC/Core-CMS/compare/v3.9.0)).
 
-| Repo                           | Usage                                                |
-| ------------------------------ | ---------------------------------------------------- |
-| **[Core CMS]**                 | via CLI installed on test branch                     |
-| **[Core CMS Pattern Library]** | not accessing styles [_yet_][research-pattern-lib] ¹ |
+_Later_, the demo may be deployed indpendently and `core-styles.….css` served from a CDN.
 
-<sub>¹ A repo that is, or will be, in [Core CMS Pattern Library] should load these styles **and** build a pattern library.</sub>
-
-[core cms pattern library]: https://github.com/wesleyboar/Core-CMS-Pattern-Library
-[research-pattern-lib]: https://confluence.tacc.utexas.edu/x/FADMBQ
 
 ## Contributing
 
@@ -216,7 +246,7 @@ We use a modifed version of [GitFlow](https://datasift.github.io/gitflow/Introdu
 
 ### Best Practices
 
-Sign your commits ([see this link](https://help.github.com/en/github/authenticating-to-github/managing-commit-signature-verification) for help)
+Sign your commits ([see this link](https://help.github.com/en/github/authenticating-to-github/managing-commit-signature-verification) for help).
 
 ### Publishing Workflow
 
@@ -226,10 +256,9 @@ Only authorized team members may publish.
 1. Create new branch for version bump.
 1. Update `CHANGELOG.md`.
 1. Update version via `npm version N.N.N`.
+1. Update dist via `npm run build:css --build-id=vN.N.N`.
 1. Commit, push, PR, review, merge.
-1. Tag version i.e.
-   1. `git tag -a vN.N.N`
-   2. `git push origin vN.N.N`
+1. Create release and tag on GitHub.
 1. Publish to NPM via `npm publish --access public`.
 
 > **Notice**: Project build will automatically occur before publish.
@@ -237,6 +266,7 @@ Only authorized team members may publish.
 ### Resources
 
 - [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+- [Research & Development](https://confluence.tacc.utexas.edu/x/FADMBQ)
 
 <!-- Link Aliases -->
 

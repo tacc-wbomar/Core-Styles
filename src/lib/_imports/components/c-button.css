@@ -1,8 +1,10 @@
 @import url("../tools/x-truncate.css");
+@import url('../tools/x-link.css');
 
 @custom-selector :--disabled
   :disabled,
   :where(a[disabled]);
+
 
 
 
@@ -16,16 +18,23 @@
 
   display: inline-block;
 
+  /* To ensure identical <button> and <a> instances have same width */
+  box-sizing: border-box;
+
   border-width: var(--global-border-width--normal);
   border-style: solid;
 
-  font-weight: 500;
-  font-size: 0.75rem; /* 12px (10px design * 1.2 design-to-app ratio) */
-
   @extend %x-truncate--one-line;
+}
+.c-button:not(.c-button--as-link) {
+  font-weight: var(--medium);
 }
 a.c-button {
   text-decoration: none;
+  text-align: center;
+}
+a.c-button--is-busy {
+  cursor: default;
 }
 
 .c-button:not(:--disabled) {
@@ -78,7 +87,7 @@ a.c-button {
     var(--global-color-accent--dark);
 }
 
-.c-button--primary:focus:not(:active) {
+.c-button--primary:focus:not(:active, .c-button--is-busy) {
   color: var(--global-color-primary--xx-light);
   background-color: var(--global-color-accent--normal);
   border-color: var(--global-color-primary--xx-light);
@@ -117,7 +126,7 @@ a.c-button {
     var(--global-color-accent--dark);
 }
 
-.c-button--secondary:focus:not(:active) {
+.c-button--secondary:focus:not(:active, .c-button--is-busy) {
   color: var(--global-color-primary--xx-dark);
   background-color: var(--global-color-accent--weak);
   border-color: var(--global-color-primary--xx-dark);
@@ -155,7 +164,7 @@ a.c-button {
     var(--global-color-accent--dark);
 }
 
-.c-button--tertiary:focus:not(:active) {
+.c-button--tertiary:focus:not(:active, .c-button--is-busy) {
   color: var(--global-color-primary--xx-dark);
   background-color: var(--global-color-primary--light);
   border-color: var(--global-color-primary--xx-dark);
@@ -218,14 +227,20 @@ a.c-button {
 /* Modifiers: Types: As Link */
 
 .c-button--as-link {
-  color: var(--global-color-accent--normal);
+  @extend .x-link;
 
   background: unset;
   border: unset;
   padding-inline: unset;
+
+  font-size: inherit;
+  font-family: inherit;
 }
-.c-button--as-link:not(:--disabled):hover {
-  text-decoration: underline;
+.c-button--as-link:where(:not(:--disabled)):hover {
+  @extend .x-link--hover;
+}
+.c-button--as-link:active {
+  @extend .x-link--active;
 }
 
 /* Modifiers: Types: Is Busy */
@@ -247,7 +262,10 @@ a.c-button {
   .c-button--width-long,
   .c-button--size-small,
   .c-button--as-link
-),
+) {
+  width: auto;
+  --max-width: auto;
+}
 .c-button--width-short {
   width: var(--min-width);
 }

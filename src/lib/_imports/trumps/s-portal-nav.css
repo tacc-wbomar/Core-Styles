@@ -15,6 +15,16 @@ Styleguide Trumps.Scopes.PortalNav
             UPDATE: As of PR #312, this has likely changed (untested). */
 
 .s-portal-nav {
-  /* Override `.navbar` */
+  /* To override Bootstrap `.navbar` */
   text-transform: none;
+}
+ul.s-portal-nav {
+  /* To overwrite @tacc/core-styles */
+  padding-left: 0; /* copied from Bootstrap */
+  margin-bottom: 0; /* overwrite html-elements.css */
+}
+
+.s-portal-nav a:hover {
+  /* To overwrite @tacc/core-styles */
+  text-decoration: none; /* copied from Bootstrap */
 }
