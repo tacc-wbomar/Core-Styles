@@ -1,0 +1,18 @@
+/* This CSS is ONLY for the pattern library. It is NOT part of the pattern. */
+
+/* To manage scrollbars to illustrate feature */
+div {
+  /* To force render of vertical scrollbar */
+  max-height: 300px;
+  overflow-y: scroll;
+
+  /* To avoid duplicate vertical scrollbars */
+  height: 100%;
+}
+
+/* To illustrate that scrollbar is for the table (not the window) */
+body {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}

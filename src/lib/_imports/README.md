@@ -5,10 +5,8 @@ Styles here should be isolated UI patterns and be imported by other stylesheets.
 ## Rules
 
 1. Files **must** be [organized appropriately](#directory-organization).
-1. Files **must** be [documented appropriately](#documentation-format).
-1. Files **must** follow the [style guide][tacc-style-guide].
-
-- Styles **should** be for [structure](#structure-vs-skin) and **may** be for [skin](#structure-vs-skin).
+2. Files **must** be [documented appropriately](#documentation-format).
+3. Files **must** follow the [style guide][tacc-style-guide].
 
 ## Directory Organization
 
@@ -18,30 +16,25 @@ These directories are based on [ITCSS][tacc-itcss].
 
 ## Documentation Format
 
-```css
-/*
-Styles Name
+See [Fractal: User Guide: Components][fractal-docs-guide]. (What we call "Patterns", Fractal calls "Components".)
 
-Description of the purpose and use case of styles. Use the `Markup:` property to link to sample markup. The documentation format is [KSS Node](https://github.com/kss-node/kss-node/blob/master/README.md).
+### Overview
 
-Markup: x-stylesheet-name.html
-
-Styleguide __StylesSection__.__StylesName__
-*/
-
-.some-selector {
-  text-transform: none;
-}
-```
+1. The `./*/README.md` files describe the type of patterns in its folders.
+2. Underscore-prefixed files and folders are documentation templates.
+3. Nested folders named after patterns have their docs, templates, and config.
+4. Old-style pattern docs are `/* ... Styleguide ... */` and `.html` files.
 
 ## Style Guide
 
 See [TACC: CSS Style Guide][tacc-style-guide].
 
-## Structure vs. Skin
+### Object-Oriented Styles
 
-- Most Core styles will be _only **or** mostly_ for [structure][tacc-oocss].
-- Some core styles may be [skin][tacc-oocss].
+- Pattern developers should understand [container vs. content][tacc-oocss].
+- Most styles will be _only **or** mostly_ for [structure][tacc-oocss].
+- Some styles may be for [skin][tacc-oocss].
 
 [tacc-oocss]: https://confluence.tacc.utexas.edu/x/VwALBg 'TACC: Object-Oriented CSS'
 [tacc-style-guide]: https://confluence.tacc.utexas.edu/x/ZQALBg 'TACC: CSS Style Guide'
+[fractal-docs-guide]: https://fractal.build/guide/components/#what-defines-a-component 'Fractal: User Guide: Components'

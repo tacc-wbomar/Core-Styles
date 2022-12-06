@@ -5,7 +5,138 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [Unreleased][unreleased]
+
+## [1.0.0] - 2022-12-05: Polish, Table Objects, Form Patterns, Dist Files, Fonts
+
+### Added
+
+* **feat!: ease use of core-styles (#81)**
+* feat!: provide CDN-style deliverable stylesheets (#78)
+* feat(components): form patterns (c-form, django.cms.forms) (#77, #79, #80)
+* feat(components): c-form updates & base html-elements (#79)
+* feat(dist): commit dist for clients relying on it (#70)
+* fix(o-table-wrap): …scroll.extra → …scroll-extra (#69)
+* feat(objects): o-table, o-fixed-header-table, o-flex-item-table-wrap (#68)
+
+### Changed
+
+* **feat(settings): lighter `…primary--light` color (#76)**
+
+### Removed
+
+* **feat!: provide CDN-style deliverable stylesheets (#78)**
+  * removed settings load from ALL _import source files (#78)
+  * removed icon(.…).css
+  * removed font settings from header
+
+### Fixed
+
+* fix(table): border colors (#75)
+* fix(fonts)!: support font load on demo (#74)
+* **fix(demo)!: font path change in dist (#73)**
+* fix(fonts): fp-1891 add regular italic, also add black (#71, #72)
+
+## [0.11.0] - 2022-11-14: Table Pattern, Many Demo Fixes, Demo Build Dir Clarity
+
+### Added
+
+* feat(elements): fp-1878 table pattern (#64) (b3bc511)
+
+### Changed
+
+* docs: nest demo assets in `/assets` directory (#65)
+
+### Fixed
+
+* fix(bootstrap): broken paths in static build (47047a4)
+* fix: pattern demo repair suite (#66)
+
+## [0.10.0] - 2022-11-12: New Docs, Patterns, Features; Major Dependency Bumps
+
+### Added
+
+* docs(components): tup-354 bootstrap.modal; assets, loremipsum (#51)
+* docs(components): tup-356 bootstrap.form (#52)
+* docs: tup-356 bootstrap preview & easy subdir var (#53)
+* docs(components): tup-356 bootstrap.container (#54)
+* feat: tup-355 links (redo #57) (#58)
+* feat(elements): fp-1828 move apcd styles to core (#56) (#62)
+* feat(c-button): do not show <a> tag button for `--as-link` (#59)
+* feat: x-link, used by c-button--as-link & links (#60)
+* feat: npm watch synced with live-refresh demo (#61)
+
+### Changed
+
+* feat: tup-274 peerDeps not deps (#46)
+* chore: tup-293 dependency updates (#50)
+* fix(trumps, and unused): complex subdir var made easy (#55)
+
+### Fixed
+
+* fix(c-button): fp-1791 auto width by default (#49)
+* fix: fp-1828 s-affixed-input-wrapper fallback (#62)
+
+## [0.9.0] - 2022-10-26: Fonts, C-Message, Generic CMS Form, A11y Color Tweak
+
+### Added
+
+- feat: support (and add) fonts (#41)
+- feat: add c-message component (#41)
+- feat: add and edit cms form styles (#41)
+- feat!: rename and edit cms element styles (#41)
+- feat: add postcss-replace (to manage font paths) (#41)
+
+### Fixed
+
+- fix: accessible error colors (#41)
+
+## [0.8.7] - 2022-09-16: Fix Bad Import Path, NPM Run Command Doc Tweaks
+
+### Changed
+
+- docs: npm run build (no :css), run start (note) (75e4046)
+
+### Fixed
+
+- fix: bad import path for x-mailto-text-replace (adf85ff)
+
+## [0.8.6] - 2022-09-14: Document Styles, Mailto Text Replacement, Misc. Fixes
+
+### Added
+
+- Task/fp 1801 guides breadcrumbs headings (#45)
+- feat(trumps): u-mailto-text-replace (for ecep 214) (#44)
+
+### Fixed
+
+- fix(o-float-content): missing setting import
+- fix(demo): subdir now explicitely loads from self
+
+## [0.8.2] - 2022-08-21: Missing 0.8.0 Pattern, No Executable Stylesheet
+
+### Fixed
+
+- Task/ecepweb 215 o float content (#42) [see [0.8.0] "o-float-content"]
+- fix(elements): html-elements was executable
+
+## [0.8.0] - 2022-08-16: Pattern Demo, New Patterns, Relative Paths, Retire CLI
+
+### Added
+
+- feat: updates from tup-ui (except paths)
+  - bootstrap form & bootstrap modal
+  - c-button default width
+  - cortal icons
+  - o-fixed-header-table
+  - ~~o-float-content~~ [see [0.8.2] "Task/ecepweb 215 o float content"]
+  - default values for font family variable
+- feat: use relative paths like tup-ui (#36) (#38)
+- feat: fp-1499 ui pattern demo (#34)
+
+### Deprecated
+
+- feat: retire internal usage of cli (#39)
 
 ## [0.7.1] - 2022-07-23: Fix v0.5.2 → v0.7.0 Migration
 
@@ -223,7 +354,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v0.7.1...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/TACC/Core-Styles/releases/tag/v1.0.0
+[0.11.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.11.0
+[0.10.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.10.0
+[0.9.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.9.0
+[0.8.7]: https://github.com/TACC/Core-Styles/releases/tag/v0.8.7
+[0.8.6]: https://github.com/TACC/Core-Styles/releases/tag/v0.8.6
+[0.8.2]: https://github.com/TACC/Core-Styles/releases/tag/v0.8.2
+[0.8.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.8.0
 [0.7.1]: https://github.com/TACC/Core-Styles/releases/tag/v0.7.1
 [0.7.0]: https://github.com/TACC/tup-ui/releases/tag/core-styles-v0.7.0
 [0.7.0-beta]: https://github.com/TACC/tup-ui/releases/tag/core-styles-v0.7.0-beta

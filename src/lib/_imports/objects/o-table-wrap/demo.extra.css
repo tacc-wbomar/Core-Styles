@@ -1,0 +1,31 @@
+/* This CSS is ONLY for the pattern library. It is NOT part of the pattern. */
+
+/* To force horizontal scrollbar */
+dl.demo-advanced.demo-horz dd { max-width: 400px; }
+dl.demo-advanced.demo-horz table { white-space: nowrap; }
+
+/* To force vertical scrollbar */
+dl.demo-advanced.demo-vert dd { max-height: 175px; }
+
+/* To overwrite "extra" styles */
+dl.demo-advanced.demo-vert:not(.demo-horz) table {
+  white-space: normal; /* overwrite `extra.overflow-scroll.css` */
+}
+
+/* To lay out examples */
+body:has(.demo-advanced) {
+  display: grid;
+  column-gap: 25px;
+  padding-inline: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  justify-items: center;
+}
+dl.demo-advanced {
+  display: grid;
+  grid-auto-rows: minmax(min-content, max-content);
+}
+dl.demo-advanced dd {
+  /* To overwrite _preview.hbs */
+  margin-bottom: unset !important;
+  margin-left: unset !important;
+}
