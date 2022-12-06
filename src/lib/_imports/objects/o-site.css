@@ -13,6 +13,7 @@ Styleguide Objects.Site
 /* IDEA: Use or add grid solution */
 /* https://github.com/DesignSafe-CI/portal/blob/215915c/designsafe/static/styles/main.css#L935 */
 
+/* WARNING: Some clients have their own implementation of this pattern */
 /*
 .o-site {
   display: grid;

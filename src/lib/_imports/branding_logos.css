@@ -5,8 +5,6 @@
             `em` nor `rem` was not allowed because results were not consistent.
             UPDATE: As of PR #312, this has likely changed (untested). */
 
-/* Shared by All Templates */
-
 /* Branding Selectors  */
 
 .branding-header {

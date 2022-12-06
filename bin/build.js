@@ -3,7 +3,12 @@
 /** Build CSS using the Core-Styles API */
 
 const { buildStylesheets } = require('../src/main');
+const mininmist = require('minimist');
 
-buildStylesheets('src/lib/_imports/**/*!(README).css', './dist', {
+const ARGS = mininmist( process.argv.slice( 2 ) );
+const BUILD_ID = ARGS['build-id'] || '';
+
+buildStylesheets('src/lib/_imports/**/*!(fractal.server.refresh).css', './dist', {
   baseMirrorDir: 'src/lib/_imports',
+  buildId: BUILD_ID
 });

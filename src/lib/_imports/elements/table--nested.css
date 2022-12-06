@@ -1,0 +1,61 @@
+@import url('../tools/x-truncate.css');
+
+@supports selector(:has(table)) {
+  /* To ensure matching row height of nested table and parent table */
+  table:has(table) :is(td, th) { white-space: nowrap; }
+
+  /* To move even row background to nested table only */
+  table:has(table) tr:nth-child(even) :is(th, td) {
+    background: var(--global-color-background--app);
+  }
+  td:has(table) tr:nth-child(even) :is(th, td) {
+    background: var(--global-color-primary--x-light);
+  }
+
+  /* To align nested table cells with parent table cells */
+  td:has(table) { padding: 0; }
+}
+@supports not selector(:has(table)) {
+  /* To ensure matching row height of nested table and parent table */
+  table.has-table :is(td, th) { white-space: nowrap; }
+
+  /* To move even row background to nested table only */
+  table.has-table tr:nth-child(even) :is(th, td) {
+    background: var(--global-color-background--app);
+  }
+  td.has-table tr:nth-child(even) :is(th, td) {
+    background: var(--global-color-primary--x-light);
+  }
+
+  /* To align nested table cells with parent table cells */
+  td.has-table { padding: 0; }
+}
+
+/* To replace parent table columns above with nested table columns */
+/* FAQ: Pulls nested table up by the height of the parent table head */
+tr table {
+  --offset: calc(-1 * 33px); /* WARNING: manually calculated */
+
+  transform: translateY(var(--offset));
+  margin-bottom: var(--offset);
+}
+/* FAQ: Hides any parent table head underneath nested table head */
+tr:first-of-type thead {
+  background: var(--global-color-background--app);
+}
+/* FAQ: Hides all successive (thus redundant) nested table heads */
+tr:not(:first-of-type) thead {
+  visibility: hidden;
+}
+
+/* To reduce inline padding
+   at start and end of nested table
+   unless at start or end of parent table */
+td:not(:first-child) th:first-child,
+td:not(:first-child) td:first-child {
+  padding-inline-start: 8px;
+}
+td:not(:last-child) th:last-child,
+td:not(:last-child) td:last-child {
+  padding-inline-end: 8px;
+}

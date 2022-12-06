@@ -9,3 +9,14 @@ Markup: s-cms-nav.html
 
 Styleguide Trumps.Scopes.CMSNav
 */
+
+ul.s-cms-nav {
+  /* To overwrite @tacc/core-styles */
+  padding-left: 0; /* copied from Bootstrap */
+  margin-bottom: 0; /* overwrite html-elements.css */
+}
+
+.s-cms-nav a:hover {
+  /* To overwrite @tacc/core-styles */
+  text-decoration: none; /* copied from Bootstrap */
+}

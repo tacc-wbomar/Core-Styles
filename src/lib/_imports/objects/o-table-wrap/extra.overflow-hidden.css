@@ -1,0 +1,7 @@
+/* This CSS is EXAMPLE code for a client. It is NOT part of the pattern. */
+
+/* Prevent Text Wrap */
+/* NOTE: If multiple lines are okay, do not use ruleset */
+.o-table-wrap--overflow-hidden table {
+  white-space: nowrap;
+}

@@ -1,0 +1,4 @@
+.o-table-wrap--flexible-horz > table {
+  width: 100%;
+  table-layout: fixed; /* to allow `width` to have effect */
+}

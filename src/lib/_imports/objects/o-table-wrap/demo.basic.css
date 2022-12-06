@@ -1,0 +1,18 @@
+/* This CSS is ONLY for the pattern library. It is NOT part of the pattern. */
+
+/* IMPORTANT: See `example.….css` code to learn how to adapt this pattern. */
+
+/* To force overflow */
+.o-table-wrap--overflow-hidden:not(.demo-advanced *),
+.o-table-wrap--overflow-scroll:not(.demo-advanced *) {
+  width: 400px;
+  height: 175px;
+}
+
+/* To illustrate table behavior is because of flex item wrapper (not window) */
+body {
+  display: flex;
+  gap: 25px;
+  padding-inline: 25px;
+}
+body > * { flex-basis: 33%; }

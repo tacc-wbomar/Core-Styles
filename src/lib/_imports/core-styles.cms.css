@@ -1,0 +1,34 @@
+/*! core-styles.cms.css */
+/* DO NOT ADD STYLES HERE; ONLY IMPORT OTHER STYLESHEETS */
+
+/* Organize via ITCSS */
+/* https://confluence.tacc.utexas.edu/x/IAA9Cw */
+
+/* SETTINGS */
+/* To get these, client should load `./base.css` first */
+
+/* GENERICS */
+/* Mostly from Bootstrap */
+/* https://confluence.tacc.utexas.edu/x/b53tDg */
+
+/* ELEMENTS */
+/* To override Bootstrap */
+@import url("./elements/html-elements.cms.css");
+@import url("./elements/form.cms.css");
+
+/* OBJECTS */
+/* (none) */
+
+/* COMPONENTS */
+/* (none) */
+
+/* TRUMPS */
+/* To explain the in-limbo Core-CMS doc page styles */
+/* FAQ: Commented out because Core-CMS doc pages load these directly */
+/* IMPORTANT: If CMS docs are moved to TACC-Docs, then kill these stylesheets */
+/*
+@import url("_imports/trumps/s-document.css");
+@import url("_imports/trumps/s-guide-doc.css");
+@import url("_imports/trumps/s-inline-dl.css");
+@import url("_imports/trumps/u-nested-text-content.css");
+*/
