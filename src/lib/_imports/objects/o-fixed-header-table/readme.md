@@ -1,5 +1,7 @@
 A [table]({{path './table' }}) with its header pinned during vertical scroll.
 
+_Do not add the class to a wrapper unless your use case demands one. Do not create a wrapper unless your use case demands it. (One may already exist.)_
+
 > **?&#x20DD; Explanation**
 >
 > [You can’t position: sticky; a `<thead>`. Nor a `<tr>`. But you can sticky a `<th>`…][source]
