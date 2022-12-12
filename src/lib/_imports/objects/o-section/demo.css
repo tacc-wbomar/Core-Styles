@@ -1,0 +1,11 @@
+/* This CSS is ONLY for the pattern library. It is NOT part of the pattern. */
+
+/* To illustrate that section spans outside its parent */
+body {
+  margin-inline: 5vw;
+}
+
+/* To hide margin that would distract from pattern-specific spacing */
+.o-section > *:last-child {
+  margin-bottom: 0;
+}
