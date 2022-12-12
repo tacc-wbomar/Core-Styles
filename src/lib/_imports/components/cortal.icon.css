@@ -86,3 +86,8 @@ Styleguide Components.Cortal.Icon
 .icon-nav-right {
   transform: rotate(-45deg) translate(-1px, -1px);
 }
+
+/* To create alias for permissable icon name mistake */
+.icon-collapse::before {
+  content: "\ea15"; /* from `.icon-contract::before` */
+}
