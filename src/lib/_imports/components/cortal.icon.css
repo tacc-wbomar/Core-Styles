@@ -29,8 +29,11 @@ Styleguide Components.Cortal.Icon
 
 /* Extensions */
 .icon {
-  width: 1em; /* mirror cortal.icon.font.css font-size */
-  overflow: hidden; /* hide text within icon */
+  /* To hide text within icon */
+  overflow: hidden;
+  /* To mirror cortal.icon.font.css font-size */
+  width: 1em;
+  height: 1em;
 }
 
 
@@ -44,27 +47,33 @@ Styleguide Components.Cortal.Icon
 .icon-sm {
   font-size: 1.8rem;
   width: 1.8rem;
+  height: 1.8rem;
 }
 .icon-md {
   font-size: 2.4rem;
   width: 2.4rem;
+  height: 2.4rem;
 }
 .icon-lg {
   font-size: 6.4rem;
   width: 6.4rem;
+  height: 6.4rem;
 }
 /* absolute units */
 .icon-18 {
   font-size: 18px;
   width: 18px;
+  height: 18px;
 }
 .icon-24 {
   font-size: 24px;
   width: 24px;
+  height: 24px;
 }
 .icon-64 {
   font-size: 64px;
   width: 64px;
+  height: 64px;
 }
 .icon-16,
 .icon-32 { font-size: unset /* to disallow unsupported font sizes */ }
