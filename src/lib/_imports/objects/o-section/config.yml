@@ -1,6 +1,4 @@
 variants:
-  - name: default
-    hidden: true
   - name: style-light
     label: (Style) Light
     context:
