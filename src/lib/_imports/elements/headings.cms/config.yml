@@ -1,0 +1,4 @@
+label: (CMS) Headings
+context:
+  shouldLoadCMS: true
+  shouldLoadBootstrap: true

@@ -15,6 +15,7 @@
 /* ELEMENTS */
 /* To override Bootstrap */
 @import url("./elements/html-elements.cms.css");
+@import url("./elements/headings.cms.css");
 @import url("./elements/form.cms.css");
 
 /* OBJECTS */
