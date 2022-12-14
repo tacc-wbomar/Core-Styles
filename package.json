@@ -62,13 +62,13 @@
     "postcss-extend": "To extend CSS rule sets at build-time",
     "postcss-preset-env": "To use future CSS features now",
     "// postcss-preset-env": "Using bleeding edge because https://github.com/csstools/postcss-plugins/issues/481#issuecomment-1334903391",
-    "postcss-replace": "To edit relative paths to fonts",
-    "npm-watch": "To live build on source file change"
+    "postcss-replace": "To edit relative paths to fonts"
   },
   "devDependencies": {
     "@frctl/fractal": "^1.5.13",
     "@frctl/mandelbrot": "^1.10.1",
-    "minimist": "^1.2.7"
+    "minimist": "^1.2.7",
+    "npm-watch": "^0.11.0"
   },
   "watch": {
     "build:watch": {

@@ -1,4 +1,4 @@
-<table {{#if data.has-table }}class="has-table"{{/if}}>
+<table class="{{#if data.has-table }}has-table{{/if}} {{#if class }}{{ class }}{{/if}}">
   {{#if caption }}
   <caption>{{{ caption }}}</catpion>
   {{/if}}
