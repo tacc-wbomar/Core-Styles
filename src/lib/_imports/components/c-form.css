@@ -27,7 +27,7 @@
 /* To prevent help text font-style from affecting any tags */
 /* FAQ: Help text can contain inline elements like <samp> */
 /* FAQ: Help text can be (ab)used to add headings between form fields */
-.c-form__help > :not(details, a, samp) {
+.c-form__help > :not(details, a, samp, small) {
   font-style: initial;
 }
 
@@ -116,9 +116,14 @@
 
 /* Errors */
 
-.c-form__field ul.c-form__errors {
-  margin-top: 1rem; /* mimic ul margin-bottom */
-  margin-bottom: 0; /* overwrite ul margin-bottom */
+.c-form > .c-form__error,
+.c-form > .c-form__errors {
+  margin-block: 20px;
+}
+.c-form__field .c-form__error,
+.c-form__field .c-form__errors {
+  margin-top: 20px;
+  margin-bottom: 0; /* overrides html-elements.css ul margin-bottom */
 }
 
 ul.c-form__errors {
@@ -126,12 +131,14 @@ ul.c-form__errors {
   padding-inline: 0;
 }
 
+.c-form > .c-form__error,
 .c-form > .c-form__errors {
   @extend .c-message;
   @extend .c-message--type-error;
   @extend .c-message--scope-section;
   @extend .c-message--scope-section.c-message--type-error;
 }
+.c-form__field .c-form__error,
 .c-form__field .c-form__errors li {
   @extend .c-message;
   @extend .c-message--type-error;
@@ -174,3 +181,11 @@ ul.c-form__errors {
 .c-form__button[type="reset"] {
   @extend .c-button--tertiary;
 }
+
+/* TODO: Test whether this fixes size difference between demo and cms */
+/*
+::file-selector-button {
+  @extend .c-button;
+  @extend .c-button--secondary;
+}
+*/
