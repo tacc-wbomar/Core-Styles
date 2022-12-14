@@ -1,4 +1,18 @@
-/* Organize */
+/* Set Foundation */
+
+html {
+  /* Set base font but support user-defined browser font size */
+  /* SEE: https://snook.ca/archives/html_and_css/font-size-with-rem */
+  font-size: 62.5%; /* 16px */
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+
+
+/* Organize Content */
 
 body > dl dl {
   margin-block: 0;
@@ -11,6 +25,7 @@ body > dl dd {
 }
 body > dl dt {
   font-weight: normal;
+  text-transform: capitalize;
   margin-bottom: 10px;
 }
 body > dl dt:not(:first-of-type) {
@@ -27,7 +42,7 @@ body > dl dd > * {
 
 
 
-/* Debug */
+/* Debug Settings */
 
 body > details:last-of-type {
   position: fixed;
