@@ -1,6 +1,7 @@
 :root {
   /* Family */
   --global-font-family--sans: var(--global-font-family--sans--portal);
+  --sans: var(--global-font-family--sans);
 
   /* Size */
   /* https://confluence.tacc.utexas.edu/x/nh4FDg */
