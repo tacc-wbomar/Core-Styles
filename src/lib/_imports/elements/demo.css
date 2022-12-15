@@ -26,9 +26,12 @@ body > dl dd {
 }
 body > dl dt {
   font-size: 1.6rem;
-  font-weight: normal;
+  font-weight: var(--medium);
   text-transform: capitalize;
   margin-bottom: 10px;
+}
+body > dl > dt {
+  font-weight: var(--bold);
 }
 body > dl dt:not(:first-of-type) {
   margin-top: 20px;
