@@ -16,18 +16,22 @@ body {
 
 body > dl dl {
   margin-block: 0;
+  padding-left: unset; /* overwrite CMS */
 }
 body > dl dt,
 body > dl dd {
-  font-family: Arial, sans;
+  font-family: var(--global-font-family--sans);
   color: #484848;
   line-height: normal;
 }
 body > dl dt {
   font-size: 1.6rem;
-  font-weight: normal;
+  font-weight: var(--medium);
   text-transform: capitalize;
   margin-bottom: 10px;
+}
+body > dl > dt {
+  font-weight: var(--bold);
 }
 body > dl dt:not(:first-of-type) {
   margin-top: 20px;
@@ -36,7 +40,7 @@ body > dl dd {
   margin-bottom: 10px;
   margin-left: 25px;
 }
-body > dl dd > * {
+body > dl dd:not(.demo-grid) > * {
   margin-right: 5px;
   vertical-align: middle;
 }
