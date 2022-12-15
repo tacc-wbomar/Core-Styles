@@ -17,7 +17,7 @@
 /* (none) */
 
 /* COMPONENTS */
-/* (none) */
+@import url("./components/demo.css");
 
 /* TRUMPS */
 @import url("./trumps/demo.css");

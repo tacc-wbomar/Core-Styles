@@ -35,7 +35,7 @@ body {
 
   /* To overwrite Bootstrap */
   color: var(--global-color-primary--x-dark);
-  font-family: var(--global-font-family--sans--cms);
+  font-family: var(--global-font-family--sans);
   font-size: var(--global-font-size--small);
   line-height: 1.4;
 }

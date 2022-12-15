@@ -36,7 +36,7 @@ body > dl dd {
   margin-bottom: 10px;
   margin-left: 25px;
 }
-body > dl dd > * {
+body > dl dd:not(.demo-grid) > * {
   margin-right: 5px;
   vertical-align: middle;
 }
