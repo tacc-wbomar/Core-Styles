@@ -53,6 +53,10 @@ fractal.components.set('default.context', {
   globalStyles: [{
     isInternal: true,
     layer: 'base',
+    path: '/assets/core-styles.demo.css'
+  },{
+    isInternal: true,
+    layer: 'base',
     path: '/assets/core-styles.base.css'
   }]
 });
