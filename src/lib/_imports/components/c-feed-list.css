@@ -32,8 +32,8 @@
   /* TODO: When migrated to core-styles, use @extend instead */
   /* @extend .x-truncate--one-line; */
   text-overflow: ellipsis;
-	overflow: hidden;
-	white-space: nowrap;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 /* Elements: Items */
@@ -48,6 +48,10 @@
     'desc link';
 
   padding-block: 10px;
+  border-top: var(--global-border-width--normal) solid var(--global-color-primary--dark);
+}
+.c-feed-list > :is(div, article):last-of-type {
+  border-bottom: var(--global-border-width--normal) solid var(--global-color-primary--xx-dark);
 }
 .c-feed-list > :is(div, article) > time { grid-area: time; }
 .c-feed-list > :is(div, article) > :is(h1, h2, h3, h4, h5, h6) { grid-area: name; }
