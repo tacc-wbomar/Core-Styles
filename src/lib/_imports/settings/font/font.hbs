@@ -1,3 +1,8 @@
+{{#if shouldShowSizeMessage}}
+<p class="demo-message">
+  There are currently <em><strong>no</strong> default font sizes</em>. A client must load CMS styles or Portal styles or their own custom font sizes.
+</p>
+{{/if}}
 <dl>
   <dt>Family</dt>
   <dd>
@@ -20,11 +25,6 @@
 <dl>
   <dt>Size</dt>
   <dd>
-    {{#if shouldShowSizeMessage}}
-    <p class="demo-message--warning">
-      There are currently <strong>no</strong> default font sizes. A client must load CMS styles or Portal styles or their own custom properties.
-    </p>
-    {{/if}}
     <p class="demo-size--xxx-large">XXX Large</p>
     <p class="demo-size--xx-large">XX Large</p>
     <p class="demo-size--x-large">X Large</p>

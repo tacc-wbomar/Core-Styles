@@ -49,33 +49,11 @@
 
 /* Message */
 
-[class*="demo-message--"] {
-  @extend .c-message--scope-section;
+.demo-message {
+  @extend .c-message--scope-global;
 
-  display: inline-block; /* to avoid stretch */
-}
-[class*="demo-message--"]::before { margin-right: 0.5em; }
+  position: sticky;
+  top: 0;
 
-.demo-message--info {
-  @extend .c-message--type-info;
-  @extend .c-message--scope-section.c-message--type-info;
+  font-family: var(--global-font-family--sans);
 }
-.demo-message--info::before { content: 'ⓘ'; }
-
-.demo-message--success {
-  @extend .c-message--type-success;
-  @extend .c-message--scope-section.c-message--type-success;
-}
-.demo-message--success::before { content: '✓'; }
-
-.demo-message--warning {
-  @extend .c-message--type-warning;
-  @extend .c-message--scope-section.c-message--type-warning;
-}
-.demo-message--warning::before { content: '\26A0'; }
-
-.demo-message--error {
-  @extend .c-message--type-error;
-  @extend .c-message--scope-section.c-message--type-error;
-}
-.demo-message--error::before { content: 'ⓧ'; }

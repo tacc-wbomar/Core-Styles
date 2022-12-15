@@ -9,6 +9,7 @@ Inform user about a temporary status.
 - .c-message--type-danger - a major negative status
 - .c-message--scope-inline - an error for one interatction on a page
 - .c-message--scope-section - an error for a whole section of a page
+- .c-message--scope-global - an error for an entire website
 
 Reference:
 - https://getbootstrap.com/docs/4.0/components/alerts/
@@ -52,9 +53,14 @@ Styleguide Components.Message
   font-size: var(--global-font-size--small);
 }
 
-.c-message--scope-section {
+.c-message--scope-section,
+.c-message--scope-global {
   padding: 15px 20px;
   border: var(--global-border--thick);
+}
+
+.c-message--scope-global {
+  text-align: center;
 }
 
 /* Skin */
@@ -87,4 +93,10 @@ Styleguide Components.Message
 .c-message--scope-section.c-message--type-error {
   background-color: var(--global-color-danger--x-light);
   border-color: var(--global-color-danger--normal);
+}
+
+.c-message--scope-global {
+  color: var(--global-color-primary--xx-light);
+  background-color: var(--global-color-accent--secondary);
+  border-color: var(--global-color-primary--dark);
 }

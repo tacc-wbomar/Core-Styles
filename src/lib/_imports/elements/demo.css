@@ -19,7 +19,7 @@ body > dl dl {
 }
 body > dl dt,
 body > dl dd {
-  font-family: Arial, sans;
+  font-family: var(--global-font-family--sans);
   color: #484848;
   line-height: normal;
 }
