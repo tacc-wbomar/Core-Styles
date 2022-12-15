@@ -6,7 +6,7 @@
 
 /* SETTINGS */
 /* To get most settings, client should load `./base.css` first */
-@import url("./settings/font.portal.css");
+@import url("./settings/font-portal.css");
 
 /* GENERICS */
 /* Mostly from Bootstrap */

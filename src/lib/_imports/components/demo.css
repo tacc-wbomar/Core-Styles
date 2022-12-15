@@ -8,6 +8,8 @@
   margin-bottom: unset; /* overwrite Bootstrap */
 }
 
+
+
 /* Grid: Boxes */
 
 .demo-grid--boxes > * {
@@ -38,3 +40,25 @@
   grid-row: 1 / 1;
   grid-column: 1 / 1;
 }
+
+
+
+
+
+/* Font */
+
+.demo-font-family--mono  { font-family: var(--global-font-family--mono); }
+.demo-font-family--serif { font-family: var(--global-font-family--serif); }
+.demo-font-family--sans  { font-family: var(--global-font-family--sans); }
+
+.demo-font-size--xxx-large { font-size: var(--global-font-size--xxx-large); }
+.demo-font-size--xx-large { font-size: var(--global-font-size--xx-large); }
+.demo-font-size--x-large { font-size: var(--global-font-size--x-large); }
+.demo-font-size--large { font-size: var(--global-font-size--large); }
+.demo-font-size--medium { font-size: var(--global-font-size--medium); }
+.demo-font-size--small { font-size: var(--global-font-size--small); }
+.demo-font-size--x-small { font-size: var(--global-font-size--x-small); }
+
+.demo-font-weight--regular { font-weight: var(--regular); }
+.demo-font-weight--medium { font-weight: var(--medium); }
+.demo-font-weight--bold { font-weight: var(--bold); }
