@@ -1,4 +1,0 @@
-label: (CMS) Font
-context:
-  shouldLoadCMS: true
-  shouldLoadBootstrap: true

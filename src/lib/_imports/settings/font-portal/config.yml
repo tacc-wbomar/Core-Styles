@@ -1,4 +1,0 @@
-label: (Portal) Font
-context:
-  shouldLoadPortal: true
-  shouldLoadBootstrap: true

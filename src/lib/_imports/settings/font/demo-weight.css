@@ -1,3 +1,8 @@
+/* To use settings */
+.demo-weight--regular { font-weight: var(--regular); }
+.demo-weight--medium { font-weight: var(--medium); }
+.demo-weight--bold { font-weight: var(--bold); }
+
 /* To style samples */
 .demo-grid p {
   font-size: var(--global-font-size--xxx-large);
