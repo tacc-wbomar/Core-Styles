@@ -2,6 +2,7 @@
 .demo-weight--regular { font-weight: var(--regular); }
 .demo-weight--medium { font-weight: var(--medium); }
 .demo-weight--bold { font-weight: var(--bold); }
+.demo-weight--black { font-weight: var(--black); }
 
 /* To style samples */
 .demo-grid p {
