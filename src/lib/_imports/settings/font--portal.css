@@ -11,4 +11,6 @@
   --global-font-size--medium: 1.4rem;
   --global-font-size--large: 1.6rem;
   --global-font-size--x-large: 2.0rem;
+  --global-font-size--xx-large: 2.0rem; /* no larger sizes found in tup */
+  --global-font-size--xxx-large: 2.0rem; /* no larger sizes found in tup */
 }
