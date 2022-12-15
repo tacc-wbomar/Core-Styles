@@ -39,6 +39,15 @@
 {{/unless}}
 {{/if}}
 
+{{#if _target.context.shouldLoadPortal }}
+{{#unless _target.context.shouldSkipPortal }}
+<!-- Styles: Global (for current pattern): Portal -->
+<style>
+@import url('{{path "/assets/core-styles.portal.css"}}');
+</style>
+{{/unless}}
+{{/if}}
+
 
 
 {{#if _target.context.supportStyles}}
@@ -100,6 +109,10 @@
     <dd>{{_target.context.shouldLoadCMS}}</dd>
     <dt>shouldSkipCMS</dt>
     <dd>{{_target.context.shouldSkipCMS}}</dd>
+    <dt>shouldLoadPortal</dt>
+    <dd>{{_target.context.shouldLoadPortal}}</dd>
+    <dt>shouldSkipPortal</dt>
+    <dd>{{_target.context.shouldSkipPortal}}</dd>
   </dl>
 </details>
 
