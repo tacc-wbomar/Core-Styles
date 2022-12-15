@@ -4,7 +4,7 @@
 
 .demo-grid {
   display: grid;
-  gap: 1em;
+  gap: 10px;
 }
 .demo-grid > figure {
   margin: unset; /* undo browser & Bootstrap */
@@ -16,7 +16,7 @@
 
 .demo-grid--boxes > * {
   border: var(--global-border--normal);
-  padding: 1em;
+  padding: 10px;
   text-align: center;
 }
 
@@ -25,7 +25,7 @@
 /* https://codepen.io/krystof-k/pen/vdNQGB */
 
 .demo-grid--square {
-  --size: 150px;
+  --size: 115px;
 
   grid-template-columns: repeat(auto-fill, var(--size));
 }
