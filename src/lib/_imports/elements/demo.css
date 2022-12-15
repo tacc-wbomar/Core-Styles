@@ -16,6 +16,7 @@ body {
 
 body > dl dl {
   margin-block: 0;
+  padding-left: unset; /* overwrite CMS */
 }
 body > dl dt,
 body > dl dd {
