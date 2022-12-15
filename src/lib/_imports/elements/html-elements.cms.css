@@ -187,6 +187,14 @@ Reference:
 Styleguide Elements.InlineTextSemantics
 */
 
+/* Miscellaneous */
+
+time {
+  color: var(--global-color-accent--secondary);
+  font-weight: var(--medium);
+  text-transform: uppercase;
+}
+
 /* Monospace */
 
 var,
