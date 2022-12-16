@@ -1,0 +1,15 @@
+variants:
+  - name: default
+    hidden: true
+  - name: cms
+    status: prototype
+    label: (CMS) Headings
+    context:
+      shouldLoadCMS: true
+      shouldLoadBootstrap: true
+  - name: portal
+    status: prototype
+    label: (Portal) Headings
+    context:
+      shouldLoadPortal: true
+      shouldLoadBootstrap: true
