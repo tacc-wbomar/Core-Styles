@@ -1,8 +1,10 @@
 status: prototype
 order: 1
 context:
-  shouldLoadBootstrap: true # not yet tested without Bootstrap
-                            # Known Dependencies: <caption> font color
+  shouldLoadBootstrap: true
+  📝 shouldLoadBootstrap: >-
+    not yet tested without Bootstrap
+    (known dependencies: <caption> font color)
   data:
     cols:
       - ID

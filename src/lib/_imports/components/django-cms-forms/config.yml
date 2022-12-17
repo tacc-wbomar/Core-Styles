@@ -1,4 +1,6 @@
 context:
-  shouldLoadCMS: true # because this is demo but this is CMS pattern
-  shouldSkipPattern: false # because core-styles.….css does not import this
+  shouldLoadCMS: true
+  📝 shouldLoadCMS: because this is demo but this is CMS pattern
+  shouldSkipPattern: false
+  📝 shouldSkipPattern: because core-styles.….css does not import this
 label: Django CMS Forms
