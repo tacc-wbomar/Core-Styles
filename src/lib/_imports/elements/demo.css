@@ -44,36 +44,3 @@ body > dl dd:not(.demo-grid) > * {
   margin-right: 5px;
   vertical-align: middle;
 }
-
-
-
-/* Debug Settings */
-
-body > details:last-of-type {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 1;
-
-  padding: 1em;
-  background-color: #222;
-  color: lime;
-
-  text-align: right;
-  direction: rtl;
-
-  font-family: var(--global-font-family--mono);
-}
-body > details[open]:last-of-type { opacity: 1; }
-body > details:not([open]):last-of-type { opacity: 0.5; }
-
-body > details:last-of-type summary {
-  font-weight: bold;
-}
-body > details:last-of-type dt { font-weight: normal; }
-body > details:last-of-type dd { font-weight: bold; }
-body > details:last-of-type dd {
-  line-height: 1.4;
-  min-height: 1.4em;
-  width: 4ch;
-}
