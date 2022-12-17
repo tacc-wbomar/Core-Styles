@@ -1,8 +1,8 @@
-status: ready
+status: prototype
 order: 1
 context:
   shouldLoadBootstrap: true # not yet tested without Bootstrap
-  shouldLoadCMS: true # temporary dependence, until proven to work on Portal
+                            # Known Dependencies: <caption> font color
   data:
     cols:
       - ID
