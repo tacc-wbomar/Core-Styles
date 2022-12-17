@@ -1,4 +1,7 @@
 @import url('../components/c-message.css');
+@import url('../tools/x-link.css');
+
+
 
 /* Grid */
 
@@ -9,8 +12,6 @@
 .demo-grid > figure {
   margin: unset; /* undo browser & Bootstrap */
 }
-
-
 
 /* Grid: Boxes */
 
@@ -41,19 +42,4 @@
 .demo-grid--square > *:first-child {
   grid-row: 1 / 1;
   grid-column: 1 / 1;
-}
-
-
-
-
-
-/* Message */
-
-.demo-message {
-  @extend .c-message--scope-global;
-
-  position: sticky;
-  top: 0;
-
-  font-family: var(--global-font-family--sans);
 }
