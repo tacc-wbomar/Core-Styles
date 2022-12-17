@@ -58,6 +58,16 @@ fractal.components.set('default.context', {
     isInternal: true,
     layer: 'base',
     path: '/assets/core-styles.base.css'
+  }],
+  cmsStyles: [{
+    isInternal: true,
+    layer: 'base',
+    path: '/assets/core-styles.cms.css'
+  }],
+  portalStyles: [{
+    isInternal: true,
+    layer: 'base',
+    path: '/assets/core-styles.portal.css'
   }]
 });
 
