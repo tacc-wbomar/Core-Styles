@@ -4,6 +4,7 @@ context:
 variants:
   - name: default
     status: prototype
+  - name: standard
   - name: frontera
     status: deprecated
     📝 name: using "frontera-about-page" breaks the demo
