@@ -1,0 +1,10 @@
+context:
+  shouldLoadCMS: true
+  📝 shouldLoadCMS: this pattern is not intended nor expected for use beyond CMS
+variants:
+  - name: default
+    status: prototype
+  - name: frontera
+    status: deprecated
+    📝 name: using "frontera-about-page" breaks the demo
+    label: Frontera About Page
