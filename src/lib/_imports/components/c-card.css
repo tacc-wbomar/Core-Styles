@@ -11,10 +11,10 @@
 @custom-selector :--c-card
     .c-card,
         .card,
-        .card-standard;
+        .card--standard;
 @custom-selector :--c-card--standard
     .c-card--standard,
-        .card-standard;
+        .card--standard;
 
 :root {
     --global-color-accent--unnamed: #61A39C;
