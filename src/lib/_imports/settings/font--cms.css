@@ -9,9 +9,9 @@
   /* WARNING: These are only for CMS sites using Core-Styles v1+ */
   --global-font-size--x-small: 1.0rem;
   --global-font-size--small: 1.2rem;
-  --global-font-size--medium: 1.8rem;
-  --global-font-size--large: 2.1rem;
-  --global-font-size--x-large: 2.8rem;
-  --global-font-size--xx-large: 3.2rem; /* retained from pre-2023 */
-  --global-font-size--xxx-large: 4.1rem; /* retained from pre-2023 */
+  --global-font-size--medium: 1.4rem;
+  --global-font-size--large: 1.8rem;
+  --global-font-size--x-large: 2.1rem;
+  --global-font-size--xx-large: 2.8rem;
+  --global-font-size--xxx-large: var(--global-font-size--xx-large);
 }
