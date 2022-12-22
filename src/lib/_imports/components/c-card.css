@@ -31,24 +31,44 @@
 /* Skin */
 /* NOTE: Design text color discrepency… text color should match that of body */
 
+/* For standard cards */
 :--c-card--standard {
     border-top-style: solid;
     border-top-width: var(--global-border-width--xx-thick);
 }
-:not(.o-section--style-dark) :--c-card--standard,
-:not(.o-section--style-muted) :--c-card--standard {
+
+:--c-card--image,
+:--c-card--standard {
     background-color: var(--global-color-primary--x-light);
     border-top-color: var(--global-color-accent--tertiary);
 }
-.o-section--style-muted :--c-card--standard {
-    background-color: var(--global-color-primary--xx-light);
+:--c-card--standard {
     border-top-color: var(--global-color-accent--tertiary);
 }
+
+:--c-card :--c-card--image,
+:--c-card :--c-card--standard,
+.o-section--style-muted :--c-card--image,
+.o-section--style-muted :--c-card--standard {
+    background-color: var(--global-color-primary--xx-light);
+}
+:--c-card :--c-card--standard,
+.o-section--style-muted :--c-card--standard {
+    border-top-color: var(--global-color-accent--tertiary);
+}
+
+.o-section--style-muted :--c-card :--c-card--image,
+.o-section--style-muted :--c-card :--c-card--standard,
+.o-section--style-dark :--c-card :--c-card--image,
+.o-section--style-dark :--c-card :--c-card--standard {
+    background-color: var(--global-color-primary--x-light);
+}
+
+/* For dark cards */
 .o-section--style-dark :--c-card--standard {
     background-color: var(--global-color-primary--xx-light);
     border-top-color: var(--global-color-accent--secondary);
 }
-
 /* To color text with greater specificity than .o-section does */
 .o-section--style-dark :--c-card > *:not(a, button) {
     color: var(--global-color-primary--xx-dark);
@@ -71,7 +91,7 @@
     justify-self: center;
 }
 
-:--c-card--standard {
+:--c-card {
     padding: var(--global-space--pattern-pad);
 }
 
