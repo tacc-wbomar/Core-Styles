@@ -53,3 +53,22 @@ body > main {
   width: 80vw;
   margin-inline: auto;
 }
+
+/* To show when body is covered by a full-width background */
+body:has(main > section) {
+  --color-light: var(--global-color-primary--xx-light);
+  --color-dark: var(--global-color-primary--x-light);
+
+  background-color: var(--color-dark);
+  background: repeating-linear-gradient( 90deg,
+    var(--color-dark),
+    var(--color-dark) 1px,
+    var(--color-light) 1px,
+    var(--color-light) 20px
+  );
+}
+
+/* To give equal block spacing to rulers */
+section + hr {
+  --global-space--hr-buffer-above: var(--global-space--hr-buffer-below);
+}
