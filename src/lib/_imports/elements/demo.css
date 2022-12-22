@@ -44,3 +44,12 @@ body > dl dd:not(.demo-grid) > * {
   margin-right: 5px;
   vertical-align: middle;
 }
+
+
+
+/* Lay Out */
+
+body > main {
+  width: 80vw;
+  margin-inline: auto;
+}
