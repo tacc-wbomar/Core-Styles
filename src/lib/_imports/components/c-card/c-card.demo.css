@@ -4,3 +4,8 @@
 .o-section > .c-card:has(.o-grid) {
   grid-column: 1/-1
 }
+
+/* To prevent cards from stretching to match grid's equal row height */
+.o-grid--col-min-width {
+  grid-auto-rows: unset;
+}
