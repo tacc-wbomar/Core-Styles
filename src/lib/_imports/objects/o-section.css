@@ -91,7 +91,7 @@ Styleguide Objects.Section
 /* Modifers: Style: Options */
 
 .o-section--style-light {
-  --color--text: var(--global-color-primary--dark);
+  --color--text: var(--global-color-primary--x-dark);
   --color--text-strong: var(--global-color-primary--xx-dark);
   --color--bkgd: var(--global-color-primary--xx-light);
   --color--line: var(--global-color-primary--normal);
@@ -105,7 +105,7 @@ Styleguide Objects.Section
   --color--link: var(--global-color-link-on-light--normal);
 }
 .o-section--style-dark {
-  --color--text: var(--global-color-primary--x-light);
+  --color--text: var(--global-color-primary--xx-light);
   --color--text-strong: var(--global-color-primary--xx-light);
   --color--bkgd: var(--global-color-primary--xx-dark);
   --color--line: var(--global-color-primary--xx-light);
@@ -169,7 +169,8 @@ Styleguide Objects.Section
 
 /* Modifers: Style: Child Text */
 
-[class*="o-section--style"] a {
+/* To color links, but not those within a nested pattern */
+[class*="o-section--style"] > a {
   color: var(--color--link);
 }
 [class*="o-section--style"] :is(h1, h2, h3, h4, h5, h6) {
