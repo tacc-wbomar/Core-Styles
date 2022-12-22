@@ -1,21 +1,23 @@
 /* The first box's first variation found on Getting Started design */
 /* https://xd.adobe.com/view/dabaec5a-cc31-4c5c-876e-56d6d8cc359e-8fe9/screen/c0898d6b-2fd9-472a-bcd7-1ae9d4f9a015 */
 
-/* FAQ: On white background, a gray card with an accent color top border */
-/* TODO: Share styles with box1-var2 */
-
 /* Settings */
 
 @custom-selector :--c-card
     .c-card,
     .card,
-    [class*=".card--*"];
+    [class*="card--"];
 @custom-selector :--c-card--standard
     .c-card--standard,
     .card--standard;
+@custom-selector :--c-card--transparent
+    .c-card--transparent,
+    .card--transparent;
+@custom-selector :--c-card--image
+    .c-card--image,
+    .card--image;
 
 :root {
-    --global-color-accent--unnamed: #61A39C;
     --global-space--bootstrap-gap: 30px;
     --global-space--pattern-pad: 30px;
     --global-space--unnamed: 50px;
@@ -27,15 +29,30 @@
 
 
 /* Skin */
+/* NOTE: Design text color discrepency… text color should match that of body */
 
 :--c-card--standard {
-    background-color: var(--global-color-primary--x-light);
-
-    border-top-color: var(--global-color-accent--unnamed);
     border-top-style: solid;
     border-top-width: var(--global-border-width--xx-thick);
 }
+:not(.o-section--style-dark) :--c-card--standard,
+:not(.o-section--style-muted) :--c-card--standard {
+    background-color: var(--global-color-primary--x-light);
+    border-top-color: var(--global-color-accent--tertiary);
+}
+.o-section--style-muted :--c-card--standard {
+    background-color: var(--global-color-primary--xx-light);
+    border-top-color: var(--global-color-accent--tertiary);
+}
+.o-section--style-dark :--c-card--standard {
+    background-color: var(--global-color-primary--xx-light);
+    border-top-color: var(--global-color-accent--secondary);
+}
 
+/* To color text with greater specificity than .o-section does */
+.o-section--style-dark :--c-card--standard > *:not(a, button) {
+    color: var(--global-color-primary--xx-dark);
+}
 
 
 
@@ -95,4 +112,13 @@
 /* To stretch pattern to fill container */
 .col:has( :--c-card--standard ) {
     display: flex;
+}
+
+/* To make links more obvious */
+:--c-card--standard a,
+:--c-card--transparent a {
+    font-weight: var(--bold);
+}
+:--c-card--image a {
+    font-weight: var(--black);
 }
