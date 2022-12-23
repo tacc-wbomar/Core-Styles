@@ -10,6 +10,15 @@
 @custom-selector :--c-card--standard
     .c-card--standard,
     .card--standard;
+@custom-selector :--c-card--standard-1
+    .c-card--standard-1,
+    .card--standard-1;
+@custom-selector :--c-card--standard-2
+    .c-card--standard-2,
+    .card--standard-2;
+@custom-selector :--c-card--standard-3
+    .c-card--standard-3,
+    .card--standard-3;
 @custom-selector :--c-card--transparent
     .c-card--transparent,
     .card--transparent;
@@ -31,10 +40,38 @@
 /* Skin */
 /* NOTE: Design text color discrepency… text color should match that of body */
 
-/* For standard cards */
-:--c-card--standard {
+/* Explicit Variations */
+
+:--c-card--standard-1 {
+    background-color: var(--global-color-primary--x-light);
+
     border-top-style: solid;
     border-top-width: var(--global-border-width--xx-thick);
+    border-top-color: var(--global-color-accent--tertiary);
+}
+:--c-card--standard-2 {
+    background-color: var(--global-color-primary--xx-light);
+
+    border-top-style: solid;
+    border-top-width: var(--global-border-width--xx-thick);
+    border-top-color: var(--global-color-accent--tertiary);
+}
+:--c-card--standard-3 {
+    background-color: var(--global-color-primary--xx-light);
+
+    border-top-style: solid;
+    border-top-width: var(--global-border-width--xx-thick);
+    border-top-color: var(--global-color-accent--secondary);
+}
+
+/* Automatic Variations */
+
+:--c-card--standard {
+    background-color: var(--global-color-primary--x-light);
+
+    border-top-style: solid;
+    border-top-width: var(--global-border-width--xx-thick);
+    border-top-color: var(--global-color-accent--tertiary);
 }
 
 :--c-card--image,
