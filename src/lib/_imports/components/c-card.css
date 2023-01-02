@@ -134,15 +134,18 @@
 
 
 
-/* To tweak full-width children */
-/* - To add space  */
+/* XXX: Commented out cuz it seems like an exception or the wrong solution */
+/*
+/* To tweak full-width children *//*
+/* - To add space  *//*
 .col:nth-child(4):last-child :--c-card--standard {
     margin-top: var(--global-space--unnamed);
 }
-/* - To remove border */
+/* - To remove border *//*
 .col:nth-child(4):last-child > :--c-card--standard {
     border-top: none;
 }
+*/
 
 
 
