@@ -42,18 +42,29 @@ Styleguide Objects.Section
 /* Block */
 
 .o-section {
-  /* GH-99: Use standard spacing value */
-  --padding-block: var(--global-space--section-gap);
-
-  padding-block: var(--padding-block); /* ~avg. from design docs */
+  /* Estimates from varying spacing in design specs:
+    - TACC Site Mockups
+    - CMS-Common-Components
+  */
+  --margin-block: var(--global-space--section-gap); /* 60px */
+  --padding-top: 50px;
+  --padding-bottom: 110px;
 }
+
+/* Basic blocks use margin, for intuitive usage */
+.o-section:not([class*="o-section--style"]) {
+  margin-block: var(--margin-block);
+}
+
+/* Modified blocks use padding, to support borders */
+.o-section[class*="o-section--style"] {
+  padding-block: var(--padding-top) var(--padding-bottom);
+}
+
 /* To distinguish nested sections */
 .o-section .o-section {
-  padding-block: 1em;
-
-  --hoz-space: 1em;
-  padding-inline: var(--hoz-space);
-  margin-inline: calc(-1 * var(--hoz-space));
+  padding: var(--padding-top);
+  margin-inline: calc(-1 * var(--padding-top));
 }
 
 
@@ -262,5 +273,5 @@ main > .container.o-section--style-light:last-of-type,
 main > .container > .o-section--style-light:last-of-type,
 main > .container.o-section--style-dark:last-of-type,
 main > .container > .o-section--style-dark:last-of-type {
-  margin-bottom: calc( -1 * var(--padding-block) );
+  margin-bottom: calc( -1 * var(--global-space--section-gap) );
 }

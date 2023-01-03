@@ -1,0 +1,16 @@
+variants:
+  - name: style-light
+    label: (Style) Light
+    context:
+      modifier: style-light
+  - name: style-muted
+    label: (Style) Muted
+    context:
+      modifier: style-muted
+  - name: style-dark
+    label: (Style) Dark
+    context:
+      modifier: style-dark
+context:
+  shouldLoadBootstrap: true # because of testing .container.o-section...
+  shouldLoadCMS: true # because Portal is not expected to use this
