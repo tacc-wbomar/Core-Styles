@@ -1,5 +1,7 @@
 /* This CSS is ONLY for the pattern library. It is NOT part of the pattern. */
 
+/* FROM https://github.com/TACC/Core-Styles/pull/96 */
+
 /* To show when body is covered by a full-width background */
 body {
   --color-light: var(--global-color-primary--xx-light);
@@ -12,6 +14,13 @@ body {
     var(--color-light) 1px,
     var(--color-light) 20px
   );
+}
+
+/* To add bottom space that will actually show up demo */
+/* https://github.com/TACC/Core-Styles/blob/823b7b9/src/lib/_imports/elements/html-elements.css#L61-L63 */
+body > main {
+  margin-bottom: unset;
+  padding-bottom: var(--global-space--section-gap);
 }
 
 /* To give equal block spacing to rulers */

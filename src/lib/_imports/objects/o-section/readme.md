@@ -1,4 +1,4 @@
-{{render '@o-section--usage'}} A [`<section>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section) is suitable for these wrappers.
+Add space between major blocks of content. {{render '@o-section--usage'}} A [`<section>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section) is suitable for these wrappers.
 
 | Class | Description
 | - | - |
@@ -7,6 +7,10 @@
 | `.o-section--style-light` | __gently__ highlight content |
 | `.o-section--style-muted` | __clearly__ highlight content |
 | `.o-section--style-dark` | __strongly__ highlight content |
+
+> **ⓘ Notice**
+>
+> Default sections (`o-section`) use margin. Modified sections (`o-section--style-...`) use padding.
 
 <script>
 /* To open external links in new window */
