@@ -12,14 +12,14 @@
 
 {{#if _target.context.shouldLoadBootstrap}}
 {{#unless _target.context.shouldSkipBootstrap }}
-<!-- Styles: Global (for current component): Bootstrap -->
+<!-- Styles: Global (for current pattern): Bootstrap -->
 <style>
   @import url('https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
 </style>
 {{/unless}}
 {{/if}}
 
-<!-- Styles: Global (for every component) -->
+<!-- Styles: Global (for every pattern) -->
 <style>
 {{#each globalStyles}}
   {{#if this.isInternal}}
@@ -32,9 +32,30 @@
 
 {{#if _target.context.shouldLoadCMS }}
 {{#unless _target.context.shouldSkipCMS }}
-<!-- Styles: Global (for current component): CMS -->
+<!-- Styles: Global (for current pattern): CMS -->
 <style>
-@import url('{{path "/assets/core-styles.cms.css"}}');
+{{#each cmsStyles}}
+  {{#if this.isInternal}}
+  @import url('{{path this.path}}');
+  {{else}}
+  @import url('{{this.path}}');
+  {{/if}}
+{{/each}}
+</style>
+{{/unless}}
+{{/if}}
+
+{{#if _target.context.shouldLoadPortal }}
+{{#unless _target.context.shouldSkipPortal }}
+<!-- Styles: Global (for current pattern): Portal -->
+<style>
+{{#each portalStyles}}
+  {{#if this.isInternal}}
+  @import url('{{path this.path}}');
+  {{else}}
+  @import url('{{this.path}}');
+  {{/if}}
+{{/each}}
 </style>
 {{/unless}}
 {{/if}}
@@ -42,7 +63,7 @@
 
 
 {{#if _target.context.supportStyles}}
-<!-- Styles: Local (for current component): Supporting Patterns -->
+<!-- Styles: Local (for current pattern): Supporting Patterns -->
 <style>
   {{#each _target.context.supportStyles}}
   @import url('{{path this}}');
@@ -51,7 +72,7 @@
 {{/if}}
 
 {{#unless _target.context.shouldSkipPattern}}
-<!-- Styles: Local (for current component): Current Pattern -->
+<!-- Styles: Local (for current pattern): Current Pattern -->
 <style>
   @import url('{{path "/assets/{{ _target.context.subdir }}/{{ _target.baseHandle }}.css"}}');
 </style>
@@ -59,7 +80,7 @@
 
 
 
-<!-- Styles: Demo (for current component) -->
+<!-- Styles: Demo (for current pattern) -->
 {{#each _target.resources.assets}}
 {{#if this.isCSS}}
 <style>
@@ -68,20 +89,15 @@
 {{/if}}
 {{/each}}
 
-<!-- Styles: Demo (for every component) -->
-<style>
-  @import url('{{path "/assets/core-styles.demo.css"}}');
-</style>
-
 
 
 {{#if _target.context.shouldLoadBootstrap}}
-<!-- Scripts: Global (for current component): Bootstrap -->
+<!-- Scripts: Global (for current pattern): Bootstrap -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 {{/if}}
 
-<!-- Scripts: Local (for current component) -->
+<!-- Scripts: Local (for current pattern) -->
 {{#each _target.resources.assets}}
 {{#if this.isJS}}
 <script
@@ -93,20 +109,5 @@
 
 
 
-{{!-- Config (for current component) --}}
-<details style="display:none;">
-  <summary>Configuration</summary>
-  <dl>
-    <dt>shouldLoadBootstrap</dt>
-    <dd>{{_target.context.shouldLoadBootstrap}}</dd>
-    <dt>shouldSkipBootstrap</dt>
-    <dd>{{_target.context.shouldSkipBootstrap}}</dd>
-    <dt>shouldLoadCMS</dt>
-    <dd>{{_target.context.shouldLoadCMS}}</dd>
-    <dt>shouldSkipCMS</dt>
-    <dd>{{_target.context.shouldSkipCMS}}</dd>
-  </dl>
-</details>
-
-{{!-- Markup (for current component) --}}
+{{!-- Markup (for current pattern) --}}
 {{{yield}}}

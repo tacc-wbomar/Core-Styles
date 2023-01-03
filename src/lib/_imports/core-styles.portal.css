@@ -5,7 +5,8 @@
 /* https://confluence.tacc.utexas.edu/x/IAA9Cw */
 
 /* SETTINGS */
-/* To get these, client should load `./base.css` first */
+/* To get most settings, client should load `./base.css` first */
+@import url("./settings/font--portal.css");
 
 /* GENERICS */
 /* Mostly from Bootstrap */

@@ -41,6 +41,9 @@
   --global-color-accent--alt: #d2cce7;
   --global-color-accent--weak: #6039cc40; /* similar to #E3D7FD on #f4f4f4 */
 
+  --global-color-accent--secondary: #877453;
+  --global-color-accent--tertiary: #61A39C;
+
   /* State */
   --global-color-info--x-dark: var(--global-color-primary--xx-dark);
   --global-color-info--dark: var(--global-color-primary--x-dark);
