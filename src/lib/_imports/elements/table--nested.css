@@ -31,16 +31,16 @@
   td.has-table { padding: 0; }
 }
 
-/* To replace parent table columns above with nested table columns */
+/* To replace any parent table columns above with nested table columns */
 /* FAQ: Pulls nested table up by the height of the parent table head */
-tr table {
+thead + tbody tr table {
   --offset: calc(-1 * 33px); /* WARNING: manually calculated */
 
   transform: translateY(var(--offset));
   margin-bottom: var(--offset);
 }
 /* FAQ: Hides any parent table head underneath nested table head */
-tr:first-of-type thead {
+thead + tbody tr:first-of-type thead {
   background: var(--global-color-background--app);
 }
 /* FAQ: Hides all successive (thus redundant) nested table heads */
