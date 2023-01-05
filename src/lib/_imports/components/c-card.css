@@ -174,3 +174,10 @@
 .col:has( :--c-card--standard ) {
     display: flex;
 }
+
+
+/* To make bold buttons */
+/* TODO: Determine whether this should apply to all CMS buttons */
+:--c-card a.c-button {
+    font-weight: var(--bold);
+}
