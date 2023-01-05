@@ -149,8 +149,7 @@ Styleguide Elements.InlineTextSemantics
 strong {
   font-weight: var(--bold);
 }
-strong b,
-b strong {
+b {
   font-weight: var(--black);
 }
 
