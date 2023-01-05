@@ -174,12 +174,3 @@
 .col:has( :--c-card--standard ) {
     display: flex;
 }
-
-/* To make links more obvious */
-:--c-card--standard a,
-:--c-card--transparent a {
-    font-weight: var(--bold);
-}
-:--c-card--image a {
-    font-weight: var(--black);
-}
