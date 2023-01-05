@@ -1,0 +1,19 @@
+context:
+  shouldLoadCMS: true
+  📝 shouldLoadCMS: this pattern is not intended nor expected for use beyond CMS
+variants:
+  - name: default
+    label: Default (Transparent)
+    status: prototype
+  - name: standard
+  - name: standard-1
+  - name: standard-2
+  - name: standard-3
+  - name: image
+  - name: frontera
+    status: deprecated
+    📝 name: using "frontera-about-page" breaks the demo
+    label: Frontera About Page
+    context:
+      supportStyles:
+        - ../../assets/components/c-card--frontera-about-page.css

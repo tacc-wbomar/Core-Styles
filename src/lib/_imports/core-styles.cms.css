@@ -21,7 +21,9 @@
 /* (none) */
 
 /* COMPONENTS */
-/* (none) */
+/* TODO: Move to TACC/Core-CMS-Resources:/frontera-cms
+        or — alternatively — TACC/Core-CMS */
+@import url("./components/c-card--frontera-about-page.css");
 
 /* TRUMPS */
 @import url("./trumps/s-affixed-input-wrapper.css");

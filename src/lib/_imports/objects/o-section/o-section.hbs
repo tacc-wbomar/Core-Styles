@@ -1,129 +1,60 @@
-<dl>
-  <dt>Basic</dt>
-  <dd>
+<main>
 
-    <section class="o-section o-section--{{modifier}}">
-      <p><strong>Section</strong></p>
-      <p>
-        I am a Section.
-      </p>
-      <ul>
-        <li><small>Use default Sections to add padding without borders between pairs.</small></li>
-        <li><small>Use light Sections to wrap most content.</small></li>
-        <li><small>Use muted Sections to gentlyhighlight some content.</small></li>
-        <li><small>Use dark Sections to strongly highlight some content.</small></li>
-      </ul>
+    <section class="o-section o-section--{{this._self.name}}">
+        <h2>Section</h2>
+        {{render '@o-section--usage'}}
     </section>
 
-  </dd>
-  <dt>Used in Pairs</dt>
-  <dd>
+    <hr />
 
-    <section class="o-section o-section--{{modifier}}">
-      <p><strong>Section (First of a Pair)</strong></p>
-      <p>
-        A Section of the same style directly after me will create a border between
-        both.
-        <small>Muted sections should <strong>not</strong> appear consectuively.</small>
-      </p>
+    <section class="o-section o-section--{{this._self.name}}">
+        <h2>Section (First of a Pair)</h2>
+        <p>{{> @text-of-one-paragraph-medium }}</p>
     </section>
-    <section class="o-section o-section--{{modifier}}">
-      <p><strong>Section (Second of a Pair)</strong></p>
-      <p>
-        A Section of the same style directly after me will create a border between
-        both.
-        <small>Muted sections should <strong>not</strong> appear consectuively.</small>
-      </p>
+    <section class="o-section o-section--{{this._self.name}}">
+        <h2>Section (Second of a Pair)</h2>
+        <p>{{> @text-of-one-paragraph-medium }}</p>
     </section>
 
-  </dd>
-  <dt>Used as a Container</dt>
-  <dd>
+    <hr />
 
-    <section class="container  o-section o-section--{{modifier}}">
-      <p><strong>Container Section (First of a Pair)</strong></p>
-      <p>
-        A <code>.container</code> Section has Container padding and a fake
-        border.<small>Muted sections should <strong>not</strong> appear consectuively.</small>
-      </p>
-    </section>
-    <section class="container  o-section o-section--{{modifier}}">
-      <p><strong>Container Section (First of a Pair)</strong></p>
-      <p>
-        A <code>.container</code> Section has Container padding and a fake
-        border.<small>Muted sections should <strong>not</strong> appear consectuively.</small>
-      </p>
-    </section>
-
-  </dd>
-  <dt>Interupted by a Muted Section</dt>
-  <dd>
-
-    <section class="o-section o-section--{{modifier}}">
-      <p><strong>Section (before Muted Section)</strong></p>
-      <p>
-        A pair of <strong>light</strong> or <strong>dark</strong> Sections may have
-        a <strong>muted</strong> Section between them.
-        <small>Muted sections should <strong>not</strong> appear consectuively.</small>
-      </p>
+    <section class="o-section o-section--{{this._self.name}}">
+        <h2>Section (before Muted Section)</h2>
+        <p>{{> @text-of-one-paragraph-medium }}</p>
     </section>
     <section class="o-section o-section--style-muted">
-      <p><strong>(Muted) Section</strong></p>
-      <p>
-        A <strong>muted</strong> Section would appear between two
-        <strong>light</strong> or <strong>dark</strong> Sections.
-        <small>It would probably not appear between two<strong>muted</strong> Sections.</small>
-      </p>
+        <h2>Muted Section</h2>
+        <p>{{> @text-of-one-paragraph-medium }}</p>
     </section>
-    <section class="o-section o-section--{{modifier}}">
-      <p><strong>Section (after Muted Section)</strong></p>
-      <p>
-        A pair of <strong>light</strong> or <strong>dark</strong> Sections may have
-        a <strong>muted</strong> Section between them.
-        <small>Muted sections should <strong>not</strong> appear consectuively.</small>
-      </p>
+    <section class="o-section o-section--{{this._self.name}}">
+        <h2>Section (after Muted Section)</h2>
+        <p>{{> @text-of-one-paragraph-medium }}</p>
     </section>
 
-  </dd>
-  <dt>With Nested Sections</dt>
-  <dd>
+    <hr />
 
-    <section class="o-section o-section--{{modifier}}">
-      <p><strong>Section</strong></p>
-      <p>
-        Sections can be nested within me.
-        <small>A nested Section removes the standard Section spacing.</small>
-        <small>⚠️ As of 2022-12-12, it is not used in any design.</small>
-      </p>
-      <div class="o-section o-section--style-dark">
-        <p><strong>(Nested) Dark Section</strong></p>
-        <p>I am nested.</p>
-      </div>
-      <div class="o-section o-section--style-muted">
-        <p><strong>(Nested) Muted Section</strong></p>
-        <p>I am nested.<!-- <small>No use case for this is expected, but it is available.<small>-->
-        </p>
-      </div>
-      <div class="o-section o-section--style-light">
-        <p><strong>(Nested) Light Section</strong></p>
-        <p>I am nested.</p>
-      </div>
+    <section class="o-section o-section--{{this._self.name}}">
+        <h2>Section (with Nested Sections)</h2>
+        <p>⚠️ These are not used in any design. They are minimally supported only to prevent layouts from breaking if accidentally used.</p>
+        <div class="o-section o-section--style-dark">
+            <h3>(Nested) Dark Section</h3>
+            <p>{{> @text-of-one-paragraph-short }}</p>
+        </div>
+        <div class="o-section o-section--style-muted">
+            <h3>(Nested) Muted Section</h3>
+            <p>{{> @text-of-one-paragraph-short }}</p>
+        </div>
+        <div class="o-section o-section--style-light">
+            <h3>(Nested) Light Section</h3>
+            <p>{{> @text-of-one-paragraph-short }}</p>
+        </div>
     </section>
 
-  </dd>
-  <dt>At the Bottom of a Page</dt>
-  <dd>
+    <hr />
 
-    <section class="o-section o-section--{{modifier}}">
-      <p><strong>Section</strong></p>
-      <p>
-        At the bottom of a page:
-      </p>
-      <ul>
-        <li><small>A light Section will stand out above the Footer.</small></li>
-        <li><small>A muted Section will stand out above the Footer.</small></li>
-        <li><small>A dark Section will visually merge with the Footer.</small></li>
-      </ul>
+    <section class="o-section o-section--{{this._self.name}}">
+        <h2>Section (at Bottom of Page)</h2>
+        <p>At the bottom of a CMS page: a <strong>light</strong> Section will stand out above the Footer, a <strong>muted</strong> Section will stand out above the Footer, a <strong>dark</strong> Section will visually merge with the Footer.</p>
     </section>
 
-</dl>
+</main>
