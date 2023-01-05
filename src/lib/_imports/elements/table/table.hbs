@@ -1,12 +1,14 @@
-<table class="{{#if data.has-table }}has-table{{/if}} {{#if class }}{{ class }}{{/if}}">
+<table class="{{#if table }}has-table{{/if}} {{#if class }}{{ class }}{{/if}}">
   {{#if caption }}
   <caption>{{{ caption }}}</catpion>
   {{/if}}
+  {{#if data.cols }}
   <thead>
     <tr>
       {{#each data.cols}}<th>{{ this }}</th>{{/each}}
     </tr>
   </thead>
+  {{/if}}
   <tbody>
   {{#each data.rows}}
     <tr>
