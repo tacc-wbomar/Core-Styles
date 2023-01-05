@@ -145,6 +145,15 @@ Reference:
 Styleguide Elements.InlineTextSemantics
 */
 
+/* To allow user to distinguish bold and black */
+strong {
+  font-weight: var(--bold);
+}
+strong b,
+b strong {
+  font-weight: var(--black);
+}
+
 /* Monospace */
 
 var,
