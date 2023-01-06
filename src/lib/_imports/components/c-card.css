@@ -1,6 +1,12 @@
 /* The first box's first variation found on Getting Started design */
 /* https://xd.adobe.com/view/dabaec5a-cc31-4c5c-876e-56d6d8cc359e-8fe9/screen/c0898d6b-2fd9-472a-bcd7-1ae9d4f9a015 */
 
+@import url("../objects/o-section.selectors.css");
+
+
+
+
+
 /* Settings */
 
 @custom-selector :--c-card
@@ -85,29 +91,29 @@
 
 :--c-card :--c-card--image,
 :--c-card :--c-card--standard,
-.o-section--style-muted :--c-card--image,
-.o-section--style-muted :--c-card--standard {
+:--o-section--muted :--c-card--image,
+:--o-section--muted :--c-card--standard {
     background-color: var(--global-color-primary--xx-light);
 }
 :--c-card :--c-card--standard,
-.o-section--style-muted :--c-card--standard {
+:--o-section--muted :--c-card--standard {
     border-top-color: var(--global-color-accent--tertiary);
 }
 
-.o-section--style-muted :--c-card :--c-card--image,
-.o-section--style-muted :--c-card :--c-card--standard,
-.o-section--style-dark :--c-card :--c-card--image,
-.o-section--style-dark :--c-card :--c-card--standard {
+:--o-section--muted :--c-card :--c-card--image,
+:--o-section--muted :--c-card :--c-card--standard,
+:--o-section--dark :--c-card :--c-card--image,
+:--o-section--dark :--c-card :--c-card--standard {
     background-color: var(--global-color-primary--x-light);
 }
 
 /* For dark cards */
-.o-section--style-dark :--c-card--standard {
+:--o-section--dark :--c-card--standard {
     background-color: var(--global-color-primary--xx-light);
     border-top-color: var(--global-color-accent--secondary);
 }
 /* To color text with greater specificity than .o-section does */
-.o-section--style-dark :--c-card > *:not(a, button) {
+:--o-section--dark :--c-card > *:not(a, button) {
     color: var(--global-color-primary--xx-dark);
 }
 

@@ -1,12 +1,14 @@
 @import url("../tools/x-layout.css");
 
+@import url("./o-section.selectors.css");
+
 
 
 
 
 /* Block */
 
-.o-section {
+:--o-section {
   /* Estimates from varying spacing in design specs:
     - TACC Site Mockups
     - CMS-Common-Components
@@ -17,17 +19,17 @@
 }
 
 /* Basic blocks use margin, for intuitive usage */
-.o-section:not([class*="o-section--style"]) {
+:--o-section:not(:--o-section--style) {
   margin-block: var(--margin-block);
 }
 
 /* Modified blocks use padding, to support backgrounds */
-.o-section[class*="o-section--style"] {
+:--o-section--style {
   padding-block: var(--padding-top) var(--padding-bottom);
 }
 
 /* To distinguish nested sections */
-.o-section .o-section {
+:--o-section :--o-section {
   padding: var(--padding-top);
   margin-inline: calc(-1 * var(--padding-top));
 }
@@ -45,7 +47,7 @@
 .o-section--banner { overflow: hidden; }
 .o-section--banner [class*="o-section--layout"] { gap: 0; }
 .o-section--banner .container { padding-inline: 0; }
-.o-section--banner.o-section { padding-block: 0; }
+.o-section--banner:--o-section { padding-block: 0; }
 
 
 
@@ -66,21 +68,21 @@
 
 /* Modifers: Style: Options */
 
-.o-section--style-light {
+:--o-section--light {
   --color--text: var(--global-color-primary--x-dark);
   --color--text-strong: var(--global-color-primary--xx-dark);
   --color--bkgd: var(--global-color-primary--xx-light);
   --color--line: var(--global-color-primary--normal);
   --color--link: var(--global-color-link-on-light--normal);
 }
-.o-section--style-muted {
+:--o-section--muted {
   --color--text: var(--global-color-primary--x-dark);
   --color--text-strong: var(--global-color-primary--xx-dark);
   --color--bkgd: var(--global-color-primary--x-light);
   --color--line: var(--global-color-primary--dark);
   --color--link: var(--global-color-link-on-light--normal);
 }
-.o-section--style-dark {
+:--o-section--dark {
   --color--text: var(--global-color-primary--xx-light);
   --color--text-strong: var(--global-color-primary--xx-light);
   --color--bkgd: var(--global-color-primary--xx-dark);
@@ -90,7 +92,7 @@
 
 /* Modifers: Style: Text & Background */
 
-[class*="o-section--style"] {
+:--o-section--style {
   --box-shadow--fake-bkgd: 50vw 0 var(--color--bkgd),
                           -50vw 0 var(--color--bkgd);
 
@@ -99,17 +101,17 @@
   box-shadow: var(--box-shadow--fake-bkgd);
 }
 /* Nested sections must not stretch to page edge */
-[class*="o-section--style"] [class*="o-section--style"] {
+:--o-section--style :--o-section--style {
   box-shadow: none;
 }
 
 /* Modifers: Style: Child Text */
 
 /* To color links, but not those within a nested pattern */
-[class*="o-section--style"] > a {
+:--o-section--style > a {
   color: var(--color--link);
 }
-[class*="o-section--style"] :is(h1, h2, h3, h4, h5, h6) {
+:--o-section--style :is(h1, h2, h3, h4, h5, h6) {
   color: var(--color--text-strong);
 }
 
@@ -137,7 +139,7 @@
 /* Modifers: Banner */
 /* FP-1462: Extract to new banner component(s) */
 
-[class*="o-section--style"].o-section--banner + [class*="o-section--style"] {
+:--o-section--style.o-section--banner + :--o-section--style {
   box-shadow: var(--box-shadow--fake-bkgd);
 }
 
@@ -153,7 +155,7 @@
 /* FP-1462: Extract to new banner component(s) */
 
 /* Added `.o-section--banner` to require parent modifier class in markup */
-.o-section--banner .o-section__banner-image {
+.o-section--banner :--o-section__banner-image {
 
   /* To size image to cover section dimensions but maintain ratio */
   /* CAVEAT: This causes image to overflow beyond section */
@@ -177,7 +179,7 @@
 /* FP-1462: Extract to new banner component(s) */
 
 /* Added `.o-section--banner` to require parent modifier class in markup */
-.o-section--banner .o-section__banner-overlay {
+.o-section--banner :--o-section__banner-overlay {
   position: relative;
   z-index: 2;
 }
@@ -195,10 +197,10 @@
 /* To prevent visibly extra space beneath certain sections and footer */
 /* FAQ: "extra space" is margin (from <main>) between section and <footer> */
 /* FAQ: 'last-of-type' not 'last-child' cuz hidden elements */
-main > .container.o-section--style-light:last-of-type,
-main > .container > .o-section--style-light:last-of-type,
-main > .container.o-section--style-dark:last-of-type,
-main > .container > .o-section--style-dark:last-of-type {
+main > .container:--o-section--light:last-of-type,
+main > .container > :--o-section--light:last-of-type,
+main > .container:--o-section--dark:last-of-type,
+main > .container > :--o-section--dark:last-of-type {
   margin-bottom: calc( -1 * var(--global-space--section-gap) );
 }
 
@@ -206,6 +208,6 @@ main > .container > .o-section--style-dark:last-of-type {
 
 /* To hide margin that is likely undesirable */
 /* WARNING: This "feature" was not reviewed by design */
-.o-section > *:last-child {
+:--o-section > *:last-child {
   margin-bottom: 0;
 }
