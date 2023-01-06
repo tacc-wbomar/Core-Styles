@@ -4,12 +4,16 @@ context:
 variants:
   - name: default
     label: Default (Transparent)
-    status: prototype
+  - name: plain
   - name: standard
   - name: standard-1
+    status: prototype
   - name: standard-2
+    status: prototype
   - name: standard-3
-  - name: image
+    status: prototype
+  # - name: image
+  #   status: prototype
   - name: frontera
     status: deprecated
     📝 name: using "frontera-about-page" breaks the demo

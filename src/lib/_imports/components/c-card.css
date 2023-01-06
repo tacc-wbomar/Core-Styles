@@ -3,34 +3,13 @@
 
 @import url("../objects/o-section.selectors.css");
 
+@import url("./c-card.selectors.css");
+
 
 
 
 
 /* Settings */
-
-@custom-selector :--c-card
-    .c-card,
-    .card,
-    [class*="card--"];
-@custom-selector :--c-card--standard
-    .c-card--standard,
-    .card--standard;
-@custom-selector :--c-card--standard-1
-    .c-card--standard-1,
-    .card--standard-1;
-@custom-selector :--c-card--standard-2
-    .c-card--standard-2,
-    .card--standard-2;
-@custom-selector :--c-card--standard-3
-    .c-card--standard-3,
-    .card--standard-3;
-@custom-selector :--c-card--transparent
-    .c-card--transparent,
-    .card--transparent;
-@custom-selector :--c-card--image
-    .c-card--image,
-    .card--image;
 
 :root {
     --global-space--bootstrap-gap: 30px;
@@ -46,8 +25,34 @@
 /* Skin */
 /* NOTE: Design text color discrepency… text color should match that of body */
 
+
+
 /* Explicit Variations */
 
+/* Explicit Variations: Plain  */
+
+:--c-card--plain{
+    margin-bottom: var(--global-space--bootstrap-gap);
+}
+:--c-card--plain-hr-top {
+    border-top: 1px solid var(--global-color-primary--dark); /* mimic <hr> */
+    margin-top: var(--global-space--hr-buffer-below); /* mimic <hr> */
+}
+:--c-card--plain-hr-bottom {
+    border-bottom: 1px solid var(--global-color-primary--dark); /* mimic <hr> */
+    margin-bottom: var(--global-space--hr-buffer-below); /* mimic <hr> */
+}
+
+/* Explicit Variations: Standard  */
+
+:--c-card--standard {
+    background-color: var(--global-color-primary--x-light);
+
+    border-top-style: solid;
+    border-top-width: var(--global-border-width--xx-thick);
+    border-top-color: var(--global-color-accent--tertiary);
+}
+/* NOTE: Delete these if "Automatic Variations" prove them unnecessary */
 :--c-card--standard-1 {
     background-color: var(--global-color-primary--x-light);
 
@@ -70,28 +75,19 @@
     border-top-color: var(--global-color-accent--secondary);
 }
 
+
+
 /* Automatic Variations */
 
-:--c-card--standard {
-    background-color: var(--global-color-primary--x-light);
-
-    border-top-style: solid;
-    border-top-width: var(--global-border-width--xx-thick);
-    border-top-color: var(--global-color-accent--tertiary);
-}
-
-:--c-card--image,
+:--c-card--plain,
 :--c-card--standard {
     background-color: var(--global-color-primary--x-light);
     border-top-color: var(--global-color-accent--tertiary);
 }
-:--c-card--standard {
-    border-top-color: var(--global-color-accent--tertiary);
-}
 
-:--c-card :--c-card--image,
+:--c-card :--c-card--plain,
 :--c-card :--c-card--standard,
-:--o-section--muted :--c-card--image,
+:--o-section--muted :--c-card--plain,
 :--o-section--muted :--c-card--standard {
     background-color: var(--global-color-primary--xx-light);
 }
@@ -100,9 +96,9 @@
     border-top-color: var(--global-color-accent--tertiary);
 }
 
-:--o-section--muted :--c-card :--c-card--image,
+:--o-section--muted :--c-card :--c-card--plain,
 :--o-section--muted :--c-card :--c-card--standard,
-:--o-section--dark :--c-card :--c-card--image,
+:--o-section--dark :--c-card :--c-card--plain,
 :--o-section--dark :--c-card :--c-card--standard {
     background-color: var(--global-color-primary--x-light);
 }
@@ -113,7 +109,9 @@
     border-top-color: var(--global-color-accent--secondary);
 }
 /* To color text with greater specificity than .o-section does */
-:--o-section--dark :--c-card > *:not(a, button) {
+:--o-section--dark :--c-card--plain > *:not(a, button),
+:--o-section--dark :--c-card--standard > *:not(a, button),,
+:--o-section--dark :--c-card--standard-N > *:not(a, button) {
     color: var(--global-color-primary--xx-dark);
 }
 
@@ -145,11 +143,13 @@
 /*
 /* To tweak full-width children *//*
 /* - To add space  *//*
-.col:nth-child(4):last-child :--c-card--standard {
+.col:nth-child(4):last-child :--c-card--standard,
+.col:nth-child(4):last-child :--c-card--standard-N {
     margin-top: var(--global-space--unnamed);
 }
 /* - To remove border *//*
-.col:nth-child(4):last-child > :--c-card--standard {
+.col:nth-child(4):last-child > :--c-card--standard,
+.col:nth-child(4):last-child > :--c-card--standard-N {
     border-top: none;
 }
 */
@@ -157,28 +157,29 @@
 
 
 /* To add space between rows of boxes */
-:--c-card--standard:not( .col:only-child > * ) {
+/* XXX: Commented out until we know whether we want context-based spacing */
+/*
+:--c-card--standard:not( .col:only-child > * )
+:--c-card--standard-N:not( .col:only-child > * ) {
     margin-bottom: var(--global-space--bootstrap-gap);
 }
-/* To eat the margin-bottom of bottom row of blocks so padding is consistent */
-:--c-card--standard:has( .row:last-child:not(:first-child) ) {
+/* To eat the margin-bottom of bottom row of blocks so padding is consistent *\/
+:--c-card--standard:has( .row:last-child:not(:first-child) ),
+:--c-card--standard-N:has( .row:last-child:not(:first-child) ) {
     padding-bottom: calc(
        var(--global-space--pattern-pad) - var(--global-space--bootstrap-gap)
     );
 }
+*/
 
 
 
 /* To remove undesired space */
-:--c-card--standard :is( h1, h2, h3, h4, h5, h6 ) {
+:--c-card :is(h1, h2, h3, h4, h5, h6) {
     margin-top: unset;
 }
-:--c-card--standard p:last-child {
+:--c-card p:last-child {
     margin-bottom: unset;
-}
-/* To stretch pattern to fill container */
-.col:has( :--c-card--standard ) {
-    display: flex;
 }
 
 

@@ -7,10 +7,10 @@ Add space between major blocks of content. {{render '@o-section--usage'}} A [`<s
 | Class (Std.)              | Class (Alt.)     | Description
 | - | - | - |
 | `.o-section`              | `.section`       | give extra space to content
-| `.o-section--style-...`   | `.section-...`   | add full-width background
-| `.o-section--style-light` | `.section-light` | __gently__ highlight content
-| `.o-section--style-muted` | `.section-muted` | __clearly__ highlight content
-| `.o-section--style-dark`  | `.section-dark`  | __strongly__ highlight content
+| `.o-section--style-...`   | `.section--...`   | add full-width background
+| `.o-section--style-light` | `.section--light` | __gently__ highlight content
+| `.o-section--style-muted` | `.section--muted` | __clearly__ highlight content
+| `.o-section--style-dark`  | `.section--dark`  | __strongly__ highlight content
 
 Older features are not illustrated in the demo:
 
