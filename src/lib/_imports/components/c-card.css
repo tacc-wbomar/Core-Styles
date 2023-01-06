@@ -31,9 +31,6 @@
 
 /* Explicit Variations: Plain  */
 
-:--c-card--plain{
-    margin-bottom: var(--global-space--bootstrap-gap);
-}
 :--c-card--plain-hr-top {
     border-top: 1px solid var(--global-color-primary--dark); /* mimic <hr> */
     margin-top: var(--global-space--hr-buffer-below); /* mimic <hr> */
@@ -135,6 +132,7 @@
 
 :--c-card {
     padding: var(--global-space--pattern-pad);
+    margin-bottom: var(--global-space--bootstrap-gap);
 }
 
 
