@@ -1,37 +1,3 @@
-/*
-Section
-
-A group of related content.
-
-_Nested sections are an afterthought. No official design uses them._
-
-To Do:
-<details><summary>FP-1463: Extract layout pattern</summary>
-
-```
-.o-section--layout-a - lay out children as two even columns
-.o-section--layout-b - lay out children as one wide column & one narrow column
-.o-section--layout-c - lay out children as one narrow column & one wide column
-.o-section--layout-d - lay out children as three even
-```
-
-</details>
-<details><summary>FP-1462: Extract banner pattern</summary>
-
-```
-.o-section--banner - add banner with background image, overlay, then content
-```
-
-</details>
-
-.o-section--style-light - light background, dark text
-.o-section--style-muted - dull light background, dark text
-.o-section--style-dark  - dark background, light text
-
-Markup: o-section.html
-
-Styleguide Objects.Section
-*/
 @import url("../tools/x-layout.css");
 
 

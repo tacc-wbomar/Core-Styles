@@ -3,7 +3,7 @@ Add space between major blocks of content. {{render '@o-section--usage'}} A [`<s
 | Class | Description
 | - | - |
 | `.o-section` | give extra space to content |
-| `.o-section--style-styled` | add full-width background |
+| `.o-section--style(-...)` | add full-width background |
 | `.o-section--style-light` | __gently__ highlight content |
 | `.o-section--style-muted` | __clearly__ highlight content |
 | `.o-section--style-dark` | __strongly__ highlight content |
