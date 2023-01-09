@@ -116,6 +116,7 @@
 
 
 
+
 /* Structure */
 
 /* To layout via grid */
@@ -181,6 +182,10 @@
 
 
 
+
+
+/* Elements */
+
 /* To remove undesired space */
 :--c-card :is(h1, h2, h3, h4, h5, h6) {
     margin-top: unset;
@@ -189,9 +194,25 @@
     margin-bottom: unset;
 }
 
-
-/* To make bold buttons */
+/* To make buttons bold */
 /* TODO: Determine whether this should apply to all CMS buttons */
 :--c-card a.c-button {
     font-weight: var(--bold);
+}
+
+/* To reduce font size of mailto link */
+:--c-card a[data-user][data-domain]::before {
+    font-size: var(--global-font-size--medium);
+}
+
+/* To tweak action icon appearance */
+:--c-card > :is(:--action) > .icon:first-child {
+    vertical-align: middle;
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+/* Miscellaneous */
+:--c-card address {
+    line-height: 1.7;
 }
