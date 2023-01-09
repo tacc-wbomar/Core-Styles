@@ -117,19 +117,27 @@
 
 /* Structure */
 
+@custom-selector :--action button, a;
+
+/* To layout via grid */
 :--c-card {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: min-content;
 }
-:--c-card > *:not(.c-button),
-:--c-card > .c-button:only-of-type {
+/* To center align multiple actions within two columns */
+:--c-card > * {
     grid-column: span 2;
 }
-:--c-card > .c-button {
+:--c-card > :is(:--action):not(:only-of-type) {
+    grid-column: unset;
     justify-self: center;
 }
+:--c-card > :is(:--action):only-of-type {
+    justify-self: start;
+}
 
+/* To set spacing */
 :--c-card {
     padding: var(--global-space--pattern-pad);
     margin-bottom: var(--global-space--bootstrap-gap);
