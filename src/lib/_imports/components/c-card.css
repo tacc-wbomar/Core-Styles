@@ -133,6 +133,7 @@
     grid-column: unset;
     justify-self: center;
 }
+:--c-card > :is(:--action):not(.c-button),
 :--c-card > :is(:--action):only-of-type {
     justify-self: start;
 }
