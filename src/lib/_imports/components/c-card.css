@@ -108,7 +108,7 @@
 }
 /* To color text with greater specificity than .o-section does */
 :--o-section--dark :--c-card--plain > *:not(a, button),
-:--o-section--dark :--c-card--standard > *:not(a, button),,
+:--o-section--dark :--c-card--standard > *:not(a, button),
 :--o-section--dark :--c-card--standard-N > *:not(a, button) {
     color: var(--global-color-primary--xx-dark);
 }
