@@ -127,6 +127,7 @@
 /* To center align multiple actions within two columns */
 :--c-card > * {
     grid-column: span 2;
+    align-self: center; /* to align :--action's */
 }
 :--c-card > :is(:--action):not(:only-of-type) {
     grid-column: unset;
