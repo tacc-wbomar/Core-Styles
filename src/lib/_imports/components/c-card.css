@@ -2,6 +2,7 @@
 /* https://xd.adobe.com/view/dabaec5a-cc31-4c5c-876e-56d6d8cc359e-8fe9/screen/c0898d6b-2fd9-472a-bcd7-1ae9d4f9a015 */
 
 @import url("../objects/o-section.selectors.css");
+@import url("../tools/selectors.css");
 
 @import url("./c-card.selectors.css");
 
@@ -116,8 +117,6 @@
 
 
 /* Structure */
-
-@custom-selector :--action button, a;
 
 /* To layout via grid */
 :--c-card {
