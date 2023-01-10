@@ -10,59 +10,59 @@ variants:
     label: Horz. & Wide
     context:
       class: |-
-        c-data-list
-        c-data-list--is-horz
-        c-data-list--is-wide
+        data-list
+        data-list--horz
+        data-list--wide
   - name: horz-wide
     label: Horz. & Wide (Values Truncated)
     context:
       class: |-
-        c-data-list
-        c-data-list--is-horz
-        c-data-list--is-wide
-        c-data-list--should-truncate-values
+        data-list
+        data-list--horz
+        data-list--wide
+        data-list--truncate-values
   - name: horz-narrow
     label: Horz. & Narrow
     context:
       class: |-
-        c-data-list
-        c-data-list--is-horz
-        c-data-list--is-narrow
+        data-list
+        data-list--horz
+        data-list--narrow
   - name: horz-narrow
     label: Horz. & Narrow (Values Truncated)
     context:
       class: |-
-        c-data-list
-        c-data-list--is-horz
-        c-data-list--is-narrow
-        c-data-list--should-truncate-values
+        data-list
+        data-list--horz
+        data-list--narrow
+        data-list--truncate-values
   - name: vert-wide
     label: Vert. & Wide
     context:
       class: |-
-        c-data-list
-        c-data-list--is-vert
-        c-data-list--is-wide
+        data-list
+        data-list--vert
+        data-list--wide
   - name: vert-wide
     label: Vert. & Wide (Values Truncated)
     context:
       class: |-
-        c-data-list
-        c-data-list--is-vert
-        c-data-list--is-wide
-        c-data-list--should-truncate-values
+        data-list
+        data-list--vert
+        data-list--wide
+        data-list--truncate-values
   - name: vert-narrow
     label: Vert. & Narrow
     context:
       class: |-
-        c-data-list
-        c-data-list--is-vert
-        c-data-list--is-narrow
+        data-list
+        data-list--vert
+        data-list--narrow
   - name: vert-narrow
     label: Vert. & Narrow (Values Truncated)
     context:
       class: |-
-        c-data-list
-        c-data-list--is-vert
-        c-data-list--is-narrow
-        c-data-list--should-truncate-values
+        data-list
+        data-list--vert
+        data-list--narrow
+        data-list--truncate-values
