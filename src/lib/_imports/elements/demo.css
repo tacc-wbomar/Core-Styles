@@ -27,7 +27,6 @@ body > dl dd {
 body > dl dt {
   font-size: 1.6rem;
   font-weight: var(--medium);
-  text-transform: capitalize;
   margin-bottom: 10px;
 }
 body > dl > dt {
