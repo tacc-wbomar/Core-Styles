@@ -35,9 +35,25 @@ Styleguide Components.DataList
 
 
 
+/* Tools */
+
+@custom-selector :--data-list
+  .c-data-list,
+  .data-list,
+  [class*="data-list--"];
+@custom-selector :--data-list__key
+  :--data-list tbody th;
+@custom-selector :--data-list__value
+  :--data-list tbody td;
+
+
+
+
+
 /* Base i.e. Container */
 
-table.c-data-list {
+table:--data-list {
+  /* ???: Is this only for CEPv2? It appears useless in v1 */
   border-left: 0;
   border-right: 0;
 }
