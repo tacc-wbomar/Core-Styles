@@ -34,7 +34,28 @@
 {{#unless _target.context.shouldSkipCMS }}
 <!-- Styles: Global (for current pattern): CMS -->
 <style>
-@import url('{{path "/assets/core-styles.cms.css"}}');
+{{#each cmsStyles}}
+  {{#if this.isInternal}}
+  @import url('{{path this.path}}');
+  {{else}}
+  @import url('{{this.path}}');
+  {{/if}}
+{{/each}}
+</style>
+{{/unless}}
+{{/if}}
+
+{{#if _target.context.shouldLoadPortal }}
+{{#unless _target.context.shouldSkipPortal }}
+<!-- Styles: Global (for current pattern): Portal -->
+<style>
+{{#each portalStyles}}
+  {{#if this.isInternal}}
+  @import url('{{path this.path}}');
+  {{else}}
+  @import url('{{this.path}}');
+  {{/if}}
+{{/each}}
 </style>
 {{/unless}}
 {{/if}}
@@ -87,21 +108,6 @@
 {{/each}}
 
 
-
-{{!-- Config (for current pattern) --}}
-<details style="display:none;">
-  <summary>Configuration</summary>
-  <dl>
-    <dt>shouldLoadBootstrap</dt>
-    <dd>{{_target.context.shouldLoadBootstrap}}</dd>
-    <dt>shouldSkipBootstrap</dt>
-    <dd>{{_target.context.shouldSkipBootstrap}}</dd>
-    <dt>shouldLoadCMS</dt>
-    <dd>{{_target.context.shouldLoadCMS}}</dd>
-    <dt>shouldSkipCMS</dt>
-    <dd>{{_target.context.shouldSkipCMS}}</dd>
-  </dl>
-</details>
 
 {{!-- Markup (for current pattern) --}}
 {{{yield}}}

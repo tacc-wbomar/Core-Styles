@@ -49,7 +49,7 @@ fractal.components.set('resources', {
   },
 });
 fractal.components.set('default.context', {
-  shouldSkipPattern: true, // true, because …base.css loads most components
+  shouldSkipPattern: true, // true, because core-styles.….css loads most
   globalStyles: [{
     isInternal: true,
     layer: 'base',
@@ -58,6 +58,16 @@ fractal.components.set('default.context', {
     isInternal: true,
     layer: 'base',
     path: '/assets/core-styles.base.css'
+  }],
+  cmsStyles: [{
+    isInternal: true,
+    layer: 'base',
+    path: '/assets/core-styles.cms.css'
+  }],
+  portalStyles: [{
+    isInternal: true,
+    layer: 'base',
+    path: '/assets/core-styles.portal.css'
   }]
 });
 

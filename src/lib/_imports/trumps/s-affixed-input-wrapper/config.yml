@@ -1,3 +1,4 @@
+label: (CMS) S Affixed Input Wrapper
 context:
-  shouldLoadBootstrap: true # not yet tested without Bootstrap
-  shouldLoadCMS: true # temporary dependence, until proven to work on Portal
+  shouldLoadCMS: true
+  📝 shouldLoadBootstrap: temporary dependence, until proven to work on Portal

@@ -28,6 +28,10 @@ Styleguide Settings.CustomProperties.Font
   --global-font-family--sans--portal: "Roboto", sans-serif;
   --global-font-family--serif: Times, sans-serif;
   --global-font-family--mono: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  --sans--cms: var(--global-font-family--sans--cms);
+  --sans--portal: var(--global-font-family--sans--portal);
+  --serif: var(--global-font-family--serif);
+  --mono: var(--global-font-family--mono);
 
   /* Weight */
   /* https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight */
@@ -37,8 +41,8 @@ Styleguide Settings.CustomProperties.Font
   --global-font-weight--bold: 700;
   --global-font-weight--black: 800;
   /* NOTE: Short names to increase adoption (opinions welcome) */
-  --regular: 400;
-  --medium: 500;
-  --bold: 700;
-  --black: 800;
+  --regular: var(--global-font-weight--regular);
+  --medium: var(--global-font-weight--medium);
+  --bold: var(--global-font-weight--bold);
+  --black: var(--global-font-weight--black);
 }

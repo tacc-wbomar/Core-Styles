@@ -6,7 +6,7 @@
 
 /* SETTINGS */
 /* To get most settings, client should load `./base.css` first */
-@import url("./settings/font.cms.css");
+@import url("./settings/font--cms.css");
 
 /* GENERICS */
 /* Mostly from Bootstrap */
@@ -15,7 +15,6 @@
 /* ELEMENTS */
 /* To override Bootstrap */
 @import url("./elements/html-elements.cms.css");
-@import url("./elements/headings.cms.css");
 @import url("./elements/form.cms.css");
 
 /* OBJECTS */
@@ -25,6 +24,7 @@
 /* (none) */
 
 /* TRUMPS */
+@import url("./trumps/s-affixed-input-wrapper.css");
 /* To explain the in-limbo Core-CMS doc page styles */
 /* FAQ: Commented out because Core-CMS doc pages load these directly */
 /* IMPORTANT: If CMS docs are moved to TACC-Docs, then kill these stylesheets */

@@ -16,18 +16,21 @@ body {
 
 body > dl dl {
   margin-block: 0;
+  padding-left: unset; /* overwrite CMS */
 }
 body > dl dt,
 body > dl dd {
-  font-family: Arial, sans;
+  font-family: var(--global-font-family--sans);
   color: #484848;
   line-height: normal;
 }
 body > dl dt {
   font-size: 1.6rem;
-  font-weight: normal;
-  text-transform: capitalize;
+  font-weight: var(--medium);
   margin-bottom: 10px;
+}
+body > dl > dt {
+  font-weight: var(--bold);
 }
 body > dl dt:not(:first-of-type) {
   margin-top: 20px;
@@ -36,40 +39,7 @@ body > dl dd {
   margin-bottom: 10px;
   margin-left: 25px;
 }
-body > dl dd > * {
+body > dl dd:not(.demo-grid) > * {
   margin-right: 5px;
   vertical-align: middle;
-}
-
-
-
-/* Debug Settings */
-
-body > details:last-of-type {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 1;
-
-  padding: 1em;
-  background-color: #222;
-  color: lime;
-
-  text-align: right;
-  direction: rtl;
-
-  font-family: var(--global-font-family--mono);
-}
-body > details[open]:last-of-type { opacity: 1; }
-body > details:not([open]):last-of-type { opacity: 0.5; }
-
-body > details:last-of-type summary {
-  font-weight: bold;
-}
-body > details:last-of-type dt { font-weight: normal; }
-body > details:last-of-type dd { font-weight: bold; }
-body > details:last-of-type dd {
-  line-height: 1.4;
-  min-height: 1.4em;
-  width: 4ch;
 }

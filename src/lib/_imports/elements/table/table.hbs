@@ -1,13 +1,21 @@
-<table class="{{#if data.has-table }}has-table{{/if}} {{#if class }}{{ class }}{{/if}}">
+<table class="{{#if table }}has-table{{/if}} {{#if class }}{{ class }}{{/if}}">
   {{#if caption }}
   <caption>{{{ caption }}}</catpion>
   {{/if}}
+  {{#if data.cols }}
   <thead>
     <tr>
       {{#each data.cols}}<th>{{ this }}</th>{{/each}}
     </tr>
   </thead>
+  {{/if}}
   <tbody>
+  {{#each data.key-value-pairs}}
+    <tr>
+      {{#if key}}<th class="c-data-list__key">{{ key }}</th>{{/if}}
+      {{#if value}}<td class="c-data-list__value">{{ value }}</td>{{/if}}
+    </tr>
+  {{/each}}
   {{#each data.rows}}
     <tr>
       {{#if id}}<th>{{ id }}</th>{{/if}}
