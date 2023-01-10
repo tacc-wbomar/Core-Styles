@@ -1,0 +1,40 @@
+collated: true
+name: c-data-list--list
+label: '&lt;dl&gt; Description List'
+# NOTE: Variant config is mirrored on `../list/config` and `../table/config`
+# NOTE: Can `../list/config` and `../table/config` have source of truth?
+variants:
+  - name: default
+    hidden: True
+  - name: horz-wide
+    label: Horz. & Wide
+    context:
+      use-list: True
+      class: |-
+        c-data-list
+        c-data-list--is-horz
+        c-data-list--is-wide
+  - name: horz-narrow
+    label: Horz. & Narrow
+    context:
+      use-list: True
+      class: |-
+        c-data-list
+        c-data-list--is-horz
+        c-data-list--is-wide
+  - name: vert-wide
+    label: Vert. & Wide
+    context:
+      use-list: True
+      class: |-
+        c-data-list
+        c-data-list--is-vert
+        c-data-list--is-wide
+  - name: vert-narrow
+    label: Vert. & Narrow
+    context:
+      use-list: True
+      class: |-
+        c-data-list
+        c-data-list--is-vert
+        c-data-list--is-wide
