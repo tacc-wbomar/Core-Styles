@@ -61,9 +61,9 @@ Styleguide Components.DataList
 @custom-selector :--data-list--narrow
   .c-data-list--is-narrow,
   .data-list--narrow;
-@custom-selector :--data-list--truncate
+@custom-selector :--data-list--truncate-values
   .c-data-list--should-truncate-values,
-  .data-list--truncate;
+  .data-list--truncate-values;
 
 /* Elements (Partials) */
 @custom-selector :--dlist-key dt;
@@ -279,7 +279,7 @@ table:--data-list--horz :--table-key {
 /* Truncate Values */
 /* FAQ: Truncate when doing is unlikely to almost entirely obscure text */
 
-:--data-list--should-truncate-values :--any-value {
+:--data-list--truncate-values :--any-value {
   @extend %x-truncate--one-line;
 }
 
