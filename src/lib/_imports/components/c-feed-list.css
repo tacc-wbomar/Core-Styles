@@ -58,10 +58,6 @@
 .c-feed-list > :is(div, article) > p:first-of-type { grid-area: desc; }
 .c-feed-list > :is(div, article) > p:not(:first-of-type) { grid-area: link; }
 
-.c-feed-list > :is(div, article) > time {
-  text-transform: uppercase;
-}
-
 .c-feed-list > :is(div, article) > :is(h1, h2, h3, h4, h5, h6) {
   margin-top: 10px;
   margin-bottom: 5px;
