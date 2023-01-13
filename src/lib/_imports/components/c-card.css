@@ -1,57 +1,219 @@
+/* The first box's first variation found on Getting Started design */
+/* https://xd.adobe.com/view/dabaec5a-cc31-4c5c-876e-56d6d8cc359e-8fe9/screen/c0898d6b-2fd9-472a-bcd7-1ae9d4f9a015 */
+
+@import url("../objects/o-section.selectors.css");
+@import url("../tools/selectors.css");
+
+@import url("./c-card.selectors.css");
+
+
+
+
+
+/* Settings */
+
+:root {
+    --global-space--bootstrap-gap: 30px;
+    --global-space--pattern-pad: 30px;
+    --global-space--unnamed: 50px;
+    --global-border-width--xx-thick: 5px;
+}
+
+
+
+
+
+/* Skin */
+/* NOTE: Design text color discrepency… text color should match that of body */
+
+
+
+/* Explicit Variations */
+
+/* Explicit Variations: Plain  */
+
+:--c-card--plain-hr-top {
+    border-top: 1px solid var(--global-color-primary--dark); /* mimic <hr> */
+    margin-top: var(--global-space--hr-buffer-below); /* mimic <hr> */
+}
+:--c-card--plain-hr-bottom {
+    border-bottom: 1px solid var(--global-color-primary--dark); /* mimic <hr> */
+    margin-bottom: var(--global-space--hr-buffer-below); /* mimic <hr> */
+}
+
+/* Explicit Variations: Standard  */
+
+:--c-card--standard {
+    background-color: var(--global-color-primary--x-light);
+
+    border-top-style: solid;
+    border-top-width: var(--global-border-width--xx-thick);
+    border-top-color: var(--global-color-accent--tertiary);
+}
+/* NOTE: Delete these if "Automatic Variations" prove them unnecessary */
+:--c-card--standard-1 {
+    background-color: var(--global-color-primary--x-light);
+
+    border-top-style: solid;
+    border-top-width: var(--global-border-width--xx-thick);
+    border-top-color: var(--global-color-accent--tertiary);
+}
+:--c-card--standard-2 {
+    background-color: var(--global-color-primary--xx-light);
+
+    border-top-style: solid;
+    border-top-width: var(--global-border-width--xx-thick);
+    border-top-color: var(--global-color-accent--tertiary);
+}
+:--c-card--standard-3 {
+    background-color: var(--global-color-primary--xx-light);
+
+    border-top-style: solid;
+    border-top-width: var(--global-border-width--xx-thick);
+    border-top-color: var(--global-color-accent--secondary);
+}
+
+
+
+/* Automatic Variations */
+
+:--c-card--plain,
+:--c-card--standard {
+    background-color: var(--global-color-primary--x-light);
+    border-top-color: var(--global-color-accent--tertiary);
+}
+
+:--c-card :--c-card--plain,
+:--c-card :--c-card--standard,
+:--o-section--muted :--c-card--plain,
+:--o-section--muted :--c-card--standard {
+    background-color: var(--global-color-primary--xx-light);
+}
+:--c-card :--c-card--standard,
+:--o-section--muted :--c-card--standard {
+    border-top-color: var(--global-color-accent--tertiary);
+}
+
+:--o-section--muted :--c-card :--c-card--plain,
+:--o-section--muted :--c-card :--c-card--standard,
+:--o-section--dark :--c-card :--c-card--plain,
+:--o-section--dark :--c-card :--c-card--standard {
+    background-color: var(--global-color-primary--x-light);
+}
+
+/* For dark cards */
+:--o-section--dark :--c-card--standard {
+    background-color: var(--global-color-primary--xx-light);
+    border-top-color: var(--global-color-accent--secondary);
+}
+/* To color text with greater specificity than .o-section does */
+:--o-section--dark :--c-card--plain > *:not(a, button),
+:--o-section--dark :--c-card--standard > *:not(a, button),
+:--o-section--dark :--c-card--standard-N > *:not(a, button) {
+    color: var(--global-color-primary--xx-dark);
+}
+
+
+
+
+
+/* Structure */
+
+/* To layout via grid */
+:--c-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: min-content;
+}
+/* To center align multiple actions within two columns */
+:--c-card > * {
+    grid-column: span 2;
+    align-self: center; /* to align :--action's */
+}
+:--c-card > :is(:--action):not(:only-of-type) {
+    grid-column: unset;
+    justify-self: center;
+}
+:--c-card > :is(:--action):not(.c-button),
+:--c-card > :is(:--action):only-of-type {
+    justify-self: start;
+}
+
+/* To set spacing */
+:--c-card {
+    padding: var(--global-space--pattern-pad);
+    margin-bottom: var(--global-space--bootstrap-gap);
+}
+
+
+
+/* XXX: Commented out cuz it seems like an exception or the wrong solution */
 /*
-Card
-
-Container with content and action(s) about a single subject.
-
-> __ℹ️ Notice__: No default styling.
-
-.c-card--frontera-about-page - Container/Link with image and large heading below
-
-Markup: c-card.html
-
-Styleguide Components.Card
+/* To tweak full-width children *//*
+/* - To add space  *//*
+.col:nth-child(4):last-child :--c-card--standard,
+.col:nth-child(4):last-child :--c-card--standard-N {
+    margin-top: var(--global-space--unnamed);
+}
+/* - To remove border *//*
+.col:nth-child(4):last-child > :--c-card--standard,
+.col:nth-child(4):last-child > :--c-card--standard-N {
+    border-top: none;
+}
 */
-@import url("../tools/x-article-link.css");
-
-/* Modifiers */
 
 
 
-/* Modifiers: Frontera About Page */
+/* To add space between rows of boxes */
+/* XXX: Commented out until we know whether we want context-based spacing */
+/*
+:--c-card--standard:not( .col:only-child > * )
+:--c-card--standard-N:not( .col:only-child > * ) {
+    margin-bottom: var(--global-space--bootstrap-gap);
+}
+/* To eat the margin-bottom of bottom row of blocks so padding is consistent *\/
+:--c-card--standard:has( .row:last-child:not(:first-child) ),
+:--c-card--standard-N:has( .row:last-child:not(:first-child) ) {
+    padding-bottom: calc(
+       var(--global-space--pattern-pad) - var(--global-space--bootstrap-gap)
+    );
+}
+*/
 
-.c-card--frontera-about-page {
-  width: fit-content;
 
-  border-bottom: var(--global-border-width--normal) solid var(--global-color-primary--dark);
-  margin-bottom: 4.6rem;
+
+
+
+/* Elements */
+
+/* To remove undesired space */
+:--c-card :is(h1, h2, h3, h4, h5, h6) {
+    margin-top: unset;
+}
+:--c-card p:last-child {
+    margin-bottom: unset;
 }
 
-/* Plugins: Link / Image with Link */
-a.c-card--frontera-about-page {
-  display: inline-block;
-
-  text-decoration: none;
-}
-a.c-card--frontera-about-page:hover { @extend %x-article-link-hover; }
-a.c-card--frontera-about-page:active { @extend %x-article-link-active; }
-
-/* Plugins: * > Image + Text */
-.c-card--frontera-about-page img + h3 {
-  margin-top: 1.6rem;
-}
-.c-card--frontera-about-page img ~ :last-child {
-  margin-bottom: 1.25rem;
+/* To make buttons bold */
+/* TODO: Determine whether this should apply to all CMS buttons */
+:--c-card a.c-button {
+    font-weight: var(--bold);
 }
 
-/* Plugins: * > Image with Caption */
-.c-card--frontera-about-page figure {
-  margin: 0;
+/* To reduce font size of mailto link */
+:--c-card a[data-user][data-domain]::before {
+    font-size: var(--global-font-size--medium);
 }
-.c-card--frontera-about-page figcaption {
-  color: var(--global-color-primary--xx-dark);
-  font-size: var(--global-font-size--x-large);
-  font-weight: var(--bold);
 
-  margin-top: 1.6rem;
-  margin-bottom: 1.25rem;
+/* To tweak action icon appearance */
+:--c-card > :is(:--action) > .icon:first-child {
+    vertical-align: middle;
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+/* Miscellaneous */
+:--c-card > address {
+    line-height: 1.7;
+    margin-bottom: 2rem; /* to mimic <p> */
 }

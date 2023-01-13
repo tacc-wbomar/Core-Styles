@@ -1,0 +1,17 @@
+/* DO NOT ADD STYLES HERE; ADD CUSTOM SELECTORS TO USE IN OTHER STYLESHEETS */
+
+/* NOTE: These must be Tools (imported as needed) until native browser support, at which time they can become Settings (imported globally). */
+
+/*
+Multiple Elements
+
+These are global selectors to target common combinations of elements.
+
+Usage: `:is(:--action) { … }`
+
+Reference:
+- https://drafts.csswg.org/css-extensions/#custom-selectors
+
+Styleguide Tools.CustomSelectors.MultipleElements
+*/
+@custom-selector :--action button, a;
