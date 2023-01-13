@@ -106,24 +106,13 @@
 
 /* Structure */
 
-/* To layout via grid */
-:--c-card {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: min-content;
+/* Elements */
+:--c-card > :is(:--action) {
+    vertical-align: middle;
 }
-/* To center align multiple actions within two columns */
-:--c-card > * {
-    grid-column: span 2;
-    align-self: center; /* to align :--action's */
-}
-:--c-card > :is(:--action):not(:only-of-type) {
-    grid-column: unset;
-    justify-self: center;
-}
-:--c-card > :is(:--action):not(.c-button),
-:--c-card > :is(:--action):only-of-type {
-    justify-self: start;
+:--c-card > :is(:--action):not(:last-child) {
+    margin-bottom: 2rem; /* mimic <p> `margin-bottom` */
+    margin-right: var(--global-space--pattern-pad);
 }
 
 /* To set spacing */
