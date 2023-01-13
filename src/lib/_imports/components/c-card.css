@@ -192,13 +192,6 @@
     font-size: var(--global-font-size--medium);
 }
 
-/* To tweak action icon appearance */
-:--c-card > :is(:--action) > .icon:first-child {
-    vertical-align: middle;
-    margin-right: 10px;
-    font-size: 1.2em;
-}
-
 /* Miscellaneous */
 :--c-card > address {
     line-height: 1.7;
