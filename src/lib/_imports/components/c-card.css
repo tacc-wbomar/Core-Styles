@@ -58,6 +58,11 @@
     background-color: var(--global-color-primary--x-light);
     border-top-color: var(--global-color-accent--tertiary);
 }
+:--c-card--standard-N,
+:--c-card--standard,
+:--c-card--plain {
+    box-shadow: 0px 3px 6px #0003;
+}
 
 /* On Muted & Within Card */
 :--c-card--standard-2,
