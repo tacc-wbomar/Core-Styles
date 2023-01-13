@@ -28,9 +28,9 @@
 
 
 
-/* Explicit Variations */
+/* Modifiers */
 
-/* Explicit Variations: Plain  */
+/* Modifiers: Plain  */
 
 :--c-card--plain-hr-top {
     border-top: 1px solid var(--global-color-primary--dark); /* mimic <hr> */
@@ -41,59 +41,44 @@
     margin-bottom: var(--global-space--hr-buffer-below); /* mimic <hr> */
 }
 
-/* Explicit Variations: Standard  */
+/* Modifiers: Standard  */
 
+:--c-card--standard-N,
 :--c-card--standard {
-    background-color: var(--global-color-primary--x-light);
-
     border-top-style: solid;
     border-top-width: var(--global-border-width--xx-thick);
-    border-top-color: var(--global-color-accent--tertiary);
-}
-/* NOTE: Delete these if "Automatic Variations" prove them unnecessary */
-:--c-card--standard-1 {
-    background-color: var(--global-color-primary--x-light);
-
-    border-top-style: solid;
-    border-top-width: var(--global-border-width--xx-thick);
-    border-top-color: var(--global-color-accent--tertiary);
-}
-:--c-card--standard-2 {
-    background-color: var(--global-color-primary--xx-light);
-
-    border-top-style: solid;
-    border-top-width: var(--global-border-width--xx-thick);
-    border-top-color: var(--global-color-accent--tertiary);
-}
-:--c-card--standard-3 {
-    background-color: var(--global-color-primary--xx-light);
-
-    border-top-style: solid;
-    border-top-width: var(--global-border-width--xx-thick);
-    border-top-color: var(--global-color-accent--secondary);
 }
 
+/* Modifiers: Plain & Standard & within Section */
 
-
-/* Automatic Variations */
-
-:--c-card--plain,
-:--c-card--standard {
+/* Default (On Light) */
+:--c-card--standard-1,
+:--c-card--standard,
+:--c-card--plain {
     background-color: var(--global-color-primary--x-light);
     border-top-color: var(--global-color-accent--tertiary);
 }
+:--c-card--standard-N,
+:--c-card--standard,
+:--c-card--plain {
+    box-shadow: 0px 3px 6px #0003;
+}
 
-:--c-card :--c-card--plain,
-:--c-card :--c-card--standard,
+/* On Muted & Within Card */
+:--c-card--standard-2,
+:--o-section--muted :--c-card--standard,
 :--o-section--muted :--c-card--plain,
-:--o-section--muted :--c-card--standard {
+:--c-card :--c-card--standard,
+:--c-card :--c-card--plain {
     background-color: var(--global-color-primary--xx-light);
 }
-:--c-card :--c-card--standard,
-:--o-section--muted :--c-card--standard {
+:--c-card--standard-2,
+:--o-section--muted :--c-card--standard,
+:--c-card :--c-card--standard {
     border-top-color: var(--global-color-accent--tertiary);
 }
 
+/* On Muted + Within Card & On Dark + Within Card */
 :--o-section--muted :--c-card :--c-card--plain,
 :--o-section--muted :--c-card :--c-card--standard,
 :--o-section--dark :--c-card :--c-card--plain,
@@ -101,8 +86,10 @@
     background-color: var(--global-color-primary--x-light);
 }
 
-/* For dark cards */
-:--o-section--dark :--c-card--standard {
+/* On Dark */
+:--c-card--standard-3,
+:--o-section--dark :--c-card--standard,
+:--o-section--dark :--c-card--plain {
     background-color: var(--global-color-primary--xx-light);
     border-top-color: var(--global-color-accent--secondary);
 }
@@ -119,24 +106,13 @@
 
 /* Structure */
 
-/* To layout via grid */
-:--c-card {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: min-content;
+/* Elements */
+:--c-card > :is(:--action) {
+    vertical-align: middle;
 }
-/* To center align multiple actions within two columns */
-:--c-card > * {
-    grid-column: span 2;
-    align-self: center; /* to align :--action's */
-}
-:--c-card > :is(:--action):not(:only-of-type) {
-    grid-column: unset;
-    justify-self: center;
-}
-:--c-card > :is(:--action):not(.c-button),
-:--c-card > :is(:--action):only-of-type {
-    justify-self: start;
+:--c-card > :is(:--action):not(:last-child) {
+    margin-bottom: 2rem; /* mimic <p> `margin-bottom` */
+    margin-right: var(--global-space--pattern-pad);
 }
 
 /* To set spacing */
@@ -203,13 +179,6 @@
 /* To reduce font size of mailto link */
 :--c-card a[data-user][data-domain]::before {
     font-size: var(--global-font-size--medium);
-}
-
-/* To tweak action icon appearance */
-:--c-card > :is(:--action) > .icon:first-child {
-    vertical-align: middle;
-    margin-right: 10px;
-    font-size: 1.2em;
 }
 
 /* Miscellaneous */
