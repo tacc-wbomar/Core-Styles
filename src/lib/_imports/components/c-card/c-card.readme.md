@@ -3,10 +3,12 @@ Container with content and action(s) about a single subject.
 | Class (Std.)               | Class (Alt.)             | Description
 | - | - | - |
 | `.c-card`                  | `.card`                  | add padding to content
-| `.c-card--plain`           | `.card--plain`           | add background
+| `.c-card--plain`           | `.card--plain`           | add background*
 | `.c-card--plain-hr-top`    | `.card--plain-hr-top`    | prepend an `<hr>`
 | `.c-card--plain-hr-bottom` | `.card--plain-hr-bottom` | append an `<hr>`
-| `.c-card--standard`        | `.card--standard`        | add background + border
+| `.c-card--standard`        | `.card--standard`        | add background + border*
+
+<small>* Colors depend on card context/parent.</small>
 
 ---
 
@@ -22,7 +24,7 @@ Future features that will be added when client testing is complete:
 
 ---
 
-Prototype features that will be removed if `c-card--standard` is adequate:
+Backup classes if `c-card--standard` automatic styles fail:
 
 | Class (Std.)          | Class (Alt.)        | Description
 | - | - | - |

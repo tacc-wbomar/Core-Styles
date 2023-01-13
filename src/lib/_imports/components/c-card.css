@@ -28,9 +28,9 @@
 
 
 
-/* Explicit Variations */
+/* Modifiers */
 
-/* Explicit Variations: Plain  */
+/* Modifiers: Plain  */
 
 :--c-card--plain-hr-top {
     border-top: 1px solid var(--global-color-primary--dark); /* mimic <hr> */
@@ -41,59 +41,39 @@
     margin-bottom: var(--global-space--hr-buffer-below); /* mimic <hr> */
 }
 
-/* Explicit Variations: Standard  */
+/* Modifiers: Standard  */
 
+:--c-card--standard-N,
 :--c-card--standard {
-    background-color: var(--global-color-primary--x-light);
-
     border-top-style: solid;
     border-top-width: var(--global-border-width--xx-thick);
-    border-top-color: var(--global-color-accent--tertiary);
-}
-/* NOTE: Delete these if "Automatic Variations" prove them unnecessary */
-:--c-card--standard-1 {
-    background-color: var(--global-color-primary--x-light);
-
-    border-top-style: solid;
-    border-top-width: var(--global-border-width--xx-thick);
-    border-top-color: var(--global-color-accent--tertiary);
-}
-:--c-card--standard-2 {
-    background-color: var(--global-color-primary--xx-light);
-
-    border-top-style: solid;
-    border-top-width: var(--global-border-width--xx-thick);
-    border-top-color: var(--global-color-accent--tertiary);
-}
-:--c-card--standard-3 {
-    background-color: var(--global-color-primary--xx-light);
-
-    border-top-style: solid;
-    border-top-width: var(--global-border-width--xx-thick);
-    border-top-color: var(--global-color-accent--secondary);
 }
 
+/* Modifiers: Plain & Standard & within Section */
 
-
-/* Automatic Variations */
-
-:--c-card--plain,
-:--c-card--standard {
+/* Default (On Light) */
+:--c-card--standard-1,
+:--c-card--standard,
+:--c-card--plain {
     background-color: var(--global-color-primary--x-light);
     border-top-color: var(--global-color-accent--tertiary);
 }
 
-:--c-card :--c-card--plain,
-:--c-card :--c-card--standard,
+/* On Muted & Within Card */
+:--c-card--standard-2,
+:--o-section--muted :--c-card--standard,
 :--o-section--muted :--c-card--plain,
-:--o-section--muted :--c-card--standard {
+:--c-card :--c-card--standard,
+:--c-card :--c-card--plain {
     background-color: var(--global-color-primary--xx-light);
 }
-:--c-card :--c-card--standard,
-:--o-section--muted :--c-card--standard {
+:--c-card--standard-2,
+:--o-section--muted :--c-card--standard,
+:--c-card :--c-card--standard {
     border-top-color: var(--global-color-accent--tertiary);
 }
 
+/* On Muted + Within Card & On Dark + Within Card */
 :--o-section--muted :--c-card :--c-card--plain,
 :--o-section--muted :--c-card :--c-card--standard,
 :--o-section--dark :--c-card :--c-card--plain,
@@ -101,8 +81,10 @@
     background-color: var(--global-color-primary--x-light);
 }
 
-/* For dark cards */
-:--o-section--dark :--c-card--standard {
+/* On Dark */
+:--c-card--standard-3,
+:--o-section--dark :--c-card--standard,
+:--o-section--dark :--c-card--plain {
     background-color: var(--global-color-primary--xx-light);
     border-top-color: var(--global-color-accent--secondary);
 }

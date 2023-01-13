@@ -7,11 +7,11 @@ variants:
   - name: plain
   - name: standard
   - name: standard-1
-    status: prototype
+    status: backup
   - name: standard-2
-    status: prototype
+    status: backup
   - name: standard-3
-    status: prototype
+    status: backup
   # - name: image
   #   status: prototype
   - name: frontera
