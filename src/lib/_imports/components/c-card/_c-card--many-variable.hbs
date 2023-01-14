@@ -31,3 +31,77 @@
         Action + Icon
     </a>
 </article>
+<article class="c-card c-card--{{this._self.name}}">
+    <h3>Card - {{this._self.label}}</h3>
+
+    <p>Any <button class="c-button c-button--as-link">button--as-link</button> and any <a href="#">link</a> are <em>not</em> considered card actions and should <em>not</em> be affected by card styles.</p>
+</article>
+<article class="c-card c-card--{{this._self.name}}">
+    <h3>Card - {{this._self.label}}</h3>
+
+    <p>{{> @text-of-one-paragraph-short }}</p>
+
+    <a href="#"><i class="icon icon-push-left">&gt;</i> Learn less</a>
+    <a href="#"><i class="icon icon-push-right">&gt;</i> Learn more</a>
+</article>
+<article class="c-card c-card--{{this._self.name}}">
+    <h3>Card - {{this._self.label}}</h3>
+
+    <p>{{> @text-of-one-paragraph-short }}</p>
+
+    <a href="#" class="c-button c-button--primary">Action 1</a>
+    <a href="#" class="c-button c-button--primary">Action 2</a>
+</article>
+<article class="c-card c-card--{{this._self.name}}">
+    <h3>Card - {{this._self.label}}</h3>
+
+    <p>{{> @text-of-one-paragraph-short }}</p>
+
+    <a href="#" class="c-button c-button--primary">Action 1</a>
+    <a href="#" class="c-button c-button--primary">Action 2</a>
+    <a href="#"><i class="icon icon-push-right">&gt;</i> Learn more</a>
+</article>
+<article class="c-card c-card--{{this._self.name}}">
+    <h3>Card - {{this._self.label}}</h3>
+
+    <p>If actions are wrapped in a <kbd>&lt;p&gt;</kbd> tag, automatic layout is abandoned.</p>
+
+    <p>
+        <a href="#" class="c-button c-button--primary">Action 1</a>
+        <a href="#" class="c-button c-button--primary">Action 2</a>
+    </p>
+</article>
+<article class="c-card c-card--{{this._self.name}}">
+    <h3>Card - {{this._self.label}}</h3>
+
+    <p>If actions are wrapped in a <kbd>&lt;p&gt;</kbd> tag, automatic layout is abandoned.</p>
+
+    <p>
+        <a href="#"><i class="icon icon-push-left">&gt;</i> Learn less</a>
+        <a href="#"><i class="icon icon-push-right">&gt;</i> Learn more</a>
+    </p>
+</article>
+<article class="c-card c-card--{{this._self.name}}">
+    <h3>Card - {{this._self.label}}</h3>
+
+    <p>If you wrap actions in a <kbd>&lt;p&gt;</kbd> tag, vertical spacing will be slightly off.*</p>
+
+    <a href="#" class="c-button c-button--primary">Action 1</a>
+    <a href="#" class="c-button c-button--primary">Action 2</a>
+    <p>
+        <a href="#"><i class="icon icon-push-right">&gt;</i> Learn more</a>
+    </p>
+</article>
+<article class="c-card c-card--{{this._self.name}}">
+    <h3>Card - {{this._self.label}}</h3>
+
+    <p>If you wrap actions in a <kbd>&lt;p&gt;</kbd> tag, vertical spacing will be slightly off.*</p>
+
+    <p>
+        <a href="#" class="c-button c-button--primary">Action 1</a>
+        <a href="#" class="c-button c-button--primary">Action 2</a>
+    </p>
+    <a href="#"><i class="icon icon-push-right">&gt;</i> Learn more</a>
+</article>
+
+<p style="grid-column: 1/-1;">* Wrapping in a <kbd>&lt;p&gt;</kbd> tag was a fix in early 2023-01, but is now non-standard.</p>
