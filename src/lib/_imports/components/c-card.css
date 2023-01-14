@@ -119,9 +119,10 @@
 
 /* Block */
 :--c-card {
-    /* FAQ: No padding-bottom, because child elements have margin-bottom */
     padding-inline: var(--global-space--pattern-pad);
     padding-top: var(--global-space--pattern-pad);
+    /* FAQ: Let child elements' margin-bottom be the padding bottom */
+    padding-bottom: 0.1px; /* to remove padding, but retain child margin */
 
     margin-bottom: var(--global-space--bootstrap-gap);
 }
