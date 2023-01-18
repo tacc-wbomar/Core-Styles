@@ -21,7 +21,7 @@
 /* (none) */
 
 /* COMPONENTS */
-/* (none) */
+@import url("./components/cortal.icon.css");
 
 /* TRUMPS */
 @import url("./trumps/s-affixed-input-wrapper.css");
