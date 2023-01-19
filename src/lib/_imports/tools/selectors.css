@@ -1,0 +1,15 @@
+/* DO NOT ADD STYLES HERE; ADD CUSTOM SELECTORS TO USE IN OTHER STYLESHEETS */
+
+/*
+Important Elements
+
+These are global selectors to target important elements.
+
+Usage: `:--main-content .some-class { … }`
+
+Reference:
+- https://drafts.csswg.org/css-extensions/#custom-selectors
+
+Styleguide Tools.CustomSelectors.Elements
+*/
+@custom-selector :--main-content   [role="main"], main;

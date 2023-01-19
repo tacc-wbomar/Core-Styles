@@ -1,5 +1,7 @@
+@import url("../tools/selectors.css");
+
 /* To scope these styles to main content (i.e. not header, not navbar) */
-:where([role="main"], main) {
+:where(:--main-content) {
 
 
 
