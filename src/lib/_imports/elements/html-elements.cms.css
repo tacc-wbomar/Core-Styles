@@ -21,7 +21,7 @@ Reference:
 Styleguide Elements.ContentSectioning
 */
 
-body > main {
+@nest body > & {
   margin-bottom: var(--global-space--section-gap);
 }
 
