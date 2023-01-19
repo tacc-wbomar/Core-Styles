@@ -1,44 +1,7 @@
-/*
-Main Root & Sectioning Root
+@import url("../tools/selectors.css");
 
-Elements that represent the root of a document or document content.
-
-```
-<html> <body>
-```
-
-Reference:
-
-- [MDN: HTML element reference: Main root](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Main_root)
-- [MDN: HTML element reference: Sectioning root](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Sectioning_root)
-
-Styleguide Elements.MainSectioningRoots
-*/
-
-html {
-  /* Set base font but support user-defined browser font size */
-  /* SEE: https://snook.ca/archives/html_and_css/font-size-with-rem */
-  font-size: 62.5%; /* 16px */
-}
-
-/* The webpage must be at least as tall as the viewport */
-html,
-body {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-
-  /* To avoid negative whitespace at right on horz scroll on tiny screen */
-  min-width: 290px; /* developer-decided value */
-
-  /* To overwrite Bootstrap */
-  color: var(--global-color-primary--x-dark);
-  font-family: var(--global-font-family--sans);
-  font-size: var(--global-font-size--small);
-  line-height: 1.4;
-}
+/* To scope these styles to main content (i.e. not header, not navbar) */
+:where(:--main-content) {
 
 
 
@@ -60,15 +23,8 @@ Reference:
 Styleguide Elements.ContentSectioning
 */
 
-body > main {
+&:is(body > *) {
   margin-bottom: var(--global-space--section-gap);
-}
-
-/* To make a "sticky footer" */
-/* https://css-tricks.com/a-clever-sticky-footer-technique/ */
-body > main + footer {
-  position: sticky;
-  top: 100vh;
 }
 
 /* Headings */
@@ -94,32 +50,39 @@ Reference:
 Styleguide Elements.TextContent
 */
 
-p {
+& p {
   margin-bottom: 2rem; /* overwrite Bootstrap */
 }
 
 /* Lists */
 
-ol, ul,
-dl dl /* Treat nested definition lists like other nested lists */ {
+& :is(
+  ol, ul,
+  dl dl /* Treat nested definition lists like other nested lists */
+) {
   padding-left: var(--global-space--list-indent);
 }
-ol ol, ol ul, ul ol, ul ul {
+& :is(
+  ol ol,
+  ol ul,
+  ul ol,
+  ul ul
+) {
   margin: revert; /* Undo Bootstrap `_reboot.css` */
 }
 /* Add space between `dt` and `dd` */
-dt {
+& dt {
   margin-bottom: .5rem; /* overwrite Bootstrap */
   font-weight: initial; /* overwrite Bootstrap */
 }
 
-li:not(td li) {
+& li:not(td li) {
   line-height: 1.6;
 }
 
 /* Misc. */
 
-hr {
+& hr {
   margin-top: var(--global-space--hr-buffer-above); /* overwrite Bootstrap */
   border-top: 1px solid var(--global-color-primary--light);
   margin-bottom: var(--global-space--hr-buffer-below); /* overwrite Bootstrap */
@@ -147,12 +110,11 @@ Styleguide Elements.InlineTextSemantics
 
 /* Monospace */
 
-var,
 /* Overwrite Bootstrap (which does not use its `--font-family-monospace`) */
-code, kbd, pre, samp {
+& :is(code, kbd, pre, samp, var) {
   font-family: var(--global-font-family--mono);
 }
-code kbd {
+& code kbd {
   display: inline-block; /* ensure element does not bleed outside parent */
   padding: .1rem .2rem; /* overwrites Bootstrap */
   margin-left: .2rem;
@@ -163,36 +125,41 @@ code kbd {
 
 /* Code (<code>, <samp>, <pre>) */
 
-/* Code: any content or context */ code,
-/* Code: content has only output */ pre > samp {
+/* Code: any content or context */
+& code,
+/* Code: content has only output */
+& pre > samp {
   /* Undo Bootstrap */
   color: unset;
 }
-/* Code: context is inline */ :not(pre) > code {
+/* Code: context is inline */
+& :not(pre) > code {
   display: inline-block;
   padding: var(--global-space--xx-small) var(--global-space--x-small);
 }
-/* Code: context is block, content has input */ pre > code,
-/* Code: context is block, content has only ouput */ pre > samp {
+/* Code: context is block, content has input */
+& pre > code,
+/* Code: context is block, content has only ouput */
+& pre > samp {
   display: inline-block; /* FAQ: If `block`, then background color is cropped */
   padding: var(--global-space--x-small) var(--global-space--small);
 }
 /* Code: context is block, container probably has inline-style width set */
 /* FAQ: Stretch code to meet container width */
-pre[style] > code,
-pre[style] > samp {
+& pre[style] > code,
+& pre[style] > samp {
   min-width: 100%;
 }
 
 /* Code: context is inline, content has only output */
 /* FAQ: Examples: command output within CLI illustration */
-pre samp {
+& pre samp {
   opacity: 0.75;
   text-decoration: none;
 }
 /* Code: context is inline, content has context-agnostic output */
 /* FAQ: Examples: command prompt within CLI illustration */
-pre code u {
+& pre code u {
   opacity: 0.50;
   text-decoration: none;
 }
@@ -306,7 +273,13 @@ Styleguide Elements.Interactive
 */
 
 /* Clone Bootstrap's <p> and <ul> margins */
-details {
+& details {
   margin-top: 0;
   margin-bottom: 1rem;
+}
+
+
+
+
+
 }

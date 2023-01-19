@@ -1,4 +1,4 @@
-/*! core-styles.cms.css */
+/*! core-styles.docs.css */
 /* DO NOT ADD STYLES HERE; ONLY IMPORT OTHER STYLESHEETS */
 
 /* Organize via ITCSS */
@@ -9,26 +9,21 @@
 @import url("./settings/font--cms.css");
 
 /* GENERICS */
-/* Mostly from Bootstrap */
+/* Mostly from ReadTheDocs */
 /* https://confluence.tacc.utexas.edu/x/b53tDg */
 
 /* ELEMENTS */
-/* To override Bootstrap */
-@import url("./elements/sticky-footer.css");
+/* To override ReadTheDocs */
 @import url("./elements/html-elements.cms.css");
-@import url("./elements/form.cms.css");
 
 /* OBJECTS */
 /* (none) */
 
 /* COMPONENTS */
-@import url("./components/cortal.icon.css");
+/* (none) */
 
 /* TRUMPS */
-@import url("./trumps/s-affixed-input-wrapper.css");
-/* To explain the in-limbo Core-CMS doc page styles */
-/* FAQ: Commented out because Core-CMS doc pages load these directly */
-/* IMPORTANT: If CMS docs are moved to TACC-Docs, then kill these stylesheets */
+/* These styles from Core-CMS doc pages might be useful */
 /*
 @import url("_imports/trumps/s-document.css");
 @import url("_imports/trumps/s-guide-doc.css");

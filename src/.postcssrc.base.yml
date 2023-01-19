@@ -18,6 +18,7 @@ plugins:
     features:
       custom-media-queries: true
       media-query-ranges: true
+      nesting-rules: true
       custom-selectors: true
       # This feature (to come in v8) is not ready yet
       # https://github.com/csstools/postcss-plugins/issues/481#issuecomment-1335678359
