@@ -1,3 +1,10 @@
+/* To scope these styles to main content (i.e. not header, not navbar) */
+:where([role="main"], main) {
+
+
+
+
+
 /* Headings */
 /* (pending styles from TACC/tup-ui:/apps/tup-cms Snippet) */
 
@@ -21,32 +28,39 @@ Reference:
 Styleguide Elements.TextContent
 */
 
-p {
+& p {
   margin-bottom: 2rem; /* overwrite Bootstrap */
 }
 
 /* Lists */
 
-ol, ul,
-dl dl /* Treat nested definition lists like other nested lists */ {
+& :is(
+  ol, ul,
+  dl dl /* Treat nested definition lists like other nested lists */
+) {
   padding-left: var(--global-space--list-indent);
 }
-ol ol, ol ul, ul ol, ul ul {
+& :is(
+  ol ol,
+  ol ul,
+  ul ol,
+  ul ul
+) {
   margin: revert; /* Undo Bootstrap `_reboot.css` */
 }
 /* Add space between `dt` and `dd` */
-dt {
+& dt {
   margin-bottom: .5rem; /* overwrite Bootstrap */
   font-weight: initial; /* overwrite Bootstrap */
 }
 
-li:not(td li) {
+& li:not(td li) {
   line-height: 1.6;
 }
 
 /* Misc. */
 
-hr {
+& hr {
   margin-top: var(--global-space--hr-buffer-above); /* overwrite Bootstrap */
   border-top: 1px solid var(--global-color-primary--light);
   margin-bottom: var(--global-space--hr-buffer-below); /* overwrite Bootstrap */
@@ -74,12 +88,11 @@ Styleguide Elements.InlineTextSemantics
 
 /* Monospace */
 
-var,
 /* Overwrite Bootstrap (which does not use its `--font-family-monospace`) */
-code, kbd, pre, samp {
+& :is(code, kbd, pre, samp, var) {
   font-family: var(--global-font-family--mono);
 }
-code kbd {
+& code kbd {
   display: inline-block; /* ensure element does not bleed outside parent */
   padding: .1rem .2rem; /* overwrites Bootstrap */
   margin-left: .2rem;
@@ -90,36 +103,41 @@ code kbd {
 
 /* Code (<code>, <samp>, <pre>) */
 
-/* Code: any content or context */ code,
-/* Code: content has only output */ pre > samp {
+/* Code: any content or context */
+& code,
+/* Code: content has only output */
+& pre > samp {
   /* Undo Bootstrap */
   color: unset;
 }
-/* Code: context is inline */ :not(pre) > code {
+/* Code: context is inline */
+& :not(pre) > code {
   display: inline-block;
   padding: var(--global-space--xx-small) var(--global-space--x-small);
 }
-/* Code: context is block, content has input */ pre > code,
-/* Code: context is block, content has only ouput */ pre > samp {
+/* Code: context is block, content has input */
+& pre > code,
+/* Code: context is block, content has only ouput */
+& pre > samp {
   display: inline-block; /* FAQ: If `block`, then background color is cropped */
   padding: var(--global-space--x-small) var(--global-space--small);
 }
 /* Code: context is block, container probably has inline-style width set */
 /* FAQ: Stretch code to meet container width */
-pre[style] > code,
-pre[style] > samp {
+& pre[style] > code,
+& pre[style] > samp {
   min-width: 100%;
 }
 
 /* Code: context is inline, content has only output */
 /* FAQ: Examples: command output within CLI illustration */
-pre samp {
+& pre samp {
   opacity: 0.75;
   text-decoration: none;
 }
 /* Code: context is inline, content has context-agnostic output */
 /* FAQ: Examples: command prompt within CLI illustration */
-pre code u {
+& pre code u {
   opacity: 0.50;
   text-decoration: none;
 }
@@ -233,7 +251,13 @@ Styleguide Elements.Interactive
 */
 
 /* Clone Bootstrap's <p> and <ul> margins */
-details {
+& details {
   margin-top: 0;
   margin-bottom: 1rem;
+}
+
+
+
+
+
 }
