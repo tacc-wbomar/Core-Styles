@@ -8,10 +8,12 @@ Multiple Elements
 These are global selectors to target common combinations of elements.
 
 Usage: `:is(:--action) { … }`
+Usage: `:--main-content .some-class { … }`
 
 Reference:
 - https://drafts.csswg.org/css-extensions/#custom-selectors
 
 Styleguide Tools.CustomSelectors.MultipleElements
 */
-@custom-selector :--action button, a;
+@custom-selector :--action   button, a;
+@custom-selector :--main-content   [role="main"], main;

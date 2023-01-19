@@ -1,3 +1,12 @@
+@import url("../tools/selectors.css");
+
+/* To scope these styles to main content (i.e. not header, not navbar) */
+:where(:--main-content) {
+
+
+
+
+
 /*
 Text Content
 
@@ -15,7 +24,7 @@ Styleguide Elements.Forms
 */
 
 /* To mimic Bootstrap */
-button, input, optgroup, select, textarea {
+& :is(button, input, optgroup, select, textarea) {
   margin: 0;
   font-family: inherit;
   font-size: inherit;
@@ -39,7 +48,7 @@ Styleguide Elements.TextContent
 */
 
 /* To mimic Bootstrap */
-dl, ol, ul {
+& :is(dl, ol, ul) {
   margin-top: 0;
   margin-bottom: 1rem;
 }
@@ -61,7 +70,13 @@ Styleguide Elements.Interactive
 */
 
 /* To mimic Bootstrap's <p> and <ul> margins */
-details {
+& details {
   margin-top: 0;
   margin-bottom: 1rem;
+}
+
+
+
+
+
 }
