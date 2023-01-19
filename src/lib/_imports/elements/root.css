@@ -39,34 +39,3 @@ body {
   font-size: var(--global-font-size--small);
   line-height: 1.4;
 }
-
-
-
-
-
-/*
-Content Sectioning
-
-Elements that organize a document into logical pieces and create a broad outline for page content.
-
-```
-<main> <nav> <section> <header> <h1> <h2> <h3> <h4> <h5> <h6> <hgroup> <footer> <article> <aside> <address>
-```
-
-Reference:
-
-- [HTML element reference: Content sectioning | MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Content_sectioning)
-
-Styleguide Elements.ContentSectioning
-*/
-
-body > main {
-  margin-bottom: var(--global-space--section-gap);
-}
-
-/* To make a "sticky footer" */
-/* https://css-tricks.com/a-clever-sticky-footer-technique/ */
-body > main + footer {
-  position: sticky;
-  top: 100vh;
-}

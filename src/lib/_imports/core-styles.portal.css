@@ -14,7 +14,7 @@
 
 /* ELEMENTS */
 /* To override Bootstrap */
-/* (none) */
+@import url("./elements/sticky-footer.css");
 
 /* OBJECTS */
 @import url("./objects/o-flex-item-table-wrap.css");
