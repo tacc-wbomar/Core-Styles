@@ -13,6 +13,7 @@
 
 /* ELEMENTS */
 /* To override Bootstrap */
+@import url("./elements/root.css");
 /* NOTE: Load generic html-elements.css before specific elements/….css */
 @import url("./elements/html-elements.css");
 @import url("./elements/links.css");
@@ -42,7 +43,6 @@
 @import url("./components/c-message.css");
 @import url("./components/c-recognition.css");
 @import url("./components/c-see-all-link.css");
-@import url("./components/cortal.icon.css");
 
 /* TRUMPS */
 @import url("./trumps/s-blockquote.css");
