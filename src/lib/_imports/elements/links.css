@@ -1,11 +1,11 @@
 @import url('../tools/x-link.css');
 
-a:not(.c-button) {
+:where([role="main"], main) a:not(.c-button) {
   @extend .x-link;
 }
-a:not(.c-button):hover {
+:where([role="main"], main) a:not(.c-button):hover {
   @extend .x-link--hover;
 }
-a:not(.c-button):active {
+:where([role="main"], main) a:not(.c-button):active {
   @extend .x-link--active;
 }
