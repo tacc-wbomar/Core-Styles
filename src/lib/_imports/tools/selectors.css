@@ -17,3 +17,4 @@ Styleguide Tools.CustomSelectors.MultipleElements
 */
 @custom-selector :--action   button, a;
 @custom-selector :--main-content   [role="main"], main;
+@custom-selector :--portal-content   #root;
