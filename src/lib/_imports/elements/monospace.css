@@ -13,8 +13,14 @@
 
 /* Generic */
 
-& :is(code, kbd, pre, samp, var) {
+/* FAQ: Monospace within monospace code need not receive duplicate styles */
+& :is(:--monospace):not(:where(:--monospace) > *) {
   font-family: var(--global-font-family--mono);
+  font-size: 87.5%; /* borrowed from Bootstrap */
+  color: var(--global-color-primary--xx-dark);
+}
+& :is(:--monospace) > :where(:--monospace) {
+  font-family: inherit;
 }
 & code kbd {
   display: inline-block; /* to ensure element does not bleed outside parent */
