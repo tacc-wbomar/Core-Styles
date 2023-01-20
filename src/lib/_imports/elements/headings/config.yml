@@ -2,12 +2,8 @@ variants:
   - name: default
     hidden: true
   - name: cms
+    status: ready
     label: (CMS) Headings
-    context:
-      shouldLoadCMS: true
-      shouldLoadBootstrap: true
-  - name: cms-in-section
-    label: (CMS) Headings - In a Section
     context:
       shouldLoadCMS: true
       shouldLoadBootstrap: true

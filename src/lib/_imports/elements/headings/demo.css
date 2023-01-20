@@ -1,7 +1,10 @@
 /* This CSS is ONLY for the pattern library. It is NOT part of the pattern. */
 
-dt:not(:first-of-type) {
-  border-top: var(--global-border--normal);
-  padding-top: 3em;
+dt {
   margin-top: 3em;
+  border-top: var(--global-border-width--thick) solid var(--global-color-primary--normal);
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-bottom: var(--global-border--normal);
+  margin-bottom: 3em;
 }
