@@ -132,17 +132,9 @@ ul.checkboxselectmultiple li:last-child label {
   padding-inline: 0;
 }
 
-.form-errors {
-  @extend .c-message;
-  @extend .c-message--type-error;
-  @extend .c-message--scope-section;
-  @extend .c-message--scope-section.c-message--type-error;
-}
-.field-errors li {
-  @extend .c-message;
-  @extend .c-message--type-error;
-  @extend .c-message--scope-inline;
-}
+/* To apply c-message styles */
+/* FAQ: Relevant selectors are integrated into c-message custom selectors */
+/* SEE: ./c-message.selectors.css */
 
 
 

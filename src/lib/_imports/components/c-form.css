@@ -126,17 +126,9 @@ ul.c-form__errors {
   padding-inline: 0;
 }
 
-.c-form > .c-form__errors {
-  @extend .c-message;
-  @extend .c-message--type-error;
-  @extend .c-message--scope-section;
-  @extend .c-message--scope-section.c-message--type-error;
-}
-.c-form__field .c-form__errors li {
-  @extend .c-message;
-  @extend .c-message--type-error;
-  @extend .c-message--scope-inline;
-}
+/* To apply c-message styles */
+/* FAQ: Relevant selectors are integrated into c-message custom selectors */
+/* SEE: ./c-message.selectors.css */
 
 
 

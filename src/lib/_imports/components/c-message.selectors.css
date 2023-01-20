@@ -1,0 +1,68 @@
+/* FAQ: This component styles admonition pattern also */
+/* SEE: ./admonition.css */
+
+@custom-selector :--c-message
+    .c-message,
+    [class*="message--"],
+    .admonition,
+    :--c-form-errors,
+    :--c-form-errors__item;
+
+@custom-selector :--c-form-errors
+    .c-form > .c-form__errors,
+    .form-errors;
+@custom-selector :--c-form-errors__item
+    .c-form__field .c-form__errors li,
+    .field-errors li;
+
+@custom-selector :--c-message--type
+    [class*="c-card--type-"],
+    .message--success,
+    .message--info,
+    .message--warning,
+    .message--error;
+@custom-selector :--c-message--type-success
+    .c-message--type-success,
+    .message--success,
+    .admonition.tip,
+    .admonition.hint,
+    .admonition.important;
+@custom-selector :--c-message--type-info
+    .c-message--type-info,
+    .message--info,
+    .admonition.attention,
+    .admonition.note;
+@custom-selector :--c-message--type-warning
+    .c-message--type-warning,
+    .message--warning,
+    .admonition.caution,
+    .admonition.warning;
+@custom-selector :--c-message--type-error
+    .c-message--type-error,
+    .message--error,
+    .admonition.error,
+    .admonition.danger,
+    :--c-form-errors,
+    :--c-form-errors__item;
+
+@custom-selector :--c-message--scope
+    [class*="c-card--scope-"],
+    .message--inline,
+    .message--section,
+    .message--app,
+    .message--global;
+@custom-selector :--c-message--scope-inline
+    .c-message--scope-inline,
+    .message--inline,
+    :--c-form-errors__item;
+@custom-selector :--c-message--scope-section
+    .c-message--scope-section,
+    .message--section,
+    .admonition,
+    :--c-form-errors;
+@custom-selector :--c-message--scope-app
+    .c-message--scope-app,
+    .message--app;
+@custom-selector :--c-message--scope-global
+    .c-message--scope-global,
+    .message--global;
