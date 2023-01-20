@@ -1,12 +1,9 @@
 @import url("../tools/selectors.css");
 
-:root {
-    --global-space--above-breadcrumbs: 45px; /* rounded from design 46px */
-    --global-space--under-breadcrumbs: 40px; /* rounded from design 41px */
-}
-
 /* To scope these styles to main content (i.e. not header, not navbar) */
-:where(:--main-content) {
+/* To prevent these styles on portal content (i.e. within a React app) */
+/* TODO: Delete `:not(…)` after tup-ui does not load `core-styles.cms.css` */
+:where(:--main-content, :not(:--portal-content)) {
 
 
 
@@ -16,29 +13,20 @@
 Content Sectioning: Headings
 */
 
-/* FAQ: The `:not(.c-card *)` means "not for portal, c-card" */
-/* TODO: Move to Core-Styles only after approved after use on several pages */
-/* NOTE: When moving to Core-Styles, do not include `:not(... *)` */
-
 /* Structure */
+
 & h1 {
     margin-bottom: 40px; /* rounded from design 42px */
     text-transform: uppercase;
 }
-& h1:is(.container > *) {
-    margin-top: var(--global-space--under-breadcrumbs);
-}
-
 & h2 {
     margin-top: 0px; /* depends on interpretation of design */
     margin-bottom: 30px; /* rounded from design 31px */
 }
-
-& h3:not(.c-card *) {
+& h3 {
     margin-top: 0; /* designs suggest component padding can give top spacing */
     margin-bottom: 20px; /* rounded from design 17px */
 }
-
 /* WARNING: No design available; these are just developer guesswork */
 & h5 {
     text-transform: uppercase;
@@ -57,11 +45,10 @@ Content Sectioning: Headings
     font-size: var(--global-font-size--x-large);
     font-weight: var(--black);
 }
-& h3:not(.c-card *) {
+& h3 {
     font-size: var(--global-font-size--large);
     font-weight: var(--black);
 }
-
 /* WARNING: No design available; these are just developer guesswork */
 & h4 {
     font-size: var(--global-font-size--medium);

@@ -1,0 +1,7 @@
+/* This CSS is ONLY for the pattern library. It is NOT part of the pattern. */
+
+dt:not(:first-of-type) {
+  border-top: var(--global-border--normal);
+  padding-top: 3em;
+  margin-top: 3em;
+}
