@@ -130,7 +130,7 @@ ul.c-form__errors {
   @extend .c-message;
   @extend .c-message--type-error;
   @extend .c-message--scope-section;
-  @extend .c-message--scope-section.c-message--type-error;
+  @extend .c-message--type-error.c-message--scope-section;
 }
 .c-form__field .c-form__errors li {
   @extend .c-message;
