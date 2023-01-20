@@ -22,6 +22,11 @@ Styleguide Components.Message
 
 /* Elements */
 
+/* To prevent excess space at bottom of message */
+.c-message > *:last-child {
+  margin-bottom: 0;
+}
+
 /* To avoid clash of link color with message color */
 .c-message a,
 .c-message .c-button--as-link {

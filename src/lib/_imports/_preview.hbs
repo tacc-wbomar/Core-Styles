@@ -45,6 +45,21 @@
 {{/unless}}
 {{/if}}
 
+{{#if _target.context.shouldLoadDocs }}
+{{#unless _target.context.shouldSkipDocs }}
+<!-- Styles: Global (for current pattern): Docs -->
+<style>
+{{#each docsStyles}}
+  {{#if this.isInternal}}
+  @import url('{{path this.path}}');
+  {{else}}
+  @import url('{{this.path}}');
+  {{/if}}
+{{/each}}
+</style>
+{{/unless}}
+{{/if}}
+
 {{#if _target.context.shouldLoadPortal }}
 {{#unless _target.context.shouldSkipPortal }}
 <!-- Styles: Global (for current pattern): Portal -->
