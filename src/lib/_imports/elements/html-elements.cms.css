@@ -109,6 +109,14 @@ Reference:
 Styleguide Elements.InlineTextSemantics
 */
 
+/* To allow user to distinguish bold and black */
+strong {
+  font-weight: var(--bold);
+}
+b {
+  font-weight: var(--black);
+}
+
 /* Monospace */
 
 /* Overwrite Bootstrap (which does not use its `--font-family-monospace`) */

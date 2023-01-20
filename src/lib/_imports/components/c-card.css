@@ -1,57 +1,191 @@
-/*
-Card
+/* The first box's first variation found on Getting Started design */
+/* https://xd.adobe.com/view/dabaec5a-cc31-4c5c-876e-56d6d8cc359e-8fe9/screen/c0898d6b-2fd9-472a-bcd7-1ae9d4f9a015 */
 
-Container with content and action(s) about a single subject.
+@import url("../objects/o-section.selectors.css");
+@import url("../tools/selectors.css");
 
-> __ℹ️ Notice__: No default styling.
+@import url("./c-card.selectors.css");
 
-.c-card--frontera-about-page - Container/Link with image and large heading below
 
-Markup: c-card.html
 
-Styleguide Components.Card
-*/
-@import url("../tools/x-article-link.css");
+
+
+/* Settings */
+
+:root {
+    --global-space--bootstrap-gap: 30px;
+    --global-space--pattern-pad: 30px;
+    --global-space--unnamed: 50px;
+    --global-border-width--xx-thick: 5px;
+}
+
+
+
+
+
+/* Skin */
+/* NOTE: Design text color discrepency… text color should match that of body */
+
+
 
 /* Modifiers */
 
+/* Modifiers: Plain  */
 
-
-/* Modifiers: Frontera About Page */
-
-.c-card--frontera-about-page {
-  width: fit-content;
-
-  border-bottom: var(--global-border-width--normal) solid var(--global-color-primary--dark);
-  margin-bottom: 4.6rem;
+:--c-card--plain-hr-top {
+    border-top: 1px solid var(--global-color-primary--dark); /* mimic <hr> */
+    margin-top: var(--global-space--hr-buffer-below); /* mimic <hr> */
+}
+:--c-card--plain-hr-bottom {
+    border-bottom: 1px solid var(--global-color-primary--dark); /* mimic <hr> */
+    margin-bottom: var(--global-space--hr-buffer-below); /* mimic <hr> */
 }
 
-/* Plugins: Link / Image with Link */
-a.c-card--frontera-about-page {
-  display: inline-block;
+/* Modifiers: Standard  */
 
-  text-decoration: none;
-}
-a.c-card--frontera-about-page:hover { @extend %x-article-link-hover; }
-a.c-card--frontera-about-page:active { @extend %x-article-link-active; }
-
-/* Plugins: * > Image + Text */
-.c-card--frontera-about-page img + h3 {
-  margin-top: 1.6rem;
-}
-.c-card--frontera-about-page img ~ :last-child {
-  margin-bottom: 1.25rem;
+:--c-card--standard-N,
+:--c-card--standard {
+    border-top-style: solid;
+    border-top-width: var(--global-border-width--xx-thick);
 }
 
-/* Plugins: * > Image with Caption */
-.c-card--frontera-about-page figure {
-  margin: 0;
-}
-.c-card--frontera-about-page figcaption {
-  color: var(--global-color-primary--xx-dark);
-  font-size: var(--global-font-size--x-large);
-  font-weight: var(--bold);
+/* Modifiers: Plain & Standard & within Section */
 
-  margin-top: 1.6rem;
-  margin-bottom: 1.25rem;
+/* Default (On Light) */
+:--c-card--standard-1,
+:--c-card--standard,
+:--c-card--plain {
+    background-color: var(--global-color-primary--x-light);
+    border-top-color: var(--global-color-accent--tertiary);
+}
+:--c-card--standard-N,
+:--c-card--standard,
+:--c-card--plain {
+    box-shadow: 0px 3px 6px #0003;
+}
+
+/* On Muted & Within Card */
+:--c-card--standard-2,
+:--o-section--muted :--c-card--standard,
+:--o-section--muted :--c-card--plain,
+:--c-card :--c-card--standard,
+:--c-card :--c-card--plain {
+    background-color: var(--global-color-primary--xx-light);
+}
+:--c-card--standard-2,
+:--o-section--muted :--c-card--standard,
+:--c-card :--c-card--standard {
+    border-top-color: var(--global-color-accent--tertiary);
+}
+
+/* On Muted + Within Card & On Dark + Within Card */
+:--o-section--muted :--c-card :--c-card--plain,
+:--o-section--muted :--c-card :--c-card--standard,
+:--o-section--dark :--c-card :--c-card--plain,
+:--o-section--dark :--c-card :--c-card--standard {
+    background-color: var(--global-color-primary--x-light);
+}
+
+/* On Dark */
+:--c-card--standard-3,
+:--o-section--dark :--c-card--standard,
+:--o-section--dark :--c-card--plain {
+    background-color: var(--global-color-primary--xx-light);
+    border-top-color: var(--global-color-accent--secondary);
+}
+/* To color text with greater specificity than .o-section does */
+:--o-section--dark :--c-card--plain > *:not(a, button),
+:--o-section--dark :--c-card--standard > *:not(a, button),
+:--o-section--dark :--c-card--standard-N > *:not(a, button) {
+    color: var(--global-color-primary--xx-dark);
+}
+
+
+
+
+
+/* Structure */
+
+/* Elements */
+:--c-card > a:not(.c-button) {
+    display: inline-block; /* FAQ: for actions that do not yet have this */
+}
+:--c-card > :is(:--action) {
+    vertical-align: middle;
+
+    margin-bottom: 2rem; /* mimic <p> `margin-bottom` */
+    margin-right: var(--global-space--pattern-pad);
+}
+
+/* Block */
+:--c-card {
+    padding-inline: var(--global-space--pattern-pad);
+    padding-top: var(--global-space--pattern-pad);
+    /* FAQ: Let child elements' margin-bottom be the padding bottom */
+    padding-bottom: 0.1px; /* to remove padding, but retain child margin */
+
+    margin-bottom: var(--global-space--bootstrap-gap);
+}
+
+
+
+/* XXX: Commented out cuz it seems like an exception or the wrong solution */
+/*
+/* To tweak full-width children *//*
+/* - To add space  *//*
+.col:nth-child(4):last-child :--c-card--standard,
+.col:nth-child(4):last-child :--c-card--standard-N {
+    margin-top: var(--global-space--unnamed);
+}
+/* - To remove border *//*
+.col:nth-child(4):last-child > :--c-card--standard,
+.col:nth-child(4):last-child > :--c-card--standard-N {
+    border-top: none;
+}
+*/
+
+
+
+/* To add space between rows of boxes */
+/* XXX: Commented out until we know whether we want context-based spacing */
+/*
+:--c-card--standard:not( .col:only-child > * )
+:--c-card--standard-N:not( .col:only-child > * ) {
+    margin-bottom: var(--global-space--bootstrap-gap);
+}
+/* To eat the margin-bottom of bottom row of blocks so padding is consistent *\/
+:--c-card--standard:has( .row:last-child:not(:first-child) ),
+:--c-card--standard-N:has( .row:last-child:not(:first-child) ) {
+    padding-bottom: calc(
+       var(--global-space--pattern-pad) - var(--global-space--bootstrap-gap)
+    );
+}
+*/
+
+
+
+
+
+/* Elements */
+
+/* To remove undesired space */
+:--c-card :is(h1, h2, h3, h4, h5, h6) {
+    margin-top: unset;
+}
+
+/* To make buttons bold */
+/* TODO: Determine whether this should apply to all CMS buttons */
+:--c-card a.c-button {
+    font-weight: var(--bold);
+}
+
+/* To reduce font size of mailto link */
+:--c-card a[data-user][data-domain]::before {
+    font-size: var(--global-font-size--medium);
+}
+
+/* Miscellaneous */
+:--c-card > address {
+    line-height: 1.7;
+    margin-bottom: 2rem; /* to mimic <p> */
 }
