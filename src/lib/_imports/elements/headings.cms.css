@@ -1,0 +1,82 @@
+@import url("../tools/selectors.css");
+
+/* To scope these styles to main content (i.e. not header, not navbar) */
+:where(:--main-content) {
+
+
+
+
+
+/*
+Content Sectioning: Headings
+*/
+
+/* FAQ: The `:not(.c-card *)` means "not for portal, c-card" */
+/* TODO: Move to Core-Styles only after approved after use on several pages */
+/* NOTE: When moving to Core-Styles, do not include `:not(... *)` */
+
+/* Structure */
+h1 {
+    margin-bottom: 40px; /* rounded from design 42px */
+    text-transform: uppercase;
+}
+:root {
+    --global-space--above-breadcrumbs: 45px; /* rounded from design 46px */
+    --global-space--under-breadcrumbs: 40px; /* rounded from design 41px */
+}
+.container > h1 {
+    margin-top: var(--global-space--under-breadcrumbs);
+}
+
+h2 {
+    margin-top: 0px; /* depends on interpretation of design */
+    margin-bottom: 30px; /* rounded from design 31px */
+}
+
+h3:not(.c-card *) {
+    margin-top: 0; /* designs suggest component padding can give top spacing */
+    margin-bottom: 20px; /* rounded from design 17px */
+}
+
+/* WARNING: No design available; these are just developer guesswork */
+h5 {
+    text-transform: uppercase;
+}
+
+
+
+/* Skin */
+
+h1 {
+    font-size: var(--global-font-size--xx-large);
+    font-weight: var(--black);
+}
+h2 {
+    color: var(--global-color-accent--secondary);
+    font-size: var(--global-font-size--x-large);
+    font-weight: var(--black);
+}
+h3:not(.c-card *) {
+    font-size: var(--global-font-size--large);
+    font-weight: var(--black);
+}
+
+/* WARNING: No design available; these are just developer guesswork */
+h4 {
+    font-size: var(--global-font-size--medium);
+    font-weight: var(--bold);
+}
+h5 {
+    font-size: var(--global-font-size--small);
+    font-weight: var(--black);
+}
+h6 {
+    font-size: var(--global-font-size--small);
+    font-weight: var(--bold);
+}
+
+
+
+
+
+}

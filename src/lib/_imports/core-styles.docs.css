@@ -9,12 +9,11 @@
 @import url("./settings/font--cms.css");
 
 /* GENERICS */
-/* Mostly from ReadTheDocs */
-/* https://confluence.tacc.utexas.edu/x/b53tDg */
+/* (none) */
 
 /* ELEMENTS */
-/* To override ReadTheDocs */
 @import url("./elements/html-elements.cms.css");
+@import url("./elements/headings.cms.css");
 
 /* OBJECTS */
 /* (none) */
