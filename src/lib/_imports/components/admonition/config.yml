@@ -1,2 +1,4 @@
 context:
   shouldLoadDocs: true
+  supportStyles:
+    - ../../assets/components/c-message.css

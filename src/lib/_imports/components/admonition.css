@@ -1,35 +1,10 @@
-@import url("../components/c-message.css");
+/* To apply c-message styles */
+/* FAQ: Relevant selectors are integrated into c-message custom selectors */
+/* SEE: ./c-message.selectors.css */
 
-
-
-.admonition {
-  @extend .c-message;
-  @extend .c-message--scope-section;
-}
+/* To styles elements unique to Admonition */
 .admonition-title {
   font-weight: var(--bold);
   margin-top: unset; /* undo Browser */
   margin-bottom: unset; /* undo `html-elements.cms.css` */
-}
-
-.admonition.tip,
-.admonition.hint,
-.admonition.important {
-  @extend .c-message--type-success;
-  @extend .c-message--scope-section.c-message--type-success;
-}
-.admonition.attention,
-.admonition.note {
-  @extend .c-message--type-info;
-  @extend .c-message--scope-section.c-message--type-info;
-}
-.admonition.caution,
-.admonition.warning {
-  @extend .c-message--type-warning;
-  @extend .c-message--scope-section.c-message--type-warning;
-}
-.admonition.error,
-.admonition.danger {
-  @extend .c-message--type-error;
-  @extend .c-message--scope-section.c-message--type-error;
 }
