@@ -1,0 +1,104 @@
+@import url("../tools/selectors.css");
+
+/* To scope these styles to main content (i.e. not header, not navbar) */
+:where(:--main-content) {
+
+
+
+
+
+/* Structure */
+
+
+
+/* Generic */
+
+& :is(code, kbd, pre, samp, var) {
+  font-family: var(--global-font-family--mono);
+}
+& code kbd {
+  display: inline-block; /* to ensure element does not bleed outside parent */
+
+  font-size: inherit;
+}
+& pre {
+  overflow: auto; /* borrowed from Bootstrap */
+}
+
+
+
+/* For any code */
+& code,
+/* For code with content that has only output */
+& pre > samp {
+  color: unset; /* undo bootstrap */
+}
+
+
+/* For inline code */
+& code:not(pre > *) {
+  display: inline-block;
+  padding: var(--global-space--xx-small) var(--global-space--x-small);
+}
+
+
+
+/* For a code block with mostly input data */
+& pre > code,
+/* For a code block with only output data */
+& pre > samp {
+  display: inline-block; /* FAQ: If `block`, then background color is cropped */
+  padding: var(--global-space--x-small) var(--global-space--small);
+}
+/* For a code block whose container has width set inline */
+/* FAQ: Stretch code to meet container width */
+& pre[style] > code,
+& pre[style] > samp {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+
+
+/* For output data within a code block */
+/* FAQ: E.g. command output within CLI illustration */
+& pre samp {
+  opacity: 0.75;
+  text-decoration: none;
+}
+
+
+
+/* For data within a code block that is neither input nor output */
+/* FAQ: E.g. command prompt within CLI illustration */
+& pre code u {
+  opacity: 0.50;
+  text-decoration: none;
+}
+
+
+
+
+
+/* Style */
+
+& code,
+& pre > samp {
+  background-color: var(--global-color-primary--x-light);
+  border: var(--global-border-width--normal) solid var(--global-color-primary--light);
+}
+
+/* NOTE: Borrowed from Bootstrap */
+& kbd {
+  padding: .1rem .2rem;
+
+  color: #fff;
+  background-color: #212529;
+  border-radius: .2rem;
+}
+
+
+
+
+
+}
