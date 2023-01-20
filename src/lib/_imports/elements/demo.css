@@ -6,7 +6,7 @@ html {
   font-size: 62.5%; /* 16px */
 }
 
-body {
+main {
   font-size: 1.6rem;
 }
 
@@ -14,32 +14,32 @@ body {
 
 /* Organize Content */
 
-body > dl dl {
+main > dl dl {
   margin-block: 0;
   padding-left: unset; /* overwrite CMS */
 }
-body > dl dt,
-body > dl dd {
+main > dl dt,
+main > dl dd {
   font-family: var(--global-font-family--sans);
   color: #484848;
   line-height: normal;
 }
-body > dl dt {
+main > dl dt {
   font-size: 1.6rem;
   font-weight: var(--medium);
   margin-bottom: 10px;
 }
-body > dl > dt {
+main > dl > dt {
   font-weight: var(--bold);
 }
-body > dl dt:not(:first-of-type) {
+main > dl dt:not(:first-of-type) {
   margin-top: 20px;
 }
-body > dl dd {
+main > dl dd {
   margin-bottom: 10px;
   margin-left: 25px;
 }
-body > dl dd:not(.demo-grid) > * {
+main > dl dd:not(.demo-grid) > * {
   margin-right: 5px;
   vertical-align: middle;
 }
