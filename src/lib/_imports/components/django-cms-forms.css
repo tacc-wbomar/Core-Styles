@@ -136,7 +136,7 @@ ul.checkboxselectmultiple li:last-child label {
   @extend .c-message;
   @extend .c-message--type-error;
   @extend .c-message--scope-section;
-  @extend .c-message--scope-section.c-message--type-error;
+  @extend .c-message--type-error.c-message--scope-section;
 }
 .field-errors li {
   @extend .c-message;
