@@ -1,5 +1,10 @@
 @import url("../tools/selectors.css");
 
+:root {
+    --global-space--above-breadcrumbs: 45px; /* rounded from design 46px */
+    --global-space--under-breadcrumbs: 40px; /* rounded from design 41px */
+}
+
 /* To scope these styles to main content (i.e. not header, not navbar) */
 :where(:--main-content) {
 
@@ -16,30 +21,26 @@ Content Sectioning: Headings
 /* NOTE: When moving to Core-Styles, do not include `:not(... *)` */
 
 /* Structure */
-h1 {
+& h1 {
     margin-bottom: 40px; /* rounded from design 42px */
     text-transform: uppercase;
 }
-:root {
-    --global-space--above-breadcrumbs: 45px; /* rounded from design 46px */
-    --global-space--under-breadcrumbs: 40px; /* rounded from design 41px */
-}
-.container > h1 {
+& h1:is(.container > *) {
     margin-top: var(--global-space--under-breadcrumbs);
 }
 
-h2 {
+& h2 {
     margin-top: 0px; /* depends on interpretation of design */
     margin-bottom: 30px; /* rounded from design 31px */
 }
 
-h3:not(.c-card *) {
+& h3:not(.c-card *) {
     margin-top: 0; /* designs suggest component padding can give top spacing */
     margin-bottom: 20px; /* rounded from design 17px */
 }
 
 /* WARNING: No design available; these are just developer guesswork */
-h5 {
+& h5 {
     text-transform: uppercase;
 }
 
@@ -47,30 +48,30 @@ h5 {
 
 /* Skin */
 
-h1 {
+& h1 {
     font-size: var(--global-font-size--xx-large);
     font-weight: var(--black);
 }
-h2 {
+& h2 {
     color: var(--global-color-accent--secondary);
     font-size: var(--global-font-size--x-large);
     font-weight: var(--black);
 }
-h3:not(.c-card *) {
+& h3:not(.c-card *) {
     font-size: var(--global-font-size--large);
     font-weight: var(--black);
 }
 
 /* WARNING: No design available; these are just developer guesswork */
-h4 {
+& h4 {
     font-size: var(--global-font-size--medium);
     font-weight: var(--bold);
 }
-h5 {
+& h5 {
     font-size: var(--global-font-size--small);
     font-weight: var(--black);
 }
-h6 {
+& h6 {
     font-size: var(--global-font-size--small);
     font-weight: var(--bold);
 }
