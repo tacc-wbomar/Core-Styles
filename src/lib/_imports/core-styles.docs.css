@@ -21,6 +21,7 @@
 
 /* COMPONENTS */
 @import url("./components/admonition.css");
+@import url("./components/tacc-docs.css");
 
 /* TRUMPS */
 /* These styles from Core-CMS doc pages might be useful */

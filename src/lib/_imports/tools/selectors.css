@@ -3,19 +3,18 @@
 /* NOTE: These must be Tools (imported as needed) until native browser support, at which time they can become Settings (imported globally). */
 
 /*
-Multiple Elements
+Custom Selectors
 
-These are global selectors to target common combinations of elements.
+These are global selectors to target specific elements.
 
 Usage: `:is(:--action) { … }`
 Usage: `:--main-content .some-class { … }`
+Usage: `:--monospace--block { … }`
 
 Reference:
 - https://drafts.csswg.org/css-extensions/#custom-selectors
 
-Styleguide Tools.CustomSelectors.MultipleElements
+Styleguide Tools.CustomSelectors
 */
-@custom-selector :--action   button, a;
-@custom-selector :--main-content   [role="main"], main;
-@custom-selector :--portal-content   #root;
-@custom-selector :--monospace   code, kbd, pre, samp, var;
+@import url("../tools/selectors.common.css");
+@import url("../tools/selectors.monospace.css");
