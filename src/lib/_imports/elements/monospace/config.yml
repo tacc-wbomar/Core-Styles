@@ -1,0 +1,13 @@
+variants:
+  - name: default
+    hidden: true
+  - name: cms
+    label: (CMS) Monospace
+    context:
+      shouldLoadCMS: true
+      shouldLoadBootstrap: true
+  - name: docs
+    status: prototype
+    label: (Docs) Monospace
+    context:
+      shouldLoadDocs: true

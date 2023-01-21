@@ -29,7 +29,7 @@ Styleguide Elements.ContentSectioning
 
 /* Headings */
 
-/* See `./headings--cms.css` */
+/* SEE: ./headings--cms.css */
 
 
 
@@ -119,59 +119,7 @@ b {
 
 /* Monospace */
 
-/* Overwrite Bootstrap (which does not use its `--font-family-monospace`) */
-& :is(code, kbd, pre, samp, var) {
-  font-family: var(--global-font-family--mono);
-}
-& code kbd {
-  display: inline-block; /* ensure element does not bleed outside parent */
-  padding: .1rem .2rem; /* overwrites Bootstrap */
-  margin-left: .2rem;
-  margin-right: .2rem;
-
-  font-size: inherit;
-}
-
-/* Code (<code>, <samp>, <pre>) */
-
-/* Code: any content or context */
-& code,
-/* Code: content has only output */
-& pre > samp {
-  /* Undo Bootstrap */
-  color: unset;
-}
-/* Code: context is inline */
-& :not(pre) > code {
-  display: inline-block;
-  padding: var(--global-space--xx-small) var(--global-space--x-small);
-}
-/* Code: context is block, content has input */
-& pre > code,
-/* Code: context is block, content has only ouput */
-& pre > samp {
-  display: inline-block; /* FAQ: If `block`, then background color is cropped */
-  padding: var(--global-space--x-small) var(--global-space--small);
-}
-/* Code: context is block, container probably has inline-style width set */
-/* FAQ: Stretch code to meet container width */
-& pre[style] > code,
-& pre[style] > samp {
-  min-width: 100%;
-}
-
-/* Code: context is inline, content has only output */
-/* FAQ: Examples: command output within CLI illustration */
-& pre samp {
-  opacity: 0.75;
-  text-decoration: none;
-}
-/* Code: context is inline, content has context-agnostic output */
-/* FAQ: Examples: command prompt within CLI illustration */
-& pre code u {
-  opacity: 0.50;
-  text-decoration: none;
-}
+/* SEE: ./monospace.css */
 
 
 
