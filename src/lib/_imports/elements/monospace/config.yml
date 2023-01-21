@@ -7,7 +7,6 @@ variants:
       shouldLoadCMS: true
       shouldLoadBootstrap: true
   - name: docs
-    status: prototype
     label: (Docs) Monospace
     context:
       shouldLoadDocs: true

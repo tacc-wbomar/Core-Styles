@@ -1,5 +1,20 @@
 @import url("../tools/selectors.css");
 
+
+
+/* To share styles between component and elements without scoping components */
+/* FAQ: Only elements need scoping, because they could appear anywhere */
+:--monospace-components,
+:where(:--main-content) :is(:--monospace-elements) {
+  font-family: var(--global-font-family--mono);
+  font-size: 87.5%; /* borrowed from Bootstrap */
+  line-height: 1.4;
+
+  color: var(--global-color-primary--xx-dark);
+}
+
+
+
 /* To scope these styles to main content (i.e. not header, not navbar) */
 :where(:--main-content) {
 
@@ -7,24 +22,10 @@
 
 
 
-/* Structure */
+/* Base */
 
-
-
-/* Generic */
-
-/* FAQ: Monospace within monospace code need not receive duplicate styles */
-& :is(:--monospace):not(:where(:--monospace) > *) {
-  font-family: var(--global-font-family--mono);
-  font-size: 87.5%; /* borrowed from Bootstrap */
-  color: var(--global-color-primary--xx-dark);
-}
-& :is(:--monospace) > :where(:--monospace) {
-  font-family: inherit;
-}
-& code kbd {
-  display: inline-block; /* to ensure element does not bleed outside parent */
-
+/* FAQ: Nested monospace patterns should not be resized twice */
+& :is(:--monospace-elements) > :is(:--monospace-elements) {
   font-size: inherit;
 }
 & pre {
@@ -33,74 +34,52 @@
 
 
 
-/* For any code */
-& code,
-/* For code with content that has only output */
-& pre > samp {
-  color: unset; /* undo bootstrap */
-}
+/* Types */
 
-
-/* For inline code */
-& code:not(pre > *) {
-  display: inline-block;
-  padding: var(--global-space--xx-small) var(--global-space--x-small);
-}
-
-
-
-/* For a code block with mostly input data */
-& pre > code,
-/* For a code block with only output data */
-& pre > samp {
+& :--monospace--block {
   display: inline-block; /* FAQ: If `block`, then background color is cropped */
   padding: var(--global-space--x-small) var(--global-space--small);
 }
-/* For a code block whose container has width set inline */
-/* FAQ: Stretch code to meet container width */
-& pre[style] > code,
-& pre[style] > samp {
+& :--monospace--inline {
+  display: inline-block; /* to ensure element does not bleed outside parent */
+  padding: var(--global-space--xx-small) var(--global-space--x-small);
+}
+
+& :--monospace--boxed {
+  background-color: var(--global-color-primary--x-light);
+  border: var(--global-border-width--normal) solid var(--global-color-primary--light);
+}
+& :--monospace--output {
+  opacity: 0.75;
+  text-decoration: none;
+}
+
+& :--monospace--kbd {
+  color: #fff;
+  background-color: #212529;
+  border-radius: .2rem;
+}
+
+/* Types: Edge Cases */
+
+/* To stretch code blocks whose container has a width set inline */
+& :--monospace--block:where(pre[style] > *) {
   min-width: 100%;
   box-sizing: border-box;
 }
 
 
 
-/* For output data within a code block */
-/* FAQ: E.g. command output within CLI illustration */
-& pre samp {
-  opacity: 0.75;
-  text-decoration: none;
+/* Children */
+
+& :--monospace__kbd {
+  display: inline-block;
+  font-size: inherit;
 }
 
-
-
-/* For data within a code block that is neither input nor output */
-/* FAQ: E.g. command prompt within CLI illustration */
-& pre code u {
+& :--monospace__prompt {
   opacity: 0.50;
   text-decoration: none;
-}
-
-
-
-
-
-/* Style */
-
-& code,
-& pre > samp {
-  background-color: var(--global-color-primary--x-light);
-  border: var(--global-border-width--normal) solid var(--global-color-primary--light);
-}
-
-/* NOTE: Borrowed from Bootstrap */
-& kbd {
-  padding: .1rem .2rem;
-
-  color: #fff;
-  background-color: #212529;
-  border-radius: .2rem;
 }
 
 
