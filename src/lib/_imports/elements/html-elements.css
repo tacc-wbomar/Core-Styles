@@ -5,10 +5,8 @@
 
 
 
-
-
 /*
-Text Content
+Form Content
 
 Elements that create forms which allow users to enter and submit data.
 
@@ -31,6 +29,8 @@ Styleguide Elements.Forms
   line-height: inherit;
 }
 
+
+
 /*
 Text Content
 
@@ -47,11 +47,28 @@ Reference:
 Styleguide Elements.TextContent
 */
 
+& blockquote {
+  width: max-content;
+  margin-inline: unset; /* undo browser */
+}
+& blockquote > p:last-child {
+  margin-bottom: 0;
+}
+
+& figure {
+  width: min-content;
+  margin-inline: unset; /* undo browser */
+}
+
+
 /* To mimic Bootstrap */
 & :is(dl, ol, ul) {
   margin-top: 0;
   margin-bottom: 1rem;
 }
+
+
+
 
 /*
 Interactive Elements
@@ -74,8 +91,6 @@ Styleguide Elements.Interactive
   margin-top: 0;
   margin-bottom: 1rem;
 }
-
-
 
 
 
