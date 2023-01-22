@@ -55,14 +55,9 @@ Styleguide Elements.TextContent
 }
 
 & figure {
+  width: min-content; /* to constrain <figcaption> width */
   margin-inline: unset; /* undo browser */
 }
-/* To constrain <figcaption> width (except when it causes trouble) */
-/* FAQ: A blockquote inside would be shrink-wrapped and unable to undo that */
-& figure:not(.s-blockquote) {
-  width: min-content;
-}
-
 
 /* To mimic Bootstrap */
 & :is(dl, ol, ul) {
