@@ -24,5 +24,10 @@
 blockquote:is(.align-left, .align-right),
 :is(.align-left, .align-right) > blockquote {
   max-width: 30ch;
-  width: max-content;
+}
+
+/* To center blockquote and avoid caveats of doing so */
+blockquote.align-center {
+  width: max-content; /* to give a width that does not arbitrarily force wrap */
+  max-width: 100%; /* to prevent overflow */
 }
