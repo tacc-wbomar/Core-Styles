@@ -213,30 +213,4 @@ Styleguide Elements.DemarcatingEdits
 
 
 
-/*
-Interactive Elements
-
-Elements that help to create interactive user interface objects.
-
-```
-<details> <summary> <dialog> <menu>
-```
-
-Reference:
-
-- [HTML element reference: Interactive elements | MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Interactive_elements)
-
-Styleguide Elements.Interactive
-*/
-
-/* Clone Bootstrap's <p> and <ul> margins */
-& details {
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-
-
-
-
 }
