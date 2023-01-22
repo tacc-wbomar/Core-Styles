@@ -14,34 +14,34 @@ main {
 
 /* Organize Content */
 
-main > dl dl {
-  margin-block: 0;
-  padding-left: unset; /* overwrite CMS */
-}
-main > dl dt,
-main > dl dd {
-  font-family: var(--global-font-family--sans);
-  color: #484848;
-  line-height: normal;
-}
-main > dl dt {
-  font-size: 1.6rem;
-  font-weight: var(--medium);
-  margin-bottom: 10px;
-}
-main > dl > dt {
-  font-weight: var(--bold);
-}
-main > dl dt:not(:first-of-type) {
-  margin-top: 20px;
-}
-main > dl dd {
-  margin-bottom: 10px;
-  margin-left: 25px;
-}
-main > dl dd:not(.demo-grid) > * {
-  margin-right: 5px;
-  vertical-align: middle;
+main > dl {
+
+  &:is(dt, dd):not(.no-demo-styles > *) {
+    font-family: var(--global-font-family--sans);
+    color: #484848;
+    line-height: normal;
+  }
+  & dt:not(.no-demo-styles > *) {
+    font-size: 1.6rem;
+    font-weight: var(--medium);
+    margin-bottom: 10px;
+  }
+  & > dt:not(.no-demo-styles > *) {
+    font-weight: var(--bold);
+  }
+  & dt:not(:first-of-type):not(.no-demo-styles > *) {
+    margin-top: 20px;
+  }
+  & dd:not(.no-demo-styles > *) {
+    margin-bottom: 10px;
+    margin-left: 25px;
+  }
+
+  & dl:not(.no-demo-styles) {
+    margin-block: 0;
+    padding-left: unset; /* undo html-elements.cms.css */
+  }
+
 }
 
 
@@ -51,6 +51,7 @@ main > dl dd:not(.demo-grid) > * {
 body > main {
   width: 80vw;
   margin-inline: auto;
+  padding-block: 1em;
 }
 
 /* To show when body is covered by a full-width background */
