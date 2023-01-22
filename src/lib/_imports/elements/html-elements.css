@@ -48,7 +48,6 @@ Styleguide Elements.TextContent
 */
 
 & blockquote {
-  width: max-content;
   margin-inline: unset; /* undo browser */
 }
 & blockquote > p:last-child {
@@ -56,10 +55,9 @@ Styleguide Elements.TextContent
 }
 
 & figure {
-  width: min-content;
+  width: min-content; /* to constrain <figcaption> width */
   margin-inline: unset; /* undo browser */
 }
-
 
 /* To mimic Bootstrap */
 & :is(dl, ol, ul) {
