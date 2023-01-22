@@ -58,7 +58,7 @@ Styleguide Elements.TextContent
   margin-inline: unset; /* undo browser */
 }
 /* To constrain <figcaption> width (except when it causes trouble) */
-/* FAQ: A blockquote inside would be shrink-wrapped and be unable to undo it */
+/* FAQ: A blockquote inside would be shrink-wrapped and unable to undo that */
 & figure:not(.s-blockquote) {
   width: min-content;
 }
