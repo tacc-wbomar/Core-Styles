@@ -6,13 +6,14 @@
 
 /* SETTINGS */
 /* To get most settings, client should load `./base.css` first */
-@import url("./settings/font--cms.css");
+@import url("./settings/font--docs.css");
 
 /* GENERICS */
 /* (none) */
 
 /* ELEMENTS */
 @import url("./elements/html-elements.cms.css");
+@import url("./elements/html-elements.docs.css");
 @import url("./elements/headings--cms.css");
 @import url("./elements/monospace.css");
 
