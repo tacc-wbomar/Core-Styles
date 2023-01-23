@@ -21,10 +21,7 @@
 
 /* OBJECTS */
 @import url("./objects/o-fixed-header-table.css");
-@import url("./objects/o-float-content.css");
 @import url("./objects/o-grid.css");
-@import url("./objects/o-offset-content.css");
-@import url("./objects/o-section.css");
 @import url("./objects/o-site.css");
 @import url("./objects/o-table-wrap.css");
 
