@@ -30,6 +30,8 @@
     --global-color-primary--x-dark-rgb: 72, 72, 72;
   --global-color-primary--xx-dark: #222222;
     --global-color-primary--xx-dark-rgb: 34, 34, 34;
+  --global-color-primary--xxx-dark: #000000;
+    --global-color-primary--xxx-dark-rgb: 0, 0, 0;
 
   /* Accent */
   --global-color-accent--x-light: #e3d7fd;
