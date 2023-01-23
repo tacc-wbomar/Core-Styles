@@ -89,6 +89,9 @@ Styleguide Elements.Interactive
   margin-top: 0;
   margin-bottom: 1rem;
 }
+& details > summary {
+  cursor: pointer;
+}
 
 
 
