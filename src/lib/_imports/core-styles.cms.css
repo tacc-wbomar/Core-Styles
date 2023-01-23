@@ -21,7 +21,9 @@
 @import url("./elements/form.cms.css");
 
 /* OBJECTS */
-/* (none) */
+@import url("./objects/o-float-content.css");
+@import url("./objects/o-offset-content.css");
+@import url("./objects/o-section.css");
 
 /* COMPONENTS */
 @import url("./components/cortal.icon.css");
