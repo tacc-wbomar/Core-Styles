@@ -26,7 +26,6 @@
 @import url("./objects/o-section.css");
 
 /* COMPONENTS */
-@import url("./components/align.css");
 @import url("./components/cortal.icon.css");
 /* TODO: Move to TACC/Core-CMS-Resources:/frontera-cms
         or — alternatively — TACC/Core-CMS */
