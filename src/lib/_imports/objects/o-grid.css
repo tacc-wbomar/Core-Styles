@@ -47,6 +47,13 @@ Styleguide Objects.Grid
   max-width: 100%;
 }
 
+/* Avoid figure size shrinking */
+/* HELP: Why does this happen to figure only inside a gid? */
+/* SEE: components/c-card--frontera/c-card--frontera.hbs */
+.o-grid figure {
+  width: unset; /* undo html-elements.css */
+}
+
 /* Hide content that does exceed cell size */
 .o-grid > * {
   overflow: hidden;

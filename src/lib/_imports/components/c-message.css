@@ -22,6 +22,11 @@ Styleguide Components.Message
 
 /* Elements */
 
+/* To prevent excess space at bottom of message */
+.c-message > *:last-child {
+  margin-bottom: 0;
+}
+
 /* To avoid clash of link color with message color */
 .c-message a,
 .c-message .c-button--as-link {
@@ -78,19 +83,19 @@ Styleguide Components.Message
   color: var(--global-color-danger--dark);
 }
 
-.c-message--scope-section.c-message--type-info {
+.c-message--type-info.c-message--scope-section {
   background-color: var(--global-color-info--x-light);
   border-color: var(--global-color-info--normal);
 }
-.c-message--scope-section.c-message--type-success {
+.c-message--type-success.c-message--scope-section {
   background-color: var(--global-color-success--x-light);
   border-color: var(--global-color-success--normal);
 }
-.c-message--scope-section.c-message--type-warning {
+.c-message--type-warning.c-message--scope-section {
   background-color: var(--global-color-warning--x-light);
   border-color: var(--global-color-warning--normal);
 }
-.c-message--scope-section.c-message--type-error {
+.c-message--type-error.c-message--scope-section {
   background-color: var(--global-color-danger--x-light);
   border-color: var(--global-color-danger--normal);
 }
@@ -99,4 +104,32 @@ Styleguide Components.Message
   color: var(--global-color-primary--xx-light);
   background-color: var(--global-color-accent--secondary);
   border-color: var(--global-color-primary--dark);
+}
+
+
+
+/* Alternate Class Names */
+
+[class*="message--"]:not(.c-message) { @extend .c-message; }
+
+.message--inline { @extend .c-message--scope-inline; }
+.message--section { @extend .c-message--scope-section; }
+.message--global { @extend .c-message--scope-global; }
+
+.message--success { @extend .c-message--type-success; }
+.message--info { @extend .c-message--type-info; }
+.message--warning { @extend .c-message--type-warning; }
+.message--error { @extend .c-message--type-error; }
+
+.message--success.message--section {
+  @extend .c-message--type-success.c-message--scope-section;
+}
+.message--info.message--section {
+  @extend .c-message--type-info.c-message--scope-section;
+}
+.message--warning.message--section {
+  @extend .c-message--type-warning.c-message--scope-section;
+}
+.message--error.message--section {
+  @extend .c-message--type-error.c-message--scope-section;
 }

@@ -1,0 +1,18 @@
+<strong>Table of Contents</strong>
+<nav class="c-nav">
+  <ul>
+    <li><a href="#headings--no-section"><strong>not</strong> in an "O Section"</a></li>
+    <li><a href="#headings--in-section"><strong>inside</strong> an "O Section"</a></li>
+  </ul>
+</nav>
+<dl>
+  <dt id="headings--no-section"><strong>not</strong> in an <a href="{{path '../detail/o-section' }}" target="_parent"><code>O Section</code></a></dt>
+  <dd>
+    {{> @headings }}
+  </dd>
+
+  <dt id="headings--in-section"><strong>inside</strong> an <a href="{{path '../detail/o-section' }}" target="_parent"><code>O Section</code></a></dt>
+  <dd class="o-section o-section--style-muted">
+    {{> @headings }}
+  </dd>
+</dl>

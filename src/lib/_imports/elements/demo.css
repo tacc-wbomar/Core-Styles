@@ -6,7 +6,7 @@ html {
   font-size: 62.5%; /* 16px */
 }
 
-body {
+main {
   font-size: 1.6rem;
 }
 
@@ -14,32 +14,79 @@ body {
 
 /* Organize Content */
 
-body > dl dl {
-  margin-block: 0;
-  padding-left: unset; /* overwrite CMS */
+main > dl {
+
+  &:is(dt, dd):not(.no-demo-styles > *) {
+    font-family: var(--global-font-family--sans);
+    color: #484848;
+    line-height: normal;
+  }
+  & dt:not(.no-demo-styles > *) {
+    font-size: 1.6rem;
+    font-weight: var(--medium);
+    margin-bottom: 10px;
+  }
+  & > dt:not(.no-demo-styles > *) {
+    font-weight: var(--bold);
+  }
+  & dt:not(:first-of-type):not(.no-demo-styles > *) {
+    margin-top: 20px;
+  }
+  & dd:not(.no-demo-styles > *) {
+    margin-bottom: 10px;
+    margin-left: 25px;
+  }
+
+  & dl:not(.no-demo-styles) {
+    margin-block: 0;
+    padding-left: unset; /* undo html-elements.cms.css */
+  }
+
 }
-body > dl dt,
-body > dl dd {
-  font-family: var(--global-font-family--sans);
-  color: #484848;
-  line-height: normal;
+
+
+
+/* Lay Out */
+
+body > main {
+  width: 80vw;
+  margin-inline: auto;
+  padding-block: 1em;
 }
-body > dl dt {
-  font-size: 1.6rem;
-  font-weight: var(--medium);
-  margin-bottom: 10px;
+
+/* To show when body is covered by a full-width background */
+body:has(main > section) {
+  --color-light: var(--global-color-primary--xx-light);
+  --color-dark: var(--global-color-primary--x-light);
+
+  background-color: var(--color-dark);
+  background: repeating-linear-gradient( 90deg,
+    var(--color-dark),
+    var(--color-dark) 1px,
+    var(--color-light) 1px,
+    var(--color-light) 20px
+  );
 }
-body > dl > dt {
-  font-weight: var(--bold);
+
+/* To give equal block spacing to rulers */
+section + hr {
+  --global-space--hr-buffer-above: var(--global-space--hr-buffer-below);
 }
-body > dl dt:not(:first-of-type) {
-  margin-top: 20px;
-}
-body > dl dd {
-  margin-bottom: 10px;
-  margin-left: 25px;
-}
-body > dl dd:not(.demo-grid) > * {
-  margin-right: 5px;
-  vertical-align: middle;
+
+
+
+/* Background */
+
+/* To show when body is covered by a full-width background */
+body:has(body > .o-section) {
+  --color-light: var(--global-color-primary--xx-light);
+  --color-dark: var(--global-color-primary--x-light);
+
+  background-color: var(--color-dark);
+  background: repeating-linear-gradient( -45deg,
+    var(--color-dark),
+    var(--color-dark) 1px,
+    var(--color-light) 1px,
+    var(--color-light) 20px
+  );
 }

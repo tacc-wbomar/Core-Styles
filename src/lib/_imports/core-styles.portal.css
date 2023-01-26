@@ -14,12 +14,13 @@
 
 /* ELEMENTS */
 /* To override Bootstrap */
-/* (none) */
+@import url("./elements/sticky-footer.css");
 
 /* OBJECTS */
 @import url("./objects/o-flex-item-table-wrap.css");
 
 /* COMPONENTS */
+@import url("./components/cortal.icon.css");
 @import url("./components/mui.tabs.css");
 
 /* TRUMPS */

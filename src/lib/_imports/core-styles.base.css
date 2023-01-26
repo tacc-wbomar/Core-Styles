@@ -13,6 +13,7 @@
 
 /* ELEMENTS */
 /* To override Bootstrap */
+@import url("./elements/root.css");
 /* NOTE: Load generic html-elements.css before specific elements/….css */
 @import url("./elements/html-elements.css");
 @import url("./elements/links.css");
@@ -20,10 +21,7 @@
 
 /* OBJECTS */
 @import url("./objects/o-fixed-header-table.css");
-@import url("./objects/o-float-content.css");
 @import url("./objects/o-grid.css");
-@import url("./objects/o-offset-content.css");
-@import url("./objects/o-section.css");
 @import url("./objects/o-site.css");
 @import url("./objects/o-table-wrap.css");
 
@@ -32,7 +30,6 @@
 @import url("./components/bootstrap.figure.css");
 @import url("./components/bootstrap.modal.css");
 @import url("./components/c-button.css");
-@import url("./components/c-card.css");
 @import url("./components/c-callout.css");
 @import url("./components/c-data-list.css");
 @import url("./components/c-feed-list.css");
@@ -43,7 +40,6 @@
 @import url("./components/c-message.css");
 @import url("./components/c-recognition.css");
 @import url("./components/c-see-all-link.css");
-@import url("./components/cortal.icon.css");
 
 /* TRUMPS */
 @import url("./trumps/s-blockquote.css");

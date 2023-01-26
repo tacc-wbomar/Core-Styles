@@ -1,0 +1,12 @@
+@import url("../trumps/s-breadcrumbs.css");
+
+.cmd-line,
+.job-script,
+.syntax {
+  /* SEE: ../tools/selectors.monospace.css */
+  /* FAQ: The element-based code styling is much richer than these classes */
+}
+
+.rst-content [role="navigation"] {
+  @extend .s-breadcrumbs-via-ul;
+}

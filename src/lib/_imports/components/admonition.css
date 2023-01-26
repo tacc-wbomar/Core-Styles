@@ -1,0 +1,35 @@
+@import url("../components/c-message.css");
+
+
+
+.admonition {
+  @extend .c-message;
+  @extend .c-message--scope-section;
+}
+.admonition-title {
+  font-weight: var(--bold);
+  margin-top: unset; /* undo Browser */
+  margin-bottom: unset; /* undo `html-elements.cms.css` */
+}
+
+.admonition.tip,
+.admonition.hint,
+.admonition.important {
+  @extend .c-message--type-success;
+  @extend .c-message--type-success.c-message--scope-section;
+}
+.admonition.attention,
+.admonition.note {
+  @extend .c-message--type-info;
+  @extend .c-message--type-info.c-message--scope-section;
+}
+.admonition.caution,
+.admonition.warning {
+  @extend .c-message--type-warning;
+  @extend .c-message--type-warning.c-message--scope-section;
+}
+.admonition.error,
+.admonition.danger {
+  @extend .c-message--type-error;
+  @extend .c-message--type-error.c-message--scope-section;
+}
