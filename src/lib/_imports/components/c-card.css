@@ -23,6 +23,16 @@
 
 
 
+/* TODO: When Portal does not load core-styles.cms.css:
+         - Remove the `& `s in each child selector
+         - Remove the `:not(:--portal-content)` "wrapper selector"
+*/
+:not(:--portal-content) {
+
+
+
+
+
 /* Skin */
 /* NOTE: Design text color discrepency… text color should match that of body */
 
@@ -32,19 +42,19 @@
 
 /* Modifiers: Plain  */
 
-:--c-card--plain-hr-top {
+& :--c-card--plain-hr-top {
     border-top: 1px solid var(--global-color-primary--dark); /* mimic <hr> */
     margin-top: var(--global-space--hr-buffer-below); /* mimic <hr> */
 }
-:--c-card--plain-hr-bottom {
+& :--c-card--plain-hr-bottom {
     border-bottom: 1px solid var(--global-color-primary--dark); /* mimic <hr> */
     margin-bottom: var(--global-space--hr-buffer-below); /* mimic <hr> */
 }
 
 /* Modifiers: Standard  */
 
-:--c-card--standard-N,
-:--c-card--standard {
+& :--c-card--standard-N,
+& :--c-card--standard {
     border-top-style: solid;
     border-top-width: var(--global-border-width--xx-thick);
 }
@@ -52,51 +62,51 @@
 /* Modifiers: Plain & Standard & within Section */
 
 /* Default (On Light) */
-:--c-card--standard-1,
-:--c-card--standard,
-:--c-card--plain {
+& :--c-card--standard-1,
+& :--c-card--standard,
+& :--c-card--plain {
     background-color: var(--global-color-primary--x-light);
     border-top-color: var(--global-color-accent--tertiary);
 }
-:--c-card--standard-N,
-:--c-card--standard,
-:--c-card--plain {
+& :--c-card--standard-N,
+& :--c-card--standard,
+& :--c-card--plain {
     box-shadow: 0px 3px 6px #0003;
 }
 
 /* On Muted & Within Card */
-:--c-card--standard-2,
-:--o-section--muted :--c-card--standard,
-:--o-section--muted :--c-card--plain,
-:--c-card :--c-card--standard,
-:--c-card :--c-card--plain {
+& :--c-card--standard-2,
+& :--o-section--muted :--c-card--standard,
+& :--o-section--muted :--c-card--plain,
+& :--c-card :--c-card--standard,
+& :--c-card :--c-card--plain {
     background-color: var(--global-color-primary--xx-light);
 }
-:--c-card--standard-2,
-:--o-section--muted :--c-card--standard,
-:--c-card :--c-card--standard {
+& :--c-card--standard-2,
+& :--o-section--muted :--c-card--standard,
+& :--c-card :--c-card--standard {
     border-top-color: var(--global-color-accent--tertiary);
 }
 
 /* On Muted + Within Card & On Dark + Within Card */
-:--o-section--muted :--c-card :--c-card--plain,
-:--o-section--muted :--c-card :--c-card--standard,
-:--o-section--dark :--c-card :--c-card--plain,
-:--o-section--dark :--c-card :--c-card--standard {
+& :--o-section--muted :--c-card :--c-card--plain,
+& :--o-section--muted :--c-card :--c-card--standard,
+& :--o-section--dark :--c-card :--c-card--plain,
+& :--o-section--dark :--c-card :--c-card--standard {
     background-color: var(--global-color-primary--x-light);
 }
 
 /* On Dark */
-:--c-card--standard-3,
-:--o-section--dark :--c-card--standard,
-:--o-section--dark :--c-card--plain {
+& :--c-card--standard-3,
+& :--o-section--dark :--c-card--standard,
+& :--o-section--dark :--c-card--plain {
     background-color: var(--global-color-primary--xx-light);
     border-top-color: var(--global-color-accent--secondary);
 }
 /* To color text with greater specificity than .o-section does */
-:--o-section--dark :--c-card--plain > *:not(a, button),
-:--o-section--dark :--c-card--standard > *:not(a, button),
-:--o-section--dark :--c-card--standard-N > *:not(a, button) {
+& :--o-section--dark :--c-card--plain > *:not(a, button),
+& :--o-section--dark :--c-card--standard > *:not(a, button),
+& :--o-section--dark :--c-card--standard-N > *:not(a, button) {
     color: var(--global-color-primary--xx-dark);
 }
 
@@ -107,10 +117,10 @@
 /* Structure */
 
 /* Elements */
-:--c-card > a:not(.c-button) {
+& :--c-card > a:not(.c-button) {
     display: inline-block; /* FAQ: for actions that do not yet have this */
 }
-:--c-card > :is(:--action) {
+& :--c-card > :is(:--action) {
     vertical-align: middle;
 
     margin-bottom: 2rem; /* mimic <p> `margin-bottom` */
@@ -118,7 +128,7 @@
 }
 
 /* Block */
-:--c-card {
+& :--c-card {
     padding-inline: var(--global-space--pattern-pad);
     padding-top: var(--global-space--pattern-pad);
     /* FAQ: Let child elements' margin-bottom be the padding bottom */
@@ -149,13 +159,13 @@
 /* To add space between rows of boxes */
 /* XXX: Commented out until we know whether we want context-based spacing */
 /*
-:--c-card--standard:not( .col:only-child > * )
-:--c-card--standard-N:not( .col:only-child > * ) {
+& :--c-card--standard:not( .col:only-child > * )
+& :--c-card--standard-N:not( .col:only-child > * ) {
     margin-bottom: var(--global-space--bootstrap-gap);
 }
 /* To eat the margin-bottom of bottom row of blocks so padding is consistent *\/
-:--c-card--standard:has( .row:last-child:not(:first-child) ),
-:--c-card--standard-N:has( .row:last-child:not(:first-child) ) {
+& :--c-card--standard:has( .row:last-child:not(:first-child) ),
+& :--c-card--standard-N:has( .row:last-child:not(:first-child) ) {
     padding-bottom: calc(
        var(--global-space--pattern-pad) - var(--global-space--bootstrap-gap)
     );
@@ -169,23 +179,29 @@
 /* Elements */
 
 /* To remove undesired space */
-:--c-card :is(h1, h2, h3, h4, h5, h6) {
+& :--c-card :is(h1, h2, h3, h4, h5, h6) {
     margin-top: unset;
 }
 
 /* To make buttons bold */
 /* TODO: Determine whether this should apply to all CMS buttons */
-:--c-card a.c-button {
+& :--c-card a.c-button {
     font-weight: var(--bold);
 }
 
 /* To reduce font size of mailto link */
-:--c-card a[data-user][data-domain]::before {
+& :--c-card a[data-user][data-domain]::before {
     font-size: var(--global-font-size--medium);
 }
 
 /* Miscellaneous */
-:--c-card > address {
+& :--c-card > address {
     line-height: 1.7;
     margin-bottom: 2rem; /* to mimic <p> */
+}
+
+
+
+
+
 }

@@ -27,6 +27,7 @@
 
 /* COMPONENTS */
 @import url("./components/cortal.icon.css");
+@import url("./components/c-card.css");
 /* TODO: Move to TACC/Core-CMS-Resources:/frontera-cms
         or — alternatively — TACC/Core-CMS */
 @import url("./components/c-card--frontera-about-page.css");
