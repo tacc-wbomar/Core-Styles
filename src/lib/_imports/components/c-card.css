@@ -25,9 +25,9 @@
 
 /* TODO: When Portal does not load core-styles.cms.css:
          - Remove the `& `s in each child selector
-         - Remove the `:not(:--portal-content)` "wrapper selector"
+         - Remove this "wrapper selector"
 */
-:not(:--portal-content) {
+:not(:--portal-content, :--modal) {
 
 
 
