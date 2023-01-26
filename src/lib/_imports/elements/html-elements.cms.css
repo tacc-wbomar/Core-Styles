@@ -110,10 +110,10 @@ Styleguide Elements.InlineTextSemantics
 */
 
 /* To allow user to distinguish bold and black */
-strong {
+& strong {
   font-weight: var(--bold);
 }
-b {
+& b {
   font-weight: var(--black);
 }
 
