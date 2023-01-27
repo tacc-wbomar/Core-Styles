@@ -46,7 +46,7 @@ Styleguide Tools.CustomSelectors.Monospace
 
 /* For output data e.g. command output in CLI demo */
 @custom-selector :--monospace--output
-  pre > samp /* code block with only output data */;
+  samp /* code block with only output data */;
 
 
 

@@ -10,7 +10,7 @@
   font-size: 87.5%; /* borrowed from Bootstrap */
   line-height: 1.4;
 
-  color: var(--global-color-primary--xx-dark);
+  color: inherit;
 }
 
 
@@ -46,18 +46,18 @@
 }
 
 & :--monospace--boxed {
-  background-color: var(--global-color-primary--x-light);
+  color: var(--global-color-primary--xx-light);
+  background-color: var(--global-color-primary--xx-dark);
   border: var(--global-border-width--normal) solid var(--global-color-primary--light);
 }
-& :--monospace--output {
+& :--monospace--output:not(:--monospace--boxed) {
   opacity: 0.75;
-  text-decoration: none;
 }
 
 & :--monospace--kbd {
-  color: #fff;
-  background-color: #212529;
-  border-radius: .2rem;
+  border: var(--global-border--normal);
+  border-radius: 0.5rem;
+  background-color: unset; /* undo Bootstrap */
 }
 
 /* Types: Edge Cases */
