@@ -42,9 +42,14 @@
 
   --global-color-accent--alt: #d2cce7;
   --global-color-accent--weak: #6039cc40; /* similar to #E3D7FD on #f4f4f4 */
+  --global-color-accent--secondary: var(--global-color-secondary--normal);
+  --global-color-accent--tertiary: var(--global-color-tertiary--normal);
 
-  --global-color-accent--secondary: #877453;
-  --global-color-accent--tertiary: #61A39C;
+  --global-color-secondary--normal: #877453;
+  --global-color-secondary--xxx-dark: #332C1F;
+
+  --global-color-tertiary--normal: #61A39C;
+  --global-color-tertiary--xxx-dark: #1E3331;
 
   /* State */
   --global-color-info--x-dark: var(--global-color-primary--xx-dark);
