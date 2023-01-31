@@ -39,6 +39,8 @@
   --global-color-accent--normal: #784fe8;
   --global-color-accent--dark: #6039cc;
   --global-color-accent--x-dark: #3d189b;
+  --global-color-accent--xx-dark: #281066;
+  --global-color-accent--xxx-dark: #1E0C4C;
 
   --global-color-accent--alt: #d2cce7;
   --global-color-accent--weak: #6039cc40; /* similar to #E3D7FD on #f4f4f4 */
