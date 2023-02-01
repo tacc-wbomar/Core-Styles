@@ -1,6 +1,12 @@
 <figure {{#if class}}class="{{ class }}"{{/if}}>
   <img
-    src="https://cep.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/69/85/698569d0-641f-4289-94c2-664389d626e8/spectrum-square-240px.png__240x240_q85_subject_location-120%2C120_subsampling-2.png"
+    {{#if use-image-wide}}
+    src="https://cep.tacc.utexas.edu/media/filer_public/db/ff/dbff8f57-5b25-4273-8e6f-ae95462e7d19/spectrum-wide-1024px.png"
+    {{else if use-image-tall}}
+    src="https://cep.tacc.utexas.edu/media/filer_public/87/b2/87b24b37-7b66-4d4a-b305-47c2308892ea/spectrum-tall-1024px.png"
+    {{else}}
+    src="https://cep.tacc.utexas.edu/media/filer_public/69/85/698569d0-641f-4289-94c2-664389d626e8/spectrum-square-240px.png"
+    {{/if}}
     alt="(sample image)"
   />
   <figcaption>
