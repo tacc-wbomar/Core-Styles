@@ -19,30 +19,11 @@
 
 
 
-/* Specific Elements */
+/* Edge Cases */
 
+/* To arbitrarily force wrap to prevent taking up too much content */
+.align-right,
 .align-left,
-.align-right {
-  max-width: 30ch;
-}
-/* To constrain <figcaption> width */
-/* FAQ: Shrink-wraps the <figure> so <figcaption> wraps at image edge */
-figure.align-left,
-figure.align-right,
-figure.align-center /* works if figure width is NOT 100% */ {
-  width: min-content;
-}
-
-/* To center blockquote, negate parent width constraint, avoid caveats */
-figure > blockquote,
-blockquote.align-center,
-.align-center > blockquote {
-  /* To give a width that does not arbitrarily force wrap */
-  /* To negate <figure> `width: min-content` */
-  width: max-content;
-
-  max-width: 100%; /* to stop overflow cuz `width: max-content` */
-}
-figure.align-center {
-  max-width: 100%; /* to stop overflow cuz <blockquote> `width: max-content;` */
+.align-center {
+  max-width: 50%; /* 50% seems like a sensible default */
 }
