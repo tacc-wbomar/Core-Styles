@@ -23,8 +23,7 @@ Styleguide Tools.CustomSelectors.Monospace
 @custom-selector :--monospace-components
   /* tacc-docs components */
   .cmd-line,
-  .job-script,
-  .syntax;
+  .job-script;
 
 
 
