@@ -55,7 +55,6 @@ Styleguide Elements.TextContent
 }
 
 & figure {
-  width: min-content; /* to constrain <figcaption> width */
   margin-inline: unset; /* undo browser */
 }
 

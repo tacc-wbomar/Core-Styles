@@ -21,8 +21,16 @@
 
 /* Specific Elements */
 
-.align-left, .align-right {
+.align-left,
+.align-right {
   max-width: 30ch;
+}
+/* To constrain <figcaption> width */
+/* FAQ: Shrink-wraps the <figure> so <figcaption> wraps at image edge */
+figure.align-left,
+figure.align-right,
+figure.align-center /* works if figure width is NOT 100% */ {
+  width: min-content;
 }
 
 /* To center blockquote, negate parent width constraint, avoid caveats */
