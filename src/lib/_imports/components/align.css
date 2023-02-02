@@ -13,7 +13,10 @@
   margin-right: var(--global-space--grid-gap);
 }
 .align-center {
-  display: block;
+  /* Client should manage display */
+  /* FAQ: Display is likely block-ish e.g. block, inline-block, table */
+  /* FAQ: We cannot assume which display is best for client */
+  /* display: ... */
   margin-inline: auto;
 }
 
