@@ -81,6 +81,24 @@ Styleguide Elements.TextContent
   line-height: 1.6;
 }
 
+/* Figures */
+
+/* https://stackoverflow.com/a/49287729/11817077 */
+/* To make figure size and caption wrap dependent on content:
+  - figure unaffected by content with intrinsic width
+  - shrink figure to content with dynamic width
+  - shrink figure to content with static width
+  - prevent content from overflowing parent
+  - wrap caption text at content edge
+*/
+& figure {
+  display: table;
+}
+& figure figcaption {
+  display: table-caption;
+  caption-side: bottom;
+}
+
 /* Misc. */
 
 & hr {
