@@ -10,15 +10,11 @@ Styleguide Objects.OffsetContent
 @import url("../tools/media-queries.css");
 
 .o-offset-content--left,
-.o-offset-content--right,
-.o-offset-content--center {
-    max-width: 85%;
-}
-
-.o-offset-content--left,
 .o-offset-content--right {
   	--offset-distance: min(15vw, 410px);
 	--buffer: calc( 2 * var(--global-space--grid-gap) );
+
+    max-width: 85%;
 }
 
 @media only screen and (--medium-and-above) {
