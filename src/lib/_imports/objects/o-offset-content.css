@@ -17,6 +17,7 @@ Styleguide Objects.OffsetContent
     max-width: 85%;
 }
 
+/* To merely float content on narrow screens */
 @media only screen and (--medium-and-above) {
 	.o-offset-content--right {
 		float: right;
@@ -37,8 +38,11 @@ Styleguide Objects.OffsetContent
         padding-right: 125px;
     }
 }
-@media only screen and (--medium-and-above) and (--max-wide-and-below) {
-  /* Apply negative margin only when using offset value */
+
+/* To offset content only on wide screens */
+/* HELP: Do designers want to prevent offset on mega-wide screens */
+/* FAQ: M.S. did on texascale.org but that may have been only for that site */
+@media only screen and (--medium-and-above)/* and (--max-wide-and-below) */{
 	.o-offset-content--right {
 		margin-right: calc( var(--offset-distance) * -1);
 	}
