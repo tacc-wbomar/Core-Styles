@@ -28,5 +28,6 @@
 .align-right,
 .align-left,
 .align-center {
-  max-width: 50%; /* 50% seems like a sensible default */
+  /* NOTE: Demo has been given the default */
+  /* max-width: 50%; /* a default is sensible, but leave it to client */
 }
