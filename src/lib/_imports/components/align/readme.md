@@ -3,6 +3,10 @@ Simple classes to align media or content within paragraphs:
 - `align-right`
 - `align-center`
 
+> **⚠️ Important**
+>
+> The alignment can **not** be seen on client without a width on the element. _The demo adds a width._
+
 > **☞ Remember**
 >
 > The benefit of these classes instead of other solutions (e.g. `style="float:right"`):
