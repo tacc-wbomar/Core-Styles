@@ -1,6 +1,9 @@
 @import url("../tools/x-truncate.css");
 
 table {
+  --cell-pad-vert: 0.6667em; /* 8px if font-size is 12px */
+  --cell-pad-horz: 1.3333em; /* 16px if font-size is 12px */
+
   /* To prevent borders from being hidden */
   /* NOTE: Specifically, the right border of pinned columns (narrow windows) */
   border-collapse: separate; /* overwrite Bootstrap */
@@ -35,8 +38,8 @@ tr:nth-child(even) :is(th, td) {
 
 :is(td, th) {
   vertical-align: top;
-  padding-block: 8px;
-  padding-inline: 16px;
+  padding-block: var(--cell-pad-vert);
+  padding-inline: var(--cell-pad-horz);
 
   color: var(--global-color-primary--dark);
 }
@@ -75,8 +78,8 @@ caption {
   caption-side: top; /* override Bootstrap */
 
   /* To mimic table cell */
-  padding-block: 8px;
-  padding-inline: 16px;
+  padding-block: var(--cell-pad-vert);
+  padding-inline: var(--cell-pad-horz);
 }
 
 
