@@ -6,6 +6,6 @@
   /* FAQ: The element-based code styling is much richer than these classes */
 }
 
-.rst-content [role="navigation"] {
+.rst-content > [role="navigation"] {
   @extend .s-breadcrumbs-via-ul;
 }
