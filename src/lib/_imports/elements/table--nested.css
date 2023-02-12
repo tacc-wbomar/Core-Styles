@@ -34,7 +34,14 @@
 /* To replace any parent table columns above with nested table columns */
 /* FAQ: Pulls nested table up by the height of the parent table head */
 thead + tbody tr table {
-  --offset: calc(-1 * 33px); /* WARNING: manually calculated */
+  --offset-distance: calc(
+    var(--cell-pad-vert) * 2
+    +
+    var(--cell-line-height) * var(--font-size)
+    +
+    var(--global-border-width--normal)
+  );
+  --offset: calc( var(--offset-distance) * -1 );
 
   transform: translateY(var(--offset));
   margin-bottom: var(--offset);

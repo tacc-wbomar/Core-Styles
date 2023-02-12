@@ -1,8 +1,10 @@
 @import url("../tools/x-truncate.css");
 
 table {
+  --font-size: var(--global-font-size--small, 12px);
   --cell-pad-vert: 0.6667em; /* 8px if font-size is 12px */
   --cell-pad-horz: 1.3333em; /* 16px if font-size is 12px */
+  --cell-line-height: 1.1;
 
   /* To prevent borders from being hidden */
   /* NOTE: Specifically, the right border of pinned columns (narrow windows) */
@@ -10,7 +12,7 @@ table {
   border-spacing: 0;
 
   font-family: var(--global-font-family--sans--portal);
-  font-size: var(--global-font-size--small);
+  font-size: var(--font-size);
 }
 
 /* To add border to bottom of all rows */
@@ -44,12 +46,9 @@ tr:nth-child(even) :is(th, td) {
   color: var(--global-color-primary--dark);
 }
 /* To ensure <thead> height matches between browsers */
+/* IMPORTANT: More than for consistency; `table--nested.css` requires this */
 :is(td, th) {
-  /* FAQ: Line-height > font-size accomodates ascender & descender letters */
-  /* HACK: Units for line-height are discouraged */
-  /* NOTE: If line-height unitless, Firefox & Chrome give different height */
-  /* IMPORTANT: More than for consistency; `table--nested.css` requires this */
-  line-height: var(--global-font-size--medium);
+  line-height: var(--cell-line-height);
 }
 /* To pin first column to left of table even during scroll */
 /* WARNING: Design has not reviewed this (but not designed responsive table) */
@@ -73,7 +72,7 @@ tbody > tr > th {
 }
 
 caption {
-  font-size: var(--global-font-size--small);
+  font-size: var(--font-size);
   text-align: unset; /* undo Bootstrap _reboot.css */
   caption-side: top; /* override Bootstrap */
 
