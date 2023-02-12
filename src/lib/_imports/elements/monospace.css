@@ -36,6 +36,7 @@
 
 /* Types */
 
+/* Structure */
 & :--monospace--block {
   display: inline-block; /* FAQ: If `block`, then background color is cropped */
   padding: var(--global-space--x-small) var(--global-space--small);
@@ -45,15 +46,20 @@
   padding: var(--global-space--xx-small) var(--global-space--x-small);
 }
 
-& :--monospace--boxed {
+/* Skin */
+& :--monospace--block {
   color: var(--global-color-primary--xx-light);
   background-color: var(--global-color-primary--xx-dark);
   border: var(--global-border-width--normal) solid var(--global-color-primary--light);
 }
+& :--monospace--inline {
+  color: var(--global-color-primary--x-dark);
+  background-color: var(--global-color-primary--x-light);
+  border: var(--global-border--normal);
+}
 & :--monospace--output:not(:--monospace--boxed) {
   opacity: 0.75;
 }
-
 & :--monospace--kbd {
   border: var(--global-border--normal);
   border-radius: 0.5rem;
