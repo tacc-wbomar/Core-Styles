@@ -54,6 +54,10 @@ thead + tbody tr:first-of-type thead {
 thead + tbody tr:not(:first-of-type) thead {
   visibility: hidden;
 }
+/* FAQ: Re-colors border of all successive nested rows (to match parent row) */
+thead + tbody tr:not(:first-of-type) tbody :is(td,th) {
+  border-color: var(--global-color-primary--light);
+}
 
 /* To reduce inline padding
    at start and end of nested table

@@ -19,6 +19,7 @@
 @import url("./elements/headings--cms.css");
 @import url("./elements/monospace.css");
 @import url("./elements/form.cms.css");
+@import url("./elements/table.cms.css");
 
 /* OBJECTS */
 @import url("./objects/o-float-content.css");

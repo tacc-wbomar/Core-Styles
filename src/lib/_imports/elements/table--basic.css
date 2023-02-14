@@ -21,13 +21,14 @@ table,
   display: table; /* to mimic shrink-wrap width of real table */
 }
 
-/* To add border to bottom of all rows */
+/* To add top border to tbody (unless nested) */
 /* FAQ: Added to cell, not row, because `border-collapse: separate` */
-thead tr :is(td, th) {
-  border-bottom-width: var(--global-border-width--normal);
-  border-bottom-style: solid;
-  border-bottom-color: var(--global-color-primary--x-dark);
+tbody > tr:first-child > :is(td, th),
+:--s-paragraph-table {
+  border-top: var(--global-border-width--normal) solid var(--global-color-primary--dark);
 }
+
+/* To add bottom border to rows */
 tr:not(:last-of-type) > :is(td, th),
 :--s-paragraph-table p:not(:last-of-type) {
   border-bottom-width: var(--global-border-width--normal);
@@ -65,8 +66,6 @@ tr:nth-child(even) :is(th, td),
 :is(th, td):first-child {
   position: sticky;
   left: 0;
-
-  border-right: var(--global-border-width--normal) solid var(--global-color-primary--light);
 }
 
 th {
