@@ -2,7 +2,8 @@ A [table]({{path './table' }}) that uses [paragraphs](https://developer.mozilla.
 
 > **ⓘ Notice**
 >
-> Text will not truncate. It will wrap.
+> - Text will not truncate. It will wrap.
+> - Only a single column is supported.
 
 > **⁉ Help**
 >
