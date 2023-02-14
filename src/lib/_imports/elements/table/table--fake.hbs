@@ -1,3 +1,5 @@
+<h2>Fake Table</h2>
+
 <div class="paragraph-table {{#if class }}{{ class }}{{/if}}">
 {{#each data.rows}}
   {{#if paragraph}}
@@ -5,3 +7,19 @@
   {{/if}}
 {{/each}}
 </div>
+
+<h2>Real Table</h2>
+
+<table class="{{#if class }}{{ class }}{{/if}}">
+  <tbody>
+  {{#each data.rows}}
+    <tr>
+      {{#if paragraph}}
+      <td title="{{> @text-of-one-paragraph-short }}">
+        <p>{{> @text-of-one-paragraph-short }}</p>
+      </td>
+      {{/if}}
+    </tr>
+  {{/each}}
+  </tbody>
+</table>

@@ -4,6 +4,10 @@ A [table]({{path './table' }}) that uses [paragraphs](https://developer.mozilla.
 >
 > Text will not truncate. It will wrap.
 
+> **⁉ Help**
+>
+> Should text truncate? Ask designers.
+
 <script>
 /* To open external links in new window */
 Array.from(document.links)

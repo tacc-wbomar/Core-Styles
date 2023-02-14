@@ -15,6 +15,9 @@ table,
   font-family: var(--global-font-family--sans--portal);
   font-size: var(--font-size);
 }
+.paragraph-table {
+  display: table; /* to mimic shrink-wrap width of real table */
+}
 
 /* To add border to bottom of all rows */
 /* FAQ: Added to cell, not row, because `border-collapse: separate` */
