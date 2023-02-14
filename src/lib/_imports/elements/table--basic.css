@@ -1,6 +1,9 @@
 @import url("../tools/x-truncate.css");
 
-table {
+@import url("./table.selectors.css");
+
+table,
+:--s-paragraph-table {
   --font-size: var(--global-font-size--small, 12px);
   --cell-pad-vert: 0.6667em; /* 8px if font-size is 12px */
   --cell-pad-horz: 1.3333em; /* 16px if font-size is 12px */
@@ -14,6 +17,9 @@ table {
   font-family: var(--global-font-family--sans--portal);
   font-size: var(--font-size);
 }
+:--s-paragraph-table {
+  display: table; /* to mimic shrink-wrap width of real table */
+}
 
 /* To add border to bottom of all rows */
 /* FAQ: Added to cell, not row, because `border-collapse: separate` */
@@ -22,7 +28,8 @@ thead tr :is(td, th) {
   border-bottom-style: solid;
   border-bottom-color: var(--global-color-primary--x-dark);
 }
-tr:not(:last-of-type) > :is(td, th) {
+tr:not(:last-of-type) > :is(td, th),
+:--s-paragraph-table p:not(:last-of-type) {
   border-bottom-width: var(--global-border-width--normal);
   border-bottom-style: solid;
   border-bottom-color: var(--global-color-primary--light);
@@ -34,11 +41,13 @@ tr:not(:last-of-type) > :is(td, th) {
 tr:nth-child(odd) :is(th, td) {
   background: var(--global-color-background--app);
 }
-tr:nth-child(even) :is(th, td) {
+tr:nth-child(even) :is(th, td),
+:--s-paragraph-table p:nth-child(even) {
   background: var(--global-color-primary--x-light);
 }
 
-:is(td, th) {
+:is(td, th),
+:--s-paragraph-table p {
   vertical-align: top;
   padding-block: var(--cell-pad-vert);
   padding-inline: var(--cell-pad-horz);
@@ -47,7 +56,8 @@ tr:nth-child(even) :is(th, td) {
 }
 /* To ensure <thead> height matches between browsers */
 /* IMPORTANT: More than for consistency; `table--nested.css` requires this */
-:is(td, th) {
+:is(td, th),
+:--s-paragraph-table p {
   line-height: var(--cell-line-height);
 }
 /* To pin first column to left of table even during scroll */
@@ -97,19 +107,24 @@ td li:not(:last-of-type) {
 }
 
 /* To override browser */
-td button {
+td button,
+:--s-paragraph-table p button {
   /* To match font-size of table cell text and links */
   font-size: inherit;
 }
 
 /* To override `site.css` or browser */
-table p {
+table p,
+:--s-paragraph-table p {
   margin-top: 0;
 }
-table p:last-child {
+table p:last-child,
+:--s-paragraph-table p {
   margin-bottom: 0;
 }
 
+/* To truncate paragraphs */
+/* FAQ: Except for :--s-paragraph-table's whose <p> tags we permit to wrap */
 table p {
   @extend %x-truncate--many-lines;
 }
