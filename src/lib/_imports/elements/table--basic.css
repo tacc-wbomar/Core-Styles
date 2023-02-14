@@ -1,6 +1,7 @@
 @import url("../tools/x-truncate.css");
 
-table {
+table,
+.paragraph-table {
   --font-size: var(--global-font-size--small, 12px);
   --cell-pad-vert: 0.6667em; /* 8px if font-size is 12px */
   --cell-pad-horz: 1.3333em; /* 16px if font-size is 12px */
@@ -34,11 +35,13 @@ tr:not(:last-of-type) > :is(td, th) {
 tr:nth-child(odd) :is(th, td) {
   background: var(--global-color-background--app);
 }
-tr:nth-child(even) :is(th, td) {
+tr:nth-child(even) :is(th, td),
+.paragraph-table p:nth-child(even) {
   background: var(--global-color-primary--x-light);
 }
 
-:is(td, th) {
+:is(td, th),
+.paragraph-table p {
   vertical-align: top;
   padding-block: var(--cell-pad-vert);
   padding-inline: var(--cell-pad-horz);
@@ -47,7 +50,8 @@ tr:nth-child(even) :is(th, td) {
 }
 /* To ensure <thead> height matches between browsers */
 /* IMPORTANT: More than for consistency; `table--nested.css` requires this */
-:is(td, th) {
+:is(td, th),
+.paragraph-table p {
   line-height: var(--cell-line-height);
 }
 /* To pin first column to left of table even during scroll */
@@ -97,19 +101,24 @@ td li:not(:last-of-type) {
 }
 
 /* To override browser */
-td button {
+td button,
+.paragraph-table p button {
   /* To match font-size of table cell text and links */
   font-size: inherit;
 }
 
 /* To override `site.css` or browser */
-table p {
+table p,
+.paragraph-table p {
   margin-top: 0;
 }
-table p:last-child {
+table p:last-child,
+.paragraph-table p {
   margin-bottom: 0;
 }
 
+/* To truncate paragraphs */
+/* FAQ: Except for .paragraph-table's whose <p> tags we permit to wrap */
 table p {
   @extend %x-truncate--many-lines;
 }
