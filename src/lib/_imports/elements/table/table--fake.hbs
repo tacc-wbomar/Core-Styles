@@ -1,12 +1,6 @@
 <h2>Fake Table</h2>
 
-<div class="paragraph-table {{#if class }}{{ class }}{{/if}}">
-{{#each data.rows}}
-  {{#if paragraph}}
-  <p>{{> @text-of-one-paragraph-short }}</p>
-  {{/if}}
-{{/each}}
-</div>
+{{> @s-paragraph-table class="s-paragraph-table" data=data }}
 
 <h2>Real Table</h2>
 
