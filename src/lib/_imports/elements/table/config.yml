@@ -37,7 +37,7 @@ variants:
                 text: View Details
               - is-button: true
                 text: Delete
-  - name: paragraph
+  - name: with-paragraphs
     context:
       data:
         cols:
@@ -66,7 +66,7 @@ variants:
                 text: View Details
               - is-button: true
                 text: Delete
-  - name: fake
+  - name: via-paragraphs
     context:
       data:
         rows:
