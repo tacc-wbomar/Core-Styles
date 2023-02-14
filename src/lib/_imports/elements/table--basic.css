@@ -28,7 +28,8 @@ thead tr :is(td, th) {
   border-bottom-style: solid;
   border-bottom-color: var(--global-color-primary--x-dark);
 }
-tr:not(:last-of-type) > :is(td, th) {
+tr:not(:last-of-type) > :is(td, th),
+:--s-paragraph-table p:not(:last-of-type) {
   border-bottom-width: var(--global-border-width--normal);
   border-bottom-style: solid;
   border-bottom-color: var(--global-color-primary--light);
