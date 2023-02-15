@@ -36,6 +36,11 @@ a.c-button {
 a.c-button--is-busy {
   cursor: default;
 }
+.c-button:--disabled {
+  /* WARNING: Opinionated */
+  -webkit-user-select: none;
+  user-select: none;
+}
 
 .c-button:not(:--disabled) {
   cursor: pointer; /* WARNING: Opinionated */
@@ -239,7 +244,7 @@ a.c-button--is-busy {
 .c-button--as-link:where(:not(:--disabled)):hover {
   @extend .x-link--hover;
 }
-.c-button--as-link:active {
+.c-button--as-link:where(:not(:--disabled)):active {
   @extend .x-link--active;
 }
 
