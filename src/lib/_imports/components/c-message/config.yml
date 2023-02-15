@@ -22,4 +22,14 @@ variants:
   - name: default
     hidden: true
   - name: type
+  - name: type-portal
+    label: Type (Portal)
+    view: 'c-message--type.hbs'
+    context:
+      shouldLoadPortal: true
   - name: scope
+  - name: scope-portal
+    label: Scope (Portal)
+    view: 'c-message--scope.hbs'
+    context:
+      shouldLoadPortal: true
