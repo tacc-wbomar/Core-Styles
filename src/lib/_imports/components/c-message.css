@@ -38,6 +38,10 @@
 
 /* Structure */
 
+.c-message--scope-inline {
+  /* no styles yet *//* FAQ: added so alt. class name @extend does not fail */
+}
+
 .c-message--scope-section,
 .c-message--scope-global {
   padding: 15px 20px;
