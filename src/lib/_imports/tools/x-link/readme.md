@@ -3,6 +3,7 @@ UI states of [`<a>` anchor element](https://developer.mozilla.org/en-US/docs/Web
 | Mixin | Description
 | - | -
 | `.x-link`         | default state
+| `.x-link--disabled`| "disabled" state (e.g. no `href` attribute)
 | `.x-link--hover`  | `:hover` state
 | `.x-link--active` | `:active` (click) state
 
