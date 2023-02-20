@@ -4,6 +4,9 @@
 :where(:--main-content) a:not(.c-button) {
   @extend .x-link;
 }
+:where(:--main-content) a:not([href]) {
+  @extend .x-link--disabled;
+}
 :where(:--main-content) a:not(.c-button):hover {
   @extend .x-link--hover;
 }
