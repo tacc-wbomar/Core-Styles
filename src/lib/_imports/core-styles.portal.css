@@ -7,6 +7,7 @@
 /* SETTINGS */
 /* To get most settings, client should load `./base.css` first */
 @import url("./settings/font--portal.css");
+@import url("./settings/color--portal.css");
 
 /* GENERICS */
 /* Mostly from Bootstrap */
@@ -22,7 +23,9 @@
 /* COMPONENTS */
 @import url("./components/cortal.icon.css");
 @import url("./components/mui.tabs.css");
-@import url("./components/c-message.portal.css");
+@import url("./components/c-form--portal.css");
+@import url("./components/c-message.css");
+@import url("./components/c-message--compact.css");
 
 /* TRUMPS */
 /* (none) */
