@@ -61,6 +61,7 @@
 /* To add icon */
 .admonition::before {
   color: white;
+  font-size: 36px;
 
   /* To take up left column */
   grid-row: 1 / span 99; /* 99 is for arbitrary implicit row count */
@@ -73,9 +74,9 @@
 
 /* To use FontAwesome icons */
 /* FAQ: Cortal icon syntax conflicts with docs */
-.admonition:is(.tip)::before { content: "💡"; }
-.admonition:is(.hint)::before { content: "✓"; }
+.admonition:is(.caution)::before { content: "⚠"; }
+.admonition:is(.warning)::before { content: "𝖷"; }
+.admonition:is(.tip)::before { content: "☀"; }
 .admonition:is(.note, .important, .attention)::before { content: "✎"; }
-.admonition:is(.caution)::before { content: "⚠️"; }
-.admonition:is(.warning)::before { content: "⨉"; }
-.admonition:is(.danger)::before { content: "𝘅"; }
+.admonition:is(.hint)::before { content: "✓"; }
+.admonition:is(.danger)::before { content: "𝗫"; }
