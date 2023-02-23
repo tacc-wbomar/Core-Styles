@@ -1,7 +1,7 @@
 @import url("../components/c-message.css");
 @import url("../components/c-message--expanded.css");
-
 @import url("../components/c-message.selectors.css");
+@import url("../tools/selectors.monospace.css");
 
 
 
@@ -57,6 +57,11 @@
 .admonition > .admonition-title + p { margin-top: 5px; }
 .admonition > pre:last-child { padding-bottom: 15px; }
 .admonition > p + pre { margin-top: -5px; }
+
+/* To adjust styling for certain elements */
+.admonition :--monospace--block { 
+  border-color: var(--global-color-primary--dark);
+}
 
 /* To add icon */
 .admonition::before {
