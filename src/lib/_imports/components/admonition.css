@@ -53,7 +53,7 @@
 .admonition > *:first-child { padding-top: var(--pad-vert); }
 .admonition > *:last-child { padding-bottom: var(--pad-vert); }
 
-/* To adjsut spacing for certain elements */
+/* To adjust spacing for certain elements */
 .admonition > .admonition-title + p { margin-top: 5px; }
 .admonition > pre:last-child { padding-bottom: 15px; }
 .admonition > p + pre { margin-top: -5px; }
