@@ -24,12 +24,19 @@
 :--c-message--type-info,
 :--c-message--type-success,
 :--c-message--type-warning,
-:--c-message--type-error {
+:--c-message--type-error,
+:--c-message--type-tip {
   /* FAQ: So alternate class name @extend can not fail on missing selectors */
 }
-
+:--c-message--scope {
+  /* FAQ: Variables allow using this values outside of parent padding */
+  /* SEE: ./admonition.css */
+  padding: var(--pad-vert, 0) var(--pad-horz, 0);
+}
 :--c-message--scope-global {
-  padding: 15px 20px;
+  --pad-vert: 15px;
+  --pad-horz: 20px;
+
   border-width: var(--global-border-width--thick);
 
   text-align: center;
@@ -52,6 +59,10 @@
 :--c-message--type-error:--c-message--scope-section {
   background-color: var(--global-color-danger--x-light);
   border-color: var(--global-color-danger--normal);
+}
+:--c-message--type-tip:--c-message--scope-section {
+  background-color: var(--global-color-extra--x-light);
+  border-color: var(--global-color-extra--normal);
 }
 
 :--c-message--scope-global {

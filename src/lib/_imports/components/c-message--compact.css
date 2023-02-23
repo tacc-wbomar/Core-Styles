@@ -39,7 +39,9 @@
 }
 
 :--c-message--scope-section {
-  padding: 15px 20px;
+  --pad-vert: 15px;
+  --pad-horz: 20px;
+
   border-width: var(--global-border-width--thick);
   border-style: solid;
 }
@@ -57,4 +59,7 @@
 }
 :--c-message--type-error:not(:--c-message--scope-global) {
   color: var(--global-color-danger--dark);
+}
+:--c-message--type-tip:not(:--c-message--scope-global) {
+  color: var(--global-color-extra--dark);
 }

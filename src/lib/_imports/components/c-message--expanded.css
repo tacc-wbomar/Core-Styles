@@ -33,7 +33,9 @@
 /* Structure */
 
 :--c-message--scope-section {
-  padding: 20px 30px;
+  --pad-vert: 20px;
+  --pad-horz: 30px;
+
   border-width: var(--global-border-width--normal);
   border-style: solid;
 }
@@ -55,4 +57,25 @@
 }
 :--c-message--type-error:--c-message--scope-inline {
   color: var(--global-color-danger--x-dark);
+}
+:--c-message--type-tip:--c-message--scope-inline {
+  color: var(--global-color-extra--x-dark);
+}
+
+/* To support icons (if needed) */
+/* SEE: ./admonition.css */
+:--c-message--type-info::before {
+  background-color: var(--global-color-info--normal);
+}
+:--c-message--type-success::before {
+  background-color: var(--global-color-success--normal);
+}
+:--c-message--type-warning::before {
+  background-color: var(--global-color-warning--normal);
+}
+:--c-message--type-error::before {
+  background-color: var(--global-color-danger--normal);
+}
+:--c-message--type-tip::before {
+  background-color: var(--global-color-extra--normal);
 }
