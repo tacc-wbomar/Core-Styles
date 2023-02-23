@@ -3,6 +3,7 @@
 @import url("../components/c-message--expanded.css");
 
 @import url("./django-cms-forms.hacks.css");
+@import url("./django-cms-forms--errors-via-c-message.css");
 
 
 
@@ -130,18 +131,6 @@ ul.checkboxselectmultiple li:last-child label {
 .field-errors ul {
   list-style: none;
   padding-inline: 0;
-}
-
-.form-errors {
-  @extend :--c-message;
-  @extend :--c-message--type-error;
-  @extend :--c-message--scope-section;
-  @extend :--c-message--type-error:--c-message--scope-section;
-}
-.field-errors li {
-  @extend :--c-message;
-  @extend :--c-message--type-error;
-  @extend :--c-message--scope-inline;
 }
 
 
