@@ -52,11 +52,21 @@
   --global-color-accent--secondary: var(--global-color-secondary--normal);
   --global-color-accent--tertiary: var(--global-color-tertiary--normal);
 
-  --global-color-secondary--normal: #877453;
-  --global-color-secondary--xxx-dark: #332C1F;
+  --global-color-secondary--x-light: #e5d7c0;
+  --global-color-secondary--light: #d5b57c; /* from designer */
+  --global-color-secondary--normal: #877453; /* from designer */
+  --global-color-secondary--dark: #514328;
+  --global-color-secondary--x-dark: #332C1F; /* from designer */
+  /* HELP: Where is this used? Not Core-Styles nor TACC CMS global snippets… */
+  --global-color-secondary--xxx-dark: var(--global-color-secondary--x-dark);
 
-  --global-color-tertiary--normal: #61A39C;
-  --global-color-tertiary--xxx-dark: #1E3331;
+  --global-color-tertiary--x-light: #b8f2eb;
+  --global-color-tertiary--light: #7bd1c8;
+  --global-color-tertiary--normal: #61A39C; /* from designer */
+  --global-color-tertiary--dark: #406d68;
+  --global-color-tertiary--x-dark: #1E3331; /* from designer */
+  /* HELP: Where is this used? Not Core-Styles nor TACC CMS global snippets… */
+  --global-color-tertiary--xxx-dark: var(--global-color-tertiary--x-dark);
 
 
 
