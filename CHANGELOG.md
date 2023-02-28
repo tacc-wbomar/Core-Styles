@@ -11,71 +11,71 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-* **feat!: ease use of core-styles (#81)**
-* feat!: provide CDN-style deliverable stylesheets (#78)
-* feat(components): form patterns (c-form, django.cms.forms) (#77, #79, #80)
-* feat(components): c-form updates & base html-elements (#79)
-* feat(dist): commit dist for clients relying on it (#70)
-* fix(o-table-wrap): …scroll.extra → …scroll-extra (#69)
-* feat(objects): o-table, o-fixed-header-table, o-flex-item-table-wrap (#68)
+- **feat!: ease use of core-styles (#81)**
+- feat!: provide CDN-style deliverable stylesheets (#78)
+- feat(components): form patterns (c-form, django.cms.forms) (#77, #79, #80)
+- feat(components): c-form updates & base html-elements (#79)
+- feat(dist): commit dist for clients relying on it (#70)
+- fix(o-table-wrap): …scroll.extra → …scroll-extra (#69)
+- feat(objects): o-table, o-fixed-header-table, o-flex-item-table-wrap (#68)
 
 ### Changed
 
-* **feat(settings): lighter `…primary--light` color (#76)**
+- **feat(settings): lighter `…primary--light` color (#76)**
 
 ### Removed
 
-* **feat!: provide CDN-style deliverable stylesheets (#78)**
-  * removed settings load from ALL _import source files (#78)
-  * removed icon(.…).css
-  * removed font settings from header
+- **feat!: provide CDN-style deliverable stylesheets (#78)**
+  - removed settings load from ALL _import source files (#78)
+  - removed icon(.…).css
+  - removed font settings from header
 
 ### Fixed
 
-* fix(table): border colors (#75)
-* fix(fonts)!: support font load on demo (#74)
-* **fix(demo)!: font path change in dist (#73)**
-* fix(fonts): fp-1891 add regular italic, also add black (#71, #72)
+- fix(table): border colors (#75)
+- fix(fonts)!: support font load on demo (#74)
+- **fix(demo)!: font path change in dist (#73)**
+- fix(fonts): fp-1891 add regular italic, also add black (#71, #72)
 
 ## [0.11.0] - 2022-11-14: Table Pattern, Many Demo Fixes, Demo Build Dir Clarity
 
 ### Added
 
-* feat(elements): fp-1878 table pattern (#64) (b3bc511)
+- feat(elements): fp-1878 table pattern (#64) (b3bc511)
 
 ### Changed
 
-* docs: nest demo assets in `/assets` directory (#65)
+- docs: nest demo assets in `/assets` directory (#65)
 
 ### Fixed
 
-* fix(bootstrap): broken paths in static build (47047a4)
-* fix: pattern demo repair suite (#66)
+- fix(bootstrap): broken paths in static build (47047a4)
+- fix: pattern demo repair suite (#66)
 
 ## [0.10.0] - 2022-11-12: New Docs, Patterns, Features; Major Dependency Bumps
 
 ### Added
 
-* docs(components): tup-354 bootstrap.modal; assets, loremipsum (#51)
-* docs(components): tup-356 bootstrap.form (#52)
-* docs: tup-356 bootstrap preview & easy subdir var (#53)
-* docs(components): tup-356 bootstrap.container (#54)
-* feat: tup-355 links (redo #57) (#58)
-* feat(elements): fp-1828 move apcd styles to core (#56) (#62)
-* feat(c-button): do not show <a> tag button for `--as-link` (#59)
-* feat: x-link, used by c-button--as-link & links (#60)
-* feat: npm watch synced with live-refresh demo (#61)
+- docs(components): tup-354 bootstrap.modal; assets, loremipsum (#51)
+- docs(components): tup-356 bootstrap.form (#52)
+- docs: tup-356 bootstrap preview & easy subdir var (#53)
+- docs(components): tup-356 bootstrap.container (#54)
+- feat: tup-355 links (redo #57) (#58)
+- feat(elements): fp-1828 move apcd styles to core (#56) (#62)
+- feat(c-button): do not show <a> tag button for `--as-link` (#59)
+- feat: x-link, used by c-button--as-link & links (#60)
+- feat: npm watch synced with live-refresh demo (#61)
 
 ### Changed
 
-* feat: tup-274 peerDeps not deps (#46)
-* chore: tup-293 dependency updates (#50)
-* fix(trumps, and unused): complex subdir var made easy (#55)
+- feat: tup-274 peerDeps not deps (#46)
+- chore: tup-293 dependency updates (#50)
+- fix(trumps, and unused): complex subdir var made easy (#55)
 
 ### Fixed
 
-* fix(c-button): fp-1791 auto width by default (#49)
-* fix: fp-1828 s-affixed-input-wrapper fallback (#62)
+- fix(c-button): fp-1791 auto width by default (#49)
+- fix: fp-1828 s-affixed-input-wrapper fallback (#62)
 
 ## [0.9.0] - 2022-10-26: Fonts, C-Message, Generic CMS Form, A11y Color Tweak
 
