@@ -13,7 +13,7 @@ const version = require('./bin/version.js');
  * @param {string} input - Parse CSS files from which directory
  * @param {string} output - Output CSS files to which directory
  * @param {object} [opts={}] - Options
- * @param {string} [opts.baseMirrorDir] - Do not add this path when mirroring
+ * @param {string} [opts.baseMirrorDir] - Path to NOT add when mirroring
  * @param {array.string} [opts.customConfigs] - List of YAML config file paths
  * (The first file is merged on top of the base config.)
  * (Each successive file overwrites the file before it.)

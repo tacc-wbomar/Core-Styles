@@ -12,7 +12,7 @@ process.env.FORCE_COLOR = true;
  * @param {string} input - Parse CSS files from which path
  * @param {string} output - Output CSS files to which path
  * @param {object} [opts={}] - Options
- * @param {string} [opts.baseMirrorDir] - Do not add this path when mirroring
+ * @param {string} [opts.baseMirrorDir] - Path to NOT add when mirroring
  * @param {string} [opts.configDir] - Custom config directory
  * @param {boolean} [opts.verbose=false] - To print more info from build log
  */
