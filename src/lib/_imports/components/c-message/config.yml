@@ -2,34 +2,50 @@ status: wip
 context:
   types:
     - name: success
-      content: Notify user of a successful event.
+      content: Notify user of a successful event. <a href>Sample link.</a>
     - name: info
-      content: Notify user of any details that are <strong>not</strong> a problem.
+      content: Notify user of any details that are <strong>not</strong> a problem. <a href>Sample link.</a>
     - name: warning
-      content: Notify user of an <strong>un</strong>successful event that <em>could prevent</em> functionality.
+      content: Notify user of an <strong>un</strong>successful event that <em>could prevent</em> functionality. <a href>Sample link.</a>
     - name: error
-      content: Notify user of an <strong>un</strong>successful event that <em>does prevent</em> functionality.
+      content: Notify user of an <strong>un</strong>successful event that <em>does prevent</em> functionality. <a href>Sample link.</a>
   scopes:
     - name: inline
-      content: 	An inline message.
+      content: 	An inline message. <a href>Sample link.</a>
     - name: section
-      content: A wide block message.
+      content: A wide block message. <a href>Sample link.</a>
     # - name: app
-    #   content: A floating block message.
+    #   content: A floating block message. <a href>Sample link.</a>
     - name: global
-      content: A site-wide banner message.
+      content: A site-wide banner message. <a href>Sample link.</a>
 variants:
   - name: default
     hidden: true
   - name: type
+    label: by Type (Shared)
+    status: prototype
   - name: type-portal
-    label: Type (Portal)
+    label: by Type (Portal)
+    status: ready
     view: 'c-message--type.hbs'
     context:
       shouldLoadPortal: true
+  - name: type-cms
+    label: by Type (CMS)
+    view: 'c-message--type.hbs'
+    context:
+      shouldLoadCMS: true
   - name: scope
+    label: by Scope (Shared)
+    status: prototype
   - name: scope-portal
-    label: Scope (Portal)
+    label: by Scope (Portal)
+    status: ready
     view: 'c-message--scope.hbs'
     context:
       shouldLoadPortal: true
+  - name: scope-cms
+    label: by Scope (CMS)
+    view: 'c-message--scope.hbs'
+    context:
+      shouldLoadCMS: true

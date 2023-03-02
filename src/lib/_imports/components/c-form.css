@@ -1,6 +1,4 @@
 @import url("../components/c-button.css");
-@import url("../components/c-message.css");
-@import url('../tools/x-link.css');
 
 
 
@@ -124,18 +122,6 @@
 ul.c-form__errors {
   list-style: none;
   padding-inline: 0;
-}
-
-.c-form > .c-form__errors {
-  @extend .c-message;
-  @extend .c-message--type-error;
-  @extend .c-message--scope-section;
-  @extend .c-message--type-error.c-message--scope-section;
-}
-.c-form__field .c-form__errors li {
-  @extend .c-message;
-  @extend .c-message--type-error;
-  @extend .c-message--scope-inline;
 }
 
 

@@ -1,35 +1,15 @@
-@import url('../tools/x-link.css');
+@import url("./c-message.selectors.css");
 
 
 
 /* Elements */
 
 /* To prevent excess space at top and bottom of message */
-.c-message > *:first-child {
+:--c-message > *:first-child {
   margin-top: 0;
 }
-.c-message > *:last-child {
+:--c-message > *:last-child {
   margin-bottom: 0;
-}
-
-/* To avoid clash of link color with message color */
-.c-message a,
-.c-message .c-button--as-link {
-  color: inherit !important; /* override :hover and :active */
-}
-
-/* To distinguish link from message text */
-.c-message a,
-.c-message .c-button--as-link {
-  @extend .x-link--irregular;
-}
-.c-message a:hover,
-.c-message .c-button--as-link:hover {
-  @extend .x-link--irregular--hover;
-}
-.c-message a:active,
-.c-message .c-button--as-link:active {
-  @extend .x-link--irregular--active;
 }
 
 
@@ -38,82 +18,55 @@
 
 /* Structure */
 
-.c-message--scope-inline {
-  /* no styles yet *//* FAQ: added so alt. class name @extend does not fail */
+:--c-message--scope-inline,
+:--c-message--scope-section,
+:--c-message--scope-global,
+:--c-message--type-info,
+:--c-message--type-success,
+:--c-message--type-warning,
+:--c-message--type-error,
+:--c-message--type-tip {
+  /* FAQ: So alternate class name @extend can not fail on missing selectors */
 }
-
-.c-message--scope-section,
-.c-message--scope-global {
-  padding: 15px 20px;
-  border: var(--global-border--thick);
+:--c-message--scope {
+  /* FAQ: Variables allow using this values outside of parent padding */
+  /* SEE: ./admonition.css */
+  padding: var(--pad-vert, 0) var(--pad-horz, 0);
 }
+:--c-message--scope-global {
+  --pad-vert: 15px;
+  --pad-horz: 20px;
 
-.c-message--scope-global {
+  border-width: var(--global-border-width--thick);
+
   text-align: center;
 }
 
 /* Skin */
 
-.c-message--type-info {
-  color: var(--global-color-info--dark);
-}
-.c-message--type-success {
-  color: var(--global-color-success--dark);
-}
-.c-message--type-warning {
-  color: var(--global-color-warning--dark);
-}
-.c-message--type-error {
-  color: var(--global-color-danger--dark);
-}
-
-.c-message--type-info.c-message--scope-section {
+:--c-message--type-info:--c-message--scope-section {
   background-color: var(--global-color-info--x-light);
   border-color: var(--global-color-info--normal);
 }
-.c-message--type-success.c-message--scope-section {
+:--c-message--type-success:--c-message--scope-section {
   background-color: var(--global-color-success--x-light);
   border-color: var(--global-color-success--normal);
 }
-.c-message--type-warning.c-message--scope-section {
+:--c-message--type-warning:--c-message--scope-section {
   background-color: var(--global-color-warning--x-light);
   border-color: var(--global-color-warning--normal);
 }
-.c-message--type-error.c-message--scope-section {
+:--c-message--type-error:--c-message--scope-section {
   background-color: var(--global-color-danger--x-light);
   border-color: var(--global-color-danger--normal);
 }
+:--c-message--type-tip:--c-message--scope-section {
+  background-color: var(--global-color-extra--x-light);
+  border-color: var(--global-color-extra--normal);
+}
 
-.c-message--scope-global {
+:--c-message--scope-global {
   color: var(--global-color-primary--xx-light);
   background-color: var(--global-color-accent--secondary);
   border-color: var(--global-color-primary--dark);
-}
-
-
-
-/* Alternate Class Names */
-
-[class*="message--"]:not(.c-message) { @extend .c-message; }
-
-.message--inline { @extend .c-message--scope-inline; }
-.message--section { @extend .c-message--scope-section; }
-.message--global { @extend .c-message--scope-global; }
-
-.message--success { @extend .c-message--type-success; }
-.message--info { @extend .c-message--type-info; }
-.message--warning { @extend .c-message--type-warning; }
-.message--error { @extend .c-message--type-error; }
-
-.message--success.message--section {
-  @extend .c-message--type-success.c-message--scope-section;
-}
-.message--info.message--section {
-  @extend .c-message--type-info.c-message--scope-section;
-}
-.message--warning.message--section {
-  @extend .c-message--type-warning.c-message--scope-section;
-}
-.message--error.message--section {
-  @extend .c-message--type-error.c-message--scope-section;
 }

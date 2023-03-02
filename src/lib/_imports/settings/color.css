@@ -13,9 +13,11 @@
 */
 
 :root {
+
   /* Neutral */
   /* FAQ: Primary colors of an app (neutral text, borders, backgrounds) */
   /* IDEA: Rename these from `primary` to `neutral` */
+
   --global-color-primary--xx-light: #FFFFFF;
     --global-color-primary--xx-light-rgb: 255, 255, 255;
   --global-color-primary--x-light: #F4F4F4;
@@ -33,7 +35,10 @@
   --global-color-primary--xxx-dark: #000000;
     --global-color-primary--xxx-dark-rgb: 0, 0, 0;
 
+
+
   /* Accent */
+
   --global-color-accent--x-light: #e3d7fd;
   --global-color-accent--light: #a387ed;
   --global-color-accent--normal: #784fe8;
@@ -63,43 +68,56 @@
   /* HELP: Where is this used? Not Core-Styles nor TACC CMS global snippets… */
   --global-color-tertiary--xxx-dark: var(--global-color-tertiary--x-dark);
 
+
+
   /* State */
-  --global-color-info--x-dark: var(--global-color-primary--xx-dark);
-  --global-color-info--dark: var(--global-color-primary--x-dark);
-  --global-color-info--normal: var(--global-color-primary--normal);
-  --global-color-info--light: var(--global-color-primary--light);
+  /* https://huetone.ardov.me/?palette=N4IgdghgtgpiBcIAqBBAwmkAaEALArjAM4IDaoksCIAlmAGYD2AtNiAMaMA2jATifFIgAxPQAs48W2EATAOzz50uQAZVq6WIAc27dIBMhoyAC6AXywVocRDIhgA5jF6scnHvzIj67GGJkARtI%2BEPQAnACM0jAyYuwRUTjC8WJy%2BirSYRBiEfpyphZWVIgA7hC8YHQOrhzcfAJCojL0MjAQwQCs9ADMYQBs0WEwKiPS7B0B9PpwSVphWn3d%2BgWW4NbURPjsvkRENe71XsIBoVoy7Jnd9H3sMtIRKvRyEGHS3ecwYctJ%2Bn1aWl0VkUbCAYAAPAAuvAg%2BzqnkE3kefXo9GkAX8j1eSSuAKkPw6EwCiREETkYher3MJhwEMYYGIXjBzC4NAcuAhbBZbI5ODAfCgEC4bDsvAA1mwmSLxeYgA */
+
   --global-color-info--x-light: var(--global-color-primary--x-light);
+  --global-color-info--light: var(--global-color-primary--light);
+  --global-color-info--normal: var(--global-color-primary--dark);
+  --global-color-info--dark: var(--global-color-primary--x-dark);
+  --global-color-info--x-dark: var(--global-color-primary--xx-dark);
 
-  --global-color-info--weak: rgba( var(--global-color-primary--normal), 0.125 );
+  --global-color-danger--x-light: #fce4db; /* from designer */
+  --global-color-danger--light: #fcaf91;
+  --global-color-danger--normal: #ed4c11; /* from designer */
+  --global-color-danger--dark: #c14720;
+  --global-color-danger--x-dark: #9a4127;
 
-  --global-color-success--x-light: #E7F9E5;
-  --global-color-success--light: #AFECA7;
-  --global-color-success--normal: #43d130;
-  --global-color-success--dark: #237119;
-  --global-color-success--x-dark: #263824;
+  --global-color-warning--x-light: #fdfdea; /* from designer */
+  --global-color-warning--light: #f5f396;
+  --global-color-warning--normal: #e9e000; /* from designer */
+  --global-color-warning--dark: #c5bf2e;
+  --global-color-warning--x-dark: #898632;
 
-  --global-color-success--weak: #43d13020;
+  --global-color-success--x-light: #baf8dc; /* from designer */
+  --global-color-success--light: #93f6cd;
+  --global-color-success--normal: #10f7a9; /* from designer */
+  --global-color-success--dark: #3dce92;
+  --global-color-success--x-dark: #26885f;
 
-  --global-color-warning--x-light: #FBF4E1;
-  --global-color-warning--light: #FAE19E;
-  --global-color-warning--normal: #DFA70C;
-  --global-color-warning--dark: #735911;
-  --global-color-warning--x-dark: #3A3320;
+  --global-color-extra--x-light: #f0f6ff; /* from designer */
+  --global-color-extra--light: #b4d0f9;
+  --global-color-extra--normal: #3f85f4; /* from designer */
+  --global-color-extra--dark: #255bb1;
+  --global-color-extra--x-dark: #174a99;
 
-  --global-color-warning--weak: #DFA70C20;
+  --global-color-info--weak: rgba( var(--global-color-info--normal), 0.125 );
+  --global-color-danger--weak: rgba( var(--global-color-danger--normal), 0.125 );
+  --global-color-warning--weak: rgba( var(--global-color-warning--normal), 0.125 );
+  --global-color-success--weak: rgba( var(--global-color-success--normal), 0.125 );
+  --global-color-extra--weak: rgba( var(--global-color-extra--normal), 0.125 );
 
-  --global-color-danger--x-light: #FDF1F1;
-  --global-color-danger--light: #F8C9C9;
-  --global-color-danger--normal: #F09393;
-  --global-color-danger--dark: #AF1818;
-  --global-color-danger--x-dark: #3C3030;
-
-  --global-color-danger--weak: #F0939320;
 
   /* Generic */
+
   --global-color-background--app: var(--global-color-primary--xx-light);
 
+
+
   /* Link */
+
   --global-color-link-on-light--normal: var(--global-color-accent--normal);
   --global-color-link-on-dark--normal: var(--global-color-accent--light);
 }
