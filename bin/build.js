@@ -18,6 +18,7 @@ buildStylesheets('src/lib/_imports/**/*!(fractal.server.refresh).css', './dist',
 const hasDarkLogoBuildOpts = {
   baseMirrorDir: 'src/lib/_imports',
   buildId: BUILD_ID,
+  fileExt: '.theme--has-dark-logo.css',
   customConfigs: [
     `${__dirname}/../src/.postcssrc.has-dark-logo.yml`
   ]
