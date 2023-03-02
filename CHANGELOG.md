@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.0.1] - 2023-03-01: Add Missing Way to Use Theme from Dist
+
+### Fixed
+
+- feat: build has-dark-logo–themed stylesheets (#134)
+
 ## [2.0.0] - 2023-02-28: Font Sizes & Headings, New Patterns & Classes & Clients
 
 ### Added
@@ -439,7 +445,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.0.0...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.0.1...HEAD
+[2.0.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.0.1
 [2.0.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.0.0
 [1.0.0]: https://github.com/TACC/Core-Styles/releases/tag/v1.0.0
 [0.11.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.11.0
