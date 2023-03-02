@@ -44,6 +44,9 @@
 
 /* Skin */
 
+:--c-message--type {
+  /* To let clients prematurely @extend (to reduce their later maintenance) */
+}
 :--c-message--type-info:--c-message--scope-section {
   background-color: var(--global-color-info--x-light);
   border-color: var(--global-color-info--normal);
