@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.0.2] - 2023-03-02: New Message Styles for CMS & Docs (Not Portal Yet)
+
+### Changed
+
+- feat(components): c-message, 2 styles; admonition, icons (#131)
+
 ## [2.0.1] - 2023-03-01: Add Missing Way to Use Theme from Dist
 
 ### Fixed
@@ -445,7 +451,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.0.1...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.0.2...HEAD
+[2.0.2]: https://github.com/TACC/Core-Styles/releases/tag/v2.0.2
 [2.0.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.0.1
 [2.0.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.0.0
 [1.0.0]: https://github.com/TACC/Core-Styles/releases/tag/v1.0.0
