@@ -48,6 +48,8 @@
   --global-color-accent--xx-dark: #281066;
   --global-color-accent--xxx-dark: #1E0C4C;
 
+  /* DEPRECATED */
+  /* TODO: DO not use these in TUP CMS (Snippet) CSS */
   --global-color-accent--secondary: var(--global-color-secondary--normal);
   --global-color-accent--tertiary: var(--global-color-tertiary--normal);
 
