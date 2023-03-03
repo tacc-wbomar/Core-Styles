@@ -5,6 +5,9 @@
   --global-color-info--dark: var(--global-color-primary--x-dark);
   --global-color-info--x-dark: var(--global-color-primary--xx-dark);
 
+  /* TODO: Delete once Portal uses --global-color-accent--xx-light */
+  --global-color-accent--alt: #d2cce7; /* DEPRECATED */
+
   --global-color-success--x-light: #E7F9E5;
   --global-color-success--light: #AFECA7;
   --global-color-success--normal: #43d130;
