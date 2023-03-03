@@ -49,7 +49,8 @@
   --global-color-accent--xx-dark: #281066;
   --global-color-accent--xxx-dark: #1E0C4C;
 
-  --global-color-accent--weak: #6039cc40; /* similar to #E3D7FD on #f4f4f4 */
+  /* DEPRECATED */
+  /* TODO: DO not use these in TUP CMS (Snippet) CSS */
   --global-color-accent--secondary: var(--global-color-secondary--normal);
   --global-color-accent--tertiary: var(--global-color-tertiary--normal);
 
