@@ -144,19 +144,19 @@ ul.c-form__errors {
 
 /* To style obvious buttons that neglect class */
 .c-form__buttons button[type="submit"] {
-  @extend .c-button;
-  @extend .c-button--primary;
+  @extend :--c-button;
+  @extend :--c-button--primary;
 }
 
 .c-form__button {
-  @extend .c-button;
+  @extend :--c-button;
 }
 .c-form__button[type="submit"] {
-  @extend .c-button--primary;
+  @extend :--c-button--primary;
 }
 .c-form__button:where(:not([type="submit"], [type="reset"])) {
-  @extend .c-button--secondary;
+  @extend :--c-button--secondary;
 }
 .c-form__button[type="reset"] {
-  @extend .c-button--tertiary;
+  @extend :--c-button--tertiary;
 }

@@ -1,5 +1,6 @@
-@import url("../tools/x-layout.css");
+@import url("../components/c-button.selectors.css");
 @import url("../components/c-card.selectors.css");
+@import url("../tools/x-layout.css");
 
 @import url("./o-section.selectors.css");
 
@@ -110,12 +111,12 @@
 
 /* To color links, but not those within certain cards */
 :--o-section--style a:not(
-  .c-button,
+  :--c-button,
   :--c-card--plain *,
   :--c-card--standard *,
   :--c-card--standard-N *
 ),
-:--o-section--style .c-button--as-link:not(
+:--o-section--style :--c-button--as-link:not(
   :--c-card--plain *,
   :--c-card--standard *,
   :--c-card--standard-N *

@@ -1,6 +1,7 @@
 @import url("../objects/o-section.selectors.css");
 @import url("../tools/selectors.css");
 
+@import url("./c-button.selectors.css");
 @import url("./c-card.selectors.css");
 
 
@@ -104,7 +105,7 @@
 /* Structure */
 
 /* Elements */
-:--c-card > a:not(.c-button) {
+:--c-card > a:not(:--c-button) {
     display: inline-block; /* FAQ: for actions that do not yet have this */
 }
 :--c-card > :is(:--action) {
@@ -172,7 +173,7 @@
 
 /* To make buttons bold */
 /* TODO: Determine whether this should apply to all CMS buttons */
-:--c-card a.c-button {
+:--c-card a:--c-button {
     font-weight: var(--bold);
 }
 

@@ -158,19 +158,19 @@ ul.checkboxselectmultiple {
 
 /* To style obvious buttons that neglect class */
 .button-wrapper button[type="submit"] {
-  @extend .c-button;
-  @extend .c-button--primary;
+  @extend :--c-button;
+  @extend :--c-button--primary;
 }
 
 .form-button {
-  @extend .c-button;
+  @extend :--c-button;
 }
 .form-button[type="submit"] {
-  @extend .c-button--primary;
+  @extend :--c-button--primary;
 }
 .form-button:where(:not([type="submit"], [type="reset"])) {
-  @extend .c-button--secondary;
+  @extend :--c-button--secondary;
 }
 .form-button[type="reset"] {
-  @extend .c-button--tertiary;
+  @extend :--c-button--tertiary;
 }
