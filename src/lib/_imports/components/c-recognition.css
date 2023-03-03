@@ -71,7 +71,7 @@ Styleguide Components.Recognition
 .c-recognition--style-dark h4,
 .c-recognition--style-dark h5,
 .c-recognition--style-dark h6 {
-  color: var(--global-color-accent--normal);
+  color: var(--global-color-accent--dark);
 }
 
 

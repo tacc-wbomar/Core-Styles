@@ -141,7 +141,7 @@ Styleguide Components.Callout
 /* Style */
 
 .c-callout {
-  background-color: var(--global-color-link-on-light--normal);
+  background-color: var(--global-color-accent--normal);
 }
 
 /* Make all headings look the same */
