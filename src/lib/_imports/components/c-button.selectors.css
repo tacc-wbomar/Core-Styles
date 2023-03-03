@@ -1,0 +1,74 @@
+@import url("../tools/selectors.css");
+
+@custom-selector :--c-button
+    .c-button,
+    .button,
+    [class*="card--"];
+
+@custom-selector :--c-button--primary
+    .c-button--primary,
+    .button--1;
+@custom-selector :--c-button--secondary
+    .c-button--secondary,
+    .button--2;
+@custom-selector :--c-button--tertiary
+    .c-button--tertiary,
+    .button--3;
+
+@custom-selector :--c-button--is-active
+    .c-button--is-active,
+    .button--is-active;
+@custom-selector :--c-button--is-busy
+    .c-button--is-busy,
+    .button--is-busy;
+@custom-selector :--c-button--as-link
+    .c-button--as-link,
+    .button--as-link;
+
+@custom-selector :--c-button--width-long
+    .c-button--width-long,
+    .button--width-long;
+@custom-selector :--c-button--width-medium
+    .c-button--width-medium,
+    .button--width-medium;
+@custom-selector :--c-button--width-short
+    .c-button--width-short,
+    .button--width-short;
+@custom-selector :--c-button--width
+    [class*="button--width-"];
+
+@custom-selector :--c-button--size-small
+    .c-button--size-small,
+    .button--size-small;
+
+@custom-selector :--c-button__icon
+    .c-button__icon,
+    .button__icon;
+@custom-selector :--c-button__icon--before
+    .c-button__icon--before,
+    .button__icon--before;
+@custom-selector :--c-button__icon--after
+    .c-button__icon--after,
+    .button__icon--after;
+
+@custom-selector :--c-button--hover
+    .c-button--secondary:hover;
+
+@custom-selector :--c-button--active-safe
+    .c-button--secondary:active:not(
+        .c-button--is-busy
+    );
+
+@custom-selector :--c-button--focus-safe
+    .c-button--secondary:focus:not(
+        :active,
+        .c-button--is-busy
+    );
+
+@custom-selector :--c-button--no-state
+    .c-button--secondary:not(
+        .c-button:hover,
+        .c-button:focus,
+        .c-button:active,
+        .c-button:--disabled
+    );
