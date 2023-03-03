@@ -7,6 +7,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.1.0] - 2023-03-03: Contextual Accent Colors, Button Test Cases & Fixes
+
+### Added
+
+- feat: change action colors by context, not …on-dark/light vars (#137) c767bc5
+- feat: --global-color-accent--xx-light, no more alt ea97686
+- test(components): c-button, selectors (#132) 32a21e0
+- feat(demo): o-section, add sample buttons & links 3f16917
+- feat(demo): c-message, add sample button as link 14d8750
+- feat(demo): add buttons to link demos (#136) 4a49231
+
+### Changed
+
+- chore(settings): deprecate …--secondary|tertiary 2592839
+- chore: django-cms-forms, abandon c-message idea fbe1a95
+- feat(components): admonition, important = caution 8d1102a
+
+### Fixed
+
+- fix(components): swap …accent--weak with …x-light b340af6
+- fix: o-section, button--as-link text color change 92db8b2
+- fix: o-section, no purple hover text for button 30420da
+- fix(components): admonition, icon for `.error` cd6be1c
+- fix(components): admonition, improve for docs bf60bb0
+
 ## [2.0.2] - 2023-03-02: New Message Styles for CMS & Docs (Not Portal Yet)
 
 ### Changed
@@ -451,7 +476,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.0.2...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.1.0...HEAD
+[2.1.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.1.0
 [2.0.2]: https://github.com/TACC/Core-Styles/releases/tag/v2.0.2
 [2.0.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.0.1
 [2.0.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.0.0
