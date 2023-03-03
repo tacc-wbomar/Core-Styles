@@ -25,11 +25,11 @@
   @extend :--c-message--type-success;
   @extend :--c-message--type-success:--c-message--scope-section;
 }
-.admonition:is(.note, .important, .attention) {
+.admonition:is(.note, .attention) {
   @extend :--c-message--type-info;
   @extend :--c-message--type-info:--c-message--scope-section;
 }
-.admonition:is(.caution) {
+.admonition:is(.caution, .important) {
   @extend :--c-message--type-warning;
   @extend :--c-message--type-warning:--c-message--scope-section;
 }
@@ -80,9 +80,9 @@
 
 /* To add placeholder icon */
 /* NOTE: Client is expected to overwrite these */
-.admonition:is(.caution)::before { content: "⚠"; }
+.admonition:is(.caution, .important)::before { content: "⚠"; }
 .admonition:is(.warning)::before { content: "𝖷"; }
 .admonition:is(.tip)::before { content: "☀"; }
-.admonition:is(.note, .important, .attention)::before { content: "✎"; }
+.admonition:is(.note, .attention)::before { content: "✎"; }
 .admonition:is(.hint)::before { content: "✓"; }
 .admonition:is(.error, .danger)::before { content: "𝗫"; }
