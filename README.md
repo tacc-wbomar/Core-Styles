@@ -253,16 +253,24 @@ Sign your commits ([see this link](https://help.github.com/en/github/authenticat
 
 Only authorized team members may publish.
 
-1. (one time) Login to npm i.e. `npm login`.
+1. (one time) Login to npm via:\
+   `npm login`
 1. Create new branch for version bump.
 1. Update `CHANGELOG.md`.
-1. Update version via `npm version N.N.N`.
-1. Update dist via `npm run build:css --build-id=vN.N.N`.
+1. Update version via:\
+   `npm version N.N.N`
+1. Update dist via:\
+   `npm run build:css --build-id=vN.N.N`
 1. Commit, push, PR, review, merge.
+1. Publish to NPM via `npm publish --access public`.\
+   <sup>Project build will automatically occur before publish.</sup>
 1. Create release and tag on GitHub.
-1. Publish to NPM via `npm publish --access public`.
-
-> **Notice**: Project build will automatically occur before publish.
+1. Delete Github's unannotated tag via\
+   `git tag -d vN.N.N`.
+1. Tag with annotation e.g.:\
+   `git tag -a vN.N.N -m "..."`
+1. Commit NPM build output as:\
+   `chore: save npm publish build`
 
 ### Resources
 
