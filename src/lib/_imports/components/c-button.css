@@ -130,7 +130,7 @@ a:--c-button--is-busy {
 
 :--c-button--secondary:hover {
   color: var(--global-color-primary--xx-dark);
-  background-color: var(--global-color-accent--weak);
+  background-color: var(--global-color-accent--x-light);
   border-color: var(--global-color-accent--normal);
 }
 
@@ -151,7 +151,7 @@ a:--c-button--is-busy {
   :--c-button--is-busy
 ) {
   color: var(--global-color-primary--xx-dark);
-  background-color: var(--global-color-accent--weak);
+  background-color: var(--global-color-accent--x-light);
   border-color: var(--global-color-primary--xx-dark);
 
   outline: var(--global-border-width--thick) solid

@@ -5,8 +5,11 @@
   --global-color-info--dark: var(--global-color-primary--x-dark);
   --global-color-info--x-dark: var(--global-color-primary--xx-dark);
 
-  /* TODO: Delete once Portal uses --global-color-accent--xx-light */
-  --global-color-accent--alt: #d2cce7; /* DEPRECATED */
+  /* DEPRECATED */
+  /* TODO: Update clients to use --global-color-accent--xx-light instead */
+  --global-color-accent--alt: #d2cce7;
+  /* TODO: Update clients to use --global-color-accent--x-light instead */
+  --global-color-accent--weak: #6039cc40; /* similar to #E3D7FD on #f4f4f4 */
 
   --global-color-success--x-light: #E7F9E5;
   --global-color-success--light: #AFECA7;
