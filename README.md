@@ -265,10 +265,10 @@ Only authorized team members may publish.
 1. Publish to NPM via `npm publish --access public`.\
    <sup>Project build will automatically occur before publish.</sup>
 1. Create release and tag on GitHub.
-1. Delete Github's unannotated tag via\
-   `git tag -d vN.N.N`.
-1. Tag with annotation e.g.:\
+1. Replace Github's unannotated tag with an annotated one:\
+   `git tag -d vN.N.N`
    `git tag -a vN.N.N -m "..."`
+   `git push --tags --force-with-lease`
 1. Commit NPM build output as:\
    `chore: save npm publish build`
 
