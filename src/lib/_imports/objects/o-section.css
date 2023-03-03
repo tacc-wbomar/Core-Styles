@@ -114,6 +114,11 @@
   :--c-card--plain *,
   :--c-card--standard *,
   :--c-card--standard-N *
+),
+:--o-section--style .c-button--as-link:not(
+  :--c-card--plain *,
+  :--c-card--standard *,
+  :--c-card--standard-N *
 ) {
   color: var(--color--link);
 }
