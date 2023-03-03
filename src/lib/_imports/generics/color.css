@@ -6,17 +6,23 @@ Change global colors depending on context.
 Styleguide Generics.Colors
 */
 @import url("../objects/o-section.selectors.css");
-
-@custom-selector :--dark-context
-    .c-recognition--style-dark,
-    :--o-section--dark;
+@import url("../components/c-card.selectors.css");
 
 @custom-selector :--light-context
-    .c-recognition--style-light,
-    :--o-section--muted,
-    :--o-section--light;
+  .c-recognition--style-light,
+  :--o-section--muted,
+  :--o-section--light,
+  :--c-card;
+@custom-selector :--dark-context
+  .c-recognition--style-dark,
+  :--o-section--dark;
 
-:--dark-context {
+@custom-selector :--light-context-in-dark-context
+  :where(:--dark-context :--light-context);
+@custom-selector :--dark-context-in-light-context
+  :where(:--dark-context:not(:--light-context *));
+
+:--dark-context-in-light-context {
   --global-color-accent--xxx-light: #f6f3fe;
   --global-color-accent--xx-light: #f1ebfd;
   --global-color-accent--x-light: #e3d7fd;
@@ -28,7 +34,7 @@ Styleguide Generics.Colors
   --global-color-accent--xxx-dark: #281066;
 }
 
-:--light-context {
+:--light-context-in-dark-context {
   --global-color-accent--xxx-light: #f1ebfd;
   --global-color-accent--xx-light: #e3d7fd;
   --global-color-accent--x-light: #d5bfff;
