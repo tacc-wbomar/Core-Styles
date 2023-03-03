@@ -262,13 +262,13 @@ Only authorized team members may publish.
 1. Update dist via:\
    `npm run build:css --build-id=vN.N.N`
 1. Commit, push, PR, review, merge.
-1. Publish to NPM via `npm publish --access public`.\
-   <sup>Project build will automatically occur before publish.</sup>
 1. Create release and tag on GitHub.
 1. Replace Github's unannotated tag with an annotated one:\
    `git tag -d vN.N.N`
    `git tag -a vN.N.N -m "..."`
    `git push --tags --force-with-lease`
+1. Publish to NPM via `npm publish --access public`.\
+   <sup>Project build will automatically occur before publish.</sup>
 1. Commit NPM build output as:\
    `chore: save npm publish build`
 
