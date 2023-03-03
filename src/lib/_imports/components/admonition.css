@@ -85,4 +85,4 @@
 .admonition:is(.tip)::before { content: "☀"; }
 .admonition:is(.note, .important, .attention)::before { content: "✎"; }
 .admonition:is(.hint)::before { content: "✓"; }
-.admonition:is(.danger)::before { content: "𝗫"; }
+.admonition:is(.error, .danger)::before { content: "𝗫"; }
