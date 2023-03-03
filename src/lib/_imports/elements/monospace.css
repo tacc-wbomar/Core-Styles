@@ -47,14 +47,10 @@
 }
 
 /* Skin */
-& :--monospace--block {
-  background-color: var(--global-color-primary--x-light);
-  color: var(--global-color-primary--xx-dark);
-  border: var(--global-border-width--normal) solid var(--global-color-primary--light);
-}
+& :--monospace--block,
 & :--monospace--inline {
-  color: var(--global-color-primary--xx-dark);
   background-color: var(--global-color-primary--x-light);
+  color: var(--global-color-primary--x-dark);
   border: var(--global-border--normal);
 }
 & :--monospace--output:not(:--monospace--boxed) {

@@ -7,75 +7,172 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.0.2] - 2023-03-02: New Message Styles for CMS & Docs (Not Portal Yet)
+
+### Changed
+
+- feat(components): c-message, 2 styles; admonition, icons (#131)
+
+## [2.0.1] - 2023-03-01: Add Missing Way to Use Theme from Dist
+
+### Fixed
+
+- feat: build has-dark-logo–themed stylesheets (#134)
+
+## [2.0.0] - 2023-02-28: Font Sizes & Headings, New Patterns & Classes & Clients
+
+### Added
+
+- feat(settings): complete tertiary+secondary colors 4d7cece
+- feat: "disable" links with no href attribute (#130)
+- feat(elements): monospace light bkgd & dark text d12d9e7
+- feat(elements): fake table using paragraphs (#126)
+- feat(elements): inline monospace now dark on light 1ebfdce
+- feat(docs): add form cms element styles 4d0208c 827124d
+- feat(settings): space, …--p-buffer-above|below cab1977
+- feat: color, add …accent--xx-dark + …xxx-dark 6298f5e
+- feat: color, secondary tertiary normal xxx-dark 0d400a9
+- feat(elements): monospace, invert code block color 931a213
+- feat(elements): pointer cursor for `<summary>` tag 9984174
+- feat(trumps): breadcrumbs (changes for core-styles.docs) (#118)
+- feat(settings): --global-color-primary--xxx-dark (#117)
+- feat(settings+elements): docs font (#116)
+- feat(components): align + blockquote width mgmt. (#115)
+- feat(elements): html-el's demo, blockquote, figure (#114)
+- feat(trumps): s-blockquote pattern & tweaks (#113)
+- feat(components, elements): tacc-docs, monospace (#110)
+- feat(elements): monospace (#108)
+- feat(components): alt. classnames for c-message (#106)
+- feat(components): c-message demo & admonition pattern (#105)
+- feat(elements): cms headings (#104)
+- feat: elements re-org + css nesting + docs stylesheet (#102)
+- feat(demo): support custom cms & portal css files (#95)
+- feat(settings): (cms & portal) font patterns (#93)
+- feat(demo): elements > (cms) headings pattern (#92)
+- feat(components)!: new font sizes split cms/portal (#90)
+- feat(cortal.icons): [add] collapse alias (#85)
+
+### Changed
+
+- feat(elements): table, updates from tup-cms (#127)
+- chore: migrate cms `o-` patterns from base to cms (#119)
+- feat: tup cms patterns (add, change, fix) (#100)
+- feat(demo): wrap all previews in a `<main>` (#103)
+- feat: elements re-org + css nesting + docs stylesheet (#102)
+- feat: move cortal from base to cms and portal (#101)
+- feat(demo): lower priority demo css bb25862
+- feat(o-fixed-header-table): wrapper vs non-wrapper usage (#83)
+- fix(package): move npm-watch to devDeps 8b2ee16
+- chore(components): align, remove default max width (#122)
+
+### Removed
+
+- chore(elements)!: delete v0 CMS headings (#94)
+- docs(README): add tup-ui to Known Clients 8e8a49d
+
+### Fixed
+
+- fix(trumps): header, use new color var f405ef7
+- fix(components): footer, remove & simplify styles daada8b
+- fix(trumps): better demo markup 4adb26c
+- fix(components): c-button, disabled UI (#129)
+- fix(components): c-message, font size & margin (#128)
+- fix: only hide nested thead if parent has thead (#125)
+- fix: only hide nested thead if parent has thead e1e302c
+- fix(components): docs, prev/next as breadcrumbs 5bb8e00
+- fix(elements): table font size & nested th offset (#124)
+- fix(elements)!: table padding from px to em (#123)
+- fix: cms picture, offset, alignment improvements (#121)
+- fix: components/align, caption width → client task a8e4407
+- fix: figure image shrunk if figure was not aligned (#120)
+- fix(demo): load Bootstrap on layer beneath others b1d7919
+- fix(elements): <strong> and <b> selectors lacked & 00d182b
+- fix(components): no TACC cards in portals, modals 514d272
+- fix(components): no card pattern in modals 8e1914f
+- fix(components): no card pattern for portal d8eaee9
+- fix(objects): o-grid, prevent <figure> shrink ee96b93
+- fix(core-styles): do not load .align for cms 09a9bd7
+- fix(core-styles): load .align for cms 5a8d0f6
+- fix(partials): do not duplicate lorem ipsum paragraphs (#112)
+- fix(demo): apply demo styles to <dl>'s (#109)
+- fix(bin): build-id preprended with comma 837ab3f
+- fix(elements): nested table assumed parent thead 4550f16
+- fix(demo): replace demo-message with c-message 1b10fd4
+- fix(icon): hide vert overflow inside icon (from wrapped text) (#88)
+- fix(icon): hide text inside icon (#86)
+- fix(demo): no cross-pattern demo asset load (#84)
+- fix(demo): rename extra…css to example…css 59f002f
+- feat: tup cms patterns (add, change, fix) (#100)
+
 ## [1.0.0] - 2022-12-05: Polish, Table Objects, Form Patterns, Dist Files, Fonts
 
 ### Added
 
-* **feat!: ease use of core-styles (#81)**
-* feat!: provide CDN-style deliverable stylesheets (#78)
-* feat(components): form patterns (c-form, django.cms.forms) (#77, #79, #80)
-* feat(components): c-form updates & base html-elements (#79)
-* feat(dist): commit dist for clients relying on it (#70)
-* fix(o-table-wrap): …scroll.extra → …scroll-extra (#69)
-* feat(objects): o-table, o-fixed-header-table, o-flex-item-table-wrap (#68)
+- **feat!: ease use of core-styles (#81)**
+- feat!: provide CDN-style deliverable stylesheets (#78)
+- feat(components): form patterns (c-form, django.cms.forms) (#77, #79, #80)
+- feat(components): c-form updates & base html-elements (#79)
+- feat(dist): commit dist for clients relying on it (#70)
+- fix(o-table-wrap): …scroll.extra → …scroll-extra (#69)
+- feat(objects): o-table, o-fixed-header-table, o-flex-item-table-wrap (#68)
 
 ### Changed
 
-* **feat(settings): lighter `…primary--light` color (#76)**
+- **feat(settings): lighter `…primary--light` color (#76)**
 
 ### Removed
 
-* **feat!: provide CDN-style deliverable stylesheets (#78)**
-  * removed settings load from ALL _import source files (#78)
-  * removed icon(.…).css
-  * removed font settings from header
+- **feat!: provide CDN-style deliverable stylesheets (#78)**
+  - removed settings load from ALL _import source files (#78)
+  - removed icon(.…).css
+  - removed font settings from header
 
 ### Fixed
 
-* fix(table): border colors (#75)
-* fix(fonts)!: support font load on demo (#74)
-* **fix(demo)!: font path change in dist (#73)**
-* fix(fonts): fp-1891 add regular italic, also add black (#71, #72)
+- fix(table): border colors (#75)
+- fix(fonts)!: support font load on demo (#74)
+- **fix(demo)!: font path change in dist (#73)**
+- fix(fonts): fp-1891 add regular italic, also add black (#71, #72)
 
 ## [0.11.0] - 2022-11-14: Table Pattern, Many Demo Fixes, Demo Build Dir Clarity
 
 ### Added
 
-* feat(elements): fp-1878 table pattern (#64) (b3bc511)
+- feat(elements): fp-1878 table pattern (#64) (b3bc511)
 
 ### Changed
 
-* docs: nest demo assets in `/assets` directory (#65)
+- docs: nest demo assets in `/assets` directory (#65)
 
 ### Fixed
 
-* fix(bootstrap): broken paths in static build (47047a4)
-* fix: pattern demo repair suite (#66)
+- fix(bootstrap): broken paths in static build (47047a4)
+- fix: pattern demo repair suite (#66)
 
 ## [0.10.0] - 2022-11-12: New Docs, Patterns, Features; Major Dependency Bumps
 
 ### Added
 
-* docs(components): tup-354 bootstrap.modal; assets, loremipsum (#51)
-* docs(components): tup-356 bootstrap.form (#52)
-* docs: tup-356 bootstrap preview & easy subdir var (#53)
-* docs(components): tup-356 bootstrap.container (#54)
-* feat: tup-355 links (redo #57) (#58)
-* feat(elements): fp-1828 move apcd styles to core (#56) (#62)
-* feat(c-button): do not show <a> tag button for `--as-link` (#59)
-* feat: x-link, used by c-button--as-link & links (#60)
-* feat: npm watch synced with live-refresh demo (#61)
+- docs(components): tup-354 bootstrap.modal; assets, loremipsum (#51)
+- docs(components): tup-356 bootstrap.form (#52)
+- docs: tup-356 bootstrap preview & easy subdir var (#53)
+- docs(components): tup-356 bootstrap.container (#54)
+- feat: tup-355 links (redo #57) (#58)
+- feat(elements): fp-1828 move apcd styles to core (#56) (#62)
+- feat(c-button): do not show <a> tag button for `--as-link` (#59)
+- feat: x-link, used by c-button--as-link & links (#60)
+- feat: npm watch synced with live-refresh demo (#61)
 
 ### Changed
 
-* feat: tup-274 peerDeps not deps (#46)
-* chore: tup-293 dependency updates (#50)
-* fix(trumps, and unused): complex subdir var made easy (#55)
+- feat: tup-274 peerDeps not deps (#46)
+- chore: tup-293 dependency updates (#50)
+- fix(trumps, and unused): complex subdir var made easy (#55)
 
 ### Fixed
 
-* fix(c-button): fp-1791 auto width by default (#49)
-* fix: fp-1828 s-affixed-input-wrapper fallback (#62)
+- fix(c-button): fp-1791 auto width by default (#49)
+- fix: fp-1828 s-affixed-input-wrapper fallback (#62)
 
 ## [0.9.0] - 2022-10-26: Fonts, C-Message, Generic CMS Form, A11y Color Tweak
 
@@ -354,7 +451,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v1.0.0...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.0.2...HEAD
+[2.0.2]: https://github.com/TACC/Core-Styles/releases/tag/v2.0.2
+[2.0.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.0.1
+[2.0.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.0.0
 [1.0.0]: https://github.com/TACC/Core-Styles/releases/tag/v1.0.0
 [0.11.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.11.0
 [0.10.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.10.0

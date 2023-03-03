@@ -1,39 +1,7 @@
-<div class="admonition tip">
-  <p class="admonition-title">Tip</p>
-  <p>{{> @text-of-one-paragraph-short }}</p>
+{{#types}}
+<div class="admonition {{name}}">
+  <p class="admonition-title">{{ title }}</p>
+  <p>{{{ content }}}</p>
+  {{#code}}<pre><code>{{ this }}</code></pre>{{/code}}
 </div>
-<div class="admonition hint">
-  <p class="admonition-title">Hint</p>
-  <p>{{> @text-of-one-paragraph-short }}</p>
-</div>
-<div class="admonition important">
-  <p class="admonition-title">Important</p>
-  <p>{{> @text-of-one-paragraph-short }}</p>
-</div>
-
-<div class="admonition attention">
-  <p class="admonition-title">Attention</p>
-  <p>{{> @text-of-one-paragraph-short }}</p>
-</div>
-<div class="admonition note">
-  <p class="admonition-title">Note</p>
-  <p>{{> @text-of-one-paragraph-short }}</p>
-</div>
-
-<div class="admonition warning">
-  <p class="admonition-title">Warning</p>
-  <p>{{> @text-of-one-paragraph-short }}</p>
-</div>
-<div class="admonition caution">
-  <p class="admonition-title">Caution</p>
-  <p>{{> @text-of-one-paragraph-short }}</p>
-</div>
-
-<div class="admonition error">
-  <p class="admonition-title">Error</p>
-  <p>{{> @text-of-one-paragraph-short }}</p>
-</div>
-<div class="admonition danger">
-  <p class="admonition-title">Danger</p>
-  <p>{{> @text-of-one-paragraph-short }}</p>
-</div>
+{{/types}}
