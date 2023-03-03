@@ -39,6 +39,7 @@
 
   /* Accent */
 
+  --global-color-accent--xxx-light: #f6f3fe;
   --global-color-accent--xx-light: #f1ebfd;
   --global-color-accent--x-light: #e3d7fd;
   --global-color-accent--light: #a387ed;
@@ -117,6 +118,8 @@
 
 
   /* Link */
+  /* DEPRECATED */
+  /* TODO: Rely on src/lib/_imports/generics/colors.css to manage dark/light */
 
   --global-color-link-on-light--normal: var(--global-color-accent--normal);
   --global-color-link-on-dark--normal: var(--global-color-accent--light);

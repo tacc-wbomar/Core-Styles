@@ -1,5 +1,5 @@
 .x-link {
-  color: var(--global-color-link-on-light--normal);
+  color: var(--global-color-accent--normal);
 
   text-decoration: none;
   text-underline-offset: 0.2em;
@@ -14,7 +14,7 @@
   text-decoration-style: solid;
 
   /* To overwrite Bootstrap (on Client) */
-  color: var(--global-color-link-on-light--normal);
+  color: var(--global-color-accent--normal);
   text-decoration-thickness: var(--global-border-width--normal);
 }
 .x-link--active {

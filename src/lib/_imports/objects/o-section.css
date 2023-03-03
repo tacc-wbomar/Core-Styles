@@ -75,21 +75,18 @@
   --color--text-strong: var(--global-color-primary--xx-dark);
   --color--bkgd: var(--global-color-primary--xx-light);
   --color--line: var(--global-color-primary--normal);
-  --color--link: var(--global-color-link-on-light--normal);
 }
 :--o-section--muted {
   --color--text: var(--global-color-primary--x-dark);
   --color--text-strong: var(--global-color-primary--xx-dark);
   --color--bkgd: var(--global-color-primary--x-light);
   --color--line: var(--global-color-primary--dark);
-  --color--link: var(--global-color-link-on-light--normal);
 }
 :--o-section--dark {
   --color--text: var(--global-color-primary--xx-light);
   --color--text-strong: var(--global-color-primary--xx-light);
   --color--bkgd: var(--global-color-primary--xx-dark);
   --color--line: var(--global-color-primary--xx-light);
-  --color--link: var(--global-color-link-on-dark--normal);
 }
 
 /* Modifers: Style: Text & Background */
@@ -109,20 +106,7 @@
 
 /* Modifers: Style: Child Text */
 
-/* To color links, but not those within certain cards */
-:--o-section--style a:not(
-  :--c-button,
-  :--c-card--plain *,
-  :--c-card--standard *,
-  :--c-card--standard-N *
-),
-:--o-section--style :--c-button--as-link:not(
-  :--c-card--plain *,
-  :--c-card--standard *,
-  :--c-card--standard-N *
-) {
-  color: var(--color--link);
-}
+/* To color text, but not those within certain contexts */
 :--o-section--style :is(h1, h2, h3, h4, h5, h6):not(
   :--c-card--plain *,
   :--c-card--standard *,

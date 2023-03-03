@@ -1,0 +1,41 @@
+/*
+Colors (by Context)
+
+Change global colors depending on context.
+
+Styleguide Generics.Colors
+*/
+@import url("../objects/o-section.selectors.css");
+
+@custom-selector :--dark-context
+    .c-recognition--style-dark,
+    :--o-section--dark;
+
+@custom-selector :--light-context
+    .c-recognition--style-light,
+    :--o-section--muted,
+    :--o-section--light;
+
+:--dark-context {
+  --global-color-accent--xxx-light: #ffffff;
+  --global-color-accent--xx-light: #f6f3fe;
+  --global-color-accent--x-light: #f1ebfd;
+  --global-color-accent--light: #e3d7fd;
+  --global-color-accent--normal: #a387ed;
+  --global-color-accent--dark: #784fe8;
+  --global-color-accent--x-dark: #6039cc;
+  --global-color-accent--xx-dark: #3d189b;
+  --global-color-accent--xxx-dark: #281066;
+}
+
+:--light-context {
+  --global-color-accent--xxx-light: #f6f3fe;
+  --global-color-accent--xx-light: #f1ebfd;
+  --global-color-accent--x-light: #e3d7fd;
+  --global-color-accent--light: #a387ed;
+  --global-color-accent--normal: #784fe8;
+  --global-color-accent--dark: #6039cc;
+  --global-color-accent--x-dark: #3d189b;
+  --global-color-accent--xx-dark: #281066;
+  --global-color-accent--xxx-dark: #1E0C4C;
+}
