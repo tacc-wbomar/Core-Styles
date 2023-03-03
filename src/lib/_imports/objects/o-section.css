@@ -108,8 +108,9 @@
 
 /* Modifers: Style: Child Text */
 
-/* To color links, but not those within a nested pattern */
+/* To color links, but not those within certain cards */
 :--o-section--style a:not(
+  .c-button,
   :--c-card--plain *,
   :--c-card--standard *,
   :--c-card--standard-N *
