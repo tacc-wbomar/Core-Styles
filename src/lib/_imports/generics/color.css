@@ -12,7 +12,9 @@ Styleguide Generics.Colors
   .c-recognition--style-light,
   :--o-section--muted,
   :--o-section--light,
-  :--c-card;
+  :--c-card--standard,
+  :--c-card--standard-N,
+  :--c-card--plain;
 @custom-selector :--dark-context
   .c-recognition--style-dark,
   :--o-section--dark;
