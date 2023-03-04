@@ -19,12 +19,12 @@ Styleguide Generics.Colors
   .c-recognition--style-dark,
   :--o-section--dark;
 
-@custom-selector :--light-context-in-dark-context
+@custom-selector :--light-context-safe
   :where(:--dark-context :--light-context);
-@custom-selector :--dark-context-in-light-context
+@custom-selector :--dark-context-safe
   :where(:--dark-context:not(:--light-context *));
 
-:--dark-context-in-light-context {
+:--dark-context-safe {
   --global-color-accent--xxx-light: #f6f3fe;
   --global-color-accent--xx-light: #f1ebfd;
   --global-color-accent--x-light: #e3d7fd;
@@ -36,7 +36,7 @@ Styleguide Generics.Colors
   --global-color-accent--xxx-dark: #281066;
 }
 
-:--light-context-in-dark-context {
+:--light-context-safe {
   --global-color-accent--xxx-light: #f1ebfd;
   --global-color-accent--xx-light: #e3d7fd;
   --global-color-accent--x-light: #d5bfff;
