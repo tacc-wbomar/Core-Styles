@@ -10,7 +10,7 @@
 /* Structure */
 
 &:is( h1, h2, h3, h4, h5, h6 ) {
-    line-height: unset; /* undo Bootstrap */
+    line-height: unset;
 }
 & h1 {
     margin-bottom: 40px; /* rounded from design 42px */
