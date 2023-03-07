@@ -7,6 +7,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.2.0] - 2023-03-07: Color Fixes & Additions, Misc. Tweaks & Polish
+
+### Added
+
+- feat(settings): color, 2nd-ary & 3rd-ary xx-light f35c533
+
+### Fixed
+
+- fix(settings): color, accent xxx-light value f593cf3
+- fix(settings): richer dark reds, warmer yellows f4aa7f0
+
+### Changed
+
+- chore(dist): cms h1–h6 updates for docs 8eded6c
+- feat(elements): remove heading line-height 9ef80b3
+- feat(elements): remove h5 and h6 styles 78849b9
+- fix(settings): simple color context selector names e76487f
+- docs(README): […] publish step polish 7f91086, d119fad
+
+### Removed
+
+- chore(elements): [cleanup] 928707d, 6d256f0
+
 ## [2.1.0] - 2023-03-03: Contextual Accent Colors, Button Test Cases & Fixes
 
 ### Added
@@ -477,6 +500,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 Initial working code. (This code may not work on all environments.)
 
 [unreleased]: https://github.com/TACC/Core-Styles/compare/v2.1.0...HEAD
+[2.2.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.2.0
 [2.1.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.1.0
 [2.0.2]: https://github.com/TACC/Core-Styles/releases/tag/v2.0.2
 [2.0.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.0.1
