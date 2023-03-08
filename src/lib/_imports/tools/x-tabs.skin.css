@@ -1,0 +1,29 @@
+.x-tabs {
+  --buffer: 20px;
+}
+
+.x-tabs__label {
+  padding-block: 1.25em 0.75em;
+  margin-inline: var(--buffer);
+
+  border-bottom: var(--global-border-width--x-thick) solid transparent;
+
+  font-size: var(--global-font-size--medium);
+  font-weight: var(--medium);
+}
+.x-tabs__label--hover {
+  border-color: var(--global-color-primary--dark);
+}
+.x-tabs__label--not-active {
+  color: var(--global-color-primary--dark);
+}
+.x-tabs__label--active {
+  color: var(--global-color-accent--normal);
+  border-color: var(--global-color-accent--normal);
+}
+
+.x-tabs__content {
+  padding-inline: var(--buffer);
+
+  border-top: var(--global-border-width--normal) solid var(--global-color-primary--dark);
+}
