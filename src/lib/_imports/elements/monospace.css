@@ -38,7 +38,8 @@
 
 /* Structure */
 & :--monospace--block {
-  display: inline-block; /* FAQ: If `block`, then background color is cropped */
+  display: block;
+  width: min-content;
   padding: var(--global-space--x-small) var(--global-space--small);
 }
 & :--monospace--inline {
