@@ -16,7 +16,7 @@ ul.nav-tabs {
   @extend .x-tabs__content;
 }
 .nav-tabs .nav-link {
-  @extend .x-tabs__label;
+  @extend .x-tabs__tab;
 
   /* To overwrite Bootstrap _nav.scss border */
   border-top: none;
@@ -24,12 +24,12 @@ ul.nav-tabs {
   border-radius: 0;
 }
 .nav-tabs .nav-link:hover {
-  @extend .x-tabs__label--hover;
+  @extend .x-tabs__tab--hover;
 }
 
 .nav-tabs .nav-link.active {
-  @extend .x-tabs__label--active;
+  @extend .x-tabs__tab--active;
 }
 .nav-tabs .nav-link:not(.active) {
-  @extend .x-tabs__label--not-active;
+  @extend .x-tabs__tab--not-active;
 }

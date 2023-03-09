@@ -6,10 +6,10 @@ Mixins for tab UI e.g. [Bootstrap Nav Tabs](https://getbootstrap.com/docs/4.0/co
 | `.x-tabs--custom-properties`     | custom properties for tab elements
 | `.x-tabs--focus-within`          | container on interactive element focus
 | `.x-tabs__toggle`                | interactive element that toggles visibility
-| `.x-tabs__label`                 | a tab
-| `.x-tabs__label--hover`          | a tab over which user hovers
-| `.x-tabs__label--active`         | the tab of the visible content
-| `.x-tabs__label--not-active`     | a tab of not visible content
+| `.x-tabs__tab`                 | a tab
+| `.x-tabs__tab--hover`          | a tab over which user hovers
+| `.x-tabs__tab--active`         | the tab of the visible content
+| `.x-tabs__tab--not-active`     | a tab of not visible content
 | `.x-tabs__content`               | content of the tabs
 | `.x-tabs__content--active`       | visible content
 | `.x-tabs__content--force-active` | to force content to be visible
