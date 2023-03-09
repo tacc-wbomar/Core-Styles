@@ -6,8 +6,8 @@
 
 .x-tabs__toggle {
   /* FAQ: If `display: none` were used, keyboard accessibility would break */
-  visibility: hidden;
   position: absolute;
+  top: -100vh;
   opacity: 0;
 }
 
