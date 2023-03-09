@@ -14,7 +14,7 @@
 /* https://confluence.tacc.utexas.edu/x/b53tDg */
 
 /* ELEMENTS */
-/* To override Bootstrap */
+@import url("./elements/root--portal.css");
 @import url("./elements/sticky-footer.css");
 
 /* OBJECTS */
