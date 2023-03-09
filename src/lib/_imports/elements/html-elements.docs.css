@@ -2,5 +2,5 @@
 
 /* To scope these styles to main content (i.e. not header, not navbar) */
 :--main-content {
-  font-size: var(--global-font-size--large);
+  font-size: var(--global-font-size--medium);
 }
