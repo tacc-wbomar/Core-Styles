@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.3.1] - 2023-03-09: Tab Activation Scroll Bug
+
+- fix: do not move toggle far away e3089b9
+
 ## [2.3.0] - 2023-03-09: Tabs (Bootstrap Navs & PyMdown Extensions)
 
 ### Added
@@ -505,7 +509,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.3.0...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.3.1...HEAD
+[2.3.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.3.1
 [2.3.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.3.0
 [2.2.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.2.0
 [2.1.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.1.0
