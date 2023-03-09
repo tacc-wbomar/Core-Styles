@@ -1,6 +1,6 @@
-Content that is shown only when its tab is active.
+To style [Python-Markdown Tabbed Extension](https://facelessuser.github.io/pymdown-extensions/extensions/tabbed/).
 
-> **♿ Accessibility**
+> **♿ Accessibility Extras**
 >
 > 1. Focus on tab container. Verify it **has** focus outline.
 > 2. While focused on tab container, press <kbd>←</kbd> and <kbd>→</kbd>. Verify tab switches.

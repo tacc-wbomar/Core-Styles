@@ -1,4 +1,4 @@
-To override and extend [Bootstrap Nav Tabs](https://getbootstrap.com/docs/4.0/components/navs/#tabs).
+To override and extend [Bootstrap Nav Tabs](https://getbootstrap.com/docs/4.3/components/navs/#tabs).
 
 <script>
 /* To open external links in new window */
