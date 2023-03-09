@@ -7,7 +7,7 @@
   /* Size */
   /* https://confluence.tacc.utexas.edu/x/nh4FDg */
   /* CAVEAT: These font sizes assume root font is 10px or an equivalent value */
-  /* WARNING: Used in new TACC-Docs; the values are subject to change */
+  /* Known Clients: TACC/TACC-Docs */
   --global-font-size--x-small: 1.2rem;
   --global-font-size--small: 1.4rem;
   --global-font-size--medium: 1.6rem;
