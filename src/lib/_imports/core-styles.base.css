@@ -11,6 +11,7 @@
 /* Mostly from Bootstrap */
 /* https://confluence.tacc.utexas.edu/x/b53tDg */
 @import url("./generics/color.css");
+@import url('./generics/fonts.css');
 @import url("./generics/pseudo-elements.css");
 
 /* ELEMENTS */
