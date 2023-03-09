@@ -1,36 +1,36 @@
 @import url("../tools/x-tabs.css");
 
-.c-tabs {
+.tabbed-set {
   @extend .x-tabs;
 }
 
-.c-tabs > input {
+.tabbed-set > input {
   @extend .x-tabs__toggle;
 }
-.c-tabs > div {
+.tabbed-set > .tabbed-content {
   @extend .x-tabs__content;
 }
-.c-tabs > label {
+.tabbed-set > label {
   @extend .x-tabs__label;
 }
-.c-tabs > label:hover {
+.tabbed-set > label:hover {
   @extend .x-tabs__label--hover;
 }
 
-.c-tabs > input:checked + label {
+.tabbed-set > input:checked + label {
   @extend .x-tabs__label--active;
 }
-.c-tabs > input:not(:checked) + label {
+.tabbed-set > input:not(:checked) + label {
   @extend .x-tabs__label--not-active;
 }
 
 @media screen {
-  .c-tabs > input:checked + label + div {
+  .tabbed-set > input:checked + label + .tabbed-content {
     @extend .x-tabs__content--active;
   }
 }
 @media print {
-  .c-tabs > input:not(:checked) + label + div {
+  .tabbed-content {
     @extend .x-tabs__content--force-active;
   }
 }
@@ -40,22 +40,22 @@
 /* To show focus on container ONLY if a toggle has VISIBLE focus */
 /* NOTE: Simple version shows outline even if browser would not do so for inputs
 
-.c-tabs:focus-within {
+.tabbed-set:focus-within {
   @extend .x-tabs--focus-within;
 }
 
 */
 @media screen {
   @supports selector(:has(*)) {
-    /* FAQ: The `:where(.c-tabs > *)` prevents tabs focus UI
+    /* FAQ: The `:where(.tabbed-set > *)` prevents tabs focus UI
             when focusing on an element within the content */
-    .c-tabs:has(input:focus-visible:where(.c-tabs > *)) {
+    .tabbed-set:has(input:focus-visible:where(.tabbed-set > *)) {
       @extend .x-tabs--focus-within;
     }
   }
 
   @supports not selector(:has(*)) {
-    .c-tabs:focus-within {
+    .tabbed-set:focus-within {
       @extend .x-tabs--focus-within;
     }
   }
