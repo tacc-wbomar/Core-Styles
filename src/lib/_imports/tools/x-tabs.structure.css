@@ -3,9 +3,6 @@
   display: flex;
   flex-wrap: wrap;
 }
-.x-tabs--focus-within {
-  outline: 5px auto; /* to mimic borwser outline */
-}
 
 .x-tabs__toggle {
   /* FAQ: If `display: none` were used, keyboard accessibility would break */

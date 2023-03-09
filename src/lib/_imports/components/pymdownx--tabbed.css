@@ -2,6 +2,7 @@
 
 .tabbed-set {
   @extend .x-tabs;
+  @extend .x-tabs--custom-properties;
 }
 
 .tabbed-set > input {

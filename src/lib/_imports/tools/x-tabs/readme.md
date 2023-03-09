@@ -3,6 +3,7 @@ Mixins for tab UI e.g. [Bootstrap Nav Tabs](https://getbootstrap.com/docs/4.0/co
 | Mixin | Description
 | - | -
 | `.x-tabs`                        | container of tab elements
+| `.x-tabs--custom-properties`     | custom properties for tab elements
 | `.x-tabs--focus-within`          | container on interactive element focus
 | `.x-tabs__toggle`                | interactive element that toggles visibility
 | `.x-tabs__label`                 | a tab

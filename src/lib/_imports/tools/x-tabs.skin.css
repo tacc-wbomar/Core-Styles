@@ -1,9 +1,16 @@
 .x-tabs {
+  /* FAQ: To avoid @extend error */
+}
+.x-tabs--custom-properties {
   --buffer: 20px;
+}
+.x-tabs--focus-within {
+  outline: 5px auto; /* to mimic browser outline */
 }
 
 .x-tabs__label {
   padding-block: 1.25em 0.75em;
+  padding-inline: 0.875em;
   margin-inline: var(--buffer);
 
   border-bottom: var(--global-border-width--x-thick) solid transparent;
@@ -29,4 +36,10 @@
   padding-inline: var(--buffer);
 
   border-top: var(--global-border-width--normal) solid var(--global-color-primary--dark);
+}
+.x-tabs__content > *:first-child {
+  margin-top: var(--buffer);
+}
+.x-tabs__content > *:last-child {
+  margin-bottom: var(--buffer);
 }
