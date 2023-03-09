@@ -1,0 +1,10 @@
+label: PyMdown Extensions
+context:
+  shouldSkipPattern: false
+  📝 shouldSkipPattern: because core-styles.docs.css is not loaded
+  shouldLoadDocs: false
+  📝 shouldLoadDocs: because core-styles.docs.css loads conflicting CSS
+variants:
+  - name: default
+    label: (Overview)
+  - name: tabbed
