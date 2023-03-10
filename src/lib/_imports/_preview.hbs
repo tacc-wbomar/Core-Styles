@@ -23,9 +23,9 @@
 <style>
 {{#each globalStyles}}
   {{#if this.isInternal}}
-  @import url('{{path this.path}}');
+  @import url('{{path this.path}}') layer({{ this.layer }});
   {{else}}
-  @import url('{{this.path}}');
+  @import url('{{this.path}}') layer({{ this.layer }});
   {{/if}}
 {{/each}}
 </style>
@@ -36,9 +36,9 @@
 <style>
 {{#each cmsStyles}}
   {{#if this.isInternal}}
-  @import url('{{path this.path}}');
+  @import url('{{path this.path}}') layer({{ this.layer }});
   {{else}}
-  @import url('{{this.path}}');
+  @import url('{{this.path}}') layer({{ this.layer }});
   {{/if}}
 {{/each}}
 </style>
@@ -51,9 +51,9 @@
 <style>
 {{#each docsStyles}}
   {{#if this.isInternal}}
-  @import url('{{path this.path}}');
+  @import url('{{path this.path}}') layer({{ this.layer }});
   {{else}}
-  @import url('{{this.path}}');
+  @import url('{{this.path}}') layer({{ this.layer }});
   {{/if}}
 {{/each}}
 </style>
@@ -66,9 +66,9 @@
 <style>
 {{#each portalStyles}}
   {{#if this.isInternal}}
-  @import url('{{path this.path}}');
+  @import url('{{path this.path}}') layer({{ this.layer }});
   {{else}}
-  @import url('{{this.path}}');
+  @import url('{{this.path}}') layer({{ this.layer }});
   {{/if}}
 {{/each}}
 </style>
