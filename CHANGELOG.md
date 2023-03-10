@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.4.1] - 2023-03-10: Split Docs & CMS & Portal Root Element Styles; Fixes
+
+### Added
+
+- feat(elements): root, demo & docs v. cms v. portal (#142) af8e2b1
+
+### Fixed
+
+- fix(demo): respect client/project font size 4f426d3
+- fix(objects): o-grid, no cell overflow nor side fx bd1b007
+
 ## [2.4.0] - 2023-03-09: Headings on CMS Client vs Docs Client
 
 ### Added
@@ -517,7 +528,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.4.0...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.4.1...HEAD
+[2.4.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.4.1
 [2.4.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.4.0
 [2.3.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.3.1
 [2.3.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.3.0
