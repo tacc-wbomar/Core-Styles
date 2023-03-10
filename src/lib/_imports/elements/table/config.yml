@@ -76,6 +76,45 @@ variants:
                 text: View Details
               - is-button: true
                 text: Delete
+  - name: docs
+    label: Basic (Docs)
+    context:
+      shouldLoadDocs: true
+      data:
+        cols:
+          - ID
+          - Name
+          - Size
+          - Time
+          - Actions
+        rows:
+          - id: n234as
+            name-link: apple-sauce
+            custom-1: 0.5 KB
+            time: 12/01/2019 11:04:19
+            acts:
+              - is-link: true
+                text: View Details
+              - is-button: true
+                text: Delete
+          - id: 56l810
+            name-link: milk-shake-032
+            custom-1: 300.0 KB
+            time: 03/22/2021 05:23:01
+            acts:
+              - is-link: true
+                text: View Details
+              - is-button: true
+                text: Delete
+          - id: 3r56xc
+            name-link: white-candy-5
+            custom-1: 1.5 MB
+            time: 12/01/2019 11:04:19
+            acts:
+              - is-link: true
+                text: View Details
+              - is-button: true
+                text: Delete
   - name: no-header
     context:
       data:
@@ -140,6 +179,39 @@ variants:
                 text: View Details
               - is-button: true
                 text: Delete
+  - name: no-header-docs
+    label: No Header (Docs)
+    context:
+      shouldLoadDocs: true
+      data:
+        rows:
+          - id: n234as
+            name-link: apple-sauce
+            custom-1: 0.5 KB
+            time: 12/01/2019 11:04:19
+            acts:
+              - is-link: true
+                text: View Details
+              - is-button: true
+                text: Delete
+          - id: 56l810
+            name-link: milk-shake-032
+            custom-1: 300.0 KB
+            time: 03/22/2021 05:23:01
+            acts:
+              - is-link: true
+                text: View Details
+              - is-button: true
+                text: Delete
+          - id: 3r56xc
+            name-link: white-candy-5
+            custom-1: 1.5 MB
+            time: 12/01/2019 11:04:19
+            acts:
+              - is-link: true
+                text: View Details
+              - is-button: true
+                text: Delete
   - name: via-paragraphs
     context:
       data:
@@ -153,6 +225,17 @@ variants:
     label: Via Paragraphs (CMS)
     context:
       shouldLoadCMS: true
+      data:
+        rows:
+          - paragraph: true
+          - paragraph: true
+          - paragraph: true
+          - paragraph: true
+  - name: via-paragraphs-docs
+    view: 'table--via-paragraphs.hbs'
+    label: Via Paragraphs (Docs)
+    context:
+      shouldLoadDocs: true
       data:
         rows:
           - paragraph: true

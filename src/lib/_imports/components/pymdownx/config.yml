@@ -1,9 +1,7 @@
 label: PyMdown Extensions
 context:
-  shouldSkipPattern: false
-  📝 shouldSkipPattern: because core-styles.docs.css is not loaded
-  shouldLoadDocs: false
-  📝 shouldLoadDocs: because core-styles.docs.css loads conflicting CSS
+  shouldLoadDocs: true
+  📝 shouldLoadDocs: because only core-styles.docs.css loads this
 variants:
   - name: default
     label: (Overview)
