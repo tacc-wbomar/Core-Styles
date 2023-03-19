@@ -42,6 +42,7 @@
 @import url("./components/c-page.css");
 @import url("./components/c-recognition.css");
 @import url("./components/c-see-all-link.css");
+@import url("./components/c-tag.css");
 
 /* TRUMPS */
 @import url("./trumps/s-blockquote.css");
