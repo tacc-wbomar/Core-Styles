@@ -6,7 +6,7 @@
   /* display: inline-block; */
 
   line-height: 1; /* so padding-block can be consistent */
-  padding: 0.25em;
+  padding: 0.5rem;
   width: min-content;
 
   font-weight: var(--bold);
