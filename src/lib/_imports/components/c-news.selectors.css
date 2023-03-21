@@ -1,0 +1,65 @@
+@import url("../tools/selectors.css");
+
+@custom-selector :--c-news
+  .c-news,
+  [class*="news--"];
+
+@custom-selector :--c-news--list
+  .c-news--list,
+  .news--list;
+
+@custom-selector :--c-news--read
+  .c-news--read,
+  .news--read;
+
+@custom-selector :--c-news
+  .c-news,
+  .news;
+
+@custom-selector :--c-news__header
+  .c-news__header,
+  .news__header;
+
+@custom-selector :--c-news__title
+  .c-news__title,
+  .news__title;
+
+@custom-selector :--c-news__subtitle
+  .c-news__subtitle,
+  .news__subtitle;
+
+@custom-selector :--c-news__data
+  .c-news__data,
+  .news__data;
+
+@custom-selector :--c-news__attr
+  .c-news__attr,
+  .news__attr;
+
+@custom-selector :--c-news__byline
+  .c-news__byline,
+  .news__byline;
+
+@custom-selector :--c-news__date
+  .c-news__date,
+  .news__date;
+
+@custom-selector :--c-news__tags
+  .c-news__tags,
+  .news__tags;
+
+@custom-selector :--c-news__cats
+  .c-news__cats,
+  .news__cats;
+
+@custom-selector :--c-news__media
+  .c-news__media,
+  .news__media;
+
+@custom-selector :--c-news__content
+  .c-news__content,
+  .news__content;
+
+@custom-selector :--c-news__footer
+  .c-news__footer,
+  .news__footer;

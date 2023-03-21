@@ -1,0 +1,37 @@
+variants:
+  - name: default
+    hidden: true
+  - name: list
+    label: List
+  - name: list-has-media
+    label: List (Has Media)
+    view: 'c-news--list.hbs'
+    context:
+      - hasMedia: true
+  - name: list-no-cats
+    label: List (No Categories)
+    view: 'c-news--list.hbs'
+    context:
+      - noCats: true
+  - name: list-no-tags
+    label: List (No Tags)
+    view: 'c-news--list.hbs'
+    context:
+      - noTags: true
+  - name: read
+    label: Read
+  - name: read-has-media
+    label: Read (Has Media)
+    view: 'c-news--read.hbs'
+    context:
+      - hasMedia: true
+  - name: read-no-cats
+    label: Read (No Categories)
+    view: 'c-news--read.hbs'
+    context:
+      - noCats: true
+  - name: read-no-tags
+    label: Read (No Tags)
+    view: 'c-news--read.hbs'
+    context:
+      - noTags: true

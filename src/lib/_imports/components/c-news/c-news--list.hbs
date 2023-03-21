@@ -1,0 +1,32 @@
+<section class="c-news c-news--list{{#if hasMedia}} has-media{{/if}}">
+{{#each article}}
+  <article>
+    <header class="c-news__header">
+      <h3 class="c-news__title"><a href="#">{{ title }}</a></h3>
+      <h4 class="c-news__subtitle">{{ subtitle }}</h4>
+      <ul class="c-news__data c-news__attr">
+        <li class="c-news__byline">
+          <span>{% trans "by" %}</span>&nbsp;
+          <span>{{ article.author }}</span>
+        </li>
+        <li class="c-news__date">
+          <span>Posted</span>
+          <time datetime="{{ date1 }}">{{ date1 }}</time>
+        </li>
+      </ul>
+      <ul class="c-news__data c-news__cats">
+        <li class="c-tag c-tag--system">System</li>
+      </ul>
+      <ul class="c-news__data c-news__tags">
+        <span class="c-pill c-pill--is-updated">Update</span>
+      </ul>
+    </header>
+    {{#if hasMedia }}
+    <img class="c-news__media" src="https://www.tacc.utexas.edu/tacc-new-theme/images/ut-logo.png" />
+    {{/if}}
+    <div class="c-news__abstract">
+      {{ content }}
+    </div>
+  </article>
+{{/each}}
+</section>
