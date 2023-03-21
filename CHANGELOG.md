@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.6.1] - 2023-03-21: `core-styles.wysiwyg.css`
+
+### Fixed
+
+- fix: core-styles.wysiwyg.css filename typo (c21b036)
+
 ## [2.6.0] - 2023-03-21: `c-tag`, `--global-font-size--xxx-large`, `c-island`
 
 ### Added
@@ -14,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - feat(components): c-tag (#144)
 - feat(settings): font--cms, size xxx-large 3.2rem
 - feat(components): c-island (#145)
+- feat: core-styles.wysiwig.css (#145)
 
 ## [2.5.0] - 2023-03-10: Integrate Docs Client CSS into Core-Styles.Docs
 
@@ -540,7 +547,8 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.6.0...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.6.1...HEAD
+[2.6.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.6.1
 [2.6.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.6.0
 [2.5.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.5.0
 [2.4.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.4.1
