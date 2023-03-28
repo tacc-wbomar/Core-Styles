@@ -63,9 +63,9 @@
   /* HELP: Where is this used? Not Core-Styles nor TACC CMS global snippets… */
   --global-color-secondary--xxx-dark: var(--global-color-secondary--x-dark);
 
-  --global-color-tertiary--xx-light: #eafdfb;
-  --global-color-tertiary--x-light: #b8f2eb;
-  --global-color-tertiary--light: #7bd1c8;
+  --global-color-tertiary--xx-light: #e7f1f0; /* from designer */
+  --global-color-tertiary--x-light: #b1d1ce;
+  --global-color-tertiary--light: #92ccc5;
   --global-color-tertiary--normal: #61A39C; /* from designer */
   --global-color-tertiary--dark: #406d68;
   --global-color-tertiary--x-dark: #1E3331; /* from designer */
