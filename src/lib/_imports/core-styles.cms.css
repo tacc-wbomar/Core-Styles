@@ -28,6 +28,7 @@
 @import url("./objects/o-section.css");
 
 /* COMPONENTS */
+@import url("./components/bootstrap.modal--cms.css");
 @import url("./components/cortal.icon.css");
 @import url("./components/c-card.css");
 @import url("./components/c-form--cms.css");
