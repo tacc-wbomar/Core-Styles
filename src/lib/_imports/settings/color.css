@@ -39,18 +39,18 @@
 
   /* Accent */
 
-  --global-color-accent--xxx-light: #faf4ff;
-  --global-color-accent--xx-light: #f1ebfd;
-  --global-color-accent--x-light: #e3d7fd;
-  --global-color-accent--light: #a387ed;
-  --global-color-accent--normal: #784fe8;
-  --global-color-accent--dark: #6039cc;
-  --global-color-accent--x-dark: #3d189b;
-  --global-color-accent--xx-dark: #281066;
-  --global-color-accent--xxx-dark: #1E0C4C;
+  --global-color-accent--xxx-light: #dfeafe;
+  --global-color-accent--xx-light: #caddfe;
+  --global-color-accent--x-light: #AAC7FF;
+  --global-color-accent--light: #86aeff;
+  --global-color-accent--normal: #003399;
+  --global-color-accent--dark: #002266;
+  --global-color-accent--x-dark: #001133;
+  --global-color-accent--xx-dark: #021230;
+  --global-color-accent--xxx-dark: #000a22;
 
   /* DEPRECATED */
-  /* TODO: DO not use these in TUP CMS (Snippet) CSS */
+  /* TODO: Do not use these in TUP CMS (Snippet) CSS */
   --global-color-accent--secondary: var(--global-color-secondary--normal);
   --global-color-accent--tertiary: var(--global-color-tertiary--normal);
 
