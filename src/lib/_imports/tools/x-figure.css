@@ -1,0 +1,22 @@
+/* To add space above and below small text beneath these patterns */
+.x-figure {
+    --buffer-above: 0;
+    --buffer-middle: 1.0rem;
+    --buffer-below: 3.0rem;
+
+    margin-block: var(--buffer-above) var(--buffer-below);
+}
+
+.x-figure-caption {
+    color: var(--global-color-primary--dark);
+
+    line-height: 1.7;
+    font-style: italic;
+    font-size: var(--global-font-size--small);
+
+    margin-top: var(--buffer-middle);
+
+    border-bottom-width: var(--global-border-width--normal);
+    border-bottom-style: solid;
+    border-bottom-color: var(--global-color-primary--normal);
+}
