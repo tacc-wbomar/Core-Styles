@@ -69,8 +69,10 @@ body:has(main > section) {
 }
 
 /* To give equal block spacing to rulers */
-section + hr {
-  --global-space--hr-buffer-above: var(--global-space--hr-buffer-below);
+hr {
+  margin-top: var(--global-space--hr-buffer-above);
+
+  margin-bottom: var(--global-space--hr-buffer-below);
 }
 
 
