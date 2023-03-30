@@ -51,7 +51,7 @@ Styleguide Settings.CustomProperties.Space
     var(--global-space--section-left);
 
   /* CMS Pages */
-  --global-space--hr-buffer-above: 10px;
+  --global-space--hr-buffer-above: 30px;
   --global-space--hr-buffer-below: 30px;
   --global-space--p-buffer-above: 0; /* origin: Bootstrap _reboot.css */
   --global-space--p-buffer-below: 2rem; /* origin: html-elements.cms.css */

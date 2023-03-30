@@ -23,10 +23,6 @@ Reference:
 Styleguide Elements.ContentSectioning
 */
 
-&:is(body > *) {
-  margin-bottom: var(--global-space--section-gap);
-}
-
 /* Headings */
 
 /* SEE: ./headings--cms.css */
@@ -103,8 +99,16 @@ Styleguide Elements.TextContent
 
 & hr {
   margin-top: var(--global-space--hr-buffer-above); /* overwrite Bootstrap */
-  border-top: 1px solid var(--global-color-primary--light);
+
+  border-top-width: var(--global-border-width--normal);
+  border-top-style: solid;
+  border-top-clolor: var(--global-color-primary--dark);
+
   margin-bottom: var(--global-space--hr-buffer-below); /* overwrite Bootstrap */
+
+  /* To fix widthless-ness when <hr> is a grid or flex item */
+  /* https://dev.to/alvaromontoro/the-disappearing-line-a-css-mystery-3e35 */
+  width: 100%;
 }
 
 
