@@ -1,0 +1,42 @@
+@import url("../../objects/o-section.selectors.css");
+@import url("../../components/c-card.selectors.css");
+
+@custom-selector :--light-context
+  .c-recognition--style-light,
+  :--o-section--muted,
+  :--o-section--light,
+  :--c-card--standard,
+  :--c-card--standard-N,
+  :--c-card--plain;
+@custom-selector :--dark-context
+  .c-recognition--style-dark,
+  :--o-section--dark;
+
+@custom-selector :--light-context-safe
+  :where(:--dark-context :--light-context);
+@custom-selector :--dark-context-safe
+  :where(:--dark-context:not(:--light-context *));
+
+:--dark-context-safe {
+  --global-color-accent--xxx-light: #f3f7fe;
+  --global-color-accent--xx-light: #dfeafe;
+  --global-color-accent--x-light: #caddfe;
+  --global-color-accent--light: #AAC7FF;
+  --global-color-accent--normal: #86aeff;
+  --global-color-accent--dark: #003399;
+  --global-color-accent--x-dark: #002266;
+  --global-color-accent--xx-dark: #001133;
+  --global-color-accent--xxx-dark: #021230;
+}
+
+:--light-context-safe {
+  --global-color-accent--xxx-light: #dfeafe;
+  --global-color-accent--xx-light: #caddfe;
+  --global-color-accent--x-light: #AAC7FF;
+  --global-color-accent--light: #86aeff;
+  --global-color-accent--normal: #003399;
+  --global-color-accent--dark: #002266;
+  --global-color-accent--x-dark: #001133;
+  --global-color-accent--xx-dark: #021230;
+  --global-color-accent--xxx-dark: #000a22;
+}

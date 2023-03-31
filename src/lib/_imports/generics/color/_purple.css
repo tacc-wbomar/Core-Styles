@@ -1,12 +1,5 @@
-/*
-Colors (by Context)
-
-Change global colors depending on context.
-
-Styleguide Generics.Colors
-*/
-@import url("../objects/o-section.selectors.css");
-@import url("../components/c-card.selectors.css");
+@import url("../../objects/o-section.selectors.css");
+@import url("../../components/c-card.selectors.css");
 
 @custom-selector :--light-context
   .c-recognition--style-light,

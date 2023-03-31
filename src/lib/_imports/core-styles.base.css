@@ -10,7 +10,6 @@
 /* GENERICS */
 /* Mostly from Bootstrap */
 /* https://confluence.tacc.utexas.edu/x/b53tDg */
-@import url("./generics/color.css");
 @import url('./generics/fonts.css');
 @import url("./generics/pseudo-elements.css");
 
@@ -41,7 +40,6 @@
 @import url("./components/c-island.css");
 @import url("./components/c-nav.css");
 @import url("./components/c-page.css");
-@import url("./components/c-recognition.css");
 @import url("./components/c-see-all-link.css");
 @import url("./components/c-tag.css");
 
