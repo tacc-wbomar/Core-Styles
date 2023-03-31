@@ -8,7 +8,7 @@
 @import url("./settings/demo.css");
 
 /* GENERICS */
-/* (none) */
+@import url("./generics/color--demo.css");
 
 /* ELEMENTS */
 @import url("./elements/root--demo.css");

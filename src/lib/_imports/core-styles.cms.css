@@ -11,6 +11,7 @@
 /* GENERICS */
 /* Mostly from Bootstrap */
 /* https://confluence.tacc.utexas.edu/x/b53tDg */
+@import url("./generics/color--cms.css");
 
 /* ELEMENTS */
 @import url("./elements/root--cms.css");
@@ -34,6 +35,7 @@
 @import url("./components/c-form--cms.css");
 @import url("./components/c-message.css");
 @import url("./components/c-message--expanded.css");
+@import url("./components/c-recognition.css");
 /* TODO: Move to TACC/Core-CMS-Resources:/frontera-cms
         or — alternatively — TACC/Core-CMS */
 @import url("./components/c-card--frontera-about-page.css");
