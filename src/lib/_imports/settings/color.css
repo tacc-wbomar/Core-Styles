@@ -11,6 +11,7 @@
     --(…)dark:  darker value
     --(…)rgb:   "R, G, B" value partial (ex. usage: `rgba(var(--...-rgb), 0.5)`)
 */
+/* SEE: https://huetone.ardov.me/?palette=N4IgdghgtgpiBcIAqBBAwmkAaEALArjAM4IDaoksCIAlmAGYD2AtNiAMaMA2jATifFIgAxAA4ADBIlsxkuTKnycw%2BgBY1amQBMA7Lt0yd4o0ZmrR58zIBMtuwrnTli6QF0AvlgrQ4iLRDAAcxheVhxOHn4yERdxB0V4pRF6dhhVLQAjGRSIegBOAEYZGC1VdgKi5XZrAGYIcRqZPJrrDPEANkSnGMc4jy9wH2oAdwheMDpAsI5uPgEhWQTnXq645XotenEtRvWS0W6VVpadGXYtPJ0C9ia89q2IVaf%2B7ypEInx2VKIiaYi56KLJJAw6xGQZXKiLQ3ZTNejtc4yArieg6CB5GQ1aEwPLWGztA4AVnoT2WCRegzeIBgAA8AC68CB-WZRQQ9Jbs4Fg9Yo%2B4kqrWTL0R7KGr0UTE1Q2QmEjIZSoiAo6VTojFkrkrCmUXwgIgwThgfy8ACezMi805oJW63Y8P1xUJunYaxEWllhJ0MJiOmVhN2IkJBVULVEmJa5X5lpdIL6nleOrpITpNDGprY-1ZC25UeKOnoBS24IKWmucFh1i%2B7EJMnaBQgNTyXuEqg6WgJSJgNS7CpjzzjlJ1EC%2BMDAdLNALZKly6kjKgKMAyG2KWLzWm0svom5k9dEOhKhgs9BgoeU7QajabWIKojyWWU1lEyPanWU8-E7DKIC1Q0QdKH7GYf8RzHdMWQtFQxTzMtXSPXJoOEdgIC0TZ4IgIc81nUR2ggGAt2UcQGgbNURAI2xnxkAiKi7CjrAKWpowI8QIFsL93FcHA6UYMBiGiKAIBpZguBoQJcDpNgaQkwThNE8SBKEkSxJwOTpMUkB5JknAwD4PiuDYI0AGtxOYAzZOMsZDKUySTI8IA */
 
 :root {
 
@@ -75,7 +76,6 @@
 
 
   /* State */
-  /* https://huetone.ardov.me/?palette=N4IgdghgtgpiBcIAqBBAwmkAaEALArjAM4IDaoksCIAlmAGYD2AtNiAMaMA2jATifFIgAxPQAs48W2EATAOzz50uQAZVq6WIAc27dIBMhoyAC6AXywVocRDIhgA5jF6scnHvzIj67GGJkARtI%2BEPQAnACM0jAyYuwRUTjC8WJy%2BirSYRBiEfpyphZWVIgA7hC8YHQOrhzcfAJCojL0MjAQwQCs9ADMYQBs0WEwKiPS7B0B9PpwSVphWn3d%2BgWW4NbURPjsvkRENe71XsIBoVoy7Jnd9H3sMtIRKvRyEGHS3ecwYctJ%2Bn1aWl0VkUbCAYAAPAAuvAg%2BzqnkE3kefXo9GkAX8j1eSSuAKkPw6EwCiREETkYher3MJhwEMYYGIXjBzC4NAcuAhbBZbI5ODAfCgEC4bDsvAA1mwmSLxeYgA */
 
   --global-color-info--x-light: var(--global-color-primary--x-light);
   --global-color-info--light: var(--global-color-primary--light);
