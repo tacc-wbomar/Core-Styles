@@ -52,9 +52,6 @@ Styleguide Trumps.Scopes.Breadcrumbs
 /* To undo default list styles */
 .s-breadcrumbs:is(nav) ol,
 .s-breadcrumbs-via-ul ul {
-  gap: 0.25em;
-  display: flex;
-
   list-style: none; /* overwrite browser styles */
   padding-left: unset; /* undo html-elements.css */
   margin-bottom: unset; /* undo html-elements.css */
