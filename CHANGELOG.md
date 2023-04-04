@@ -7,6 +7,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.6.2] - 2023-01-04: x-figure, x-blockquote, accent is now blue, <hr>, modal
+
+### Added
+
+- feat(tools): x-figure, x-blockquote, (…-caption) (#150) 560a78c
+- feat: change accent color from purple to blue (#149) 66d29a8
+- feat: new <hr> styles from tup-cms ad0b5c3
+- feat: bootstrap modal styles (#147) 675e5d5
+
+### Fixed
+
+- fix(objects): simple distance for offset content d5f01f7
+- fix: no max-width on form fields e068073
+- fix: remove undesired <main> margin (body > *) 8eb7046
+- fix: bootstrap overriding <pre> color e75522b
+
+### Changed
+
+- chore(settings): new URL to colors in better spot 4504116
+
 ## [2.6.1] - 2023-03-21: `core-styles.wysiwyg.css`
 
 ### Fixed
@@ -547,7 +567,8 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.6.1...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.6.2...HEAD
+[2.6.2]: https://github.com/TACC/Core-Styles/releases/tag/v2.6.2
 [2.6.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.6.1
 [2.6.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.6.0
 [2.5.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.5.0
