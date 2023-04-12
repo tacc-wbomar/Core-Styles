@@ -2,11 +2,13 @@
 
 The shared styles for TACC WMA Workspace Portals & Websites
 
+
 ## Known Clients
 
 - [Core CMS], the base CMS code for TACC WMA CMS Websites
 - [Core Portal], the base Portal code for TACC WMA CMS Websites
 - [TUP UI], the client code for TACC User Portal
+
 
 ## Table of Contents
 
