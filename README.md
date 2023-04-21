@@ -13,6 +13,8 @@ The shared styles for TACC WMA Workspace Portals & Websites
 ## Table of Contents
 
 - [External Project Usage](#external-project-usage)
+   - [Load from a Project](#load-from-a-project)
+   - [Install into a Project](#install-into-a-project)
 - [Local Development Setup](#local-development-setup)
 - [Testing](#testing)
 - [Deployment](#deployment)
@@ -21,7 +23,13 @@ The shared styles for TACC WMA Workspace Portals & Websites
 
 ## External Project Usage
 
-### Install This Package
+### Load from a Project
+
+__See [`HOWTO.md`](HOWTO.md).__
+
+### Install into a Project
+
+#### Install This Package
 
 1. Installwith any package manager e.g.:
 
@@ -32,15 +40,15 @@ The shared styles for TACC WMA Workspace Portals & Websites
    - pre-compiled, from `/dist`
    - source files, from `/src/lib/_imports`
 
-### Build from Source
+#### Build from Source
 
-#### Via Your Environment's [PostCSS](https://github.com/postcss/postcss#readme)
+##### Via Your Environment's [PostCSS](https://github.com/postcss/postcss#readme)
 
 Please review [the plugins expected](./src/.postcssrc.base.yml).
 
-#### Via Core-Styles API
+##### Via Core-Styles API
 
-##### JavaScript
+###### JavaScript
 
 <details><summary><code>require('core-styles').buildStylesheets</code></summary>
 
@@ -74,7 +82,7 @@ buildStylesheets(
 
 </details>
 
-##### CLI
+###### CLI
 
 <details><summary><code>core-styles</code></summary>
 
