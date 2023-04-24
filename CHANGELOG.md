@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [0.12.0] - 2023-04-24: Commit Dist (of v0.11.0)
+
+### Added
+
+* feat(dist): commit dist so clients can rely on it (#153)
+
 ## [0.11.0] - 2022-11-14: Table Pattern, Many Demo Fixes, Demo Build Dir Clarity
 
 ### Added
@@ -319,12 +325,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - Fix/Polish: [...] Git Ref/Rev/Version [Script] (85347a1, …, e1c85ae, 9ca6af0)
-
+`
 ## [0.1.0] - 2022-03-11
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v0.11.0...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v0.12.0...HEAD
+[0.12.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.12.0
 [0.11.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.11.0
 [0.10.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.10.0
 [0.9.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.9.0
