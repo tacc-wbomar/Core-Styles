@@ -17,5 +17,6 @@ variants:
     context:
       modifier: style-dark
   - name: docs
+    status: ready
     context:
       shouldLoadDocs: true
