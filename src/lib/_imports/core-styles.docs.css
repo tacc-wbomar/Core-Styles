@@ -22,12 +22,17 @@
 @import url("./elements/table.docs.css");
 
 /* OBJECTS */
-/* (none) */
+@import url("./objects/o-section.css");
+@import url("./objects/o-section--docs.css");
 
 /* COMPONENTS */
 @import url("./components/pymdownx--tabbed.css");
 @import url("./components/admonition.css");
 @import url("./components/align.css");
+@import url("./components/c-card.css");
+/* TODO: Migrate this From TUP-CMS to Core-Styles */
+@import url('https://tacc.utexas.edu/static/tup-cms/css/for-core-styles/components/c-card.css');
+@import url("./components/c-card--docs.css");
 @import url("./components/tacc-docs.css");
 
 /* TRUMPS */
