@@ -1,0 +1,30 @@
+/* To make card paragraphs match those in Core CMS */
+[class*="card--"] p {
+  margin-top: 0; /* mimics Bootstrap _reboot.scss */
+}
+
+
+
+/* To style a linked card */
+a[class*="card--"]:not([class*="card--image"]) {
+  display: block;
+}
+a[class*="card--"],
+a[class*="card--"]:hover /* overwrite core-styles.base.css */ {
+  color: inherit;
+}
+a[class*="card--"]:hover {
+  text-decoration: none;
+}
+a[class*="card--"]:hover :is( h1, h2, h3, h4, h5, h6 ) {
+  /* To mimic TACC/Core-Styles .x-link */
+  text-underline-offset: 0.2em;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: var(--global-border-width--normal);
+}
+a[class*="card--"]:active :is( h1, h2, h3, h4, h5, h6 ) {
+  /* To mimic TACC/Core-Styles .x-link */
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+}
