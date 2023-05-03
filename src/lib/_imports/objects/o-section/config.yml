@@ -16,3 +16,6 @@ variants:
     label: (Style) Dark
     context:
       modifier: style-dark
+  - name: docs
+    context:
+      shouldLoadDocs: true
