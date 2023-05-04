@@ -1,7 +1,7 @@
 {{#if tag}}
-<{{tag}} class="c-message c-message--type-{{ type }} c-message--scope-{{ scope }}">
+<{{tag}} class="c-message {{#if type}}c-message--type-{{ type }}{{/if}} c-message--scope-{{ scope }}">
 {{else}}
-<div class="c-message c-message--type-{{ type }} c-message--scope-{{ scope }}">
+<div class="c-message {{#if type}}c-message--type-{{ type }}{{/if}} c-message--scope-{{ scope }}">
 {{/if}}
 
   {{#unless tag}}<p>{{/unless}}
