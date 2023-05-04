@@ -2,7 +2,9 @@
 
 <article class="c-card c-card--{{this._self.name}}">
   <h3>Card - {{this._self.label}}</h3>
-  <p>Standard card and its explicit variations. <span class="c-message--scope-inline c-message--type-warning">The explicit variations are only if <code>c-card--standard</code> automatic variation fails and cannot be fixed fast enough.</span></p>
+  <p>Standard card and its explicit variations.
+    {{> @message tag="span" type="warning" scope="inline"
+        content="The explicit variations are only if <code>c-card--standard</code> automatic variation fails and cannot be fixed fast enough." }}</p>
   <div class="o-grid o-grid--col-min-width">
     {{> @c-card--one-standard }}
     {{> @c-card--one-standard variant=1 }}
