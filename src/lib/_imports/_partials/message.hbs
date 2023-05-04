@@ -1,0 +1,16 @@
+{{#if tag}}
+<{{tag}} class="c-message c-message--type-{{ type }} c-message--scope-{{ scope }}">
+{{else}}
+<div class="c-message c-message--type-{{ type }} c-message--scope-{{ scope }}">
+{{/if}}
+
+  {{#unless tag}}<p>{{/unless}}
+  {{#if title }}<strong>{{ title }}:</strong>{{/if}}
+  {{{ content }}}{{{ extra_content }}}
+  {{#unless tag}}</p>{{/unless}}
+
+{{#if tag}}
+</{{tag}}>
+{{else}}
+</div>
+{{/if}}
