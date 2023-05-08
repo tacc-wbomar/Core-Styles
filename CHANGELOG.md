@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [0.13.0] - 2023-05-08: Retire env()-based Themes (for Core-CMS v3.9)
+
+### Added
+
+* feat!: retire env()-based themes (Core-CMS v3.9) (#164)
+
 ## [0.12.0] - 2023-04-24: Commit Dist (of v0.11.0)
 
 ### Added
@@ -330,7 +336,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v0.12.0...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v0.13.0...HEAD
+[0.13.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.13.0
 [0.12.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.12.0
 [0.11.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.11.0
 [0.10.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.10.0
