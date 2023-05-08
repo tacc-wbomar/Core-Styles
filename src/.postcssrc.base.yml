@@ -5,11 +5,6 @@ plugins:
 
   postcss-extend: {}
 
-  # https://github.com/TACC/Core-CMS/blob/70a1ca3/conf/css/.postcssrc.yml#L6-L12
-  postcss-env-function:
-    importFrom:
-      - 'src/lib/_themes/default.json'
-
   postcss-preset-env:
     # https://github.com/csstools/postcss-preset-env#features
     stage: false
