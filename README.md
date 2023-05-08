@@ -269,7 +269,7 @@ Only authorized team members may publish.
 1. Replace Github's unannotated tag with an annotated one:\
    `git pull`
    `git tag -d vN.N.N`
-   `git tag -a vN.N.N -m "..."`
+   `git tag -a vN.N.N -m "vN.N.N"`
    `git push --tags --force`
 1. Publish to NPM via `npm publish --access public`.\
    <sup>Project build will automatically occur before publish.</sup>
