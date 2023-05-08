@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.13.0] - 2023-05-08: Retire env()-based Themes (for Core-CMS v3.9)
 
-### Added
+### Changed
 
 * feat!: retire env()-based themes (Core-CMS v3.9) (#164)
 
