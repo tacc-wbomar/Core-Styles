@@ -262,19 +262,20 @@ Only authorized team members may publish.
 1. Update `CHANGELOG.md`.
 1. Update version via:\
    `npm version N.N.N`
-1. Update dist via:\
-   `npm run build:css --build-id=vN.N.N`
-1. Commit, push, PR, review, merge.
+1. Commit, push, open pull request, get approval.\
+   <sup>Do **not** merge yet.</sup>
+1. Publish to NPM via `npm publish --access public`.\
+   <sup>Project build will automatically occur before publish.[^1]</sup>
+1. Commit NPM build output.
+1. Merge pull request.
 1. Create release and tag on GitHub.
 1. Replace Github's unannotated tag with an annotated one:\
    `git pull`
    `git tag -d vN.N.N`
    `git tag -a vN.N.N -m "vN.N.N"`
    `git push --tags --force`
-1. Publish to NPM via `npm publish --access public`.\
-   <sup>Project build will automatically occur before publish.</sup>
-1. Commit NPM build output as:\
-   `chore: save npm publish build`
+
+[^1]: **Help**: How to set build ID arg on build command during publish auto-build?
 
 ### Resources
 

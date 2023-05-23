@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.8.0] - 2023-05-23: Retire env()-based Themes (for Core-CMS v3.10)
+
+### Fixed
+
+- fix(CHANGELOG): add missing backticks for code (d9f60f7)
+
+### Changed
+
+- chore: retire env()-based themes (Core-CMS v3.10) (#163)
+- docs(CHANGELOG): add missing bullets (e764b5c)
+- docs(elements): point to new responsive table solution (903eb7b)
+- docs: do not guess tag annotation during release (0a8bf6e)
+
 ## [2.7.0] - 2023-05-04: Add `c-card--docs` `o-section--docs` `@message` & v0.12
 
 ### Added
@@ -598,7 +611,8 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.7.0...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.8.0...HEAD
+[2.8.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.8.0
 [2.7.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.7.0
 [2.6.2]: https://github.com/TACC/Core-Styles/releases/tag/v2.6.2
 [2.6.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.6.1
