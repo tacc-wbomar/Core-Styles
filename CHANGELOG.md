@@ -24,7 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- chore: remove unnecessary font-size for <main> (6163f17)
+- chore: remove unnecessary font-size for `<main>` (6163f17)
 
 ## [2.6.2] - 2023-01-04: x-figure, x-blockquote, accent is now blue, `<hr>`, modal
 
