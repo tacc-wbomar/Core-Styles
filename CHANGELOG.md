@@ -11,20 +11,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-feat: c-card--docs, o-section--docs, tup-cms c-card (#159) (0bf08e2)
-docs: create and use message partial (#161) (1b5f959)
-feat: use css "project" layer for client context styles (#160) (23af16b)
-docs(CHANGELOG): v0.12.0 (7880572)
+- feat: c-card--docs, o-section--docs, tup-cms c-card (#159) (0bf08e2)
+- docs: create and use message partial (#161) (1b5f959)
+- feat: use css "project" layer for client context styles (#160) (23af16b)
+- docs(CHANGELOG): v0.12.0 (7880572)
 
 ### Fixed
 
-chore: missing commit of core-styles.docs (be61fe1)
-chore: missing commit of dist html elements (ce7a9f7)
-docs(README): add tacc docs client (4558ee8)
+- chore: missing commit of core-styles.docs (be61fe1)
+- chore: missing commit of dist html elements (ce7a9f7)
+- docs(README): add tacc docs client (4558ee8)
 
 ### Changed
 
-chore: remove unnecessary font-size for <main> (6163f17)
+- chore: remove unnecessary font-size for <main> (6163f17)
 
 ## [2.6.2] - 2023-01-04: x-figure, x-blockquote, accent is now blue, `<hr>`, modal
 
