@@ -9,16 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [2.8.0] - 2023-05-23: Retire env()-based Themes (for Core-CMS v3.10)
 
-### Added
-
-- chore: retire env()-based themes (Core-CMS v3.10) (#163)
-
 ### Fixed
 
 - fix(CHANGELOG): add missing backticks for code (d9f60f7)
 
 ### Changed
 
+- chore: retire env()-based themes (Core-CMS v3.10) (#163)
 - docs(CHANGELOG): add missing bullets (e764b5c)
 - docs(elements): point to new responsive table solution (903eb7b)
 - docs: do not guess tag annotation during release (0a8bf6e)
