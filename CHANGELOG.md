@@ -269,6 +269,12 @@ See [2.5.0] instead.
 - **fix(demo)!: font path change in dist (#73)**
 - fix(fonts): fp-1891 add regular italic, also add black (#71, #72)
 
+## [0.13.0] - 2023-05-08: Retire env()-based Themes (for Core-CMS v3.9)
+
+### Changed
+
+* feat!: retire env()-based themes (Core-CMS v3.9) (#164)
+
 ## [0.12.0] - 2023-04-24: Commit Dist (of v0.11.0)
 
 ### Added
@@ -608,6 +614,7 @@ Initial working code. (This code may not work on all environments.)
 [2.0.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.0.1
 [2.0.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.0.0
 [1.0.0]: https://github.com/TACC/Core-Styles/releases/tag/v1.0.0
+[0.13.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.13.0
 [0.12.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.12.0
 [0.11.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.11.0
 [0.10.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.10.0
