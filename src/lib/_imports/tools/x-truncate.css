@@ -14,8 +14,8 @@ Styleguide Tools.ExtendsAndMixins.Truncate
 /* Many Lines */
 /* WARNING: Relies on proprietary and undocumented rules (that work well) */
 
-.x-truncate--many-lines, /* DEPRECATED */
-%x-truncate--many-lines {
+.x-truncate--many-lines,
+%x-truncate--many-lines /* DEPRECATED */ {
   --lines: 2;
 
   display: -webkit-box;
@@ -24,23 +24,23 @@ Styleguide Tools.ExtendsAndMixins.Truncate
   overflow: hidden;
   -webkit-line-clamp: var(--lines);
 }
-.x-untruncate--many-lines, /* DEPRECATED */
-%x-untruncate--many-lines {
+.x-untruncate--many-lines,
+%x-untruncate--many-lines /* DEPRECATED */ {
   overflow: visible;
   -webkit-line-clamp: inherit;
 }
 
 /* One Line */
 
-.x-truncate--one-line, /* DEPRECATED */
-%x-truncate--one-line {
+.x-truncate--one-line
+%x-truncate--one-line, /* DEPRECATED */ {
 	text-overflow: var(--text-overflow, ellipsis);
 
 	overflow: hidden;
 	white-space: nowrap;
 }
-.x-untruncate--one-line, /* DEPRECATED */
-%x-untruncate--one-line {
+.x-untruncate--one-line
+%x-untruncate--one-line, /* DEPRECATED */ {
   overflow: visible;
 	white-space: normal;
 }
