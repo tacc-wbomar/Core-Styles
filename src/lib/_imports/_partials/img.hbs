@@ -1,5 +1,11 @@
 <img
   {{#if class}}class="{{ class }}"{{/if}}
+  {{#if use-image-wide}}
+  src="https://cep.tacc.utexas.edu/media/filer_public/fb/3f/fb3fd4c3-6360-4759-b607-f393b84558c0/spectrum-wide-320px.png"
+  {{else if use-image-tall}}
+  src="https://cep.tacc.utexas.edu/media/filer_public/c9/eb/c9ebd744-14d3-43ed-bc2e-86ed96eeef8a/spectrum-tall-320px.png"
+  {{else}}
   src="https://cep.tacc.utexas.edu/media/filer_public/69/85/698569d0-641f-4289-94c2-664389d626e8/spectrum-square-240px.png"
+  {{/if}}
   alt="(sample image)"
 />
