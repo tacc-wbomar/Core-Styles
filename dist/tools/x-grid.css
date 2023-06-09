@@ -1,1 +1,1 @@
-/*! @tacc/core-styles 2.8.0+ | MIT | github.com/TACC/Core-Styles */
+/*! @tacc/core-styles 2.8.0+ | MIT | github.com/TACC/Core-Styles */.x-grid--layout-cols-equal-set-count{grid-template-columns:repeat(var(--count),auto)}.x-grid--layout-cols-equal-min-width{grid-template-columns:repeat(auto-fit,minmax(var(--width),1fr))}.x-grid--layout-rows-equal-max-height{grid-auto-rows:1fr}.x-grid--layout-rows-equal-set-height{grid-auto-rows:var(--height)}.x-grid--content-align-center{align-items:center;justify-items:center}
