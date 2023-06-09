@@ -13,6 +13,7 @@ Reference:
 %x-grid--layout-rows-equal-set-height - Same height rows, default var. height (custom properties: `--height`)
 %x-grid--layout-cols-equal-set-count  - Same width columns, auto. column count (custom properties: `--count`)
 %x-grid--layout-cols-equal-min-width  - Same width columns, default min. width (custom properties: `--width`)
+%x-grid--layout-cols-equal-min-width-max-count  - Same width columns, default min. width, max. column count (custom properties: `--width`, `--count`, `--gap`)
 %x-grid--content-align-center         - Align content vert.ly and horz.ly center
 
 Styleguide Tools.ExtendsAndMixins.Grid
@@ -53,6 +54,28 @@ Styleguide Tools.ExtendsAndMixins.Grid
 }
 */
 
+/* Layout: Columns: Same Width, Preset Col. Count, Preset Min. Width */
+/* https://css-tricks.com/an-auto-filling-css-grid-with-max-columns/ */
+/* TODO: Replace `x-grid--layout-cols-equal-min-width` with this */
+
+.x-grid--layout-cols-equal-min-width-max-count {
+  /* --gap */
+  /* --count */
+  /* --width */
+
+  /* renames */
+  --max-cols: var(--count);
+  --min-width: var(--width);
+
+  /* calculated */
+  --gap-count: calc(var(--max-cols) - 1);
+  --total-gap-width: calc(var(--gap-count) * var(--gap));
+  --max-width: calc((100% - var(--total-gap-width)) / var(--max-cols));
+
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(auto-fill, minmax(max(var(--min-width), var(--max-width)), 1fr));
+}
 
 
 /* Layout: Rows */
