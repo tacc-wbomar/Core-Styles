@@ -30,8 +30,7 @@ Styleguide Tools.ExtendsAndMixins.Grid
 
 /* Layout: Columns: Same Width, Preset Col. Count */
 
-%x-grid--layout-cols-equal-set-count, /* DEPRECATED */
-.x-grid--layout-cols-equal-set-count {
+%x-grid--layout-cols-equal-set-count {
   /* --count */
 
   grid-template-columns: repeat(var(--count), auto);
@@ -39,8 +38,7 @@ Styleguide Tools.ExtendsAndMixins.Grid
 
 /* Layout: Columns: Same Width, Preset Min. Width */
 
-%x-grid--layout-cols-equal-min-width, /* DEPRECATED */
-.x-grid--layout-cols-equal-min-width {
+%x-grid--layout-cols-equal-min-width {
   /* --width */
 
   grid-template-columns: repeat(auto-fit, minmax(var(--width), 1fr));
@@ -59,15 +57,13 @@ Styleguide Tools.ExtendsAndMixins.Grid
 
 /* Layout: Rows: Same Height (equal to height of tallest content in grid) */
 
-%x-grid--layout-rows-equal-max-height, /* DEPRECATED */
-.x-grid--layout-rows-equal-max-height {
+%x-grid--layout-rows-equal-max-height {
   grid-auto-rows: 1fr;
 }
 
 /* Layout: Rows: Same Height (equal to default, variable value) */
 
-%x-grid--layout-rows-equal-set-height, /* DEPRECATED */
-.x-grid--layout-rows-equal-set-height {
+%x-grid--layout-rows-equal-set-height {
   /* --height */
 
   grid-auto-rows: var(--height);
@@ -83,8 +79,7 @@ Styleguide Tools.ExtendsAndMixins.Grid
 
 /* Content: Align Vert/Horz Center */
 
-%x-grid--content-align-center, /* DEPRECATED */
-.x-grid--content-align-center {
+%x-grid--content-align-center {
   justify-items: center;
   align-items: center;
 }
@@ -104,7 +99,7 @@ Styleguide Tools.ExtendsAndMixins.Grid
 }
 
 .user-block--modifier {
-  @extend .x-grid--...;
+  @extend %x-grid--...;
 }
 
 \/* Hide content that does exceed cell size *\/
