@@ -48,8 +48,8 @@ Styleguide Tools.ExtendsAndMixins.Grid
 /* Suggestion for User: Prevent content overflow */
 /*
 .x-grid--layout-cols-equal-min-width > * {
-  max-width: 100%; \/* used if cell width is smaller than content *\/
-  max-height: 100%; \/* used if cell height is smaller than content *\/
+  max-width: 100%; \/* effectual if cell width is smaller than content *\/
+  max-height: 100%; \/* effectual if cell height is smaller than content *\/
 }
 */
 

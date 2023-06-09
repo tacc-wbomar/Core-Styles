@@ -89,8 +89,8 @@ Styleguide Objects.Grid
 /* Prevent content overflow */
 /* FAQ: Excluding `img` because `.o-grid img` already sets this for images */
 .o-grid--col-min-width > *:not(img) {
-  max-width: 100%; /* used if cell width is smaller than content */
-  max-height: 100%; /* used if cell height is smaller than content */
+  max-width: 100%; /* effectual if cell width is smaller than content */
+  max-height: 100%; /* effectual if cell height is smaller than content */
 }
 
 
