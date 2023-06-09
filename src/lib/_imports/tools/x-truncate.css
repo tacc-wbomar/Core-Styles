@@ -32,15 +32,15 @@ Styleguide Tools.ExtendsAndMixins.Truncate
 
 /* One Line */
 
-.x-truncate--one-line
-%x-truncate--one-line, /* DEPRECATED */ {
+.x-truncate--one-line,
+%x-truncate--one-line /* DEPRECATED */ {
 	text-overflow: var(--text-overflow, ellipsis);
 
 	overflow: hidden;
 	white-space: nowrap;
 }
-.x-untruncate--one-line
-%x-untruncate--one-line, /* DEPRECATED */ {
+.x-untruncate--one-line,
+%x-untruncate--one-line /* DEPRECATED */ {
   overflow: visible;
 	white-space: normal;
 }
