@@ -108,9 +108,9 @@ Styleguide Objects.Grid
 .o-grid--image-fill > * {
   min-height: 0; /* to prevent image overflowing grid cell */
 }
-.o-grid--image-fill > :is(a, figure):not(img) {
-  width: 100%;
-  height: 100%;
+.o-grid--image-fill > :is(a, figure) {
+  align-self: stretch;
+  justify-self: stretch;
 }
 .o-grid--image-fill > img,
 .o-grid--image-fill > figure > img,
