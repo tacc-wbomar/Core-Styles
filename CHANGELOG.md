@@ -7,6 +7,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.9.0] - 2023-06-12: `s-image-grid`, 2 New Global Vars, Deprecate Some %
+
+### Added
+
+- feat: s-image-grid (#169)
+- feat(partials): add img-url, have img use it (#171)
+- feat(_partials): img options to load all sizes (#170)
+- feat: add global variables (from c-card) (053756f)
+- feat: deprecate %x-grid, add .x-grid (3e4d056)
+
+### Changed
+
+- docs: grid min-width columns comments improved (10806c4)
+
+### Fixed
+
+- fix(partials): remove whitespace from img-url (6017deb)
+- fix: o-grid--image-fill cleanup (0a47730)
+
+### Deprecated
+
+- chore(src): deprecate % selector in x-truncate (eeaf115) (5b934b1)
+
+### Security
+
+- chore(deps): bump socket.io-parser from 4.2.1 to 4.2.3 (#168)
+
 ## [2.8.0] - 2023-05-23: Retire env()-based Themes (for Core-CMS v3.10)
 
 ### Fixed
@@ -611,7 +638,8 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.8.0...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.9.0...HEAD
+[2.9.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.9.0
 [2.8.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.8.0
 [2.7.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.7.0
 [2.6.2]: https://github.com/TACC/Core-Styles/releases/tag/v2.6.2
