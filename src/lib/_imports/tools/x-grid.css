@@ -13,6 +13,7 @@ Reference:
 %x-grid--layout-rows-equal-set-height - Same height rows, default var. height (custom properties: `--height`)
 %x-grid--layout-cols-equal-set-count  - Same width columns, auto. column count (custom properties: `--count`)
 %x-grid--layout-cols-equal-min-width  - Same width columns, default min. width (custom properties: `--width`)
+%x-grid--layout-cols-equal-min-width-max-count  - Same width columns, default min. width, max. column count (custom properties: `--min-width`, `--max-cols`, `--row-height`, `--gap`)
 %x-grid--content-align-center         - Align content vert.ly and horz.ly center
 
 Styleguide Tools.ExtendsAndMixins.Grid
@@ -45,9 +46,40 @@ Styleguide Tools.ExtendsAndMixins.Grid
 
   grid-template-columns: repeat(auto-fit, minmax(var(--width), 1fr));
 }
-/* Suggestion for User: Prevent content overflow */
+/* Suggestion for User: Avoid content overflow */
 /*
 .x-grid--layout-cols-equal-min-width > * {
+  max-width: 100%; \/* effectual if cell width is smaller than content *\/
+  max-height: 100%; \/* effectual if cell height is smaller than content *\/
+}
+*/
+
+/* Layout: Columns: Same Width, Preset Col. Count, Preset Min. Width */
+/* https://css-tricks.com/an-auto-filling-css-grid-with-max-columns/ */
+/* TODO: Replace `x-grid--layout-cols-equal-min-width` with this */
+
+.x-grid--layout-cols-equal-min-width-max-count {
+  /* input */
+  --gap: var(--global-space--grid-gap);
+  --max-cols: 7;
+  --min-width: 250px;
+  --row-height: auto;
+    /* auto (row height match tallest content in only that row) */
+    /* 1fr (row height match tallest content of entire grid) */
+
+  /* calculated */
+  --gap-count: calc(var(--max-cols) - 1);
+  --total-gap-width: calc(var(--gap-count) * var(--gap));
+  --max-width: calc( ( 100% - var(--total-gap-width) ) / var(--max-cols));
+
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(auto-fill, minmax(max(var(--min-width), var(--max-width)), 1fr));
+  grid-auto-rows: var(--row-height);
+}
+/* Suggestion for User: Avoid content overflow */
+/*
+.x-grid--layout-cols-equal-min-width-max-count > * {
   max-width: 100%; \/* effectual if cell width is smaller than content *\/
   max-height: 100%; \/* effectual if cell height is smaller than content *\/
 }
@@ -107,14 +139,9 @@ Styleguide Tools.ExtendsAndMixins.Grid
   @extend .x-grid--...;
 }
 
-\/* Hide content that does exceed cell size *\/
-.user-block > * {
-  overflow: hidden;
-}
-
-\/* Avoid leting image size exceed cell size *\/
+\/* Avoid leting content size (e.g. image) exceed cell size *\/
 \/* FAQ: An intentionally loose limitation (so user can choose to ignore it) *\/
-.user-block img {
+.user-block * {
   max-height: 100%;
   max-width: 100%;
 }
