@@ -1,6 +1,6 @@
 <dl>
   <dt>
-    Links are Automatic<br />
+    If Links are Automatic<br />
     <small>(
       images use full-size urls,
       link <code>href</code> matches image </code>src</code>
@@ -23,13 +23,25 @@
       <a href="{{> @img-url large=true wide=true }}" target="_blank">
         {{> @img large=true wide=true }}
       </a>
+      <a href="{{> @img-url large=true }}" target="_blank">
+        {{> @img large=true }}
+      </a>
+      <a href="{{> @img-url large=true wide=true }}" target="_blank">
+        {{> @img large=true wide=true }}
+      </a>
+      <a href="{{> @img-url large=true }}" target="_blank">
+        {{> @img large=true }}
+      </a>
+      <a href="{{> @img-url large=true wide=true }}" target="_blank">
+        {{> @img large=true wide=true }}
+      </a>
       <a href="{{> @img-url large=true tall=true }}" target="_blank">
         {{> @img large=true tall=true }}
       </a>
     </div>
   </dd>
   <dt>
-    Links are Manual<br />
+    If Links are Manual<br />
     <small>(
       images use thumbnail urls,
       link <code>href</code> is to full-size image
@@ -52,35 +64,11 @@
       <a href="{{> @img-url large=true wide=true }}" target="_blank">
         {{> @img wide=true }}
       </a>
-      <a href="{{> @img-url large=true tall=true }}" target="_blank">
-        {{> @img tall=true }}
-      </a>
       <a href="{{> @img-url large=true }}" target="_blank">
         {{> @img }}
       </a>
       <a href="{{> @img-url large=true wide=true }}" target="_blank">
         {{> @img wide=true }}
-      </a>
-      <a href="{{> @img-url large=true tall=true }}" target="_blank">
-        {{> @img tall=true }}
-      </a>
-      <a href="{{> @img-url large=true }}" target="_blank">
-        {{> @img }}
-      </a>
-      <a href="{{> @img-url large=true wide=true }}" target="_blank">
-        {{> @img wide=true }}
-      </a>
-      <a href="{{> @img-url large=true tall=true }}" target="_blank">
-        {{> @img tall=true }}
-      </a>
-      <a href="{{> @img-url large=true }}" target="_blank">
-        {{> @img }}
-      </a>
-      <a href="{{> @img-url large=true wide=true }}" target="_blank">
-        {{> @img wide=true }}
-      </a>
-      <a href="{{> @img-url large=true tall=true }}" target="_blank">
-        {{> @img tall=true }}
       </a>
       <a href="{{> @img-url large=true }}" target="_blank">
         {{> @img }}
@@ -92,5 +80,66 @@
         {{> @img tall=true }}
       </a>
     </div>
+  </dd>
+  <dt>
+    If Gallery is a List<br />
+    <small>(
+      images use thumbnail urls,
+      link <code>href</code> is to full-size image
+    )</small>
+  </dt>
+  <dd>
+    <ul class="s-image-grid s-image-grid--links-are-manual">
+      <li>
+        <a href="{{> @img-url large=true }}" target="_blank">
+          {{> @img }}
+        </a>
+      </li>
+      <li>
+        <a href="{{> @img-url large=true wide=true }}" target="_blank">
+          {{> @img wide=true }}
+        </a>
+      </li>
+      <li>
+        <a href="{{> @img-url large=true tall=true }}" target="_blank">
+          {{> @img tall=true }}
+        </a>
+      </li>
+      <li>
+        <a href="{{> @img-url large=true }}" target="_blank">
+          {{> @img }}
+        </a>
+      </li>
+      <li>
+        <a href="{{> @img-url large=true wide=true }}" target="_blank">
+          {{> @img large=true wide=true }}
+        </a>
+      </li>
+      <li>
+        <a href="{{> @img-url large=true }}" target="_blank">
+          {{> @img }}
+        </a>
+      </li>
+      <li>
+        <a href="{{> @img-url large=true wide=true }}" target="_blank">
+          {{> @img wide=true }}
+        </a>
+      </li>
+      <li>
+        <a href="{{> @img-url large=true }}" target="_blank">
+          {{> @img }}
+        </a>
+      </li>
+      <li>
+        <a href="{{> @img-url large=true wide=true }}" target="_blank">
+          {{> @img wide=true }}
+        </a>
+      </li>
+      <li>
+        <a href="{{> @img-url large=true tall=true }}" target="_blank">
+          {{> @img tall=true }}
+        </a>
+      </li>
+    </ul>
   </dd>
 </dl>
