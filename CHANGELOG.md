@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- feat: s-image-grid (#169)
+- feat: s-image-grid (#169) (2beb2ea)
 - feat(partials): add img-url, have img use it (#171)
 - feat(_partials): img options to load all sizes (#170)
 - feat: add global variables (from c-card) (053756f)
