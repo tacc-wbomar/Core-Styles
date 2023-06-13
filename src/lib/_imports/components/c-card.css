@@ -11,10 +11,8 @@
 /* Settings */
 
 :root {
-    --global-space--bootstrap-gap: 30px;
     --global-space--pattern-pad: 30px;
     --global-space--unnamed: 50px;
-    --global-border-width--xx-thick: 5px;
 }
 
 
