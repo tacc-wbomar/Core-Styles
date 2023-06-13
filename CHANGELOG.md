@@ -7,6 +7,67 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+...
+
+## [2.9.0] - 2023-06-12: `s-image-grid`, 2 New Global Vars, Deprecate Some %
+
+### Added
+
+- feat: s-image-grid (#169) (2beb2ea)
+- feat(partials): add img-url, have img use it (#171)
+- feat(_partials): img options to load all sizes (#170)
+- feat: add global variables (from c-card) (053756f)
+- feat: deprecate %x-grid, add .x-grid (3e4d056)
+
+### Changed
+
+- docs: grid min-width columns comments improved (10806c4)
+
+### Fixed
+
+- fix(partials): remove whitespace from img-url (6017deb)
+- fix: o-grid--image-fill cleanup (0a47730)
+
+### Deprecated
+
+- chore(src): deprecate % selector in x-truncate (eeaf115) (5b934b1)
+
+### Security
+
+- chore(deps): bump socket.io-parser from 4.2.1 to 4.2.3 (#168)
+
+## [2.8.0] - 2023-05-23: Retire env()-based Themes (for Core-CMS v3.10)
+
+### Fixed
+
+- fix(CHANGELOG): add missing backticks for code (d9f60f7)
+
+### Changed
+
+- chore: retire env()-based themes (Core-CMS v3.10) (#163)
+- docs(CHANGELOG): add missing bullets (e764b5c)
+- docs(elements): point to new responsive table solution (903eb7b)
+- docs: do not guess tag annotation during release (0a8bf6e)
+
+## [2.7.0] - 2023-05-04: Add `c-card--docs` `o-section--docs` `@message` & v0.12
+
+### Added
+
+- feat: c-card--docs, o-section--docs, tup-cms c-card (#159) (0bf08e2)
+- docs: create and use message partial (#161) (1b5f959)
+- feat: use css "project" layer for client context styles (#160) (23af16b)
+- docs(CHANGELOG): v0.12.0 (7880572)
+
+### Fixed
+
+- chore: missing commit of core-styles.docs (be61fe1)
+- chore: missing commit of dist html elements (ce7a9f7)
+- docs(README): add tacc docs client (4558ee8)
+
+### Changed
+
+- chore: remove unnecessary font-size for `<main>` (6163f17)
+
 ## [2.6.2] - 2023-01-04: x-figure, x-blockquote, accent is now blue, `<hr>`, modal
 
 ### Added
@@ -249,6 +310,12 @@ See [2.5.0] instead.
 - fix(fonts)!: support font load on demo (#74)
 - **fix(demo)!: font path change in dist (#73)**
 - fix(fonts): fp-1891 add regular italic, also add black (#71, #72)
+
+## [0.13.0] - 2023-05-08: Retire env()-based Themes (for Core-CMS v3.9)
+
+### Changed
+
+* feat!: retire env()-based themes (Core-CMS v3.9) (#164)
 
 ## [0.12.0] - 2023-04-24: Commit Dist (of v0.11.0)
 
@@ -573,7 +640,10 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.6.2...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.9.0...HEAD
+[2.9.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.9.0
+[2.8.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.8.0
+[2.7.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.7.0
 [2.6.2]: https://github.com/TACC/Core-Styles/releases/tag/v2.6.2
 [2.6.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.6.1
 [2.6.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.6.0
@@ -588,6 +658,7 @@ Initial working code. (This code may not work on all environments.)
 [2.0.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.0.1
 [2.0.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.0.0
 [1.0.0]: https://github.com/TACC/Core-Styles/releases/tag/v1.0.0
+[0.13.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.13.0
 [0.12.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.12.0
 [0.11.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.11.0
 [0.10.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.10.0
