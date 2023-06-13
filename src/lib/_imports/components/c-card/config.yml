@@ -14,6 +14,12 @@ variants:
     status: backup
   # - name: image
   #   status: prototype
+  - name: docs
+    status: ready
+    context:
+      shouldLoadDocs: true
+      supportStyles:
+        - ../../assets/objects/o-grid.css
   - name: frontera
     status: deprecated
     📝 name: using "frontera-about-page" breaks the demo

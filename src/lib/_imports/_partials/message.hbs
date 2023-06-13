@@ -1,0 +1,16 @@
+<{{#if tag}}{{ tag }}{{else}}div{{/if}}
+  class="
+    c-message
+    {{#if type}}c-message--type-{{ type }}{{/if}}
+    {{#if scope}}c-message--scope-{{ scope }}{{/if}}
+    {{#unless scope}}c-message--scope-global{{/unless}}
+  "
+>
+
+  {{#unless tag}}<p>{{/unless}}
+  {{#if title }}<strong>{{ title }}:</strong>{{/if}}
+  {{{ content }}}
+  {{{ extra_content }}}
+  {{#unless tag}}</p>{{/unless}}
+
+</{{#if tag}}{{ tag }}{{else}}div{{/if}}>
