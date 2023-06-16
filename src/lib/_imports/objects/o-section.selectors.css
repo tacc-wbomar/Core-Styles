@@ -21,3 +21,9 @@
 @custom-selector :--o-section--border
     .o-section--has-border,
     .section--border;
+@custom-selector :--o-section__banner-image
+    .o-section__banner-image,
+    .section__banner-image;
+@custom-selector :--o-section__banner-overlay
+    .o-section__banner-overlay,
+    .section__banner-overlay;
