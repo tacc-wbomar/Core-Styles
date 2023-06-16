@@ -9,6 +9,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ...
 
+## [2.9.1] - 2023-06-16: Fix `section__banner-…`, Update Dependencies
+
+### Fixed
+
+- fix: missing :--o-section__banner-… selectors (015d3cc)
+
+### Security
+
+- build(deps): bump http-cache-semantics from 4.1.0 to 4.1.1 (#155)
+- build(deps): bump nunjucks from 3.2.3 to 3.2.4 (#156)
+- build(deps): bump qs and browser-sync (#157)
+- build(deps): bump ua-parser-js and browser-sync (#158)
+
 ## [2.9.0] - 2023-06-12: `s-image-grid`, 2 New Global Vars, Deprecate Some %
 
 ### Added
@@ -640,7 +653,8 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.9.0...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.9.1...HEAD
+[2.9.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.9.1
 [2.9.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.9.0
 [2.8.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.8.0
 [2.7.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.7.0
