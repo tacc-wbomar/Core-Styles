@@ -272,7 +272,7 @@ Only authorized team members may publish.
 1. Replace Github's unannotated tag with an annotated one:\
    `git pull`
    `git tag -d vN.N.N`
-   `git tag -a vN.N.N -m "vN.N.N"`
+   `git tag -a vN.N.N -m "____: vN.N.N"`
    `git push --tags --force`
 
 [^1]: **Help**: How to set build ID arg on build command during publish auto-build?
