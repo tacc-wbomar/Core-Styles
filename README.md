@@ -257,23 +257,23 @@ Sign your commits ([see this link](https://help.github.com/en/github/authenticat
 Only authorized team members may publish.
 
 1. (one time) Login to npm via:\
-   `npm login`
+    `npm login`
 1. Create new branch for version bump.
 1. Update `CHANGELOG.md`.
 1. Update version via:\
-   `npm version N.N.N`
+    `npm version N.N.N`
 1. Commit, push, open pull request, get approval.\
-   <sup>Do **not** merge yet.</sup>
+    <sup>Do **not** merge yet.</sup>
 1. Publish to NPM via `npm publish --access public`.\
-   <sup>Project build will automatically occur before publish.[^1]</sup>
+    <sup>Project build will automatically occur before publish.[^1]</sup>
 1. Commit NPM build output.
 1. Merge pull request.
 1. Create release and tag on GitHub.
 1. Replace Github's unannotated tag with an annotated one:\
-   `git pull`
-   `git tag -d vN.N.N`
-   `git tag -a vN.N.N -m "____: vN.N.N"`
-   `git push --tags --force`
+    - `git pull`
+    - `git tag -d vN.N.N`
+    - `git tag -a vN.N.N -m "____: vN.N.N"`
+    - `git push --tags --force`
 
 [^1]: **Help**: How to set build ID arg on build command during publish auto-build?
 
