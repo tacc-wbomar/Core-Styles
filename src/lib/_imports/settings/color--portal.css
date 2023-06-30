@@ -1,21 +1,14 @@
+/* Load accent colors without scope */
+@import url("../settings/color.accent--purple.css");
+
+/* Set scope for accent colors */
+/* Override accent colors from base */
+@custom-selector :--light-context-safe
+  :root;
+
+/* Override other colors from base */
+/* FAQ: Updating portal colors was delayed (to reduce complexity of TUP redesign) */
 :root {
-  --global-color-info--x-light: var(--global-color-primary--x-light);
-  --global-color-info--light: var(--global-color-primary--light);
-  --global-color-info--normal: var(--global-color-primary--normal);
-  --global-color-info--dark: var(--global-color-primary--x-dark);
-  --global-color-info--x-dark: var(--global-color-primary--xx-dark);
-
-  --global-color-accent--xxx-light: #faf4ff;
-  --global-color-accent--xx-light: #f1ebfd;
-  --global-color-accent--x-light: #e3d7fd;
-  --global-color-accent--light: #a387ed;
-  --global-color-accent--normal: #784fe8;
-  --global-color-accent--dark: #6039cc;
-  --global-color-accent--x-dark: #3d189b;
-  --global-color-accent--xx-dark: #281066;
-  --global-color-accent--xxx-dark: #1E0C4C;
-
-  /* DEPRECATED */
   /* TODO: Update clients to use --global-color-accent--xx-light instead */
   --global-color-accent--alt: #d2cce7;
   /* TODO: Update clients to use --global-color-accent--x-light instead */
