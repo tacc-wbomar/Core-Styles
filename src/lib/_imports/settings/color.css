@@ -80,38 +80,43 @@
   --global-color-info--x-light: var(--global-color-primary--x-light);
   --global-color-info--light: var(--global-color-primary--light);
   --global-color-info--normal: var(--global-color-primary--dark);
+    --global-color-info--normal-rgb: var(--global-color-primary--dark-rgb);
   --global-color-info--dark: var(--global-color-primary--x-dark);
   --global-color-info--x-dark: var(--global-color-primary--xx-dark);
 
   --global-color-danger--x-light: #fce4db; /* from designer */
   --global-color-danger--light: #fcaf91;
   --global-color-danger--normal: #ed4c11; /* from designer */
+    --global-color-danger--normal-rgb: 237, 76, 17;
   --global-color-danger--dark: #c23a03;
   --global-color-danger--x-dark: #932b06;
 
   --global-color-warning--x-light: #FDF0D3; /* from designer */
   --global-color-warning--light: #fed880;
   --global-color-warning--normal: #F2B327; /* from designer */
+    --global-color-warning--normal-rgb: 242, 179, 39;
   --global-color-warning--dark: #cd971c;
   --global-color-warning--x-dark: #996f0a;
 
   --global-color-success--x-light: #baf8dc; /* from designer */
   --global-color-success--light: #93f6cd;
   --global-color-success--normal: #10f7a9; /* from designer */
+    --global-color-success--normal-rgb: 16, 247, 169;
   --global-color-success--dark: #3dce92;
   --global-color-success--x-dark: #26885f;
 
   --global-color-extra--x-light: #f0f6ff; /* from designer */
   --global-color-extra--light: #b4d0f9;
   --global-color-extra--normal: #3f85f4; /* from designer */
+    --global-color-extra--normal-rgb: 63, 133, 244;
   --global-color-extra--dark: #255bb1;
   --global-color-extra--x-dark: #174a99;
 
-  --global-color-info--weak: rgba( var(--global-color-info--normal), 0.125 );
-  --global-color-danger--weak: rgba( var(--global-color-danger--normal), 0.125 );
-  --global-color-warning--weak: rgba( var(--global-color-warning--normal), 0.125 );
-  --global-color-success--weak: rgba( var(--global-color-success--normal), 0.125 );
-  --global-color-extra--weak: rgba( var(--global-color-extra--normal), 0.125 );
+  --global-color-info--weak: rgba( var(--global-color-info--normal-rgb), 0.125 );
+  --global-color-danger--weak: rgba( var(--global-color-danger--normal-rgb), 0.125 );
+  --global-color-warning--weak: rgba( var(--global-color-warning--normal-rgb), 0.125 );
+  --global-color-success--weak: rgba( var(--global-color-success--normal-rgb), 0.125 );
+  --global-color-extra--weak: rgba( var(--global-color-extra--normal-rgb), 0.125 );
 
 
   /* Generic */
