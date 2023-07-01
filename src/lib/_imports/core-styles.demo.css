@@ -6,9 +6,10 @@
 
 /* SETTINGS */
 @import url("./settings/demo.css");
+@import url("./settings/color--demo.css");
 
 /* GENERICS */
-@import url("./generics/color--demo.css");
+/* (none) */
 
 /* ELEMENTS */
 @import url("./elements/root--demo.css");
