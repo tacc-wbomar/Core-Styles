@@ -5,7 +5,7 @@
 
 /* Load accent colors without scope */
 
-@import url("./color/accent--blue.css");
+@import url("../settings/color.accent--blue.css");
 
 
 
