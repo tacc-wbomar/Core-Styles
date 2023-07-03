@@ -14,6 +14,7 @@
     "src/lib",
     "src/.postcssrc.base.yml"
   ],
+  "type": "module",
   "main": "src/main.js",
   "bin": "src/cli.js",
   "scripts": {
