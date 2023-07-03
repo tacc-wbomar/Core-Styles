@@ -25,7 +25,8 @@
     "test": "bin/test.js && echo \"Test output at 'dist/_tests' (compare to test input)\"",
     "build:watch": "npm run build:css && touch src/lib/_imports/fractal.server.refresh.css",
     "prepublishOnly": "npm run build # && npm test && npm run lint",
-    "watch": "npm-watch"
+    "watch": "npm-watch",
+    "release": "release-it"
   },
   "engines": {
     "node": ">=15.x",
@@ -66,7 +67,8 @@
     "@frctl/fractal": "^1.5.13",
     "@frctl/mandelbrot": "^1.10.1",
     "minimist": "^1.2.7",
-    "npm-watch": "^0.11.0"
+    "npm-watch": "^0.11.0",
+    "release-it": "^15.11.0"
   },
   "watch": {
     "build:watch": {
