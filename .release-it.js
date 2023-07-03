@@ -15,7 +15,7 @@ module.exports = {
         "types": [
           {
             "type": "feat",
-            "section": "Added"
+            "section": "Changed"
           },
           {
             "type": "fix",
