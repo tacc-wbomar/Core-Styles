@@ -1,11 +1,17 @@
-{
+const fs = require('fs');
+
+const commitTemplate = fs.readFileSync('CHANGELOG.hbs').toString();
+
+module.exports = {
   "github": {
     "release": true
   },
   "plugins": {
     "@release-it/conventional-changelog": {
       "infile": "CHANGELOG.md",
-      "header": "# Changelog Test",
+      "writerOpts": {
+        "commitPartial": commitTemplate
+      },
       "preset": {
         "name": "conventionalcommits",
         "types": [
