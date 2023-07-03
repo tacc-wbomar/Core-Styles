@@ -22,19 +22,23 @@
 @import url("./elements/table.docs.css");
 
 /* OBJECTS */
-/* (none) */
+@import url("./objects/o-section.css");
+@import url("./objects/o-section--docs.css");
 
 /* COMPONENTS */
 @import url("./components/pymdownx--tabbed.css");
 @import url("./components/admonition.css");
 @import url("./components/align.css");
+@import url("./components/c-card.css");
+@import url("./components/c-card--from-tup-cms.css");
+@import url("./components/c-card--docs.css");
 @import url("./components/tacc-docs.css");
 
 /* TRUMPS */
 /* These styles from Core-CMS doc pages might be useful */
 /*
-@import url("_imports/trumps/s-document.css");
-@import url("_imports/trumps/s-guide-doc.css");
-@import url("_imports/trumps/s-inline-dl.css");
-@import url("_imports/trumps/u-nested-text-content.css");
+@import url("./trumps/s-document.css");
+@import url("./trumps/s-guide-doc.css");
+@import url("./trumps/s-inline-dl.css");
+@import url("./trumps/u-nested-text-content.css");
 */

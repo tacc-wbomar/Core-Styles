@@ -36,7 +36,7 @@ Styleguide Trumps.Scopes.Header
   -moz-osx-font-smoothing: grayscale;
 
   /* To hide border, set this in theme to match `--header-bkgd-color` value */
-  border-bottom: 1px solid env(--header-major-border-color);
+  border-bottom: 1px solid var(--header-major-border-color);
 }
 
 /* Affiliation */
@@ -52,7 +52,7 @@ Styleguide Trumps.Scopes.Header
   margin-right: 16px; /* NO-R/EM: 1rem (from Bootstrap via `.navbar-brand`) */
   padding: 0;
 
-  color: env(--header-text-color);
+  color: var(--header-text-color);
   /* text-decoration: none; */ /* already provided by Bootstrap */
 }
 
@@ -74,7 +74,7 @@ Styleguide Trumps.Scopes.Header
   --nav-padding-vert: 5px;
   --nav-padding-horz: calc(16px + 20px);
 
-  background-color: env(--header-bkgd-color);
+  background-color: var(--header-bkgd-color);
   padding: var(--nav-padding-vert) var(--nav-padding-horz);
 }
 
@@ -109,7 +109,7 @@ Styleguide Trumps.Scopes.Header
 #s-header .nav-link,
 /* HACK: Support `span.nav-link` having children `a` and `a.dropdown-toggle-split` */
 #s-header .nav-link > a {
-  color: env(--header-text-color);
+  color: var(--header-text-color);
   /* text-decoration: none; */ /* already provided by Bootstrap */
 }
 
@@ -129,7 +129,7 @@ Styleguide Trumps.Scopes.Header
 /* Create a line between search bar and login */
 /* FAQ: The line should only exist if both elements are present */
 .s-header .s-search-bar ~ .s-portal-nav {
-  border-left: 1px solid env(--header-minor-border-color);
+  border-left: 1px solid var(--header-minor-border-color);
 
   margin-left: 12px;
 }
@@ -154,29 +154,44 @@ Styleguide Trumps.Scopes.Header
 /* This will eventually be superceded by GH-101. */
 
 /* For black icons:
-  - create a selector definition in s-header.css:
+  - create a rule set like this in s-header.css
+    (where `--custom-property` is a relevant name):
+
+    ```css
     .selector-target {
-      filter: env(--targeted-selector);
+      filter: var(--custom-property);
     };
-  - set the environment_variables value in theme.*.json to inverted value:
-    "environment-variables": {
+    ```
+  - reset the custom property value in a project stylesheet to inverted value:
+
+    ```css
+    .selector-target {
       ...
-      "--targeted-selector": "invert(100%)"
+      "--custom-property": "invert(100%)"
     }
+    ```
 */
 
 /* For themed icons using a color:
-  - create a selector definition in s-header.css:
+  - create a rule set like this in s-header.css
+    (where `--custom-property` is a relevant name):
+
+    ```css
     .selector-target {
       mix-blend-mode: "overlay";
-      filter: env(--selector-theme-color);
+      filter: var(--custom-property);
     };
-  - set the environment_variables value in theme.*.json to the desired color value:
-    "environment-variables": {
+    ```
+  - reset the custom property value in a project stylesheet to desired color:
+
+    ```css
+    .selector-target {
       ...
-      "--selector-theme-color": "#ABCDEF"
-    } */
+      "--custom-property": "#ABCDEF"
+    }
+    ```
+*/
 
 .navbar-toggler-icon  {
-  filter: env(--menu-toggle-icon);
+  filter: var(--menu-toggle-icon);
 }

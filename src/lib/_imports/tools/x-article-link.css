@@ -31,7 +31,7 @@ Styleguide Tools.ExtendsAndMixins.ArticleLink
 }
 .x-article-link-stretch--gapless,
 %x-article-link-stretch--gapless {
-  width: calc(100% + 30px); /* GH-99: Use standard spacing value */
+  width: calc(100% + 30px);
   left: -15px;
 }
 

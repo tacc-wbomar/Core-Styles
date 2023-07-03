@@ -62,7 +62,9 @@ tr:nth-child(even) :is(th, td),
   line-height: var(--cell-line-height);
 }
 /* To pin first column to left of table even during scroll */
-/* WARNING: Design has not reviewed this (but not designed responsive table) */
+/* WARNING: Design does NOT approve this */
+/* TODO: Replace with APCD-CMS "responsive-data-tables" solution */
+/* SEE: https://github.com/TACC/Core-CMS-Custom/blob/3bec84b/apcd-cms/src/apps/view_users/static/view_users_table/css/table.css#L65-L129 */
 :is(th, td):first-child {
   position: sticky;
   left: 0;

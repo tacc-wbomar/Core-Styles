@@ -7,11 +7,11 @@
 /* SETTINGS */
 /* To get most settings, client should load `./base.css` first */
 @import url("./settings/font--cms.css");
+@import url("./settings/color--cms.css");
 
 /* GENERICS */
 /* Mostly from Bootstrap */
 /* https://confluence.tacc.utexas.edu/x/b53tDg */
-@import url("./generics/color--cms.css");
 
 /* ELEMENTS */
 @import url("./elements/root--cms.css");
@@ -46,8 +46,8 @@
 /* FAQ: Commented out because Core-CMS doc pages load these directly */
 /* IMPORTANT: If CMS docs are moved to TACC-Docs, then kill these stylesheets */
 /*
-@import url("_imports/trumps/s-document.css");
-@import url("_imports/trumps/s-guide-doc.css");
-@import url("_imports/trumps/s-inline-dl.css");
-@import url("_imports/trumps/u-nested-text-content.css");
+@import url("./trumps/s-document.css");
+@import url("./trumps/s-guide-doc.css");
+@import url("./trumps/s-inline-dl.css");
+@import url("./trumps/u-nested-text-content.css");
 */
