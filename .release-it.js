@@ -7,9 +7,12 @@ module.exports = {
     "release": true
   },
   "plugins": {
-    "@release-it/keep-a-changelog": {
+    // "@release-it/keep-a-changelog": {
+    //   "filename": "CHANGELOG.md",
+    //   "addVersionUrl": true
+    // },
+    "./.release-it/keep-a-changelog.js": {
       "filename": "CHANGELOG.md",
-      "strictLatest": false,
       "addVersionUrl": true
     },
     "@release-it/conventional-changelog": {
