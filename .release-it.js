@@ -7,6 +7,10 @@ module.exports = {
     "release": true
   },
   "plugins": {
+    "@release-it/keep-a-changelog": {
+      "filename": "CHANGELOG.md",
+      "addVersionUrl": true
+    },
     "@release-it/conventional-changelog": {
       "infile": "CHANGELOG.md",
       "header": header,
@@ -44,10 +48,6 @@ module.exports = {
           {}
         ]
       }
-    },
-    "@release-it/keep-a-changelog": {
-      "filename": "CHANGELOG.md",
-      "addVersionUrl": true
     }
   }
 }
