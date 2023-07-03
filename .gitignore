@@ -16,3 +16,6 @@ fractal.server.refresh.css
 .DS_Store
 ._*
 Thumbs.db
+
+# Temporary
+.release-it
