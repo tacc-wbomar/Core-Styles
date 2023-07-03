@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const commitTemplate = fs.readFileSync('CHANGELOG.hbs').toString();
+const header = fs.readFileSync('.release-it/CHANGELOG-header.md').toString();
 
 module.exports = {
   "github": {
@@ -9,9 +9,7 @@ module.exports = {
   "plugins": {
     "@release-it/conventional-changelog": {
       "infile": "CHANGELOG.md",
-      "writerOpts": {
-        "headerPartial": commitTemplate
-      },
+      "header": header,
       "preset": {
         "name": "conventionalcommits",
         "types": [
