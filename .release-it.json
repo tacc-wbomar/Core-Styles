@@ -6,9 +6,6 @@
     "@release-it/conventional-changelog": {
       "infile": "CHANGELOG.md",
       "header": "# Changelog Test",
-      "writerOpts": {
-        "groupBy": "type"
-      },
       "preset": {
         "name": "conventionalcommits",
         "types": [
