@@ -10,7 +10,7 @@ module.exports = {
     "@release-it/conventional-changelog": {
       "infile": "CHANGELOG.md",
       "writerOpts": {
-        "commitPartial": commitTemplate
+        "headerPartial": commitTemplate
       },
       "preset": {
         "name": "conventionalcommits",
