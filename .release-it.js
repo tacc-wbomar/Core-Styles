@@ -47,7 +47,6 @@ module.exports = {
     },
     "@release-it/keep-a-changelog": {
       "filename": "CHANGELOG.md",
-      "addUnreleased": true,
       "addVersionUrl": true
     }
   }
