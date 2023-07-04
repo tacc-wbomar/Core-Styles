@@ -12,6 +12,7 @@ on:
   push:
     paths:
       - .github/workflows/pr-label-checker.yaml
+  workflow_call:
 
 # comment
 concurrency:
