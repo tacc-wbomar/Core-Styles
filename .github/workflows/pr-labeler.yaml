@@ -19,3 +19,7 @@ jobs:
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           configuration-path: .github/pr-labeler.yml # optional, .github/pr-labeler.yml is the default value
+
+  check_labels:
+    needs: [pr-labeler]
+    uses: ./.github/workflows/pr-label-checker.yml
