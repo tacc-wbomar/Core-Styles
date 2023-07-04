@@ -1,8 +1,9 @@
 @import url("../components/c-button.css");
 @import url("../components/c-message.css");
-@import url('../tools/x-link.css');
+@import url("../components/c-message--expanded.css");
 
 @import url("./django-cms-forms.hacks.css");
+@import url("./django-cms-forms--errors-via-c-message.css");
 
 
 
@@ -132,18 +133,6 @@ ul.checkboxselectmultiple li:last-child label {
   padding-inline: 0;
 }
 
-.form-errors {
-  @extend .c-message;
-  @extend .c-message--type-error;
-  @extend .c-message--scope-section;
-  @extend .c-message--scope-section.c-message--type-error;
-}
-.field-errors li {
-  @extend .c-message;
-  @extend .c-message--type-error;
-  @extend .c-message--scope-inline;
-}
-
 
 
 /* Lists */
@@ -169,19 +158,19 @@ ul.checkboxselectmultiple {
 
 /* To style obvious buttons that neglect class */
 .button-wrapper button[type="submit"] {
-  @extend .c-button;
-  @extend .c-button--primary;
+  @extend :--c-button;
+  @extend :--c-button--primary;
 }
 
 .form-button {
-  @extend .c-button;
+  @extend :--c-button;
 }
 .form-button[type="submit"] {
-  @extend .c-button--primary;
+  @extend :--c-button--primary;
 }
 .form-button:where(:not([type="submit"], [type="reset"])) {
-  @extend .c-button--secondary;
+  @extend :--c-button--secondary;
 }
 .form-button[type="reset"] {
-  @extend .c-button--tertiary;
+  @extend :--c-button--tertiary;
 }

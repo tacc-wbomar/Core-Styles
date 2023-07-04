@@ -3,11 +3,6 @@ plugins:
 
   postcss-extend: {}
 
-  # https://github.com/TACC/Core-CMS/blob/70a1ca3/conf/css/.postcssrc.yml#L6-L12
-  postcss-env-function:
-    importFrom:
-      - 'src/lib/_themes/default.json'
-
   postcss-preset-env:
     # https://github.com/csstools/postcss-preset-env#features
     stage: false
@@ -16,6 +11,7 @@ plugins:
     features:
       custom-media-queries: true
       media-query-ranges: true
+      nesting-rules: true
       custom-selectors: true
       # This feature (to come in v8) is not ready yet
       # https://github.com/csstools/postcss-plugins/issues/481#issuecomment-1335678359

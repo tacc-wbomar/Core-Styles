@@ -16,22 +16,27 @@ fractal.components.set('statuses', {
   prototype: {
     label: "Prototype",
     description: "Do not implement.",
-    color: "#999999"
+    color: "#666666"
   },
   wip: {
     label: "Work in Progress",
     description: "Work in progress. Implement with caution.",
-    color: "#CC9933"
+    color: "#999933"
+  },
+  backup: {
+    label: "Backup",
+    description: "If regular variations fail.",
+    color: "#996633"
   },
   ready: {
     label: "Ready",
     description: "Ready to implement.",
-    color: "#339933"
+    color: "#339966"
   },
   deprecated: {
     label: 'Deprecated',
     description: 'Do not implement.',
-    color: '#990000'
+    color: '#800000'
   }
 });
 
@@ -49,11 +54,30 @@ fractal.components.set('resources', {
   },
 });
 fractal.components.set('default.context', {
-  shouldSkipPattern: true, // true, because …base.css loads most components
+  shouldSkipPattern: true, // true, because core-styles.….css loads most
   globalStyles: [{
     isInternal: true,
     layer: 'base',
+    path: '/assets/core-styles.demo.css'
+  },{
+    isInternal: true,
+    layer: 'base',
     path: '/assets/core-styles.base.css'
+  }],
+  cmsStyles: [{
+    isInternal: true,
+    layer: 'project',
+    path: '/assets/core-styles.cms.css'
+  }],
+  docsStyles: [{
+    isInternal: true,
+    layer: 'project',
+    path: '/assets/core-styles.docs.css'
+  }],
+  portalStyles: [{
+    isInternal: true,
+    layer: 'project',
+    path: '/assets/core-styles.portal.css'
   }]
 });
 

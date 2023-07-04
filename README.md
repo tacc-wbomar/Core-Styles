@@ -2,14 +2,20 @@
 
 The shared styles for TACC WMA Workspace Portals & Websites
 
-## Related Repositories
+
+## Known Clients
 
 - [Core CMS], the base CMS code for TACC WMA CMS Websites
 - [Core Portal], the base Portal code for TACC WMA CMS Websites
+- [TUP UI], the client code for TACC User Portal
+- [TACC Docs], the documentation for TACC
+
 
 ## Table of Contents
 
 - [External Project Usage](#external-project-usage)
+   - [Load from a Project](#load-from-a-project)
+   - [Install into a Project](#install-into-a-project)
 - [Local Development Setup](#local-development-setup)
 - [Testing](#testing)
 - [Deployment](#deployment)
@@ -18,7 +24,13 @@ The shared styles for TACC WMA Workspace Portals & Websites
 
 ## External Project Usage
 
-### Install This Package
+### Load from a Project
+
+__See [`HOWTO.md`](HOWTO.md).__
+
+### Install into a Project
+
+#### Install This Package
 
 1. Installwith any package manager e.g.:
 
@@ -29,15 +41,15 @@ The shared styles for TACC WMA Workspace Portals & Websites
    - pre-compiled, from `/dist`
    - source files, from `/src/lib/_imports`
 
-### Build from Source
+#### Build from Source
 
-#### Via Your Environment's [PostCSS](https://github.com/postcss/postcss#readme)
+##### Via Your Environment's [PostCSS](https://github.com/postcss/postcss#readme)
 
 Please review [the plugins expected](./src/.postcssrc.base.yml).
 
-#### Via Core-Styles API
+##### Via Core-Styles API
 
-##### JavaScript
+###### JavaScript
 
 <details><summary><code>require('core-styles').buildStylesheets</code></summary>
 
@@ -71,7 +83,7 @@ buildStylesheets(
 
 </details>
 
-##### CLI
+###### CLI
 
 <details><summary><code>core-styles</code></summary>
 
@@ -252,21 +264,32 @@ Sign your commits ([see this link](https://help.github.com/en/github/authenticat
 
 Only authorized team members may publish.
 
-1. (one time) Login to npm i.e. `npm login`.
+1. (one time) Login to npm via:\
+    `npm login`
 1. Create new branch for version bump.
 1. Update `CHANGELOG.md`.
-1. Update version via `npm version N.N.N`.
-1. Update dist via `npm run build:css --build-id=vN.N.N`.
-1. Commit, push, PR, review, merge.
+1. Update version via:\
+    `npm version N.N.N`
+1. Commit, push, open pull request, get approval.\
+    <sup>Do **not** merge yet.</sup>
+1. Publish to NPM via `npm publish --access public`.\
+    <sup>Project build will automatically occur before publish.[^1]</sup>
+1. Commit NPM build output.
+1. Merge pull request.
 1. Create release and tag on GitHub.
-1. Publish to NPM via `npm publish --access public`.
+1. Replace Github's unannotated tag with an annotated one:
+    - `git pull`
+    - `git tag -d vN.N.N`
+    - `git tag -a vN.N.N -m "____: vN.N.N"`
+    - `git push --tags --force`
 
-> **Notice**: Project build will automatically occur before publish.
+[^1]: **Help**: How to set build ID arg on build command during publish auto-build?
 
 ### Resources
 
 - [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 - [Research & Development](https://confluence.tacc.utexas.edu/x/FADMBQ)
+
 
 <!-- Link Aliases -->
 
@@ -274,3 +297,5 @@ Only authorized team members may publish.
 [camino]: https://github.com/TACC/Camino
 [core cms]: https://github.com/TACC/Core-CMS
 [core portal]: https://github.com/TACC/Core-Portal
+[tup ui]: https://github.com/TACC/tup-ui
+[tacc docs]: https://github.com/TACC/TACC-Docs

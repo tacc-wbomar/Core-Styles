@@ -1,0 +1,7 @@
+/* Scopes */
+
+/* To make all paragraph children narrow */
+.demo-narrow-paragraphs p {
+  margin: 10px;
+  max-width: 40ch; /* to wrap text so link is in middle of middle sentence */
+}
