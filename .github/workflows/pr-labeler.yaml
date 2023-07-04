@@ -22,4 +22,4 @@ jobs:
 
   check_labels:
     needs: [pr-labeler]
-    uses: ./.github/workflows/pr-label-checker.yml
+    uses: ./.github/workflows/pr-label-checker.yaml
