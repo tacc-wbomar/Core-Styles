@@ -1,13 +1,17 @@
 name: PR Label Checker
 
 on:
+  workflow_run:
+    workflows: [PR Labeler]
+    types:
+      - completed
   pull_request:
     types:
-      - opened
-      - synchronize
-      - reopened
       - labeled
       - unlabeled
+  push:
+    paths:
+      - .github/pr-label-checker
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
@@ -16,6 +20,15 @@ concurrency:
 jobs:
   check_semver_labels:
     name: Check for Semver Label
+    if: >-
+      ${{
+        (
+          github.event.workflow_run &&
+          github.event.workflow_run.conclusion == 'success'
+        ) ||
+        github.event.pull_request ||
+        github.event.push
+      }}
     runs-on: ubuntu-latest
 
     steps:
@@ -26,6 +39,15 @@ jobs:
 
   check_cc_labels:
     name: Check for Conventional Commits Label
+    if: >-
+      ${{
+        (
+          github.event.workflow_run &&
+          github.event.workflow_run.conclusion == 'success'
+        ) ||
+        github.event.pull_request ||
+        github.event.push
+      }}
     runs-on: ubuntu-latest
 
     steps:
