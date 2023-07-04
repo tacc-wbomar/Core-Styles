@@ -8,7 +8,3 @@ on:
 jobs:
   pr_labeler:
     uses: ./.github/workflows/pr-labeler.yaml
-
-  check_labels:
-    needs: [pr_labeler]
-    uses: ./.github/workflows/pr-label-checker.yaml
