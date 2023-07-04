@@ -21,3 +21,4 @@ Thumbs.db
 .release-it
 .release-it.cjs
 CHANGELOG.md
+package.json
