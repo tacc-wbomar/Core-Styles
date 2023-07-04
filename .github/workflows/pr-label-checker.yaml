@@ -1,17 +1,6 @@
 name: PR Label Checker
 
 on:
-  workflow_run:
-    workflows: [PR Labeler]
-    types:
-      - completed
-  pull_request:
-    types:
-      - labeled
-      - unlabeled
-  push:
-    paths:
-      - .github/workflows/pr-label-checker.yaml
   workflow_call:
 
 # comment

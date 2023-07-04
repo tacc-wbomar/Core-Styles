@@ -1,0 +1,29 @@
+name: PR Labeler
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened # for testing
+      - labeled
+      - unlabeled
+  push:
+    paths:
+      - '.github/workflows/pr-label*.yaml'
+
+permissions:
+  contents: read
+
+jobs:
+  pr_labeler:
+    name: Label PR
+    if: |
+      github.event.pull_request.type == 'opened' ||
+      github.event.pull_request.type == 'reopened'
+    uses: ./.github/workflows/pr-labeler.yaml
+
+  check_labels:
+    if: |
+      github.event.pull_request.type == 'labeled' ||
+      github.event.pull_request.type == 'unlabeled'
+    needs: [pr_labeler]
+    uses: ./.github/workflows/pr-label-checker.yaml
