@@ -15,19 +15,19 @@ concurrency:
 
 jobs:
   check_semver_labels:
-    name: Check Semver labels
+    name: Check Semver Label is Used
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check for Semver labels
-        uses: danielchabr/pr-labels-checker@v3.1
+      - uses: danielchabr/pr-labels-checker@v3.1
         with:
           hasSome: major,minor,patch
           githubToken: ${{ secrets.GITHUB_TOKEN }}
 
   check_cc_labels:
-    name: Check conventional commits labels
+    name: Check Conventional Commits Label is Used
     runs-on: ubuntu-latest
+
     steps:
       - uses: danielchabr/pr-labels-checker@v3.1
         with:
