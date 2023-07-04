@@ -4,9 +4,6 @@ on:
     types:
       - opened
       - reopened # for testing
-  push:
-    paths:
-      - '.github/workflows/pr-label*.yaml'
 
 jobs:
   pr_labeler:
