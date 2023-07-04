@@ -20,6 +20,7 @@ concurrency:
 jobs:
   check_semver_labels:
     name: Check for Semver Label
+    # HELP: Should this conditional be so complex?
     if: >-
       ${{
         (
@@ -39,6 +40,7 @@ jobs:
 
   check_cc_labels:
     name: Check for Conventional Commits Label
+    # HELP: Should this conditional be so complex?
     if: >-
       ${{
         (
