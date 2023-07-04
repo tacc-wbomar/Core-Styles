@@ -10,3 +10,5 @@ removes: ['remove/*', 'removes/*', 'removed/*', 'delete/*', 'deletes/*', 'delete
 security: ['secure/*', 'secures/*', 'secured/*', 'security/*']
 docs: ['docs/*', 'documentation/*']
 dependencies: ['deps/*', 'dependencies/*']
+chore: ['chore/*']
+style: ['style/*']
