@@ -20,16 +20,6 @@ concurrency:
 jobs:
   check_semver_labels:
     name: Check for Semver Label
-    # HELP: Should this conditional be so complex?
-    if: >-
-      ${{
-        (
-          github.event.workflow_run &&
-          github.event.workflow_run.conclusion == 'success'
-        ) ||
-        github.event.pull_request ||
-        github.event.push
-      }}
     runs-on: ubuntu-latest
 
     steps:
@@ -40,16 +30,6 @@ jobs:
 
   check_cc_labels:
     name: Check for Conventional Commits Label
-    # HELP: Should this conditional be so complex?
-    if: >-
-      ${{
-        (
-          github.event.workflow_run &&
-          github.event.workflow_run.conclusion == 'success'
-        ) ||
-        github.event.pull_request ||
-        github.event.push
-      }}
     runs-on: ubuntu-latest
 
     steps:
