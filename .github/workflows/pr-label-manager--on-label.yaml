@@ -1,0 +1,14 @@
+name: PR Label Manager (on Label)
+on:
+  pull_request:
+    types:
+      - labeled
+      - unlabeled
+  push:
+    paths:
+      - '.github/workflows/pr-label*.yaml'
+
+jobs:
+  check_labels:
+    needs: [pr_labeler]
+    uses: ./.github/workflows/pr-label-checker.yaml
