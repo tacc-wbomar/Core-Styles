@@ -6,15 +6,15 @@ on:
       - opened
       - reopened # for testing
 
-# So un/labeled PR event type does NOT take precedence
-concurrency:
-  group: labels
-  cancel-in-progress: true
+# # So un/labeled PR event type does NOT take precedence
+# concurrency:
+#   group: labels
+#   cancel-in-progress: true
 
 jobs:
   pr_labeler:
     uses: ./.github/workflows/pr-labeler.yaml
 
-  check_labels:
-    needs: [pr_labeler]
-    uses: ./.github/workflows/pr-label-checker.yaml
+  # check_labels:
+  #   needs: [pr_labeler]
+  #   uses: ./.github/workflows/pr-label-checker.yaml

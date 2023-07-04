@@ -7,10 +7,10 @@ on:
       - labeled
       - unlabeled
 
-# So un/labeled pull_request event type does NOT take precedence
-concurrency:
-  group: labels
-  cancel-in-progress: false
+# # So un/labeled pull_request event type does NOT take precedence
+# concurrency:
+#   group: labels
+#   cancel-in-progress: false
 
 jobs:
   check_labels:
