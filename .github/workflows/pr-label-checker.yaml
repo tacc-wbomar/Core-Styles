@@ -11,7 +11,7 @@ on:
       - unlabeled
   push:
     paths:
-      - .github/pr-label-checker
+      - .github/pr-label-checker.yaml
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
