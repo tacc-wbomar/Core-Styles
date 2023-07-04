@@ -2,7 +2,7 @@ name: Update Changelog
 
 on:
   release:
-    types: 
+    types:
       - released
 
 jobs:
@@ -23,6 +23,6 @@ jobs:
       - name: Commit updated Changelog
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          branch: feat/release-notes
+          branch: test
           commit_message: 'docs(changelog): update changelog'
           file_pattern: CHANGELOG.md
