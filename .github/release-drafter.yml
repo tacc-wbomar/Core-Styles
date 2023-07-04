@@ -33,7 +33,7 @@ categories:
       - security
   - title: 📓 Documentation
     labels:
-      - docs
+      - documentation
   - title: 🧩 Updated
     labels:
       - dependencies
