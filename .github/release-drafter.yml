@@ -8,34 +8,34 @@ template: |
 
   **Full Changelog**: https://github.com/$OWNER/$REPOSITORY/compare/$PREVIOUS_TAG...v$RESOLVED_VERSION
 categories:
-  - title: 🚀 Added Features
+  # labels should include values of .github/pr-labeler.yaml
+  - title: 🚀 Added
     labels:
-      - feat
       - feature
       - enhancement
-  - title: 🪲 Fixed Bugs
+  - title: 🪲 Fixed
     labels:
       - fix
-      - bug
   - title: ⚠️ Changed
     labels:
-      - changed
+      - changes
+      - performance
+      - devops
+      - test
   - title: ⛔️ Deprecated
     labels:
-      - deprecated
+      - deprecates
   - title: 🗑 Removed
     labels:
-      - removed
+      - removes
   - title: 🔐 Security
     labels:
       - security
   - title: 📓 Documentation
     labels:
       - docs
-      - documentation
   - title: 🧩 Updated
     labels:
-      - deps
       - dependencies
     collapse-after: 5
 
@@ -54,5 +54,5 @@ version-resolver:
   default: patch
 
 exclude-labels:
+  - style
   - chore
-  - skip-changelog
