@@ -1,9 +1,15 @@
+# So PR is auto-labeled THEN labels are checked
 name: PR Label Manager (on Open)
 on:
   pull_request:
     types:
       - opened
       - reopened # for testing
+
+# So un/labeled PR event type does NOT take precedence
+concurrency:
+  group: labels
+  cancel-in-progress: true
 
 jobs:
   pr_labeler:
