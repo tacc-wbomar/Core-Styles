@@ -12,7 +12,7 @@ on:
   push:
     paths:
       # comment
-      - .github/pr-label-checker.yaml
+      - .github/workflows/pr-label-checker.yaml
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
