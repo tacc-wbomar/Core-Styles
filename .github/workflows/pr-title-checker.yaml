@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   title-checker:
-    name: Check Conventional Commit Title is Used
+    name: Check for Conventional Commit Title
     runs-on: ubuntu-latest
 
     steps:

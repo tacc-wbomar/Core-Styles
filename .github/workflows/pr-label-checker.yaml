@@ -15,7 +15,7 @@ concurrency:
 
 jobs:
   check_semver_labels:
-    name: Check Semver Label is Used
+    name: Check for Semver Label
     runs-on: ubuntu-latest
 
     steps:
@@ -25,7 +25,7 @@ jobs:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
 
   check_cc_labels:
-    name: Check Conventional Commits Label is Used
+    name: Check for Conventional Commits Label
     runs-on: ubuntu-latest
 
     steps:
