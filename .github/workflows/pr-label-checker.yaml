@@ -11,6 +11,7 @@ on:
       - unlabeled
   push:
     paths:
+      # comment
       - .github/pr-label-checker.yaml
 
 concurrency:
