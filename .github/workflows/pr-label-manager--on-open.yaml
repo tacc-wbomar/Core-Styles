@@ -10,6 +10,5 @@ jobs:
     uses: ./.github/workflows/pr-labeler.yaml
 
   check_labels:
-    name: Check Labels
     needs: [pr_labeler]
     uses: ./.github/workflows/pr-label-checker.yaml

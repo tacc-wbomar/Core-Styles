@@ -4,9 +4,6 @@ on:
     types:
       - labeled
       - unlabeled
-  push:
-    paths:
-      - '.github/workflows/pr-label*.yaml'
 
 jobs:
   check_labels:
