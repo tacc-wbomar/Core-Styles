@@ -1,0 +1,34 @@
+# So PR labels are checked on change
+# CAVEAT: Should NOT run before NOT during …--on-open workflow
+name: PR Label Manager (on Label)
+on:
+  workflow_run:
+    workflows: [PR Label Manager (on Open)]
+    types:
+      - completed
+  pull_request:
+    types:
+      - opened
+      - reopened # for testing
+      - labeled
+      - unlabeled
+
+# # So un/labeled pull_request event type does NOT take precedence
+# concurrency:
+#   group: labels
+#   cancel-in-progress: false
+
+jobs:
+  pr_labeler:
+    name: Label PR
+    if: |
+      github.event.pull_request.type == 'opened' ||
+      github.event.pull_request.type == 'reopened'
+    uses: ./.github/workflows/pr-labeler.yaml
+
+  check_labels:
+    if: |
+      github.event.pull_request.type == 'labeled' ||
+      github.event.pull_request.type == 'unlabeled'
+    needs: [pr_labeler]
+    uses: ./.github/workflows/pr-label-checker.yaml
