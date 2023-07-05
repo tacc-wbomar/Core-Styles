@@ -11,20 +11,13 @@ on:
 jobs:
   assign_labels:
     if: |
-      always() && (
-        github.event.pull_request.type == 'opened' ||
-        github.event.pull_request.type == 'reopened'
-      )
+      github.event.pull_request.type == 'opened' ||
+      github.event.pull_request.type == 'reopened'
     name: (On PR Open) Use "PR Label Assigner"
     uses: ./.github/workflows/pr-label-assigner.yaml
 
   check_labels_after_assign:
     needs: [assign_labels]
-    if: |
-      always() && (
-        github.event.pull_request.type == 'opened' ||
-        github.event.pull_request.type == 'reopened'
-      )
     name: (After Label Assign) Trigger "PR Label Assigner"
     runs-on: ubuntu-latest
 
@@ -43,9 +36,7 @@ jobs:
 
   check_labels:
     if: |
-      always() && (
-        github.event.pull_request.type == 'labeled' ||
-        github.event.pull_request.type == 'unlabeled'
-      )
+      github.event.pull_request.type == 'labeled' ||
+      github.event.pull_request.type == 'unlabeled'
     name: (On Label Change) Use "PR Label Assigner"
     uses: ./.github/workflows/pr-label-checker.yaml
