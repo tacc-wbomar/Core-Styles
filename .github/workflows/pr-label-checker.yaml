@@ -2,11 +2,6 @@
 name: PR Label Checker
 on:
   workflow_dispatch:
-  workflow_run:
-    workflows: [PR Label Assigner]
-    types:
-      - completed
-  workflow_call:
   # pull_request:
   #   types:
   #     - labeled
