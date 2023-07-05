@@ -1,18 +1,13 @@
 name: PR Label Checker
 
 on:
-  workflow_run:
-    workflows: [PR Labeler]
-    types:
-      - completed
+  workflow_dispatch:
   pull_request:
     types:
       - labeled
       - unlabeled
-  push:
-    paths:
-      - .github/workflows/pr-label-checker.yaml
 
+# comment
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
   cancel-in-progress: true
