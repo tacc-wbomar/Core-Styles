@@ -10,19 +10,17 @@ on:
 
 jobs:
   assign_labels:
+    needs: [assign_labels]
+    name: (On PR Open) Assign Then Check PR Labels
+    runs-on: ubuntu-latest
     if: |
       github.event.pull_request.type == 'opened' ||
       github.event.pull_request.type == 'reopened'
-    name: (On PR Open) Use "PR Label Assigner"
-    uses: ./.github/workflows/pr-label-assigner.yaml
-
-  check_labels_after_assign:
-    needs: [assign_labels]
-    name: (After Label Assign) Trigger "PR Label Assigner"
-    runs-on: ubuntu-latest
 
     steps:
-      - name: Trigger PR Label Checker
+      - name: Use "PR Label Assigner"
+        uses: ./.github/workflows/pr-label-assigner.yaml
+      - name: Trigger "PR Label Checker"
         uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
