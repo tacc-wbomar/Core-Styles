@@ -8,6 +8,7 @@ on:
 
 jobs:
   assign_labels:
+    name: Use "PR Label Assigner"
     uses: ./.github/workflows/pr-label-assigner.yaml
 
   trigger_check_labels:
