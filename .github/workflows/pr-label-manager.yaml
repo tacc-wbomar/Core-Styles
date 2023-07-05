@@ -5,21 +5,17 @@ on:
     types:
       - opened
       - reopened # for testing
-      - labeled
-      - unlabeled
 
 jobs:
   assign_labels:
     needs: [assign_labels]
     name: (On PR Open) Assign Then Check PR Labels
     runs-on: ubuntu-latest
-    if: |
-      github.event.pull_request.type == 'opened' ||
-      github.event.pull_request.type == 'reopened'
 
     steps:
       - name: Use "PR Label Assigner"
         uses: ./.github/workflows/pr-label-assigner.yaml
+
       - name: Trigger "PR Label Checker"
         uses: actions/github-script@v6
         with:
@@ -31,10 +27,3 @@ jobs:
               workflow_id: 'pr-label-checker.yaml',
               ref: '${{ github.head_ref }}'
             })
-
-  check_labels:
-    if: |
-      github.event.pull_request.type == 'labeled' ||
-      github.event.pull_request.type == 'unlabeled'
-    name: (On Label Change) Use "PR Label Assigner"
-    uses: ./.github/workflows/pr-label-checker.yaml
