@@ -25,13 +25,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Trigger PR Label Checker
-        uses: actions/github-script@v4
+        uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const response = await octokit.actions.createWorkflowDispatch({
+            const response = await github.rest.actions.createWorkflowDispatch({
               owner: context.repo.owner,
               repo: context.repo.repo,
               workflow_id: 'pr-label-checker.yaml',
+              ref: context.ref,
             });
             console.log('"PR Label Checker" triggered with status:', response.status);
