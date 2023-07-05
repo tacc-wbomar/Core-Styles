@@ -1,6 +1,10 @@
 name: PR Label Checker
 
 on:
+  workflow_run:
+    workflows: [PR Label Manager (on Open)]
+    types:
+      - completed
   workflow_call:
 
 # comment
