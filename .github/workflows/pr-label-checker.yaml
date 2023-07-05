@@ -1,11 +1,7 @@
 # Check whether labels meet expectations
 name: PR Label Checker
 on:
-  workflow_dispatch:
-  # pull_request:
-  #   types:
-  #     - labeled
-  #     - unlabeled
+  workflow_call:
 
 # comment
 concurrency:

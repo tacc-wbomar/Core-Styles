@@ -1,0 +1,29 @@
+# To isolate complexity of PR label task conidtional dependentency
+name: PR Label Manager
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened # for testing
+      - labeled
+      - unlabeled
+
+jobs:
+  assign_labels:
+    if: |
+      github.event.pull_request.type == 'opened' ||
+      github.event.pull_request.type == 'reopened'
+    name: (On PR Open) Use "PR Label Assigner"
+    uses: ./.github/workflows/pr-label-assigner.yaml
+
+  check_labels_after_assign:
+    needs: [assign_labels]
+    name: (After Label Assign) Use "PR Label Assigner"
+    uses: ./.github/workflows/pr-label-checker.yaml
+
+  check_labels:
+    if: |
+      github.event.pull_request.type == 'labeled' ||
+      github.event.pull_request.type == 'unlabeled'
+    name: (On Label Change) Use "PR Label Assigner"
+    uses: ./.github/workflows/pr-label-checker.yaml
