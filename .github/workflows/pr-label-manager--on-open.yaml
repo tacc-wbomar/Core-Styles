@@ -33,6 +33,5 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               workflow_id: 'pr-label-checker.yaml',
-              ref: context.ref,
             });
             console.log('"PR Label Checker" triggered with status:', response.status);
