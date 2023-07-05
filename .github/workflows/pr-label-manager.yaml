@@ -36,7 +36,9 @@ jobs:
 
   check_labels:
     if: |
-      github.event.pull_request.type == 'labeled' ||
-      github.event.pull_request.type == 'unlabeled'
+      always() && (
+        github.event.pull_request.type == 'labeled' ||
+        github.event.pull_request.type == 'unlabeled'
+      )
     name: (On Label Change) Use "PR Label Assigner"
     uses: ./.github/workflows/pr-label-checker.yaml
