@@ -8,15 +8,17 @@ on:
 
 jobs:
   assign_label:
+    name: Assign
     uses: ./.github/workflows/pr-label-assigner.yaml
 
   check_labels_after_assign:
     needs: [assign_label]
-    name: Trigger "PR Label Checker"
+    name: Check
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/github-script@v6
+      - name: Check Labels
+        uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
