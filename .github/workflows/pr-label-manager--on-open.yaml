@@ -33,5 +33,5 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               workflow_id: 'pr-label-checker.yaml',
-              ref: ${{ github.head_ref }}
+              ref: '${{ github.head_ref }}'
             })
