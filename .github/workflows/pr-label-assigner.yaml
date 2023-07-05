@@ -1,3 +1,4 @@
+# Add labels to meet expectations that can be met automatically
 name: PR Label Assigner
 on:
   pull_request:
