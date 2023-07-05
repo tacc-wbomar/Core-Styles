@@ -7,17 +7,17 @@ on:
       - reopened # for testing
 
 jobs:
-  assign_labels:
-    name: (On PR Open) Use "PR Label Assigner"
+  assign_label:
+    name: Assign
     uses: ./.github/workflows/pr-label-assigner.yaml
 
   check_labels_after_assign:
-    needs: [assign_labels]
-    name: (After Assign) Trigger "PR Label Checker"
+    needs: [assign_label]
+    name: Check
     runs-on: ubuntu-latest
 
     steps:
-      - name: Trigger PR Label Checker
+      - name: Check Labels
         uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}

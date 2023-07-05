@@ -8,5 +8,5 @@ on:
 
 jobs:
   check_labels:
-    name: (On PR Label) Use "PR Label Checker"
+    name: Check
     uses: ./.github/workflows/pr-label-checker.yaml
