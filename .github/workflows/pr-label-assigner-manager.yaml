@@ -13,12 +13,11 @@ jobs:
 
   check_labels_after_assign:
     needs: [assign_label]
-    name: Check
+    name: Trigger "PR Label Checker"
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check Labels
-        uses: actions/github-script@v6
+      - uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
