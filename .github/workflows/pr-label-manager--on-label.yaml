@@ -2,6 +2,10 @@
 # CAVEAT: Should NOT run before NOT during …--on-open workflow
 name: PR Label Manager (on Label)
 on:
+  workflow_run:
+    workflows: [PR Label Manager (on Open)]
+    types:
+      - completed
   pull_request:
     types:
       - labeled
