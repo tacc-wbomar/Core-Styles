@@ -1,4 +1,5 @@
-# Check whether labels meet expectations
+# Checks whether labels meet expectations
+# SEE: https://tiagomichaelsousa.dev/articles/stop-writing-your-changelogs-manually
 name: PR Label Checker
 on:
   workflow_call:

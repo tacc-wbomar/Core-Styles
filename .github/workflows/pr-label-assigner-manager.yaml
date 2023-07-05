@@ -1,4 +1,5 @@
-# To isolate complexity of PR label task conditional dependency
+# To assign labels when PR is opened
+# FAQ: This simple wrapper exists because original author failed other solutions
 name: PR Label Asssigner Manager (on Open)
 on:
   pull_request:

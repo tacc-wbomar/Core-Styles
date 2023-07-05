@@ -1,4 +1,5 @@
-# To isolate complexity of PR label task conditional dependency
+# To check labels when they are added or removed
+# FAQ: This simple wrapper exists to mirror pr-label-assigner-manager.yaml
 name: PR Label Checker Manager (on Label)
 on:
   pull_request:

@@ -1,3 +1,5 @@
+# To auto-update changelog on release
+# SEE: https://tiagomichaelsousa.dev/articles/stop-writing-your-changelogs-manually
 name: Changelog Updater
 
 on:

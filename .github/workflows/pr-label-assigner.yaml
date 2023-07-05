@@ -1,4 +1,5 @@
-# Add labels to meet expectations that can be met automatically
+# Assigns labels based on branch name prefix
+# SEE: https://tiagomichaelsousa.dev/articles/stop-writing-your-changelogs-manually
 name: PR Label Assigner
 on:
   workflow_call:
