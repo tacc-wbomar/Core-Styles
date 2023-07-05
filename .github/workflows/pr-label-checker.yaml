@@ -1,6 +1,7 @@
 # Check whether labels meet expectations
 name: PR Label Checker
 on:
+  workflow_dispatch:
   workflow_call:
 
 jobs:
