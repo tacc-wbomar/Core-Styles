@@ -1,6 +1,7 @@
 name: PR Label Checker
 
 on:
+  workflow_dispatch:
   workflow_run:
     workflows: [PR Label Manager (on Open)]
     types:
