@@ -29,9 +29,9 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const response = await github.rest.actions.createWorkflowDispatch({
+            github.rest.actions.createWorkflowDispatch({
               owner: context.repo.owner,
               repo: context.repo.repo,
               workflow_id: 'pr-label-checker.yaml',
-            });
-            console.log('"PR Label Checker" triggered with status:', response.status);
+              ref: ${{ github.head_ref }}
+            })
