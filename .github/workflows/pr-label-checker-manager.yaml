@@ -8,5 +8,4 @@ on:
 
 jobs:
   check_labels:
-    name: Check
     uses: ./.github/workflows/pr-label-checker.yaml
