@@ -1,16 +1,13 @@
 # Add labels to meet expectations that can be met automatically
 name: PR Label Assigner
 on:
-  pull_request:
-    types:
-      - opened
-      - reopened # for testing
+  workflow_call:
 
 permissions:
   contents: read
 
 jobs:
-  assign_pr_labels:
+  pr_label_assigner:
     name: Assign Label to PR
     permissions:
       contents: read # for TimonVS/pr-labeler-action to read config file
@@ -22,21 +19,3 @@ jobs:
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           configuration-path: .github/pr-labeler.yml # optional, .github/pr-labeler.yml is the default value
-
-  check_labels_after_assign:
-    needs: [assign_pr_labels]
-    name: Trigger "PR Label Checker"
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Trigger PR Label Checker
-        uses: actions/github-script@v6
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            github.rest.actions.createWorkflowDispatch({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              workflow_id: 'pr-label-checker.yaml',
-              ref: '${{ github.head_ref }}'
-            })
