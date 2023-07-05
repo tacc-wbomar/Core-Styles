@@ -1,20 +1,12 @@
+# Checks whether labels meet expectations
+# SEE: https://tiagomichaelsousa.dev/articles/stop-writing-your-changelogs-manually
 name: PR Label Checker
-
 on:
-  workflow_dispatch:
-  pull_request:
-    types:
-      - labeled
-      - unlabeled
-
-# comment
-concurrency:
-  group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
-  cancel-in-progress: true
+  workflow_call:
 
 jobs:
   check_semver_labels:
-    name: Check for Semver Label
+    name: for Semver Label
     runs-on: ubuntu-latest
 
     steps:
@@ -24,7 +16,7 @@ jobs:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
 
   check_cc_labels:
-    name: Check for Conventional Commits Label
+    name: for Conventional Commits Label
     runs-on: ubuntu-latest
 
     steps:
