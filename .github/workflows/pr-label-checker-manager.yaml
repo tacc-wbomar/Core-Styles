@@ -1,5 +1,5 @@
 # To isolate complexity of PR label task conditional dependency
-name: PR Label Manager (on Label, Check)
+name: PR Label Checker Manager (on Label)
 on:
   pull_request:
     types:

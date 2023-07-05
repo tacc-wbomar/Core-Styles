@@ -8,7 +8,7 @@ permissions:
 
 jobs:
   pr_label_assigner:
-    name: Assign Label to PR
+    name: via Branch Name
     permissions:
       contents: read # for TimonVS/pr-labeler-action to read config file
       pull-requests: write # for TimonVS/pr-labeler-action to add labels in PR
