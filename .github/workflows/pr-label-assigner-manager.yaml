@@ -1,5 +1,5 @@
 # To isolate complexity of PR label task conditional dependency
-name: PR Label Manager
+name: PR Label Manager (on Open, Assign then Check)
 on:
   pull_request:
     types:
@@ -13,7 +13,7 @@ jobs:
 
   check_labels_after_assign:
     needs: [assign_labels]
-    name: (After Label Assign) Trigger "PR Label Assigner"
+    name: (After Assign) Trigger "PR Label Checker"
     runs-on: ubuntu-latest
 
     steps:
