@@ -1,8 +1,10 @@
-name: Update Changelog
+# To auto-update changelog on release
+# SEE: https://tiagomichaelsousa.dev/articles/stop-writing-your-changelogs-manually
+name: Changelog Updater
 
 on:
   release:
-    types: 
+    types:
       - released
 
 jobs:
@@ -11,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout Code
         uses: actions/checkout@v2
 
       - name: Update Changelog
@@ -20,9 +22,9 @@ jobs:
           latest-version: ${{ github.event.release.name }}
           release-notes: ${{ github.event.release.body }}
 
-      - name: Commit updated Changelog
+      - name: Commit Updated Changelog
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          branch: main
+          branch: test
           commit_message: 'docs(changelog): update changelog'
           file_pattern: CHANGELOG.md

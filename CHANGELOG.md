@@ -9,6 +9,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ...
 
+## [2.10.0] - 2023-07-05: Color Demo & Refactor, Auto Release, How to Use Doc
+
+## Added
+
+- feat: stop writing your changelogs manually (#176, #177, #178, #179, #180, #181, #182, #183)
+- feat: better manage accent colors, darken three light purples (#174)
+- feat: color demo (#175)
+
+## Documentation
+
+- docs: add howto.md (users loading core-styles) (#152)
+
 ## [2.9.1] - 2023-06-16: Fix `section__banner-…`, Update Dependencies
 
 ### Fixed
@@ -653,7 +665,8 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.9.1...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.10.0...HEAD
+[2.10.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.10.0
 [2.9.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.9.1
 [2.9.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.9.0
 [2.8.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.8.0

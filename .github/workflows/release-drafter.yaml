@@ -1,13 +1,14 @@
+# SEE: https://tiagomichaelsousa.dev/articles/stop-writing-your-changelogs-manually
 name: Release Drafter
 
 on:
   push:
     branches:
-      - feat/release-notes
+      - main
 
 jobs:
   update_release_draft:
-    name: Release drafter
+    name: Draft Release
     runs-on: ubuntu-latest
 
     steps:
