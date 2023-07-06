@@ -11,9 +11,7 @@
   border-radius: 0;
 }
 .modal-footer {
-  border-left: none;
-  border-right: none;
-  border-bottom: none;
+  border: none;
 }
 
 
