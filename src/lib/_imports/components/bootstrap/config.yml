@@ -12,3 +12,6 @@ variants:
   - name: form
     label: (Portal) Form
     status: prototype
+    context:
+      supportStyles:
+        - ../../assets/components/bootstrap.form.css
