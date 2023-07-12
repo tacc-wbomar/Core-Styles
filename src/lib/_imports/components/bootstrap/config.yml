@@ -11,6 +11,12 @@ variants:
       supportStyles:
         - ../../assets/components/c-card.css
         - ../../assets/components/bootstrap.col.css
+  - name: row
+    status: ready
+    context:
+      supportStyles:
+        - ../../assets/components/c-card.css
+        - ../../assets/components/bootstrap.row.css
   - name: modal
     status: prototype
   - name: nav-tabs
