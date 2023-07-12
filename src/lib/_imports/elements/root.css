@@ -39,4 +39,7 @@ body {
 
   /* To overwrite Bootstrap */
   color: var(--global-color-primary--x-dark);
+
+  /* Prevent trackpad scroll from showing white background beyond page height */
+  overscroll-behavior-y: none;
 }
