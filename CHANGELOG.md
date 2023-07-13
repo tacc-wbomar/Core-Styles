@@ -9,6 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ...
 
+## [2.11.0] - 2023-07-12: No Overscroll Behavior & Equal Height Col. Content
+
+### Added
+
+- feat: no macos overscroll behavior (#189)
+- feat(components): tup-491 eq. height cols via rows (#188)
+- feat(components): tup-491 equal height col cards (#187)
+
 ## [2.10.1] - 2023-07-06: Bootstrap Fixes (Mainly for Portal Client)
 
 ### Fixed
@@ -672,7 +680,8 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.10.1...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.11.0...HEAD
+[2.11.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.11.0
 [2.10.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.10.1
 [2.10.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.10.0
 [2.9.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.9.1
