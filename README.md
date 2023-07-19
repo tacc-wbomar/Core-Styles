@@ -247,49 +247,7 @@ _Later_, the demo may be deployed indpendently and `core-styles.….css` served 
 
 ## Contributing
 
-### Development Workflow
-
-We use a modifed version of [GitFlow](https://datasift.github.io/gitflow/IntroducingGitFlow.html) as our development workflow. Our [development site](https://dev.cep.tacc.utexas.edu) (accessible behind the TACC Network) is always up-to-date with `main`, while the [production site](https://prod.cep.tacc.utexas.edu) is built to a hashed commit tag.
-
-- Feature branches contain major updates, bug fixes, and hot fixes with respective branch prefixes:
-  - `task/` for features and updates
-  - `bug/` for bugfixes
-  - `fix/` for hotfixes
-
-### Best Practices
-
-Sign your commits ([see this link](https://help.github.com/en/github/authenticating-to-github/managing-commit-signature-verification) for help).
-
-### Publishing Workflow
-
-Only authorized team members may publish.
-
-1. (one time) Login to npm via:\
-    `npm login`
-1. Create new branch for version bump.
-1. Update `CHANGELOG.md`.
-1. Update version via:\
-    `npm version N.N.N`
-1. Commit, push, open pull request, get approval.\
-    <sup>Do **not** merge yet.</sup>
-1. Publish to NPM via `npm publish --access public`.\
-    <sup>Project build will automatically occur before publish.[^1]</sup>
-1. Commit NPM build output.
-1. Merge pull request.
-1. Create release and tag on GitHub.
-1. Replace Github's unannotated tag with an annotated one:
-    - `git pull`
-    - `git tag -d vN.N.N`
-    - `git tag -a vN.N.N -m "____: vN.N.N"`
-    - `git push --tags --force`
-
-[^1]: **Help**: How to set build ID arg on build command during publish auto-build?
-
-### Resources
-
-- [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
-- [Research & Development](https://confluence.tacc.utexas.edu/x/FADMBQ)
-
+To contribute, first read [How to Contirbute][Contributing].
 
 <!-- Link Aliases -->
 
@@ -299,3 +257,5 @@ Only authorized team members may publish.
 [core portal]: https://github.com/TACC/Core-Portal
 [tup ui]: https://github.com/TACC/tup-ui
 [tacc docs]: https://github.com/TACC/TACC-Docs
+
+[Contributing]: ./docs/contributing.md
