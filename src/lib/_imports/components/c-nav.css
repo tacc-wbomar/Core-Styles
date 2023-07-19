@@ -117,10 +117,6 @@ nav.c-nav--piped {
   transform: translateY(-50%);
 }
 
-/* default */
-nav.c-nav--piped:not([class*="c-nav--piped--"]) {
-  @extend .c-nav--piped--after;
-}
 /* via "after" pseduo-element */
 .c-nav--piped--after :--child-no-list:not(:last-child)::after,
 .c-nav--piped--after :--child-of-list:not(:last-child)::after {
@@ -132,6 +128,10 @@ nav.c-nav--piped:not([class*="c-nav--piped--"]) {
 .c-nav--piped--before :--child-of-list:not(:first-child)::before {
   border-left: var(--pipe-style);
   left: calc( -0.5 * var(--link-padding));
+}
+/* default */
+nav.c-nav--piped:not([class*="c-nav--piped--"]) {
+  @extend .c-nav--piped--after;
 }
 
 
