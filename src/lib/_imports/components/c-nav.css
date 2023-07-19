@@ -168,6 +168,7 @@ nav.c-nav a {
 nav.c-nav--no-list {
   display: flex; /* to remove whitespace between items */
   flex-wrap: wrap;
+  align-content: center; /* for diff-height items e.g. links with buttons */
 }
 nav.c-nav--no-list > :is(a, button) {
   /* To space items via margin (use `-right` to not increase left indent) */
@@ -195,6 +196,7 @@ nav.c-nav--no-list:has(button) {
   nav.c-nav :is(ul,ol) {
     display: flex;
     flex-wrap: wrap;
+    align-content: center; /* for diff-height items e.g. links with buttons */
 
     /* To prevent overlap of any lists' decorators (when items are inline) */
     list-style-position: inside;
