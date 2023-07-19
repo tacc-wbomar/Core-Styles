@@ -170,16 +170,12 @@ nav.c-nav--no-list {
   flex-wrap: wrap;
   align-content: center; /* for diff-height items e.g. links with buttons */
 }
+nav.c-nav--no-list:has(button) {
+  row-gap: var(--space-between-inline-items);
+}
 nav.c-nav--no-list > :is(a, button) {
   /* To space items via margin (use `-right` to not increase left indent) */
   margin-right: var(--space-between-inline-items);
-}
-nav.c-nav--no-list button {
-  margin-bottom: var(--space-between-inline-items);
-}
-/* To remove excess height caused by last row child buttons margin-bottom */
-nav.c-nav--no-list:has(button) {
-  margin-bottom: calc( -1 * var(--space-between-inline-items) );
 }
 
 
