@@ -14,6 +14,9 @@
     <nav class="c-nav{{#each this}} c-nav--{{.}}{{/each}}">
       <ul>{{> @button-list buttons=../links is-list=true }}</ul>
     </nav>
+    <nav class="c-nav{{#each this}} c-nav--{{.}}{{/each}}">
+      <ul>{{> @button-list buttons=../links is-list=true as-links=true }}</ul>
+    </nav>
     {{/if}}
   </dt>
   {{/each}}
@@ -33,6 +36,9 @@
     {{#if ../show_buttons }}
     <nav class="c-nav{{#each this}} c-nav--{{.}}{{/each}}">
       <ol>{{> @button-list buttons=../links is-list=true }}</ol>
+    </nav>
+    <nav class="c-nav{{#each this}} c-nav--{{.}}{{/each}}">
+      <ol>{{> @button-list buttons=../links is-list=true as-links=true }}</ol>
     </nav>
     {{/if}}
   </dt>

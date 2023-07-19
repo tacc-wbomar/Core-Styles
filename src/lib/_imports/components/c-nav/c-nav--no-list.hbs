@@ -17,6 +17,9 @@
     <nav class="c-nav c-nav--no-list{{#each this}} c-nav--{{.}}{{/each}}">
     {{> @button-list buttons=../links }}
     </nav>
+    <nav class="c-nav c-nav--no-list{{#each this}} c-nav--{{.}}{{/each}}">
+    {{> @button-list buttons=../links as-links=true }}
+    </nav>
     {{/unless}}
     {{/if}}
   </dd>

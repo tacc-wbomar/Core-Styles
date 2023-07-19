@@ -1,5 +1,6 @@
 @import url("../tools/media-queries.css");
 
+@import url("./c-button.selectors.css");
 
 
 
@@ -89,6 +90,12 @@ nav.c-nav--piped {
   --pipe-style: var(--global-border--normal);
 }
 
+/* To ensure pipe is visible */
+/* CAVEAT: Truncation will NOT work */
+nav[class*="c-nav--piped"] button:--c-button--as-link {
+  overflow: visible;
+}
+
 
 /* Modifiers: Pipes: Methods */
 
@@ -159,7 +166,7 @@ nav.c-nav {
   /* NOTE: Client is expected to overwrite these */
   --space-between-inline-items: 0.5em;
 }
-nav.c-nav a {
+nav.c-nav :is(a, :--c-button--as-link) {
   display: inline-block; /* to let line-height define clickable area */
   padding-inline: var(--link-padding);
 }
@@ -184,7 +191,7 @@ nav.c-nav--no-list > :is(a, button) {
 
 @media (--medium-and-below) {
 
-  nav.c-nav a {
+  nav.c-nav :is(a, :--c-button--as-link) {
     line-height: 2.5;
   }
 
