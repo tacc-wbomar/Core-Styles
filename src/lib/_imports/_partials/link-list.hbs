@@ -1,0 +1,9 @@
+{{#each links as | link |}}{{#if ../is-list}}<li>{{/if}}{{!
+
+  }}<a
+      {{#if link.href}}href="{{#if is-anchor-href}}#{{/if}}{{link.href}}"{{/if}}
+      {{#if link.id}}id="{{link.id}}"{{/if}}>{{!
+      }}{{link.name}}{{!
+  }}</a>{{!
+
+}}{{#if ../is-list}}</li>{{/if}}{{/each}}
