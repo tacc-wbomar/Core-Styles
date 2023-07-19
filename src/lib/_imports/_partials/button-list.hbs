@@ -1,0 +1,8 @@
+{{#each buttons as | button |}}{{#if ../is-list}}<li>{{/if}}{{!
+
+  }}<button
+      {{#if button.id}}id="{{button.id}}"{{/if}}>{{!
+      }}{{button.name}}{{!
+  }}</button>{{!
+
+}}{{#if ../is-list}}</li>{{/if}}{{/each}}

@@ -18,6 +18,7 @@ variants:
     status: wip
   - name: no-list
     context:
+      show_buttons: true
       modifiers:
         - []
         - [boxed]

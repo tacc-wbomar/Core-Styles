@@ -123,11 +123,17 @@ nav.c-nav--piped {
   border-right: var(--pipe-style);
   right: calc( -0.5 * var(--link-padding));
 }
+.c-nav--piped--after button:not(:last-child)::after {
+  margin-right: calc( -2 * var(--global-border-width--normal));
+}
 /* via "before" pseduo-element */
 .c-nav--piped--before :--child-no-list:not(:first-child)::before,
 .c-nav--piped--before :--child-of-list:not(:first-child)::before {
   border-left: var(--pipe-style);
   left: calc( -0.5 * var(--link-padding));
+}
+.c-nav--piped--before button:not(:first-child)::before {
+  margin-left: calc( -2 * var(--global-border-width--normal));
 }
 /* default */
 nav.c-nav--piped:not([class*="c-nav--piped--"]) {
@@ -163,9 +169,16 @@ nav.c-nav--no-list {
   display: flex; /* to remove whitespace between items */
   flex-wrap: wrap;
 }
-nav.c-nav--no-list > a {
+nav.c-nav--no-list > :is(a, button) {
   /* To space items via margin (use `-right` to not increase left indent) */
   margin-right: var(--space-between-inline-items);
+}
+nav.c-nav--no-list button {
+  margin-bottom: var(--space-between-inline-items);
+}
+/* To remove excess height caused by last row child buttons margin-bottom */
+nav.c-nav--no-list:has(button) {
+  margin-bottom: calc( -1 * var(--space-between-inline-items) );
 }
 
 
