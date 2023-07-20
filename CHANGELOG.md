@@ -9,6 +9,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ...
 
+## [2.13.0] - 2023-07-19: Add Handelbars Helpers; Fix `c-nav--piped` Edge Cases
+
+### Added
+
+- feat: handlebars helpers "eq" and "has" (#194)
+
+### Fixed
+
+- fix(components): c-nav support c-button--as-link (#196)
+- fix(components): c-nav support buttons (#195)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.12.0...v2.13.0
+
 ## [2.12.0] - 2023-07-19: Demo `c-nav`, Add `c-nav--piped`; docs/contributing.md
 
 ### Added
@@ -690,7 +703,8 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.12.0...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.13.0...HEAD
+[2.13.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.13.0
 [2.12.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.12.0
 [2.11.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.11.0
 [2.10.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.10.1
