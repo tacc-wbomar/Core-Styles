@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ...
 
-## [2.13.0] - 2023-07-19: Add Handelbars Helpers; Fix `c-nav--piped` Edge Cases
+## [2.13.0] - 2023-07-19: Add Handlebars Helpers; Fix `c-nav--piped` Edge Cases
 
 ### Added
 
