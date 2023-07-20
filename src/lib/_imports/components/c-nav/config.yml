@@ -13,8 +13,11 @@ variants:
     context:
       modifiers:
         - [piped]
+        - [piped, boxed]
         - [piped, piped--before]
+        - [piped, boxed, piped--before]
         - [piped, piped--after]
+        - [piped, boxed, piped--after]
     status: wip
   - name: no-list
     context:
