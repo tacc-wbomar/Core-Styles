@@ -20,8 +20,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - fix(components): c-nav support c-button--as-link (#196)
 - fix(components): c-nav support buttons (#195)
 
-**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.12.0...v2.13.0
-
 ## [2.12.0] - 2023-07-19: Demo `c-nav`, Add `c-nav--piped`; docs/contributing.md
 
 ### Added
