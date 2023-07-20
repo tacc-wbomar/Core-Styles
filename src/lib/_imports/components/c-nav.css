@@ -1,5 +1,6 @@
 @import url("../tools/media-queries.css");
 
+@import url("./c-button.selectors.css");
 
 
 
@@ -89,6 +90,12 @@ nav.c-nav--piped {
   --pipe-style: var(--global-border--normal);
 }
 
+/* To ensure pipe is visible */
+/* CAVEAT: Truncation will NOT work */
+nav[class*="c-nav--piped"] button:--c-button--as-link {
+  overflow: visible;
+}
+
 
 /* Modifiers: Pipes: Methods */
 
@@ -123,11 +130,17 @@ nav.c-nav--piped {
   border-right: var(--pipe-style);
   right: calc( -0.5 * var(--link-padding));
 }
+.c-nav--piped--after button:not(:last-child)::after {
+  margin-right: calc( -2 * var(--global-border-width--normal));
+}
 /* via "before" pseduo-element */
 .c-nav--piped--before :--child-no-list:not(:first-child)::before,
 .c-nav--piped--before :--child-of-list:not(:first-child)::before {
   border-left: var(--pipe-style);
   left: calc( -0.5 * var(--link-padding));
+}
+.c-nav--piped--before button:not(:first-child)::before {
+  margin-left: calc( -2 * var(--global-border-width--normal));
 }
 /* default */
 nav.c-nav--piped:not([class*="c-nav--piped--"]) {
@@ -153,7 +166,7 @@ nav.c-nav {
   /* NOTE: Client is expected to overwrite these */
   --space-between-inline-items: 0.5em;
 }
-nav.c-nav a {
+nav.c-nav :is(a, :--c-button--as-link) {
   display: inline-block; /* to let line-height define clickable area */
   padding-inline: var(--link-padding);
 }
@@ -162,8 +175,12 @@ nav.c-nav a {
 nav.c-nav--no-list {
   display: flex; /* to remove whitespace between items */
   flex-wrap: wrap;
+  align-items: center; /* for diff-height items e.g. links with buttons */
 }
-nav.c-nav--no-list > a {
+nav.c-nav--no-list:has(button) {
+  row-gap: var(--space-between-inline-items);
+}
+nav.c-nav--no-list > :is(a, button) {
   /* To space items via margin (use `-right` to not increase left indent) */
   margin-right: var(--space-between-inline-items);
 }
@@ -182,6 +199,7 @@ nav.c-nav--no-list > a {
   nav.c-nav :is(ul,ol) {
     display: flex;
     flex-wrap: wrap;
+    align-items: center; /* for diff-height items e.g. links with buttons */
 
     /* To prevent overlap of any lists' decorators (when items are inline) */
     list-style-position: inside;

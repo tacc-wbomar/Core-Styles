@@ -5,6 +5,11 @@ main {
   flex-wrap: wrap;
   gap: var(--global-space--grid-gap);
 }
+dd {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc( var(--global-space--grid-gap) / 2);
+}
 
 small > code:not(:last-child)::after {
   content: '';
