@@ -130,7 +130,10 @@ nav[class*="c-nav--piped"] button:--c-button--as-link {
   border-right: var(--pipe-style);
   right: calc( -0.5 * var(--link-padding));
 }
-.c-nav--piped--after button:not(:last-child)::after {
+.c-nav--piped--after button:--c-button--as-link:not(:last-child)::after {
+  margin-right: calc( -1 * var(--global-border-width--normal));
+}
+.c-nav--piped--after button:not(:--c-button--as-link):not(:last-child)::after {
   margin-right: calc( -2 * var(--global-border-width--normal));
 }
 /* via "before" pseduo-element */
@@ -139,7 +142,10 @@ nav[class*="c-nav--piped"] button:--c-button--as-link {
   border-left: var(--pipe-style);
   left: calc( -0.5 * var(--link-padding));
 }
-.c-nav--piped--before button:not(:first-child)::before {
+.c-nav--piped--before button:--c-button--as-link:not(:first-child)::before {
+  margin-left: calc( -2 * var(--global-border-width--normal));
+}
+.c-nav--piped--before button:not(:--c-button--as-link):not(:first-child)::before {
   margin-left: calc( -2 * var(--global-border-width--normal));
 }
 /* default */
