@@ -175,7 +175,7 @@ nav.c-nav :is(a, :--c-button--as-link) {
 nav.c-nav--no-list {
   display: flex; /* to remove whitespace between items */
   flex-wrap: wrap;
-  align-content: center; /* for diff-height items e.g. links with buttons */
+  align-items: center; /* for diff-height items e.g. links with buttons */
 }
 nav.c-nav--no-list:has(button) {
   row-gap: var(--space-between-inline-items);
@@ -191,7 +191,7 @@ nav.c-nav--no-list > :is(a, button) {
 
 @media (--medium-and-below) {
 
-  nav.c-nav :is(a, :--c-button--as-link) {
+  nav.c-nav a {
     line-height: 2.5;
   }
 
@@ -199,7 +199,7 @@ nav.c-nav--no-list > :is(a, button) {
   nav.c-nav :is(ul,ol) {
     display: flex;
     flex-wrap: wrap;
-    align-content: center; /* for diff-height items e.g. links with buttons */
+    align-items: center; /* for diff-height items e.g. links with buttons */
 
     /* To prevent overlap of any lists' decorators (when items are inline) */
     list-style-position: inside;
