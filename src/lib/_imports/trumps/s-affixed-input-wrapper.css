@@ -1,39 +1,27 @@
-/* Layout */
+/* Grid */
 
-.s-affixed-input-wrapper:not(
+.s-affixed-input-wrapper:where(:not(
   .checkboxinput, .has-type-check
   .radio, .has-type-radio
   .select, .has-type-select
   .checkboxselectmultiple, .has-select
   .textarea, .has-textarea
-) {
+)) {
   display: grid;
-  align-items: start;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto auto;
   grid-template-areas:
     "label label"
     var(--input-row, "input input")
     "help help"
     "error error";
 }
-@supports selector(:has(*)) {
-  .s-affixed-input-wrapper:has(.s-affixed-input-wrapper__prefix) {
-    --input-row: "prefix input";
-  }
-  .s-affixed-input-wrapper:has(.s-affixed-input-wrapper__suffix) {
-    --input-row: "input suffix";
-  }
-}
-@supports not selector(:has(*)) {
-  .s-affixed-input-wrapper--prefix {
-    --input-row: "prefix input";
-  }
-  .s-affixed-input-wrapper--suffix {
-    --input-row: "input suffix";
-  }
-}
+
+/* Grid: Cells */
+
 .s-affixed-input-wrapper label { grid-area: label; }
 .s-affixed-input-wrapper input { grid-area: input; }
+.s-affixed-input-wrapper__prepend { grid-area: prepend; }
+.s-affixed-input-wrapper__append { grid-area: append; }
 .s-affixed-input-wrapper__prefix { grid-area: prefix; }
 .s-affixed-input-wrapper__suffix { grid-area: suffix; }
 .s-affixed-input-wrapper .help-text,
@@ -41,19 +29,72 @@
 .s-affixed-input-wrapper .field-errors,
 .s-affixed-input-wrapper .c-form__errors { grid-area: error; }
 
+/* Grid: Prepend & Append */
+
+.s-affixed-input-wrapper--prepend,
+.s-affixed-input-wrapper--append {
+  /* So this element is adjacent to input if input width changes */
+  justify-content: start;
+}
+.s-affixed-input-wrapper--prepend {
+  --input-row: "prepend input";
+}
+.s-affixed-input-wrapper--append {
+  --input-row: "input append";
+}
+.s-affixed-input-wrapper--prepend.s-affixed-input-wrapper--full-width {
+  grid-template-columns: auto 1fr;
+}
+.s-affixed-input-wrapper--append.s-affixed-input-wrapper--full-width {
+  grid-template-columns: 1fr auto;
+}
+
+/* Grid: Prefix & Suffix */
+
+.s-affixed-input-wrapper--prefix,
+.s-affixed-input-wrapper--suffix {
+  /* So this element is adjacent to input if input width changes */
+  justify-content: start;
+}
+.s-affixed-input-wrapper--prefix {
+  --input-row: "prefix input";
+}
+.s-affixed-input-wrapper--suffix {
+  --input-row: "input suffix";
+}
+.s-affixed-input-wrapper--prefix.s-affixed-input-wrapper--full-width {
+  grid-template-columns: auto 1fr;
+}
+.s-affixed-input-wrapper--suffix.s-affixed-input-wrapper--full-width {
+  grid-template-columns: 1fr auto;
+}
 
 
-/* Variables */
 
-.s-affixed-input-wrapper {
-  --width: 1em;
-  --padding-vert: 5px; /* mimic input */
-  --padding-horz: 10px; /* mimic input */
+/* Prepnd & Append */
+
+.s-affixed-input-wrapper__prepend,
+.s-affixed-input-wrapper__append {
+  /* To make this element's border visible, not the input */
+  position: relative; /* FAQ: auto z-index bump moves element atop field */
+}
+.s-affixed-input-wrapper__prepend {
+  margin-right: calc( -1 * var(--global-border-width--normal) );
+}
+.s-affixed-input-wrapper__append {
+  margin-left: calc( -1 * var(--global-border-width--normal) );
 }
 
 
 
 /* Prefix & Suffix */
+
+.s-affixed-input-wrapper--prefix,
+.s-affixed-input-wrapper--suffix {
+  --width: 1em;
+  --padding-vert: 5px; /* mimic input */
+  --padding-horz: 10px; /* mimic input */
+}
 
 .s-affixed-input-wrapper__prefix,
 .s-affixed-input-wrapper__suffix {

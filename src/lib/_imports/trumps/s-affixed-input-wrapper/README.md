@@ -8,8 +8,7 @@ _This is an isolated feature from [Bootstrap Input Group](https://getbootstrap.c
 
 **Known Bugs**
 
-1. Using `s-affixed-input-wrapper__suffix` shrinks field width.
-2. A `s-affixed-input-wrapper__suffix` overlaps with browser controls e.g.
+1. A `s-affixed-input-wrapper__suffix` overlaps with browser controls e.g.
    - `<input type="number">` arrows
    - `<input type="date">` calendar
    - `<input type="time">` clock
