@@ -41,7 +41,7 @@ Only appointed team members may release versions.
 1. Commit, push, PR, review.\
     <sup>Do **not** merge yet.</sup>
 1. Publish to NPM via `npm publish --access public`.\
-    <sup>Project build will automatically occur before publish.[^1]</sup>
+    <sup>Project build will automatically occur before publish.</sup>
 1. Commit NPM build output.
 1. Merge pull request.
 1. Create release and tag on GitHub.
