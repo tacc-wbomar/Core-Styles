@@ -253,7 +253,7 @@ To contribute, first read [How to Contirbute][Contributing].
 
 ## Bootstrap
 
-Core Styles is an effort to replace Bootstrap. Bootstrap is compaitible with Core Styles. [Learn more.][Bootstrap]
+Core Styles is an effort to replace Bootstrap. Core Styles is compatible with Bootstrap. [Learn more.][Bootstrap]
 
 <!-- Link Aliases -->
 
