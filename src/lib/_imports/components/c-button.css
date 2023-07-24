@@ -294,13 +294,13 @@ a:--c-button--is-busy {
 
 /* Modifiers: Sizes */
 
-:--c-button:not(
+:--c-button:where(:not(
   :--c-button--width-short,
   :--c-button--width-medium,
   :--c-button--width-long,
   :--c-button--size-small,
   :--c-button--as-link
-) {
+)) {
   width: auto;
   --max-width: auto;
 }
