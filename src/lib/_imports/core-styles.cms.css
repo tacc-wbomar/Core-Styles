@@ -43,7 +43,6 @@
 @import url("./components/c-card--frontera-about-page.css");
 
 /* TRUMPS */
-@import url("./trumps/s-affixed-input-wrapper.css");
 /* To explain the in-limbo Core-CMS doc page styles */
 /* FAQ: Commented out because Core-CMS doc pages load these directly */
 /* IMPORTANT: If CMS docs are moved to TACC-Docs, then kill these stylesheets */
