@@ -23,6 +23,7 @@ TACC projects should prefer Core Styles to Bootstrap.[^2]
 | [Button](https://tacc.utexas.edu/static/ui/components/detail/c-button--secondary.html) | Buttons
 | [Card](https://tacc.utexas.edu/static/ui/components/detail/c-card--standard.html) | Cards
 | [Page](https://github.com/TACC/Core-Styles/blob/v2.14.0/src/lib/_imports/components/c-page.css) | Pagination
+| [Tag](https://tacc.utexas.edu/static/ui/components/detail/c-tag.html) | Badges
 
 | Core Styles <u>extends</u> | Bootstrap
 | - | -
