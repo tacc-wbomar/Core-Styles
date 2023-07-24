@@ -20,6 +20,7 @@ The shared styles for TACC WMA Workspace Portals & Websites
 - [Testing](#testing)
 - [Deployment](#deployment)
 - [Contributing](#contributing)
+- [Bootstrap](#bootstrap)
 
 
 ## External Project Usage
@@ -249,6 +250,11 @@ _Later_, the demo may be deployed indpendently and `core-styles.….css` served 
 
 To contribute, first read [How to Contirbute][Contributing].
 
+
+## Bootstrap
+
+Core Styles is an effort to replace Bootstrap. Bootstrap is compaitible with Core Styles. [Learn more.][Bootstrap]
+
 <!-- Link Aliases -->
 
 [core portal deployments]: https://github.com/TACC/Core-Portal-Deployments
@@ -259,3 +265,4 @@ To contribute, first read [How to Contirbute][Contributing].
 [tacc docs]: https://github.com/TACC/TACC-Docs
 
 [Contributing]: ./docs/contributing.md
+[Bootstrap]: ./docs/bootstrap.md
