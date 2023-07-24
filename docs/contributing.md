@@ -1,3 +1,4 @@
+# Contributing
 
 ## Linting and Formatting
 
