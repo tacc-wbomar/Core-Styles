@@ -29,10 +29,10 @@
 
   @extend .x-truncate--one-line;
 }
-:--c-button:not(:--disabled) {
+:--c-button:where(:not(:--disabled)) {
   cursor: pointer; /* WARNING: Opinionated */
 }
-:--c-button:not(:--c-button--as-link) {
+:--c-button:where(:not(:--c-button--as-link)) {
   font-weight: var(--medium);
 }
 
