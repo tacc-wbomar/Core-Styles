@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ...
 
-## [2.14.0] - 2023-07-24: `s-affixed-input-wrapper` Moved to Base and Enhanced
+## [2.14.0] - 2023-07-24: `s-affixed-input-wrapper` Enhanced & Moved to Base
 
 ### Added
 
