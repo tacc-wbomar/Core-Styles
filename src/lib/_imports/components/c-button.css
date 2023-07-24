@@ -29,10 +29,10 @@
 
   @extend .x-truncate--one-line;
 }
-:--c-button:not(:--disabled) {
+:--c-button:where(:not(:--disabled)) {
   cursor: pointer; /* WARNING: Opinionated */
 }
-:--c-button:not(:--c-button--as-link) {
+:--c-button:where(:not(:--c-button--as-link)) {
   font-weight: var(--medium);
 }
 
@@ -294,13 +294,13 @@ a:--c-button--is-busy {
 
 /* Modifiers: Sizes */
 
-:--c-button:not(
+:--c-button:where(:not(
   :--c-button--width-short,
   :--c-button--width-medium,
   :--c-button--width-long,
   :--c-button--size-small,
   :--c-button--as-link
-) {
+)) {
   width: auto;
   --max-width: auto;
 }
