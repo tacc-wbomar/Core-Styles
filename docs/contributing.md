@@ -40,7 +40,8 @@ Only appointed team members may release versions.
    `npm version N.N.N`
 1. Commit, push, PR, review.\
     <sup>Do **not** merge yet.</sup>
-1. Publish to NPM via `npm publish --access public`.\
+1. Publish to NPM via\
+    `npm publish --access public`.\
     <sup>Project build will automatically occur before publish.</sup>
 1. Commit NPM build output.
 1. Merge pull request.
