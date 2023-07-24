@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ...
 
+## [2.14.0] - 2023-07-24: `s-affixed-input-wrapper` Moved to Base and Enhanced
+
+### Added
+
+- feat: s-affixed-input-wrapper from cms to base (#200)
+- refactor: s-affixed-input-wrapper, also adds prepend \& append (#199)
+
 ## [2.13.0] - 2023-07-19: Add Handlebars Helpers; Fix `c-nav--piped` Edge Cases
 
 ### Added
@@ -701,7 +708,8 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.13.0...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.14.0...HEAD
+[2.14.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.14.0
 [2.13.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.13.0
 [2.12.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.12.0
 [2.11.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.11.0
