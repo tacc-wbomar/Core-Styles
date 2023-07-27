@@ -1,4 +1,4 @@
-To style when raw [Form elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#table_content) are insufficient.
+To style when raw [Form elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#table_content) alone are insufficient.
 
 > <details><summary><strong>✎ Inspiration</strong></summary>
 >

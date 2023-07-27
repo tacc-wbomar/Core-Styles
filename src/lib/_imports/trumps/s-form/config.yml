@@ -1,0 +1,19 @@
+context:
+  supportStyles:
+    - ../../assets/components/c-form.css
+variants:
+  - name: default
+    status: prototype
+    context:
+      warning: This component looks better with <code>elements/form.cms.css</code>, but that styles is not loaded by default. To understand the problem, see "Portal" variant.
+      supportStyles:
+        - ../../assets/components/c-message.css
+  - name: portal
+    context:
+      shouldLoadPortal: true
+      warning: This component looks better with <code>elements/form.cms.css</code>, but that styles is not loaded for this variant. When this component is used on the Portal, those necessary CMS styles are loaded via <code>LoginComponent.module.css</code> specifically for Login page, but incidentally loaded for entire Portal (and thus depended on). When this component is styled accurately independent of CMS, this message should be removed. <small>The solution is likely to change <code>elements/form.cms.css</code> to be <code>elements/form.css</code>.</small>
+  - name: cms
+    label: CMS
+    status: ready
+    context:
+      shouldLoadCMS: true
