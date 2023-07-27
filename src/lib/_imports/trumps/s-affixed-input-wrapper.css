@@ -15,7 +15,7 @@
 .s-affixed-input-wrapper label { grid-area: label; }
 .s-affixed-input-wrapper input { grid-area: input; }
 .s-affixed-input-wrapper .help-text /* for Django CMS */,
-.s-affixed-input-wrapper .c-form__help { grid-area: help; }
+.s-affixed-input-wrapper :is(.c-form__help, small:is(.s-form *)) { grid-area: help; }
 .s-affixed-input-wrapper .field-errors /* for Django CMS */,
 .s-affixed-input-wrapper .c-form__errors { grid-area: error; }
 

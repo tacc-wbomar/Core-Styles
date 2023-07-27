@@ -12,20 +12,21 @@
 
 /* Help Text */
 
-.c-form__help {
+:is(.c-form__help, small:is(.s-form *)) {
+  display: block;
   font-size: var(--global-font-size--small);
   font-style: italic;
 }
 :not(
   ul, /* FAQ: Lists already have margin-bottom */
   label /* FAQ: Labels already have margin-bottom */
-) + .c-form__help {
+) + :is(.c-form__help, small:is(.s-form *)) {
     margin-top: 0.3em; /* mimic Bootstrap _reboot.css label margin-bottom */
 }
 /* To prevent help text font-style from affecting any tags */
 /* FAQ: Help text can contain inline elements like <samp> */
 /* FAQ: Help text can be (ab)used to add headings between form fields */
-.c-form__help > :not(details, a, samp) {
+:is(.c-form__help, small:is(.s-form *)) > :not(details, a, samp) {
   font-style: initial;
 }
 
