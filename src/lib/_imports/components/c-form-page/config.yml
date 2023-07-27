@@ -1,0 +1,6 @@
+context:
+  shouldLoadPortal: true
+  📝 shouldLoadPortal: to get portal font sizes
+  ❗️ shouldLoadPortal: how to provide portal font sizes to other clients?
+  shouldSkipPattern: false
+  📝 shouldSkipPattern: because core-styles.base.css does not import this
