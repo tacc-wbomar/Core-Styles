@@ -17,7 +17,6 @@ label {
   font-weight: var(--medium);
 
   line-height: normal;
-  margin-bottom: 0.75em;
 }
 /* To avoid extra space between field wrappers */
 /* FAQ: The known use case is a django.cms.forms `.checkboxselectmultiple` */
@@ -28,6 +27,7 @@ li > label:only-child {
 /* FAQ: Any specific form styling (e.g. django.cms.forms) manages this */
 :not(input[type="checkbox"]) + label {
   display: block;
+  margin-bottom: 0.75em;
 }
 
 
