@@ -19,7 +19,7 @@
     </ul>
 
     <label for="name">
-      Name<span class="c-form__star">*</span>
+      Name<span class="c-form__star" aria-label="(required)">*</span>
     </label>
 
     <input
@@ -30,9 +30,9 @@
       id="name"
     />
 
-    <div class="c-form__help">
+    <small class="c-form__help">
       We use this to identify your submission.
-    </div>
+    </small>
   </div>
 
   <div class="c-form__field">
@@ -54,9 +54,9 @@
       <option value="Whatever">Whatever</option>
     </select>
 
-    <div class="c-form__help">
+    <small class="c-form__help">
       Choose your favorite fruit.
-    </div>
+    </small>
   </div>
 
   <div class="c-form__field">
@@ -72,9 +72,9 @@
       id="wake-up-time"
     />
 
-    <div class="c-form__help">
+    <small class="c-form__help">
       We use this to know when to wake you up.
-    </div>
+    </small>
   </div>
 
   <div class="c-form__field">
@@ -120,9 +120,9 @@
       </li>
     </ul>
 
-    <div class="c-form__help">
+    <small class="c-form__help">
       Which radio stations do you prefer?
-    </div>
+    </small>
   </div>
 
   <div class="c-form__field has-type-check">
@@ -138,9 +138,9 @@
 
     <label for="checking-out">Checking Out?</label>
 
-    <div class="c-form__help">
+    <small class="c-form__help">
       Are you checking out today?
-    </div>
+    </small>
   </div>
 
   <div class="c-form__field">
@@ -230,9 +230,9 @@
       <option value="Midnight">Midnight</option>
     </select>
 
-    <div class="c-form__help">
+    <small class="c-form__help">
       At which time of day do you get hangry?
-    </div>
+    </small>
   </div>
 
   <div class="c-form__field">
@@ -249,9 +249,9 @@
       id="life-story"
     ></textarea>
 
-    <div class="c-form__help">
+    <small class="c-form__help">
       Go on, tell me everything.
-    </div>
+    </small>
   </div>
 
   <div class="c-form__field">
@@ -267,9 +267,9 @@
       id="what-day-is-it"
     />
 
-    <div class="c-form__help">
+    <small class="c-form__help">
       Please enter today's date.
-    </div>
+    </small>
   </div>
 
   <div class="c-form__field">
@@ -285,13 +285,13 @@
       id="your-favorite-picture"
     />
 
-    <div class="c-form__help">
+    <small class="c-form__help">
       Upload your favorite image.
-      <small>
+      <small class="c-form__help">
         Supported types:
         <code>.jpeg</code>,<code>.jpg</code>,<code>.gif</code>,<code>.png</code>
       </small>
-    </div>
+    </small>
   </div>
 
   <div class="c-form__field has-spam-check has-required">
@@ -300,7 +300,7 @@
     </ul>
 
     <label for="recaptcha_g9y93gP8">
-      Are you a robot?<span class="c-form__star">*</span>
+      Are you a robot?<span class="c-form__star" aria-label="(required)">*</span>
     </label>
 
     <script src="https://www.google.com/recaptcha/api.js"></script>

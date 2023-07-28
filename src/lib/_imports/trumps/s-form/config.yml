@@ -7,6 +7,7 @@ variants:
     context:
       warning: This component looks better with <code>elements/form.cms.css</code>, but that styles is not loaded by default. To understand the problem, see "Portal" variant.
       supportStyles:
+        - ../../assets/components/c-form--portal.css
         - ../../assets/components/c-message.css
   - name: portal
     context:
@@ -17,3 +18,5 @@ variants:
     status: ready
     context:
       shouldLoadCMS: true
+      supportStyles:
+        - ../../assets/components/c-form--cms.css

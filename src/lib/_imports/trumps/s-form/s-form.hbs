@@ -2,24 +2,20 @@
 {{> @message tag="p" content=this }}
 {{/warning}}
 
-<form action="" method="POST" enctype="multipart/form-data" class="c-form">
+<form action="" method="POST" enctype="multipart/form-data" class="s-form">
 
-  <h3 class="c-form__title">Title of Form</h3>
-  <p class="c-form__desc">
+  <h3>Title of Form</h3>
+  <p>
     I describe the form, but not very well.
   </p>
 
-  <ul class="c-form__errors" style="display:none;">
+  <ul style="display:none;">
     <li>Sample <strong>form</strong> error. <a href="#">Link.</a></li>
   </ul>
 
-  <div class="c-form__field has-required">
-    <ul class="c-form__errors" style="display:none;">
-      <li>Sample <strong>form</strong> error. <a href="#">Link.</a></li>
-    </ul>
-
+  <div class="has-required">
     <label for="name">
-      Name<span class="c-form__star">*</span>
+      Name<span aria-label="(required)">*</span>
     </label>
 
     <input
@@ -30,16 +26,16 @@
       id="name"
     />
 
-    <div class="c-form__help">
+    <small>
       We use this to identify your submission.
-    </div>
-  </div>
+    </small>
 
-  <div class="c-form__field">
-    <ul class="c-form__errors" style="display:none;">
+    <ul style="display:none;">
       <li>Sample <strong>form</strong> error. <a href="#">Link.</a></li>
     </ul>
+  </div>
 
+  <div>
     <label for="favorite-fruit">Favorite Fruit</label>
 
     <select name="favorite-fruit" id="favorite-fruit">
@@ -54,16 +50,16 @@
       <option value="Whatever">Whatever</option>
     </select>
 
-    <div class="c-form__help">
+    <small>
       Choose your favorite fruit.
-    </div>
-  </div>
+    </small>
 
-  <div class="c-form__field">
-    <ul class="c-form__errors" style="display:none;">
+    <ul style="display:none;">
       <li>Sample <strong>form</strong> error. <a href="#">Link.</a></li>
     </ul>
+  </div>
 
+  <div>
     <label for="wake-up-time">Wake Up Time</label>
 
     <input
@@ -72,19 +68,19 @@
       id="wake-up-time"
     />
 
-    <div class="c-form__help">
+    <small>
       We use this to know when to wake you up.
-    </div>
-  </div>
+    </small>
 
-  <div class="c-form__field">
-    <ul class="c-form__errors" style="display:none;">
+    <ul style="display:none;">
       <li>Sample <strong>form</strong> error. <a href="#">Link.</a></li>
     </ul>
+  </div>
 
+  <div>
     <label>Radio stations</label>
 
-    <ul id="radio-stations">
+    <menu id="radio-stations">
       <li>
         <label for="radio-stations-0">
           <input
@@ -118,18 +114,18 @@
           OLD 555
         </label>
       </li>
-    </ul>
+    </menu>
 
-    <div class="c-form__help">
+    <small>
       Which radio stations do you prefer?
-    </div>
-  </div>
+    </small>
 
-  <div class="c-form__field has-type-check">
-    <ul class="c-form__errors" style="display:none;">
+    <ul style="display:none;">
       <li>Sample <strong>form</strong> error. <a href="#">Link.</a></li>
     </ul>
+  </div>
 
+  <div class="has-type-check">
     <input
       type="checkbox"
       name="checking-out"
@@ -138,21 +134,21 @@
 
     <label for="checking-out">Checking Out?</label>
 
-    <div class="c-form__help">
+    <small>
       Are you checking out today?
-    </div>
-  </div>
+    </small>
 
-  <div class="c-form__field">
-    <ul class="c-form__errors" style="display:none;">
+    <ul style="display:none;">
       <li>Sample <strong>form</strong> error. <a href="#">Link.</a></li>
     </ul>
+  </div>
 
+  <div>
     <label for="">
       Which fish do you want?
     </label>
 
-    <ul id="which-fish-do-you-want">
+    <menu id="which-fish-do-you-want">
       <li>
         <label for="which-fish-do-you-want-0">
           <input
@@ -208,14 +204,14 @@
           all the fish
         </label>
       </li>
+    </menu>
+
+    <ul style="display:none;">
+      <li>Sample <strong>form</strong> error. <a href="#">Link.</a></li>
     </ul>
   </div>
 
-  <div class="c-form__field">
-    <ul class="c-form__errors" style="display:none;">
-      <li>Sample <strong>form</strong> error. <a href="#">Link.</a></li>
-    </ul>
-
+  <div>
     <label for="hangry-time">Hangry Time</label>
 
     <select name="hangry-time" id="hangry-time">
@@ -230,16 +226,16 @@
       <option value="Midnight">Midnight</option>
     </select>
 
-    <div class="c-form__help">
+    <small>
       At which time of day do you get hangry?
-    </div>
-  </div>
+    </small>
 
-  <div class="c-form__field">
-    <ul class="c-form__errors" style="display:none;">
+    <ul style="display:none;">
       <li>Sample <strong>form</strong> error. <a href="#">Link.</a></li>
     </ul>
+  </div>
 
+  <div>
     <label for="life-story">Life Story</label>
 
     <textarea
@@ -249,16 +245,16 @@
       id="life-story"
     ></textarea>
 
-    <div class="c-form__help">
+    <small>
       Go on, tell me everything.
-    </div>
-  </div>
+    </small>
 
-  <div class="c-form__field">
-    <ul class="c-form__errors" style="display:none;">
+    <ul style="display:none;">
       <li>Sample <strong>form</strong> error. <a href="#">Link.</a></li>
     </ul>
+  </div>
 
+  <div>
     <label for="what-day-is-it">What day is it?</label>
 
     <input
@@ -267,16 +263,16 @@
       id="what-day-is-it"
     />
 
-    <div class="c-form__help">
+    <small>
       Please enter today's date.
-    </div>
-  </div>
+    </small>
 
-  <div class="c-form__field">
-    <ul class="c-form__errors" style="display:none;">
+    <ul style="display:none;">
       <li>Sample <strong>form</strong> error. <a href="#">Link.</a></li>
     </ul>
+  </div>
 
+  <div>
     <label for="your-favorite-picture">Your favorite picture</label>
 
     <input
@@ -285,22 +281,22 @@
       id="your-favorite-picture"
     />
 
-    <div class="c-form__help">
+    <small>
       Upload your favorite image.
       <small>
         Supported types:
         <code>.jpeg</code>,<code>.jpg</code>,<code>.gif</code>,<code>.png</code>
       </small>
-    </div>
-  </div>
+    </small>
 
-  <div class="c-form__field has-spam-check has-required">
-    <ul class="c-form__errors" style="display:none;">
+    <ul style="display:none;">
       <li>Sample <strong>form</strong> error. <a href="#">Link.</a></li>
     </ul>
+  </div>
 
+  <div class="has-spam-check has-required">
     <label for="recaptcha_g9y93gP8">
-      Are you a robot?<span class="c-form__star">*</span>
+      Are you a robot?<span aria-label="(required)">*</span>
     </label>
 
     <script src="https://www.google.com/recaptcha/api.js"></script>
@@ -310,16 +306,20 @@
       {console.log("reCAPTCHA validated for 'data-widget-uuid=\"9e32f28ccb9545109ff6ae891f9af324\"'")};
     </script>
     <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" required="" id="recaptcha_g9y93gP8" data-widget-uuid="9e32f28ccb9545109ff6ae891f9af324" data-callback="onSubmit_9e32f28ccb9545109ff6ae891f9af324" data-size="normal"></div>
+
+    <ul style="display:none;">
+      <li>Sample <strong>form</strong> error. <a href="#">Link.</a></li>
+    </ul>
   </div>
 
-  <footer class="c-form__buttons">
-    <button class="c-form__button" type="submit">
+  <footer>
+    <button type="submit">
       Submit
     </button>
-    <button id="toggle-field-errors" class="c-form__button" type="button">
+    <button id="toggle-field-errors" type="button">
       Toggle Field Errors
     </button>
-    <button id="toggle-required-fields" class="c-form__button" type="button">
+    <button id="toggle-required-fields" type="button">
       Toggle Required Fields
     </button>
   </footer>
@@ -334,7 +334,10 @@
     const form = document.querySelector('form');
 
     toggle.addEventListener('click', () => {
-      toggleFieldErrors( form, '.c-form__errors');
+      toggleFieldErrors( form, `
+        :where(.s-form > ul),
+        :where(.s-form > div > ul)
+      `);
     });
   });
 </script>
@@ -346,7 +349,7 @@
     const form = toggle.closest('form');
 
     toggle.addEventListener('click', () => {
-      toggleRequiredFields( form, 'c-form__field', 'has-required', {
+      toggleRequiredFields( form, ':where(.s-form > div)', 'has-required', {
         shouldScrollToFirst: true
       });
     });

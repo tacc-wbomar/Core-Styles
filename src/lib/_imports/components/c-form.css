@@ -5,7 +5,7 @@
 
 /* Title & Description */
 
-:--c-form__desc {
+:--form__desc {
   margin-block: 25px;
 }
 
@@ -13,21 +13,21 @@
 
 /* Help Text */
 
-:--c-form__help {
+:--form__help {
   display: block;
   font-size: var(--global-font-size--small);
   font-style: italic;
 }
-:--c-form__help:where(:not(
-  ul > *, /* FAQ: Lists already have margin-bottom */
-  label > * /* FAQ: Labels already have margin-bottom */
-)) {
+:where(:not(
+  :is(ul, menu), /* FAQ: Lists already have margin-bottom */
+  label /* FAQ: Labels already have margin-bottom */
+)) + :--form__help {
     margin-top: 0.3em; /* mimic Bootstrap _reboot.css label margin-bottom */
 }
 /* To prevent help text font-style from affecting any tags */
 /* FAQ: Help text can contain inline elements like <samp> */
 /* FAQ: Help text can be (ab)used to add headings between form fields */
-:--c-form__help > :where(:not(details, a, samp)) {
+:--form__help > :where(:not(details, a, samp)) {
   font-style: initial;
 }
 
@@ -35,24 +35,24 @@
 
 /* Fields */
 /* TODO: Make fieldset-child <div>s be opt-out automatic field-wrappers.
-    0. [ ] Define `fieldset > div { @extend :--c-form__field; }` ruleset.
+    0. [ ] Define `fieldset > div { @extend :--form__field; }` ruleset.
     1. [ ] Create `.c-form--no-auto-wrappers`.
     2. [ ] Define `.c-form:where(:not(.c-form--no-auto-wrappers)) fieldset > div` rules.
 */
 
-:--c-form__field {
+:--form__field {
   margin-bottom: 2rem; /* mimic <p> `margin-bottom` */
 }
 
-:--c-form__field:where(:not(.has-type-check)) {
+:--form__field:where(:not(.has-type-check)) {
   display: flex;
   flex-direction: column;
 }
-:--c-form__field:where(:not(.has-type-check)) > :--c-form__errors {
+:--cms-form__field:where(:not(.checkboxinput)) > :--cms-form__errors--field {
   order: 1; /* i.e. move to end */
 }
 
-:--c-form__field.has-type-check {
+:--form__field.has-type-check {
   display: inline-grid;
 
   column-gap: 0.5em;
@@ -63,51 +63,51 @@
     'input label'
     'notes notes';
 }
-:--c-form__field.has-type-check :--c-form__errors { grid-area: error; }
-:--c-form__field.has-type-check input             { grid-area: input; }
-:--c-form__field.has-type-check label             { grid-area: label; }
-:--c-form__field.has-type-check :--c-form__help   { grid-area: notes; }
-:--c-form__field.has-type-check label {
+:--form__field.has-type-check :--form__errors { grid-area: error; }
+:--form__field.has-type-check input           { grid-area: input; }
+:--form__field.has-type-check label           { grid-area: label; }
+:--form__field.has-type-check :--form__help   { grid-area: notes; }
+:--form__field.has-type-check label {
   margin-bottom: 0; /* overwrite forms.css label */
 }
 
-:--c-form__field > ul:where(:not(:--c-form__errors)) label {
+:--form__menu label {
   display: flex;
   gap: 0.5em;
   align-items: center;
   font-weight: revert; /* undo html-elements.cms.css */
 }
-:--c-form__field > ul:where(:not(:--c-form__errors)) li:last-child label {
+:--form__menu li:last-child label {
   margin-bottom: 0; /* overwrite forms.css label */
 }
 
 /* Field: Required, Asterisk, Important */
 
-:--c-form__star {
+:--form__star {
   margin-left: 0.5em;
 }
-:--c-form__star:where(:--c-form__field.has-required > *) {
+:--form__star:where(:--form__field.has-required *) {
   color: var(--global-color-danger--dark);
 }
-:--c-form__star:where(:not(:--c-form__field.has-required > *))
+:--form__star:where(:not(:--form__field.has-required *))
 /* NOTE: Manual markup ONLY; form plugin can't render non-required asterisk */ {
   color: var(--global-color-warning--dark);
 }
 /* To replace asterisk character with text */
-:--c-form__star {
+:--form__star {
   width: 0;
   display: inline-block;
   visibility: hidden;
   line-height: 0;
 }
-:--c-form__star::after {
+:--form__star::after {
   visibility: visible;
   line-height: initial;
 }
-:--c-form__star:where(:--c-form__field.has-required > *)::after {
+:--form__star:where(:--form__field.has-required *)::after {
   content: '(required)';
 }
-:--c-form__star:where(:not(:--c-form__field.has-required > *))::after
+:--form__star:where(:not(:--form__field.has-required *))::after
 /* NOTE: Manual markup ONLY; form plugin can't render non-required asterisk */ {
   content: '(important)';
 }
@@ -116,11 +116,11 @@
 
 /* Errors */
 
-ul:--c-form__errors {
+ul:--form__errors {
   list-style: none;
   padding-inline: 0;
 }
-ul:--c-form__errors--field {
+ul:--form__errors--field {
   margin-top: 1rem; /* mimic ul margin-bottom */
   margin-bottom: 0; /* overwrite ul margin-bottom */
 }
@@ -129,7 +129,7 @@ ul:--c-form__errors--field {
 
 /* Lists */
 
-:--c-form__field > ul:where(:not(:--c-form__errors)) {
+:--form__field > menu {
   list-style: none;
 
   padding-left: 0;
@@ -139,25 +139,25 @@ ul:--c-form__errors--field {
 
 /* Buttons */
 
-:--c-form__buttons {
+:--form__buttons {
   margin-top: 35px;
 }
 
 /* To style obvious buttons that neglect class */
-:--c-form__buttons button[type="submit"] {
+:--form__buttons button[type="submit"] {
   @extend :--c-button;
   @extend :--c-button--primary;
 }
 
-:--c-form__button {
+:--form__button {
   @extend :--c-button;
 }
-:--c-form__button[type="submit"] {
+:--form__button[type="submit"] {
   @extend :--c-button--primary;
 }
-:--c-form__button:where(:not([type="submit"], [type="reset"])) {
+:--form__button:where(:not([type="submit"], [type="reset"])) {
   @extend :--c-button--secondary;
 }
-:--c-form__button[type="reset"] {
+:--form__button[type="reset"] {
   @extend :--c-button--tertiary;
 }
