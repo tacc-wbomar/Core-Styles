@@ -3,8 +3,7 @@
 - [Use **All** of Core Styles](#use-all-of-core-styles)
 - [Use **Some** of Core Styles](#use-some-of-core-styles)
 - [(Auxiliary) Core Styles in **React**](#auxiliary-core-styles-in-react)
-
-_If you want to learn how to _author_ CSS like is done for [Core Styles], then visit the [CSS Style Guide]._
+- [(Internal) Style Guide](#internal-style-guide)
 
 ## Use **All** of [Core Styles]
 
@@ -168,6 +167,10 @@ To use a pattern but also change it to fit a unique requirement of your site.
 ## (Auxiliary) Core Styles in [React]
 
 See [how Core Styles can be used in React with CSS Modules](https://github.com/TACC/tup-ui/blob/9402505/apps/tup-ui/src/styles/README.md#use-core-styles).
+
+## (Internal) Style Guide
+
+To _author_ CSS like is done for [Core Styles], follow TACC's [CSS Style Guide]._
 
 [core styles]: https://github.com/TACC/Core-Styles
 [css style guide]: https://confluence.tacc.utexas.edu/display/~wbomar/Shared+UI+-+CSS+-+Style+Guide
