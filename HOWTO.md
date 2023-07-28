@@ -1,7 +1,7 @@
 # Core Styles - How To
 
 - [Use **All** of Core Styles](#use-all-of-core-styles)
-- [Use **Some** of Core Styles](#use-all-of-core-styles)
+- [Use **Some** of Core Styles](#use-some-of-core-styles)
 
 <small>If you want to learn how to _author_ CSS like [Core Styles], then visit the [CSS Style Guide].</small>
 
