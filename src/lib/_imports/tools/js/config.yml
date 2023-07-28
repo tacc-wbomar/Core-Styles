@@ -1,0 +1,11 @@
+label: (Internal) JS
+context:
+  links:
+    - name:   <code>toggle-field-errors.js</code>
+      href: '/components/raw/js/toggle-field-errors.js'
+      id:     toggle-field-errors
+      target: _blank
+    - name:   <code>toggle-required-fields.js</code>
+      href: '/components/raw/js/toggle-required-fields.js'
+      id:     toggle-required-fields.js
+      target: _blank
