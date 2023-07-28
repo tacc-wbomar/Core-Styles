@@ -10,7 +10,7 @@ _If you want to learn how to _author_ CSS like is done for [Core Styles], then v
 
 > This method expects no other website theme is present. If you must build atop an exisitng theme, then [Use **Some** of Core Styles](#use-some-of-core-styles).
 
-To apply and have access to all of [Core Styles], load stylesheets according to [MCSS](https://confluence.tacc.utexas.edu/x/b53tDg), use Core Styles' "Base" and "Project".
+Load stylesheets (as needed) in this order. The Core Styles "Base" is required. A Core-Styles' "Project" is recommended.[^3]
 
 0. [Foundation](#0-foundation)
 1. [**Base**](#1-base)
@@ -176,3 +176,4 @@ See [how Core Styles can be used in React with CSS Modules](https://github.com/T
 
 [^1]: Core-Styles testing with a [reset, normalize, or reboot][foundation] has onyl been atop Bootstrap 4's `reboot.scss`.
 [^2]: If you have access, [report issues in JIRA "WP" Project](https://jira.tacc.utexas.edu/projects/WP/issues). Otherwise, [report issues in Github](https://github.com/TACC/Core-Styles/issues).
+[^3]: Stylesheet load order and naming comes from [MCSS](https://confluence.tacc.utexas.edu/x/b53tDg).
