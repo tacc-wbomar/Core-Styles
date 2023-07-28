@@ -3,13 +3,13 @@
 - [Use **All** of Core Styles](#use-all-of-core-styles)
 - [Use **Some** of Core Styles](#use-some-of-core-styles)
 
-<small>If you want to learn how to _author_ CSS like [Core Styles], then visit the [CSS Style Guide].</small>
+_If you want to learn how to _author_ CSS like is done for [Core Styles], then visit the [CSS Style Guide]._
 
 ## Use **All** of [Core Styles]
 
-> This method expects no other website theme is present. If you need to build atop an exisitng theme, then follow [Use **Some** of Core Styles](#use-some-of-core-styles) instead.
+> This method expects no other website theme is present. If you must build atop an exisitng theme, then [Use **Some** of Core Styles](#use-some-of-core-styles) instead.
 
-To apply and have access to all of [Core Styles] load stylesheets according to [MCSS](https://confluence.tacc.utexas.edu/x/b53tDg) using "Base" and "Project" styles provided by [TACC/Core-Styles](https://github.com/TACC/Core-Styles).
+To apply and have access to all of [Core Styles], load stylesheets according to [MCSS](https://confluence.tacc.utexas.edu/x/b53tDg), use Core Styles' "Base" and "Project".
 
 0. [Foundation](#0-foundation)
 1. [**Base**](#1-base)
@@ -18,11 +18,11 @@ To apply and have access to all of [Core Styles] load stylesheets according to [
 
 ### 0. Foundation
 
-__<u>Not</u> necessary.__ <small>We prefer you use Core-Styles without Bootstrap.</small>
+__<u>Not</u> necessary.__ _We prefer you use Core-Styles without Bootstrap._
 
-__If__ your project requires Bootstrap (e.g. [Django CMS](https://www.django-cms.org/)), __then__ load Bootstrap 4.0.0 first. <small>Versions greater than Bootstrap 4.0.0 have not been tested with Core-Styles. Compatibility is not guaranteed.</small>
+__If__ your project requires Bootstrap (e.g. [Django CMS](https://www.django-cms.org/)), __then__ load Bootstrap 4 first. _[Compatibility](./docs/bootstrap.md) not guaranteed beyond Bootstrap 4._
 
-__If__ you want your project to use a [reset, normalize, or reboot](https://css-tricks.com/reboot-resets-reasoning/), __then__ load it first. <small>Core-Styles has not been tested with these. Compatibility is desired. Please report issues that arise. If you have access, [report issues in JIRA "TUP" Project](https://jira.tacc.utexas.edu/projects/TUP/issues). Otherwise, [report issues in Github](https://github.com/TACC/Core-Styles/issues).</small>
+__If__ you want your project to use a [reset, normalize, or reboot][foundation], __then__ load it first. _Compatibility desired.[^1] Please report any issues.[^2]_
 
 ### 1. Base
 
@@ -166,3 +166,7 @@ To use a pattern but also change it to fit a unique requirement of your site.
 
 [core styles]: https://github.com/TACC/Core-Styles
 [css style guide]: https://confluence.tacc.utexas.edu/display/~wbomar/Shared+UI+-+CSS+-+Style+Guide
+[foundation]: https://css-tricks.com/reboot-resets-reasoning/
+
+[^1]: Core-Styles testing with a [reset, normalize, or reboot][foundation] has onyl been atop Bootstrap 4's `reboot.scss`.
+[^2]: If you have access, [report issues in JIRA "WP" Project](https://jira.tacc.utexas.edu/projects/WP/issues). Otherwise, [report issues in Github](https://github.com/TACC/Core-Styles/issues).
