@@ -170,7 +170,7 @@ See [how Core Styles can be used in React with CSS Modules](https://github.com/T
 
 ## (Internal) Style Guide
 
-To _author_ CSS like is done for [Core Styles], follow TACC's [CSS Style Guide]._
+To _author_ CSS like is done for [Core Styles], follow TACC's [CSS Style Guide].
 
 [core styles]: https://github.com/TACC/Core-Styles
 [css style guide]: https://confluence.tacc.utexas.edu/display/~wbomar/Shared+UI+-+CSS+-+Style+Guide
