@@ -14,15 +14,11 @@
 /* Help Text */
 
 :--form__help {
-  display: block;
+  display: block; /* FAQ: An inline element tag may be used */
+  margin-top: 0.3em; /* mimic Bootstrap _reboot.css label margin-bottom */
+
   font-size: var(--global-font-size--small);
   font-style: italic;
-}
-:where(:not(
-  :is(ul, menu), /* FAQ: Lists already have margin-bottom */
-  label /* FAQ: Labels already have margin-bottom */
-)) + :--form__help {
-    margin-top: 0.3em; /* mimic Bootstrap _reboot.css label margin-bottom */
 }
 /* To prevent help text font-style from affecting any tags */
 /* FAQ: Help text can contain inline elements like <samp> */
@@ -44,10 +40,6 @@
   margin-bottom: 2rem; /* mimic <p> `margin-bottom` */
 }
 
-:--form__field:where(:not(.has-type-check)) {
-  display: flex;
-  flex-direction: column;
-}
 :--cms-form__field:where(:not(.checkboxinput)) > :--cms-form__errors--field {
   order: 1; /* i.e. move to end */
 }
@@ -59,8 +51,8 @@
   align-items: center;
   grid-template-columns: min-content auto; /* shrink input, let label extend */
   grid-template-areas:
-    'error _____'
     'input label'
+    'error error'
     'notes notes';
 }
 :--form__field.has-type-check :--form__errors { grid-area: error; }
@@ -118,7 +110,7 @@
 
 ul:--form__errors {
   list-style: none;
-  padding-inline: 0;
+  padding-left: 0;
 }
 ul:--form__errors--field {
   margin-top: 1rem; /* mimic ul margin-bottom */
@@ -127,11 +119,10 @@ ul:--form__errors--field {
 
 
 
-/* Lists */
+/* Menus (Input Lists) */
 
-:--form__field > menu {
+:--form__menu {
   list-style: none;
-
   padding-left: 0;
 }
 

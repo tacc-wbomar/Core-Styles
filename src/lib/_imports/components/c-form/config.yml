@@ -1,3 +1,20 @@
+context:
+  inputListTag: ul
+  selectors:
+    errorList: .c-form__errors
+  classNames:
+    root: c-form
+    title: c-form__title
+    desc: c-form__desc
+    errors: c-form__errors
+    field: c-form__field
+    badge: c-form__star
+    has_required: has-required
+    hint: c-form__help
+    has_checkbox: has-type-check
+    has_spam_filter: has-spam-check
+    buttons: c-form__buttons
+    button: c-form__button
 variants:
   - name: default
     status: prototype

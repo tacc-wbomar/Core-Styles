@@ -6,7 +6,6 @@
  * @type {object.<string,*>}
  */
  const DEFAULT_CLASS_NAMES = {
-  errorList: null,
   jsIs: 'js-is-required',
   jsNot: 'js-not-required'
 };
@@ -55,16 +54,11 @@ function requireField( field, classNames ) {
 /**
  * Toggle required attribute (and classes) of fields (and field wrappers)
  * @param {Document|HTMLElement} [scope=document] - where to search for fields
- * @param {string} [wrapClass] - class on all field wrappers
- * @param {string} [wrapRequiredClass] - class on required fields' wrappers
  * @param {object.<string,*>} [opts]
  * @param {boolean} [opts.shouldScrollToFirst] - to scroll to first such field
  */
-export default function toggleRequiredFields( scope = document, wrapClass, wrapRequiredClass, opts ) {
-  const classNames = Object.assign( DEFAULT_CLASS_NAMES, {
-    wrap: wrapClass,
-    wrapRequired: wrapRequiredClass
-  });
+export default function toggleRequiredFields( scope = document, opts ) {
+  const classNames = DEFAULT_CLASS_NAMES;
   const options = Object.assign( DEFAULT_OPTIONS, opts );
   const requiredFields = scope.querySelectorAll(`
     [required]:is(input, select, textarea),

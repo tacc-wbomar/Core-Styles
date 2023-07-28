@@ -1,4 +1,12 @@
 context:
+  inputListTag: menu
+  selectors:
+    errorList: :where(.s-form > div > ul)
+  classNames:
+    root: s-form
+    has_required: has-required
+    has_checkbox: has-type-check
+    has_spam_filter: has-spam-check
   supportStyles:
     - ../../assets/components/c-form.css
 variants:

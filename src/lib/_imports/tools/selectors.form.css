@@ -1,5 +1,6 @@
 @custom-selector :--form
-    .c-form;
+    .c-form,
+    .s-form;
 
 @custom-selector :--form__desc
     .c-form__desc,
@@ -38,7 +39,7 @@
     :where(.s-form > div);
 
 @custom-selector :--form__menu
-    .c-form__field > :where(ul, menu),
+    .c-form__field > :where(ul:not(.c-form__errors), menu),
     :where(.s-form > div > menu);
 
 @custom-selector :--cms-form__field
