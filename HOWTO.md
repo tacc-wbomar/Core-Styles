@@ -2,12 +2,13 @@
 
 - [Use **All** of Core Styles](#use-all-of-core-styles)
 - [Use **Some** of Core Styles](#use-some-of-core-styles)
+- [(Auxiliary) Core Styles in **React**](#auxiliary-core-styles-in-react)
 
 _If you want to learn how to _author_ CSS like is done for [Core Styles], then visit the [CSS Style Guide]._
 
 ## Use **All** of [Core Styles]
 
-> This method expects no other website theme is present. If you must build atop an exisitng theme, then [Use **Some** of Core Styles](#use-some-of-core-styles) instead.
+> This method expects no other website theme is present. If you must build atop an exisitng theme, then [Use **Some** of Core Styles](#use-some-of-core-styles).
 
 To apply and have access to all of [Core Styles], load stylesheets according to [MCSS](https://confluence.tacc.utexas.edu/x/b53tDg), use Core Styles' "Base" and "Project".
 
@@ -18,7 +19,7 @@ To apply and have access to all of [Core Styles], load stylesheets according to 
 
 ### 0. Foundation
 
-__<u>Not</u> necessary.__ _We prefer you use Core-Styles without Bootstrap._
+__<u>Not</u> necessary.__ (Also, we prefer you use Core-Styles **without** Bootstrap.)
 
 __If__ your project requires Bootstrap (e.g. [Django CMS](https://www.django-cms.org/)), __then__ load Bootstrap 4 first. _[Compatibility](./docs/bootstrap.md) not guaranteed beyond Bootstrap 4._
 
@@ -164,9 +165,14 @@ To use a pattern but also change it to fit a unique requirement of your site.
     }
     ```
 
+## (Auxiliary) Core Styles in [React]
+
+See [how Core Styles can be used in React with CSS Modules](https://github.com/TACC/tup-ui/blob/9402505/apps/tup-ui/src/styles/README.md#use-core-styles).
+
 [core styles]: https://github.com/TACC/Core-Styles
 [css style guide]: https://confluence.tacc.utexas.edu/display/~wbomar/Shared+UI+-+CSS+-+Style+Guide
 [foundation]: https://css-tricks.com/reboot-resets-reasoning/
+[react]: https://react.dev/
 
 [^1]: Core-Styles testing with a [reset, normalize, or reboot][foundation] has onyl been atop Bootstrap 4's `reboot.scss`.
 [^2]: If you have access, [report issues in JIRA "WP" Project](https://jira.tacc.utexas.edu/projects/WP/issues). Otherwise, [report issues in Github](https://github.com/TACC/Core-Styles/issues).
