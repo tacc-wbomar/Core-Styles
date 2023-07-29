@@ -2,18 +2,20 @@
 {{> @message tag="p" content=. }}
 {{/warning}}
 
+{{#if markup.wrap_start}}
+{{{markup.wrap_start}}}
+{{else}}
 <form action="" method="POST" enctype="multipart/form-data" class="{{ class.root }}">
 
-  <h3 class="{{ class.title }}">Title of Form</h3>
-  <p class="{{ class.desc }}">
-    I describe the form, but not very well.
-  </p>
+  <h3 class="{{ class.title }}">(Optional) Title of Form</h3>
+  <p class="{{ class.desc }}">(Optional) Description of the form.</p>
+{{/if}}
 
-  {{> @form-errors class=class.errors }}
+  {{> @form-errors class=class.errors wrapClass=class.form_errors_wrap }}
 
   <div class="{{ class.field }} {{ class.has_required }}">
     {{#if (eq errorLoc "top")}}
-      {{> @form-errors class=class.errors }}
+      {{> @form-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/if}}
 
     <label for="name">
@@ -29,17 +31,19 @@
     />
 
     {{#unless (eq errorLoc "top")}}
-      {{> @form-errors class=class.errors }}
+      {{> @form-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/unless}}
 
-    <small class="{{ class.hint }}">
+    {{#with helpTextTag as | tag |}}
+    <{{#if tag}}{{tag}}{{else}}small{{/if}} class="{{../class.hint}}">
       We use this to identify your submission.
-    </small>
+    </{{#if tag}}{{tag}}{{else}}small{{/if}}>
+    {{/with}}
   </div>
 
   <div class="{{ class.field }}">
     {{#if (eq errorLoc "top")}}
-      {{> @form-errors class=class.errors }}
+      {{> @form-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/if}}
 
     <label for="favorite-fruit">Favorite Fruit</label>
@@ -57,17 +61,19 @@
     </select>
 
     {{#unless (eq errorLoc "top")}}
-      {{> @form-errors class=class.errors }}
+      {{> @form-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/unless}}
 
-    <small class="{{ class.hint }}">
+    {{#with helpTextTag as | tag |}}
+    <{{#if tag}}{{tag}}{{else}}small{{/if}} class="{{../class.hint}}">
       Choose your favorite fruit.
-    </small>
+    </{{#if tag}}{{tag}}{{else}}small{{/if}}>
+    {{/with}}
   </div>
 
   <div class="{{ class.field }}">
     {{#if (eq errorLoc "top")}}
-      {{> @form-errors class=class.errors }}
+      {{> @form-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/if}}
 
     <label for="wake-up-time">Wake Up Time</label>
@@ -79,23 +85,25 @@
     />
 
     {{#unless (eq errorLoc "top")}}
-      {{> @form-errors class=class.errors }}
+      {{> @form-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/unless}}
 
-    <small class="{{ class.hint }}">
+    {{#with helpTextTag as | tag |}}
+    <{{#if tag}}{{tag}}{{else}}small{{/if}} class="{{../class.hint}}">
       We use this to know when to wake you up.
-    </small>
+    </{{#if tag}}{{tag}}{{else}}small{{/if}}>
+    {{/with}}
   </div>
 
   <div class="{{ class.field }}">
     {{#if (eq errorLoc "top")}}
-      {{> @form-errors class=class.errors }}
+      {{> @form-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/if}}
 
     <label>Radio stations</label>
 
     {{#with inputListTag as | tag |}}
-    <{{#if tag}}{{ tag }}{{else}}menu{{/if}} id="radio-stations">
+    <{{#if tag}}{{tag}}{{else}}menu{{/if}} class="{{../class.radio_menu}}" id="radio-stations">
       <li>
         <label for="radio-stations-0">
           <input
@@ -129,21 +137,23 @@
           OLD 555
         </label>
       </li>
-    </{{#if tag}}{{ tag }}{{else}}menu{{/if}}>
+    </{{#if tag}}{{tag}}{{else}}menu{{/if}}>
     {{/with}}
 
     {{#unless (eq errorLoc "top")}}
-      {{> @form-errors class=class.errors }}
+      {{> @form-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/unless}}
 
-    <small class="{{ class.hint }}">
+    {{#with helpTextTag as | tag |}}
+    <{{#if tag}}{{tag}}{{else}}small{{/if}} class="{{../class.hint}}">
       Which radio stations do you prefer?
-    </small>
+    </{{#if tag}}{{tag}}{{else}}small{{/if}}>
+    {{/with}}
   </div>
 
   <div class="{{ class.field }} {{ class.has_checkbox }}">
     {{#if (eq errorLoc "top")}}
-      {{> @form-errors class=class.errors }}
+      {{> @form-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/if}}
 
     <input
@@ -155,17 +165,19 @@
     <label for="checking-out">Checking Out?</label>
 
     {{#unless (eq errorLoc "top")}}
-      {{> @form-errors class=class.errors }}
+      {{> @form-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/unless}}
 
-    <small class="{{ class.hint }}">
+    {{#with helpTextTag as | tag |}}
+    <{{#if tag}}{{tag}}{{else}}small{{/if}} class="{{../class.hint}}">
       Are you checking out today?
-    </small>
+    </{{#if tag}}{{tag}}{{else}}small{{/if}}>
+    {{/with}}
   </div>
 
   <div class="{{ class.field }}">
     {{#if (eq errorLoc "top")}}
-      {{> @form-errors class=class.errors }}
+      {{> @form-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/if}}
 
     <label for="">
@@ -173,7 +185,7 @@
     </label>
 
     {{#with inputListTag as | tag |}}
-    <{{#if tag}}{{ tag }}{{else}}menu{{/if}} id="which-fish-do-you-want">
+    <{{#if tag}}{{tag}}{{else}}menu{{/if}} class="{{../class.check_menu}}" id="which-fish-do-you-want">
       <li>
         <label for="which-fish-do-you-want-0">
           <input
@@ -229,17 +241,17 @@
           all the fish
         </label>
       </li>
-    </{{#if tag}}{{ tag }}{{else}}menu{{/if}}>
+    </{{#if tag}}{{tag}}{{else}}menu{{/if}}>
     {{/with}}
 
     {{#unless (eq errorLoc "top")}}
-      {{> @form-errors class=class.errors }}
+      {{> @form-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/unless}}
   </div>
 
   <div class="{{ class.field }}">
     {{#if (eq errorLoc "top")}}
-      {{> @form-errors class=class.errors }}
+      {{> @form-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/if}}
 
     <label for="hangry-time">Hangry Time</label>
@@ -257,17 +269,19 @@
     </select>
 
     {{#unless (eq errorLoc "top")}}
-      {{> @form-errors class=class.errors }}
+      {{> @form-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/unless}}
 
-    <small class="{{ class.hint }}">
+    {{#with helpTextTag as | tag |}}
+    <{{#if tag}}{{tag}}{{else}}small{{/if}} class="{{../class.hint}}">
       At which time of day do you get hangry?
-    </small>
+    </{{#if tag}}{{tag}}{{else}}small{{/if}}>
+    {{/with}}
   </div>
 
   <div class="{{ class.field }}">
     {{#if (eq errorLoc "top")}}
-      {{> @form-errors class=class.errors }}
+      {{> @form-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/if}}
 
     <label for="life-story">Life Story</label>
@@ -280,17 +294,19 @@
     ></textarea>
 
     {{#unless (eq errorLoc "top")}}
-      {{> @form-errors class=class.errors }}
+      {{> @form-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/unless}}
 
-    <small class="{{ class.hint }}">
+    {{#with helpTextTag as | tag |}}
+    <{{#if tag}}{{tag}}{{else}}small{{/if}} class="{{../class.hint}}">
       Go on, tell me everything.
-    </small>
+    </{{#if tag}}{{tag}}{{else}}small{{/if}}>
+    {{/with}}
   </div>
 
   <div class="{{ class.field }}">
     {{#if (eq errorLoc "top")}}
-      {{> @form-errors class=class.errors }}
+      {{> @form-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/if}}
 
     <label for="what-day-is-it">What day is it?</label>
@@ -302,17 +318,19 @@
     />
 
     {{#unless (eq errorLoc "top")}}
-      {{> @form-errors class=class.errors }}
+      {{> @form-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/unless}}
 
-    <small class="{{ class.hint }}">
+    {{#with helpTextTag as | tag |}}
+    <{{#if tag}}{{tag}}{{else}}small{{/if}} class="{{../class.hint}}">
       Please enter today's date.
-    </small>
+    </{{#if tag}}{{tag}}{{else}}small{{/if}}>
+    {{/with}}
   </div>
 
   <div class="{{ class.field }}">
     {{#if (eq errorLoc "top")}}
-      {{> @form-errors class=class.errors }}
+      {{> @form-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/if}}
 
     <label for="your-favorite-picture">Your favorite picture</label>
@@ -324,16 +342,18 @@
     />
 
     {{#unless (eq errorLoc "top")}}
-      {{> @form-errors class=class.errors }}
+      {{> @form-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/unless}}
 
-    <small class="{{ class.hint }}">
+    {{#with helpTextTag as | tag |}}
+    <{{#if tag}}{{tag}}{{else}}small{{/if}} class="{{../class.hint}}">
       Upload your favorite image.
-      <small class="{{ class.hint }}">
+      <small class="{{../class.hint}}">
         Supported types:
         <code>.jpeg</code>,<code>.jpg</code>,<code>.gif</code>,<code>.png</code>
       </small>
-    </small>
+    </{{#if tag}}{{tag}}{{else}}small{{/if}}>
+    {{/with}}
   </div>
 
   <div class="{{ class.field }} {{ class.has_spam_filter }} {{ class.has_required }}">
@@ -362,10 +382,14 @@
     </button>
   </footer>
 
+{{#if markup.wrap_end}}
+{{{markup.wrap_end}}}
+{{else}}
 </form>
+{{/if}}
 
 <script type="module">
-  import toggleFieldErrors from '{{ path "/components/raw/js/toggle-field-errors.js" }}';
+  import toggleFieldErrors from '{{ path "/components/raw/forms/toggle-field-errors.js" }}';
 
   document.addEventListener('DOMContentLoaded', () => {
     const toggle = document.getElementById('toggle-field-errors');
@@ -378,7 +402,7 @@
   });
 </script>
 <script type="module">
-  import toggleRequiredFields from '{{ path "/components/raw/js/toggle-required-fields.js" }}';
+  import toggleRequiredFields from '{{ path "/components/raw/forms/toggle-required-fields.js" }}';
 
   document.addEventListener('DOMContentLoaded', () => {
     const toggle = document.getElementById('toggle-required-fields');

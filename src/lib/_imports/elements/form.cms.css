@@ -33,7 +33,8 @@ label:not(
   margin-bottom: 0.75em;
 }
 /* To avoid extra space between label and list of inputs */
-label + :is(ul, menu) {
+label + :is(ul, menu),
+.checkboxinput .errorlist /* django-cms-forms */ {
   margin-top: unset;
 }
 

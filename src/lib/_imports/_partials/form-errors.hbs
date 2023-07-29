@@ -1,3 +1,9 @@
-<ul class="{{ class }}" style="display:none;">
-  <li>Sample <strong>form</strong> error. <a href="https://example.com" target="_blank">Link.</a></li>
-</ul>
+{{#if wrapClass}}
+<div class="{{ wrapClass }}" style="display:none;">
+{{/if}}
+  <ul class="{{ class }}"{{#unless wrapClass}} style="display:none;"{{/unless}}>
+    <li>Sample <strong>form</strong> error. <a href="https://example.com" target="_blank">Link.</a></li>
+  </ul>
+{{#if wrapClass}}
+</div>
+{{/if}}

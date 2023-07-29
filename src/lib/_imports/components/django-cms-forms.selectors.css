@@ -1,0 +1,38 @@
+@custom-selector :--cms-form
+    .forms;
+
+@custom-selector :--cms-form__title
+    .title;
+@custom-selector :--cms-form__desc
+    .description;
+
+/* !!!: Will break (does NOT work like .c-form nor .s-form) */
+@custom-selector :--cms-form__errors
+    :where(.form-errors, .field-errors);
+@custom-selector :--cms-form__errors_list
+    .errorlist;
+@custom-selector :--cms-form__errors--form /* submission errors */
+    :where(.form-errors .errorlist);
+@custom-selector :--cms-form__errors--field /* validation errors */
+    :where(.field-errors .errorlist);
+
+@custom-selector :--cms-form__field
+    .field-wrapper;
+@custom-selector :--cms-form__field--has-required
+    :--cms-form__field.required;
+@custom-selector :--cms-form__field--has-checkbox
+    :--cms-form__field.checkboxinput;
+
+@custom-selector :--cms-form__menu
+    :where(.radioselect, .checkboxselectmultiple);
+
+@custom-selector :--cms-form__help
+    .help-text;
+
+@custom-selector :--cms-form__badge
+    .asterisk;
+
+@custom-selector :--cms-form__buttons
+    .button-wrapper;
+@custom-selector :--cms-form__button
+    .form_button;

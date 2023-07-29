@@ -30,21 +30,17 @@
 
 
 /* Fields */
-/* TODO: Make fieldset-child <div>s be opt-out automatic field-wrappers.
+/* IDEA: Make fieldset-child <div>s be opt-out automatic field-wrappers.
     0. [ ] Define `fieldset > div { @extend :--form__field; }` ruleset.
-    1. [ ] Create `.c-form--no-auto-wrappers`.
-    2. [ ] Define `.c-form:where(:not(.c-form--no-auto-wrappers)) fieldset > div` rules.
+    1. [ ] Create `:--form--no-auto-wrappers`.
+    2. [ ] Define `:--form:where(:not(:--form--no-auto-wrappers)) fieldset > div` rules.
 */
 
 :--form__field {
   margin-bottom: 2rem; /* mimic <p> `margin-bottom` */
 }
 
-:--cms-form__field:where(:not(.checkboxinput)) > :--cms-form__errors--field {
-  order: 1; /* i.e. move to end */
-}
-
-:--form__field.has-type-check {
+:--form__field--has-checkbox {
   display: inline-grid;
 
   column-gap: 0.5em;
@@ -55,11 +51,11 @@
     'error error'
     'notes notes';
 }
-:--form__field.has-type-check :--form__errors { grid-area: error; }
-:--form__field.has-type-check input           { grid-area: input; }
-:--form__field.has-type-check label           { grid-area: label; }
-:--form__field.has-type-check :--form__help   { grid-area: notes; }
-:--form__field.has-type-check label {
+:--form__field--has-checkbox :--form__errors { grid-area: error; }
+:--form__field--has-checkbox input           { grid-area: input; }
+:--form__field--has-checkbox label           { grid-area: label; }
+:--form__field--has-checkbox :--form__help   { grid-area: notes; }
+:--form__field--has-checkbox label {
   margin-bottom: 0; /* overwrite forms.css label */
 }
 
@@ -75,31 +71,31 @@
 
 /* Field: Required, Asterisk, Important */
 
-:--form__star {
+:--form__badge {
   margin-left: 0.5em;
 }
-:--form__star:where(:--form__field.has-required *) {
+:--form__badge:where(:--form__field--has-required *) {
   color: var(--global-color-danger--dark);
 }
-:--form__star:where(:not(:--form__field.has-required *))
+:--form__badge:where(:not(:--form__field--has-required *))
 /* NOTE: Manual markup ONLY; form plugin can't render non-required asterisk */ {
   color: var(--global-color-warning--dark);
 }
 /* To replace asterisk character with text */
-:--form__star {
+:--form__badge {
   width: 0;
   display: inline-block;
   visibility: hidden;
   line-height: 0;
 }
-:--form__star::after {
+:--form__badge::after {
   visibility: visible;
   line-height: initial;
 }
-:--form__star:where(:--form__field.has-required *)::after {
+:--form__badge:where(:--form__field--has-required *)::after {
   content: '(required)';
 }
-:--form__star:where(:not(:--form__field.has-required *))::after
+:--form__badge:where(:not(:--form__field--has-required *))::after
 /* NOTE: Manual markup ONLY; form plugin can't render non-required asterisk */ {
   content: '(important)';
 }
@@ -108,7 +104,7 @@
 
 /* Errors */
 
-ul:--form__errors {
+ul:--form__errors_list {
   list-style: none;
   padding-left: 0;
 }
@@ -130,25 +126,33 @@ ul:--form__errors--field {
 
 /* Buttons */
 
-:--form__buttons {
-  margin-top: 35px;
-}
-
-/* To style obvious buttons that neglect class */
-:--form__buttons button[type="submit"] {
-  @extend :--c-button;
-  @extend :--c-button--primary;
-}
-
 :--form__button {
   @extend :--c-button;
 }
 :--form__button[type="submit"] {
   @extend :--c-button--primary;
 }
-:--form__button:where(:not([type="submit"], [type="reset"])) {
+:--form__button[type="button"] {
   @extend :--c-button--secondary;
 }
 :--form__button[type="reset"] {
+  @extend :--c-button--tertiary;
+}
+
+:--form__buttons {
+  margin-top: 35px;
+}
+/* To style obvious buttons that neglect class */
+/* FAQ: I think I saw this on APCD… */
+:--form__buttons button:not(:--form__button) {
+  @extend :--c-button;
+}
+:--form__buttons button:not(:--form__button)[type="submit"] {
+  @extend :--c-button--primary;
+}
+:--form__buttons button:not(:--form__button)[type="button"] {
+  @extend :--c-button--secondary;
+}
+:--form__buttons button:not(:--form__button)[type="reset"] {
   @extend :--c-button--tertiary;
 }

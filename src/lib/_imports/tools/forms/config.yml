@@ -1,0 +1,15 @@
+label: Forms
+context:
+  links:
+    - name:  '<strong>S Form</strong>: few classes, very strict markup'
+      href:  '/components/detail/s-form'
+      id:     s-form
+      target: _blank
+    - name:  '<strong>C Form</strong>: many classes, some flexible markup'
+      href:  '/components/detail/c-form'
+      id:     c-form
+      target: _blank
+    - name:  '<strong>Django CMS Forms (3rd-party)</strong>: very many classes, very strict markup'
+      href:  '/components/detail/django-cms-forms'
+      id:     django-cms-forms
+      target: _blank

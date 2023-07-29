@@ -5,7 +5,7 @@
 
 /* Errors */
 
-.form-errors {
+.form-errors ul {
   @extend :--c-message;
   @extend :--c-message--type;
   @extend :--c-message--type-error;

@@ -1,4 +1,5 @@
 context:
+  helpTextTag: div
   inputListTag: ul
   selectors:
     errorList: .c-form__errors
@@ -9,8 +10,8 @@ context:
     errors: c-form__errors
     field: c-form__field
     badge: c-form__star
-    has_required: has-required
     hint: c-form__help
+    has_required: has-required
     has_checkbox: has-type-check
     has_spam_filter: has-spam-check
     buttons: c-form__buttons

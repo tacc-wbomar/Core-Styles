@@ -1,7 +1,8 @@
 context:
+  helpTextTag: small
   inputListTag: menu
   selectors:
-    errorList: :where(.s-form > div > ul)
+    errorList: :where(.s-form > ul), :where(.s-form > div > ul)
   classNames:
     root: s-form
     has_required: has-required
