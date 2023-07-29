@@ -11,6 +11,7 @@
 :--cms-form__field--no-checkbox {
   display: flex;
   flex-direction: column;
+  width: max-content;
 }
 :--cms-form__field--no-checkbox > .field-errors { order: 1; }
 :--cms-form__field--no-checkbox > .help-text    { order: 2; }
