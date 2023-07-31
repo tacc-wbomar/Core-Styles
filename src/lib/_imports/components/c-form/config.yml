@@ -27,3 +27,17 @@ variants:
     status: ready
     context:
       shouldLoadCMS: true
+  - name: alts
+    label: Alternatives
+    context:
+      links:
+        - name:  '<strong>S Form</strong>: few classes, very strict markup'
+          href:  '/components/detail/s-form--default'
+          id:     s-form
+          target: _blank
+          is-internal: true
+        - name:  '<strong>Django CMS Forms (3rd-party)</strong>: very many classes, very strict markup'
+          href:  '/components/detail/django-cms-forms'
+          id:     django-cms-forms
+          target: _blank
+          is-internal: true

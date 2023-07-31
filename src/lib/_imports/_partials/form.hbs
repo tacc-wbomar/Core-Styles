@@ -389,7 +389,7 @@
 {{/if}}
 
 <script type="module">
-  import toggleFieldErrors from '{{ path "/components/raw/forms/toggle-field-errors.js" }}';
+  import toggleFieldErrors from '{{ path "/components/raw/c-form/toggle-field-errors.js" }}';
 
   document.addEventListener('DOMContentLoaded', () => {
     const toggle = document.getElementById('toggle-field-errors');
@@ -402,7 +402,7 @@
   });
 </script>
 <script type="module">
-  import toggleRequiredFields from '{{ path "/components/raw/forms/toggle-required-fields.js" }}';
+  import toggleRequiredFields from '{{ path "/components/raw/c-form/toggle-required-fields.js" }}';
 
   document.addEventListener('DOMContentLoaded', () => {
     const toggle = document.getElementById('toggle-required-fields');
