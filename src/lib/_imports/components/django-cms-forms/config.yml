@@ -3,8 +3,6 @@ status: ready
 context:
   shouldLoadCMS: true
   📝 shouldLoadCMS: because this is demo but this is CMS pattern
-  shouldSkipPattern: false
-  📝 shouldSkipPattern: because core-styles.….css does not import this
   markup:
     wrap_start: |2
       <div class="forms">
