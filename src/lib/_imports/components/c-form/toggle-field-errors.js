@@ -78,7 +78,7 @@ export default function toggleErrorLists( scope, selector, optCallbacks ) {
   const classNames = DEFAULT_CLASS_NAMES;
   const callbacks = Object.assign( DEFAULT_CALLBACKS, optCallbacks );
   const lists = scope.querySelectorAll( selector );
-console.log({ lists, selector });
+
   let didHide = false;
   let didShow = false;
 
