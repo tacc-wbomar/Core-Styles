@@ -1,4 +1,5 @@
 label: Django CMS Forms
+status: ready
 context:
   shouldLoadCMS: true
   📝 shouldLoadCMS: because this is demo but this is CMS pattern

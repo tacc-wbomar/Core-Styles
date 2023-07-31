@@ -11,12 +11,13 @@ context:
     has_spam_filter: has-spam-check
 variants:
   - name: default
-    status: prototype
+    status: wip
   - name: portal
+    status: wip
     context:
       shouldLoadPortal: true
   - name: cms
     label: CMS
-    status: ready
+    status: wip
     context:
       shouldLoadCMS: true
