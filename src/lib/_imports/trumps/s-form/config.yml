@@ -3,6 +3,7 @@ context:
   inputListTag: menu
   selectors:
     errorList: :where(.s-form > ul), :where(.s-form > div > ul)
+    wrap: :where(.s-form > div)
   classNames:
     root: s-form
     has_required: has-required

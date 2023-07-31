@@ -3,6 +3,7 @@ context:
   inputListTag: ul
   selectors:
     errorList: .c-form__errors
+    wrap: .c-form__field
   classNames:
     root: c-form
     title: c-form__title

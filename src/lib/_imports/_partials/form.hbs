@@ -410,7 +410,9 @@
 
     toggle.addEventListener('click', () => {
       toggleRequiredFields( form, {
-        shouldScrollToFirst: true
+        shouldScrollToFirst: true,
+        classNames: { wrapRequired: '{{{ classNames.has_required }}}' },
+        selectors: { wrap: '{{{ selectors.wrap }}}' }
       });
     });
   });

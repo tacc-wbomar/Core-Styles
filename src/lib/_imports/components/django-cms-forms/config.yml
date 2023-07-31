@@ -20,6 +20,7 @@ context:
   inputListTag: ul
   selectors:
     errorList: .form-errors, .field-errors
+    wrap: .field-wrapper
   classNames:
     title: title
     desc: description
