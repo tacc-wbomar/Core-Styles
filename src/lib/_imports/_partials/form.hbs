@@ -15,7 +15,7 @@
 
   <div class="{{ class.field }} {{ class.has_required }}">
     {{#if (eq errorLoc "top")}}
-      {{> @form-errors class=class.errors wrapClass=class.field_errors_wrap }}
+      {{> @field-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/if}}
 
     <label for="name">
@@ -31,7 +31,7 @@
     />
 
     {{#unless (eq errorLoc "top")}}
-      {{> @form-errors class=class.errors wrapClass=class.field_errors_wrap }}
+      {{> @field-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/unless}}
 
     {{#with helpTextTag as | tag |}}
@@ -43,7 +43,7 @@
 
   <div class="{{ class.field }}">
     {{#if (eq errorLoc "top")}}
-      {{> @form-errors class=class.errors wrapClass=class.field_errors_wrap }}
+      {{> @field-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/if}}
 
     <label for="favorite-fruit">Favorite Fruit</label>
@@ -61,7 +61,7 @@
     </select>
 
     {{#unless (eq errorLoc "top")}}
-      {{> @form-errors class=class.errors wrapClass=class.field_errors_wrap }}
+      {{> @field-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/unless}}
 
     {{#with helpTextTag as | tag |}}
@@ -73,7 +73,7 @@
 
   <div class="{{ class.field }}">
     {{#if (eq errorLoc "top")}}
-      {{> @form-errors class=class.errors wrapClass=class.field_errors_wrap }}
+      {{> @field-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/if}}
 
     <label for="wake-up-time">Wake Up Time</label>
@@ -85,7 +85,7 @@
     />
 
     {{#unless (eq errorLoc "top")}}
-      {{> @form-errors class=class.errors wrapClass=class.field_errors_wrap }}
+      {{> @field-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/unless}}
 
     {{#with helpTextTag as | tag |}}
@@ -97,7 +97,7 @@
 
   <div class="{{ class.field }}">
     {{#if (eq errorLoc "top")}}
-      {{> @form-errors class=class.errors wrapClass=class.field_errors_wrap }}
+      {{> @field-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/if}}
 
     <label>Radio stations</label>
@@ -141,7 +141,7 @@
     {{/with}}
 
     {{#unless (eq errorLoc "top")}}
-      {{> @form-errors class=class.errors wrapClass=class.field_errors_wrap }}
+      {{> @field-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/unless}}
 
     {{#with helpTextTag as | tag |}}
@@ -153,7 +153,7 @@
 
   <div class="{{ class.field }} {{ class.has_checkbox }}">
     {{#if (eq errorLoc "top")}}
-      {{> @form-errors class=class.errors wrapClass=class.field_errors_wrap }}
+      {{> @field-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/if}}
 
     <input
@@ -165,7 +165,7 @@
     <label for="checking-out">Checking Out?</label>
 
     {{#unless (eq errorLoc "top")}}
-      {{> @form-errors class=class.errors wrapClass=class.field_errors_wrap }}
+      {{> @field-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/unless}}
 
     {{#with helpTextTag as | tag |}}
@@ -177,7 +177,7 @@
 
   <div class="{{ class.field }}">
     {{#if (eq errorLoc "top")}}
-      {{> @form-errors class=class.errors wrapClass=class.field_errors_wrap }}
+      {{> @field-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/if}}
 
     <label for="">
@@ -245,13 +245,13 @@
     {{/with}}
 
     {{#unless (eq errorLoc "top")}}
-      {{> @form-errors class=class.errors wrapClass=class.field_errors_wrap }}
+      {{> @field-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/unless}}
   </div>
 
   <div class="{{ class.field }}">
     {{#if (eq errorLoc "top")}}
-      {{> @form-errors class=class.errors wrapClass=class.field_errors_wrap }}
+      {{> @field-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/if}}
 
     <label for="hangry-time">Hangry Time</label>
@@ -269,7 +269,7 @@
     </select>
 
     {{#unless (eq errorLoc "top")}}
-      {{> @form-errors class=class.errors wrapClass=class.field_errors_wrap }}
+      {{> @field-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/unless}}
 
     {{#with helpTextTag as | tag |}}
@@ -281,7 +281,7 @@
 
   <div class="{{ class.field }}">
     {{#if (eq errorLoc "top")}}
-      {{> @form-errors class=class.errors wrapClass=class.field_errors_wrap }}
+      {{> @field-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/if}}
 
     <label for="life-story">Life Story</label>
@@ -294,7 +294,7 @@
     ></textarea>
 
     {{#unless (eq errorLoc "top")}}
-      {{> @form-errors class=class.errors wrapClass=class.field_errors_wrap }}
+      {{> @field-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/unless}}
 
     {{#with helpTextTag as | tag |}}
@@ -306,7 +306,7 @@
 
   <div class="{{ class.field }}">
     {{#if (eq errorLoc "top")}}
-      {{> @form-errors class=class.errors wrapClass=class.field_errors_wrap }}
+      {{> @field-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/if}}
 
     <label for="what-day-is-it">What day is it?</label>
@@ -318,7 +318,7 @@
     />
 
     {{#unless (eq errorLoc "top")}}
-      {{> @form-errors class=class.errors wrapClass=class.field_errors_wrap }}
+      {{> @field-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/unless}}
 
     {{#with helpTextTag as | tag |}}
@@ -330,7 +330,7 @@
 
   <div class="{{ class.field }}">
     {{#if (eq errorLoc "top")}}
-      {{> @form-errors class=class.errors wrapClass=class.field_errors_wrap }}
+      {{> @field-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/if}}
 
     <label for="your-favorite-picture">Your favorite picture</label>
@@ -342,7 +342,7 @@
     />
 
     {{#unless (eq errorLoc "top")}}
-      {{> @form-errors class=class.errors wrapClass=class.field_errors_wrap }}
+      {{> @field-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/unless}}
 
     {{#with helpTextTag as | tag |}}
