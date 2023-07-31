@@ -83,14 +83,15 @@
 }
 /* To replace asterisk character with text */
 :--form__badge {
-  width: 0;
   display: inline-block;
   visibility: hidden;
   line-height: 0;
+  font-size: 0;
 }
 :--form__badge::after {
   visibility: visible;
   line-height: initial;
+  font-size: var(--global-font-size--small); /* mimic elements/form.css label */
 }
 :--form__badge:where(:--form__field--has-required *)::after {
   content: '(required)';
