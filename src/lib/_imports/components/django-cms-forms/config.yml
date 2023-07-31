@@ -1,4 +1,9 @@
+label: Django CMS Forms
 context:
+  shouldLoadCMS: true
+  📝 shouldLoadCMS: because this is demo but this is CMS pattern
+  shouldSkipPattern: false
+  📝 shouldSkipPattern: because core-styles.….css does not import this
   markup:
     wrap_start: |2
       <div class="forms">
@@ -31,11 +36,3 @@ context:
     check_menu: checkboxselectmultiple
     buttons: button-wrapper
     button: form-button
-
-  warning: This component is maintained simuiltaneously with <a href="../detail/c-form" target="_parent">C Form</code></a> and should look identical. Eventually, the two should have a single source of truth. To learn more, read <a href="https://confluence.tacc.utexas.edu/x/vJd9E" target="_blank">(Confluence) APCD - Form Markup &amp; Styles</a>.
-  shouldLoadCMS: true
-  📝 shouldLoadCMS: because this is demo but this is CMS pattern
-  shouldSkipPattern: false
-  📝 shouldSkipPattern: because core-styles.….css does not import this
-
-label: Django CMS Forms
