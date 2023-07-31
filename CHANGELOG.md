@@ -9,6 +9,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ...
 
+## [2.15.0] - 2023-07-31: Add `s-form`, Refactor Forms, Document about Bootstrap
+
+### Added
+
+- feat: s-form (and refactor c-form and django-cms-forms) (#207)
+
+### Fixed
+
+- fix: checkbox label should not have margin bottom (#206)
+- fix: less specific c-button not selector (#204)
+
+### Documentation
+
+- docs: cleanup (#208)
+- docs: core styles relationships to bootstrap (#203)
+- docs: add `bootstrap.md` (#202)
+
 ## [2.14.0] - 2023-07-24: `s-affixed-input-wrapper` Enhanced & Moved to Base
 
 ### Added
@@ -708,7 +725,8 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.14.0...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.15.0...HEAD
+[2.15.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.15.0
 [2.14.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.14.0
 [2.13.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.13.0
 [2.12.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.12.0

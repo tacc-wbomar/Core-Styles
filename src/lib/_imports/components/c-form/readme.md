@@ -1,10 +1,4 @@
-To style when raw [Form elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#table_content) are insufficient.
-
-> <details><summary><strong>✎ Inspiration</strong></summary>
->
-> - [Django CMS Form Default Template](https://github.com/avryhof/djangocms-forms/blob/ab38b22/djangocms_forms/templates/djangocms_forms/form_template/default.html)
->
-> </details>
+To style when raw [Form elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#table_content) alone are **not** sufficient.
 
 <script>
 /* To open external links in new window */

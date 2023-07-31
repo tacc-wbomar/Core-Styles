@@ -18,6 +18,7 @@
 @import url("./elements/root.css");
 /* NOTE: Load generic html-elements.css before specific elements/….css */
 @import url("./elements/html-elements.css");
+@import url("./elements/form.css");
 @import url("./elements/links.css");
 @import url("./elements/table.css");
 
@@ -45,6 +46,7 @@
 
 /* TRUMPS */
 @import url("./trumps/s-affixed-input-wrapper.css");
+@import url("./trumps/s-form.css");
 @import url("./trumps/s-blockquote.css");
 @import url("./trumps/s-breadcrumbs.css");
 @import url("./trumps/s-footer.css");
