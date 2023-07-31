@@ -11,8 +11,6 @@ context:
 variants:
   - name: default
     status: prototype
-    context:
-      warning: This component looks better with <code>elements/form.cms.css</code>, but that styles is not loaded by default. To understand the problem, see "Portal" variant.
   - name: portal
     context:
       shouldLoadPortal: true
