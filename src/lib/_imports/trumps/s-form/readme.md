@@ -1,4 +1,4 @@
-To style when raw [Form elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#table_content) alone are **not** sufficient.
+To style when mostly raw [Form elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#table_content) are sufficient.
 
 <script>
 /* To open external links in new window */

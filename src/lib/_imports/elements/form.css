@@ -23,11 +23,19 @@ label {
 li > label:only-child {
   margin-bottom: unset;
 }
-/* To avoid inline labels for raw form elements */
+/* To avoid inline labels for (most) raw form elements */
 /* FAQ: Any specific form styling (e.g. django.cms.forms) manages this */
-:not(input[type="checkbox"]) + label {
+label:not(
+  input[type="checkbox"] + *, /* so checkbox labels are still inline */
+  :is(ul, menu) * /* so menus of radios or checkboxes are still inline */
+) {
   display: block;
   margin-bottom: 0.75em;
+}
+/* To avoid extra space between label and list of inputs */
+label + :is(ul, menu),
+.checkboxinput .errorlist /* django-cms-forms */ {
+  margin-top: unset;
 }
 
 

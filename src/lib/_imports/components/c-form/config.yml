@@ -1,16 +1,44 @@
+context:
+  helpTextTag: div
+  inputListTag: ul
+  selectors:
+    errorList: .c-form__errors
+    wrap: .c-form__field
+  classNames:
+    root: c-form
+    title: c-form__title
+    desc: c-form__desc
+    errors: c-form__errors
+    field: c-form__field
+    badge: c-form__star
+    hint: c-form__help
+    has_required: has-required
+    has_checkbox: has-type-check
+    has_spam_filter: has-spam-check
+    buttons: c-form__buttons
+    button: c-form__button
 variants:
   - name: default
     status: prototype
-    context:
-      warning: This component looks better with <code>elements/form.cms.css</code>, but that styles is not loaded by default. To understand the problem, see "Portal" variant.
-      supportStyles:
-        - ../../assets/components/c-message.css
   - name: portal
     context:
       shouldLoadPortal: true
-      warning: This component looks better with <code>elements/form.cms.css</code>, but that styles is not loaded for this variant. When this component is used on the Portal, those necessary CMS styles are loaded via <code>LoginComponent.module.css</code> specifically for Login page, but incidentally loaded for entire Portal (and thus depended on). When this component is styled accurately independent of CMS, this message should be removed. <small>The solution is likely to change <code>elements/form.cms.css</code> to be <code>elements/form.css</code>.</small>
   - name: cms
     label: CMS
     status: ready
     context:
       shouldLoadCMS: true
+  - name: alts
+    label: Alternatives
+    context:
+      links:
+        - name:  '<strong>S Form</strong>: few classes, very strict markup'
+          href:  '/components/detail/s-form--default'
+          id:     s-form
+          target: _blank
+          is-internal: true
+        - name:  '<strong>Django CMS Forms (3rd-party)</strong>: very many classes, very strict markup'
+          href:  '/components/detail/django-cms-forms'
+          id:     django-cms-forms
+          target: _blank
+          is-internal: true
