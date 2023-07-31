@@ -708,7 +708,8 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.14.0...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.15.0...HEAD
+[2.15.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.15.0
 [2.14.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.14.0
 [2.13.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.13.0
 [2.12.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.12.0
