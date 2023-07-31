@@ -6,7 +6,6 @@
 @custom-selector :--cms-form__desc
     .description;
 
-/* !!!: Will break (does NOT work like .c-form nor .s-form) */
 @custom-selector :--cms-form__errors
     :where(.form-errors, .field-errors);
 @custom-selector :--cms-form__errors_list

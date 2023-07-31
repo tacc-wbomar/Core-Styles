@@ -1,5 +1,8 @@
+/* FAQ: c-form.css styles s-form and django-cms-forms */
+@import url("./c-form.css");
+@import url("./c-form--cms.css");
+
 @import url("./django-cms-forms.hacks.css");
-@import url("./django-cms-forms--errors-via-c-message.css");
 
 /* No other styles necessary, because c-form supports s-form selectors */
 /* SEE ../components/c-form.css */
