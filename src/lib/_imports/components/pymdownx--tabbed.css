@@ -14,7 +14,7 @@
 .tabbed-set > label {
   @extend .x-tabs__tab;
 
-  margin-bottom: unset; /* overwrite form.cms.css which core-style.docs loads */
+  margin-bottom: unset; /* overwrite form.css which core-style.docs loads */
 }
 .tabbed-set > label:hover {
   @extend .x-tabs__tab--hover;
