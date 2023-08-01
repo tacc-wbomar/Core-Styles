@@ -7,6 +7,8 @@
     :--s-form,
     :--cms-form;
 
+/* Generic */
+
 @custom-selector :--form__title
     :--c-form__title,
     :--s-form__title,
@@ -69,3 +71,10 @@
     :--c-form__button,
     :--s-form__button,
     :--cms-form__button;
+
+/* Login */
+
+@custom-selector :--form--login
+    :--c-form--login;
+@custom-selector :--form__nav
+    :--c-form__nav;

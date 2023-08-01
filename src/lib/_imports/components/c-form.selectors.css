@@ -1,6 +1,8 @@
 @custom-selector :--c-form
     .c-form;
 
+/* Generic */
+
 @custom-selector :--c-form__title
     .c-form__title;
 @custom-selector :--c-form__desc
@@ -35,3 +37,10 @@
     .c-form__buttons;
 @custom-selector :--c-form__button
     .c-form__button;
+
+/* Login */
+
+@custom-selector :--c-form--login
+    .c-form--login;
+@custom-selector :--c-form__nav
+    .c-form__nav;
