@@ -1,4 +1,4 @@
-To style a page is only a single form.
+To style a page that has only a single form.
 
 > **☞ Remember**
 >
