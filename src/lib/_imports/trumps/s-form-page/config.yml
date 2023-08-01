@@ -9,4 +9,4 @@ variants:
     label: (Example) Login
     context:
       supportStyles:
-        - ../../assets/components/c-form--login.css
+        - ../../assets/trumps/s-form--login.css
