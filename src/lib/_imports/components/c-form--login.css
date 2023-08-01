@@ -29,11 +29,26 @@
   font-size: 1.6rem;
 }
 
+/* For single image */
 & :--form__title > img {
   display: block; /* to collapse margins with heading */
   margin-inline: auto; /* to re-center image */
   height: 75px;
   margin-bottom: 45px;
+}
+/* For multiple images */
+& :--form__title > figure {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--global-space--grid-gap);
+  margin-top: unset; /* undo browser */
+  margin-inline: unset; /* undo browser and/or core-styles.base.css */
+  margin-bottom: 45px; /* mimic :--form__title > img */
+}
+& :--form__title > figure > img {
+  margin-inline: auto; /* to re-center image */
+  height: 75px; /* mimic :--form__title > img */
 }
 
 & :--form__desc {
