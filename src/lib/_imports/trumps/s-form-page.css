@@ -1,18 +1,18 @@
 @import url("../tools/media-queries.css");
 
-.c-form-page {
+.s-form-page {
   padding-block: var(--global-space--section-gap);
 }
 
-.c-form-page__body,
-.c-form-page__footer {
+.s-form-page > :where(form, div),
+.s-form-page > footer {
   width: 100%;
   max-width: 630px;
 
   margin-inline: auto;
 }
 
-.c-form-page__body {
+.s-form-page > :where(form, div) {
   padding: 50px;
 
   border: var(--global-border--normal);
@@ -25,7 +25,7 @@
   }
 }
 
-.c-form-page__footer {
+.s-form-page > footer {
   display: flex;
   gap: 1.5em;
   margin-top: var(--global-space--normal);
@@ -41,7 +41,7 @@
     justify-content: flex-end;
   }
 }
-.c-form-page__footer a {
+.s-form-page > footer a {
   color: var(--global-color-primary--x-dark);
   font-weight: var(--bold);
 }
