@@ -8,6 +8,7 @@
 .s-form-page > footer {
   width: 100%;
   max-width: 630px;
+  box-sizing: border-box;
 
   margin-inline: auto;
 }
