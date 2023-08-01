@@ -21,3 +21,10 @@ variants:
     status: wip
     context:
       shouldLoadCMS: true
+  - name: login
+    context:
+      classNames:
+        modifier: s-form--login
+      shouldLoadPortal: true
+      supportStyles:
+        - ../../assets/trumps/s-form--login.css

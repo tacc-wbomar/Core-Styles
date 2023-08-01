@@ -75,6 +75,8 @@
 /* Login */
 
 @custom-selector :--form--login
-    :--c-form--login;
+    :--c-form--login,
+    :--s-form--login;
 @custom-selector :--form__nav
-    :--c-form__nav;
+    :--c-form__nav,
+    :--s-form__nav;

@@ -1,3 +1,4 @@
+@import url("../components/c-button.css");
 @import url("../tools/selectors.form.css");
 
 :--form--login {
@@ -66,6 +67,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @extend :--c-button--width-long;
 }
 & :--form__button[type="submit"] {
   padding-block: 10px; /* overrides core-styles.base.css button styles */
