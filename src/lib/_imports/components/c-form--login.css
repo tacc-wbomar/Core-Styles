@@ -1,0 +1,111 @@
+@import url("../components/c-button.css");
+@import url("../tools/selectors.form.css");
+
+:--form--login {
+
+
+
+/* CONTAINER */
+
+& {
+  font-size: 1.6rem;
+  font-family: var(--global-font-family--sans--cms);
+}
+
+
+
+/* TITLE */
+
+& :--form__title,
+& :--form__desc {
+  text-align: center;
+  color: var(--global-color-primary--xx-dark);
+}
+& :--form__title {
+  font-size: 2.4rem;
+  font-weight: var(--black);
+}
+& :--form__desc {
+  font-size: 1.6rem;
+}
+
+& :--form__title img {
+  display: block; /* to collapse margins with heading */
+  margin-inline: auto; /* to re-center image */
+  height: 75px;
+  margin-bottom: 45px;
+}
+
+& :--form__desc {
+  font-weight: var(--medium); /* mimics value (not appearance) from design */
+  margin-block: 25px; /* mimics django-cms-forms.css `.description` */
+}
+
+
+
+/* FORM */
+
+/* To hide "(required)" (which is an obvious attribute on a login form) */
+& :--form__badge {
+  display: none;
+}
+
+/* To make elements bigger */
+& :--form__field {
+  /* To stretch input field width */
+  display: flex;
+  flex-direction: column;
+}
+/* To always use larger field inputs (not just on coarse pointer devices) */
+& input {
+  padding: 12px 12px; /* mimic Core Styles forms.css @media (pointer: coarse) */
+}
+
+
+
+& :--form__buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @extend :--c-button--width-long;
+}
+& :--form__button[type="submit"] {
+  padding-block: 10px; /* overrides core-styles.base.css button styles */
+}
+
+
+
+/* FOOTER */
+
+& :--form__nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+
+  margin-top: 35px; /* mimics django-cms-forms.css `.button-wrapper` */
+}
+& :--form__nav > p {
+  margin-block: 0; /* overwrite browser */
+}
+
+
+/* ERRORS */
+
+/* & :--form_errors { */
+& :--form__errors--form {
+  margin-bottom: 2rem; /* TODO: move to @tacc/core-styles */
+}
+
+
+
+/* LINKS */
+
+& a {
+  font-weight: var(--medium);
+}
+
+
+
+}

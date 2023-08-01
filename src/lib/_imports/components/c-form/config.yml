@@ -17,6 +17,7 @@ context:
     has_spam_filter: has-spam-check
     buttons: c-form__buttons
     button: c-form__button
+    nav: c-form__nav
 variants:
   - name: default
     status: prototype
@@ -28,3 +29,11 @@ variants:
     status: ready
     context:
       shouldLoadCMS: true
+  - name: login
+    context:
+      classNames:
+        modifier: c-form--login
+        nav: c-form__nav
+      shouldLoadPortal: true
+      supportStyles:
+        - ../../assets/components/c-form--login.css

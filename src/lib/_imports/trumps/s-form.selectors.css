@@ -1,6 +1,8 @@
 @custom-selector :--s-form
     .s-form;
 
+/* Generic */
+
 @custom-selector :--s-form__desc
     :where(.s-form > :is(h1, h2, h3, h4, h5, h6) + p);
 @custom-selector :--s-form__title
@@ -36,3 +38,10 @@
 
 @custom-selector :--s-form__button
     :where(.s-form button);
+
+/* Login */
+
+@custom-selector :--s-form--login
+    .s-form--login;
+@custom-selector :--s-form__nav
+    :where(.s-form > nav);
