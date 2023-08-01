@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ...
 
+## [2.16.0] - 2023-08-01: `s-form-page`, `c-form--login`, `s-form--login`
+
+### Added
+
+- feat: s-form-page, c-form--login, s-form--login (#205)
+
 ## [2.15.0] - 2023-07-31: Add `s-form`, Refactor Forms, Document about Bootstrap
 
 ### Added
@@ -725,7 +731,8 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.15.0...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.16.0...HEAD
+[2.16.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.16.0
 [2.15.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.15.0
 [2.14.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.14.0
 [2.13.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.13.0
