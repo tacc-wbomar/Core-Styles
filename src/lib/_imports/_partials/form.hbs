@@ -7,8 +7,12 @@
 {{else}}
 <form action="" method="POST" enctype="multipart/form-data" class="{{ class.root }}">
 
-  <h3 class="{{ class.title }}">(Optional) Title of Form</h3>
-  <p class="{{ class.desc }}">(Optional) Description of the form.</p>
+  <h3 {{#if class.title }}class="{{ class.title }}"{{/if}}>
+    (Optional) Title of Form
+  </h3>
+  <p {{#if class.desc }}class="{{ class.desc }}"{{/if}}>
+    (Optional) Description of the form.
+  </p>
 {{/if}}
 
   {{> @form-errors class=class.errors wrapClass=class.form_errors_wrap }}
@@ -19,7 +23,9 @@
     {{/if}}
 
     <label for="name">
-      Name<span class="{{ class.badge }}" aria-label="(required)">*</span>
+      Name
+      <span {{#if class.badge }}class="{{ class.badge }}"{{/if}}
+        aria-label="(required)">*</span>
     </label>
 
     <input
@@ -41,7 +47,7 @@
     {{/with}}
   </div>
 
-  <div class="{{ class.field }}">
+  <div {{#if class.field }}class="{{ class.field }}"{{/if}}>
     {{#if (eq errorLoc "top")}}
       {{> @field-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/if}}
@@ -71,7 +77,7 @@
     {{/with}}
   </div>
 
-  <div class="{{ class.field }}">
+  <div {{#if class.field }}class="{{ class.field }}"{{/if}}>
     {{#if (eq errorLoc "top")}}
       {{> @field-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/if}}
@@ -95,7 +101,7 @@
     {{/with}}
   </div>
 
-  <div class="{{ class.field }}">
+  <div {{#if class.field }}class="{{ class.field }}"{{/if}}>
     {{#if (eq errorLoc "top")}}
       {{> @field-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/if}}
@@ -103,7 +109,10 @@
     <label>Radio stations</label>
 
     {{#with inputListTag as | tag |}}
-    <{{#if tag}}{{tag}}{{else}}menu{{/if}} class="{{../class.radio_menu}}" id="radio-stations">
+    <{{#if tag}}{{tag}}{{else}}menu{{/if}}
+      {{#if ../class.radio_menu }}class="{{../class.radio_menu}}"{{/if}}
+      id="radio-stations"
+    >
       <li>
         <label for="radio-stations-0">
           <input
@@ -175,7 +184,7 @@
     {{/with}}
   </div>
 
-  <div class="{{ class.field }}">
+  <div {{#if class.field }}class="{{ class.field }}"{{/if}}>
     {{#if (eq errorLoc "top")}}
       {{> @field-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/if}}
@@ -185,7 +194,10 @@
     </label>
 
     {{#with inputListTag as | tag |}}
-    <{{#if tag}}{{tag}}{{else}}menu{{/if}} class="{{../class.check_menu}}" id="which-fish-do-you-want">
+    <{{#if tag}}{{tag}}{{else}}menu{{/if}}
+      {{#if ../class.check_menu }}class="{{../class.check_menu}}"{{/if}}
+      id="which-fish-do-you-want"
+    >
       <li>
         <label for="which-fish-do-you-want-0">
           <input
@@ -249,7 +261,7 @@
     {{/unless}}
   </div>
 
-  <div class="{{ class.field }}">
+  <div {{#if class.field }}class="{{ class.field }}"{{/if}}>
     {{#if (eq errorLoc "top")}}
       {{> @field-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/if}}
@@ -279,7 +291,7 @@
     {{/with}}
   </div>
 
-  <div class="{{ class.field }}">
+  <div {{#if class.field }}class="{{ class.field }}"{{/if}}>
     {{#if (eq errorLoc "top")}}
       {{> @field-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/if}}
@@ -304,7 +316,7 @@
     {{/with}}
   </div>
 
-  <div class="{{ class.field }}">
+  <div {{#if class.field }}class="{{ class.field }}"{{/if}}>
     {{#if (eq errorLoc "top")}}
       {{> @field-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/if}}
@@ -328,7 +340,7 @@
     {{/with}}
   </div>
 
-  <div class="{{ class.field }}">
+  <div {{#if class.field }}class="{{ class.field }}"{{/if}}>
     {{#if (eq errorLoc "top")}}
       {{> @field-errors class=class.errors wrapClass=class.field_errors_wrap }}
     {{/if}}
@@ -358,7 +370,9 @@
 
   <div class="{{ class.field }} {{ class.has_spam_filter }} {{ class.has_required }}">
     <label for="recaptcha_g9y93gP8">
-      Are you a robot?<span class="{{ class.badge }}" aria-label="(required)">*</span>
+      Are you a robot?
+      <span {{#if class.badge }}class="{{ class.badge }}"{{/if}}
+        aria-label="(required)">*</span>
     </label>
 
     <script src="https://www.google.com/recaptcha/api.js"></script>
@@ -370,14 +384,25 @@
     <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" required="" id="recaptcha_g9y93gP8" data-widget-uuid="9e32f28ccb9545109ff6ae891f9af324" data-callback="onSubmit_9e32f28ccb9545109ff6ae891f9af324" data-size="normal"></div>
   </div>
 
-  <footer class="{{ class.buttons }}">
-    <button class="{{ class.button }}" type="submit">
+  <footer {{#if class.buttons }}class="{{ class.buttons }}"{{/if}}>
+    <button
+      {{#if class.button }}class="{{ class.button }}"{{/if}}
+      type="submit"
+    >
       Submit
     </button>
-    <button id="toggle-field-errors" class="{{ class.button }}" type="button">
+    <button
+      id="toggle-field-errors"
+      {{#if class.button }}class="{{ class.button }}"{{/if}}
+      type="button"
+    >
       Toggle Field Errors
     </button>
-    <button id="toggle-required-fields" class="{{ class.button }}" type="button">
+    <button
+      id="toggle-required-fields"
+      {{#if class.button }}class="{{ class.button }}"{{/if}}
+      type="button"
+    >
       Toggle Required Fields
     </button>
   </footer>
