@@ -2,7 +2,7 @@
 {{> @message content=. }}
 {{/message}}
 
-<form action="#" class="{{ class.root }} {{ class.modifier }}">
+<form action="" class="{{ class.root }} {{ class.modifier }}">
   <h3 {{#if class.title }}class="{{ class.title }}"{{/if}}>
     <img
       src="https://www.tacc.utexas.edu/static/assets/TACC-formal-Black-1c-5602fc8f.svg"
@@ -14,7 +14,7 @@
 
   {{> @form-errors class=class.errors wrapClass=class.form_errors_wrap }}
 
-  <div {{#if class.field }}class="{{ class.field }} {{ class.has_required }}"{{/if}}>
+  <div class="{{ class.field }} {{ class.has_required }}">
     <label for="username">
       User Name
       <span class="{{ class.badge }}">Required</span>
@@ -27,7 +27,7 @@
       required
     >
   </div>
-  <div {{#if class.field }}class="{{ class.field }} {{ class.has_required }}"{{/if}}>
+  <div class="{{ class.field }} {{ class.has_required }}">
     <label for="password">
       Password
       <span {{#if class.badge }}class="{{ class.badge }}"{{/if}}>Required</span>
