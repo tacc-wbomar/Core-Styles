@@ -1,1 +1,19 @@
+/* FAQ: c-form.css styles s-form */
 @import url("../components/c-form--login.css");
+
+@import url("./s-form.selectors.css");
+
+/* To support multiple images */
+& :--s-form__title > figure {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--global-space--grid-gap);
+  margin-top: unset; /* undo browser */
+  margin-inline: unset; /* undo browser and/or core-styles.base.css */
+  margin-bottom: 45px; /* mimic :--form__title > img */
+}
+& :--s-form__title > figure > img {
+  margin-inline: auto; /* to re-center image */
+  height: 75px; /* mimic :--form__title > img */
+}

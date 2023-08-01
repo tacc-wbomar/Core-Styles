@@ -4,10 +4,23 @@
 
 <form action="" class="{{ class.root }} {{ class.modifier }}">
   <h3 {{#if class.title }}class="{{ class.title }}"{{/if}}>
+    {{#if hasManyBrands}}
+    <figure>
+      <img
+        src="https://www.tacc.utexas.edu/static/assets/TACC-formal-Black-1c-5602fc8f.svg"
+        alt="TACC Logo"
+      />
+      <img
+        src="https://www.tacc.utexas.edu/static/assets/TACC-formal-Black-1c-5602fc8f.svg"
+        alt="TACC Logo"
+      />
+    </figure>
+    {{else}}
     <img
       src="https://www.tacc.utexas.edu/static/assets/TACC-formal-Black-1c-5602fc8f.svg"
       alt="TACC Logo"
     />
+    {{/if}}
     <span>Log In</span>
   </h3>
   <p {{#if class.desc }}class="{{ class.desc }}"{{/if}}>to continue to the TACC User Portal</p>
