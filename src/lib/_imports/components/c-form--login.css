@@ -29,7 +29,7 @@
   font-size: 1.6rem;
 }
 
-& :--form__title img {
+& :--form__title > img {
   display: block; /* to collapse margins with heading */
   margin-inline: auto; /* to re-center image */
   height: 75px;
