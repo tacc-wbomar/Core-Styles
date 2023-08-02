@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ...
 
+## [2.16.2] - 2023-08-01: Fix Form Element Selectors Too Specific
+
+### Fixed
+
+- fix: form elements selectors too specific (#213)
+
 ## [2.16.1] - 2023-08-01: Login Form, Support Many Logos; Form Page, Fix Width
 
 ### Fixed
@@ -740,7 +746,8 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.16.1...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.16.2...HEAD
+[2.16.2]: https://github.com/TACC/Core-Styles/releases/tag/v2.16.2
 [2.16.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.16.1
 [2.16.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.16.0
 [2.15.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.15.0
