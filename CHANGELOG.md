@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ...
 
-## [2.16.2] - 2023-08-01: Fix Form Element Selectors Too Specific
+## [2.16.2] - 2023-08-02: Fix Form Element Selectors Too Specific
 
 ### Fixed
 
