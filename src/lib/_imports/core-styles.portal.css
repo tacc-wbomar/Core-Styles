@@ -30,4 +30,6 @@
 @import url("./components/c-message--compact.css");
 
 /* TRUMPS */
+@import url("./trumps/s-footer.css");
+@import url("./trumps/s-footer--thin.css");
 @import url("./trumps/s-form-page.css");

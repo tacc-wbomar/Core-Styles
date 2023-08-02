@@ -1,9 +1,27 @@
+status: prototype
+context:
+  shouldSkipPattern: false
+  shouldOmitMainTag: true
+  supportStyles:
+    - ../../assets/elements/sticky-footer.css
 variants:
+  - name: default
+    hidden: true
   - name: thin
-    status: prototype
     context:
       modifier: thin
+      bodyContent: Thin footer has narrow horizontal padding. <em>You may need to reduce panel width to see this.</em>
   - name: thick
-    status: prototype
     context:
       modifier: thick
+      bodyContent: Thick footer has wider horizontal padding. <em>You may need to reduce panel width to see this.</em>
+  - name: cms
+    label: CMS
+    context:
+      shouldLoadCMS: true
+      shouldSkipPattern: true
+  - name: portal
+    label: Portal
+    context:
+      shouldLoadPortal: true
+      shouldSkipPattern: true
