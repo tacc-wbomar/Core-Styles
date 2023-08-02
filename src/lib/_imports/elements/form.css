@@ -42,7 +42,7 @@ label + :where(ul, menu),
 
 /* Fieldsets */
 
-fieldset:where(not(:last-child)) {
+fieldset:where(:not(:last-child)) {
   margin-bottom: 3.5rem;
 }
 
