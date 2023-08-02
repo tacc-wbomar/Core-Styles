@@ -9,6 +9,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ...
 
+## [2.16.1] - 2023-08-01: Login Form, Support Many Logos; Form Page, Fix Width
+
+### Fixed
+
+- fix: form width in demo (be88a94)
+- fix: s-form-page missing s-form--login css (10b8619)
+- fix: s-form-page width overflow (f1d139c)
+- fix: wp-63 must support two brands on login (#211) (#212)
+
 ## [2.16.0] - 2023-08-01: `s-form-page`, `c-form--login`, `s-form--login`
 
 ### Added
@@ -731,7 +740,8 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.16.0...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.16.1...HEAD
+[2.16.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.16.1
 [2.16.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.16.0
 [2.15.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.15.0
 [2.14.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.14.0
