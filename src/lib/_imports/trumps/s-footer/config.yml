@@ -1,0 +1,9 @@
+variants:
+  - name: thin
+    status: prototype
+    context:
+      modifier: thin
+  - name: thick
+    status: prototype
+    context:
+      modifier: thick
