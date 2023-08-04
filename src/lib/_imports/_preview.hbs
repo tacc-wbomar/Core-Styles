@@ -94,6 +94,10 @@
 
 
 {{!-- Markup (for current pattern) --}}
+{{#unless _target.context.shouldOmitMainTag}}
 <main>
+{{/unless}}
 {{{yield}}}
+{{#unless _target.context.shouldOmitMainTag}}
 </main>
+{{/unless}}
