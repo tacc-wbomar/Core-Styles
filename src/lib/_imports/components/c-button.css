@@ -273,6 +273,7 @@ a:--c-button--is-busy {
 
   font-size: inherit;
   font-family: inherit;
+  font-weight: inherit;
 }
 :--c-button--as-link:where(:not(:--disabled)):hover {
   @extend .x-link--hover;
