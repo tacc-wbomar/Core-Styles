@@ -9,6 +9,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ...
 
+## [2.17.0] - 2023-08-04: Refactor Footers, Fix Button to Inherit Font Weight
+
+### Added
+
+- refactor: footers (#215)
+
+### Fixed
+
+- fix: c-button font-weight not inherited (#216)
+
 ## [2.16.3] - 2023-08-02: Fix Typo in Fieldset `:not()` Selector
 
 ### Fixed
@@ -752,7 +762,8 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.16.3...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.17.0...HEAD
+[2.17.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.17.0
 [2.16.3]: https://github.com/TACC/Core-Styles/releases/tag/v2.16.3
 [2.16.2]: https://github.com/TACC/Core-Styles/releases/tag/v2.16.2
 [2.16.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.16.1
