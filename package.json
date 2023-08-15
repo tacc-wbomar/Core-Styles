@@ -63,7 +63,7 @@
     "postcss-replace": "To edit relative paths to fonts"
   },
   "devDependencies": {
-    "@frctl/fractal": "^1.5.13",
+    "@frctl/fractal": "^1.5.15",
     "@frctl/handlebars": "^1.2.15",
     "@frctl/mandelbrot": "^1.10.1",
     "minimist": "^1.2.7",
