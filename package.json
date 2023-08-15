@@ -35,7 +35,7 @@
   "repository": "git@github.com:TACC/Core-Styles.git",
   "peerDependencies": {
     "commander": "^9.4.1",
-    "cssnano": "^5.1.14",
+    "cssnano": "^5.1.15",
     "js-yaml": "^4.1.0",
     "merge-lite": "^1.0.2",
     "node-cmd": "^5.0.0",
@@ -45,7 +45,7 @@
     "postcss-extend": "^1.0.5",
     "postcss-import": "^15.0.0",
     "postcss-preset-env": "^7.8.3",
-    "postcss-replace": "^2.0.0"
+    "postcss-replace": "^2.0.1"
   },
   "// peerDependencies": {
     "commander": "To create CLI",
@@ -63,7 +63,7 @@
     "postcss-replace": "To edit relative paths to fonts"
   },
   "devDependencies": {
-    "@frctl/fractal": "^1.5.13",
+    "@frctl/fractal": "^1.5.15",
     "@frctl/handlebars": "^1.2.15",
     "@frctl/mandelbrot": "^1.10.1",
     "minimist": "^1.2.7",
