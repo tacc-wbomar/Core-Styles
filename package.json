@@ -45,7 +45,7 @@
     "postcss-extend": "^1.0.5",
     "postcss-import": "^15.0.0",
     "postcss-preset-env": "^7.8.3",
-    "postcss-replace": "^2.0.0"
+    "postcss-replace": "^2.0.1"
   },
   "// peerDependencies": {
     "commander": "To create CLI",
