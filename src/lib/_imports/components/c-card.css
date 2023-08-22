@@ -180,7 +180,8 @@
     font-size: var(--global-font-size--medium);
 }
 
-/* Miscellaneous */
+/* To space out address lines, but retain <p> margin */
+/* NOTE: Likely in tacc.utexas.edu/about/contact/ but replaced with a <p> */
 :--c-card > address {
     line-height: 1.7;
     margin-bottom: 2rem; /* to mimic <p> */
