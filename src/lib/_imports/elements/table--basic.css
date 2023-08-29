@@ -1,5 +1,3 @@
-@import url("../tools/x-truncate.css");
-
 @import url("./table.selectors.css");
 
 table,
@@ -122,10 +120,4 @@ table p,
 table p:last-child,
 :--s-paragraph-table p {
   margin-bottom: 0;
-}
-
-/* To truncate paragraphs */
-/* FAQ: Except for :--s-paragraph-table's whose <p> tags we permit to wrap */
-table p {
-  @extend %x-truncate--many-lines;
 }
