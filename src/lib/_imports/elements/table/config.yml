@@ -243,7 +243,39 @@ variants:
           - paragraph: true
           - paragraph: true
   - name: with-paragraphs
+    label: With Paragraphs
     context:
+      data:
+        cols:
+          - Name
+          - Summary
+          - Actions
+        rows:
+          - name: apple-sauce
+            paragraph: true
+            acts:
+              - is-link: true
+                text: View Details
+              - is-button: true
+                text: Delete
+          - name: milk-shake-032
+            paragraph: true
+            acts:
+              - is-link: true
+                text: View Details
+              - is-button: true
+                text: Delete
+          - name: white-candy-5
+            paragraph: true
+            acts:
+              - is-link: true
+                text: View Details
+              - is-button: true
+                text: Delete
+  - name: with-paragraphs-portal
+    label: With Paragraphs (Portal)
+    context:
+      shouldLoadPortal: true
       data:
         cols:
           - Name
