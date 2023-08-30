@@ -1,2 +1,30 @@
-/* FAQ: Using @custom-selector within elements/table */
-/* SEE: src/lib/_imports/elements/table….css */
+@import url('../tools/x-table.css');
+
+@import url("./s-paragraph-table.selectors.css");
+
+:--s-paragraph-table {
+  @extend .x-table;
+
+  display: table; /* to mimic shrink-wrap width of real table */
+}
+:--s-paragraph-table {
+  @extend .x-table__row--line-top;
+}
+:--s-paragraph-table p:not(:last-of-type) {
+  @extend .x-table__row--line-mid;
+}
+
+:--s-paragraph-table p:nth-child(odd) {
+  @extend .x-table__row--odd;
+}
+:--s-paragraph-table p:nth-child(even) {
+  @extend .x-table__row--even;
+}
+
+:--s-paragraph-table p {
+  @extend .x-table__cell;
+  @extend .x-table__paragraph;
+
+  /* To never have margin-bottom */
+  margin-bottom: 0; /* override `site.css` or browser */
+}

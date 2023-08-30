@@ -1,0 +1,12 @@
+.x-table--cms {
+  --font-size: var(--global-font-size--medium);
+  --cell-pad-vert: 10px; /* to match row height in design (~40px) */
+  --cell-line-height: 1.4; /* to match body */
+
+  border-bottom: var(--global-border-width--thick) solid var(--global-color-primary--dark);
+}
+
+/* To thicken top border of headless table */
+.x-table__row--line-top--headless {
+  border-top-width: var(--global-border-width--thick);
+}

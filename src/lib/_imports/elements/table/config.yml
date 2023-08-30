@@ -212,30 +212,11 @@ variants:
                 text: View Details
               - is-button: true
                 text: Delete
-  - name: via-paragraphs
-    context:
-      data:
-        rows:
-          - paragraph: true
-          - paragraph: true
-          - paragraph: true
-          - paragraph: true
   - name: via-paragraphs-cms
     view: 'table--via-paragraphs.hbs'
     label: Via Paragraphs (CMS)
     context:
       shouldLoadCMS: true
-      data:
-        rows:
-          - paragraph: true
-          - paragraph: true
-          - paragraph: true
-          - paragraph: true
-  - name: via-paragraphs-docs
-    view: 'table--via-paragraphs.hbs'
-    label: Via Paragraphs (Docs)
-    context:
-      shouldLoadDocs: true
       data:
         rows:
           - paragraph: true

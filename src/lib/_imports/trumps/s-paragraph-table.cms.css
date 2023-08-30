@@ -1,9 +1,10 @@
 @import url('../tools/x-table.cms.css');
 
-table {
+@import url("./s-paragraph-table.selectors.css");
+
+:--s-paragraph-table {
   @extend .x-table--cms;
 }
-
-tbody:not(thead + tbody) > tr:first-child > :is(td,th) {
+:--s-paragraph-table {
   @extend .x-table__row--line-top--headless;
 }
