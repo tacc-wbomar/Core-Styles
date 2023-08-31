@@ -88,6 +88,10 @@
 & :--form__button[type="submit"] {
   padding-block: 10px; /* overrides core-styles.base.css button styles */
 }
+/* To right-align a lone action */
+& :--form__buttons > :only-child {
+  margin-left: auto;
+}
 
 
 
