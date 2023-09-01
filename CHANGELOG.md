@@ -9,6 +9,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ...
 
+## [2.17.2] - 2023-09-01: Small Fixes for Table, Demo, Form
+
+### Fixed
+
+- fix: right-align a lone login form action (#223)
+- fix: cms table & s-paragraph-table demo (demo cmsStyles now in base layer) (#221)
+- fix: only truncate paragraph in portal table or s-truncated-table (#220)
+
+### Changed
+
+- fix: use global vars in MuiTabs (633ec418)
+
+### Documentation
+
+- fix: typo in c-card demo (34e3aded)
+- docs: comment on :--c-card > address usage (bf1a8986)
+- style: improve clarity of c-card `<p>` wrap notes (c0028f88)
+
 ## [2.17.1] - 2023-08-15: NPM Audit Fix
 
 ### Security
@@ -768,7 +786,8 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.17.1...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.17.2...HEAD
+[2.17.2]: https://github.com/TACC/Core-Styles/releases/tag/v2.17.2
 [2.17.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.17.1
 [2.17.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.17.0
 [2.16.3]: https://github.com/TACC/Core-Styles/releases/tag/v2.16.3
