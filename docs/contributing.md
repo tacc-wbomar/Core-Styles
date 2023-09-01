@@ -47,10 +47,9 @@ Only appointed team members may release versions.
 1. Commit NPM build output.
 1. Merge pull request.
 1. Create release and tag on GitHub.
-1. Replace Github's unannotated tag with an annotated one:
-   - `git pull`
-   - `git checkout vN.N.N`
-   - `git tag -d vN.N.N`
-   - `git tag -a vN.N.N -m "____: vN.N.N"`
-   - `git push --tags --force`
+1. Annotate Github's tag:\
+  `bin/annotate-tag.sh vN.N.N`\
+  (where `N.N.N` is the version tag)
+1. Overwrite remote tag with annotated one:\
+  `git push --tags --force`
 
