@@ -130,7 +130,7 @@ ul:--form__errors--field {
 :--form__button {
   @extend :--c-button;
 }
-:--form__button[type="submit"] {
+:--form__buttons :--form__button[type="submit"] {
   @extend :--c-button--primary;
 }
 :--form__button[type="button"] {
