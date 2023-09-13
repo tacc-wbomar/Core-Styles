@@ -130,7 +130,7 @@ ul:--form__errors--field {
 :--form__button {
   @extend :--c-button;
 }
-:--form__buttons :--form__button[type="submit"] {
+:--form__button[type="submit"]:where(:--form__buttons > *) {
   @extend :--c-button--primary;
 }
 :--form__button[type="submit"]:not(:--form__buttons > *) {
