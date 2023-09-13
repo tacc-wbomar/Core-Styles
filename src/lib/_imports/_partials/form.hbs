@@ -384,6 +384,19 @@
     <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" required="" id="recaptcha_g9y93gP8" data-widget-uuid="9e32f28ccb9545109ff6ae891f9af324" data-callback="onSubmit_9e32f28ccb9545109ff6ae891f9af324" data-size="normal"></div>
   </div>
 
+  <fieldset>
+    <legend>sample buttons outside footer</legend>
+    <button {{#if class.button }}class="{{ class.button }}"{{/if}} type="submit">
+      Submit
+    </button>
+    <button {{#if class.button }}class="{{ class.button }}"{{/if}} type="button">
+      Button
+    </button>
+    <button {{#if class.button }}class="{{ class.button }}"{{/if}} type="reset">
+      Reset
+    </button>
+  </fieldset>
+
   <footer {{#if class.buttons }}class="{{ class.buttons }}"{{/if}}>
     <button
       {{#if class.button }}class="{{ class.button }}"{{/if}}
