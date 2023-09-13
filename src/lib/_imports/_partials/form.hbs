@@ -418,6 +418,12 @@
     >
       Toggle Required Fields
     </button>
+    <button
+      {{#if class.button }}class="{{ class.button }}"{{/if}}
+      type="reset"
+    >
+      Reset Field Values
+    </button>
   </footer>
 
 {{#if markup.wrap_end}}
