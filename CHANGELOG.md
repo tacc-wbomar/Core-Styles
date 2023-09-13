@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ...
 
+## [2.17.4] - 2023-09-13: Form Submit Buttons Are Not Always Primary Buttons
+
+### Fixed
+
+- fix: form submit buttons are not always primary (#227)
+
 ## [2.17.3] - 2023-09-12: Fix Login Form Checkbox Alignment
 
 ### Fixed
@@ -792,7 +798,8 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.17.3...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.17.4...HEAD
+[2.17.4]: https://github.com/TACC/Core-Styles/releases/tag/v2.17.4
 [2.17.3]: https://github.com/TACC/Core-Styles/releases/tag/v2.17.3
 [2.17.2]: https://github.com/TACC/Core-Styles/releases/tag/v2.17.2
 [2.17.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.17.1
