@@ -10,9 +10,4 @@ To label the status of something.
 
 <small>* Requires client styles, because [truncation can be context-dependent](https://confluence.tacc.utexas.edu/x/sAoFDg).</small>
 
-<script>
-/* To open external links in new window */
-Array.from(document.links)
-  .filter(link => link.hostname != window.location.hostname)
-  .forEach(link => link.target = '_blank');
-</script>
+<script src="{{path '/assets/_utils/js/open-ext-links-in-new-window.js'}}" />
