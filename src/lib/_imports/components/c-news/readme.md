@@ -7,3 +7,5 @@ The markup is inspired from the [templates of nephila/djangocms-blog v1.2.3](htt
 | `.c-news`               | basic styles
 | `.c-news--list`         | a list of news articles
 | `.c-news--read`         | a single news article
+
+<script src="{{path '/assets/_utils/js/open-ext-links-in-new-window.js'}}" />
