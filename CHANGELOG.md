@@ -9,13 +9,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ...
 
+## [2.18.0] - 2023-10-03: C-Pill, S-Form-Page Footer Image; Better C-Tag Demo
+
+## Added
+
+- feat: support s-form-page footer link with image (#240)
+- feat: c-pill (#234)
+- enhance: improve c-tag demo (#233)
+
 ## [2.17.5] - 2023-09-13: Style Non-Footer Form Submit Buttons
 
 ### Fixed
 
 - fix: style non-footer form buttons (and add demo to test) (#230)
 
-## [2.17.5] - 2023-09-13: Form Submit Buttons Are Not Always Primary Buttons
+## [2.17.4] - 2023-09-13: Form Submit Buttons Are Not Always Primary Buttons
 
 ### Fixed
 
@@ -804,7 +812,8 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.17.5...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.18.0...HEAD
+[2.18.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.18.0
 [2.17.5]: https://github.com/TACC/Core-Styles/releases/tag/v2.17.5
 [2.17.4]: https://github.com/TACC/Core-Styles/releases/tag/v2.17.4
 [2.17.3]: https://github.com/TACC/Core-Styles/releases/tag/v2.17.3
