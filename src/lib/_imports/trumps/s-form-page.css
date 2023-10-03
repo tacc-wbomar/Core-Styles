@@ -30,6 +30,8 @@
   display: flex;
   gap: 1.5em;
   margin-top: var(--global-space--normal);
+  /* In case children are different height (e.g. one has or is an image) */
+  align-items: center;
 
   font-family: var(--global-font-family--sans--cms);
   font-size: var(--global-font-size--small);
@@ -45,4 +47,17 @@
 .s-form-page > footer a {
   color: var(--global-color-primary--x-dark);
   font-weight: var(--bold);
+}
+
+/* To allow image inside link wiht a gap between it and text */
+.s-form-page > footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+@media (min-width: 768px) {
+    .s-form-page>footer {
+        align-items: center;
+    }
 }
