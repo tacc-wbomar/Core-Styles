@@ -8,14 +8,10 @@
         {{#if disabled}}disabled{{/if}}>
         <span class="c-button__text">--secondary</span>
       </button>
-      {{#if small}}
-        <small>(no small primary allowed)</small>
-      {{else}}
-        <button class="c-button c-button--{{this._self.name}} c-button--primary"
-        {{#if disabled}}disabled{{/if}}>
-          <span class="c-button__text">--primary</span>
-        </button>
-      {{/if}}
+      <button class="c-button c-button--{{this._self.name}} c-button--primary"
+      {{#if disabled}}disabled{{/if}}>
+        <span class="c-button__text">--primary</span>
+      </button>
       <button class="c-button c-button--{{this._self.name}} c-button--tertiary"
         {{#if disabled}}disabled{{/if}}>
         <span class="c-button__text">--tertiary</span>
@@ -29,14 +25,10 @@
         {{#if disabled}}disabled tabindex="-1"{{/if}}>
         <span class="c-button__text">--secondary</span>
       </a>
-      {{#if small}}
-        <small>(no small primary allowed)</small>
-      {{else}}
-        <a href="#" class="c-button c-button--{{this._self.name}} c-button--primary"
-        {{#if disabled}}disabled tabindex="-1"{{/if}}>
-          <span class="c-button__text">--primary</span>
-        </a>
-      {{/if}}
+      <a href="#" class="c-button c-button--{{this._self.name}} c-button--primary"
+      {{#if disabled}}disabled tabindex="-1"{{/if}}>
+        <span class="c-button__text">--primary</span>
+      </a>
       <a href="#" class="c-button c-button--{{this._self.name}} c-button--tertiary"
         {{#if disabled}}disabled tabindex="-1"{{/if}}>
         <span class="c-button__text">--tertiary</span>
