@@ -1,35 +1,88 @@
 @import url("../components/c-message.css");
+@import url("../components/c-message--expanded.css");
+@import url("../components/c-message.selectors.css");
+@import url("../tools/selectors.monospace.css");
 
 
 
 .admonition {
-  @extend .c-message;
-  @extend .c-message--scope-section;
+  @extend :--c-message;
+  @extend :--c-message--scope-section;
 }
 .admonition-title {
   font-weight: var(--bold);
   margin-top: unset; /* undo Browser */
   margin-bottom: unset; /* undo `html-elements.cms.css` */
+
+  color: var(--global-color-primary--xx-dark);
 }
 
-.admonition.tip,
-.admonition.hint,
-.admonition.important {
-  @extend .c-message--type-success;
-  @extend .c-message--type-success.c-message--scope-section;
+.admonition:is(.tip) {
+  @extend :--c-message--type-tip;
+  @extend :--c-message--type-tip:--c-message--scope-section;
 }
-.admonition.attention,
-.admonition.note {
-  @extend .c-message--type-info;
-  @extend .c-message--type-info.c-message--scope-section;
+.admonition:is(.hint) {
+  @extend :--c-message--type-success;
+  @extend :--c-message--type-success:--c-message--scope-section;
 }
-.admonition.caution,
-.admonition.warning {
-  @extend .c-message--type-warning;
-  @extend .c-message--type-warning.c-message--scope-section;
+.admonition:is(.note, .attention) {
+  @extend :--c-message--type-info;
+  @extend :--c-message--type-info:--c-message--scope-section;
 }
-.admonition.error,
-.admonition.danger {
-  @extend .c-message--type-error;
-  @extend .c-message--type-error.c-message--scope-section;
+.admonition:is(.caution, .important) {
+  @extend :--c-message--type-warning;
+  @extend :--c-message--type-warning:--c-message--scope-section;
 }
+.admonition:is(.warning, .error, .danger) {
+  @extend :--c-message--type-error;
+  @extend :--c-message--type-error:--c-message--scope-section;
+}
+
+/* To layout icon and content */
+.admonition {
+  --icon-block-width: 65px;
+
+  display: grid;
+  grid-template-columns: var(--icon-block-width) minmax(0, 1fr);
+  column-gap: var(--pad-horz);
+
+  padding-block: var(--pad-vert);
+  padding-right: var(--pad-horz);
+}
+/* To "stretch" icon to parent height */
+.admonition::before {
+  margin-block: calc( -1 * var(--pad-vert) );
+}
+
+/* To adjust spacing for certain elements */
+.admonition > .admonition-title + p { margin-top: 5px; }
+.admonition > pre:last-child { margin-bottom: 15px; }
+.admonition > p:not(.admonition-title) + pre { margin-top: -5px; }
+
+/* To adjust styling for certain elements */
+.admonition :--monospace--block { 
+  border-color: var(--global-color-primary--dark);
+}
+
+/* To style icon */
+.admonition::before {
+  color: white;
+  font-size: 36px;
+
+  /* To take up left column */
+  grid-row: 1 / span 99; /* 99 is for arbitrary implicit row count */
+
+  /* To center content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* To add placeholder icon */
+/* NOTE: Client is expected to overwrite these */
+.admonition:is(.caution, .important)::before { content: "⚠"; }
+.admonition:is(.warning)::before { content: "𝖷"; }
+.admonition:is(.tip)::before { content: "☀"; }
+.admonition:is(.note, .attention)::before { content: "✎"; }
+.admonition:is(.hint)::before { content: "✓"; }
+.admonition:is(.error, .danger)::before { content: "𝗫"; }

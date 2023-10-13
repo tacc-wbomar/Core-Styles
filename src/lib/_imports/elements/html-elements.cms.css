@@ -1,4 +1,5 @@
 @import url("../tools/selectors.css");
+@import url("../tools/selectors.form.css");
 
 /* To scope these styles to main content (i.e. not header, not navbar) */
 :where(:--main-content) {
@@ -22,10 +23,6 @@ Reference:
 
 Styleguide Elements.ContentSectioning
 */
-
-&:is(body > *) {
-  margin-bottom: var(--global-space--section-gap);
-}
 
 /* Headings */
 
@@ -60,6 +57,8 @@ Styleguide Elements.TextContent
 & :is(
   ol, ul,
   dl dl /* Treat nested definition lists like other nested lists */
+):not(
+  :--form *
 ) {
   padding-left: var(--global-space--list-indent);
 }
@@ -81,12 +80,38 @@ Styleguide Elements.TextContent
   line-height: 1.6;
 }
 
+/* Figures */
+
+/* https://stackoverflow.com/a/49287729/11817077 */
+/* To make figure size and caption wrap dependent on content:
+  - figure unaffected by content with intrinsic width
+  - shrink figure to content with dynamic width
+  - shrink figure to content with static width
+  - prevent content from overflowing parent
+  - wrap caption text at content edge
+*/
+& figure {
+  display: table;
+}
+& figure figcaption {
+  display: table-caption;
+  caption-side: bottom;
+}
+
 /* Misc. */
 
 & hr {
   margin-top: var(--global-space--hr-buffer-above); /* overwrite Bootstrap */
-  border-top: 1px solid var(--global-color-primary--light);
+
+  border-top-width: var(--global-border-width--normal);
+  border-top-style: solid;
+  border-top-clolor: var(--global-color-primary--dark);
+
   margin-bottom: var(--global-space--hr-buffer-below); /* overwrite Bootstrap */
+
+  /* To fix widthless-ness when <hr> is a grid or flex item */
+  /* https://dev.to/alvaromontoro/the-disappearing-line-a-css-mystery-3e35 */
+  width: 100%;
 }
 
 

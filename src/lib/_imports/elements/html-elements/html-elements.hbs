@@ -33,10 +33,10 @@
   <dt>Text Content</dt>
   <dd>
     <dl>
-      <dt>Paragraphs</dt>
+      <dt>Paragraphs &amp; Inline Text Semantics</dt>
       <dd>
         <p>{{> @text-of-one-paragraph-medium }}</p>
-        <p>{{> @text-of-one-paragraph-medium }}</p>
+        <p>{{> @text-of-one-paragraph-with-tags }}</p>
       </dd>
 
       <dt>Lists</dt>
@@ -70,8 +70,11 @@
         </dl>
       </dd>
 
-      <dt>Figure</dt>
+      <dt>Figure <small>(Narrow Image)</small></dt>
       <dd>{{> @figure }}</dd>
+
+      <dt>Figure <small>(Dynamic-Width Image)</small></dt>
+      <dd>{{> @figure class="with-dynamic-width-image" use-image-wide=true }}</dd>
 
       <dt>Blockquote</dt>
       <dd>{{> @blockquote }}</dd>

@@ -1,16 +1,20 @@
 .x-link {
-  color: var(--global-color-link-on-light--normal);
+  color: var(--global-color-accent--normal);
 
   text-decoration: none;
   text-underline-offset: 0.2em;
   text-decoration-thickness: var(--global-border-width--normal);
+}
+.x-link--disabled {
+  opacity: 0.5;
+  pointer-events: none;
 }
 .x-link--hover {
   text-decoration-line: underline;
   text-decoration-style: solid;
 
   /* To overwrite Bootstrap (on Client) */
-  color: var(--global-color-link-on-light--normal);
+  color: var(--global-color-accent--normal);
   text-decoration-thickness: var(--global-border-width--normal);
 }
 .x-link--active {
@@ -22,6 +26,9 @@
   @extend .x-link;
 
   text-decoration-line: underline;
+}
+.x-link--irregular--disabled {
+  @extend .x-link--disabled;
 }
 .x-link--irregular--hover {
   @extend .x-link--hover;

@@ -15,17 +15,21 @@ Reference:
 Styleguide Elements.MainSectioningRoots
 */
 
+/* The webpage must be at least as tall as the viewport */
+html,
+body {
+  height: 100%;
+}
+
+
+
 html {
   /* Set base font but support user-defined browser font size */
   /* SEE: https://snook.ca/archives/html_and_css/font-size-with-rem */
   font-size: 62.5%; /* 16px */
 }
 
-/* The webpage must be at least as tall as the viewport */
-html,
-body {
-  height: 100%;
-}
+
 
 body {
   margin: 0;
@@ -35,7 +39,7 @@ body {
 
   /* To overwrite Bootstrap */
   color: var(--global-color-primary--x-dark);
-  font-family: var(--global-font-family--sans);
-  font-size: var(--global-font-size--small);
-  line-height: 1.4;
+
+  /* Prevent trackpad scroll from showing white background beyond page height */
+  overscroll-behavior-y: none;
 }

@@ -1,0 +1,24 @@
+<main>
+  <p>
+    {{#if bodyContent}}
+      {{{bodyContent}}}
+    {{else}}
+      Sample body content. Footer is at bottom of page.
+    {{/if}}
+  </p>
+  <p>
+    {{#if shouldLoadCMS}}
+      CMS always uses <a href="{{path '../detail/s-footer--thick'}}" target="_parent">thick</a> footer.
+    {{else if shouldLoadPortal}}
+      Portal always uses <a href="{{path '../detail/s-footer--thin'}}" target="_parent">thin</a> footer.
+    {{/if}}
+  </p>
+</main>
+<footer class="s-footer{{#if modifier }} s-footer--{{ modifier }}{{/if}}">
+  <p>
+    ©2023
+    <a href="https://www.tacc.utexas.edu/" target="_blank">Texas Advanced Computing Center</a>,
+    <a href="https://www.utexas.edu/" target="_blank">The University of Texas at Austin</a>,
+    <a href="https://research.utexas.edu/" target="_blank">Office of the Vice President for Research</a>.
+  </p>
+</footer>

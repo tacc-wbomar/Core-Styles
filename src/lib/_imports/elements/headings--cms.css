@@ -7,14 +7,11 @@
 
 
 
-
-
-/*
-Content Sectioning: Headings
-*/
-
 /* Structure */
 
+&:is( h1, h2, h3, h4, h5, h6 ) {
+    line-height: unset;
+}
 & h1 {
     margin-bottom: 40px; /* rounded from design 42px */
     text-transform: uppercase;
@@ -26,10 +23,6 @@ Content Sectioning: Headings
 & h3 {
     margin-top: 0; /* designs suggest component padding can give top spacing */
     margin-bottom: 20px; /* rounded from design 17px */
-}
-/* WARNING: No design available; these are just developer guesswork */
-& h5 {
-    text-transform: uppercase;
 }
 
 
@@ -54,16 +47,12 @@ Content Sectioning: Headings
     font-size: var(--global-font-size--medium);
     font-weight: var(--bold);
 }
-& h5 {
-    font-size: var(--global-font-size--small);
-    font-weight: var(--black);
-}
+/* To  deter use of "smaller" headings by making them match body font */
+& h5,
 & h6 {
-    font-size: var(--global-font-size--small);
-    font-weight: var(--bold);
+    font-size: inherit;
+    font-weight: var(--normal);
 }
-
-
 
 
 

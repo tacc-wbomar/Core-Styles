@@ -1,9 +1,7 @@
-/* The first box's first variation found on Getting Started design */
-/* https://xd.adobe.com/view/dabaec5a-cc31-4c5c-876e-56d6d8cc359e-8fe9/screen/c0898d6b-2fd9-472a-bcd7-1ae9d4f9a015 */
-
 @import url("../objects/o-section.selectors.css");
 @import url("../tools/selectors.css");
 
+@import url("./c-button.selectors.css");
 @import url("./c-card.selectors.css");
 
 
@@ -13,10 +11,8 @@
 /* Settings */
 
 :root {
-    --global-space--bootstrap-gap: 30px;
     --global-space--pattern-pad: 30px;
     --global-space--unnamed: 50px;
-    --global-border-width--xx-thick: 5px;
 }
 
 
@@ -107,7 +103,7 @@
 /* Structure */
 
 /* Elements */
-:--c-card > a:not(.c-button) {
+:--c-card > a:not(:--c-button) {
     display: inline-block; /* FAQ: for actions that do not yet have this */
 }
 :--c-card > :is(:--action) {
@@ -175,7 +171,7 @@
 
 /* To make buttons bold */
 /* TODO: Determine whether this should apply to all CMS buttons */
-:--c-card a.c-button {
+:--c-card a:--c-button {
     font-weight: var(--bold);
 }
 
@@ -184,7 +180,8 @@
     font-size: var(--global-font-size--medium);
 }
 
-/* Miscellaneous */
+/* To space out address lines, but retain <p> margin */
+/* NOTE: Likely in tacc.utexas.edu/about/contact/ but replaced with a <p> */
 :--c-card > address {
     line-height: 1.7;
     margin-bottom: 2rem; /* to mimic <p> */

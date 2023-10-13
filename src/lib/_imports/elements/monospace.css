@@ -10,7 +10,12 @@
   font-size: 87.5%; /* borrowed from Bootstrap */
   line-height: 1.4;
 
-  color: var(--global-color-primary--xx-dark);
+  color: inherit;
+}
+
+/* So client can render preformatted text without assuming Bootstrap color */
+pre {
+  color: unset; /* override Bootstrap */
 }
 
 
@@ -36,8 +41,10 @@
 
 /* Types */
 
+/* Structure */
 & :--monospace--block {
-  display: inline-block; /* FAQ: If `block`, then background color is cropped */
+  display: block;
+  width: min-content;
   padding: var(--global-space--x-small) var(--global-space--small);
 }
 & :--monospace--inline {
@@ -45,19 +52,20 @@
   padding: var(--global-space--xx-small) var(--global-space--x-small);
 }
 
-& :--monospace--boxed {
+/* Skin */
+& :--monospace--block,
+& :--monospace--inline {
   background-color: var(--global-color-primary--x-light);
-  border: var(--global-border-width--normal) solid var(--global-color-primary--light);
+  color: var(--global-color-primary--x-dark);
+  border: var(--global-border--normal);
 }
-& :--monospace--output {
+& :--monospace--output:not(:--monospace--boxed) {
   opacity: 0.75;
-  text-decoration: none;
 }
-
 & :--monospace--kbd {
-  color: #fff;
-  background-color: #212529;
-  border-radius: .2rem;
+  border: var(--global-border--normal);
+  border-radius: 0.5rem;
+  background-color: var(--global-color-primary--xx-light); /* undo Bootstrap */
 }
 
 /* Types: Edge Cases */

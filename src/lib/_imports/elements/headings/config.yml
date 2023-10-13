@@ -7,6 +7,11 @@ variants:
     context:
       shouldLoadCMS: true
       shouldLoadBootstrap: true
+  - name: docs
+    status: wip
+    label: (Docs) Headings
+    context:
+      shouldLoadDocs: true
   - name: portal
     status: prototype
     label: (Portal) Headings
