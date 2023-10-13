@@ -53,8 +53,6 @@ a:--c-button--is-busy {
 ) {
   color: var(--global-color-primary--dark);
   border-color: var(--global-color-primary--dark);
-
-  pointer-events: none;
 }
 :--c-button:--disabled:not(
   :--c-button--is-busy,
