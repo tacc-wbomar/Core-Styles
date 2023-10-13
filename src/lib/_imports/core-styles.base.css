@@ -43,6 +43,7 @@
 @import url("./components/c-pill.css");
 @import url("./components/c-see-all-link.css");
 @import url("./components/c-tag.css");
+@import url("./components/c-content-block.css");
 
 /* TRUMPS */
 @import url("./trumps/s-affixed-input-wrapper.css");
