@@ -26,6 +26,8 @@
 @import url("./objects/o-float-content.css");
 @import url("./objects/o-offset-content.css");
 @import url("./objects/o-section.css");
+@import url("./objects/o-heading-steps.css");
+
 
 /* COMPONENTS */
 @import url("./components/bootstrap.col.css");
@@ -39,6 +41,8 @@
 @import url("./components/c-message--expanded.css");
 @import url("./components/c-news.css");
 @import url("./components/c-recognition.css");
+@import url("./components/c-update.css");
+
 /* TODO: Move to TACC/Core-CMS-Resources:/frontera-cms
         or — alternatively — TACC/Core-CMS */
 @import url("./components/c-card--frontera-about-page.css");
