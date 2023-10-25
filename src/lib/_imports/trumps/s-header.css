@@ -151,6 +151,12 @@ Styleguide Trumps.Scopes.Header
   padding-left: 14px; /* NO-R/EM: .875rem (overwrite Bootstrap) */
 }
 
+@media only screen and (min-width: 992px) {
+  .s-header[class*="navbar-expand-"] .navbar-nav .nav-link {
+      padding-block: 0; /* overwrite core-styles.header.css */
+  }
+}
+
 /* Search */
 
 /* Create a line between search bar and login */
