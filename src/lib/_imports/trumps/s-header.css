@@ -67,6 +67,12 @@ Styleguide Trumps.Scopes.Header
 
 /* Navigation */
 
+/* To stretch nav items to header height (while retaining vertical centering) */
+.s-header,
+.s-header .navbar-collapse {
+    align-items: stretch;
+}
+
 /* On wide viewport, prevent header resize from dynamic content */
 /* CAVEAT: This is only for Portal and Docs which dynamically load content */
 @media only screen and (min-width: 1201px) {
