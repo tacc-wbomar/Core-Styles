@@ -41,6 +41,13 @@ Styleguide Trumps.Scopes.Header
   border-bottom: 1px solid var(--header-major-border-color);
 }
 
+/* To enlarge height for all screen widths */
+@media only screen and (min-width: 992px) {
+  .s-header {
+      height: 60px;
+  }
+}
+
 /* Affiliation */
 
 /* SEE: ../branding_logos.css */
