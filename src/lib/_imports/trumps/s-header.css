@@ -22,7 +22,9 @@ Styleguide Trumps.Scopes.Header
             UPDATE: As of PR #312, this has likely changed (untested). */
 
 .s-header {
-  font-size: 16px; /* NO-R/EM: Overwrite `bootstrap.3.3.7.css` */
+  font-size: var(--global-font-size--medium); /* NO-R/EM: Overwrite `bootstrap.3.3.7.css` */
+  font-weight: var(--bold);
+  letter-spacing: 0.025px; /* 14px * 0.025em equals design-requested 0.35px */
   line-height: 1.4; /* `body` line-height differs between CMS, Portal, Docs */
 
   /* FAQ: Asssigning this font is only necessary for the User Guide,
