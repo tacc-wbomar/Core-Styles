@@ -111,6 +111,18 @@ Styleguide Trumps.Scopes.Header
   /* If link text uses 2 lines, header grows taller (but it must not do so) */
   white-space: nowrap;
 }
+
+@media only screen and (min-width: 992px) {
+  .s-header .nav-item {
+      display: flex;
+  }
+}
+
+.s-header .nav-link {
+  display: flex;
+  align-items: center;
+}
+
 .s-header .nav-link:hover,
 .s-header .nav-link:focus,
 .s-header .nav-link:active,
