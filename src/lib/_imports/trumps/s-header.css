@@ -176,6 +176,15 @@ Styleguide Trumps.Scopes.Header
   font-size: 16px; /* NO-R/EM: 1rem (from Bootstrap via `.dropdown-menu`) */
 }
 
+.s-header .dropdown-item:focus,
+.s-header .dropdown-item:hover {
+    background-color: rgba(var(--global-color-primary--light-rgb), 0.3);
+}
+.s-header .dropdown-item.active,
+.s-header .dropdown-item:active {
+    background-color: var(--global-color-accent--normal);
+}
+
 /* Icons */
 
 /* HACK: Using FontAwesome as placeholder */
