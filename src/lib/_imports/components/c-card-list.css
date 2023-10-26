@@ -14,6 +14,8 @@
 }
 /* TODO: Consider changing this site wide; SEE:
 :where([role=main],main) li:not(td li) { line-height: 1.6; } */
+/* Tomas removes `:where(:not(…` (e.g. "not in portal"). He saw it needed to be
+removed elsewhere. */
 :is(.card, :--c-card, [class*="card--"]) ul:last-child {
     margin-bottom: 2rem;
 }
