@@ -14,6 +14,7 @@ variants:
     status: backup
   # - name: image
   #   status: prototype
+  # - name: images
   - name: docs
     status: ready
     context:
