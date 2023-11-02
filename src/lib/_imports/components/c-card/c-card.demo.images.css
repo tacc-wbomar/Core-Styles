@@ -11,7 +11,7 @@
 }
 
 /* create a two column grid (cleaner look) */
-.o-grid--col-min-width {
+#image-cards {
     grid-template-columns: 1fr 1fr;
 }
 
