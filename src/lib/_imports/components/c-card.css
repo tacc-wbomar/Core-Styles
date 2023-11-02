@@ -187,10 +187,6 @@
     margin-bottom: 2rem; /* to mimic <p> */
 }
 
-:is(.card, :--c-card) p:last-child {
-    margin-bottom: 2rem; /* restore <p> `margin-bottom `*/
-}
-
 /* To allow more specifically control c-card link font weight */
 :is(.card, :--c-card) a:--c-button {
     font-weight: var(--bold);
