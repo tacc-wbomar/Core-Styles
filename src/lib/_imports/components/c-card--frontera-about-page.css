@@ -5,6 +5,8 @@
 
   border-bottom: var(--global-border-width--normal) solid var(--global-color-primary--dark);
   margin-bottom: 4.6rem;
+
+  padding: unset; /* overwrite .c-card */
 }
 
 
