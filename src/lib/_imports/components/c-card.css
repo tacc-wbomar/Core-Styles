@@ -186,3 +186,9 @@
     line-height: 1.7;
     margin-bottom: 2rem; /* to mimic <p> */
 }
+
+/* FAQ: Used on image cards for staff like on /education/k-12-students/ */
+/* SEE: https://www.tacc.utexas.edu/education/k-12-students/high-school-camps/gencyber/ */
+:is(.card, :--c-card) h4 {
+    margin-bottom: 0.375em;
+}
