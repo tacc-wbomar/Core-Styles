@@ -169,12 +169,6 @@
     margin-top: unset;
 }
 
-/* To make buttons bold */
-/* TODO: Determine whether this should apply to all CMS buttons */
-:--c-card a:--c-button {
-    font-weight: var(--bold);
-}
-
 /* To reduce font size of mailto link */
 :--c-card a[data-user][data-domain]::before {
     font-size: var(--global-font-size--medium);
