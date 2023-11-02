@@ -1,64 +1,340 @@
-<h2 id="section--null">Test Section</h2>
-<section class="o-section o-grid o-grid--col-min-width">
-    <article class="card--image card--image-top">
-        <h3><a href="#">Card - Image Top</a></h3>
-        <p>{{> @text-of-one-paragraph-short }}</p>
-        <img
-            src="https://www.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/43/1a/431abd68-5142-4fa2-a5d1-0644a19361b9/main-skeletalai-feature-1200x800-c-default.jpg__992x992_q85_subsampling-2.jpg" />
-    </article>
+<h2 id="section--null">Section (Default a.k.a Unstyled a.k.a Transparent)</h2>
 
-    <article class="card--image card--image-bottom">
-        <h3><a href="#">Card - Image Bottom</a></h3>
-        <p>{{> @text-of-one-paragraph-short }}</p>
-        <img
-            src="https://www.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/43/1a/431abd68-5142-4fa2-a5d1-0644a19361b9/main-skeletalai-feature-1200x800-c-default.jpg__992x992_q85_subsampling-2.jpg" />
-    </article>
+<section class="o-section">
+    <h3>Transparent Card Image</h3>
+    <section class="o-section o-grid o-grid--col-min-width">
+        <article class="card--image card--image-top">
+            <h3><a href="#">Card - Image Top</a></h3>
+            <p>{{> @text-of-one-paragraph-short }}</p>
+            <img
+                src="https://www.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/43/1a/431abd68-5142-4fa2-a5d1-0644a19361b9/main-skeletalai-feature-1200x800-c-default.jpg__992x992_q85_subsampling-2.jpg" />
+        </article>
+
+        <article class="card--image card--image-bottom">
+            <h3><a href="#">Card - Image Bottom</a></h3>
+            <p>{{> @text-of-one-paragraph-short }}</p>
+            <img
+                src="https://www.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/43/1a/431abd68-5142-4fa2-a5d1-0644a19361b9/main-skeletalai-feature-1200x800-c-default.jpg__992x992_q85_subsampling-2.jpg" />
+        </article>
+        <article class="card--image card--image-right">
+            <h3><a href="#">Card - Image Left</a></h3>
+            <p>{{> @text-of-one-paragraph-short }}</p>
+            <img
+                src="https://www.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/1e/bb/1ebb892b-a975-43ee-af7b-9fdb254cc439/rattler-crop.jpg__576x576_q85_subsampling-2.jpg" />
+        </article>
+
+        <article class="card--image card--image-left">
+            <h3><a href="#">Card - Image Right</a></h3>
+            <p>{{> @text-of-one-paragraph-short }}</p>
+            <img
+                src="https://www.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/1e/bb/1ebb892b-a975-43ee-af7b-9fdb254cc439/rattler-crop.jpg__576x576_q85_subsampling-2.jpg" />
+        </article>
+    </section>
+    <h3>Contact Card with Image - Transparent</h3>
+    <section class="o-section o-grid o-grid--col-min-width">
+        <article class="card--image card--image-top">
+            <h4><a href="#">Bender Rodríguez</a></h4>
+            <p>Planet Express Worker</p>
+            <p>Anti-hero in Futurama</p>
+            <img class="img-fluid" width="234px" height="293px"
+                src="https://cohro.ukzn.ac.za/wp-content/uploads/2019/02/profile-placeholder.png"
+                title="University of Texas at Austin" class="img-fluid">
+        </article>
+    </section>
+
+
+    <h3>Plain Card Image</h3>
+    <section class="o-section o-grid o-grid--col-min-width">
+        <article class="card--image-top c-card--plain">
+            <h3><a href="#">Card - Image Top</a></h3>
+            <p>{{> @text-of-one-paragraph-short }}</p>
+            <img
+                src="https://www.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/43/1a/431abd68-5142-4fa2-a5d1-0644a19361b9/main-skeletalai-feature-1200x800-c-default.jpg__992x992_q85_subsampling-2.jpg" />
+        </article>
+        <article class="card--image-bottom c-card--plain">
+            <h3><a href="#">Card - Image Bottom</a></h3>
+            <p>{{> @text-of-one-paragraph-short }}</p>
+            <img
+                src="https://www.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/43/1a/431abd68-5142-4fa2-a5d1-0644a19361b9/main-skeletalai-feature-1200x800-c-default.jpg__992x992_q85_subsampling-2.jpg" />
+        </article>
+        <article class="card--image-right c-card--plain">
+            <h3><a href="#">Card - Image Right</a></h3>
+            <p>{{> @text-of-one-paragraph-short }}</p>
+            <img
+                src="https://www.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/1e/bb/1ebb892b-a975-43ee-af7b-9fdb254cc439/rattler-crop.jpg__576x576_q85_subsampling-2.jpg" />
+        </article>
+        <article class="card--image-left c-card--plain">
+            <h3><a href="#">Card - Image Left</a></h3>
+            <p>{{> @text-of-one-paragraph-short }}</p>
+            <img
+                src="https://www.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/1e/bb/1ebb892b-a975-43ee-af7b-9fdb254cc439/rattler-crop.jpg__576x576_q85_subsampling-2.jpg" />
+        </article>
+    </section>
+    <h3>Contact Card with Image - Plain</h3>
+    <section class="o-section o-grid o-grid--col-min-width">
+        <article class="card--image card--image-top c-card--plain">
+            <h4><a href="#">Bender Rodríguez</a></h4>
+            <p>Planet Express Worker</p>
+            <p>Anti-hero in Futurama</p>
+            <img class="img-fluid" width="234px" height="293px"
+                src="https://cohro.ukzn.ac.za/wp-content/uploads/2019/02/profile-placeholder.png"
+                title="University of Texas at Austin" class="img-fluid">
+        </article>
+    </section>
+
 </section>
+<hr>
+<h2 id="section--null">Section - Light</h2>
+<section class="o-section o-section--style-light">
+    <h3>Transparent Card Image</h3>
+    <section class="o-section o-grid o-grid--col-min-width">
+        <article class="card--image card--image-top">
+            <h3><a href="#">Card - Image Top</a></h3>
+            <p>{{> @text-of-one-paragraph-short }}</p>
+            <img
+                src="https://www.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/43/1a/431abd68-5142-4fa2-a5d1-0644a19361b9/main-skeletalai-feature-1200x800-c-default.jpg__992x992_q85_subsampling-2.jpg" />
+        </article>
 
-<section class="o-section o-grid o-grid--col-min-width">
-    <article class="card--image card--image-right">
-        <h3><a href="#">Card - Image Left</a></h3>
-        <p>{{> @text-of-one-paragraph-short }}</p>
-        <img
-            src="https://www.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/1e/bb/1ebb892b-a975-43ee-af7b-9fdb254cc439/rattler-crop.jpg__576x576_q85_subsampling-2.jpg" />
-    </article>
+        <article class="card--image card--image-bottom">
+            <h3><a href="#">Card - Image Bottom</a></h3>
+            <p>{{> @text-of-one-paragraph-short }}</p>
+            <img
+                src="https://www.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/43/1a/431abd68-5142-4fa2-a5d1-0644a19361b9/main-skeletalai-feature-1200x800-c-default.jpg__992x992_q85_subsampling-2.jpg" />
+        </article>
+        <article class="card--image card--image-right">
+            <h3><a href="#">Card - Image Left</a></h3>
+            <p>{{> @text-of-one-paragraph-short }}</p>
+            <img
+                src="https://www.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/1e/bb/1ebb892b-a975-43ee-af7b-9fdb254cc439/rattler-crop.jpg__576x576_q85_subsampling-2.jpg" />
+        </article>
 
-    <article class="card--image card--image-left">
-        <h3><a href="#">Card - Image Right</a></h3>
-        <p>{{> @text-of-one-paragraph-short }}</p>
-        <img
-            src="https://www.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/1e/bb/1ebb892b-a975-43ee-af7b-9fdb254cc439/rattler-crop.jpg__576x576_q85_subsampling-2.jpg" />
-    </article>
+        <article class="card--image card--image-left">
+            <h3><a href="#">Card - Image Right</a></h3>
+            <p>{{> @text-of-one-paragraph-short }}</p>
+            <img
+                src="https://www.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/1e/bb/1ebb892b-a975-43ee-af7b-9fdb254cc439/rattler-crop.jpg__576x576_q85_subsampling-2.jpg" />
+        </article>
+    </section>
+
+    <h3>Contact Card with Image - Transparent</h3>
+    <section class="o-section o-grid o-grid--col-min-width">
+        <article class="card--image card--image-top">
+            <h4><a href="#">Bender Rodríguez</a></h4>
+            <p>Planet Express Worker</p>
+            <p>Anti-hero in Futurama</p>
+            <img class="img-fluid" width="234px" height="293px"
+                src="https://cohro.ukzn.ac.za/wp-content/uploads/2019/02/profile-placeholder.png"
+                title="University of Texas at Austin" class="img-fluid">
+        </article>
+    </section>
+
+    <h3>Plain Card Image</h3>
+    <section class="o-section o-grid o-grid--col-min-width">
+        <article class="card--image-top c-card--plain">
+            <h3><a href="#">Card - Image Top</a></h3>
+            <p>{{> @text-of-one-paragraph-short }}</p>
+            <img
+                src="https://www.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/43/1a/431abd68-5142-4fa2-a5d1-0644a19361b9/main-skeletalai-feature-1200x800-c-default.jpg__992x992_q85_subsampling-2.jpg" />
+        </article>
+        <article class="card--image-bottom c-card--plain">
+            <h3><a href="#">Card - Image Bottom</a></h3>
+            <p>{{> @text-of-one-paragraph-short }}</p>
+            <img
+                src="https://www.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/43/1a/431abd68-5142-4fa2-a5d1-0644a19361b9/main-skeletalai-feature-1200x800-c-default.jpg__992x992_q85_subsampling-2.jpg" />
+        </article>
+        <article class="card--image-right c-card--plain">
+            <h3><a href="#">Card - Image Right</a></h3>
+            <p>{{> @text-of-one-paragraph-short }}</p>
+            <img
+                src="https://www.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/1e/bb/1ebb892b-a975-43ee-af7b-9fdb254cc439/rattler-crop.jpg__576x576_q85_subsampling-2.jpg" />
+        </article>
+
+        <article class="card--image-left c-card--plain">
+            <h3><a href="#">Card - Image Left</a></h3>
+            <p>{{> @text-of-one-paragraph-short }}</p>
+            <img
+                src="https://www.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/1e/bb/1ebb892b-a975-43ee-af7b-9fdb254cc439/rattler-crop.jpg__576x576_q85_subsampling-2.jpg" />
+        </article>
+    </section>
+
+    <h3>Contact Card with Image - Plain</h3>
+    <section class="o-section o-grid o-grid--col-min-width">
+        <article class="card--image card--image-top c-card--plain">
+            <h4><a href="#">Bender Rodríguez</a></h4>
+            <p>Planet Express Worker</p>
+            <p>Anti-hero in Futurama</p>
+            <img class="img-fluid" width="234px" height="293px"
+                src="https://cohro.ukzn.ac.za/wp-content/uploads/2019/02/profile-placeholder.png"
+                title="University of Texas at Austin" class="img-fluid">
+        </article>
+    </section>
+
 </section>
+<hr>
+<h2 id="section--null">Section - Muted</h2>
+<section class="o-section o-section--style-muted">
+    <h3>Transparent Card Image</h3>
+    <section class="o-section o-grid o-grid--col-min-width">
+        <article class="card--image card--image-top">
+            <h3><a href="#">Card - Image Top</a></h3>
+            <p>{{> @text-of-one-paragraph-short }}</p>
+            <img
+                src="https://www.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/43/1a/431abd68-5142-4fa2-a5d1-0644a19361b9/main-skeletalai-feature-1200x800-c-default.jpg__992x992_q85_subsampling-2.jpg" />
+        </article>
 
-<h2 id="section--null">Test Section -- Plain</h2>
-<section class="o-section o-grid o-grid--col-min-width">
-    <article class="card--image card--image-top c-card--plain">
-        <h3><a href="#">Card - Image Top</a></h3>
-        <p>{{> @text-of-one-paragraph-short }}</p>
-        <img
-            src="https://www.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/43/1a/431abd68-5142-4fa2-a5d1-0644a19361b9/main-skeletalai-feature-1200x800-c-default.jpg__992x992_q85_subsampling-2.jpg" />
-    </article>
-    <article class="card--image card--image-bottom c-card--plain">
-        <h3>Card - Image Bottom</h3>
-        <p>{{> @text-of-one-paragraph-short }}</p>
-        <img
-            src="https://www.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/43/1a/431abd68-5142-4fa2-a5d1-0644a19361b9/main-skeletalai-feature-1200x800-c-default.jpg__992x992_q85_subsampling-2.jpg" />
-    </article>
+        <article class="card--image card--image-bottom">
+            <h3><a href="#">Card - Image Bottom</a></h3>
+            <p>{{> @text-of-one-paragraph-short }}</p>
+            <img
+                src="https://www.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/43/1a/431abd68-5142-4fa2-a5d1-0644a19361b9/main-skeletalai-feature-1200x800-c-default.jpg__992x992_q85_subsampling-2.jpg" />
+        </article>
+        <article class="card--image card--image-right">
+            <h3><a href="#">Card - Image Left</a></h3>
+            <p>{{> @text-of-one-paragraph-short }}</p>
+            <img
+                src="https://www.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/1e/bb/1ebb892b-a975-43ee-af7b-9fdb254cc439/rattler-crop.jpg__576x576_q85_subsampling-2.jpg" />
+        </article>
+
+        <article class="card--image card--image-left">
+            <h3><a href="#">Card - Image Right</a></h3>
+            <p>{{> @text-of-one-paragraph-short }}</p>
+            <img
+                src="https://www.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/1e/bb/1ebb892b-a975-43ee-af7b-9fdb254cc439/rattler-crop.jpg__576x576_q85_subsampling-2.jpg" />
+        </article>
+    </section>
+    <h3>Contact Card with Image - Transparent</h3>
+    <section class="o-section o-grid o-grid--col-min-width">
+        <article class="card--image card--image-top">
+            <h4><a href="#">Bender Rodríguez</a></h4>
+            <p>Planet Express Worker</p>
+            <p>Anti-hero in Futurama</p>
+            <img class="img-fluid" width="234px" height="293px"
+                src="https://cohro.ukzn.ac.za/wp-content/uploads/2019/02/profile-placeholder.png"
+                title="University of Texas at Austin" class="img-fluid">
+        </article>
+    </section>
+
+    <h3>Plain Card Image</h3>
+    <section class="o-section o-grid o-grid--col-min-width">
+        <article class="card--image-top c-card--plain">
+            <h3><a href="#">Card - Image Top</a></h3>
+            <p>{{> @text-of-one-paragraph-short }}</p>
+            <img
+                src="https://www.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/43/1a/431abd68-5142-4fa2-a5d1-0644a19361b9/main-skeletalai-feature-1200x800-c-default.jpg__992x992_q85_subsampling-2.jpg" />
+        </article>
+        <article class="card--image-bottom c-card--plain">
+            <h3><a href="#">Card - Image Bottom</a></h3>
+            <p>{{> @text-of-one-paragraph-short }}</p>
+            <img
+                src="https://www.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/43/1a/431abd68-5142-4fa2-a5d1-0644a19361b9/main-skeletalai-feature-1200x800-c-default.jpg__992x992_q85_subsampling-2.jpg" />
+        </article>
+        <article class="card--image-right c-card--plain">
+            <h3><a href="#">Card - Image Right</a></h3>
+            <p>{{> @text-of-one-paragraph-short }}</p>
+            <img
+                src="https://www.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/1e/bb/1ebb892b-a975-43ee-af7b-9fdb254cc439/rattler-crop.jpg__576x576_q85_subsampling-2.jpg" />
+        </article>
+
+        <article class="card--image-left c-card--plain">
+            <h3><a href="#">Card - Image Left</a></h3>
+            <p>{{> @text-of-one-paragraph-short }}</p>
+            <img
+                src="https://www.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/1e/bb/1ebb892b-a975-43ee-af7b-9fdb254cc439/rattler-crop.jpg__576x576_q85_subsampling-2.jpg" />
+        </article>
+    </section>
+    <h3>Contact Card with Image - Plain</h3>
+    <section class="o-section o-grid o-grid--col-min-width">
+        <article class="card--image card--image-top c-card--plain">
+            <h4><a href="#">Bender Rodríguez</a></h4>
+            <p>Planet Express Worker</p>
+            <p>Anti-hero in Futurama</p>
+            <img class="img-fluid" width="234px" height="293px"
+                src="https://cohro.ukzn.ac.za/wp-content/uploads/2019/02/profile-placeholder.png"
+                title="University of Texas at Austin" class="img-fluid">
+        </article>
+    </section>
 </section>
+<hr>
+<h2 id="section--null">Section - Dark</h2>
+<section class="o-section o-section--style-dark">
+    <h3>Transparent Card Image</h3>
+    <section class="o-section o-grid o-grid--col-min-width">
+        <article class="card--image card--image-top">
+            <h3><a href="#">Card - Image Top</a></h3>
+            <p>{{> @text-of-one-paragraph-short }}</p>
+            <img
+                src="https://www.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/43/1a/431abd68-5142-4fa2-a5d1-0644a19361b9/main-skeletalai-feature-1200x800-c-default.jpg__992x992_q85_subsampling-2.jpg" />
+        </article>
 
-<section class="o-section o-grid o-grid--col-min-width">
-    <article class="card--image card--image-right c-card--plain">
-        <h3>Card - Image Right</h3>
-        <p>{{> @text-of-one-paragraph-short }}</p>
-        <img
-            src="https://www.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/1e/bb/1ebb892b-a975-43ee-af7b-9fdb254cc439/rattler-crop.jpg__576x576_q85_subsampling-2.jpg" />
-    </article>
+        <article class="card--image card--image-bottom">
+            <h3><a href="#">Card - Image Bottom</a></h3>
+            <p>{{> @text-of-one-paragraph-short }}</p>
+            <img
+                src="https://www.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/43/1a/431abd68-5142-4fa2-a5d1-0644a19361b9/main-skeletalai-feature-1200x800-c-default.jpg__992x992_q85_subsampling-2.jpg" />
+        </article>
+        <article class="card--image card--image-right">
+            <h3><a href="#">Card - Image Left</a></h3>
+            <p>{{> @text-of-one-paragraph-short }}</p>
+            <img
+                src="https://www.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/1e/bb/1ebb892b-a975-43ee-af7b-9fdb254cc439/rattler-crop.jpg__576x576_q85_subsampling-2.jpg" />
+        </article>
 
-    <article class="card--image card--image-left c-card--plain">
-        <h3>Card - Image Left</h3>
-        <p>{{> @text-of-one-paragraph-short }}</p>
-        <img
-            src="https://www.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/1e/bb/1ebb892b-a975-43ee-af7b-9fdb254cc439/rattler-crop.jpg__576x576_q85_subsampling-2.jpg" />
-    </article>
+        <article class="card--image card--image-left">
+            <h3><a href="#">Card - Image Right</a></h3>
+            <p>{{> @text-of-one-paragraph-short }}</p>
+            <img
+                src="https://www.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/1e/bb/1ebb892b-a975-43ee-af7b-9fdb254cc439/rattler-crop.jpg__576x576_q85_subsampling-2.jpg" />
+        </article>
+    </section>
+    <h3>Contact Card with Image - Transparent</h3>
+    <section class="o-section o-grid o-grid--col-min-width">
+        <article class="card--image card--image-top">
+            <h4><a href="#">Bender Rodríguez</a></h4>
+            <p>Planet Express Worker</p>
+            <p>Anti-hero in Futurama</p>
+            <img class="img-fluid" width="234px" height="293px"
+                src="https://cohro.ukzn.ac.za/wp-content/uploads/2019/02/profile-placeholder.png"
+                title="University of Texas at Austin" class="img-fluid">
+        </article>
+    </section>
+
+    <h3>Plain Card Image</h3>
+    <section class="o-section o-grid o-grid--col-min-width">
+        <article class="card--image-top c-card--plain">
+            <h3><a href="#">Card - Image Top</a></h3>
+            <p>{{> @text-of-one-paragraph-short }}</p>
+            <img
+                src="https://www.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/43/1a/431abd68-5142-4fa2-a5d1-0644a19361b9/main-skeletalai-feature-1200x800-c-default.jpg__992x992_q85_subsampling-2.jpg" />
+        </article>
+        <article class="card--image-bottom c-card--plain">
+            <h3><a href="#">Card - Image Bottom</a></h3>
+            <p>{{> @text-of-one-paragraph-short }}</p>
+            <img
+                src="https://www.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/43/1a/431abd68-5142-4fa2-a5d1-0644a19361b9/main-skeletalai-feature-1200x800-c-default.jpg__992x992_q85_subsampling-2.jpg" />
+        </article>
+        <article class="card--image-right c-card--plain">
+            <h3><a href="#">Card - Image Right</a></h3>
+            <p>{{> @text-of-one-paragraph-short }}</p>
+            <img
+                src="https://www.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/1e/bb/1ebb892b-a975-43ee-af7b-9fdb254cc439/rattler-crop.jpg__576x576_q85_subsampling-2.jpg" />
+        </article>
+
+        <article class="card--image-left c-card--plain">
+            <h3><a href="#">Card - Image Left</a></h3>
+            <p>{{> @text-of-one-paragraph-short }}</p>
+            <img
+                src="https://www.tacc.utexas.edu/media/filer_public_thumbnails/filer_public/1e/bb/1ebb892b-a975-43ee-af7b-9fdb254cc439/rattler-crop.jpg__576x576_q85_subsampling-2.jpg" />
+        </article>
+    </section>
+    <h3>Contact Card with Image - Plain</h3>
+    <section class="o-section o-grid o-grid--col-min-width">
+        <article class="card--image card--image-top c-card--plain">
+            <h4><a href="#">Bender Rodríguez</a></h4>
+            <p>Planet Express Worker</p>
+            <p>Anti-hero in Futurama</p>
+            <img class="img-fluid" width="234px" height="293px"
+                src="https://cohro.ukzn.ac.za/wp-content/uploads/2019/02/profile-placeholder.png"
+                title="University of Texas at Austin" class="img-fluid">
+        </article>
+    </section>
 </section>
