@@ -24,6 +24,3 @@ variants:
     status: deprecated
     📝 name: using "frontera-about-page" breaks the demo
     label: Frontera About Page
-    context:
-      supportStyles:
-        - ../../assets/components/c-card--frontera-about-page.css
