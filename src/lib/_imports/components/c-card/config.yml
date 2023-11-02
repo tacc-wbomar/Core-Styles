@@ -26,4 +26,5 @@ variants:
     label: Frontera About Page
     context:
       supportStyles:
-        - ../../assets/components/c-card--frontera-about-page.css
+        # Not necessary, because `shouldLoadCMS` loads these styles
+        # - ../../assets/components/c-card--frontera-about-page.css
