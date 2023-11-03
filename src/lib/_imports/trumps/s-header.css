@@ -17,6 +17,21 @@ Styleguide Trumps.Scopes.Header
 */
 @import url("./s-header.bootstrap.css");
 
+/*
+Layout
+
+Styles that allow re-usable layouts.
+
+%x-layout--a - Widest: two even columns
+%x-layout--b - Widest: one wide column & one narrow column
+%x-layout--c - Widest: one narrow column & one wide column
+%x-layout--d - Widest: three even columns
+%x-layout--e - (deprecated) Always: multiple even rows
+
+Styleguide Tools.ExtendsAndMixins.Layout
+*/
+@import url("../tools/media-queries.css");
+
 /* WARNING: NO-R/EM: Until Frontera CMS drops Bootstrap 3.7.1 (for old design)…
             `em` nor `rem` was not allowed because results were not consistent.
             UPDATE: As of PR #312, this has likely changed (untested). */
@@ -42,7 +57,7 @@ Styleguide Trumps.Scopes.Header
 }
 
 /* To enlarge height for all screen widths */
-@media only screen and (min-width: 992px) {
+@media (--medium-and-above)  {
   .s-header {
       height: 60px;
   }
@@ -78,7 +93,7 @@ Styleguide Trumps.Scopes.Header
 
 /* On wide viewport, prevent header resize from dynamic content */
 /* CAVEAT: This is only for Portal and Docs which dynamically load content */
-@media only screen and (min-width: 1201px) {
+@media (--wide-and-above) {
   .s-header.navbar {
     height: 50px;
   }
@@ -115,7 +130,7 @@ Styleguide Trumps.Scopes.Header
   white-space: nowrap;
 }
 
-@media only screen and (min-width: 992px) {
+@media (--medium-and-above) {
   .s-header .nav-item {
       display: flex;
   }
@@ -146,17 +161,13 @@ Styleguide Trumps.Scopes.Header
 /* Navigation: Links: Responsive Design */
 
 /* Tweak Bootstrap `_nav.scss` (which selects via `navbar-expand-` class) */
-.s-header[class*="navbar-expand-"] .navbar-nav .nav-link {
-  padding-top: 8px; /* NO-R/EM: 0.5rem (from Bootstrap) */
-  padding-bottom: 8px; /* NO-R/EM: 0.5rem (from Bootstrap) */
-
-  padding-right: 14px; /* NO-R/EM: .875rem (overwrite Bootstrap) */
-  padding-left: 14px; /* NO-R/EM: .875rem (overwrite Bootstrap) */
-}
-
-@media only screen and (min-width: 992px) {
+@media (--medium-and-below) {
   .s-header[class*="navbar-expand-"] .navbar-nav .nav-link {
-      padding-block: 0; /* overwrite core-styles.header.css */
+    padding-top: 8px; /* NO-R/EM: 0.5rem (from Bootstrap) */
+    padding-bottom: 8px; /* NO-R/EM: 0.5rem (from Bootstrap) */
+  
+    padding-right: 14px; /* NO-R/EM: .875rem (overwrite Bootstrap) */
+    padding-left: 14px; /* NO-R/EM: .875rem (overwrite Bootstrap) */
   }
 }
 
@@ -174,19 +185,6 @@ Styleguide Trumps.Scopes.Header
 
 .dropdown-menu {
   font-size: 16px; /* NO-R/EM: 1rem (from Bootstrap via `.dropdown-menu`) */
-}
-
-/* Note, this is also in s-header.bootstrap.css, not sure where to add this style.
-   Putting here for now as it overrides bootstrap.
-*/ 
-.s-header .dropdown-item:focus,
-.s-header .dropdown-item:hover {
-    background-color: rgba(var(--global-color-primary--light-rgb), 0.3);
-}
-
-.s-header .dropdown-item.active,
-.s-header .dropdown-item:active {
-    background-color: var(--global-color-accent--normal);
 }
 
 /* Icons */
