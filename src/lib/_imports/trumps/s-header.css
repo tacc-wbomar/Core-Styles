@@ -15,22 +15,8 @@ Markup: s-header.html
 
 Styleguide Trumps.Scopes.Header
 */
-@import url("./s-header.bootstrap.css");
-
-/*
-Layout
-
-Styles that allow re-usable layouts.
-
-%x-layout--a - Widest: two even columns
-%x-layout--b - Widest: one wide column & one narrow column
-%x-layout--c - Widest: one narrow column & one wide column
-%x-layout--d - Widest: three even columns
-%x-layout--e - (deprecated) Always: multiple even rows
-
-Styleguide Tools.ExtendsAndMixins.Layout
-*/
 @import url("../tools/media-queries.css");
+@import url("./s-header.bootstrap.css");
 
 /* WARNING: NO-R/EM: Until Frontera CMS drops Bootstrap 3.7.1 (for old design)…
             `em` nor `rem` was not allowed because results were not consistent.
