@@ -32,9 +32,6 @@
 :--c-button:where(:not(:--disabled)) {
   cursor: pointer; /* WARNING: Opinionated */
 }
-:--c-button:where(:not(:--c-button--as-link)) {
-  font-weight: var(--medium);
-}
 
 a:--c-button {
   text-decoration: none;
