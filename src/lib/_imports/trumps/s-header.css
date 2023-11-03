@@ -161,13 +161,14 @@ Styleguide Tools.ExtendsAndMixins.Layout
 /* Navigation: Links: Responsive Design */
 
 /* Tweak Bootstrap `_nav.scss` (which selects via `navbar-expand-` class) */
+.s-header[class*="navbar-expand-"] .navbar-nav .nav-link {
+  padding-right: 14px; /* NO-R/EM: .875rem (overwrite Bootstrap) */
+  padding-left: 14px; /* NO-R/EM: .875rem (overwrite Bootstrap) */
+}
+
 @media (--medium-and-below) {
   .s-header[class*="navbar-expand-"] .navbar-nav .nav-link {
-    padding-top: 8px; /* NO-R/EM: 0.5rem (from Bootstrap) */
-    padding-bottom: 8px; /* NO-R/EM: 0.5rem (from Bootstrap) */
-  
-    padding-right: 14px; /* NO-R/EM: .875rem (overwrite Bootstrap) */
-    padding-left: 14px; /* NO-R/EM: .875rem (overwrite Bootstrap) */
+      padding-block: 8px;
   }
 }
 
