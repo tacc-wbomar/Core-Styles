@@ -30,7 +30,7 @@ The shared styles for TACC WMA Workspace Portals & Websites
 > **Note**
 > This is likely the easier and simpler solution. Try this first.
 
-__See [`HOWTO.md`](HOWTO.md).__
+See [`HOWTO.md`](HOWTO.md).
 
 ### B. Install into a Project
 
