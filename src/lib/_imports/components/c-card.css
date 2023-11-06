@@ -169,12 +169,6 @@
     margin-top: unset;
 }
 
-/* To make buttons bold */
-/* TODO: Determine whether this should apply to all CMS buttons */
-:--c-card a:--c-button {
-    font-weight: var(--bold);
-}
-
 /* To reduce font size of mailto link */
 :--c-card a[data-user][data-domain]::before {
     font-size: var(--global-font-size--medium);
@@ -209,4 +203,9 @@
 removed elsewhere. */
 :is(.card, :--c-card, [class*="card--"]) ul:last-child {
     margin-bottom: 2rem;
+}
+/* FAQ: Used on image cards for staff like on /education/k-12-students/ */
+/* SEE: https://www.tacc.utexas.edu/education/k-12-students/high-school-camps/gencyber/ */
+:is(.card, :--c-card) h4 {
+    margin-bottom: 0.375em;
 }

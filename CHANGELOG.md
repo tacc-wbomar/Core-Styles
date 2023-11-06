@@ -7,7 +7,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
-...
+## [2.19.0] - 2023-11-02: Migrate Some Components from TUP-UI, Fix a Few Bugs
+
+## Added
+
+- feat: tup-624 c-update migration (#247)
+- feat/tup 617: Migrate c-card fixes to core-styles (#251)
+- feat/tup-625: Migrate o-heading-steps to core-styles (#248)
+- feat: tup-463 c-content-block and generics/attributes from tup-ui (#246)
+
+## Fixed
+
+- fix: tup-639 move c-button font-weight bold to cms (#253)
+- fix: c-card--frontera variant misc bugs (#252)
+
+## Documentation
+
+- docs: allow small primary buttons (#243)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.18.0...v2.19.0
 
 ## [2.18.0] - 2023-10-03: C-Pill, S-Form-Page Footer Image; Better C-Tag Demo
 
@@ -812,7 +830,8 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.18.0...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.19.0...HEAD
+[2.19.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.19.0
 [2.18.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.18.0
 [2.17.5]: https://github.com/TACC/Core-Styles/releases/tag/v2.17.5
 [2.17.4]: https://github.com/TACC/Core-Styles/releases/tag/v2.17.4
