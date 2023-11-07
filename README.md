@@ -14,8 +14,8 @@ The shared styles for TACC WMA Workspace Portals & Websites
 ## Table of Contents
 
 - [External Project Usage](#external-project-usage)
-   - [Load from a Project](#load-from-a-project)
-   - [Install into a Project](#install-into-a-project)
+   - [A. Load from a Project](#a-load-from-a-project)
+   - [B. Install into a Project](#b-install-into-a-project)
 - [Local Development Setup](#local-development-setup)
 - [Testing](#testing)
 - [Deployment](#deployment)
@@ -25,15 +25,18 @@ The shared styles for TACC WMA Workspace Portals & Websites
 
 ## External Project Usage
 
-### Load from a Project
+### A. Load from a Project
 
-__See [`HOWTO.md`](HOWTO.md).__
+> **Note**
+> This is likely the easier and simpler solution. Try this first.
 
-### Install into a Project
+See [`HOWTO.md`](HOWTO.md).
+
+### B. Install into a Project
 
 #### Install This Package
 
-1. Installwith any package manager e.g.:
+1. Install with any package manager e.g.:
 
     - `npm install @tacc/core-styles`
     - `yarn add @tacc/core-styles`
