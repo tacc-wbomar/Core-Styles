@@ -12,8 +12,8 @@ variants:
     status: backup
   - name: standard-3
     status: backup
-  # - name: image
-  #   status: prototype
+  - name: images
+    status: wip
   - name: docs
     status: ready
     context:
