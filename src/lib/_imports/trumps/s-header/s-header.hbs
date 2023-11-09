@@ -1,0 +1,45 @@
+<!-- FAQ:
+
+This is the markup of the #s-header, as of 2020-03-11,
+from https://frontera-portal.tacc.utexas.edu/. It has:
+
+- Bootstrap class names
+  (also via `./s-portal-nav.html`)
+  (also via `./s-cms-nav.html`)
+- Bootstrap attributes
+  (also via `./s-portal-nav.html`)
+- multiple internal scope (`s-`) classes
+  (only via `./s-portal-nav.html`)
+  (only via `./s-cms-nav.html`)
+- FontAwesome class names
+  (only via `./s-portal-nav.html`)
+- illegally-nested markup (`ul > div > li`)
+  (only via `./s-portal-nav.html`)
+-->
+<div class="branding-header">
+  <a href="https://www.nsf.gov/" target="_blank">
+    <img class="branding-logo branding-nsf" src="http://tacc.utexas.edu/static/site_cms/img/org_logos/nsf-white.png" alt="NSF Logo">
+  </a>
+  <span class="branding-seperator"></span>
+  <a href="https://www.tacc.utexas.edu/" target="_blank">
+    <img class="branding-logo branding-tacc" src="http://tacc.utexas.edu/static/site_cms/img/org_logos/tacc-white.png" alt="TACC Logo">
+  </a>
+  <span class="branding-seperator"></span>
+  <a href="https://www.utexas.edu/" target="_blank">
+    <img class="branding-logo branding-utaustin" src="http://tacc.utexas.edu/static/site_cms/img/org_logos/utaustin-white.png" alt="University of Texas at Austin Logo">
+  </a>
+</div>
+<nav id="s-header" class="s-header navbar navbar-expand-lg navbar-dark">
+  <a class="navbar-brand" href="/">
+    <img src="http://tacc.utexas.edu/static/site_cms/img/org_logos/portal.png" alt="Portal Logo"
+      class="nav-logo-double nav-logo-frontera-double" />
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExpandTarget"
+    aria-controls="navbarsExpandTarget" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExpandTarget">
+    {{> @s-cms-nav}} {{> @s-portal-nav}}
+  </div>
+</nav>

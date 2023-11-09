@@ -8,19 +8,29 @@ from https://frontera-portal.tacc.utexas.edu/. It has:
 -->
 <ul class="s-portal-nav navbar-nav">
   <!-- When user is not logged in, there are zero dropdown(-*) classes -->
+  <style type="text/css">
+    .s-portal-nav .icon {
+      margin-right: 0.25em;
+
+      /* Copied from FontAwesome `.fa-lg` */
+      font-size: 1.3em;
+      vertical-align: text-bottom;
+      /* tweaked to align better */
+    }
+
+    .s-portal-nav .nav-link .icon {
+      font-size: 1.5em;
+      vertical-align: middle;
+      /* tweaked to align better */
+    }
+  </style>
   <li class="nav-item dropdown">
-    <a
-      class="nav-link dropdown-toggle"
-      href="#"
-      data-toggle="dropdown"
-      aria-haspopup="true"
-      aria-expanded="false"
-    >
+    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <i class="icon icon-user"></i>
       <span>username</span>
       <span class="sr-only">Toggle Dropdown</span>
     </a>
-    <nav class="dropdown-menu dropdown-menu-right show">
+    <nav class="dropdown-menu dropdown-menu-right">
       <a class="dropdown-item" href="/workbench/dashboard">
         <i class="icon icon-dashboard"></i> My Dashboard
       </a>
