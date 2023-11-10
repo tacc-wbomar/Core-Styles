@@ -181,12 +181,26 @@
     margin-bottom: 2rem; /* to mimic <p> */
 }
 
+/* Elements: Lists */
+
+:--c-card ul {
+    /* list-style: none; *//* H.P. restored bullets, M.S. does not know */
+    padding-left: 1em; /* overwrite core-styles.cms */
+}
+/* To add space between line items */
+/* FAQ: Using margin and li:not(:first-of-type) because of multi-line items */
+:--c-card li:not(:first-of-type) {
+    margin-top: 0.5em;
+}
+:--c-card ul:last-child {
+    margin-bottom: 2rem;
+}
 
 
 
 
 /* Image */
-  
+
 :--c-card--image {
     display: grid;
 }
