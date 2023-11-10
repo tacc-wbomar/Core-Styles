@@ -5,7 +5,7 @@ context:
     - ../../assets/core-styles.header.css
     - ../../assets/core-styles.theme.default.css
 variants:
+  - name: with-branding
+    label: With Branding
   - name: default
-    label: S-Header With Branding
-  - name: Without Branding
-    label: S-Header Without Branding
+    label: Without Branding
