@@ -37,13 +37,15 @@ Only appointed team members may release versions.
     `npm login`
 1. Create new branch for version bump.
 1. Update `CHANGELOG.md`.
+1. Verify build is up-to-date:\
+   `npm run build:css`\
+    <sub>Commit substantial unexpected changes via independent PR.</sub>
 1. Update version via:\
    `npm version N.N.N`
-1. Commit, push, PR, review.\
-    <sup>Do **not** merge yet.</sup>
+1. Commit, push, PR, review, merge.
 1. Publish to NPM via:\
     `npm publish --access public`\
-    <sup>Project build will automatically occur before publish.</sup>
+    <sub>Project build will automatically occur before publish.</sub>
 1. Commit NPM build output.
 1. Merge pull request.
 1. Create release and tag on GitHub.
