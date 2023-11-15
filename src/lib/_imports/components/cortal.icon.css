@@ -45,8 +45,6 @@ Styleguide Components.Cortal.Icon
 p > :is(:--action):only-child > .icon:first-child {
     margin-right: 10px;
     font-size: 1.2em;
-    position: relative;
-    top: .2em;
 }
 
 
