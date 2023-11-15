@@ -1,11 +1,3 @@
-[class*="tag--"] {
-    display: block;
-    margin-bottom: 2.0rem;
-    color: var(--global-color-primary--xx-light);
-    font-size: var(--global-font-size--small);
-    background: var(--global-color-accent--normal);
-}
-
 .u-highlight {
     padding-inline: var(--tag-padding);
     color: var(--global-color-primary--xx-light);
