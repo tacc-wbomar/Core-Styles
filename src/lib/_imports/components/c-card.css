@@ -104,7 +104,7 @@
 
 /* Elements */
 :--c-card > a:not(:--c-button) {
-    display: inline-block; /* FAQ: for actions that do not yet have this */
+    display: flex;
 }
 :--c-card > :is(:--action) {
     vertical-align: middle;
