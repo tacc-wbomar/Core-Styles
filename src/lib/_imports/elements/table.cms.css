@@ -9,7 +9,8 @@ table,
   border-bottom: var(--global-border-width--thick) solid var(--global-color-primary--dark);
 }
 
-/* To thicken top border of headless table */
+/* TABLE WITH NO <thead> */
+/* To thicken top border */
 tbody:not(thead + tbody) > tr:first-child > :is(td,th),
 :--s-paragraph-table {
   border-top-width: var(--global-border-width--thick);
