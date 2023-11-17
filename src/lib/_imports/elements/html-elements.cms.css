@@ -54,7 +54,7 @@ Styleguide Elements.TextContent
 
 /* Lists */
 
-& :is(
+& :where(
   ol, ul,
   dl dl /* Treat nested definition lists like other nested lists */
 ):not(
