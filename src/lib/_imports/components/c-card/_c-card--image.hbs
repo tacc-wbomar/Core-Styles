@@ -1,0 +1,22 @@
+<article class="c-card c-card--{{variant}} c-card--image-{{position}}">
+{{#if is-staff}}
+
+  <h4><a href="#">Bender Rodríguez</a></h4>
+  <p>Planet Express Worker</p>
+  <p>Anti-hero in Futurama</p>
+  <img class="img-fluid" width="234px" height="293px"
+    src="https://cohro.ukzn.ac.za/wp-content/uploads/2019/02/profile-placeholder.png"
+    title="University of Texas at Austin" class="img-fluid"
+  />
+
+{{else}}
+
+  <h3>Card - Image {{position}}</h3>
+  <p>{{> @text-of-one-paragraph-short }}</p>
+  {{#if tall}}
+  {{> @message tag="p" type="warning" scope="inline" content="Narrow images might not fill space available. Just use a wider image." }}
+  {{/if}}
+  <img src="{{> @img-url wide=wide tall=tall medium=true }}" />
+
+{{/if}}
+</article>
