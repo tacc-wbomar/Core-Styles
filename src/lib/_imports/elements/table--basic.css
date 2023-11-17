@@ -19,13 +19,6 @@ table,
   display: table; /* to mimic shrink-wrap width of real table */
 }
 
-/* To add top border to tbody (unless nested) */
-/* FAQ: Added to cell, not row, because `border-collapse: separate` */
-tbody > tr:first-child > :is(td, th),
-:--s-paragraph-table {
-  border-top: var(--global-border-width--normal) solid var(--global-color-primary--dark);
-}
-
 /* To add bottom border to rows */
 tr:not(:last-of-type) > :is(td, th),
 :--s-paragraph-table p:not(:last-of-type) {
