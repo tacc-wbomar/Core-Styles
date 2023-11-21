@@ -1,13 +1,12 @@
 /* FAQ: c-form.css styles s-form and django-cms-forms */
-@import url("./c-form.css");
-@import url("./c-form--cms.css");
 
 @import url("./django-cms-forms.hacks.css");
+@import url("./django-cms-forms.selectors.css");
 
-/* No other styles necessary, because c-form supports s-form selectors */
+/* Few other styles necessary, because c-form supports s-form selectors */
 /* SEE ../components/c-form.css */
 /* SEE: ../tools/selectors.form.css */
 
-/* To ensure */
+/* To re-order plugin elements to match order of such elements in `c-form` */
 :--cms-form__field > :--cms-form__errors { order: 1; }
 :--cms-form__field > :--cms-form__help { order: 2; }
