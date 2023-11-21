@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.21.1] - 2023-11-20: Fix Scrolling Table Border, Fix Unwanted Padding
+
+### Changed
+
+- chore: tup-636 c-card--image - less templates (#257)
+
+### Fixed
+
+- fix: tup-488 scrollable table border (#265)
+- bug/tup-649 bug/tup-646 Remove unwanted padding-left (#264)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.21.0...v2.21.1
+
 ## [2.21.0] - 2023-11-16: Wrap Card Links, Add u-highlight, Sticky Footer Bug
 
 ## Added
@@ -854,7 +867,8 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.21.0...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.21.1...HEAD
+[2.21.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.21.1
 [2.21.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.21.0
 [2.20.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.20.0
 [2.19.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.19.0
