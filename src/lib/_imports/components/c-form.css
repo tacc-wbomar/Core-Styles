@@ -92,6 +92,7 @@
 
   /* HELP: Hiding horizontal space causes TUP-660 */
   /* NOTE: Better to have too much space than not enough */
+  /* SEE: https://developer.mozilla.org/en-US/docs/Web/CSS/white-space-collapse */
   /* font-size: 0; */
 }
 :--form__badge::after {
