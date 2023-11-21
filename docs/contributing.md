@@ -36,12 +36,14 @@ Only appointed team members may release versions.
 1. (one time) Login to npm via:\
     `npm login`
 1. Create new branch for version bump.
-1. Update `CHANGELOG.md`.
 1. Verify build is up-to-date:\
    `npm run build:css`\
     <sub>Commit substantial unexpected changes via independent PR.</sub>
+1. Update `CHANGELOG.md`.
 1. Update version via:\
    `npm version N.N.N`
+1. Build with new version:\
+   `npm run build:css`\
 1. Commit, push, PR, review, merge.
 1. Publish to NPM via:\
     `npm publish --access public`\
