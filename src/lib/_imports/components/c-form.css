@@ -38,14 +38,10 @@
 
 :--form__field {
   margin-bottom: 2rem; /* mimic <p> `margin-bottom` */
-}
 
-:--form__field--not-checkbox {
   display: flex;
   flex-direction: column;
 }
-:--form__field--not-checkbox > :--form__errors { order: 1; }
-:--form__field--not-checkbox > :--form__help { order: 2; }
 
 :--form__field--has-checkbox {
   display: inline-grid;

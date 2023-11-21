@@ -47,10 +47,6 @@
     :--c-form__field--has-checkbox,
     :--s-form__field--has-checkbox,
     :--cms-form__field--has-checkbox;
-@custom-selector :--form__field--not-checkbox
-    :--c-form__field--not-checkbox,
-    :--s-form__field--not-checkbox,
-    :--cms-form__field--not-checkbox;
 
 @custom-selector :--form__menu
     :--c-form__menu,
