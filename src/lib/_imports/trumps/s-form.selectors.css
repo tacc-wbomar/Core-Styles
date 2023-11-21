@@ -23,6 +23,8 @@
     :where(.s-form > div).has-required;
 @custom-selector :--s-form__field--has-checkbox
     :--s-form__field.has-type-check;
+@custom-selector :--s-form__field--not-checkbox
+    :--s-form__field:where(:not(.has-type-check));
 
 @custom-selector :--s-form__menu
     :where(.s-form > div > menu);

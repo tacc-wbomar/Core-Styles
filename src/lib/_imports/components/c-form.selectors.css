@@ -23,6 +23,8 @@
     :--c-form__field.has-required;
 @custom-selector :--c-form__field--has-checkbox
     :--c-form__field.has-type-check;
+@custom-selector :--c-form__field--not-checkbox
+    :--c-form__field:where(:not(.has-type-check));
 
 @custom-selector :--c-form__menu
     .c-form__field > :where(ul:not(.c-form__errors), menu);

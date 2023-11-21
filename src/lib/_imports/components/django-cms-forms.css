@@ -3,18 +3,12 @@
 @import url("./c-form--cms.css");
 
 @import url("./django-cms-forms.hacks.css");
+@import url("./django-cms-forms.selectors.css");
 
 /* No other styles necessary, because c-form supports s-form selectors */
 /* SEE ../components/c-form.css */
 /* SEE: ../tools/selectors.form.css */
 
-@custom-selector :--cms-form__field--no-checkbox
-  .field-wrapper:where(:not(.checkboxinput));
-
-:--cms-form__field--no-checkbox {
-  display: flex;
-  flex-direction: column;
+:--cms-form__field--not-checkbox {
   width: max-content;
 }
-:--cms-form__field--no-checkbox > .field-errors { order: 1; }
-:--cms-form__field--no-checkbox > .help-text    { order: 2; }
