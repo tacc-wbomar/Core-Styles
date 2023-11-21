@@ -8,13 +8,6 @@
 /* SEE ../components/c-form.css */
 /* SEE: ../tools/selectors.form.css */
 
-@custom-selector :--cms-form__field--no-checkbox
-  .field-wrapper:where(:not(.checkboxinput));
-
-:--cms-form__field--no-checkbox {
-  display: flex;
-  flex-direction: column;
-  width: max-content;
-}
-:--cms-form__field--no-checkbox > .field-errors { order: 1; }
-:--cms-form__field--no-checkbox > .help-text    { order: 2; }
+/* To ensure */
+:--cms-form__field > :--cms-form__errors { order: 1; }
+:--cms-form__field > :--cms-form__help { order: 2; }

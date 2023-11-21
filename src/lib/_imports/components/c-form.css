@@ -38,6 +38,9 @@
 
 :--form__field {
   margin-bottom: 2rem; /* mimic <p> `margin-bottom` */
+
+  display: flex;
+  flex-direction: column;
 }
 
 :--form__field--has-checkbox {
