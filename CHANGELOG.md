@@ -7,16 +7,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
-## [2.21.2] - 2023-11-21: Form Fixes
-
-### Fixed
-
-- Fix/tup 660 form badge font size zero can remove all space (#269)
-- hotfix: django-cms-forms unstyled in demo (#268)
-- fix: tup-659 all form fields too short (#267)
-
-**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.21.1...v2.21.2
-
 ## [2.21.1] - 2023-11-20: Fix Scrolling Table Border, Fix Unwanted Padding
 
 ### Changed
@@ -877,8 +867,7 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.21.2...HEAD
-[2.21.2]: https://github.com/TACC/Core-Styles/releases/tag/v2.21.2
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.21.1...HEAD
 [2.21.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.21.1
 [2.21.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.21.0
 [2.20.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.20.0
