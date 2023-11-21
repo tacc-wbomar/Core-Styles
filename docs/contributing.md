@@ -46,8 +46,6 @@ Only appointed team members may release versions.
 1. Publish to NPM via:\
     `npm publish --access public`\
     <sub>Project build will automatically occur before publish.</sub>
-1. Commit NPM build output.
-1. Merge pull request.
 1. Create release and tag on GitHub.
 1. Annotate Github's tag:\
   `bin/annotate-tag.sh vN.N.N`\
