@@ -89,7 +89,10 @@
   display: inline-block;
   visibility: hidden;
   line-height: 0;
-  font-size: 0;
+
+  /* HELP: Hiding horizontal space causes TUP-660 */
+  /* NOTE: Better to have too much space than not enough */
+  /* font-size: 0; */
 }
 :--form__badge::after {
   visibility: visible;
