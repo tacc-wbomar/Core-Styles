@@ -26,14 +26,9 @@
 
   border-width: var(--global-border-width--normal);
   border-style: solid;
-
-  @extend .x-truncate--one-line;
 }
-:--c-button:not(:--disabled) {
+:--c-button:where(:not(:--disabled)) {
   cursor: pointer; /* WARNING: Opinionated */
-}
-:--c-button:not(:--c-button--as-link) {
-  font-weight: var(--medium);
 }
 
 a:--c-button {
@@ -53,8 +48,6 @@ a:--c-button--is-busy {
 ) {
   color: var(--global-color-primary--dark);
   border-color: var(--global-color-primary--dark);
-
-  pointer-events: none;
 }
 :--c-button:--disabled:not(
   :--c-button--is-busy,
@@ -221,6 +214,12 @@ a:--c-button--is-busy {
   border-color: var(--global-color-primary--xx-dark);
 }
 
+/* Modifiers: Types: Truncate */
+
+:--c-button--can-truncate {
+  @extend .x-truncate--one-line;
+}
+
 /* Modifiers: Types: Is Active */
 
 :--c-button--is-active:hover {
@@ -273,6 +272,7 @@ a:--c-button--is-busy {
 
   font-size: inherit;
   font-family: inherit;
+  font-weight: inherit;
 }
 :--c-button--as-link:where(:not(:--disabled)):hover {
   @extend .x-link--hover;
@@ -294,13 +294,13 @@ a:--c-button--is-busy {
 
 /* Modifiers: Sizes */
 
-:--c-button:not(
+:--c-button:where(:not(
   :--c-button--width-short,
   :--c-button--width-medium,
   :--c-button--width-long,
   :--c-button--size-small,
   :--c-button--as-link
-) {
+)) {
   width: auto;
   --max-width: auto;
 }

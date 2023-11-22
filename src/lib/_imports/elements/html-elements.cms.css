@@ -1,4 +1,5 @@
 @import url("../tools/selectors.css");
+@import url("../tools/selectors.form.css");
 
 /* To scope these styles to main content (i.e. not header, not navbar) */
 :where(:--main-content) {
@@ -53,9 +54,11 @@ Styleguide Elements.TextContent
 
 /* Lists */
 
-& :is(
+& :where(
   ol, ul,
   dl dl /* Treat nested definition lists like other nested lists */
+):not(
+  :--form *
 ) {
   padding-left: var(--global-space--list-indent);
 }

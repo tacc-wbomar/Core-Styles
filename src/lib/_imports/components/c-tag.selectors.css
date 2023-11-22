@@ -1,5 +1,3 @@
-@import url("../tools/selectors.css");
-
 @custom-selector :--c-tag
     .c-tag,
     [class*="tag--"];

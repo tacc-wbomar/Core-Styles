@@ -7,17 +7,229 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
-...
+## [2.21.2] - 2023-11-21: Form Fixes
+
+### Fixed
+
+- Fix/tup 660 form badge font size zero can remove all space (#269)
+- hotfix: django-cms-forms unstyled in demo (#268)
+- fix: tup-659 all form fields too short (#267)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.21.1...v2.21.2
+
+## [2.21.1] - 2023-11-20: Fix Scrolling Table Border, Fix Unwanted Padding
+
+### Changed
+
+- chore: tup-636 c-card--image - less templates (#257)
+
+### Fixed
+
+- fix: tup-488 scrollable table border (#265)
+- bug/tup-649 bug/tup-646 Remove unwanted padding-left (#264)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.21.0...v2.21.1
+
+## [2.21.0] - 2023-11-16: Wrap Card Links, Add u-highlight, Sticky Footer Bug
+
+## Added
+
+- feat/tup-486 Create text-wrap for longer links (#260)
+- feat/tup-648 Migrate u-highlight from tup-ui to core-stlyes (#261)
+
+## Fixed
+
+- hotfix: tup 644 footer not sticky during edge case (#256)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.20.0...v2.21.0
+
+## [2.20.0] - 2023-11-13: Migrate More Components from TUP-UI, Add Header Demo
+
+### Added
+
+- feat/tup-635: Add header demo to core-styles (#258)
+- feat/tup 637: Migrate c-card support list to core-styles (#250)
+- feat/tup-636: Migrate c-card--images to core-styles (#254)
+- feat/tup 627: Migrate s-header to core-styles (#249)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.19.0...v2.20.0
+
+## [2.19.0] - 2023-11-02: Migrate Some Components from TUP-UI, Fix a Few Bugs
+
+### Added
+
+- feat: tup-624 c-update migration (#247)
+- feat/tup 617: Migrate c-card fixes to core-styles (#251)
+- feat/tup-625: Migrate o-heading-steps to core-styles (#248)
+- feat: tup-463 c-content-block and generics/attributes from tup-ui (#246)
+
+### Fixed
+
+- fix: tup-639 move c-button font-weight bold to cms (#253)
+- fix: c-card--frontera variant misc bugs (#252)
+
+### Documentation
+
+- docs: allow small primary buttons (#243)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.18.0...v2.19.0
+
+## [2.18.0] - 2023-10-03: C-Pill, S-Form-Page Footer Image; Better C-Tag Demo
+
+### Added
+
+- feat: support s-form-page footer link with image (#240)
+- feat: c-pill (#234)
+- enhance: improve c-tag demo (#233)
+
+## [2.17.5] - 2023-09-13: Style Non-Footer Form Submit Buttons
+
+### Fixed
+
+- fix: style non-footer form buttons (and add demo to test) (#230)
+
+## [2.17.4] - 2023-09-13: Form Submit Buttons Are Not Always Primary Buttons
+
+### Fixed
+
+- fix: form submit buttons are not always primary (#227)
+
+## [2.17.3] - 2023-09-12: Fix Login Form Checkbox Alignment
+
+### Fixed
+
+- fix: checkbox field layout broken by form--login (#225)
+
+## [2.17.2] - 2023-09-01: Small Fixes for Table, Demo, Form
+
+### Fixed
+
+- fix: right-align a lone login form action (#223)
+- fix: cms table & s-paragraph-table demo (demo cmsStyles now in base layer) (#221)
+- fix: only truncate paragraph in portal table or s-truncated-table (#220)
+
+### Changed
+
+- fix: use global vars in MuiTabs (633ec418)
+
+### Documentation
+
+- fix: typo in c-card demo (34e3aded)
+- docs: comment on :--c-card > address usage (bf1a8986)
+- style: improve clarity of c-card `<p>` wrap notes (c0028f88)
+
+## [2.17.1] - 2023-08-15: NPM Audit Fix
+
+### Security
+
+- chore: npm audit fix (#217)
+
+## [2.17.0] - 2023-08-04: Refactor Footers, Fix Button to Inherit Font Weight
+
+### Added
+
+- refactor: footers (#215)
+
+### Fixed
+
+- fix: c-button font-weight not inherited (#216)
+
+## [2.16.3] - 2023-08-02: Fix Typo in Fieldset `:not()` Selector
+
+### Fixed
+
+- fix: invalid :not syntax (missing colon) (97e59a9)
+
+## [2.16.2] - 2023-08-02: Fix Form Element Selectors Too Specific
+
+### Fixed
+
+- fix: form elements selectors too specific (#213)
+
+## [2.16.1] - 2023-08-01: Login Form, Support Many Logos; Form Page, Fix Width
+
+### Fixed
+
+- fix: form width in demo (be88a94)
+- fix: s-form-page missing s-form--login css (10b8619)
+- fix: s-form-page width overflow (f1d139c)
+- fix: wp-63 must support two brands on login (#211) (#212)
+
+## [2.16.0] - 2023-08-01: `s-form-page`, `c-form--login`, `s-form--login`
+
+### Added
+
+- feat: s-form-page, c-form--login, s-form--login (#205)
+
+## [2.15.0] - 2023-07-31: Add `s-form`, Refactor Forms, Document about Bootstrap
+
+### Added
+
+- feat: s-form (and refactor c-form and django-cms-forms) (#207)
+
+### Fixed
+
+- fix: checkbox label should not have margin bottom (#206)
+- fix: less specific c-button not selector (#204)
+
+### Documentation
+
+- docs: cleanup (#208)
+- docs: core styles relationships to bootstrap (#203)
+- docs: add `bootstrap.md` (#202)
+
+## [2.14.0] - 2023-07-24: `s-affixed-input-wrapper` Enhanced & Moved to Base
+
+### Added
+
+- feat: s-affixed-input-wrapper from cms to base (#200)
+- refactor: s-affixed-input-wrapper, also adds prepend \& append (#199)
+
+## [2.13.0] - 2023-07-19: Add Handlebars Helpers; Fix `c-nav--piped` Edge Cases
+
+### Added
+
+- feat: handlebars helpers "eq" and "has" (#194)
+
+### Fixed
+
+- fix(components): c-nav support c-button--as-link (#196)
+- fix(components): c-nav support buttons (#195)
+
+## [2.12.0] - 2023-07-19: Demo `c-nav`, Add `c-nav--piped`; docs/contributing.md
+
+### Added
+
+- feat(components): c-nav demo \& "--piped" modifier (#191)
+
+### Documentation
+
+- docs: isolate \& update contrib. docs like core-cms (#192)
+
+## [2.11.0] - 2023-07-12: No Overscroll Behavior & Equal Height Col. Content
+
+### Added
+
+- feat: no macos overscroll behavior (#189)
+- feat(components): tup-491 eq. height cols via rows (#188)
+- feat(components): tup-491 equal height col cards (#187)
+
+## [2.10.1] - 2023-07-06: Bootstrap Fixes (Mainly for Portal Client)
+
+### Fixed
+
+- fix: remove border from modal footer (#186)
+- fix: offer bootstrap form fixes to portal client (#184)
 
 ## [2.10.0] - 2023-07-05: Color Demo & Refactor, Auto Release, How to Use Doc
 
-## Added
+### Added
 
 - feat: stop writing your changelogs manually (#176, #177, #178, #179, #180, #181, #182, #183)
 - feat: better manage accent colors, darken three light purples (#174)
 - feat: color demo (#175)
 
-## Documentation
+### Documentation
 
 - docs: add howto.md (users loading core-styles) (#152)
 
@@ -665,7 +877,29 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.10.0...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.21.2...HEAD
+[2.21.2]: https://github.com/TACC/Core-Styles/releases/tag/v2.21.2
+[2.21.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.21.1
+[2.21.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.21.0
+[2.20.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.20.0
+[2.19.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.19.0
+[2.18.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.18.0
+[2.17.5]: https://github.com/TACC/Core-Styles/releases/tag/v2.17.5
+[2.17.4]: https://github.com/TACC/Core-Styles/releases/tag/v2.17.4
+[2.17.3]: https://github.com/TACC/Core-Styles/releases/tag/v2.17.3
+[2.17.2]: https://github.com/TACC/Core-Styles/releases/tag/v2.17.2
+[2.17.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.17.1
+[2.17.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.17.0
+[2.16.3]: https://github.com/TACC/Core-Styles/releases/tag/v2.16.3
+[2.16.2]: https://github.com/TACC/Core-Styles/releases/tag/v2.16.2
+[2.16.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.16.1
+[2.16.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.16.0
+[2.15.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.15.0
+[2.14.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.14.0
+[2.13.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.13.0
+[2.12.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.12.0
+[2.11.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.11.0
+[2.10.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.10.1
 [2.10.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.10.0
 [2.9.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.9.1
 [2.9.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.9.0

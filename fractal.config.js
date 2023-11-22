@@ -66,7 +66,7 @@ fractal.components.set('default.context', {
   }],
   cmsStyles: [{
     isInternal: true,
-    layer: 'project',
+    layer: 'base',
     path: '/assets/core-styles.cms.css'
   }],
   docsStyles: [{
@@ -89,6 +89,15 @@ fractal.web.set('builder.dest', __dirname + '/demo');
 
 // Customize theme
 fractal.web.theme(theme);
+
+// Add template helpers
+const engine = fractal.components.engine();
+engine.handlebars.registerHelper('eq', function(a, b) {
+  return a == b;
+});
+engine.handlebars.registerHelper('has', function(array, item) {
+  return array.includes(item);
+});
 
 // Export
 module.exports = fractal;

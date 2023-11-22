@@ -59,7 +59,7 @@ Styleguide Elements.TextContent
 }
 
 /* To mimic Bootstrap */
-& :is(dl, ol, ul) {
+& :is(dl, ol, ul, menu) {
   margin-top: 0;
   margin-bottom: 1rem;
 }

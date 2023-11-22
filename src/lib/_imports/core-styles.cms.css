@@ -20,28 +20,36 @@
 @import url("./elements/html-elements.cms.css");
 @import url("./elements/headings--cms.css");
 @import url("./elements/monospace.css");
-@import url("./elements/form.cms.css");
 @import url("./elements/table.cms.css");
 
 /* OBJECTS */
 @import url("./objects/o-float-content.css");
 @import url("./objects/o-offset-content.css");
 @import url("./objects/o-section.css");
+@import url("./objects/o-heading-steps.css");
+
 
 /* COMPONENTS */
+@import url("./components/bootstrap.col.css");
 @import url("./components/bootstrap.modal--cms.css");
+@import url("./components/bootstrap.row.css");
+@import url("./components/c-content-block.css");
 @import url("./components/cortal.icon.css");
 @import url("./components/c-card.css");
 @import url("./components/c-form--cms.css");
 @import url("./components/c-message.css");
 @import url("./components/c-message--expanded.css");
 @import url("./components/c-recognition.css");
+@import url("./components/c-update.css");
+
 /* TODO: Move to TACC/Core-CMS-Resources:/frontera-cms
         or — alternatively — TACC/Core-CMS */
 @import url("./components/c-card--frontera-about-page.css");
 
 /* TRUMPS */
-@import url("./trumps/s-affixed-input-wrapper.css");
+@import url("./trumps/s-footer.css");
+@import url("./trumps/s-footer--thick.css");
+@import url("./trumps/s-truncated-table.css");
 /* To explain the in-limbo Core-CMS doc page styles */
 /* FAQ: Commented out because Core-CMS doc pages load these directly */
 /* IMPORTANT: If CMS docs are moved to TACC-Docs, then kill these stylesheets */
