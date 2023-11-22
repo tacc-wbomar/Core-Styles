@@ -10,3 +10,9 @@
 /* To re-order plugin elements to match order of such elements in `c-form` */
 :--cms-form__field > :--cms-form__errors { order: 1; }
 :--cms-form__field > :--cms-form__help { order: 2; }
+
+/* To increase asterisk character space */
+/* FAQ: Django form plugin markup neglects space between label and badge */
+:--cms-form__badge {
+  font-size: 1em;
+}
