@@ -14,6 +14,10 @@
     .c-button--tertiary,
     .button--3;
 
+@custom-selector :--c-button--can-truncate
+    .c-button--can-truncate,
+    .button--truncate;
+
 @custom-selector :--c-button--is-active
     [class*="button--is-active"];
 @custom-selector :--c-button--is-busy
