@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.22.0] - 2023-11-22: ⚠️ Do Not Truncate Buttons by Default
+
+### Added
+
+- feat: do NOT truncate buttons by default (#272)
+
+### Fixed
+
+- hotfix: tup-660 increase cms form badge space (#271)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.21.2...v2.22.0
+
 ## [2.21.2] - 2023-11-21: Form Fixes
 
 ### Fixed
