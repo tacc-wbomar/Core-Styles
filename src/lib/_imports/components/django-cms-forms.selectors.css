@@ -34,4 +34,4 @@
 @custom-selector :--cms-form__buttons
     .button-wrapper;
 @custom-selector :--cms-form__button
-    .form_button;
+    .form-button;
