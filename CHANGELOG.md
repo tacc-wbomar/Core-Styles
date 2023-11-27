@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.22.2] - 2023-11-27: Fix Styles Not Applying to Django CMS Form Button
+
+### Fixed
+
+- hotfix: wrong classname for django cms form button (9ac94d3)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.22.1...v2.22.2
+
 ## [2.22.1] - 2023-11-27: Match Space Between Form Label & "(required)" on CMS
 
 ### Fixed
