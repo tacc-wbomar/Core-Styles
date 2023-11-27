@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - hotfix: better mimic form badge space on CMS (a06f5af, 9315ebb)
 
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.22.0...v2.22.1
+
 ## [2.22.0] - 2023-11-22: ⚠️ Do Not Truncate Buttons by Default
 
 ### Added
