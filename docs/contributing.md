@@ -41,9 +41,9 @@ Only appointed team members may release versions.
     <sub>Commit substantial unexpected changes via independent PR.</sub>
 1. Update `CHANGELOG.md`.
 1. Update version via:\
-    `npm version N.N.N`
+    `npm version vN.N.N`
 1. Build with new version:\
-    `npm run build:css`
+    `npm run build:css --build-id="vN.N.N"`
 1. Commit, push, PR, review, merge.
 1. Publish to NPM via:\
     `npm publish --access public`\
