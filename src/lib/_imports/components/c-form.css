@@ -75,7 +75,7 @@
 /* Field: Required, Asterisk, Important */
 
 :--form__badge {
-  margin-left: 1em;
+  margin-left: 0.5em;
 }
 :--form__badge:where(:--form__field--has-required *) {
   color: var(--global-color-danger--dark);
