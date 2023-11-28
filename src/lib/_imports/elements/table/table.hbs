@@ -18,9 +18,9 @@
   {{/each}}
   {{#each data.rows}}
     <tr>
-      {{#if id}}<th>{{ id }}</th>{{/if}}
-      {{#if name}}<th>{{ name }}</th>{{/if}}
-      {{#if name-link}}<th><a href="#">{{ name-link }}</a></th>{{/if}}
+      {{#if id}}<td>{{ id }}</td>{{/if}}
+      {{#if name}}<td>{{ name }}</td>{{/if}}
+      {{#if name-link}}<td><a href="#">{{ name-link }}</a></td>{{/if}}
       {{#if paragraph}}
       <td title="{{> @text-of-one-paragraph-short }}">
         <p>{{> @text-of-one-paragraph-short }}</p>
