@@ -17,26 +17,27 @@
     </tr>
   {{/each}}
   {{#each data.rows}}
+    {{!-- {{#with as (getListItem ../data.cols @index) | col |}} --}}
     <tr>
-      {{#if id}}<td data-col="ID">{{ id }}</td>{{/if}}
-      {{#if name}}<td data-col="Name">{{ name }}</td>{{/if}}
-      {{#if name-link}}<td data-col="Name"><a href="#">{{ name-link }}</a></td>{{/if}}
+      {{#if id}}<td data-col="{{ getListItem ../data.cols @index }}">{{ id }}</td>{{/if}}
+      {{#if name}}<td data-col="{{ getListItem ../data.cols @index }}">{{ name }}</td>{{/if}}
+      {{#if name-link}}<td data-col="{{ getListItem ../data.cols @index }}"><a href="#">{{ name-link }}</a></td>{{/if}}
       {{#if paragraph}}
-      <td data-col="Summary" title="{{> @text-of-one-paragraph-short }}">
+      <td data-col="{{ getListItem ../data.cols @index }}" title="{{> @text-of-one-paragraph-short }}">
         <p>{{> @text-of-one-paragraph-short }}</p>
       </td>
       {{/if}}
       {{#if sentence}}
-      <td data-col="Sentence" title="{{> @text-of-one-sentence }}">
+      <td data-col="{{ getListItem ../data.cols @index }}" title="{{> @text-of-one-sentence }}">
         <span>{{> @text-of-one-sentence }}</span>
       </td>
       {{/if}}
-      {{#if custom-1}}<td data-col="Size">{{{ custom-1 }}}</td>{{/if}}
-      {{#if custom-2}}<td data-col="">{{{ custom-2 }}}</td>{{/if}}
-      {{#if custom-3}}<td data-col="">{{{ custom-3 }}}</td>{{/if}}
-      {{#if time}}<td data-col="Time"><time>{{ time }}</time></td>{{/if}}
+      {{#if custom-1}}<td data-col="{{ getListItem ../data.cols @index }}">{{{ custom-1 }}}</td>{{/if}}
+      {{#if custom-2}}<td data-col="{{ getListItem ../data.cols @index }}">{{{ custom-2 }}}</td>{{/if}}
+      {{#if custom-3}}<td data-col="{{ getListItem ../data.cols @index }}">{{{ custom-3 }}}</td>{{/if}}
+      {{#if time}}<td data-col="{{ getListItem ../data.cols @index }}"><time>{{ time }}</time></td>{{/if}}
       {{#if acts}}
-      <td data-col="Actions">
+      <td data-col="{{ getListItem ../data.cols @index }}">
         <ul>
         {{#each acts}}
           {{#if is-link }}<li><a href="#">{{ text }}</a></li>{{/if}}
