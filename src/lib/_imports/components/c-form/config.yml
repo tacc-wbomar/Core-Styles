@@ -1,6 +1,6 @@
 context:
   helpTextTag: div
-  inputListTag: ul
+  inputListTag: menu
   selectors:
     errorList: .c-form__errors
     wrap: .c-form__field
