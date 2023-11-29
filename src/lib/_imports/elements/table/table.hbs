@@ -1,6 +1,6 @@
 <table class="{{#if table }}has-table{{/if}} {{#if class }}{{ class }}{{/if}}">
   {{#if caption }}
-  <caption>{{{ caption }}}</catpion>
+  <caption>{{{ caption }}}</caption>
   {{/if}}
   {{#if data.cols }}
   <thead>
@@ -18,25 +18,25 @@
   {{/each}}
   {{#each data.rows}}
     <tr>
-      {{#if id}}<td>{{ id }}</td>{{/if}}
-      {{#if name}}<td>{{ name }}</td>{{/if}}
-      {{#if name-link}}<td><a href="#">{{ name-link }}</a></td>{{/if}}
+      {{#if id}}<td data-col-1="ID">{{ id }}</td>{{/if}}
+      {{#if name}}<td data-col-2="Name">{{ name }}</td>{{/if}}
+      {{#if name-link}}<td data-col-2="Name"><a href="#">{{ name-link }}</a></td>{{/if}}
       {{#if paragraph}}
-      <td title="{{> @text-of-one-paragraph-short }}">
+      <td data-col-3="Summary" title="{{> @text-of-one-paragraph-short }}">
         <p>{{> @text-of-one-paragraph-short }}</p>
       </td>
       {{/if}}
       {{#if sentence}}
-      <td title="{{> @text-of-one-sentence }}">
+      <td data-col-4="Sentence" title="{{> @text-of-one-sentence }}">
         <span>{{> @text-of-one-sentence }}</span>
       </td>
       {{/if}}
-      {{#if custom-1}}<td>{{{ custom-1 }}}</td>{{/if}}
-      {{#if custom-2}}<td>{{{ custom-2 }}}</td>{{/if}}
-      {{#if custom-3}}<td>{{{ custom-3 }}}</td>{{/if}}
-      {{#if time}}<td><time>{{ time }}</time></td>{{/if}}
+      {{#if custom-1}}<td data-col-5="Size">{{{ custom-1 }}}</td>{{/if}}
+      {{#if custom-2}}<td data-col-6="">{{{ custom-2 }}}</td>{{/if}}
+      {{#if custom-3}}<td data-col-7="">{{{ custom-3 }}}</td>{{/if}}
+      {{#if time}}<td data-col-8="Time"><time>{{ time }}</time></td>{{/if}}
       {{#if acts}}
-      <td>
+      <td data-col-9="Actions">
         <ul>
         {{#each acts}}
           {{#if is-link }}<li><a href="#">{{ text }}</a></li>{{/if}}
