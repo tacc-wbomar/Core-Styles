@@ -20,8 +20,7 @@ table,
 }
 
 :--s-paragraph-table {
-  display: table;
-  /* to mimic shrink-wrap width of real table */
+  display: table;  /* to mimic shrink-wrap width of real table */
 }
 
 /* TABLE WITH A <thead> */
@@ -206,43 +205,7 @@ table p:last-child,
 
   /* To label the cells */
   /* RFE: Add `data-label` to each cell so we can use `attr(data-label)` */
-  td[data-col-1]:before {
-    content: attr(data-col-1);
-  }
-
-  td[data-col-2]:before {
-    content: attr(data-col-2);
-  }
-
-  td[data-col-3]:before {
-    content: attr(data-col-3);
-  }
-
-  td[data-col-4]:before {
-    content: attr(data-col-4);
-  }
-
-  td[data-col-5]:before {
-    content: attr(data-col-5);
-  }
-  
-  td[data-col-6]:before {
-    content: attr(data-col-6);
-  }
-
-  td[data-col-7]:before {
-    content: attr(data-col-7);
-  }
-
-  td[data-col-8]:before {
-    content: attr(data-col-8);
-  }
-
-  td[data-col-9]:before {
-    content: attr(data-col-9);
-  }
-  
-  td[data-col-10]:before {
-    content: attr(data-col-10);
+  td[data-col]:before {
+    content: attr(data-col);
   }
 }

@@ -18,25 +18,25 @@
   {{/each}}
   {{#each data.rows}}
     <tr>
-      {{#if id}}<td data-col-1="ID">{{ id }}</td>{{/if}}
-      {{#if name}}<td data-col-2="Name">{{ name }}</td>{{/if}}
-      {{#if name-link}}<td data-col-2="Name"><a href="#">{{ name-link }}</a></td>{{/if}}
+      {{#if id}}<td data-col="ID">{{ id }}</td>{{/if}}
+      {{#if name}}<td data-col="Name">{{ name }}</td>{{/if}}
+      {{#if name-link}}<td data-col="Name"><a href="#">{{ name-link }}</a></td>{{/if}}
       {{#if paragraph}}
-      <td data-col-3="Summary" title="{{> @text-of-one-paragraph-short }}">
+      <td data-col="Summary" title="{{> @text-of-one-paragraph-short }}">
         <p>{{> @text-of-one-paragraph-short }}</p>
       </td>
       {{/if}}
       {{#if sentence}}
-      <td data-col-4="Sentence" title="{{> @text-of-one-sentence }}">
+      <td data-col="Sentence" title="{{> @text-of-one-sentence }}">
         <span>{{> @text-of-one-sentence }}</span>
       </td>
       {{/if}}
-      {{#if custom-1}}<td data-col-5="Size">{{{ custom-1 }}}</td>{{/if}}
-      {{#if custom-2}}<td data-col-6="">{{{ custom-2 }}}</td>{{/if}}
-      {{#if custom-3}}<td data-col-7="">{{{ custom-3 }}}</td>{{/if}}
-      {{#if time}}<td data-col-8="Time"><time>{{ time }}</time></td>{{/if}}
+      {{#if custom-1}}<td data-col="Size">{{{ custom-1 }}}</td>{{/if}}
+      {{#if custom-2}}<td data-col="">{{{ custom-2 }}}</td>{{/if}}
+      {{#if custom-3}}<td data-col="">{{{ custom-3 }}}</td>{{/if}}
+      {{#if time}}<td data-col="Time"><time>{{ time }}</time></td>{{/if}}
       {{#if acts}}
-      <td data-col-9="Actions">
+      <td data-col="Actions">
         <ul>
         {{#each acts}}
           {{#if is-link }}<li><a href="#">{{ text }}</a></li>{{/if}}
