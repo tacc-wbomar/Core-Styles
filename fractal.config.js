@@ -99,14 +99,12 @@ engine.handlebars.registerHelper('has', function(array, item) {
   return array.includes(item);
 });
 engine.handlebars.registerHelper('getColFromRow', function(row, val, cols) {
-  if ( ! cols ) {
-    return '';
-  } else {
-    const index = Object.entries(row).findIndex(el => el[1] === val);
-    const col = cols[index];
+  if ( ! cols ) return '';
 
-    return col;
-  }
+  const index = Object.entries(row).findIndex(el => el[1] === val);
+  const col = cols[index];
+
+  return col;
 });
 
 // Export
