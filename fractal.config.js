@@ -100,6 +100,12 @@ engine.handlebars.registerHelper('has', function(array, item) {
 });
 engine.handlebars.registerHelper('getColFromRow', function(row, val, cols) {
   if ( ! cols ) return '';
+
+  // console.log('val: ', val);
+  // row.table.rows.map(row => {
+  // Object.entries(row).forEach(rowValue => console.log(rowValue === val));
+  //  console.log();
+  // })
   // console.log(row.table.cols);
   // console.log(row.table.rows);
   // if (!row.table) {
@@ -112,9 +118,9 @@ engine.handlebars.registerHelper('getColFromRow', function(row, val, cols) {
   const index = Object.entries(row).findIndex(el => el[1] === val);
   const col = cols[index];
 
-  if (row.table) {
-    return row.table.cols[index]
-  }
+  // if (row.table) {
+  //   return row.table.cols[index]
+  // }
   
   return col;
 });

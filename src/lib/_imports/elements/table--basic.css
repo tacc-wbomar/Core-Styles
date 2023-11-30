@@ -187,9 +187,24 @@ table p:last-child,
     & td.has-table {
       padding-left: unset;
     }
-    
+
     & table.has-table {
       transform: unset;
+    }
+
+    & td:not(:first-child) th:first-child,
+    td:not(:first-child) td:first-child {
+      padding-inline-start: 50%;
+    }
+
+    & td:not(:last-child) th:last-child,
+    td:not(:last-child) td:last-child {
+      padding-inline-end: 50%;
+    }
+
+    & .c-pill {
+      min-width: unset;
+      padding-inline: unset;
     }
   }
 
