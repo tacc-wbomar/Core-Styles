@@ -1,4 +1,4 @@
-<table class="{{#if table }}has-table{{/if}} {{#if class }}{{ class }}{{/if}}">
+<table class="{{#if table }}has-table{{/if}} {{#if data.cols}}has-data-cols{{/if}} {{#if class }}{{ class }}{{/if}}">
   {{#if caption }}
   <caption>{{{ caption }}}</caption>
   {{/if}}
@@ -27,7 +27,7 @@
       </td>
       {{/if}}
       {{#if sentence}}
-      <td data-col="{{ getColFromRow this sentence @root.data.cols }}" title="{{> @text-of-one-sentence }}">
+      <td data-col="{{ getColFromRow this sentence @root.data.cols}}" title="{{> @text-of-one-sentence }}">
         <span>{{> @text-of-one-sentence }}</span>
       </td>
       {{/if}}

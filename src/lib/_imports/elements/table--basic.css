@@ -20,7 +20,8 @@ table,
 }
 
 :--s-paragraph-table {
-  display: table;  /* to mimic shrink-wrap width of real table */
+  display: table;
+  /* to mimic shrink-wrap width of real table */
 }
 
 /* TABLE WITH A <thead> */
@@ -140,11 +141,6 @@ table p:last-child,
 
 /* SEE: https://css-tricks.com/responsive-data-tables/ */
 @media (max-width: 767px) {
-  /* To remove border (that should probably be in Core anyway) */
-  table {
-    --row-padding: calc(var(--cell-padding) * 2);
-    border: none;
-  }
   /* overwrite Core CMS site.css */
 
   /* To escape table layout */
@@ -153,40 +149,52 @@ table p:last-child,
     display: block;
   }
 
-  /* To hide table headers (but not `display: none;`, for a11y) */
-  thead tr {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
+  /* To remove border (that should probably be in Core anyway) */
+  table.has-data-cols {
+    --row-padding: calc(var(--cell-padding) * 2);
+    border: none;
+
+    /* To hide table headers (but not `display: none;`, for a11y) */
+    & thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+
+    /* To make each cell behave like a "row" */
+    & td {
+      border-top: none;
+      position: relative;
+      padding-left: 50%;
+    }
+
+    /* To restore row borders */
+    & tr:not(:last-of-type) {
+      border-bottom: var(--global-border-width--normal) solid var(--global-color-primary--light);
+    }
+
+    /* To label the cells */
+    /* RFE: Add `data-label` to each cell so we can use `attr(data-label)` */
+    & td:before {
+      content: attr(data-col);
+    }
+
+    & table.has-table {
+      --row-padding: unset;
+      border: unset;
+    }
+
+    & td.has-table {
+      padding-left: unset;
+    }
+    
+    & table.has-table {
+      transform: unset;
+    }
   }
 
-  /* To restore row borders */
-  tr:not(:last-of-type) {
-    border-bottom: var(--global-border-width--normal) solid var(--global-color-primary--light);
-  }
 
-  /* To make each cell behave like a "row" */
-  td {
-    border-top: none;
-  }
 
-  td:last-of-type {
-    border-bottom: none;
-  }
-
-  td {
-    position: relative;
-    padding-left: 50%;
-  }
-
-  /* To add space between rows (for legibility) */
-  tr {
-    padding-bottom: var(--row-padding);
-  }
-
-  tr:not(:first-of-type) {
-    padding-top: var(--row-padding);
-  }
 
   /* To make cells look like left-aligned labels */
   td:before {
@@ -201,11 +209,5 @@ table p:last-child,
     /* To mimic cell padding */
     top: var(--cell-pad-vert);
     left: var(--cell-pad-horz);
-  }
-
-  /* To label the cells */
-  /* RFE: Add `data-label` to each cell so we can use `attr(data-label)` */
-  td[data-col]:before {
-    content: attr(data-col);
   }
 }
