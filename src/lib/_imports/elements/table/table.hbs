@@ -18,25 +18,25 @@
   {{/each}}
   {{#each data.rows}}
     <tr>
-      {{#if id}}<td data-col="{{ getColFromRow this 'id' @root.data.cols }}">{{ id }}</td>{{/if}}
-      {{#if name}}<td data-col="{{ getColFromRow this 'name' @root.data.cols }}">{{ name }}</td>{{/if}}
-      {{#if name-link}}<td data-col="{{ getColFromRow this 'name-link' @root.data.cols }}"><a href="#">{{ name-link }}</a></td>{{/if}}
+      {{#if id}}<td data-col="{{ getColFromRow this id @root.data.cols }}">{{ id }}</td>{{/if}}
+      {{#if name}}<td data-col="{{ getColFromRow this name @root.data.cols }}">{{ name }}</td>{{/if}}
+      {{#if name-link}}<td data-col="{{ getColFromRow this name-link @root.data.cols }}"><a href="#">{{ name-link }}</a></td>{{/if}}
       {{#if paragraph}}
-      <td data-col="{{ getColFromRow this 'paragraph' @root.data.cols }}" title="{{> @text-of-one-paragraph-short }}">
+      <td data-col="{{ getColFromRow this paragraph @root.data.cols }}" title="{{> @text-of-one-paragraph-short }}">
         <p>{{> @text-of-one-paragraph-short }}</p>
       </td>
       {{/if}}
       {{#if sentence}}
-      <td data-col="{{ getColFromRow this 'sentence' @root.data.cols }}" title="{{> @text-of-one-sentence }}">
+      <td data-col="{{ getColFromRow this sentence @root.data.cols }}" title="{{> @text-of-one-sentence }}">
         <span>{{> @text-of-one-sentence }}</span>
       </td>
       {{/if}}
-      {{#if custom-1}}<td data-col="{{ getColFromRow this 'custom-1' @root.data.cols }}">{{{ custom-1 }}}</td>{{/if}}
-      {{#if custom-2}}<td data-col="{{ getColFromRow this 'custom-2' @root.data.cols }}">{{{ custom-2 }}}</td>{{/if}}
-      {{#if custom-3}}<td data-col="{{ getColFromRow this 'custom-3' @root.data.cols }}">{{{ custom-3 }}}</td>{{/if}}
-      {{#if time}}<td data-col="{{ getColFromRow this 'time' @root.data.cols }}"><time>{{ time }}</time></td>{{/if}}
+      {{#if custom-1}}<td data-col="{{ getColFromRow this custom-1 @root.data.cols }}">{{{ custom-1 }}}</td>{{/if}}
+      {{#if custom-2}}<td data-col="{{ getColFromRow this custom-2 @root.data.cols }}">{{{ custom-2 }}}</td>{{/if}}
+      {{#if custom-3}}<td data-col="{{ getColFromRow this custom-3 @root.data.cols }}">{{{ custom-3 }}}</td>{{/if}}
+      {{#if time}}<td data-col="{{ getColFromRow this time @root.data.cols }}"><time>{{ time }}</time></td>{{/if}}
       {{#if acts}}
-      <td data-col="{{ getColFromRow this 'acts' @root.data.cols }}">
+      <td data-col="{{ getColFromRow this acts @root.data.cols }}">
         <ul>
         {{#each acts}}
           {{#if is-link }}<li><a href="#">{{ text }}</a></li>{{/if}}
