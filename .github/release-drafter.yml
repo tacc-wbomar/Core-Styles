@@ -19,6 +19,7 @@ categories:
   - title: ⚠️ Changed
     labels:
       - changes
+      - refactor
       - performance
       - devops
       - test
