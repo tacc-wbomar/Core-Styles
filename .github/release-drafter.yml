@@ -19,8 +19,8 @@ categories:
   - title: ⚠️ Changed
     labels:
       - changes
-      - refactor
       - performance
+      - refactor
       - devops
       - test
   - title: ⛔️ Deprecated
