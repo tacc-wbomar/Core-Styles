@@ -102,8 +102,6 @@ engine.handlebars.registerHelper('getColFromRow', function(row, val, cols) {
   const index = Object.entries(row).findIndex(el => el[1] === val);
   const col = cols[index];
 
-  console.log(Object.entries(row), val, index, col);
-
   return col;
 });
 
