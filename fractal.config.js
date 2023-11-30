@@ -98,11 +98,13 @@ engine.handlebars.registerHelper('eq', function(a, b) {
 engine.handlebars.registerHelper('has', function(array, item) {
   return array.includes(item);
 });
-engine.handlebars.registerHelper('getColValueFromRowKey', function(context, key, cols) {
-  const colIndex = Object.keys(context).indexOf(key);
-  const colValue = cols[colIndex];
-  console.log(context, key, colIndex, colValue);
-  return colValue;
+engine.handlebars.registerHelper('getColFromRow', function(row, key, cols) {
+  const index = Object.keys(row).indexOf(key);
+  const col = cols[index];
+
+  console.log(row, key, index, col);
+
+  return col;
 });
 
 // Export
