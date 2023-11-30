@@ -17,31 +17,30 @@
     </tr>
   {{/each}}
   {{#each data.rows}}
-    {{!-- {{#with as (getListItem ../data.cols @index) | col |}} --}}
     <tr>
-      {{#if id}}<td data-col="{{ getListItem ../data.cols @index }}">{{ id }}</td>{{/if}}
-      {{#if name}}<td data-col="{{ getListItem ../data.cols @index }}">{{ name }}</td>{{/if}}
-      {{#if name-link}}<td data-col="{{ getListItem ../data.cols @index }}"><a href="#">{{ name-link }}</a></td>{{/if}}
-      {{#if paragraph}}
-      <td data-col="{{ getListItem ../data.cols @index }}" title="{{> @text-of-one-paragraph-short }}">
+      {{#if id}}<td data-col="{{ getColValueFromRowKey this 'id' @root.data.cols }}">{{ id }}</td>{{/if}}
+      {{#if name}}<td data-col="{{ getColValueFromRowKey this 'name' @root.data.cols }}">{{ name }}</td>{{/if}}
+      {{#if name-link}}<td data-col="{{ getColValueFromRowKey this 'name-link' @root.data.cols }}"><a href="#">{{ name-link }}</a></td>{{/if}}
+      {{#if ../paragraph}}
+      <td data-col="{{ getColValueFromRowKey this 'paragraph' @root.data.cols }}" title="{{> @text-of-one-paragraph-short }}">
         <p>{{> @text-of-one-paragraph-short }}</p>
       </td>
       {{/if}}
-      {{#if sentence}}
-      <td data-col="{{ getListItem ../data.cols @index }}" title="{{> @text-of-one-sentence }}">
+      {{#if ../sentence}}
+      <td data-col="{{ getColValueFromRowKey this 'sentence' @root.data.cols }}" title="{{> @text-of-one-sentence }}">
         <span>{{> @text-of-one-sentence }}</span>
       </td>
       {{/if}}
-      {{#if custom-1}}<td data-col="{{ getListItem ../data.cols @index }}">{{{ custom-1 }}}</td>{{/if}}
-      {{#if custom-2}}<td data-col="{{ getListItem ../data.cols @index }}">{{{ custom-2 }}}</td>{{/if}}
-      {{#if custom-3}}<td data-col="{{ getListItem ../data.cols @index }}">{{{ custom-3 }}}</td>{{/if}}
-      {{#if time}}<td data-col="{{ getListItem ../data.cols @index }}"><time>{{ time }}</time></td>{{/if}}
-      {{#if acts}}
-      <td data-col="{{ getListItem ../data.cols @index }}">
+      {{#if ../custom-1}}<td data-col="{{ getColValueFromRowKey this 'custom-1' @root.data.cols }}">{{{ ../custom-1 }}}</td>{{/if}}
+      {{#if ../custom-2}}<td data-col="{{ getColValueFromRowKey this 'custom-2' @root.data.cols }}">{{{ ../custom-2 }}}</td>{{/if}}
+      {{#if ../custom-3}}<td data-col="{{ getColValueFromRowKey this 'custom-3' @root.data.cols }}">{{{ ../custom-3 }}}</td>{{/if}}
+      {{#if ../time}}<td data-col="{{ getColValueFromRowKey this 'time' @root.data.cols }}"><time>{{ ../time }}</time></td>{{/if}}
+      {{#if ../acts}}
+      <td data-col="{{ getColValueFromRowKey this 'acts' @root.data.cols }}">
         <ul>
         {{#each acts}}
-          {{#if is-link }}<li><a href="#">{{ text }}</a></li>{{/if}}
-          {{#if is-button}}<li>
+          {{#if ../is-link }}<li><a href="#">{{ ../text }}</a></li>{{/if}}
+          {{#if ../is-button}}<li>
             <button class="c-button c-button--as-link">
               {{ text }}
             </button>
@@ -50,9 +49,9 @@
         </ul>
       </td>
       {{/if}}
-      {{#if table}}
+      {{#if ../table}}
       <td class="has-table">
-        {{> @table data=table }}
+        {{> @table data=../table }}
       </td>
       {{/if}}
     </tr>

@@ -98,9 +98,11 @@ engine.handlebars.registerHelper('eq', function(a, b) {
 engine.handlebars.registerHelper('has', function(array, item) {
   return array.includes(item);
 });
-engine.handlebars.registerHelper('getListItem', function(list, index) {
-  console.log(list, index, list[index]);
-  return list[index];
+engine.handlebars.registerHelper('getColValueFromRowKey', function(context, key, cols) {
+  const colIndex = Object.keys(context).indexOf(key);
+  const colValue = cols[colIndex];
+  console.log(context, key, colIndex, colValue);
+  return colValue;
 });
 
 // Export
