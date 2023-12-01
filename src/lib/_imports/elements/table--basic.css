@@ -149,10 +149,26 @@ table p:last-child,
     display: block;
   }
 
+  tbody:not(thead + tbody)>tr:first-child> :is(td, th),
+  :--s-paragraph-table {
+    border-top: none;
+  }
+
+  & tr> :is(td, th),
+  :--s-paragraph-table p:not(:last-of-type) {
+    border-bottom-width: var(--global-border-width--normal);
+    border-bottom-style: solid;
+    border-bottom-color: var(--global-color-primary--light);
+  }
+
   /* To remove border (that should probably be in Core anyway) */
   table.has-data-cols {
     --row-padding: calc(var(--cell-padding) * 2);
     border: none;
+
+    & table.has-table:is(:last-of-type) {
+      border-bottom: var(--global-border-width--thick) solid var(--global-color-primary--dark);
+    }
 
     /* To hide table headers (but not `display: none;`, for a11y) */
     & thead tr {
@@ -186,6 +202,8 @@ table p:last-child,
 
     & td.has-table {
       padding-left: unset;
+      /* need padding-bottom to review additional information */
+      padding-bottom: 30px;
     }
 
     & table.has-table {
