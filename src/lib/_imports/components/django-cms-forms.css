@@ -11,8 +11,10 @@
 :--cms-form__field > :--cms-form__errors { order: 1; }
 :--cms-form__field > :--cms-form__help { order: 2; }
 
-/* To increase asterisk character space */
-/* FAQ: Django form plugin markup neglects space between label and badge */
+/* HACK: To mimic Core-Styles space between label and badge */
+/* FAQ: Core-Styles assumes space between label and badge,
+        but Django form plugin markup does not add that space */
 :--cms-form__badge {
-  font-size: 1em;
+  font-size: inherit; /* to let Core-Styles `em` margin use regular font size */
+  width: 0; /* to remove space from asterisk character */
 }
