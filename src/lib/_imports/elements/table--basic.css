@@ -3,11 +3,8 @@
 table,
 :--s-paragraph-table {
   --font-size: var(--global-font-size--small, 12px);
-  --cell-pad-vert: 0.6667em;
-  /* 8px if font-size is 12px */
-  --cell-pad-horz: 1.3333em;
-  /* 16px if font-size is 12px */
-  --cell-line-height: 1.1;
+  --cell-pad-vert: 1em;
+  --cell-pad-horz: 2em;
 
   /* To prevent borders from being hidden */
   /* SEE: TABLE WITH A <thead> */
@@ -118,7 +115,7 @@ td ul {
 
 td li:not(:last-of-type) {
   /* To match line-height of other cells, but still allow space between items */
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
 }
 
 /* To override browser */
@@ -145,6 +142,17 @@ table p:last-child,
 
   /* To escape table layout */
 
+  table,
+  :--s-paragraph-table {
+    --font-size: var(--global-font-size--medium, 14px);
+    --cell-pad-vert: 1.2em;
+    --cell-pad-horz: 2.2em;
+
+    font-family: var(--global-font-family--sans--portal);
+    font-size: var(--font-size);
+  }
+
+
   :is(table, thead, tbody, th, td, tr) {
     display: block;
   }
@@ -154,7 +162,7 @@ table p:last-child,
     border-top: none;
   }
 
-  & tr> :is(td, th),
+  & tr>:is(td, th):not(:last-of-type),
   :--s-paragraph-table p:not(:last-of-type) {
     border-bottom-width: var(--global-border-width--normal);
     border-bottom-style: solid;
@@ -164,7 +172,6 @@ table p:last-child,
   /* To remove border (that should probably be in Core anyway) */
   table.has-data-cols {
     --row-padding: calc(var(--cell-padding) * 2);
-    border: none;
 
     & table.has-table:is(:last-of-type) {
       border-bottom: var(--global-border-width--thick) solid var(--global-color-primary--dark);
@@ -226,9 +233,6 @@ table p:last-child,
     }
   }
 
-
-
-
   /* To make cells look like left-aligned labels */
   td:before {
     position: absolute;
@@ -240,7 +244,6 @@ table p:last-child,
     text-overflow: ellipsis;
 
     /* To mimic cell padding */
-    top: var(--cell-pad-vert);
     left: var(--cell-pad-horz);
   }
 }
