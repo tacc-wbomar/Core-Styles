@@ -157,11 +157,6 @@ table p:last-child,
     display: block;
   }
 
-  tbody:not(thead + tbody)>tr:first-child> :is(td, th),
-  :--s-paragraph-table {
-    border-top: none;
-  }
-
   & tr>:is(td, th):not(:last-of-type),
   :--s-paragraph-table p:not(:last-of-type) {
     border-bottom-width: var(--global-border-width--normal);
