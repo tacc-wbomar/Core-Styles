@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
-## [2.22.3] - 2023-11-27: Fix Styles Not Applying to Django CMS Form Button
+## [2.22.3] - 2023-12-11: Consistent Margin-Bottom for Align Component
 
 ### Fixed
 
