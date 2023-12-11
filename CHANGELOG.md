@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.22.3] - 2023-11-27: Fix Styles Not Applying to Django CMS Form Button
+
+### Fixed
+
+- hotfix: consistent margin-bottom for aligned images (#278)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.22.2...v2.22.3
+
 ## [2.22.2] - 2023-11-27: Fix Styles Not Applying to Django CMS Form Button
 
 ### Fixed
@@ -905,7 +913,9 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.22.1...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.22.3...HEAD
+[2.22.3]: https://github.com/TACC/Core-Styles/releases/tag/v2.22.3
+[2.22.2]: https://github.com/TACC/Core-Styles/releases/tag/v2.22.2
 [2.22.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.22.1
 [2.22.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.22.0
 [2.21.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.21.1
