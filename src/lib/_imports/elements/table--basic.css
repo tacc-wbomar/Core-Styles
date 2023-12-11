@@ -26,7 +26,7 @@ table,
         - border must be on the cells
         - table must have `border-collapse: separate` */
 thead tr:last-child :is(td, th) {
-  border-bottom: var(--global-border-width--normal) solid var(--global-color-primary--dark);
+  border-bottom: var(--global-border-width--thick) solid var(--global-color-primary--dark);
 }
 
 /* TABLE WITH NO <thead> */
@@ -36,7 +36,7 @@ thead tr:last-child :is(td, th) {
           (because table has `border-collapse: separate`) */
 tbody:not(thead + tbody)>tr:first-child> :is(td, th),
 :--s-paragraph-table {
-  border-top: var(--global-border-width--normal) solid var(--global-color-primary--dark);
+  border-top: var(--global-border-width--thick) solid var(--global-color-primary--dark);;
 }
 
 /* To add bottom border to rows */
@@ -150,6 +150,8 @@ table p:last-child,
 
     font-family: var(--global-font-family--sans--portal);
     font-size: var(--font-size);
+    
+    border-top: var(--global-border-width--thick) solid var(--global-color-primary--dark);
   }
 
 
@@ -157,11 +159,29 @@ table p:last-child,
     display: block;
   }
 
-  & tr>:is(td, th):not(:last-of-type),
+  tr>:is(td, th):not(:last-of-type),
   :--s-paragraph-table p:not(:last-of-type) {
     border-bottom-width: var(--global-border-width--normal);
     border-bottom-style: solid;
     border-bottom-color: var(--global-color-primary--light);
+  }
+
+  /* To make cells look like left-aligned labels */
+  td:before {
+    position: absolute;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    /* To mimic cell padding */
+    left: var(--cell-pad-horz);
+  }
+
+  tbody:not(thead + tbody)>tr:first-child> :is(td, th) {
+    border-top: none;
   }
 
   /* To remove border (that should probably be in Core anyway) */
@@ -181,14 +201,8 @@ table p:last-child,
 
     /* To make each cell behave like a "row" */
     & td {
-      border-top: none;
       position: relative;
       padding-left: 50%;
-    }
-
-    /* To restore row borders */
-    & tr:not(:last-of-type) {
-      border-bottom: var(--global-border-width--normal) solid var(--global-color-primary--light);
     }
 
     /* To label the cells */
@@ -226,19 +240,5 @@ table p:last-child,
       min-width: unset;
       padding-inline: unset;
     }
-  }
-
-  /* To make cells look like left-aligned labels */
-  td:before {
-    position: absolute;
-    width: 45%;
-    padding-right: 10px;
-    white-space: nowrap;
-    font-weight: bold;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-    /* To mimic cell padding */
-    left: var(--cell-pad-horz);
   }
 }

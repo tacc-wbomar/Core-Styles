@@ -21,3 +21,11 @@ tbody:not(thead + tbody) > tr:first-child > :is(td,th),
 :--s-paragraph-table p {
     padding-block: 10px;
 }
+
+
+@media (max-width: 767px) { 
+  table {
+    border-top: var(--global-border-width--thick) solid var(--global-color-primary--dark);
+  }
+
+}
