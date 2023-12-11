@@ -139,9 +139,6 @@ table p:last-child,
 /* SEE: https://css-tricks.com/responsive-data-tables/ */
 @media (max-width: 767px) {
   /* overwrite Core CMS site.css */
-
-  /* To escape table layout */
-
   table,
   :--s-paragraph-table {
     --font-size: var(--global-font-size--medium, 14px);
@@ -211,21 +208,6 @@ table p:last-child,
       content: attr(data-col);
     }
 
-    & table.has-table {
-      --row-padding: unset;
-      border: unset;
-    }
-
-    & td.has-table {
-      padding-left: unset;
-      /* need padding-bottom to review additional information */
-      padding-bottom: 30px;
-    }
-
-    & table.has-table {
-      transform: unset;
-    }
-
     & td:not(:first-child) th:first-child,
     td:not(:first-child) td:first-child {
       padding-inline-start: 50%;
@@ -240,5 +222,46 @@ table p:last-child,
       min-width: unset;
       padding-inline: unset;
     }
+
+    & td.has-table {
+      padding-left: unset;
+    }
   }
+
+  table.has-table {
+    --row-padding: unset;
+    border: unset;
+    transform: unset;
+
+    & tr :is(td,th):last-child {
+      border-bottom: unset;
+    }
+  }
+
+
+  table.nested-table {
+    border-top: unset;
+    border-bottom: var(--global-border-width--thick) solid var(--global-color-primary--dark);  
+
+    & tr {
+      border: 1px solid dodgerblue;
+    }
+
+    & tr:nth-child(odd) :is(th, td) {
+      background: bisque;
+    }
+
+    & tr:not(:last-of-type) {
+      margin-top: 10px;
+      border-bottom: 1px solid dodgerblue;
+    }
+    
+    & tr:last-child {
+      margin-block: 10px;
+    }
+  }
+
+
+
+
 }

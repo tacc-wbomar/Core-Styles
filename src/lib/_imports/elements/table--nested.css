@@ -48,23 +48,8 @@ thead + tbody tr table {
 thead + tbody tr:first-of-type thead {
   background: var(--global-color-background--app);
 }
-/* FAQ: Hides all successive (thus redundant) nested table heads */
-thead + tbody tr:not(:first-of-type) thead {
-  visibility: hidden;
-}
+
 /* FAQ: Re-colors border of all successive nested rows (to match parent row) */
 thead + tbody tr:not(:first-of-type) tbody :is(td,th) {
   border-color: var(--global-color-primary--light);
-}
-
-/* To reduce inline padding
-   at start and end of nested table
-   unless at start or end of parent table */
-td:not(:first-child) th:first-child,
-td:not(:first-child) td:first-child {
-  padding-inline-start: 8px;
-}
-td:not(:last-child) th:last-child,
-td:not(:last-child) td:last-child {
-  padding-inline-end: 8px;
 }

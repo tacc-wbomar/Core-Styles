@@ -1,4 +1,4 @@
-<table class="{{#if table }}has-table{{/if}} {{#if data.cols}}has-data-cols{{/if}} {{#if class }}{{ class }}{{/if}}">
+<table class="{{#if data.has-table }}has-table{{/if}} {{#if data.cols}}has-data-cols{{/if}} {{#if class }}{{ class }}{{/if}}">
   {{#if caption }}
   <caption>{{{ caption }}}</caption>
   {{/if}}
@@ -50,11 +50,16 @@
       </td>
       {{/if}}
       {{#if table}}
-      <td class="has-table">
-        {{> @table data=table }}
-      </td>
+        <td class="has-table">
+          {{> @table data=table class="nested-table"}}
+        </td>
       {{/if}}
     </tr>
   {{/each}}
   </tbody>
 </table>
+
+{{!-- {{#if data.has-table}}
+
+  {{> @table data=data.table class="nested-table" }}
+{{/if}} --}}
