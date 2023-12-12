@@ -14,6 +14,8 @@ table,
 
   font-family: var(--global-font-family--sans--portal);
   font-size: var(--font-size);
+
+  border-bottom: var(--global-border-width--normal) solid var(--global-color-primary--dark);
 }
 
 :--s-paragraph-table {
@@ -26,7 +28,7 @@ table,
         - border must be on the cells
         - table must have `border-collapse: separate` */
 thead tr:last-child :is(td, th) {
-  border-bottom: var(--global-border-width--thick) solid var(--global-color-primary--dark);
+  border-bottom: var(--global-border-width--normal) solid var(--global-color-primary--dark);
 }
 
 /* TABLE WITH NO <thead> */
@@ -36,7 +38,7 @@ thead tr:last-child :is(td, th) {
           (because table has `border-collapse: separate`) */
 tbody:not(thead + tbody)>tr:first-child> :is(td, th),
 :--s-paragraph-table {
-  border-top: var(--global-border-width--thick) solid var(--global-color-primary--dark);;
+  border-top: var(--global-border-width--normal) solid var(--global-color-primary--dark);;
 }
 
 /* To add bottom border to rows */
@@ -136,6 +138,16 @@ table p:last-child,
   margin-bottom: 0;
 }
 
+table.nested-table {
+  border-bottom: unset;
+  border-left: var(--global-border-width--normal) solid var(--global-color-primary--light);
+  border-right: var(--global-border-width--normal) solid var(--global-color-primary--light);
+
+  & thead tr:last-child :is(td, th) {
+    border-bottom: var(--global-border-width--normal) solid var(--global-color-primary--light);
+  }
+}
+
 /* SEE: https://css-tricks.com/responsive-data-tables/ */
 @media (max-width: 767px) {
   /* overwrite Core CMS site.css */
@@ -148,7 +160,8 @@ table p:last-child,
     font-family: var(--global-font-family--sans--portal);
     font-size: var(--font-size);
     
-    border-top: var(--global-border-width--thick) solid var(--global-color-primary--dark);
+    border-top: var(--global-border-width--normal) solid var(--global-color-primary--dark);
+    border-bottom: var(--global-border-width--normal) solid var(--global-color-primary--dark);
   }
 
 
@@ -161,6 +174,10 @@ table p:last-child,
     border-bottom-width: var(--global-border-width--normal);
     border-bottom-style: solid;
     border-bottom-color: var(--global-color-primary--light);
+  }
+
+  tr:not(:last-of-type) {
+    border-bottom: var(--global-border-width--normal) solid var(--global-color-primary--light);
   }
 
   /* To make cells look like left-aligned labels */
@@ -224,14 +241,16 @@ table p:last-child,
     }
 
     & td.has-table {
-      padding-left: unset;
+      padding: 10px;
+      border-bottom: var(--global-border-width--normal) solid var(--global-color-primary--dark);
     }
   }
 
   table.has-table {
     --row-padding: unset;
-    border: unset;
     transform: unset;
+
+    border-bottom: var(--global-border-width--normal) solid var(--global-color-primary--dark);
 
     & tr :is(td,th):last-child {
       border-bottom: unset;
@@ -239,9 +258,10 @@ table p:last-child,
   }
 
 
+
+
   table.nested-table {
-    border-top: unset;
-    border-bottom: var(--global-border-width--thick) solid var(--global-color-primary--dark);  
+    border: unset;
 
     & tr {
       border: 1px solid dodgerblue;
@@ -260,8 +280,4 @@ table p:last-child,
       margin-block: 10px;
     }
   }
-
-
-
-
 }

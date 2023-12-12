@@ -6,14 +6,14 @@ table,
   --font-size: var(--global-font-size--medium);
   --cell-line-height: 1.4; /* to match body */
 
-  border-bottom: var(--global-border-width--thick) solid var(--global-color-primary--dark);
+  border-bottom: var(--global-border-width--normal) solid var(--global-color-primary--dark);
 }
 
 /* TABLE WITH NO <thead> */
 /* To thicken top border */
 tbody:not(thead + tbody) > tr:first-child > :is(td,th),
 :--s-paragraph-table {
-  border-top-width: var(--global-border-width--thick);
+  border-top-width: var(--global-border-width--normal);
 }
 
 /* To match row height in design (~40px) */
@@ -25,7 +25,7 @@ tbody:not(thead + tbody) > tr:first-child > :is(td,th),
 
 @media (max-width: 767px) { 
   table {
-    border-top: var(--global-border-width--thick) solid var(--global-color-primary--dark);
+    border-top: var(--global-border-width--normal) solid var(--global-color-primary--dark);
   }
 
 }
