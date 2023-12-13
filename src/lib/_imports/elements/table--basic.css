@@ -9,8 +9,7 @@ table,
   /* To prevent borders from being hidden */
   /* SEE: TABLE WITH A <thead> */
   border-collapse: separate;
-  /* overwrite Bootstrap */
-  border-spacing: 0;
+  border-spacing: 0; /* overwrite Bootstrap */
 
   font-family: var(--global-font-family--sans--portal);
   font-size: var(--font-size);
@@ -19,8 +18,7 @@ table,
 }
 
 :--s-paragraph-table {
-  display: table;
-  /* to mimic shrink-wrap width of real table */
+  display: table; /* to mimic shrink-wrap width of real table */
 }
 
 /* TABLE WITH A <thead> */
@@ -69,15 +67,6 @@ tr:nth-child(even) :is(th, td),
 
   color: var(--global-color-primary--dark);
 }
-
-/* To ensure <thead> height matches between browsers */
-/* IMPORTANT: More than for consistency; `table--nested.css` requires this */
-:is(td, th),
-:--s-paragraph-table p {
-  line-height: var(--cell-line-height);
-}
-
-
 
 th {
   color: var(--global-color-primary--x-dark);
@@ -136,16 +125,6 @@ table p,
 table p:last-child,
 :--s-paragraph-table p {
   margin-bottom: 0;
-}
-
-table.nested-table {
-  border-bottom: unset;
-  border-left: var(--global-border-width--normal) solid var(--global-color-primary--light);
-  border-right: var(--global-border-width--normal) solid var(--global-color-primary--light);
-
-  & thead tr:last-child :is(td, th) {
-    border-bottom: var(--global-border-width--normal) solid var(--global-color-primary--light);
-  }
 }
 
 /* SEE: https://css-tricks.com/responsive-data-tables/ */
@@ -254,30 +233,6 @@ table.nested-table {
 
     & tr :is(td,th):last-child {
       border-bottom: unset;
-    }
-  }
-
-
-
-
-  table.nested-table {
-    border: unset;
-
-    & tr {
-      border: 1px solid dodgerblue;
-    }
-
-    & tr:nth-child(odd) :is(th, td) {
-      background: bisque;
-    }
-
-    & tr:not(:last-of-type) {
-      margin-top: 10px;
-      border-bottom: 1px solid dodgerblue;
-    }
-    
-    & tr:last-child {
-      margin-block: 10px;
     }
   }
 }

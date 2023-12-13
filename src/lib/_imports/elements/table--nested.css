@@ -29,27 +29,44 @@
   td.has-table { padding: 0; }
 }
 
-/* To replace any parent table columns above with nested table columns */
-/* FAQ: Pulls nested table up by the height of the parent table head */
-thead + tbody tr table {
-  --offset-distance: calc(
-    var(--cell-pad-vert) * 2
-    +
-    var(--cell-line-height) * var(--font-size)
-    +
-    var(--global-border-width--normal)
-  );
-  --offset: calc( var(--offset-distance) * -1 );
-
-  transform: translateY(var(--offset));
-  margin-bottom: var(--offset);
-}
-/* FAQ: Hides any parent table head underneath nested table head */
-thead + tbody tr:first-of-type thead {
-  background: var(--global-color-background--app);
-}
-
 /* FAQ: Re-colors border of all successive nested rows (to match parent row) */
 thead + tbody tr:not(:first-of-type) tbody :is(td,th) {
   border-color: var(--global-color-primary--light);
+}
+
+table.nested-table {
+  border-bottom: unset;
+  border-left: var(--global-border-width--normal) solid var(--global-color-primary--light);
+  border-right: var(--global-border-width--normal) solid var(--global-color-primary--light);
+
+  & thead tr:last-child :is(td, th) {
+
+    /* background: var(--global-color-primary--x-light); // waiting on word from design */
+    border-bottom: var(--global-border-width--normal) solid var(--global-color-primary--light);
+  }
+
+  
+}
+
+@media (max-width: 767px) {
+  table.nested-table {
+    border: unset;
+  
+    & tr {
+      border: 1px solid dodgerblue;
+    }
+  
+    & tr:nth-child(odd) :is(th, td) {
+      background: bisque;
+    }
+  
+    & tr:not(:last-of-type) {
+      margin-top: 10px;
+      border-bottom: 1px solid dodgerblue;
+    }
+    
+    & tr:last-child {
+      margin-block: 10px;
+    }
+  }
 }
