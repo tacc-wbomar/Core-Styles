@@ -4,9 +4,9 @@
 /* Generic */
 
 @custom-selector :--s-form__desc
-    :where(.s-form > :is(h1, h2, h3, h4, h5, h6) + p);
+    :is(.s-form > :is(h1, h2, h3, h4, h5, h6) + p);
 @custom-selector :--s-form__title
-    :where(.s-form > :is(h1, h2, h3, h4, h5, h6));
+    :is(.s-form > :is(h1, h2, h3, h4, h5, h6));
 
 @custom-selector :--s-form__errors
     :where(:--s-form__errors--form, :--s-form__errors--field);
