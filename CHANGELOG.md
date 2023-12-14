@@ -21,7 +21,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 **Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.22.3...v2.22.4
 
-
 ## [2.22.3] - 2023-12-11: Consistent Margin-Bottom for Align Component
 
 ### Fixed
