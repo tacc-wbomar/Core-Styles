@@ -8,8 +8,8 @@ table,
 
   /* To prevent borders from being hidden */
   /* SEE: TABLE WITH A <thead> */
-  border-collapse: separate;
-  border-spacing: 0; /* overwrite Bootstrap */
+  border-collapse: separate; /* overwrite Bootstrap */
+  border-spacing: 0;
 
   font-family: var(--global-font-family--sans--portal);
   font-size: var(--font-size);
