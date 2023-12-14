@@ -43,7 +43,7 @@ Only appointed team members may release versions.
 1. Update version via:\
     `npm version vN.N.N`
 1. Build with new version:\
-    `npm run build:css --build-id="vN.N.N"`
+    `npm run build:css`
 1. Commit, push, PR, review, merge.
 1. Publish to NPM via:\
     `npm publish --access public`\
