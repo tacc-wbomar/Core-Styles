@@ -11,9 +11,9 @@
 @custom-selector :--cms-form__errors_list
     .errorlist;
 @custom-selector :--cms-form__errors--form /* submission errors */
-    :where(.form-errors .errorlist);
+    :is(.form-errors .errorlist);
 @custom-selector :--cms-form__errors--field /* validation errors */
-    :where(.field-errors .errorlist);
+    :is(.field-errors .errorlist);
 
 @custom-selector :--cms-form__field
     .field-wrapper;

@@ -4,18 +4,18 @@
 /* Generic */
 
 @custom-selector :--s-form__desc
-    :where(.s-form > :is(h1, h2, h3, h4, h5, h6) + p);
+    :is(.s-form > :is(h1, h2, h3, h4, h5, h6) + p);
 @custom-selector :--s-form__title
-    :where(.s-form > :is(h1, h2, h3, h4, h5, h6));
+    :is(.s-form > :is(h1, h2, h3, h4, h5, h6));
 
 @custom-selector :--s-form__errors
     :where(:--s-form__errors--form, :--s-form__errors--field);
 @custom-selector :--s-form__errors_list
     :--s-form__errors;
 @custom-selector :--s-form__errors--form /* submission errors */
-    :where(.s-form > ul);
+    :is(.s-form > ul);
 @custom-selector :--s-form__errors--field /* validation errors */
-    :where(.s-form > div > ul);
+    :is(.s-form > div > ul);
 
 @custom-selector :--s-form__field
     :where(.s-form > div);
