@@ -9,13 +9,13 @@
     .c-form__desc;
 
 @custom-selector :--c-form__errors
-    .c-form__errors;
+    :where(.c-form__errors);
 @custom-selector :--c-form__errors_list
     :--c-form__errors;
 @custom-selector :--c-form__errors--form /* submission errors */
-    :where(.c-form > .c-form__errors);
+    :is(.c-form > .c-form__errors);
 @custom-selector :--c-form__errors--field /* validation errors */
-    :where(.c-form__field .c-form__errors);
+    :is(.c-form__field .c-form__errors);
 
 @custom-selector :--c-form__field
     .c-form__field;

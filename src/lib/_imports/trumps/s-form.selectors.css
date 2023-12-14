@@ -13,9 +13,9 @@
 @custom-selector :--s-form__errors_list
     :--s-form__errors;
 @custom-selector :--s-form__errors--form /* submission errors */
-    :where(.s-form > ul);
+    :is(.s-form > ul);
 @custom-selector :--s-form__errors--field /* validation errors */
-    :where(.s-form > div > ul);
+    :is(.s-form > div > ul);
 
 @custom-selector :--s-form__field
     :where(.s-form > div);
