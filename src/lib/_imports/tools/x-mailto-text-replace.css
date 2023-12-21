@@ -12,8 +12,8 @@ Styleguide Tools.ExtendsAndMixins.MailtoTextReplace
     visibility: hidden; /* to hide actual link text */
     font-size: 0; /* to remove space of hidden text */
     /* CAVEAT: The `font-size: 0` causes underline to be too high */
-    /* HACK: Push underline down (still too high for any set value) */
-    text-underline-position: under;
+    /* HACK: So push underline down */
+    text-underline-offset: 0.4rem;
 }
 %x-mailto-text-replace::before {
     display: inline;
