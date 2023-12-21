@@ -11,6 +11,9 @@ Styleguide Tools.ExtendsAndMixins.MailtoTextReplace
     /* FAQ: Using `display: none` would hide pseudo element text */
     visibility: hidden; /* to hide actual link text */
     font-size: 0; /* to remove space of hidden text */
+    /* CAVEAT: The `font-size: 0` causes underline to be too high */
+    /* HACK: Push underline down (still too high for any set value) */
+    text-underline-position: under;
 }
 %x-mailto-text-replace::before {
     display: inline;
