@@ -20,6 +20,7 @@ plugins:
       cascade-layers: false
 
   cssnano:
+    # https://github.com/cssnano/cssnano/tree/cssnano%405.1.15/packages/cssnano-preset-default
     preset:
       - 'default'
       - # Both of these are disabled to allow manual CSS build tests
