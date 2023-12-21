@@ -13,7 +13,7 @@ Styleguide Tools.ExtendsAndMixins.MailtoTextReplace
     font-size: 0; /* to remove space of hidden text */
     /* CAVEAT: The `font-size: 0` causes underline to be too high */
     /* HACK: So push underline down */
-    text-underline-offset: 0.4rem;
+    text-underline-offset: 0.3rem;
 }
 %x-mailto-text-replace::before {
     display: inline;
