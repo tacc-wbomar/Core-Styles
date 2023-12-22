@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.22.5] - 2023-12-14: Simpler Tag Pattern, Fix Mailto-Text-Replace Bugs
+
+### Fixed
+
+- fix: bugs with mailto-text-replace (#286)
+- fix: remove Times, which is a font no designer approved (aa00e24)
+
+### Changed
+
+- fix: tup-584 simpler tag styles (#284)
+- chore: tup-677 no commented @import statements (#285)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.22.4...v2.22.5
+
 ## [2.22.4] - 2023-12-14: No Uppercased Tags, Fixed Form Padding Bugs
 
 ### Fixed
@@ -927,7 +941,8 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.22.4...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.22.5...HEAD
+[2.22.5]: https://github.com/TACC/Core-Styles/releases/tag/v2.22.5
 [2.22.4]: https://github.com/TACC/Core-Styles/releases/tag/v2.22.4
 [2.22.3]: https://github.com/TACC/Core-Styles/releases/tag/v2.22.3
 [2.22.2]: https://github.com/TACC/Core-Styles/releases/tag/v2.22.2
