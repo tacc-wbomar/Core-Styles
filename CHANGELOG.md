@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
-## [2.22.5] - 2023-12-14: Simpler Tag Pattern, Fix Mailto-Text-Replace Bugs
+## [2.22.5] - 2023-12-22: Simpler Tag Pattern, Fix Mailto-Text-Replace Bugs
 
 ### Fixed
 
