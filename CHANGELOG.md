@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.22.6] - 2024-01-02: Stlyes Links with Monospace Text
+
+### Fixed
+
+- fix: monospace inline link needs styles (#288)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.22.5...v2.22.6
+
 ## [2.22.5] - 2023-12-22: Simpler Tag Pattern, Fix Mailto-Text-Replace Bugs
 
 ### Fixed
@@ -941,7 +949,8 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.22.5...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.22.6...HEAD
+[2.22.6]: https://github.com/TACC/Core-Styles/releases/tag/v2.22.5
 [2.22.5]: https://github.com/TACC/Core-Styles/releases/tag/v2.22.5
 [2.22.4]: https://github.com/TACC/Core-Styles/releases/tag/v2.22.4
 [2.22.3]: https://github.com/TACC/Core-Styles/releases/tag/v2.22.3
