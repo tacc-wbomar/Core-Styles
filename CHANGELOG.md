@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
-## [2.22.6] - 2024-01-02: Stlyes Links with Monospace Text
+## [2.22.6] - 2024-01-02: Styles Links with Monospace Text
 
 ### Fixed
 
