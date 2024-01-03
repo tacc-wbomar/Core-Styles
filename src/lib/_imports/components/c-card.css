@@ -104,7 +104,7 @@
 
 /* Elements */
 
-:--c-card > a:not(:--c-button), :--c-card > p > a:not(:--c-button) {
+:--c-card > a:not(:--c-button), :--c-card > p > a:only-child:not(:--c-button) {
     display: flex;
 }
 :--c-card > :is(:--action) {
