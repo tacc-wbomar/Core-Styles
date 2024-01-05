@@ -35,6 +35,7 @@
 @import url("./components/bootstrap.row.css");
 @import url("./components/c-content-block.css");
 @import url("./components/cortal.icon.css");
+@import url("./components/c-button--cms.css");
 @import url("./components/c-card.css");
 @import url("./components/c-form--cms.css");
 @import url("./components/c-message.css");
@@ -47,6 +48,7 @@
 @import url("./components/c-card--frontera-about-page.css");
 
 /* TRUMPS */
+@import url("./trumps/s-drop-cap.css");
 @import url("./trumps/s-footer.css");
 @import url("./trumps/s-footer--thick.css");
 @import url("./trumps/s-truncated-table.css");
