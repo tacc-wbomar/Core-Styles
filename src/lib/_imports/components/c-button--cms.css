@@ -1,5 +1,5 @@
-@import url("@tacc/core-styles/src/lib/_imports/components/c-button.selectors.css");
-@import url("@tacc/core-styles/src/lib/_imports/tools/selectors.form.css");
+@import url("../components/c-button.selectors.css");
+@import url("../tools/selectors.form.css");
 
 
 :--main-content {
