@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+
+## [2.23.0] - 2024-01-05: Irregular & Mailto Links, S-Drop-Cap, XX-Narrow
+
+### Added
+
+- feat: reduce CSS in Core-CMS (#291)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.22.6...v2.22.7
+
 ## [2.22.6] - 2024-01-02: Styles Links with Monospace Text
 
 ### Fixed
@@ -949,7 +958,9 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.22.6...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.23.0...HEAD
+[2.23.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.23.0
+[2.22.6]: https://github.com/TACC/Core-Styles/releases/tag/v2.22.7
 [2.22.6]: https://github.com/TACC/Core-Styles/releases/tag/v2.22.5
 [2.22.5]: https://github.com/TACC/Core-Styles/releases/tag/v2.22.5
 [2.22.4]: https://github.com/TACC/Core-Styles/releases/tag/v2.22.4
