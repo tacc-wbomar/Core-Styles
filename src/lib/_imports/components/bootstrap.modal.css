@@ -1,30 +1,41 @@
 @import url('../tools/x-truncate.css');
 
+
+
+/* Generic */
+
 .modal-content,
 .modal-header,
 .modal-body,
 .modal-footer {
   border-radius: 0;
 }
-.modal-content,
-.modal-header,
-.modal-body {
-  border: none;
-}
 .modal-footer {
-  border-left: none;
-  border-right: none;
-  border-bottom: none;
+  border-top: none;
 }
 
+
+
+/* Content */
+
+.modal-content {
+  border-color: var(--global-color-primary--dark);
+}
+
+
+
+/* Header */
+
 .modal-header {
+  align-items: center;
+
+  border: none;
   background-color: var(--global-color-primary--x-light);
   padding: 1.35rem 1.75rem; /* (18px 23.5px design * 1.2 design-to-app ratio) */
 }
 .modal-title {
   color: var(--global-color-primary--xx-dark);
   font-weight: normal;
-  font-size: 1.2rem; /* 16px design * 1.2 design-to-app ratio */
 
   @extend .x-truncate--one-line;
 }
@@ -50,6 +61,8 @@
   font-family: Cortal-Icons !important;
 }
 
+/* Header: MUI Tabs */
+
 .modal-header.has-MuiTabs {
   flex-direction: row;
   position: relative;
@@ -62,4 +75,13 @@
 }
 .modal-header.has-MuiTabs .MuiTabs-indicator {
   background-color: white;
+}
+
+
+
+/* Body */
+
+.modal-body {
+  overflow: auto;
+  max-height: 60vh;
 }

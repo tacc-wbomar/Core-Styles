@@ -3,6 +3,9 @@ Breadcrumbs
 
 A list of links to ancestor navigation (pages or sections that are a parent, grandparent, et cetera of the current page or section) and the current page or section itself.
 
+- `.s-breadcrumbs`: root class for <nav>, <... [role="nav"]>, or <ol>
+- `.s-breadcrumbs-via-ul`: alternate root class for <ul> (not recommended)
+
 Notice: A scope class is used to enforce appropriate semantic HTML.
 
 Markup:
@@ -25,6 +28,7 @@ Markup:
 
 Styleguide Trumps.Scopes.Breadcrumbs
 */
+@import url("../tools/selectors.css");
 @import url("../tools/x-truncate.css");
 
 
@@ -33,12 +37,12 @@ Styleguide Trumps.Scopes.Breadcrumbs
 
 /* Base i.e. Container */
 
-nav.s-breadcrumbs {
-  padding-top: 15px;
+.s-breadcrumbs:is(nav),
+.s-breadcrumbs-via-ul {
+  padding-top: var(--global-space--above-breadcrumbs);
+  margin-bottom: var(--global-space--under-breadcrumbs);
 
   font-size: var(--global-font-size--x-small);
-
-  text-transform: uppercase;
 }
 
 
@@ -46,7 +50,8 @@ nav.s-breadcrumbs {
 /* Elements i.e. Content */
 
 /* To undo default list styles */
-nav.s-breadcrumbs ol {
+.s-breadcrumbs:is(nav) ol,
+.s-breadcrumbs-via-ul ul {
   list-style: none; /* overwrite browser styles */
   padding-left: unset; /* undo html-elements.css */
   margin-bottom: unset; /* undo html-elements.css */
@@ -54,16 +59,19 @@ nav.s-breadcrumbs ol {
   font-weight: var(--global-font-weight--medium);
 }
 
-ol.s-breadcrumbs li,
-nav.s-breadcrumbs ol li {
+.s-breadcrumbs:is(ol) li,
+.s-breadcrumbs:is(nav) ol li,
+.s-breadcrumbs-via-ul ul li {
   display: inline-block;
 }
 
-ol.s-breadcrumbs li + li::before,
-nav.s-breadcrumbs ol li + li::before {
+.s-breadcrumbs:is(ol) li + li::before,
+.s-breadcrumbs:is(nav) ol li + li::before,
+.s-breadcrumbs-via-ul ul li + li::before {
   content: ' > ';
 }
 
-nav.s-breadcrumbs ol li:last-child span {
+.s-breadcrumbs:is(nav) ol li:last-child,
+.s-breadcrumbs-via-ul ul li:last-child {
   font-weight: var(--bold);
 }

@@ -15,6 +15,7 @@ Markup: s-header.html
 
 Styleguide Trumps.Scopes.Header
 */
+@import url("../tools/media-queries.css");
 @import url("./s-header.bootstrap.css");
 
 /* WARNING: NO-R/EM: Until Frontera CMS drops Bootstrap 3.7.1 (for old design)…
@@ -22,7 +23,9 @@ Styleguide Trumps.Scopes.Header
             UPDATE: As of PR #312, this has likely changed (untested). */
 
 .s-header {
-  font-size: 16px; /* NO-R/EM: Overwrite `bootstrap.3.3.7.css` */
+  font-size: var(--global-font-size--medium); /* NO-R/EM: Overwrite `bootstrap.3.3.7.css` */
+  font-weight: var(--bold);
+  letter-spacing: 0.025px; /* 14px * 0.025em equals design-requested 0.35px */
   line-height: 1.4; /* `body` line-height differs between CMS, Portal, Docs */
 
   /* FAQ: Asssigning this font is only necessary for the User Guide,
@@ -36,7 +39,14 @@ Styleguide Trumps.Scopes.Header
   -moz-osx-font-smoothing: grayscale;
 
   /* To hide border, set this in theme to match `--header-bkgd-color` value */
-  border-bottom: 1px solid env(--header-major-border-color);
+  border-bottom: 1px solid var(--header-major-border-color);
+}
+
+/* To enlarge height for all screen widths */
+@media (--medium-and-above)  {
+  .s-header {
+      height: 60px;
+  }
 }
 
 /* Affiliation */
@@ -46,21 +56,30 @@ Styleguide Trumps.Scopes.Header
 /* Logo */
 
 .s-header .navbar-brand {
+  display: grid;
+  align-content: center;
+
   /* If branding is short enough, then align position of first CMS nav link with Portal "Dashboard" header */
   /* WARNING: This is a manual value; if Portal interface changes, then this may need to change */
   min-width: 176px;
   margin-right: 16px; /* NO-R/EM: 1rem (from Bootstrap via `.navbar-brand`) */
   padding: 0;
 
-  color: env(--header-text-color);
+  color: var(--header-text-color);
   /* text-decoration: none; */ /* already provided by Bootstrap */
 }
 
 /* Navigation */
 
+/* To stretch nav items to header height (while retaining vertical centering) */
+.s-header,
+.s-header .navbar-collapse {
+    align-items: stretch;
+}
+
 /* On wide viewport, prevent header resize from dynamic content */
 /* CAVEAT: This is only for Portal and Docs which dynamically load content */
-@media only screen and (min-width: 1201px) {
+@media (--wide-and-above) {
   .s-header.navbar {
     height: 50px;
   }
@@ -74,7 +93,7 @@ Styleguide Trumps.Scopes.Header
   --nav-padding-vert: 5px;
   --nav-padding-horz: calc(16px + 20px);
 
-  background-color: env(--header-bkgd-color);
+  background-color: var(--header-bkgd-color);
   padding: var(--nav-padding-vert) var(--nav-padding-horz);
 }
 
@@ -84,7 +103,7 @@ Styleguide Trumps.Scopes.Header
   --line-height: 24px;
   --border-width: 4px;
   --border-offset: calc(var(--nav-padding-vert) - var(--border-width));
-  --border-color: rgb(213, 181, 124);
+  --border-color: var(--global-color-secondary--light);
 
   /* The nav vertical padding does not match the link border, so the alignment
      of the link border with the bottom of the header is off by small amount */
@@ -96,6 +115,18 @@ Styleguide Trumps.Scopes.Header
   /* If link text uses 2 lines, header grows taller (but it must not do so) */
   white-space: nowrap;
 }
+
+@media (--medium-and-above) {
+  .s-header .nav-item {
+      display: flex;
+  }
+}
+
+.s-header .nav-link {
+  display: flex;
+  align-items: center;
+}
+
 .s-header .nav-link:hover,
 .s-header .nav-link:focus,
 .s-header .nav-link:active,
@@ -109,7 +140,7 @@ Styleguide Trumps.Scopes.Header
 #s-header .nav-link,
 /* HACK: Support `span.nav-link` having children `a` and `a.dropdown-toggle-split` */
 #s-header .nav-link > a {
-  color: env(--header-text-color);
+  color: var(--header-text-color);
   /* text-decoration: none; */ /* already provided by Bootstrap */
 }
 
@@ -117,11 +148,14 @@ Styleguide Trumps.Scopes.Header
 
 /* Tweak Bootstrap `_nav.scss` (which selects via `navbar-expand-` class) */
 .s-header[class*="navbar-expand-"] .navbar-nav .nav-link {
-  padding-top: 8px; /* NO-R/EM: 0.5rem (from Bootstrap) */
-  padding-bottom: 8px; /* NO-R/EM: 0.5rem (from Bootstrap) */
-
   padding-right: 14px; /* NO-R/EM: .875rem (overwrite Bootstrap) */
   padding-left: 14px; /* NO-R/EM: .875rem (overwrite Bootstrap) */
+}
+
+@media (--medium-and-below) {
+  .s-header[class*="navbar-expand-"] .navbar-nav .nav-link {
+      padding-block: 8px;
+  }
 }
 
 /* Search */
@@ -129,7 +163,7 @@ Styleguide Trumps.Scopes.Header
 /* Create a line between search bar and login */
 /* FAQ: The line should only exist if both elements are present */
 .s-header .s-search-bar ~ .s-portal-nav {
-  border-left: 1px solid env(--header-minor-border-color);
+  border-left: 1px solid var(--header-minor-border-color);
 
   margin-left: 12px;
 }
@@ -154,29 +188,44 @@ Styleguide Trumps.Scopes.Header
 /* This will eventually be superceded by GH-101. */
 
 /* For black icons:
-  - create a selector definition in s-header.css:
+  - create a rule set like this in s-header.css
+    (where `--custom-property` is a relevant name):
+
+    ```css
     .selector-target {
-      filter: env(--targeted-selector);
+      filter: var(--custom-property);
     };
-  - set the environment_variables value in theme.*.json to inverted value:
-    "environment-variables": {
+    ```
+  - reset the custom property value in a project stylesheet to inverted value:
+
+    ```css
+    .selector-target {
       ...
-      "--targeted-selector": "invert(100%)"
+      "--custom-property": "invert(100%)"
     }
+    ```
 */
 
 /* For themed icons using a color:
-  - create a selector definition in s-header.css:
+  - create a rule set like this in s-header.css
+    (where `--custom-property` is a relevant name):
+
+    ```css
     .selector-target {
       mix-blend-mode: "overlay";
-      filter: env(--selector-theme-color);
+      filter: var(--custom-property);
     };
-  - set the environment_variables value in theme.*.json to the desired color value:
-    "environment-variables": {
+    ```
+  - reset the custom property value in a project stylesheet to desired color:
+
+    ```css
+    .selector-target {
       ...
-      "--selector-theme-color": "#ABCDEF"
-    } */
+      "--custom-property": "#ABCDEF"
+    }
+    ```
+*/
 
 .navbar-toggler-icon  {
-  filter: env(--menu-toggle-icon);
+  filter: var(--menu-toggle-icon);
 }

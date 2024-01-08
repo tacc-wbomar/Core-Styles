@@ -1,11 +1,16 @@
+@import url('../components/c-button.selectors.css');
+@import url("../tools/selectors.css");
 @import url('../tools/x-link.css');
 
-a:not(.c-button) {
+a:not(:--c-button) {
   @extend .x-link;
 }
-a:not(.c-button):hover {
+a:not([href]) {
+  @extend .x-link--disabled;
+}
+a:not(:--c-button):hover {
   @extend .x-link--hover;
 }
-a:not(.c-button):active {
+a:not(:--c-button):active {
   @extend .x-link--active;
 }
