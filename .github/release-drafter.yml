@@ -20,6 +20,7 @@ categories:
     labels:
       - changes
       - performance
+      - refactor
       - devops
       - test
   - title: ⛔️ Deprecated

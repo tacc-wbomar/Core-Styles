@@ -2,6 +2,11 @@
 
 /* To style the footer, see trumps/s-footer.css */
 
+aside {
+  text-align: center;
+  font-style: italic;
+}
+
 footer {
   text-align: center;
   background-color: var(--global-color-primary--light);

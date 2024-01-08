@@ -1,6 +1,9 @@
 label: Django CMS Forms
 status: ready
 context:
+  📝 supportStyles: only needed until core-styles.cms.css loads them
+  supportStyles:
+    - ../../assets/components/django-cms-forms.css
   shouldLoadCMS: true
   📝 shouldLoadCMS: because this is demo but this is CMS pattern
   markup:

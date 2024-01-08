@@ -325,15 +325,15 @@ variants:
               rows:
                 - name: Corral
                   custom-1: 50 GB
-                  custom-2: <span class="c-pill">13 GB</span>
+                  custom-2: <span class="c-pill c-pill--is-danger">13 GB</span>
                   time: 12/01/2019 11:04:19
                 - name: Hikari
                   custom-1: 21 SU
-                  custom-2: <span class="c-pill">1.5 SU</span>
+                  custom-2: <span class="c-pill c-pill--is-warning">1.5 SU</span>
                   time: 03/22/2021 05:23:01
                 - name: Ranch
                   custom-1: 1 TB
-                  custom-2: <span class="c-pill">932 GB</span>
+                  custom-2: <span class="c-pill c-pill--is-success">932 GB</span>
                   time: 12/01/2019 11:04:19
           - id: Vermillion
             name: Nathan Fillion
@@ -347,15 +347,15 @@ variants:
               rows:
                 - name: Corral
                   custom-1: 50 GB
-                  custom-2: <span class="c-pill">13 GB</span>
+                  custom-2: <span class="c-pill c-pill--is-danger">13 GB</span>
                   time: 12/01/2019 11:04:19
                 - name: Hikari
                   custom-1: 21 SU
-                  custom-2: <span class="c-pill">1.5 SU</span>
+                  custom-2: <span class="c-pill c-pill--is-warning">1.5 SU</span>
                   time: 03/22/2021 05:23:01
                 - name: Ranch
                   custom-1: 1 TB
-                  custom-2: <span class="c-pill">932 GB</span>
+                  custom-2: <span class="c-pill c-pill--is-success">932 GB</span>
                   time: 12/01/2019 11:04:19
           - id: Emerald
             name: Wesley Snipes
@@ -369,13 +369,13 @@ variants:
               rows:
                 - name: Corral
                   custom-1: 50 GB
-                  custom-2: <span class="c-pill">13 GB</span>
+                  custom-2: <span class="c-pill c-pill--is-danger">13 GB</span>
                   time: 12/01/2019 11:04:19
                 - name: Hikari
                   custom-1: 21 SU
-                  custom-2: <span class="c-pill">1.5 SU</span>
+                  custom-2: <span class="c-pill c-pill--is-warning">1.5 SU</span>
                   time: 03/22/2021 05:23:01
                 - name: Ranch
                   custom-1: 1 TB
-                  custom-2: <span class="c-pill">932 GB</span>
+                  custom-2: <span class="c-pill c-pill--is-success">932 GB</span>
                   time: 12/01/2019 11:04:19

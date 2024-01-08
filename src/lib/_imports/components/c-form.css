@@ -38,6 +38,9 @@
 
 :--form__field {
   margin-bottom: 2rem; /* mimic <p> `margin-bottom` */
+
+  display: flex;
+  flex-direction: column;
 }
 
 :--form__field--has-checkbox {
@@ -86,7 +89,10 @@
   display: inline-block;
   visibility: hidden;
   line-height: 0;
-  font-size: 0;
+
+  /* To reduce asterisk character space */
+  /* WARNING: https://github.com/TACC/Core-Styles/pull/269 */
+  font-size: 0.25em;
 }
 :--form__badge::after {
   visibility: visible;

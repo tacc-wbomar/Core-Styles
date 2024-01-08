@@ -26,14 +26,9 @@
 
   border-width: var(--global-border-width--normal);
   border-style: solid;
-
-  @extend .x-truncate--one-line;
 }
 :--c-button:where(:not(:--disabled)) {
   cursor: pointer; /* WARNING: Opinionated */
-}
-:--c-button:where(:not(:--c-button--as-link)) {
-  font-weight: var(--medium);
 }
 
 a:--c-button {
@@ -217,6 +212,12 @@ a:--c-button--is-busy {
   color: var(--global-color-primary--xx-dark);
   background-color: var(--global-color-primary--xx-light);
   border-color: var(--global-color-primary--xx-dark);
+}
+
+/* Modifiers: Types: Truncate */
+
+:--c-button--can-truncate {
+  @extend .x-truncate--one-line;
 }
 
 /* Modifiers: Types: Is Active */

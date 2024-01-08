@@ -19,6 +19,7 @@
 @import url("./elements/sticky-footer.css");
 @import url("./elements/html-elements.cms.css");
 @import url("./elements/headings--cms.css");
+@import url("./elements/mailto-link.css");
 @import url("./elements/monospace.css");
 @import url("./elements/table.cms.css");
 
@@ -35,6 +36,7 @@
 @import url("./components/bootstrap.row.css");
 @import url("./components/c-content-block.css");
 @import url("./components/cortal.icon.css");
+@import url("./components/c-button--cms.css");
 @import url("./components/c-card.css");
 @import url("./components/c-form--cms.css");
 @import url("./components/c-message.css");
@@ -47,15 +49,7 @@
 @import url("./components/c-card--frontera-about-page.css");
 
 /* TRUMPS */
+@import url("./trumps/s-drop-cap.css");
 @import url("./trumps/s-footer.css");
 @import url("./trumps/s-footer--thick.css");
 @import url("./trumps/s-truncated-table.css");
-/* To explain the in-limbo Core-CMS doc page styles */
-/* FAQ: Commented out because Core-CMS doc pages load these directly */
-/* IMPORTANT: If CMS docs are moved to TACC-Docs, then kill these stylesheets */
-/*
-@import url("./trumps/s-document.css");
-@import url("./trumps/s-guide-doc.css");
-@import url("./trumps/s-inline-dl.css");
-@import url("./trumps/u-nested-text-content.css");
-*/

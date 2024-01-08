@@ -1,6 +1,7 @@
 /* Basic Structure */
 
 .align-right,
+.align-center,
 .align-left {
   margin-bottom: var(--global-space--grid-gap);
 }

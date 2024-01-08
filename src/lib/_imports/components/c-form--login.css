@@ -65,12 +65,6 @@
   display: none;
 }
 
-/* To make elements bigger */
-& :--form__field:not(:--form__field--has-checkbox) {
-  /* To stretch input field width */
-  display: flex;
-  flex-direction: column;
-}
 /* To always use larger field inputs (not just on coarse pointer devices) */
 & input {
   padding: 12px 12px; /* mimic Core Styles forms.css @media (pointer: coarse) */
