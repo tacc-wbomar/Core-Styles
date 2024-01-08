@@ -9,10 +9,11 @@ Reference:
 
 Styleguide Components.DjangoCMS.Forms.Hacks
 */
-@custom-selector :--cms-logged-in   .cms-ready;
-@custom-selector :--cms-edit-mode   [class*="cms-structure-mode-"];
-/* TACC/Core-CMS#531: When merged, import and extend `.c-message(...)` */
-/* @import url("@tacc/core-styles/src/lib/_imports/components/c-message.css"); */
+@custom-selector :--django-cms-logged-in   .cms-ready;
+@custom-selector :--django-cms-edit-mode   [class*="cms-structure-mode-"];
+/* IDEA: import and extend `.c-message(...)` */
+/* IDEA: WP-280 use postcss mixin for message styles */
+/* @tacc/core-styles/src/lib/_imports/components/c-message.css */
 
 @custom-selector :--problem-field
   .field-wrapper.checkboxselectmultiple.required;
@@ -32,7 +33,7 @@ Styleguide Components.DjangoCMS.Forms.Hacks
   font-size: var(--global-font-size--small);
 }
 /* To give error to admin */
-html:--cms-edit-mode :--problem-field > label::after {
+html:--django-cms-edit-mode :--problem-field > label::after {
   content: 'A multi checkbox field that is required is not well implemented. Do not require this field or replace it with multiple required Yes/No radio fields.';
 
   color: var(--global-color-danger--dark);
@@ -40,7 +41,7 @@ html:--cms-edit-mode :--problem-field > label::after {
   border-color: var(--global-color-danger--normal);
 }
 /* To give warning to user */
-html:not(:--cms-edit-mode) :--problem-field > label::after {
+html:not(:--django-cms-edit-mode) :--problem-field > label::after {
   content: 'This field is not well implemented. Select all boxes to bypass the error with this field.';
 
   color: var(--global-color-warning--dark);

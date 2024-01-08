@@ -16,13 +16,13 @@ Styleguide Trumps.Scopes.Header.Bootstrap
 .s-header .dropdown-item:hover {
   color: #16181b;
   text-decoration: none;
-  background-color: #f8f9fa;
+  background-color: rgba(var(--global-color-primary--light-rgb), 0.3);
 }
 .s-header .dropdown-item.active,
 .s-header .dropdown-item:active {
   color: #fff;
   text-decoration: none;
-  background-color: #007bff
+  background-color: var(--global-color-accent--normal);
 }
 
 .s-header input {

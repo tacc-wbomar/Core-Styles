@@ -1,0 +1,11 @@
+context:
+  shouldLoadBootstrap: true
+  shouldLoadCMS: true
+  supportStyles:
+    - ../../assets/core-styles.header.css
+    - ../../assets/core-styles.theme.default.css
+variants:
+  - name: with-branding
+    label: With Branding
+  - name: default
+    label: Without Branding

@@ -1,20 +1,20 @@
 /* FAQ: c-form.css styles s-form and django-cms-forms */
-@import url("./c-form.css");
-@import url("./c-form--cms.css");
 
 @import url("./django-cms-forms.hacks.css");
+@import url("./django-cms-forms.selectors.css");
 
-/* No other styles necessary, because c-form supports s-form selectors */
+/* Few other styles necessary, because c-form supports s-form selectors */
 /* SEE ../components/c-form.css */
 /* SEE: ../tools/selectors.form.css */
 
-@custom-selector :--cms-form__field--no-checkbox
-  .field-wrapper:where(:not(.checkboxinput));
+/* To re-order plugin elements to match order of such elements in `c-form` */
+:--cms-form__field > :--cms-form__errors { order: 1; }
+:--cms-form__field > :--cms-form__help { order: 2; }
 
-:--cms-form__field--no-checkbox {
-  display: flex;
-  flex-direction: column;
-  width: max-content;
+/* HACK: To mimic Core-Styles space between label and badge */
+/* FAQ: Core-Styles assumes space between label and badge,
+        but Django form plugin markup does not add that space */
+:--cms-form__badge {
+  font-size: inherit; /* to let Core-Styles `em` margin use regular font size */
+  width: 0; /* to remove space from asterisk character */
 }
-:--cms-form__field--no-checkbox > .field-errors { order: 1; }
-:--cms-form__field--no-checkbox > .help-text    { order: 2; }

@@ -54,11 +54,9 @@ Styleguide Elements.TextContent
 
 /* Lists */
 
-& :is(
+& :where(
   ol, ul,
   dl dl /* Treat nested definition lists like other nested lists */
-):not(
-  :--form *
 ) {
   padding-left: var(--global-space--list-indent);
 }

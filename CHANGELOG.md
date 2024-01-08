@@ -7,11 +7,157 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
-...
+
+## [2.23.0] - 2024-01-05: Irregular & Mailto Links, S-Drop-Cap, XX-Narrow
+
+### Added
+
+- feat: reduce CSS in Core-CMS (#291)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.22.6...v2.22.7
+
+## [2.22.6] - 2024-01-02: Styles Links with Monospace Text
+
+### Fixed
+
+- fix: monospace inline link needs styles (#288)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.22.5...v2.22.6
+
+## [2.22.5] - 2023-12-22: Simpler Tag Pattern, Fix Mailto-Text-Replace Bugs
+
+### Fixed
+
+- fix: bugs with mailto-text-replace (#286)
+- fix: remove Times, which is a font no designer approved (aa00e24)
+
+### Changed
+
+- fix: tup-584 simpler tag styles (#284)
+- chore: tup-677 no commented @import statements (#285)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.22.4...v2.22.5
+
+## [2.22.4] - 2023-12-14: No Uppercased Tags, Fixed Form Padding Bugs
+
+### Fixed
+
+- fix: no padding left for form errors (#282)
+- fix: missing c-pill styles on nested table (#280)
+
+### Changed
+
+- feat: do not uppercase tags (#281)
+- refactor: no padding-left for certain form things (#276)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.22.3...v2.22.4
+
+## [2.22.3] - 2023-12-11: Consistent Margin-Bottom for Align Component
+
+### Fixed
+
+- hotfix: consistent margin-bottom for aligned images (#278)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.22.2...v2.22.3
+
+## [2.22.2] - 2023-11-27: Fix Styles Not Applying to Django CMS Form Button
+
+### Fixed
+
+- hotfix: wrong classname for django cms form button (9ac94d3)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.22.1...v2.22.2
+
+## [2.22.1] - 2023-11-27: Match Space Between Form Label & "(required)" on CMS
+
+### Fixed
+
+- hotfix: better mimic form badge space on CMS (a06f5af, 9315ebb)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.22.0...v2.22.1
+
+## [2.22.0] - 2023-11-22: ⚠️ Do Not Truncate Buttons by Default
+
+### Added
+
+- feat: do NOT truncate buttons by default (#272)
+
+### Fixed
+
+- hotfix: tup-660 increase cms form badge space (#271)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.21.2...v2.22.0
+
+## [2.21.2] - 2023-11-21: Form Fixes
+
+### Fixed
+
+- Fix/tup 660 form badge font size zero can remove all space (#269)
+- hotfix: django-cms-forms unstyled in demo (#268)
+- fix: tup-659 all form fields too short (#267)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.21.1...v2.21.2
+
+## [2.21.1] - 2023-11-20: Fix Scrolling Table Border, Fix Unwanted Padding
+
+### Changed
+
+- chore: tup-636 c-card--image - less templates (#257)
+
+### Fixed
+
+- fix: tup-488 scrollable table border (#265)
+- bug/tup-649 bug/tup-646 Remove unwanted padding-left (#264)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.21.0...v2.21.1
+
+## [2.21.0] - 2023-11-16: Wrap Card Links, Add u-highlight, Sticky Footer Bug
+
+## Added
+
+- feat/tup-486 Create text-wrap for longer links (#260)
+- feat/tup-648 Migrate u-highlight from tup-ui to core-stlyes (#261)
+
+## Fixed
+
+- hotfix: tup 644 footer not sticky during edge case (#256)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.20.0...v2.21.0
+
+## [2.20.0] - 2023-11-13: Migrate More Components from TUP-UI, Add Header Demo
+
+### Added
+
+- feat/tup-635: Add header demo to core-styles (#258)
+- feat/tup 637: Migrate c-card support list to core-styles (#250)
+- feat/tup-636: Migrate c-card--images to core-styles (#254)
+- feat/tup 627: Migrate s-header to core-styles (#249)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.19.0...v2.20.0
+
+## [2.19.0] - 2023-11-02: Migrate Some Components from TUP-UI, Fix a Few Bugs
+
+### Added
+
+- feat: tup-624 c-update migration (#247)
+- feat/tup 617: Migrate c-card fixes to core-styles (#251)
+- feat/tup-625: Migrate o-heading-steps to core-styles (#248)
+- feat: tup-463 c-content-block and generics/attributes from tup-ui (#246)
+
+### Fixed
+
+- fix: tup-639 move c-button font-weight bold to cms (#253)
+- fix: c-card--frontera variant misc bugs (#252)
+
+### Documentation
+
+- docs: allow small primary buttons (#243)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.18.0...v2.19.0
 
 ## [2.18.0] - 2023-10-03: C-Pill, S-Form-Page Footer Image; Better C-Tag Demo
 
-## Added
+### Added
 
 - feat: support s-form-page footer link with image (#240)
 - feat: c-pill (#234)
@@ -812,7 +958,20 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.18.0...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.23.0...HEAD
+[2.23.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.23.0
+[2.22.6]: https://github.com/TACC/Core-Styles/releases/tag/v2.22.7
+[2.22.6]: https://github.com/TACC/Core-Styles/releases/tag/v2.22.5
+[2.22.5]: https://github.com/TACC/Core-Styles/releases/tag/v2.22.5
+[2.22.4]: https://github.com/TACC/Core-Styles/releases/tag/v2.22.4
+[2.22.3]: https://github.com/TACC/Core-Styles/releases/tag/v2.22.3
+[2.22.2]: https://github.com/TACC/Core-Styles/releases/tag/v2.22.2
+[2.22.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.22.1
+[2.22.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.22.0
+[2.21.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.21.1
+[2.21.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.21.0
+[2.20.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.20.0
+[2.19.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.19.0
 [2.18.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.18.0
 [2.17.5]: https://github.com/TACC/Core-Styles/releases/tag/v2.17.5
 [2.17.4]: https://github.com/TACC/Core-Styles/releases/tag/v2.17.4

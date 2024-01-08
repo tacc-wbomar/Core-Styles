@@ -15,6 +15,7 @@ Markup: s-header.html
 
 Styleguide Trumps.Scopes.Header
 */
+@import url("../tools/media-queries.css");
 @import url("./s-header.bootstrap.css");
 
 /* WARNING: NO-R/EM: Until Frontera CMS drops Bootstrap 3.7.1 (for old design)…
@@ -22,7 +23,9 @@ Styleguide Trumps.Scopes.Header
             UPDATE: As of PR #312, this has likely changed (untested). */
 
 .s-header {
-  font-size: 16px; /* NO-R/EM: Overwrite `bootstrap.3.3.7.css` */
+  font-size: var(--global-font-size--medium); /* NO-R/EM: Overwrite `bootstrap.3.3.7.css` */
+  font-weight: var(--bold);
+  letter-spacing: 0.025px; /* 14px * 0.025em equals design-requested 0.35px */
   line-height: 1.4; /* `body` line-height differs between CMS, Portal, Docs */
 
   /* FAQ: Asssigning this font is only necessary for the User Guide,
@@ -39,6 +42,13 @@ Styleguide Trumps.Scopes.Header
   border-bottom: 1px solid var(--header-major-border-color);
 }
 
+/* To enlarge height for all screen widths */
+@media (--medium-and-above)  {
+  .s-header {
+      height: 60px;
+  }
+}
+
 /* Affiliation */
 
 /* SEE: ../branding_logos.css */
@@ -46,6 +56,9 @@ Styleguide Trumps.Scopes.Header
 /* Logo */
 
 .s-header .navbar-brand {
+  display: grid;
+  align-content: center;
+
   /* If branding is short enough, then align position of first CMS nav link with Portal "Dashboard" header */
   /* WARNING: This is a manual value; if Portal interface changes, then this may need to change */
   min-width: 176px;
@@ -58,9 +71,15 @@ Styleguide Trumps.Scopes.Header
 
 /* Navigation */
 
+/* To stretch nav items to header height (while retaining vertical centering) */
+.s-header,
+.s-header .navbar-collapse {
+    align-items: stretch;
+}
+
 /* On wide viewport, prevent header resize from dynamic content */
 /* CAVEAT: This is only for Portal and Docs which dynamically load content */
-@media only screen and (min-width: 1201px) {
+@media (--wide-and-above) {
   .s-header.navbar {
     height: 50px;
   }
@@ -96,6 +115,18 @@ Styleguide Trumps.Scopes.Header
   /* If link text uses 2 lines, header grows taller (but it must not do so) */
   white-space: nowrap;
 }
+
+@media (--medium-and-above) {
+  .s-header .nav-item {
+      display: flex;
+  }
+}
+
+.s-header .nav-link {
+  display: flex;
+  align-items: center;
+}
+
 .s-header .nav-link:hover,
 .s-header .nav-link:focus,
 .s-header .nav-link:active,
@@ -117,11 +148,14 @@ Styleguide Trumps.Scopes.Header
 
 /* Tweak Bootstrap `_nav.scss` (which selects via `navbar-expand-` class) */
 .s-header[class*="navbar-expand-"] .navbar-nav .nav-link {
-  padding-top: 8px; /* NO-R/EM: 0.5rem (from Bootstrap) */
-  padding-bottom: 8px; /* NO-R/EM: 0.5rem (from Bootstrap) */
-
   padding-right: 14px; /* NO-R/EM: .875rem (overwrite Bootstrap) */
   padding-left: 14px; /* NO-R/EM: .875rem (overwrite Bootstrap) */
+}
+
+@media (--medium-and-below) {
+  .s-header[class*="navbar-expand-"] .navbar-nav .nav-link {
+      padding-block: 8px;
+  }
 }
 
 /* Search */

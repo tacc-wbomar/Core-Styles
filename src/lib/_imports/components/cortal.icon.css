@@ -43,9 +43,11 @@ Styleguide Components.Cortal.Icon
 /* To tweak action icon appearance and layout */
 :--c-card > :is(:--action) > .icon:first-child,
 p > :is(:--action):only-child > .icon:first-child {
-    vertical-align: middle;
     margin-right: 10px;
     font-size: 1.2em;
+
+    position: relative;
+    top: 0.05em;
 }
 
 
