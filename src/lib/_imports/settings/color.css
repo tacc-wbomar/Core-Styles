@@ -127,8 +127,8 @@
 
   /* Link */
   /* DEPRECATED */
-  /* TODO: Rely on src/lib/_imports/generics/color.css to manage dark/light */
+  /* TODO: Rely on :--light-context and :--dark-context instead */
 
   --global-color-link-on-light--normal: var(--global-color-accent--normal);
-  --global-color-link-on-dark--normal: var(--global-color-accent--light);
+  --global-color-link-on-dark--normal: var(--global-color-accent--xxx-light);
 }
