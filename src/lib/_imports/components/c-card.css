@@ -104,8 +104,10 @@
 
 /* Elements */
 
-:--c-card > a:not(:--c-button), :--c-card > p > a:only-child:not(:--c-button) {
-    display: flex;
+:--c-card > a:not(:--c-button),
+:--c-card > p > a:not(:--c-button) {
+    display: inline-flex;
+    align-items: baseline;
 }
 :--c-card > :is(:--action) {
     vertical-align: middle;
@@ -307,4 +309,13 @@
 }
 :--c-card--image-bottom > p:last-of-type {
     margin-bottom: unset; /* to avoid combining margin with image */
+}
+
+/* Image: Contact Card */
+:--c-card--image-top h4 {
+    margin-bottom: 0.375em;
+}
+:--c-card--image-top h4 ~ p {
+    margin-top: 0px;
+    margin-bottom: 10px;
 }
