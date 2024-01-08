@@ -76,6 +76,20 @@ pre {
   box-sizing: border-box;
 }
 
+/* To apply link styles */
+& :--monospace--inline:where(a > *) {
+  @extend .x-link;
+}
+& :--monospace--inline:where(a:not([href]) > *) {
+  @extend .x-link--disabled;
+}
+& :--monospace--inline:where(a:hover > *) {
+  @extend .x-link--hover;
+}
+& :--monospace--inline:where(a:active > *) {
+  @extend .x-link--active;
+}
+
 
 
 /* Children */

@@ -36,10 +36,8 @@
 @import url("./components/tacc-docs.css");
 
 /* TRUMPS */
-/* These styles from Core-CMS doc pages might be useful */
-/*
-@import url("./trumps/s-document.css");
-@import url("./trumps/s-guide-doc.css");
-@import url("./trumps/s-inline-dl.css");
-@import url("./trumps/u-nested-text-content.css");
-*/
+/* These styles from retired Core-CMS doc pages might be useful */
+/* ./trumps/s-document.css */
+/* ./trumps/s-guide-doc.css */
+/* ./trumps/s-inline-dl.css */
+/* ./trumps/u-nested-text-content.css */
