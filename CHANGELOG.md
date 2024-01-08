@@ -7,6 +7,435 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+
+## [2.23.0] - 2024-01-05: Irregular & Mailto Links, S-Drop-Cap, XX-Narrow
+
+### Added
+
+- feat: reduce CSS in Core-CMS (#291)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.22.6...v2.22.7
+
+## [2.22.6] - 2024-01-02: Styles Links with Monospace Text
+
+### Fixed
+
+- fix: monospace inline link needs styles (#288)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.22.5...v2.22.6
+
+## [2.22.5] - 2023-12-22: Simpler Tag Pattern, Fix Mailto-Text-Replace Bugs
+
+### Fixed
+
+- fix: bugs with mailto-text-replace (#286)
+- fix: remove Times, which is a font no designer approved (aa00e24)
+
+### Changed
+
+- fix: tup-584 simpler tag styles (#284)
+- chore: tup-677 no commented @import statements (#285)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.22.4...v2.22.5
+
+## [2.22.4] - 2023-12-14: No Uppercased Tags, Fixed Form Padding Bugs
+
+### Fixed
+
+- fix: no padding left for form errors (#282)
+- fix: missing c-pill styles on nested table (#280)
+
+### Changed
+
+- feat: do not uppercase tags (#281)
+- refactor: no padding-left for certain form things (#276)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.22.3...v2.22.4
+
+## [2.22.3] - 2023-12-11: Consistent Margin-Bottom for Align Component
+
+### Fixed
+
+- hotfix: consistent margin-bottom for aligned images (#278)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.22.2...v2.22.3
+
+## [2.22.2] - 2023-11-27: Fix Styles Not Applying to Django CMS Form Button
+
+### Fixed
+
+- hotfix: wrong classname for django cms form button (9ac94d3)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.22.1...v2.22.2
+
+## [2.22.1] - 2023-11-27: Match Space Between Form Label & "(required)" on CMS
+
+### Fixed
+
+- hotfix: better mimic form badge space on CMS (a06f5af, 9315ebb)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.22.0...v2.22.1
+
+## [2.22.0] - 2023-11-22: ⚠️ Do Not Truncate Buttons by Default
+
+### Added
+
+- feat: do NOT truncate buttons by default (#272)
+
+### Fixed
+
+- hotfix: tup-660 increase cms form badge space (#271)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.21.2...v2.22.0
+
+## [2.21.2] - 2023-11-21: Form Fixes
+
+### Fixed
+
+- Fix/tup 660 form badge font size zero can remove all space (#269)
+- hotfix: django-cms-forms unstyled in demo (#268)
+- fix: tup-659 all form fields too short (#267)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.21.1...v2.21.2
+
+## [2.21.1] - 2023-11-20: Fix Scrolling Table Border, Fix Unwanted Padding
+
+### Changed
+
+- chore: tup-636 c-card--image - less templates (#257)
+
+### Fixed
+
+- fix: tup-488 scrollable table border (#265)
+- bug/tup-649 bug/tup-646 Remove unwanted padding-left (#264)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.21.0...v2.21.1
+
+## [2.21.0] - 2023-11-16: Wrap Card Links, Add u-highlight, Sticky Footer Bug
+
+## Added
+
+- feat/tup-486 Create text-wrap for longer links (#260)
+- feat/tup-648 Migrate u-highlight from tup-ui to core-stlyes (#261)
+
+## Fixed
+
+- hotfix: tup 644 footer not sticky during edge case (#256)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.20.0...v2.21.0
+
+## [2.20.0] - 2023-11-13: Migrate More Components from TUP-UI, Add Header Demo
+
+### Added
+
+- feat/tup-635: Add header demo to core-styles (#258)
+- feat/tup 637: Migrate c-card support list to core-styles (#250)
+- feat/tup-636: Migrate c-card--images to core-styles (#254)
+- feat/tup 627: Migrate s-header to core-styles (#249)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.19.0...v2.20.0
+
+## [2.19.0] - 2023-11-02: Migrate Some Components from TUP-UI, Fix a Few Bugs
+
+### Added
+
+- feat: tup-624 c-update migration (#247)
+- feat/tup 617: Migrate c-card fixes to core-styles (#251)
+- feat/tup-625: Migrate o-heading-steps to core-styles (#248)
+- feat: tup-463 c-content-block and generics/attributes from tup-ui (#246)
+
+### Fixed
+
+- fix: tup-639 move c-button font-weight bold to cms (#253)
+- fix: c-card--frontera variant misc bugs (#252)
+
+### Documentation
+
+- docs: allow small primary buttons (#243)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.18.0...v2.19.0
+
+## [2.18.0] - 2023-10-03: C-Pill, S-Form-Page Footer Image; Better C-Tag Demo
+
+### Added
+
+- feat: support s-form-page footer link with image (#240)
+- feat: c-pill (#234)
+- enhance: improve c-tag demo (#233)
+
+## [2.17.5] - 2023-09-13: Style Non-Footer Form Submit Buttons
+
+### Fixed
+
+- fix: style non-footer form buttons (and add demo to test) (#230)
+
+## [2.17.4] - 2023-09-13: Form Submit Buttons Are Not Always Primary Buttons
+
+### Fixed
+
+- fix: form submit buttons are not always primary (#227)
+
+## [2.17.3] - 2023-09-12: Fix Login Form Checkbox Alignment
+
+### Fixed
+
+- fix: checkbox field layout broken by form--login (#225)
+
+## [2.17.2] - 2023-09-01: Small Fixes for Table, Demo, Form
+
+### Fixed
+
+- fix: right-align a lone login form action (#223)
+- fix: cms table & s-paragraph-table demo (demo cmsStyles now in base layer) (#221)
+- fix: only truncate paragraph in portal table or s-truncated-table (#220)
+
+### Changed
+
+- fix: use global vars in MuiTabs (633ec418)
+
+### Documentation
+
+- fix: typo in c-card demo (34e3aded)
+- docs: comment on :--c-card > address usage (bf1a8986)
+- style: improve clarity of c-card `<p>` wrap notes (c0028f88)
+
+## [2.17.1] - 2023-08-15: NPM Audit Fix
+
+### Security
+
+- chore: npm audit fix (#217)
+
+## [2.17.0] - 2023-08-04: Refactor Footers, Fix Button to Inherit Font Weight
+
+### Added
+
+- refactor: footers (#215)
+
+### Fixed
+
+- fix: c-button font-weight not inherited (#216)
+
+## [2.16.3] - 2023-08-02: Fix Typo in Fieldset `:not()` Selector
+
+### Fixed
+
+- fix: invalid :not syntax (missing colon) (97e59a9)
+
+## [2.16.2] - 2023-08-02: Fix Form Element Selectors Too Specific
+
+### Fixed
+
+- fix: form elements selectors too specific (#213)
+
+## [2.16.1] - 2023-08-01: Login Form, Support Many Logos; Form Page, Fix Width
+
+### Fixed
+
+- fix: form width in demo (be88a94)
+- fix: s-form-page missing s-form--login css (10b8619)
+- fix: s-form-page width overflow (f1d139c)
+- fix: wp-63 must support two brands on login (#211) (#212)
+
+## [2.16.0] - 2023-08-01: `s-form-page`, `c-form--login`, `s-form--login`
+
+### Added
+
+- feat: s-form-page, c-form--login, s-form--login (#205)
+
+## [2.15.0] - 2023-07-31: Add `s-form`, Refactor Forms, Document about Bootstrap
+
+### Added
+
+- feat: s-form (and refactor c-form and django-cms-forms) (#207)
+
+### Fixed
+
+- fix: checkbox label should not have margin bottom (#206)
+- fix: less specific c-button not selector (#204)
+
+### Documentation
+
+- docs: cleanup (#208)
+- docs: core styles relationships to bootstrap (#203)
+- docs: add `bootstrap.md` (#202)
+
+## [2.14.0] - 2023-07-24: `s-affixed-input-wrapper` Enhanced & Moved to Base
+
+### Added
+
+- feat: s-affixed-input-wrapper from cms to base (#200)
+- refactor: s-affixed-input-wrapper, also adds prepend \& append (#199)
+
+## [2.13.0] - 2023-07-19: Add Handlebars Helpers; Fix `c-nav--piped` Edge Cases
+
+### Added
+
+- feat: handlebars helpers "eq" and "has" (#194)
+
+### Fixed
+
+- fix(components): c-nav support c-button--as-link (#196)
+- fix(components): c-nav support buttons (#195)
+
+## [2.12.0] - 2023-07-19: Demo `c-nav`, Add `c-nav--piped`; docs/contributing.md
+
+### Added
+
+- feat(components): c-nav demo \& "--piped" modifier (#191)
+
+### Documentation
+
+- docs: isolate \& update contrib. docs like core-cms (#192)
+
+## [2.11.0] - 2023-07-12: No Overscroll Behavior & Equal Height Col. Content
+
+### Added
+
+- feat: no macos overscroll behavior (#189)
+- feat(components): tup-491 eq. height cols via rows (#188)
+- feat(components): tup-491 equal height col cards (#187)
+
+## [2.10.1] - 2023-07-06: Bootstrap Fixes (Mainly for Portal Client)
+
+### Fixed
+
+- fix: remove border from modal footer (#186)
+- fix: offer bootstrap form fixes to portal client (#184)
+
+## [2.10.0] - 2023-07-05: Color Demo & Refactor, Auto Release, How to Use Doc
+
+### Added
+
+- feat: stop writing your changelogs manually (#176, #177, #178, #179, #180, #181, #182, #183)
+- feat: better manage accent colors, darken three light purples (#174)
+- feat: color demo (#175)
+
+### Documentation
+
+- docs: add howto.md (users loading core-styles) (#152)
+
+## [2.9.1] - 2023-06-16: Fix `section__banner-…`, Update Dependencies
+
+### Fixed
+
+- fix: missing :--o-section__banner-… selectors (015d3cc)
+
+### Security
+
+- build(deps): bump http-cache-semantics from 4.1.0 to 4.1.1 (#155)
+- build(deps): bump nunjucks from 3.2.3 to 3.2.4 (#156)
+- build(deps): bump qs and browser-sync (#157)
+- build(deps): bump ua-parser-js and browser-sync (#158)
+
+## [2.9.0] - 2023-06-12: `s-image-grid`, 2 New Global Vars, Deprecate Some %
+
+### Added
+
+- feat: s-image-grid (#169) (2beb2ea)
+- feat(partials): add img-url, have img use it (#171)
+- feat(_partials): img options to load all sizes (#170)
+- feat: add global variables (from c-card) (053756f)
+- feat: deprecate %x-grid, add .x-grid (3e4d056)
+
+### Changed
+
+- docs: grid min-width columns comments improved (10806c4)
+
+### Fixed
+
+- fix(partials): remove whitespace from img-url (6017deb)
+- fix: o-grid--image-fill cleanup (0a47730)
+
+### Deprecated
+
+- chore(src): deprecate % selector in x-truncate (eeaf115) (5b934b1)
+
+### Security
+
+- chore(deps): bump socket.io-parser from 4.2.1 to 4.2.3 (#168)
+
+## [2.8.0] - 2023-05-23: Retire env()-based Themes (for Core-CMS v3.10)
+
+### Fixed
+
+- fix(CHANGELOG): add missing backticks for code (d9f60f7)
+
+### Changed
+
+- chore: retire env()-based themes (Core-CMS v3.10) (#163)
+- docs(CHANGELOG): add missing bullets (e764b5c)
+- docs(elements): point to new responsive table solution (903eb7b)
+- docs: do not guess tag annotation during release (0a8bf6e)
+
+## [2.7.0] - 2023-05-04: Add `c-card--docs` `o-section--docs` `@message` & v0.12
+
+### Added
+
+- feat: c-card--docs, o-section--docs, tup-cms c-card (#159) (0bf08e2)
+- docs: create and use message partial (#161) (1b5f959)
+- feat: use css "project" layer for client context styles (#160) (23af16b)
+- docs(CHANGELOG): v0.12.0 (7880572)
+
+### Fixed
+
+- chore: missing commit of core-styles.docs (be61fe1)
+- chore: missing commit of dist html elements (ce7a9f7)
+- docs(README): add tacc docs client (4558ee8)
+
+### Changed
+
+- chore: remove unnecessary font-size for `<main>` (6163f17)
+
+## [2.6.2] - 2023-01-04: x-figure, x-blockquote, accent is now blue, `<hr>`, modal
+
+### Added
+
+- feat(tools): x-figure, x-blockquote, (…-caption) (#150) 560a78c
+- feat: change accent color from purple to blue (#149) 66d29a8
+- feat: new `<hr>` styles from tup-cms ad0b5c3
+- feat: bootstrap modal styles (#147) 675e5d5
+
+### Fixed
+
+- fix(objects): simple distance for offset content d5f01f7
+- fix: no max-width on form fields e068073
+- fix: remove undesired `<main>` margin (body > *) 8eb7046
+- fix: bootstrap overriding `<pre>` color e75522b
+
+### Changed
+
+- chore(settings): new URL to colors in better spot 4504116
+
+## [2.6.1] - 2023-03-21: `core-styles.wysiwyg.css`
+
+### Fixed
+
+- fix: core-styles.wysiwyg.css filename typo (c21b036)
+
+## [2.6.0] - 2023-03-21: `c-tag`, `--global-font-size--xxx-large`, `c-island`
+
+### Added
+
+- feat(components): c-tag (#144)
+- feat(settings): font--cms, size xxx-large 3.2rem
+- feat(components): c-island (#145)
+- feat: core-styles.wysiwig.css (#145)
+
+## [2.5.0] - 2023-03-10: Integrate Docs Client CSS into Core-Styles.Docs
+
+### Added
+
+- feat: big core-styles.docs update f.k.a [...] (#142) af8e2b1
+
+### Fixed
+
+- fix(demo): respect client/project font size 4f426d3
+- fix(objects): o-grid, no cell overflow nor side fx bd1b007
+
+## [2.4.1] - 2023-03-10: Split Docs & CMS & Portal Root Element Styles; Fixes
+
+See [2.5.0] instead.
+
 ## [2.4.0] - 2023-03-09: Headings on CMS Client vs Docs Client
 
 ### Added
@@ -152,15 +581,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - fix: components/align, caption width → client task a8e4407
 - fix: figure image shrunk if figure was not aligned (#120)
 - fix(demo): load Bootstrap on layer beneath others b1d7919
-- fix(elements): <strong> and <b> selectors lacked & 00d182b
+- fix(elements): `<strong>` and `<b>` selectors lacked & 00d182b
 - fix(components): no TACC cards in portals, modals 514d272
 - fix(components): no card pattern in modals 8e1914f
 - fix(components): no card pattern for portal d8eaee9
-- fix(objects): o-grid, prevent <figure> shrink ee96b93
+- fix(objects): o-grid, prevent `<figure>` shrink ee96b93
 - fix(core-styles): do not load .align for cms 09a9bd7
 - fix(core-styles): load .align for cms 5a8d0f6
 - fix(partials): do not duplicate lorem ipsum paragraphs (#112)
-- fix(demo): apply demo styles to <dl>'s (#109)
+- fix(demo): apply demo styles to `<dl>`'s (#109)
 - fix(bin): build-id preprended with comma 837ab3f
 - fix(elements): nested table assumed parent thead 4550f16
 - fix(demo): replace demo-message with c-message 1b10fd4
@@ -200,6 +629,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **fix(demo)!: font path change in dist (#73)**
 - fix(fonts): fp-1891 add regular italic, also add black (#71, #72)
 
+## [0.13.0] - 2023-05-08: Retire env()-based Themes (for Core-CMS v3.9)
+
+### Changed
+
+* feat!: retire env()-based themes (Core-CMS v3.9) (#164)
+
+## [0.12.0] - 2023-04-24: Commit Dist (of v0.11.0)
+
+### Added
+
+* feat(dist): commit dist so clients can rely on it (#153)
+
 ## [0.11.0] - 2022-11-14: Table Pattern, Many Demo Fixes, Demo Build Dir Clarity
 
 ### Added
@@ -225,7 +666,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - docs(components): tup-356 bootstrap.container (#54)
 - feat: tup-355 links (redo #57) (#58)
 - feat(elements): fp-1828 move apcd styles to core (#56) (#62)
-- feat(c-button): do not show <a> tag button for `--as-link` (#59)
+- feat(c-button): do not show `<a>` tag button for `--as-link` (#59)
 - feat: x-link, used by c-button--as-link & links (#60)
 - feat: npm watch synced with live-refresh demo (#61)
 
@@ -350,7 +791,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- chore: <main>, margin not pad. & accurate selector
+- chore: `<main>`, margin not pad. & accurate selector
 - feat: drop .o-site for simple sticky footer trick
 - fix: hide extra space, last light section ↔ footer
 
@@ -517,7 +958,47 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.4.0...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.23.0...HEAD
+[2.23.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.23.0
+[2.22.6]: https://github.com/TACC/Core-Styles/releases/tag/v2.22.7
+[2.22.6]: https://github.com/TACC/Core-Styles/releases/tag/v2.22.5
+[2.22.5]: https://github.com/TACC/Core-Styles/releases/tag/v2.22.5
+[2.22.4]: https://github.com/TACC/Core-Styles/releases/tag/v2.22.4
+[2.22.3]: https://github.com/TACC/Core-Styles/releases/tag/v2.22.3
+[2.22.2]: https://github.com/TACC/Core-Styles/releases/tag/v2.22.2
+[2.22.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.22.1
+[2.22.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.22.0
+[2.21.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.21.1
+[2.21.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.21.0
+[2.20.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.20.0
+[2.19.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.19.0
+[2.18.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.18.0
+[2.17.5]: https://github.com/TACC/Core-Styles/releases/tag/v2.17.5
+[2.17.4]: https://github.com/TACC/Core-Styles/releases/tag/v2.17.4
+[2.17.3]: https://github.com/TACC/Core-Styles/releases/tag/v2.17.3
+[2.17.2]: https://github.com/TACC/Core-Styles/releases/tag/v2.17.2
+[2.17.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.17.1
+[2.17.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.17.0
+[2.16.3]: https://github.com/TACC/Core-Styles/releases/tag/v2.16.3
+[2.16.2]: https://github.com/TACC/Core-Styles/releases/tag/v2.16.2
+[2.16.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.16.1
+[2.16.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.16.0
+[2.15.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.15.0
+[2.14.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.14.0
+[2.13.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.13.0
+[2.12.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.12.0
+[2.11.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.11.0
+[2.10.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.10.1
+[2.10.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.10.0
+[2.9.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.9.1
+[2.9.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.9.0
+[2.8.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.8.0
+[2.7.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.7.0
+[2.6.2]: https://github.com/TACC/Core-Styles/releases/tag/v2.6.2
+[2.6.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.6.1
+[2.6.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.6.0
+[2.5.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.5.0
+[2.4.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.4.1
 [2.4.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.4.0
 [2.3.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.3.1
 [2.3.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.3.0
@@ -527,6 +1008,8 @@ Initial working code. (This code may not work on all environments.)
 [2.0.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.0.1
 [2.0.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.0.0
 [1.0.0]: https://github.com/TACC/Core-Styles/releases/tag/v1.0.0
+[0.13.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.13.0
+[0.12.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.12.0
 [0.11.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.11.0
 [0.10.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.10.0
 [0.9.0]: https://github.com/TACC/Core-Styles/releases/tag/v0.9.0

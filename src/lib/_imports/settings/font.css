@@ -26,7 +26,7 @@ Styleguide Settings.CustomProperties.Font
   /* https://confluence.tacc.utexas.edu/x/nB4FDg */
   --global-font-family--sans--cms: "Benton Sans", "Roboto", sans-serif;
   --global-font-family--sans--portal: "Roboto", sans-serif;
-  --global-font-family--serif: Times, sans-serif;
+  --global-font-family--serif: sans-serif;
   --global-font-family--mono: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
   --sans--cms: var(--global-font-family--sans--cms);
   --sans--portal: var(--global-font-family--sans--portal);

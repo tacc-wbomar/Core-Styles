@@ -23,9 +23,4 @@ Simple classes to align media or content within paragraphs:
 [source]: https://github.com/django-cms/djangocms-picture/blob/2.3.0/djangocms_picture/models.py#L24-L34
 [TACC-Docs]: https://github.com/TACC/TACC-Docs/
 
-<script>
-/* To open external links in new window */
-Array.from(document.links)
-  .filter(link => link.hostname != window.location.hostname)
-  .forEach(link => link.target = '_blank');
-</script>
+<script src="{{path '/assets/_utils/js/open-ext-links-in-new-window.js'}}" />

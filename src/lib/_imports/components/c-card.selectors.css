@@ -7,6 +7,7 @@
     /* TODO: When Portal does not load core-styles.cms.css remove the :not(…) */
     .card:not(:is(:--portal-content, .modal) *),
     [class*="card--"];
+
 @custom-selector :--c-card--standard
     .c-card--standard,
     .card--standard;
@@ -23,6 +24,7 @@
     .c-card--standard-1,
     .c-card--standard-2,
     .c-card--standard-3;
+
 @custom-selector :--c-card--plain
     .c-card--plain,
     .card--plain,
@@ -33,6 +35,18 @@
 @custom-selector :--c-card--plain-hr-bottom
     .c-card--plain-hr-bottom,
     .card--plain-hr-bottom;
+
 @custom-selector :--c-card--image
-    .c-card--image,
-    .card--image;
+    [class*="card--image-"];
+@custom-selector :--c-card--image-top
+    .c-card--image-top,
+    .card--image-top;
+@custom-selector :--c-card--image-bottom
+    .c-card--image-bottom,
+    .card--image-bottom;
+@custom-selector :--c-card--image-left
+    .c-card--image-left,
+    .card--image-left;
+@custom-selector :--c-card--image-right
+    .c-card--image-right,
+    .card--image-right;

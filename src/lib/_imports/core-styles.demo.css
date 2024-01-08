@@ -6,17 +6,21 @@
 
 /* SETTINGS */
 @import url("./settings/demo.css");
+@import url("./settings/color--demo.css");
 
 /* GENERICS */
 /* (none) */
 
 /* ELEMENTS */
+@import url("./elements/root--demo.css");
 @import url("./elements/demo.css");
 
 /* OBJECTS */
 /* (none) */
 
 /* COMPONENTS */
+@import url("./components/c-message.css");
+@import url("./components/c-message--expanded.css");
 @import url("./components/demo.css");
 
 /* TRUMPS */

@@ -1,5 +1,3 @@
-@import url('../tools/x-truncate.css');
-
 @supports selector(:has(table)) {
   /* To ensure matching row height of nested table and parent table */
   table:has(table) :is(td, th) { white-space: nowrap; }

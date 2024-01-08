@@ -5,6 +5,18 @@ variants:
     hidden: true
   - name: container
     status: ready
+  - name: col
+    status: ready
+    context:
+      supportStyles:
+        - ../../assets/components/c-card.css
+        - ../../assets/components/bootstrap.col.css
+  - name: row
+    status: ready
+    context:
+      supportStyles:
+        - ../../assets/components/c-card.css
+        - ../../assets/components/bootstrap.row.css
   - name: modal
     status: prototype
   - name: nav-tabs
@@ -12,3 +24,6 @@ variants:
   - name: form
     label: (Portal) Form
     status: prototype
+    context:
+      supportStyles:
+        - ../../assets/components/bootstrap.form.css

@@ -24,9 +24,4 @@ Older features are not illustrated in the demo:
 | `.o-section--layout-c`    | (on wider screens) 1 narrow column & 1 wide column
 | `.o-section--layout-d`    | (on wider screens) 3 even columns
 
-<script>
-/* To open external links in new window */
-Array.from(document.links)
-  .filter(link => link.hostname != window.location.hostname)
-  .forEach(link => link.target = '_blank');
-</script>
+<script src="{{path '/assets/_utils/js/open-ext-links-in-new-window.js'}}" />

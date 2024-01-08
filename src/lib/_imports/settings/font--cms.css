@@ -13,5 +13,5 @@
   --global-font-size--large: 1.8rem;
   --global-font-size--x-large: 2.1rem;
   --global-font-size--xx-large: 2.8rem;
-  --global-font-size--xxx-large: var(--global-font-size--xx-large);
+  --global-font-size--xxx-large: 3.2rem;
 }

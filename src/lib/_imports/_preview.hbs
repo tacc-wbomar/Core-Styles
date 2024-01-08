@@ -20,42 +20,19 @@
 {{/if}}
 
 <!-- Styles: Global (for every pattern) -->
-<style>
-{{#each globalStyles}}
-  {{#if this.isInternal}}
-  @import url('{{path this.path}}') layer({{ this.layer }});
-  {{else}}
-  @import url('{{this.path}}') layer({{ this.layer }});
-  {{/if}}
-{{/each}}
-</style>
+{{> @import-client-styles styles=globalStyles }}
 
 {{#if _target.context.shouldLoadCMS }}
 {{#unless _target.context.shouldSkipCMS }}
 <!-- Styles: Global (for current pattern): CMS -->
-<style>
-{{#each cmsStyles}}
-  {{#if this.isInternal}}
-  @import url('{{path this.path}}') layer({{ this.layer }});
-  {{else}}
-  @import url('{{this.path}}') layer({{ this.layer }});
-  {{/if}}
-{{/each}}
-</style>
+{{> @import-client-styles styles=cmsStyles }}
 {{/unless}}
 {{/if}}
 
 {{#if _target.context.shouldLoadDocs }}
 {{#unless _target.context.shouldSkipDocs }}
 <!-- Styles: Global (for current pattern): Docs -->
-<style>
-{{#each docsStyles}}
-  {{#if this.isInternal}}
-  @import url('{{path this.path}}') layer({{ this.layer }});
-  {{else}}
-  @import url('{{this.path}}') layer({{ this.layer }});
-  {{/if}}
-{{/each}}
+{{> @import-client-styles styles=docsStyles }}
 </style>
 {{/unless}}
 {{/if}}
@@ -63,15 +40,7 @@
 {{#if _target.context.shouldLoadPortal }}
 {{#unless _target.context.shouldSkipPortal }}
 <!-- Styles: Global (for current pattern): Portal -->
-<style>
-{{#each portalStyles}}
-  {{#if this.isInternal}}
-  @import url('{{path this.path}}') layer({{ this.layer }});
-  {{else}}
-  @import url('{{this.path}}') layer({{ this.layer }});
-  {{/if}}
-{{/each}}
-</style>
+{{> @import-client-styles styles=portalStyles }}
 {{/unless}}
 {{/if}}
 
@@ -125,6 +94,10 @@
 
 
 {{!-- Markup (for current pattern) --}}
+{{#unless _target.context.shouldOmitMainTag}}
 <main>
+{{/unless}}
 {{{yield}}}
+{{#unless _target.context.shouldOmitMainTag}}
 </main>
+{{/unless}}

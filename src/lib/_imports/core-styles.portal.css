@@ -14,13 +14,16 @@
 /* https://confluence.tacc.utexas.edu/x/b53tDg */
 
 /* ELEMENTS */
-/* To override Bootstrap */
+@import url("./elements/root--portal.css");
 @import url("./elements/sticky-footer.css");
+@import url("./elements/table.portal.css");
 
 /* OBJECTS */
 @import url("./objects/o-flex-item-table-wrap.css");
 
 /* COMPONENTS */
+@import url("./components/bootstrap.modal--portal.css");
+@import url("./components/bootstrap.form.css");
 @import url("./components/cortal.icon.css");
 @import url("./components/mui.tabs.css");
 @import url("./components/c-form--portal.css");
@@ -28,4 +31,7 @@
 @import url("./components/c-message--compact.css");
 
 /* TRUMPS */
-/* (none) */
+@import url("./trumps/s-footer.css");
+@import url("./trumps/s-footer--thin.css");
+@import url("./trumps/s-form-page.css");
+@import url("./trumps/s-truncated-table.css");

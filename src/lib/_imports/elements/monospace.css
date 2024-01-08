@@ -13,6 +13,11 @@
   color: inherit;
 }
 
+/* So client can render preformatted text without assuming Bootstrap color */
+pre {
+  color: unset; /* override Bootstrap */
+}
+
 
 
 /* To scope these styles to main content (i.e. not header, not navbar) */
@@ -38,7 +43,8 @@
 
 /* Structure */
 & :--monospace--block {
-  display: inline-block; /* FAQ: If `block`, then background color is cropped */
+  display: block;
+  width: min-content;
   padding: var(--global-space--x-small) var(--global-space--small);
 }
 & :--monospace--inline {
@@ -68,6 +74,20 @@
 & :--monospace--block:where(pre[style] > *) {
   min-width: 100%;
   box-sizing: border-box;
+}
+
+/* To apply link styles */
+& :--monospace--inline:where(a > *) {
+  @extend .x-link;
+}
+& :--monospace--inline:where(a:not([href]) > *) {
+  @extend .x-link--disabled;
+}
+& :--monospace--inline:where(a:hover > *) {
+  @extend .x-link--hover;
+}
+& :--monospace--inline:where(a:active > *) {
+  @extend .x-link--active;
 }
 
 
