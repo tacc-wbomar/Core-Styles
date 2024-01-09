@@ -109,6 +109,9 @@
     display: inline-flex;
     align-items: baseline;
 }
+:--c-card > p > a:not(:--c-button):has(.icon):not(:last-child) {
+    margin-right: 1rem;
+}
 :--c-card > :is(:--action) {
     vertical-align: middle;
 
