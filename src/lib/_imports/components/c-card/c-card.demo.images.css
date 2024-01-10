@@ -11,10 +11,8 @@
 }
 
 /* create a two column grid (cleaner look) */
-.o-grid--col-min-width.contact-cards {
-    /* auto-fill from TACC/tup-ui .people-grid */
-    /* --width from .o-grid--col-min-width */
-    grid-template-columns: repeat( auto-fill, minmax( var(--width), 1fr ) );
+.s-image-grid {
+    --max-cols: 2;
 }
 
 /* get rid of margin for inner-sections */
