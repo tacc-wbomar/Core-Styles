@@ -271,8 +271,10 @@
 
 :--c-card--image-top,
 :--c-card--image-bottom {
-    --image-height: auto;
     --global-space--pattern-pad: 15px;
+
+    /* Repeat many times, because element count is unknown */
+    grid-template-rows: repeat(10, min-content);
 
     /* Use extra columns to add horizontal padding */
     grid-template-columns: var(--global-space--pattern-pad) 1fr var(--global-space--pattern-pad);
@@ -291,10 +293,6 @@
     grid-column-end: -1;
 }
 
-:--c-card--image-top {
-    /* Repeat many times, because element count is unknown */
-    grid-template-rows: repeat(10, min-content) var(--image-height);
-}
 :--c-card--image-top > img {
     grid-row-start: 1;
     margin-bottom: var(--global-space--pattern-pad);
@@ -303,10 +301,6 @@
     margin-top: unset; /* to avoid combining margin with image */
 }
 
-:--c-card--image-bottom {
-    /* Repeat many times, because element count is unknown */
-    grid-template-rows: var(--image-height) repeat(10, min-content);
-}
 :--c-card--image-bottom > img {
     grid-row-end: -1;
     margin-top: var(--global-space--pattern-pad);
