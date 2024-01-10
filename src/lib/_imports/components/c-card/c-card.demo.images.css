@@ -11,8 +11,10 @@
 }
 
 /* create a two column grid (cleaner look) */
-#image-cards {
-    grid-template-columns: 1fr 1fr;
+.o-grid--col-min-width.contact-cards {
+    /* auto-fill from TACC/tup-ui .people-grid */
+    /* --width from .o-grid--col-min-width */
+    grid-template-columns: repeat( auto-fill, minmax( var(--width), 1fr ) );
 }
 
 /* get rid of margin for inner-sections */
@@ -30,7 +32,7 @@ section > section {
     margin-bottom: 10px;
 }
 
-.card--image-top {
+[class*="card--image-top"] {
     max-width: fit-content;
 }
 
