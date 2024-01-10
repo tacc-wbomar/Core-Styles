@@ -1,3 +1,4 @@
+status: ready
 context:
   shouldLoadCMS: true
   📝 shouldLoadCMS: this pattern is not intended nor expected for use beyond CMS
@@ -13,9 +14,7 @@ variants:
   - name: standard-3
     status: backup
   - name: images
-    status: wip
   - name: docs
-    status: ready
     context:
       shouldLoadDocs: true
       supportStyles:
