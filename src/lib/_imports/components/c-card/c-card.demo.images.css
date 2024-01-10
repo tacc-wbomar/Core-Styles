@@ -20,15 +20,11 @@ section > section {
     margin: unset;
 }
 
-/* Contact card adjustments */
-:is(.card, .c-card, [class*="card--"]) h4 {
-    margin-bottom: 0.375em;
-}
-:is(.card, .c-card, [class*="card--"]) p {
-    margin-top: 0px;
-    margin-bottom: 10px;
-}
-[class*="card--image-top"] {
+/* Image: Contact Card */
+/* To overwrite `.s-image-grid > *` specificity */
+/* WARNING: This may be a specificty bug... */
+/* NOTE: Should `s-image-grid` be `o-image-grid`,
+         so `c-card` has greater specificity? */
+.c-card--image-top:has(h4) {
     max-width: fit-content;
 }
-
