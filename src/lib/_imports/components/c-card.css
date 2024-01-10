@@ -310,10 +310,18 @@
 }
 
 /* Image: Contact Card */
+
 :--c-card--image-top h4 {
     margin-bottom: 0.375em;
 }
 :--c-card--image-top h4 ~ p {
     margin-top: 0px;
     margin-bottom: 10px;
+}
+
+/* To not let card be wider than image */
+/* NOTE: For now, only applied where problem appears */
+/* HELP: Should this apply to all cards? How to demo it? */
+:--c-card--image-top:has(h4) {
+    max-width: fit-content;
 }
