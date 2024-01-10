@@ -14,6 +14,9 @@ variants:
   - name: standard-3
     status: backup
   - name: images
+    context:
+      supportStyles:
+        - ../../assets/trumps/s-image-grid.css
   - name: docs
     context:
       shouldLoadDocs: true
