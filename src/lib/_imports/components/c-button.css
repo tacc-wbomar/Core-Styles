@@ -19,7 +19,8 @@
   --mid-width: 110px;
   --max-width: 130px;
 
-  display: inline-block;
+  display: inline-flex;
+  align-items: baseline;
 
   /* To ensure identical <button> and <a> instances have same width */
   box-sizing: border-box;
