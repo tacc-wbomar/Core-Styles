@@ -109,6 +109,7 @@
     display: inline-flex;
     align-items: baseline;
 }
+/* I.e. one of multiple icon links within a p tag */
 :--c-card > p > a:not(:--c-button):has(.icon):not(:last-child) {
     margin-right: 1rem;
 }
