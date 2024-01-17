@@ -12,7 +12,6 @@
 
 /* HEADER */
 
-
 /* To provide TUP header variables */
 #rt-header-container {
   --nav-height: calc(32/13 * 1rem); /* 32px via 13px elevator-light html font-size */
@@ -34,6 +33,44 @@ ul.sf-menu > li {
 
 
 
+/* HEADER: NAVIGATION */
+
+#page-navigation,
+#main-navigation {
+  /* To align header links */
+  & .sf-menu > li > a {
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+  }
+  /* To re-align header link arrows */
+  /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/superfish.css#L86 */
+  & .sf-arrows .sf-with-ul:after {
+    top: unset;
+  }
+
+  /* To style header links */
+  .sf-menu > li > a {
+    /* https://github.com/TACC/Core-Styles/blob/v2.23.1/src/lib/_imports/trumps/s-header.css#L104 */
+    border-block: 4px solid transparent;
+  }
+  & .sf-menu > li > a:hover,
+  & .sf-menu > li > a:focus,
+  & .sf-menu > li > a:active,
+  & .sf-menu > li.active a {
+    /* https://github.com/TACC/Core-Styles/blob/v2.23.1/src/lib/_imports/trumps/s-header.css#L106 */
+    border-bottom-color: var(--global-color-secondary--light);
+  }
+  /* To remove elevator-light styles */
+  /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/nav.css#L85-L89 */
+  /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/nav.css#L339-L340 */
+  & .sf-menu > li > a {
+    padding-block: unset;
+  }
+}
+
+
+
 /* HEADER: BOTTOM BAR (Page Navigation) */
 
 /* To make page nav match TUP header */
@@ -46,25 +83,11 @@ div#header {
   height: var(--nav-height);
 }
 
-/* To align header links */
+/* To align page nav */
 #page-navigation {
   /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/nav.css#L105 */
   /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/layout.css#L91 */
   top: 2.5rem;
-}
-#page-navigation a {
-  height: var(--nav-height);
-  display: flex;
-  align-items: center;
-  /* https://github.com/TACC/Core-Styles/blob/v2.23.1/src/lib/_imports/trumps/s-header.css#L104 */
-  border-block: 4px solid transparent;
-  /* To remove elevator-light styles */
-  /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/nav.css#L339-L340 */
-  padding-block: unset;
-}
-#page-navigation a:hover {
-  /* https://github.com/TACC/Core-Styles/blob/v2.23.1/src/lib/_imports/trumps/s-header.css#L106 */
-  border-bottom-color: var(--global-color-secondary--light);
 }
 
 /* To make header links visible */
