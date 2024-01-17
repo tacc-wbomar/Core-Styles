@@ -56,7 +56,7 @@ ul.sf-menu > li {
     filter: invert(100%) brightness(200%);
   }
   /* To re-align header link dropdowns */
-  .sf-menu ul {
+  & .sf-menu ul {
     margin-top: var(--menu-offset) !important; /* overrides dynamic inline style */
   }
 
