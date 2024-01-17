@@ -53,20 +53,31 @@ table.nested-table {
     border: unset;
   
     & tr {
-      border: 1px solid dodgerblue;
+      border: var(--global-border-width--normal) solid var(--global-color-primary--dark);
     }
   
     & tr:nth-child(odd) :is(th, td) {
-      background: bisque;
+      background-color: rgba(var(--global-color-primary--light-rgb), 0.40)
     }
-  
+    & tr:nth-child(odd) :is(th, td):nth-child(even) {
+      background-color: var(--global-color-primary--x-light);
+    }
+
+    & tr:nth-child(even) :is(th, td):nth-child(odd) {
+      background-color: rgba( var(--global-color-primary--x-light-rgb), 0.50);
+    }
+    & tr:nth-child(even) > :is(th, td):nth-child(even) {
+      background-color: var(--global-color-primary--xx-light);
+    }
+
     & tr:not(:last-of-type) {
-      margin-top: 10px;
-      border-bottom: 1px solid dodgerblue;
+      border-bottom: unset;
     }
-    
-    & tr:last-child {
-      margin-block: 10px;
+
+    & tr:not(:last-of-type) {
+      border-bottom: var(--global-border-width--normal) solid var(--global-color-primary--light);
     }
+   
   }
+
 }
