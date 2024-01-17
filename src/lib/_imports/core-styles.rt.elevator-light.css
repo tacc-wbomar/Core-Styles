@@ -1,3 +1,115 @@
+/* TACC CORE-STYLES */
+/* https://github.com/TACC/Core-Styles */
+/* Import (preferred) or copy-paste (as necessary) from TACC's core styles */
+/* IMPORTANT: Test all changes on all themes */
+/* https://docs.bestpractical.com/rt/5.0.5/customizing/styling_rt.html#Selecting-a-Theme */
+
+/* To load CSS variables */
+@import url("https://cdn.jsdelivr.net/npm/@tacc/core-styles@2.23.1/dist/core-styles.settings.css");
+@import url("https://cdn.jsdelivr.net/npm/@tacc/core-styles@2.23.1/dist/core-styles.theme.default.css");
+
+
+
+/* HEADER */
+
+/* To match TUP header */
+:root {
+  --nav-height: calc(32/13 * 1rem); /* 32px via 13px elevator-light html font-size */
+  /* https://github.com/TACC/Core-Styles/blob/v2.23.1/src/lib/_imports/trumps/s-header.css#L88 */
+  --nav-padding-vert: calc(5/13 * 1rem); /* 5px via 13px elevator-light html font-size */
+  --nav-padding-horz: 20px; /* to match elevator-light div#body horz. padding */
+}
+div#header {
+  background-color: var(--header-bkgd-color);
+  padding: var(--nav-padding-vert) var(--nav-padding-horz);
+  /* To remove elevator-light styles */
+  border-bottom: unset;
+  height: var(--nav-height);
+}
+
+/* To align header links */
+#page-navigation {
+  /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/nav.css#L105 */
+  /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/layout.css#L91 */
+  top: 2.5rem;
+}
+#page-navigation a {
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/nav.css#L339-L340 */
+  padding-block: unset;
+  /* https://github.com/TACC/Core-Styles/blob/v2.23.1/src/lib/_imports/trumps/s-header.css#L104 */
+  border-block: 4px solid transparent;
+}
+#page-navigation a:hover {
+  /* https://github.com/TACC/Core-Styles/blob/v2.23.1/src/lib/_imports/trumps/s-header.css#L106 */
+  border-bottom-color: var(--global-color-secondary--light);
+}
+
+/* To make header links visible */
+#page-navigation .sf-menu svg {
+  color: var(--global-color-primary--xx-light);
+}
+#page-navigation .sf-menu li {
+  /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/nav.css#L126 */
+  background-color: transparent;
+  /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/nav.css#L344-L351 */
+  border-inline: unset;
+}
+#page-navigation .sf-menu li:hover {
+  /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/nav.css#L37 */
+  background-color: transparent;
+}
+
+/* To match TUP header links */
+#page-navigation .sf-menu a.btn {
+  /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/bootstrap.css#L2519 */
+  font-size: unset;
+  font-weight: unset;
+  line-height: unset;
+}
+#page-navigation .sf-menu a:visited,
+#page-navigation .sf-menu a {
+  /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/nav.css#L67-L71 */
+  color: var(--global-color-primary--xx-light);
+}
+#page-navigation .sf-menu a:hover {
+  /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/bootstrap.css#L166 */
+  text-decoration: unset;
+}
+.page-nav-shadow {
+  /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/nav.css#L112 */
+  box-shadow: unset;
+}
+
+/* To let #header manage horz. padding */
+div#header h1 {
+  /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/layout.css#L109 */
+  padding-left: unset;
+}
+
+/* To change #header heading */
+h1 {
+  /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/layout.css#L114 */
+  color: var(--global-color-primary--xx-light);
+  /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/bootstrap.css#L81 */
+  margin-bottom: unset;
+}
+
+
+
+
+
+/* RT THEME EDITOR (Advanced Customization) */
+/* https://docs.bestpractical.com/rt/5.0.5/customizing/styling_rt.html#Advanced-CSS-Customization */
+/* Achieved (if at all) by files on server updated manually from a code repo */
+
+/* RT THEME EDITOR (Basic Customization) */
+/* https://docs.bestpractical.com/rt/5.0.5/customizing/styling_rt.html#RT-Theme-Editor */
+/* Edits here should ONLY be Automatic via "Logo and Colors" form:
+   https://docs.bestpractical.com/rt/5.0.5/customizing/styling_rt.html#Logo-and-Colors */
+
 /* Page */
 body {}
 div#body {}
