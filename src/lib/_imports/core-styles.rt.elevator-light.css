@@ -13,7 +13,7 @@
 /* HEADER */
 
 
-/* To make bottom header match TUP header */
+/* To provide TUP header variables */
 #rt-header-container {
   --nav-height: calc(32/13 * 1rem); /* 32px via 13px elevator-light html font-size */
   /* https://github.com/TACC/Core-Styles/blob/v2.23.1/src/lib/_imports/trumps/s-header.css#L88 */
@@ -21,9 +21,22 @@
   --nav-padding-horz: 20px; /* to match elevator-light div#body horz. padding */
 }
 
+/* To make all top-level nav text bold */
+/* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/nav.css#L1-L3 */
+ul.sf-menu > li {
+  font-weight: var(--bold);
+}
+/* To un-bold active link */
+/* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/nav.css#L5-L7 */
+.sf-menu li.active > .menu-item {
+  font-weight: inherit;
+}
+
 
 
 /* HEADER: BOTTOM BAR (Page Navigation) */
+
+/* To make page nav match TUP header */
 
 div#header {
   background-color: var(--header-bkgd-color);
@@ -70,7 +83,7 @@ div#header {
   background-color: transparent;
 }
 
-/* To make page nav match TUP header links */
+/* To style links */
 #page-navigation .sf-menu a.btn {
   /* To remove elevator-light styles */
   /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/bootstrap.css#L2519 */
@@ -101,13 +114,42 @@ div#header h1 {
   padding-left: unset;
 }
 
-/* To style #header heading */
-h1 {
+/* To style title */
+#header h1 {
   /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/layout.css#L114 */
   color: var(--global-color-primary--xx-light);
   /* To remove elevator-light styles */
   /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/bootstrap.css#L81 */
   margin-bottom: unset;
+}
+
+
+
+/* HEADER: TOP BAR (Main Navigation) */
+
+/* To make top header match TUP header */
+
+div#quickbar {
+  background-color: var(--header-bkgd-color);
+}
+
+.sf-menu li li.active > a,
+.sf-menu li li > a:active {
+  /* https://github.com/TACC/Core-Styles/blob/v2.23.1/src/lib/_imports/trumps/s-header.bootstrap.css#L21-L26 */
+  color: var(--global-color-primary--xx-light);
+  background-color: var(--global-color-accent--normal);
+}
+
+/* To turn arrow icons white */
+/* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/nav.css#L367-L392 */
+ul.toplevel.sf-menu > li > a.sf-with-ul:after {
+  filter: brightness(0);
+}
+
+/* To invert top-level app nav colors, then un-invert dropdown menus */
+#app-nav.sf-menu,
+#app-nav.sf-menu > li > ul {
+  filter: invert(100%);
 }
 
 
