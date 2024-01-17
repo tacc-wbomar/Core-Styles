@@ -37,29 +37,45 @@ ul.sf-menu > li {
 
 #page-navigation,
 #main-navigation {
+  /* https://github.com/TACC/Core-Styles/blob/v2.23.1/src/lib/_imports/trumps/s-header.css#L104 */
+  --border-width: 4px;
+  --menu-offset: calc(var(--border-width) * 3/4 * -1);
+  --border-color: var(--global-color-secondary--light);
+
   /* To align header links */
   & .sf-menu > li > a {
     height: var(--nav-height);
     display: flex;
     align-items: center;
   }
-  /* To re-align header link arrows */
-  /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/superfish.css#L86 */
-  & .sf-arrows .sf-with-ul:after {
+  /* To re-align & re-color top-level header link arrows */
+  & .sf-menu.toplevel.sf-arrows > li > a.sf-with-ul::after {
+    /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/superfish.css#L86 */
     top: unset;
+    /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/nav.css#L367-L392 */
+    filter: invert(100%) brightness(200%);
+  }
+  /* To re-align header link dropdowns */
+  .sf-menu ul {
+    margin-top: var(--menu-offset) !important; /* overrides dynamic inline style */
   }
 
   /* To style header links */
-  .sf-menu > li > a {
-    /* https://github.com/TACC/Core-Styles/blob/v2.23.1/src/lib/_imports/trumps/s-header.css#L104 */
-    border-block: 4px solid transparent;
+  & .sf-menu.toplevel > li > a:visited,
+  & .sf-menu.toplevel > li > a {
+    /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/nav.css#L67-L71 */
+    color: var(--global-color-primary--xx-light);
+  }
+  & .sf-menu > li > a {
+    border-block: var(--border-width) solid transparent;
   }
   & .sf-menu > li > a:hover,
+  & .sf-menu > li.sfHover > a,
   & .sf-menu > li > a:focus,
   & .sf-menu > li > a:active,
   & .sf-menu > li.active a {
     /* https://github.com/TACC/Core-Styles/blob/v2.23.1/src/lib/_imports/trumps/s-header.css#L106 */
-    border-bottom-color: var(--global-color-secondary--light);
+    border-bottom-color: var(--border-color);
   }
   /* To remove elevator-light styles */
   /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/nav.css#L85-L89 */
@@ -114,17 +130,12 @@ div#header {
   font-weight: unset;
   line-height: unset;
 }
-#page-navigation .sf-menu a:visited,
-#page-navigation .sf-menu a {
-  /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/nav.css#L67-L71 */
-  color: var(--global-color-primary--xx-light);
-}
 #page-navigation .sf-menu a:hover {
   /* To remove elevator-light styles */
   /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/bootstrap.css#L166 */
   text-decoration: unset;
 }
-.page-nav-shadow {
+#page-navigation .page-nav-shadow {
   /* To remove elevator-light styles */
   /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/nav.css#L112 */
   box-shadow: unset;
@@ -161,18 +172,6 @@ div#quickbar {
   /* https://github.com/TACC/Core-Styles/blob/v2.23.1/src/lib/_imports/trumps/s-header.bootstrap.css#L21-L26 */
   color: var(--global-color-primary--xx-light);
   background-color: var(--global-color-accent--normal);
-}
-
-/* To turn arrow icons white */
-/* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/nav.css#L367-L392 */
-ul.toplevel.sf-menu > li > a.sf-with-ul:after {
-  filter: brightness(0);
-}
-
-/* To invert top-level app nav colors, then un-invert dropdown menus */
-#app-nav.sf-menu,
-#app-nav.sf-menu > li > ul {
-  filter: invert(100%);
 }
 
 
