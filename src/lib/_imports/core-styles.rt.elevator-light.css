@@ -12,13 +12,19 @@
 
 /* HEADER */
 
-/* To match TUP header */
-:root {
+
+/* To make bottom header match TUP header */
+#rt-header-container {
   --nav-height: calc(32/13 * 1rem); /* 32px via 13px elevator-light html font-size */
   /* https://github.com/TACC/Core-Styles/blob/v2.23.1/src/lib/_imports/trumps/s-header.css#L88 */
   --nav-padding-vert: calc(5/13 * 1rem); /* 5px via 13px elevator-light html font-size */
   --nav-padding-horz: 20px; /* to match elevator-light div#body horz. padding */
 }
+
+
+
+/* HEADER: BOTTOM BAR (Page Navigation) */
+
 div#header {
   background-color: var(--header-bkgd-color);
   padding: var(--nav-padding-vert) var(--nav-padding-horz);
@@ -37,10 +43,11 @@ div#header {
   height: var(--nav-height);
   display: flex;
   align-items: center;
-  /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/nav.css#L339-L340 */
-  padding-block: unset;
   /* https://github.com/TACC/Core-Styles/blob/v2.23.1/src/lib/_imports/trumps/s-header.css#L104 */
   border-block: 4px solid transparent;
+  /* To remove elevator-light styles */
+  /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/nav.css#L339-L340 */
+  padding-block: unset;
 }
 #page-navigation a:hover {
   /* https://github.com/TACC/Core-Styles/blob/v2.23.1/src/lib/_imports/trumps/s-header.css#L106 */
@@ -54,6 +61,7 @@ div#header {
 #page-navigation .sf-menu li {
   /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/nav.css#L126 */
   background-color: transparent;
+  /* To remove elevator-light styles */
   /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/nav.css#L344-L351 */
   border-inline: unset;
 }
@@ -62,8 +70,9 @@ div#header {
   background-color: transparent;
 }
 
-/* To match TUP header links */
+/* To make page nav match TUP header links */
 #page-navigation .sf-menu a.btn {
+  /* To remove elevator-light styles */
   /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/bootstrap.css#L2519 */
   font-size: unset;
   font-weight: unset;
@@ -75,24 +84,28 @@ div#header {
   color: var(--global-color-primary--xx-light);
 }
 #page-navigation .sf-menu a:hover {
+  /* To remove elevator-light styles */
   /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/bootstrap.css#L166 */
   text-decoration: unset;
 }
 .page-nav-shadow {
+  /* To remove elevator-light styles */
   /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/nav.css#L112 */
   box-shadow: unset;
 }
 
 /* To let #header manage horz. padding */
 div#header h1 {
+  /* To remove elevator-light styles */
   /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/layout.css#L109 */
   padding-left: unset;
 }
 
-/* To change #header heading */
+/* To style #header heading */
 h1 {
   /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/layout.css#L114 */
   color: var(--global-color-primary--xx-light);
+  /* To remove elevator-light styles */
   /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/bootstrap.css#L81 */
   margin-bottom: unset;
 }
