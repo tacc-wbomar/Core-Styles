@@ -20,7 +20,15 @@
     <tr>
       {{#if id}}<td data-col="{{ getColFromRow this id ../data.cols }}">{{ id }}</td>{{/if}}
       {{#if name}}<td data-col="{{ getColFromRow this name ../data.cols }}">{{ name }}</td>{{/if}}
-      {{#if name-link}}<td data-col="{{ getColFromRow this name-link ../data.cols }}"><a href="#">{{ name-link }}</a></td>{{/if}}
+      {{#if name-link.[0].is-button}}
+        <td data-col="{{ getColFromRow this name-link ../data.cols }}"><button class="c-button c-button--secondary">{{ name-link.[1].text }}</button></td>
+      {{else}}
+        {{#if name-link}}
+          <td data-col="{{ getColFromRow this name-link ../data.cols }}">
+            <a href="#">{{ name-link }}</a>
+          </td>
+        {{/if}}
+      {{/if}}
       {{#if paragraph}}
       <td data-col="{{ getColFromRow this paragraph ../data.cols }}" title="{{> @text-of-one-paragraph-short }}">
         <p>{{> @text-of-one-paragraph-short }}</p>

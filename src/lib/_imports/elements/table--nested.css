@@ -49,6 +49,26 @@ table.nested-table {
 }
 
 @media (max-width: 767px) {
+
+  table.has-table {
+    & td:nth-child(3):not(:is(table.nested-table *) > *):before {
+      content: none;
+    }
+
+    & td:nth-child(3):not(:is(table.nested-table *) > *) {
+      padding-left: unset;
+      position: unset;
+
+      display: flex;
+      justify-content: center;
+      border-bottom: unset;
+    }
+
+    & td:last-child:not(:is(table.nested-table *) > *) {
+      padding-top: unset;
+    }
+  }
+
   table.nested-table {
     border: unset;
   
@@ -73,11 +93,10 @@ table.nested-table {
     & tr:not(:last-of-type) {
       border-bottom: unset;
     }
+  }
 
-    & tr:not(:last-of-type) {
-      border-bottom: var(--global-border-width--normal) solid var(--global-color-primary--light);
-    }
-   
+  tr:not(:last-of-type) {
+    border-bottom: var(--global-border-width--normal) solid var(--global-color-primary--dark);
   }
 
 }
