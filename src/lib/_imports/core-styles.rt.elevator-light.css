@@ -176,6 +176,30 @@ div#quickbar {
 
 
 
+/* HEADER: SEARCH */
+
+/* https://github.com/TACC/Core-Styles/blob/v2.23.1/src/lib/_imports/trumps/tacc-search-bar.css */
+#topactions form:where(
+  [id*="-search"], /* e.g. Articles search */
+  [class*="-search"] /*  e.g. Tickets search */
+) {
+  & input {
+    padding-right: 0; /* to offer maximum space before characters are cut off */
+
+    background-color: var(--header-search-bkgd-color);
+    border: var(--global-border-width--normal) solid var(--header-search-brdr-color);
+    border-radius: 5px;
+
+    color: var(--header-text-color);
+  }
+  & input::placeholder {
+    color: var(--header-text-color);
+    opacity: 0.5;
+  }
+}
+
+
+
 
 
 /* RT THEME EDITOR (Advanced Customization) */
