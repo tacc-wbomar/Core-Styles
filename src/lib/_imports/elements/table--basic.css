@@ -136,7 +136,7 @@ table p:last-child,
 
     font-family: var(--global-font-family--sans--portal);
     font-size: var(--font-size);
-    
+
     border-top: var(--global-border-width--normal) solid var(--global-color-primary--dark);
     border-bottom: var(--global-border-width--normal) solid var(--global-color-primary--dark);
   }

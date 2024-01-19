@@ -44,8 +44,6 @@ table.nested-table {
     /* background: var(--global-color-primary--x-light); // waiting on word from design */
     border-bottom: var(--global-border-width--normal) solid var(--global-color-primary--light);
   }
-
-  
 }
 
 @media (max-width: 767px) {
@@ -71,11 +69,11 @@ table.nested-table {
 
   table.nested-table {
     border: unset;
-  
+
     & tr {
       border: var(--global-border-width--normal) solid var(--global-color-primary--dark);
     }
-  
+
     & tr:nth-child(odd) :is(th, td) {
       background-color: rgba(var(--global-color-primary--light-rgb), 0.40)
     }
@@ -93,10 +91,6 @@ table.nested-table {
     & tr:not(:last-of-type) {
       border-bottom: unset;
     }
-  }
-
-  tr:not(:last-of-type) {
-    border-bottom: var(--global-border-width--normal) solid var(--global-color-primary--dark);
   }
 
 }
