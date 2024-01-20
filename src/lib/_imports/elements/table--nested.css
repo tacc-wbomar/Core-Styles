@@ -1,7 +1,4 @@
 @supports selector(:has(table)) {
-  /* To ensure matching row height of nested table and parent table */
-  table:has(table) :is(td, th) { white-space: nowrap; }
-
   /* To move even row background to nested table only */
   table:has(table) tr:nth-child(even) :is(th, td) {
     background: var(--global-color-background--app);
@@ -14,9 +11,6 @@
   td:has(table) { padding: 0; }
 }
 @supports not selector(:has(table)) {
-  /* To ensure matching row height of nested table and parent table */
-  table.has-table :is(td, th) { white-space: nowrap; }
-
   /* To move even row background to nested table only */
   table.has-table tr:nth-child(even) :is(th, td) {
     background: var(--global-color-background--app);
