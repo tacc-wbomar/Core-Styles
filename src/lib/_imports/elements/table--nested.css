@@ -29,11 +29,6 @@
   td.has-table { padding: 0; }
 }
 
-/* FAQ: Re-colors border of all successive nested rows (to match parent row) */
-thead + tbody tr:not(:first-of-type) tbody :is(td,th) {
-  border-color: var(--global-color-primary--light);
-}
-
 table.nested-table {
   border-bottom: unset;
   border-left: var(--global-border-width--normal) solid var(--global-color-primary--light);
