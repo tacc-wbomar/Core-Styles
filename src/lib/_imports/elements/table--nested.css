@@ -1,13 +1,16 @@
-/* To move even row background to nested table only */
-table.has-table tr:nth-child(even) :is(th, td) {
-  background: var(--global-color-background--app);
-}
-td.has-table tr:nth-child(even) :is(th, td) {
-  background: var(--global-color-primary--x-light);
-}
+/* PARENT TABLE */
 
+/* To NOT alternate parent table row colors */
+tr:nth-child(even):has(table) {
+  background-color: unset;
+}
 /* To align nested table cells with parent table cells */
-td.has-table { padding: 0; }
+td:has(table) { padding: 0; }
+
+
+
+
+/* NESTED TABLE */
 
 table.nested-table {
   border-bottom: unset;
@@ -23,7 +26,7 @@ table.nested-table {
 
 @media (max-width: 767px) {
 
-  table.has-table {
+  table:has(table) {
     & td:nth-child(3):not(:is(table.nested-table *) > *):before {
       content: none;
     }

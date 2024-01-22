@@ -47,16 +47,10 @@ tr:not(:last-of-type) > :is(td, th),
   border-bottom-color: var(--global-color-primary--light);
 }
 
-/* To alternate table row colors (by coloring cells, not rows) */
-/* FAQ: Colored cells hide sibling column cells scrolled underneath */
-/* NOTE: On narrow screens, first column is pinned and others scroll under it */
-tr:nth-child(odd) :is(th, td) {
-  background: var(--global-color-background--app);
-}
-
-tr:nth-child(even) :is(th, td),
+/* To alternate table row colors */
+tr:nth-child(even),
 :--s-paragraph-table p:nth-child(even) {
-  background: var(--global-color-primary--x-light);
+  background-color: var(--global-color-primary--x-light);
 }
 
 :is(td, th),
@@ -177,8 +171,14 @@ table p:last-child,
 
   /* To remove border (that should probably be in Core anyway) */
   table.has-data-cols {
+    /* HELP: This seems ineffectual because
+             `--cell-padding` is never present.
+             so can it be safely deleted? */
     --row-padding: calc(var(--cell-padding) * 2);
 
+    /* HELP: This seems ineffectual because
+             `table.has-data-cols table.has-table`
+             is never present. What is this meant to do? */
     & table.has-table:is(:last-of-type) {
       border-bottom: var(--global-border-width--thick) solid var(--global-color-primary--dark);
     }
@@ -219,10 +219,15 @@ table p:last-child,
 
     & td.has-table {
       padding: 10px;
+
+      /* HELP: This seems always overwritten by
+              `border-bottom: unset` of `tr :is(td,th):last-child`
+              so can it be safely deleted? */
       border-bottom: var(--global-border-width--normal) solid var(--global-color-primary--dark);
     }
   }
 
+  /* HELP: This seems all ineffectual. Can it be safely deleted? */
   table.has-table {
     --row-padding: unset;
     transform: unset;
