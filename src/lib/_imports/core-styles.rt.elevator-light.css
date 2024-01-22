@@ -118,13 +118,13 @@ div#header h1 {}
 div#body, .body-content-class {}
 
 /* Buttons */
-input[type="reset"], input[type="submit"], input[class="button"] {}
+input[type="reset"], input[type="submit"], input[class="button"] { background: #003399; color: #fff }
 
 /* Button hover */
-input[type="reset"]:hover, input[type="submit"]:hover, input[class="button"]:hover {}
+input[type="reset"]:hover, input[type="submit"]:hover, input[class="button"]:hover { background: #002266; color: #fff }
 
 /* Search results */
-table.collection-as-table th.collection-as-table a {}
+table.collection-as-table th.collection-as-table a { color: #003399 }
 
 /* Portlet Text */
 .titlebox .titlebox-title .left a, .titlebox .titlebox-title .left {}
