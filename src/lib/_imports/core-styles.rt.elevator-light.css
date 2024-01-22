@@ -6,74 +6,84 @@
 @import url("https://cdn.jsdelivr.net/npm/@tacc/core-styles@2.23.1/dist/core-styles.settings.css");
 @import url("https://cdn.jsdelivr.net/npm/@tacc/core-styles@2.23.1/dist/core-styles.theme.default.css");
 
-/* To re-color top-level header link arrows */
-#main-navigation .sf-menu.toplevel.sf-arrows > li > a.sf-with-ul::after {
-  /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/nav.css#L367-L392 */
-  filter: invert(100%) brightness(200%);
-}
+/* To apply custom styles only for light theme */
+/* FAQ: The elevator-dark theme is poorly written ∴ cumbersome to overwrite */
+/* CAVEAT: Older major browsers may not apply these styles */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Nesting_selector */
+body:not(.darkmode) {
 
-/* To style buttons like TACC website */
-:is(button, input.button) {
-  border-width: var(--global-border-width--normal);
-  border-style: solid;
-}
-:is(button, input.button).btn-primary:not( :hover, :focus, :active, :disabled, .disabled ) {
-  color: var(--global-color-primary--xx-light);
-  background-color: var(--global-color-accent--normal);
-  border-color: var(--global-color-accent--normal);
-}
-:is(button, input.button).btn-primary:hover {
-  color: var(--global-color-primary--xx-light);
-  background-color: var(--global-color-accent--dark);
-  border-color: var(--global-color-accent--dark);
-}
-:is(button, input.button).btn-primary:active:not( :disabled, .disabled ) {
-  color: var(--global-color-primary--xx-light);
-  background-color: var(--global-color-accent--x-dark);
-  border-color: var(--global-color-accent--dark);
-
-  outline: var(--global-border-width--normal) solid var(--global-color-accent--dark);
-}
-:is(button, input.button).btn-primary:focus:not( :active ) {
-  color: var(--global-color-primary--xx-light);
-  background-color: var(--global-color-accent--normal);
-  border-color: var(--global-color-primary--xx-light);
-
-  outline: var(--global-border-width--normal) solid var(--global-color-accent--light);
-}
-/* To overwrite RT elevator-light theme */
-:is(button, input.button).btn-primary:is( :focus, .focus ),
-:is(button, input.button).btn-primary:not( :disabled, .disabled ):active:focus {
-  box-shadow: none;
-}
-
-/* To minimally style input like TACC */
-/* To overwrite RT elevator-light theme */
-.button, input[type=reset], input[type=submit], input[class=button], button,
-.custom-file-label, .custom-file-label::after,
-.form-control {
-  border-radius: 0;
-}
-
-/* To make search bar dark */
-/* CAVEAT: Only works on browsers since 2023-12 */
-/* https://github.com/TACC/Core-Styles/blob/v2.23.1/src/lib/_imports/trumps/tacc-search-bar.css */
-#topactions form:where(
-  [id*="-search"], /* e.g. Articles search */
-  [class*="-search"] /*  e.g. Tickets search */
-) {
-  & input {
-    color: var(--header-text-color);
-    background-color: var(--header-search-bkgd-color);
-    border: var(--global-border-width--normal) solid var(--header-search-brdr-color);
-    border-radius: 5px;
-
-    padding-right: 0; /* to offer maximum space before characters are cut off */
+  /* To re-color top-level header link arrows */
+  #main-navigation .sf-menu.toplevel.sf-arrows > li > a.sf-with-ul::after {
+    /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/nav.css#L367-L392 */
+    filter: invert(100%) brightness(200%);
   }
-  & input::placeholder {
-    color: var(--header-text-color);
-    opacity: 0.5;
+
+  /* To style buttons like TACC website */
+  /* https://github.com/TACC/Core-Styles/blob/v2.23.1/src/lib/_imports/components/c-button.css */
+  button, input.button {
+    & {
+      border-width: var(--global-border-width--normal);
+      border-style: solid;
+    }
+    &.btn-primary:not( :hover, :focus, :active, :disabled, .disabled ) {
+      color: var(--global-color-primary--xx-light);
+      background-color: var(--global-color-accent--normal);
+      border-color: var(--global-color-accent--normal);
+    }
+    &.btn-primary:hover {
+      color: var(--global-color-primary--xx-light);
+      background-color: var(--global-color-accent--dark);
+      border-color: var(--global-color-accent--dark);
+    }
+    &.btn-primary:active:not( :disabled, .disabled ) {
+      color: var(--global-color-primary--xx-light);
+      background-color: var(--global-color-accent--x-dark);
+      border-color: var(--global-color-accent--dark);
+
+      outline: var(--global-border-width--normal) solid var(--global-color-accent--dark);
+    }
+    &.btn-primary:focus:not( :active ) {
+      color: var(--global-color-primary--xx-light);
+      background-color: var(--global-color-accent--normal);
+      border-color: var(--global-color-primary--xx-light);
+
+      outline: var(--global-border-width--normal) solid var(--global-color-accent--light);
+    }
+    /* To overwrite RT elevator-light theme */
+    &.btn-primary:is( :focus, .focus ),
+    &.btn-primary:not( :disabled, .disabled ):active:focus {
+      box-shadow: none;
+    }
   }
+
+  /* To minimally style input like TACC */
+  /* To overwrite RT elevator-light theme */
+  .button, input[type=reset], input[type=submit], input[class=button], button,
+  .custom-file-label, .custom-file-label::after,
+  .form-control {
+    border-radius: 0;
+  }
+
+  /* To make any search bar dark */
+  #topactions form:where(
+    [id*="-search"], /* e.g. Articles search */
+    [class*="-search"] /*  e.g. Tickets search */
+  ) {
+    /* https://github.com/TACC/Core-Styles/blob/v2.23.1/src/lib/_imports/trumps/tacc-search-bar.css */
+    input {
+      color: var(--header-text-color);
+      background-color: var(--header-search-bkgd-color);
+      border: var(--global-border-width--normal) solid var(--header-search-brdr-color);
+      border-radius: 5px;
+
+      padding-right: 0; /* to offer maximum space before characters are cut off */
+    }
+    input::placeholder {
+      color: var(--header-text-color);
+      opacity: 0.5;
+    }
+  }
+
 }
 
 
