@@ -1,4 +1,4 @@
-/* TACC CUSTOM STYLES */
+/* TACC CUSTOM STYLES (Based on https://github.com/TACC/Core-Styles) */
 /* IMPORTANT: Test all changes on all themes */
 /* https://docs.bestpractical.com/rt/5.0.5/customizing/styling_rt.html#Selecting-a-Theme */
 
@@ -89,10 +89,6 @@ body:not(.darkmode) {
 
 
 
-
-/* RT THEME EDITOR (Advanced Customization) */
-/* https://docs.bestpractical.com/rt/5.0.5/customizing/styling_rt.html#Advanced-CSS-Customization */
-/* Achieved (if at all) by files on server updated manually from a code repo */
 
 /* RT THEME EDITOR (Basic Customization) */
 /* https://docs.bestpractical.com/rt/5.0.5/customizing/styling_rt.html#RT-Theme-Editor */
