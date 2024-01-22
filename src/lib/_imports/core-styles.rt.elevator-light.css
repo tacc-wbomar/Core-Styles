@@ -1,196 +1,74 @@
-/* TACC CORE-STYLES */
-/* https://github.com/TACC/Core-Styles */
-/* Import (preferred) or copy-paste (as necessary) from TACC's core styles */
+/* TACC CUSTOM STYLES */
 /* IMPORTANT: Test all changes on all themes */
 /* https://docs.bestpractical.com/rt/5.0.5/customizing/styling_rt.html#Selecting-a-Theme */
 
-/* To load CSS variables */
+/* To load TACC/Core-Styles variables */
 @import url("https://cdn.jsdelivr.net/npm/@tacc/core-styles@2.23.1/dist/core-styles.settings.css");
 @import url("https://cdn.jsdelivr.net/npm/@tacc/core-styles@2.23.1/dist/core-styles.theme.default.css");
 
-
-
-/* HEADER */
-
-/* To provide TUP header variables */
-#rt-header-container {
-  --nav-height: calc(32/13 * 1rem); /* 32px via 13px elevator-light html font-size */
-  /* https://github.com/TACC/Core-Styles/blob/v2.23.1/src/lib/_imports/trumps/s-header.css#L88 */
-  --nav-padding-vert: calc(5/13 * 1rem); /* 5px via 13px elevator-light html font-size */
-  --nav-padding-horz: 20px; /* to match elevator-light div#body horz. padding */
+/* To re-color top-level header link arrows */
+#main-navigation .sf-menu.toplevel.sf-arrows > li > a.sf-with-ul::after {
+  /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/nav.css#L367-L392 */
+  filter: invert(100%) brightness(200%);
 }
 
-/* To make all top-level nav text bold */
-/* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/nav.css#L1-L3 */
-ul.sf-menu > li {
-  font-weight: var(--bold);
+/* To style buttons like TACC website */
+:is(button, input.button) {
+  border-width: var(--global-border-width--normal);
+  border-style: solid;
 }
-/* To un-bold active link */
-/* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/nav.css#L5-L7 */
-.sf-menu li.active > .menu-item {
-  font-weight: inherit;
-}
-
-
-
-/* HEADER: NAVIGATION */
-
-#page-navigation,
-#main-navigation {
-  /* https://github.com/TACC/Core-Styles/blob/v2.23.1/src/lib/_imports/trumps/s-header.css#L104 */
-  --border-width: 4px;
-  --menu-offset: calc(var(--border-width) * 3/4 * -1);
-  --border-color: var(--global-color-secondary--light);
-
-  /* To align header links */
-  & .sf-menu > li > a {
-    height: var(--nav-height);
-    display: flex;
-    align-items: center;
-  }
-  /* To re-align & re-color top-level header link arrows */
-  & .sf-menu.toplevel.sf-arrows > li > a.sf-with-ul::after {
-    /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/superfish.css#L86 */
-    top: unset;
-    /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/nav.css#L367-L392 */
-    filter: invert(100%) brightness(200%);
-  }
-  /* To re-align header link dropdowns */
-  & .sf-menu ul {
-    margin-top: var(--menu-offset) !important; /* overrides dynamic inline style */
-  }
-
-  /* To style header links */
-  & .sf-menu.toplevel > li > a:visited,
-  & .sf-menu.toplevel > li > a {
-    /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/nav.css#L67-L71 */
-    color: var(--global-color-primary--xx-light);
-  }
-  & .sf-menu > li > a {
-    border-block: var(--border-width) solid transparent;
-  }
-  & .sf-menu > li > a:hover,
-  & .sf-menu > li.sfHover > a,
-  & .sf-menu > li > a:focus,
-  & .sf-menu > li > a:active,
-  & .sf-menu > li.active a {
-    /* https://github.com/TACC/Core-Styles/blob/v2.23.1/src/lib/_imports/trumps/s-header.css#L106 */
-    border-bottom-color: var(--border-color);
-  }
-  /* To remove elevator-light styles */
-  /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/nav.css#L85-L89 */
-  /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/nav.css#L339-L340 */
-  & .sf-menu > li > a {
-    padding-block: unset;
-  }
-}
-
-
-
-/* HEADER: BOTTOM BAR (Page Navigation) */
-
-/* To make page nav match TUP header */
-
-div#header {
-  background-color: var(--header-bkgd-color);
-  padding: var(--nav-padding-vert) var(--nav-padding-horz);
-  /* To remove elevator-light styles */
-  border-bottom: unset;
-  height: var(--nav-height);
-}
-
-/* To align page nav */
-#page-navigation {
-  /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/nav.css#L105 */
-  /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/layout.css#L91 */
-  top: 2.5rem;
-}
-
-/* To make header links visible */
-#page-navigation .sf-menu svg {
-  color: var(--global-color-primary--xx-light);
-}
-#page-navigation .sf-menu li {
-  /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/nav.css#L126 */
-  background-color: transparent;
-  /* To remove elevator-light styles */
-  /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/nav.css#L344-L351 */
-  border-inline: unset;
-}
-#page-navigation .sf-menu li:hover {
-  /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/nav.css#L37 */
-  background-color: transparent;
-}
-
-/* To style links */
-#page-navigation .sf-menu a.btn {
-  /* To remove elevator-light styles */
-  /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/bootstrap.css#L2519 */
-  font-size: unset;
-  font-weight: unset;
-  line-height: unset;
-}
-#page-navigation .sf-menu a:hover {
-  /* To remove elevator-light styles */
-  /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/bootstrap.css#L166 */
-  text-decoration: unset;
-}
-#page-navigation .page-nav-shadow {
-  /* To remove elevator-light styles */
-  /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/nav.css#L112 */
-  box-shadow: unset;
-}
-
-/* To let #header manage horz. padding */
-div#header h1 {
-  /* To remove elevator-light styles */
-  /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/layout.css#L109 */
-  padding-left: unset;
-}
-
-/* To style title */
-#header h1 {
-  /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/layout.css#L114 */
-  color: var(--global-color-primary--xx-light);
-  /* To remove elevator-light styles */
-  /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/bootstrap.css#L81 */
-  margin-bottom: unset;
-}
-
-
-
-/* HEADER: TOP BAR (Main Navigation) */
-
-/* To make top header match TUP header */
-
-div#quickbar {
-  background-color: var(--header-bkgd-color);
-}
-
-.sf-menu li li.active > a,
-.sf-menu li li > a:active {
-  /* https://github.com/TACC/Core-Styles/blob/v2.23.1/src/lib/_imports/trumps/s-header.bootstrap.css#L21-L26 */
+:is(button, input.button).btn-primary:not( :hover, :focus, :active, :disabled, .disabled ) {
   color: var(--global-color-primary--xx-light);
   background-color: var(--global-color-accent--normal);
+  border-color: var(--global-color-accent--normal);
+}
+:is(button, input.button).btn-primary:hover {
+  color: var(--global-color-primary--xx-light);
+  background-color: var(--global-color-accent--dark);
+  border-color: var(--global-color-accent--dark);
+}
+:is(button, input.button).btn-primary:active:not( :disabled, .disabled ) {
+  color: var(--global-color-primary--xx-light);
+  background-color: var(--global-color-accent--x-dark);
+  border-color: var(--global-color-accent--dark);
+
+  outline: var(--global-border-width--normal) solid var(--global-color-accent--dark);
+}
+:is(button, input.button).btn-primary:focus:not( :active ) {
+  color: var(--global-color-primary--xx-light);
+  background-color: var(--global-color-accent--normal);
+  border-color: var(--global-color-primary--xx-light);
+
+  outline: var(--global-border-width--normal) solid var(--global-color-accent--light);
+}
+/* To overwrite RT elevator-light theme */
+:is(button, input.button).btn-primary:is( :focus, .focus ),
+:is(button, input.button).btn-primary:not( :disabled, .disabled ):active:focus {
+  box-shadow: none;
 }
 
+/* To minimally style input like TACC */
+/* To overwrite RT elevator-light theme */
+.button, input[type=reset], input[type=submit], input[class=button], button,
+.custom-file-label, .custom-file-label::after,
+.form-control {
+  border-radius: 0;
+}
 
-
-/* HEADER: SEARCH */
-
+/* To make search bar dark */
+/* CAVEAT: Only works on browsers since 2023-12 */
 /* https://github.com/TACC/Core-Styles/blob/v2.23.1/src/lib/_imports/trumps/tacc-search-bar.css */
 #topactions form:where(
   [id*="-search"], /* e.g. Articles search */
   [class*="-search"] /*  e.g. Tickets search */
 ) {
   & input {
-    padding-right: 0; /* to offer maximum space before characters are cut off */
-
+    color: var(--header-text-color);
     background-color: var(--header-search-bkgd-color);
     border: var(--global-border-width--normal) solid var(--header-search-brdr-color);
     border-radius: 5px;
 
-    color: var(--header-text-color);
+    padding-right: 0; /* to offer maximum space before characters are cut off */
   }
   & input::placeholder {
     color: var(--header-text-color);
@@ -216,8 +94,8 @@ body {}
 div#body {}
 
 /* Menu bar */
-div#quickbar {}
-#main-navigation #app-nav.sf-shadow > li, #main-navigation #app-nav.sf-shadow > li > a, #prefs-menu > li, #prefs-menu > li > a, #logo .rtname {}
+div#quickbar { background: #222222; color: #fff; border: none; }
+#main-navigation #app-nav.sf-shadow > li, #main-navigation #app-nav.sf-shadow > li > a, #prefs-menu > li, #prefs-menu > li > a, #logo .rtname { color: #fff }
 
 /* Title bar */
 div#header {}
