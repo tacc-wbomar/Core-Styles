@@ -12,6 +12,11 @@
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/Nesting_selector */
 body:not(.darkmode) {
 
+  /* To match footer to header */
+  #footer {
+    background-color: var(--global-color-primary--xx-dark); /* i.e. #222222 */
+  }
+
   /* To re-color top-level header link arrows */
   #main-navigation .sf-menu.toplevel.sf-arrows > li > a.sf-with-ul::after {
     /* https://github.com/bestpractical/rt/blob/rt-5.0.5/share/static/css/elevator-light/nav.css#L367-L392 */
