@@ -1,27 +1,13 @@
-@supports selector(:has(table)) {
-  /* To move even row background to nested table only */
-  table:has(table) tr:nth-child(even) :is(th, td) {
-    background: var(--global-color-background--app);
-  }
-  td:has(table) tr:nth-child(even) :is(th, td) {
-    background: var(--global-color-primary--x-light);
-  }
-
-  /* To align nested table cells with parent table cells */
-  td:has(table) { padding: 0; }
+/* To move even row background to nested table only */
+table.has-table tr:nth-child(even) :is(th, td) {
+  background: var(--global-color-background--app);
 }
-@supports not selector(:has(table)) {
-  /* To move even row background to nested table only */
-  table.has-table tr:nth-child(even) :is(th, td) {
-    background: var(--global-color-background--app);
-  }
-  td.has-table tr:nth-child(even) :is(th, td) {
-    background: var(--global-color-primary--x-light);
-  }
-
-  /* To align nested table cells with parent table cells */
-  td.has-table { padding: 0; }
+td.has-table tr:nth-child(even) :is(th, td) {
+  background: var(--global-color-primary--x-light);
 }
+
+/* To align nested table cells with parent table cells */
+td.has-table { padding: 0; }
 
 table.nested-table {
   border-bottom: unset;
