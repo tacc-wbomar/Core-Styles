@@ -42,21 +42,27 @@ table.nested-table {
 
 @media (max-width: 767px) {
 
-  table:has(table) {
-    & td:nth-child(3):not(:is(table.nested-table *) > *):before {
+  /* To style action column cells differently */
+  /* !!!: This is coupled to a very specific markup */
+  /* HELP: When should this style happen? How to make it happen only then? */
+  table:has(table) td:not(td td) {
+    /* To remove the column name */
+    &[data-col]:nth-child(3):before {
       content: none;
     }
-
-    & td:nth-child(3):not(:is(table.nested-table *) > *) {
+    /* To center the content */
+    &[data-col]:nth-child(3) {
       padding-left: unset;
       position: unset;
 
       display: flex;
       justify-content: center;
+    }
+    /* To remove border and extra space between "View Team" and nested table */
+    &:nth-child(3) {
       border-bottom: unset;
     }
-
-    & td:last-child:not(:is(table.nested-table *) > *) {
+    &:last-child {
       padding-top: unset;
     }
   }
