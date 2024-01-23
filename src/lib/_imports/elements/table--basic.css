@@ -171,18 +171,6 @@ table p:last-child,
 
   /* To remove border (that should probably be in Core anyway) */
   table.has-data-cols {
-    /* HELP: This seems ineffectual because
-             `--cell-padding` is never present.
-             so can it be safely deleted? */
-    --row-padding: calc(var(--cell-padding) * 2);
-
-    /* HELP: This seems ineffectual because
-             `table.has-data-cols table.has-table`
-             is never present. What is this meant to do? */
-    & table.has-table:is(:last-of-type) {
-      border-bottom: var(--global-border-width--thick) solid var(--global-color-primary--dark);
-    }
-
     /* To hide table headers (but not `display: none;`, for a11y) */
     & thead tr {
       position: absolute;
@@ -219,21 +207,10 @@ table p:last-child,
 
     & td.has-table {
       padding: 10px;
-
-      /* HELP: This seems always overwritten by
-              `border-bottom: unset` of `tr :is(td,th):last-child`
-              so can it be safely deleted? */
-      border-bottom: var(--global-border-width--normal) solid var(--global-color-primary--dark);
     }
   }
 
-  /* HELP: This seems all ineffectual. Can it be safely deleted? */
   table.has-table {
-    --row-padding: unset;
-    transform: unset;
-
-    border-bottom: var(--global-border-width--normal) solid var(--global-color-primary--dark);
-
     & tr :is(td,th):last-child {
       border-bottom: unset;
     }
