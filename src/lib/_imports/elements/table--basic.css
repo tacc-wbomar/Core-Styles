@@ -204,10 +204,6 @@ table p:last-child,
       min-width: unset;
       padding-inline: unset;
     }
-
-    & td.has-table {
-      padding: 10px;
-    }
   }
 
   table.has-table {

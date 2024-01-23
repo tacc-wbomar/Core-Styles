@@ -4,8 +4,16 @@
 tr:nth-child(even):has(table) {
   background-color: unset;
 }
+
 /* To align nested table cells with parent table cells */
 td:has(table) { padding: 0; }
+
+@media (max-width: 767px) {
+  /* To pad a nested table */
+  table.has-data-cols td:has(table) {
+    padding: 10px;
+  }
+}
 
 
 
