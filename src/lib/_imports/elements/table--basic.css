@@ -65,8 +65,7 @@ tr:nth-child(even),
 th {
   color: var(--global-color-primary--x-dark);
 
-  text-align: inherit;
-  /* copied from Bootstrap 4.0.0 */
+  text-align: inherit; /* copied from Bootstrap 4.0.0 */
 }
 
 thead > tr > th {
