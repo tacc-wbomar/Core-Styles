@@ -119,9 +119,7 @@ table p:last-child,
   margin-bottom: 0;
 }
 
-/* SEE: https://css-tricks.com/responsive-data-tables/ */
 @media (max-width: 767px) {
-  /* overwrite Core CMS site.css */
   table,
   :--s-paragraph-table {
     --font-size: var(--global-font-size--medium, 14px);
@@ -185,7 +183,6 @@ table p:last-child,
     }
 
     /* To label the cells */
-    /* RFE: Add `data-label` to each cell so we can use `attr(data-label)` */
     & td:before {
       content: attr(data-col);
     }
