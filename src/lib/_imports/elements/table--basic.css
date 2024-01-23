@@ -205,10 +205,4 @@ table p:last-child,
       padding-inline: unset;
     }
   }
-
-  table.has-table {
-    & tr :is(td,th):last-child {
-      border-bottom: unset;
-    }
-  }
 }

@@ -13,6 +13,14 @@ td:has(table) { padding: 0; }
   table.has-data-cols td:has(table) {
     padding: 10px;
   }
+
+  /* To remove extra bottom border on last "pseudo row" */
+  /* NOTE: This applies to parent AND nested table */
+  table:has(table) {
+    & tr :is(td,th):last-child {
+      border-bottom: unset;
+    }
+  }
 }
 
 
