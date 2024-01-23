@@ -169,7 +169,7 @@ table p:last-child,
     border-top: none;
   }
 
-  /* To remove border (that should probably be in Core anyway) */
+  /* To remove border */
   table.has-data-cols {
     /* To hide table headers (but not `display: none;`, for a11y) */
     & thead tr {
