@@ -177,12 +177,6 @@ table p:last-child,
 
   /* To remove border (that should probably be in Core anyway) */
   table.has-data-cols {
-    --row-padding: calc(var(--cell-padding) * 2);
-
-    & table.has-table:is(:last-of-type) {
-      border-bottom: var(--global-border-width--thick) solid var(--global-color-primary--dark);
-    }
-
     /* To hide table headers (but not `display: none;`, for a11y) */
     & thead tr {
       position: absolute;
@@ -219,16 +213,10 @@ table p:last-child,
 
     & td.has-table {
       padding: 10px;
-      border-bottom: var(--global-border-width--normal) solid var(--global-color-primary--dark);
     }
   }
 
   table.has-table {
-    --row-padding: unset;
-    transform: unset;
-
-    border-bottom: var(--global-border-width--normal) solid var(--global-color-primary--dark);
-
     & tr :is(td,th):last-child {
       border-bottom: unset;
     }
