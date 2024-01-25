@@ -1,22 +1,36 @@
+/* SELECTORS */
+
+@custom-selector :--nested-table
+    table:is(table table);
+@custom-selector :--table-with-nested-table
+    table:has(table);
+@custom-selector :--cell-with-nested-table
+    td:has(table);
+@custom-selector :--row-with-nested-table
+    tr:has(table);
+
 /* PARENT TABLE */
 
 /* To NOT alternate parent table row colors */
-tr:nth-child(even):has(table) {
+:--row-with-nested-table:nth-child(even) {
   background-color: unset;
 }
 
 /* To align nested table cells with parent table cells */
-td:has(table) { padding: 0; }
+:--cell-with-nested-table {
+  padding: 0;
+}
 
 @media (max-width: 767px) {
   /* To pad a nested table */
-  table.has-data-cols td:has(table) {
+  table.has-data-cols :--cell-with-nested-table {
     padding: 10px;
   }
 
   /* To remove extra bottom border on last "pseudo row" */
-  /* NOTE: This applies to parent AND nested table */
-  table:has(table) {
+  :--table-with-nested-table {
+    /* NOTE: This applies to parent AND nested table */
+    /* HELP: How should we more clearly show this affects both tables? */
     & tr :is(td,th):last-child {
       border-bottom: unset;
     }
@@ -28,7 +42,7 @@ td:has(table) { padding: 0; }
 
 /* NESTED TABLE */
 
-table.nested-table {
+:--nested-table {
   border-bottom: unset;
   border-left: var(--global-border-width--normal) solid var(--global-color-primary--light);
   border-right: var(--global-border-width--normal) solid var(--global-color-primary--light);
@@ -45,7 +59,7 @@ table.nested-table {
   /* To style action column cells differently */
   /* !!!: This is coupled to a very specific markup */
   /* HELP: When should this style happen? How to make it happen only then? */
-  table:has(table) td:not(td td) {
+  :--table-with-nested-table td:not(td td) {
     /* To remove the column name */
     &[data-col]:nth-child(3):before {
       content: none;
@@ -67,7 +81,7 @@ table.nested-table {
     }
   }
 
-  table.nested-table {
+  :--nested-table {
     border: unset;
 
     & tr {
