@@ -146,6 +146,11 @@ table p:last-child,
     display: block;
   }
 
+  tr:not(:last-of-type) > :is(td, th),
+  :--s-paragraph-table p:not(:last-of-type) {
+    border-bottom: unset;
+  }
+
   tr > :is(td, th):not(:last-of-type),
   :--s-paragraph-table p:not(:last-of-type) {
     border-bottom-width: var(--global-border-width--normal);
@@ -160,7 +165,7 @@ table p:last-child,
   /* To make cells look like left-aligned labels */
   td:before {
     position: absolute;
-    width: 45%;
+    width: calc( 50% - var(--cell-pad-horz) );
     padding-right: 10px;
     white-space: nowrap;
     font-weight: bold;
@@ -208,7 +213,6 @@ table p:last-child,
 
     & .c-pill {
       min-width: unset;
-      padding-inline: unset;
     }
 
     & td.has-table {
