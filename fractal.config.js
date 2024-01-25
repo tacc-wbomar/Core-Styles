@@ -71,7 +71,7 @@ fractal.components.set('default.context', {
   }],
   docsStyles: [{
     isInternal: true,
-    layer: 'project',
+    layer: 'base',
     path: '/assets/core-styles.docs.css'
   }],
   portalStyles: [{
