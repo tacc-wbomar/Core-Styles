@@ -14,10 +14,7 @@
 
 /* ELEMENTS */
 @import url("./elements/root--docs.css");
-/* Commenting for come back Nov.29, 2023. Wes to double check work and side-effects. */
-/* Issue, because tables docs imports html-elements, this pushes over 
-    uls in td elements for tables, and overrides padding-inline-start: 0 */
-/* @import url("./elements/html-elements.cms.css"); */
+@import url("./elements/html-elements.cms.css");
 @import url("./elements/html-elements.docs.css");
 @import url("./elements/headings--docs.css");
 @import url("./elements/monospace.css");
