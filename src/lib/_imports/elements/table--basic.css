@@ -118,7 +118,7 @@ table p:last-child,
   margin-bottom: 0;
 }
 
-@media (max-width: 767px) {
+@media (--narrow-and-below) {
   table,
   :--s-paragraph-table {
     --font-size: var(--global-font-size--medium, 14px);

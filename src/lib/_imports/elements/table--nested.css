@@ -21,7 +21,7 @@
   padding: 0;
 }
 
-@media (max-width: 767px) {
+@media (--narrow-and-below) {
   /* To pad a nested table */
   table.has-data-cols :--cell-with-nested-table {
     padding: 10px;
@@ -52,7 +52,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (--narrow-and-below) {
 
   /* To style action column cells differently */
   /* !!!: This is coupled to a very specific markup */
