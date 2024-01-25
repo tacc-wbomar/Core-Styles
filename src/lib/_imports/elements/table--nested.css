@@ -1,73 +1,85 @@
-@supports selector(:has(table)) {
-  /* To ensure matching row height of nested table and parent table */
-  table:has(table) :is(td, th) { white-space: nowrap; }
+/* SELECTORS */
 
-  /* To move even row background to nested table only */
-  table:has(table) tr:nth-child(even) :is(th, td) {
-    background: var(--global-color-background--app);
-  }
-  td:has(table) tr:nth-child(even) :is(th, td) {
-    background: var(--global-color-primary--x-light);
-  }
+@custom-selector :--nested-table
+    table:is(table table);
+@custom-selector :--table-with-nested-table
+    table:has(table);
+@custom-selector :--cell-with-nested-table
+    td:has(table);
+@custom-selector :--row-with-nested-table
+    tr:has(table);
 
-  /* To align nested table cells with parent table cells */
-  td:has(table) { padding: 0; }
-}
-@supports not selector(:has(table)) {
-  /* To ensure matching row height of nested table and parent table */
-  table.has-table :is(td, th) { white-space: nowrap; }
+/* PARENT TABLE */
 
-  /* To move even row background to nested table only */
-  table.has-table tr:nth-child(even) :is(th, td) {
-    background: var(--global-color-background--app);
-  }
-  td.has-table tr:nth-child(even) :is(th, td) {
-    background: var(--global-color-primary--x-light);
-  }
-
-  /* To align nested table cells with parent table cells */
-  td.has-table { padding: 0; }
+/* To NOT alternate parent table row colors */
+:--row-with-nested-table:nth-child(even) {
+  background-color: unset;
 }
 
-/* FAQ: Re-colors border of all successive nested rows (to match parent row) */
-thead + tbody tr:not(:first-of-type) tbody :is(td,th) {
-  border-color: var(--global-color-primary--light);
+/* To align nested table cells with parent table cells */
+:--cell-with-nested-table {
+  padding: 0;
 }
 
-table.nested-table {
+@media (--narrow-and-below) {
+  /* To pad a nested table */
+  table.has-data-cols :--cell-with-nested-table {
+    padding: 10px;
+  }
+
+  /* To remove extra bottom border on last "pseudo row" */
+  :--table-with-nested-table {
+    /* NOTE: This applies to parent AND nested table */
+    /* HELP: How should we more clearly show this affects both tables? */
+    & tr :is(td,th):last-child {
+      border-bottom: unset;
+    }
+  }
+}
+
+
+
+
+/* NESTED TABLE */
+
+:--nested-table {
   border-bottom: unset;
   border-left: var(--global-border-width--normal) solid var(--global-color-primary--light);
   border-right: var(--global-border-width--normal) solid var(--global-color-primary--light);
 
   & thead tr:last-child :is(td, th) {
-
-    /* background: var(--global-color-primary--x-light); // waiting on word from design */
     border-bottom: var(--global-border-width--normal) solid var(--global-color-primary--light);
   }
 }
 
-@media (max-width: 767px) {
+@media (--narrow-and-below) {
 
-  table.has-table {
-    & td:nth-child(3):not(:is(table.nested-table *) > *):before {
+  /* To style action column cells differently */
+  /* !!!: This is coupled to a very specific markup */
+  /* HELP: When should this style happen? How to make it happen only then? */
+  :--table-with-nested-table td:not(td td) {
+    /* To remove the column name */
+    &[data-col]:nth-child(3):before {
       content: none;
     }
-
-    & td:nth-child(3):not(:is(table.nested-table *) > *) {
+    /* To center the content */
+    &[data-col]:nth-child(3) {
       padding-left: unset;
       position: unset;
 
       display: flex;
       justify-content: center;
+    }
+    /* To remove border and extra space between "View Team" and nested table */
+    &:nth-child(3) {
       border-bottom: unset;
     }
-
-    & td:last-child:not(:is(table.nested-table *) > *) {
+    &:last-child {
       padding-top: unset;
     }
   }
 
-  table.nested-table {
+  :--nested-table {
     border: unset;
 
     & tr {

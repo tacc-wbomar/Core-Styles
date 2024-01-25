@@ -47,16 +47,10 @@ tr:not(:last-of-type) > :is(td, th),
   border-bottom-color: var(--global-color-primary--light);
 }
 
-/* To alternate table row colors (by coloring cells, not rows) */
-/* FAQ: Colored cells hide sibling column cells scrolled underneath */
-/* NOTE: On narrow screens, first column is pinned and others scroll under it */
-tr:nth-child(odd) :is(th, td) {
-  background: var(--global-color-background--app);
-}
-
-tr:nth-child(even) :is(th, td),
+/* To alternate table row colors */
+tr:nth-child(even),
 :--s-paragraph-table p:nth-child(even) {
-  background: var(--global-color-primary--x-light);
+  background-color: var(--global-color-primary--x-light);
 }
 
 :is(td, th),
@@ -71,8 +65,7 @@ tr:nth-child(even) :is(th, td),
 th {
   color: var(--global-color-primary--x-dark);
 
-  text-align: inherit;
-  /* copied from Bootstrap 4.0.0 */
+  text-align: inherit; /* copied from Bootstrap 4.0.0 */
 }
 
 thead > tr > th {
@@ -125,9 +118,7 @@ table p:last-child,
   margin-bottom: 0;
 }
 
-/* SEE: https://css-tricks.com/responsive-data-tables/ */
-@media (max-width: 767px) {
-  /* overwrite Core CMS site.css */
+@media (--narrow-and-below) {
   table,
   :--s-paragraph-table {
     --font-size: var(--global-font-size--medium, 14px);
@@ -175,7 +166,7 @@ table p:last-child,
     border-top: none;
   }
 
-  /* To remove border (that should probably be in Core anyway) */
+  /* To remove border */
   table.has-data-cols {
     /* To hide table headers (but not `display: none;`, for a11y) */
     & thead tr {
@@ -191,7 +182,6 @@ table p:last-child,
     }
 
     /* To label the cells */
-    /* RFE: Add `data-label` to each cell so we can use `attr(data-label)` */
     & td:before {
       content: attr(data-col);
     }
@@ -209,16 +199,6 @@ table p:last-child,
     & .c-pill {
       min-width: unset;
       padding-inline: unset;
-    }
-
-    & td.has-table {
-      padding: 10px;
-    }
-  }
-
-  table.has-table {
-    & tr :is(td,th):last-child {
-      border-bottom: unset;
     }
   }
 }
