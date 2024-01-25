@@ -48,8 +48,6 @@
   border-right: var(--global-border-width--normal) solid var(--global-color-primary--light);
 
   & thead tr:last-child :is(td, th) {
-
-    /* background: var(--global-color-primary--x-light); // waiting on word from design */
     border-bottom: var(--global-border-width--normal) solid var(--global-color-primary--light);
   }
 }
