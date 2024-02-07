@@ -7,8 +7,11 @@
   .app-card,
   [class*="app-card--"];
 
-@custom-selector :--s-app-card__icon
-  :--s-app-card > :--heading > .icon;
+@custom-selector :--s-app-card__title
+  :--s-app-card > :--heading;
+
+@custom-selector :--s-app-card__desc
+  :--s-app-card > p;
 
 @custom-selector :--s-app-card__feats
   :--s-app-card > ul:not(:last-of-type);
@@ -25,6 +28,8 @@
 :--s-app-card {
   display: flex;
   flex-direction: column;
+
+  text-align: center;
 }
 :--s-app-card__feats {
   flex-grow: 1;
@@ -33,7 +38,7 @@
 
 
 /* Title */
-:--s-app-card__icon {
+:--s-app-card__title > .icon {
   vertical-align: middle;
 }
 
@@ -43,8 +48,6 @@
 :--s-app-card__feats {
   padding-inline-start: 0;
   margin-block: unset;
-
-  text-align: center;
 }
 :--s-app-card__feats > li {
   display: inline;
