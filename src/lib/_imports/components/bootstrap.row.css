@@ -1,5 +1,5 @@
 @import url('./bootstrap.col.css');
 
-.row-col-stretch-content-y .col {
+.row-col-stretch-content-y :where(.col, [class*="col-"]) {
   @extend .col-stretch-content-y;
 }
