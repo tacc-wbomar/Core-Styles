@@ -1,5 +1,17 @@
 @import url('./bootstrap.col.css');
 
-.row-col-stretch-content-y :where(.col, [class*="col-"]) {
+/* Bootstrap 4 */
+.row-col-stretch-content-y .col {
   @extend .col-stretch-content-y;
+}
+
+/* Bootstrap 3 */
+/* https://stackoverflow.com/a/22892773/11817077 */
+.row-col-stretch-content-y:not(
+  :has(.col)
+):has(
+  [class^="col-"]
+) {
+  display: flex;
+  flex-wrap: wrap;
 }
