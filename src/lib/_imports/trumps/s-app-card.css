@@ -63,7 +63,7 @@
   display: inline;
 }
 :--s-app-card__feats > li:not(:last-child)::after {
-  content: "●";
+  content: "•";
   display: inline;
   margin-inline: 0.25em;
 }
