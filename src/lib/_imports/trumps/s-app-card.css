@@ -74,6 +74,10 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  /* To fill parent with this item, but keep text aligned to bottom */
+  flex-grow: 1;
+  align-items: end;
 }
 :--s-app-card__tags > li:where(
   :not(:first-child),
