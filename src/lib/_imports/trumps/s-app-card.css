@@ -48,15 +48,19 @@
 :--s-app-card__feats {
   padding-inline-start: 0;
   margin-block: unset;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 :--s-app-card__feats > li {
   display: inline;
 }
-:--s-app-card__feats > li:not(:first-child)::before {
-  content: " • ";
-  font-size: large;
-  vertical-align: middle;
+:--s-app-card__feats > li:not(:last-child)::after {
+  content: "●";
   display: inline;
+  margin-inline: 0.25em;
 }
 
 
