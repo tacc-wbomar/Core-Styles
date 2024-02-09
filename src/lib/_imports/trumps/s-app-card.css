@@ -48,7 +48,7 @@
 
 /* Items */
 :--s-app-card__list {
-  padding: 1em;
+  padding-inline-start: 0;
 
   display: flex;
   flex-wrap: wrap;
