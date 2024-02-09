@@ -13,12 +13,12 @@
 @custom-selector :--s-app-card__desc
   :--s-app-card > p;
 
-@custom-selector :--s-app-card__feats
+@custom-selector :--s-app-card__items
   :--s-app-card > ul:not(:last-of-type);
 
 @custom-selector :--s-app-card__tags
   :--s-app-card > ul:last-of-type;
-@custom-selector :--s-app-card__tags--no-feats
+@custom-selector :--s-app-card__tags--no-items
   :--s-app-card > ul:only-of-type;
 
 @custom-selector :--s-app-card__link
@@ -33,7 +33,7 @@
 
   text-align: center;
 }
-:--s-app-card__feats {
+:--s-app-card__items {
   flex-grow: 1;
 }
 
@@ -47,7 +47,7 @@
 
 
 /* Items */
-:--s-app-card__feats {
+:--s-app-card__items {
   padding-inline-start: 0;
 
   display: flex;
@@ -59,10 +59,10 @@
   margin-block: auto;
   flex-grow: 0;
 }
-:--s-app-card__feats > li {
+:--s-app-card__items > li {
   display: inline;
 }
-:--s-app-card__feats > li:not(:last-child)::after {
+:--s-app-card__items > li:not(:last-child)::after {
   content: "•";
   display: inline;
   margin-inline: 0.25em;
@@ -80,7 +80,7 @@
   flex-direction: row;
   justify-content: space-between;
 }
-:--s-app-card__tags--no-feats {
+:--s-app-card__tags--no-items {
   /* To fill parent with this item, but keep text aligned to bottom */
   flex-grow: 1;
   align-items: end;
