@@ -1,8 +1,10 @@
-<div class="s-image-grid">
+<div class="container">
+<div class="row row-col-stretch-content-y">
   {{#each data}}
     {{#if can-wrap-in-a-link}}
     <a href="#" class="app-card">
     {{else}}
+    <div class="col col-12 col-md-6 col-xl-4">
     <div class="app-card">
     {{/if}}
       <h3>
@@ -35,6 +37,8 @@
     </a>
     {{else}}
     </div>
+    </div>
     {{/if}}
   {{/each}}
+</div>
 </div>
