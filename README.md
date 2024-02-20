@@ -9,6 +9,8 @@ The shared styles for TACC WMA Workspace Portals & Websites
 - [Core Portal], the base Portal code for TACC WMA CMS Websites
 - [TUP UI], the client code for TACC User Portal
 - [TACC Docs], the documentation for TACC
+- [Tapis Authenticator], the web server for Tapis v3 auth
+- [Hazmapper], a TACC application for geospatial data
 
 
 ## Table of Contents
@@ -266,6 +268,8 @@ Core Styles was an effort to replace Bootstrap. Core Styles is compatible with B
 [core portal]: https://github.com/TACC/Core-Portal
 [tup ui]: https://github.com/TACC/tup-ui
 [tacc docs]: https://github.com/TACC/TACC-Docs
+[tapis authenticator]: https://github.com/tapis-project/authenticator
+[hazmapper]: https://github.com/TACC-Cloud/hazmapper
 
 [Contributing]: ./docs/contributing.md
 [Bootstrap]: ./docs/bootstrap.md
