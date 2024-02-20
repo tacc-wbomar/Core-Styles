@@ -21,6 +21,7 @@
 
   display: inline-flex;
   align-items: baseline;
+  justify-content: center;
 
   /* To ensure identical <button> and <a> instances have same width */
   box-sizing: border-box;
