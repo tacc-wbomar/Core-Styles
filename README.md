@@ -163,7 +163,7 @@ Notes:
 
 ## Local Development Setup
 
-### Prequisites for Running
+### Prerequisites for Running
 
 * Nodejs 15.x
 
@@ -256,7 +256,7 @@ To contribute, first read [How to Contirbute][Contributing].
 
 ## Bootstrap
 
-Core Styles is an effort to replace Bootstrap. Core Styles is compatible with Bootstrap. [Learn more.][Bootstrap]
+Core Styles was an effort to replace Bootstrap. Core Styles is compatible with Bootstrap. [Learn more.][Bootstrap]
 
 <!-- Link Aliases -->
 
