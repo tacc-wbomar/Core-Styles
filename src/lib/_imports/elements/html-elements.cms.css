@@ -111,6 +111,10 @@ Styleguide Elements.TextContent
   /* https://dev.to/alvaromontoro/the-disappearing-line-a-css-mystery-3e35 */
   width: 100%;
 }
+/* HELP: What is the right way to fix this? See comment above `width: 100%;` */
+& .blog-content hr {
+  width: unset;
+}
 
 
 
