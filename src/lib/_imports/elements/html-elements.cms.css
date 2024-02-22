@@ -103,7 +103,7 @@ Styleguide Elements.TextContent
 
   border-top-width: var(--global-border-width--normal);
   border-top-style: solid;
-  border-top-clolor: var(--global-color-primary--dark);
+  border-top-color: var(--global-color-primary--light);
 
   margin-bottom: var(--global-space--hr-buffer-below); /* overwrite Bootstrap */
 
