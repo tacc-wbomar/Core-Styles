@@ -71,7 +71,7 @@ fractal.components.set('default.context', {
   }],
   docsStyles: [{
     isInternal: true,
-    layer: 'project',
+    layer: 'base',
     path: '/assets/core-styles.docs.css'
   }],
   portalStyles: [{
@@ -97,6 +97,14 @@ engine.handlebars.registerHelper('eq', function(a, b) {
 });
 engine.handlebars.registerHelper('has', function(array, item) {
   return array.includes(item);
+});
+engine.handlebars.registerHelper('getColFromRow', function(row, val, cols) {
+  if ( ! cols ) return '';
+
+  const index = Object.entries(row).findIndex(el => el[1] === val);
+  const col = cols[index];
+  
+  return col;
 });
 
 // Export

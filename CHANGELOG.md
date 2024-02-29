@@ -8,6 +8,49 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased][unreleased]
 
 
+## [2.24.1] - 2024-02-20: Fix/Update Version in Comment in Dist
+
+### Fixed
+
+- build: v2.24.X
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.24.0...v2.24.1
+
+
+## [2.24.0] - 2024-02-20: Table Redesign, Fix Button & Tag Component Bugs
+
+### Added
+
+- task/tup-534 Adds in media query for tables (#275)
+
+### Fixed
+
+- hotfix: center text horizontally in button (#307)
+- fix: import docs in base layer, like other clients (#303)
+- fix: c-tag padding should be static and less (#301)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.23.1...v2.24.0
+
+## [2.23.1] - 2024-01-11: Fix Button Link, Icon Alignment, Card Demo
+
+### Fixed
+
+- fix: CMS button--as-link has button padding (#298)
+- fix: publish contact card styles (#294)
+- Task/tup-674 Fix hanging indent (#289)
+
+### Changed
+
+- refactor: card image demo grid (#296)
+- refactor: c-card--image-bottom (#297)
+- refactor: more icon alignment (#293)
+
+### Updated
+
+- build(deps-dev): bump follow-redirects from 1.15.2 to 1.15.4 (#295)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.23.0...v2.23.1
+
 ## [2.23.0] - 2024-01-05: Irregular & Mailto Links, S-Drop-Cap, XX-Narrow
 
 ### Added
@@ -958,7 +1001,10 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.23.0...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.24.1...HEAD
+[2.24.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.24.1
+[2.24.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.24.0
+[2.23.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.23.1
 [2.23.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.23.0
 [2.22.6]: https://github.com/TACC/Core-Styles/releases/tag/v2.22.7
 [2.22.6]: https://github.com/TACC/Core-Styles/releases/tag/v2.22.5
