@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.25.0] - 2024-03-01: Add `s-app-card`, Fix `<hr>`, Hack for Bootstrap 3
+
+### Added
+
+- feat: des-2697 s-app-card \& bootstrap 3 has-row--col-stretch-content-y (#304)
+
+### Fixed
+
+- hotfix: `<hr>` in blog hidden behind offset figure (#310)
+- hotfix: actually set hr color / fix typo (#311)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.24.1...v2.24.2
 
 ## [2.24.1] - 2024-02-20: Fix/Update Version in Comment in Dist
 
@@ -1001,7 +1013,8 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.24.1...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.25.0...HEAD
+[2.25.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.25.0
 [2.24.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.24.1
 [2.24.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.24.0
 [2.23.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.23.1
