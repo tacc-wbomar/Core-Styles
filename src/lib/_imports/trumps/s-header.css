@@ -42,13 +42,6 @@ Styleguide Trumps.Scopes.Header
   border-bottom: 1px solid var(--header-major-border-color);
 }
 
-/* To enlarge height for all screen widths */
-@media (--medium-and-above)  {
-  .s-header {
-      height: 60px;
-  }
-}
-
 /* Affiliation */
 
 /* SEE: ../branding_logos.css */
@@ -77,14 +70,6 @@ Styleguide Trumps.Scopes.Header
     align-items: stretch;
 }
 
-/* On wide viewport, prevent header resize from dynamic content */
-/* CAVEAT: This is only for Portal and Docs which dynamically load content */
-@media (--wide-and-above) {
-  .s-header.navbar {
-    height: 50px;
-  }
-}
-
 .s-header.navbar {
   /* Make horizontal padding match the horizontal content buffer in Portal */
   /* FAQ: The `calc()` keeps track of disparate source of space values */
@@ -95,6 +80,17 @@ Styleguide Trumps.Scopes.Header
 
   background-color: var(--header-bkgd-color);
   padding: var(--nav-padding-vert) var(--nav-padding-horz);
+}
+/* On wide viewport, prevent header resize from dynamic content */
+@media (--medium-and-above) {
+  .s-header.navbar {
+    --logo-height: 60px;
+
+    min-height: var(--logo-height);
+  }
+  .s-header > .navbar-brand {
+    min-height: calc( var(--logo-height) - var(--nav-padding-vert) * 2 );
+  }
 }
 
 /* Navigation: Links */
