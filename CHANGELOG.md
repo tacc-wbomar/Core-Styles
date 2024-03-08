@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.25.2] - 2024-03-07: Fix Expanded Navbar Can Overflow Header
+
+### Fixed
+
+- fix: CMD-79 navbar expanded can overflow header (#315)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.25.1...v2.25.2
+
 ## [2.25.1] - 2024-03-01: Revert Table Redesign (from 2.24.0)
 
 ### Fixed
@@ -1021,7 +1029,8 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.25.1...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.25.2...HEAD
+[2.25.2]: https://github.com/TACC/Core-Styles/releases/tag/v2.25.2
 [2.25.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.25.1
 [2.25.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.25.0
 [2.24.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.24.1
