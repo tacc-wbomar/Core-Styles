@@ -110,7 +110,7 @@
 :--c-app-card__link {
   position: absolute;
   user-select: none;
-  color: transparent;
+  color: transparent !important;
   top: 0;
   left: 0;
   right: 0;
