@@ -24,8 +24,8 @@
       <ul class="c-app-card__flags">
       {{#each flags}}
         <li class="
-          {{#if (eq this.type "repo")}}c-app-card__repo{{/if}}
-          {{#if (eq this.type "other")}}c-app-card__other{{/if}}
+          {{~#if (eq this.type "repo")}}c-app-card__repo{{/if~}}
+          {{~#if (eq this.type "other")}}c-app-card__other{{/if~}}
         ">
         {{#if this.should-highlight}}
           <strong>{{this.name}}</strong>
