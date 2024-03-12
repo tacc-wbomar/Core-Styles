@@ -11,69 +11,85 @@ context:
   data:
     - title: ADCIRC
       desc: Widely applied coastal circulation and coastal flooding model.
-      feats:
+      types:
         - Storm Surge
         - Hurricane
         - Flood
-      tags:
-        - Popular
-        - Open Source
+      flags:
+        - name: Popular
+          type: other
+          should-highlight: true
+        - name: Open Source
+          type: repo
     - title: ANSYS
       icon: ansys
       desc: Widely applied coastal circulation and coastal flooding model.
-      tags:
-        - Licensed
+      flags:
+        - name: Licensed
+          type: repo
     - title: ClawPack
       icon: clawpack
       desc: Model and simulate coastal and oceanic processes.
-      feats:
+      types:
         - Tsunami
         - Storm Surge
         - Flood
-      tags:
-        - Open Source
+      flags:
+        - name: SimCenter
+          type: other
+        - name: Licensed
+          type: repo
     - title: Hazmapper
       icon: hazmapper
       desc: Visualize, analyze, and share geospatial data.
-      tags:
-        - Open Source
+      flags:
+        - name: Open Source
+          type: repo
     - title: QGIS
       icon: qgis
       desc: Create, edit, visualize and analyze geospatial information.
-      tags:
-        - Licensed
+      flags:
+        - name: Licensed
+          type: repo
     - title: OpenSEES
       icon: opensees
       desc: Advanced seismic and structural analysis
-      feats:
+      types:
         - Earthquake
-      tags:
-        - Popular
-        - Open Source
+      flags:
+        - name: Popular
+          type: other
+          should-highlight: true
+        - name: Open Source
+          type: repo
     - title: LS-DYNA
       icon: lsdyna
       desc: Conduct dynamic finite element analysis of complex physics
-      feats:
+      types:
         - Earthquake
         - Landslide
         - Tsunami
         - Storm Surge
-      tags:
-        - Licensed
+      flags:
+        - name: Licensed
+          type: repo
     - title: OpenFOAM
       icon: openfoam
       desc: Simulate and analyze fluid flow and heat transfer
-      feats:
+      types:
         - Tsunami
         - Storm Surge
         - Flood
         - Fire
-      tags:
-        - Open Source
+      flags:
+        - name: Open Source
+          type: repo
     - title: EE-UQ
       desc: Determine the response of a structure to an earthquake.
-      feats:
+      types:
         - Earthquake
-      tags:
-        - SimCenter
-        - Open Source
+      flags:
+        - name: SimCenter
+          type: other
+        - name: Open Source
+          type: repo
