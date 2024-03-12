@@ -1,0 +1,44 @@
+<div class="container">
+<div class="row row-col-stretch-content-y">
+  {{#each data}}
+    {{#if can-wrap-in-a-link}}
+    <a href="#" class="app-card">
+    {{else}}
+    <div class="col col-12 col-md-6 col-xl-4">
+    <div class="c-app-card">
+    {{/if}}
+      <h3>
+        {{#if icon}}<i class="icon icon-user"></i>{{/if}}
+        {{!-- FAQ: These custom icons are not available in Cortal --}}
+        {{!-- {{#if icon}}<i class="icon icon-{{icon}}"></i>{{/if}} --}}
+        {{title}}
+      </h3>
+      <p class="c-app-card__desc">{{desc}}</p>
+      <ul class="c-app-card__types">
+        {{#each types}}
+        <li>{{this}}</li>
+        {{else}}
+        <li>&nbsp;</li>
+        {{/each}}
+      </ul>
+      <ul class="c-app-card__flags">
+      {{#each flags}}
+        <li>
+        {{#if this.should-highlight}}<strong>{{this.name}}</strong>
+        {{else}}{{this.name}}
+        {{/if}}
+        </li>
+      {{/each}}
+      </ul>
+      {{#unless can-wrap-in-a-link}}
+        <a href="#">magic link</a>
+      {{/unless}}
+    {{#if can-wrap-in-a-link}}
+    </a>
+    {{else}}
+    </div>
+    </div>
+    {{/if}}
+  {{/each}}
+</div>
+</div>
