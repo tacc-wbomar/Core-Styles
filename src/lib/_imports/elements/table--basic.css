@@ -181,7 +181,7 @@ table p:last-child,
   }
 
   /* To remove border (that should probably be in Core anyway) */
-  table.has-data-cols {
+  table:has([data-col]) {
     /* To hide table headers (but not `display: none;`, for a11y) */
     & thead tr {
       position: absolute;
