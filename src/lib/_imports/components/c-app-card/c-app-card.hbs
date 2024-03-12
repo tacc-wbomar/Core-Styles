@@ -1,10 +1,10 @@
 <div class="container">
 <div class="row row-col-stretch-content-y">
   {{#each data}}
-    {{#if can-wrap-in-a-link}}
-    <a href="#" class="app-card">
-    {{else}}
     <div class="col col-12 col-md-6 col-xl-4">
+    {{#if ../can-wrap-in-a-link}}
+    <a href="#" class="c-app-card">
+    {{else}}
     <div class="c-app-card">
     {{/if}}
       <h3 class="c-app-card__title">
@@ -35,15 +35,15 @@
         </li>
       {{/each}}
       </ul>
-      {{#unless can-wrap-in-a-link}}
+      {{#unless ../can-wrap-in-a-link}}
         <a class="c-app-card__link" href="#">magic link</a>
       {{/unless}}
-    {{#if can-wrap-in-a-link}}
+    {{#if ../can-wrap-in-a-link}}
     </a>
     {{else}}
     </div>
-    </div>
     {{/if}}
+    </div>
   {{/each}}
 </div>
 </div>

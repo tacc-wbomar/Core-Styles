@@ -27,6 +27,14 @@
   flex-direction: column;
 
   text-align: center;
+
+  &:is(a) {
+    color: inherit;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 :--c-app-card__types {
   flex-grow: 1;
@@ -91,6 +99,9 @@
 
 
 /* Links */
+/* IMPORTANT: IF you CAN put `s-app-card` on an `<a>`, THEN ignore this class */
+/* HACK: IF you can NOT put `s-app-card` on an `<a>`, THEN
+        add an `<a class="c-app-card__link">Open</a>` within the component */
 
 /* To stretch a child link atop the entire card */
 :--c-app-card {

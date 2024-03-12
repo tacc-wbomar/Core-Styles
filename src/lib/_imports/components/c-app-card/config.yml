@@ -7,7 +7,7 @@ context:
   supportStyles:
     - ../../assets/components/bootstrap.row.css
     - ../../assets/components/cortal.icon.css
-  can-wrap-in-a-link: false
+  can-wrap-in-a-link: true
   data:
     - title: ADCIRC
       desc: Widely applied coastal circulation and coastal flooding model.
