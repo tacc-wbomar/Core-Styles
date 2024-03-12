@@ -104,7 +104,7 @@
         add an `<a class="c-app-card__link">Open</a>` within the component */
 
 /* To stretch a child link atop the entire card */
-:--c-app-card {
+:--c-app-card:has(:--c-app-card__link) {
   position: relative;
 }
 :--c-app-card__link {
