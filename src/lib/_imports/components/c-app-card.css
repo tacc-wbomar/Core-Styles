@@ -1,13 +1,8 @@
-@import url("../tools/selectors.common.css");
-
-
-
 @custom-selector :--c-app-card
-  .c-app-card,
-  [class*="c-app-card--"];
+  .c-app-card;
 
 @custom-selector :--c-app-card__title
-  :--c-app-card > :--heading;
+  .c-app-card__title;
 
 @custom-selector :--c-app-card__desc
   .c-app-card__desc;
@@ -17,6 +12,9 @@
 
 @custom-selector :--c-app-card__flags
   .c-app-card__flags;
+
+@custom-selector :--c-app-card__repo
+  .c-app-card__repo;
 
 @custom-selector :--c-app-card__link
   .c-app-card__link;
@@ -45,8 +43,6 @@
 
 /* Items */
 :--c-app-card__types {
-  padding-inline-start: 0;
-
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -55,11 +51,15 @@
   /* To achieve `height: min-content` and `space-around` */
   margin-block: auto;
   flex-grow: 0;
+
+  &:is(ul) {
+    padding-inline-start: 0;
+  }
 }
-:--c-app-card__types > li {
+:--c-app-card__types > :is(li, div, p) {
   display: inline;
 }
-:--c-app-card__types > li:not(:last-child)::after {
+:--c-app-card__types > :not(:last-child)::after {
   content: "•";
   display: inline;
   margin-inline: 0.25em;
@@ -72,18 +72,19 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
-:--c-app-card__flags/*:is(ul)*/ {
-  list-style: none;
-  padding-inline-start: 0;
-  margin-block: unset;
+
+  &:is(ul) {
+    list-style: none;
+    padding-inline-start: 0;
+    margin-block: unset;
+  }
 }
 :--c-app-card__flags:not(:--c-app-card__types ~ *) {
   /* To fill parent with this item, but keep text aligned to bottom */
   flex-grow: 1;
   align-items: end;
 }
-:--c-app-card__flags > :only-child {
+:--c-app-card__flags > :--c-app-card__repo {
   margin-left: auto;
 }
 
