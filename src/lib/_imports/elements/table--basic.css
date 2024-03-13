@@ -128,7 +128,7 @@ table p:last-child,
 /* SEE: https://css-tricks.com/responsive-data-tables/ */
 @media (max-width: 767px) {
   /* overwrite Core CMS site.css */
-  table,
+  table:has([data-col]),
   :--s-paragraph-table {
     --font-size: var(--global-font-size--medium, 14px);
     --cell-pad-vert: 1.2em;
@@ -141,29 +141,29 @@ table p:last-child,
     border-bottom: var(--global-border-width--normal) solid var(--global-color-primary--dark);
   }
 
-
-  :is(table, thead, tbody, th, td, tr) {
+  table:has([data-col]),
+  table:has([data-col]) :is(thead, tbody, th, td, tr) {
     display: block;
   }
 
-  tr:not(:last-of-type) > :is(td, th),
+  table:has([data-col]) tr:not(:last-of-type) > :is(td, th),
   :--s-paragraph-table p:not(:last-of-type) {
     border-bottom: unset;
   }
 
-  tr > :is(td, th):not(:last-of-type),
+  table:has([data-col]) tr > :is(td, th):not(:last-of-type),
   :--s-paragraph-table p:not(:last-of-type) {
     border-bottom-width: var(--global-border-width--normal);
     border-bottom-style: solid;
     border-bottom-color: var(--global-color-primary--light);
   }
 
-  tr:not(:last-of-type) {
+  table:has([data-col])  tr:not(:last-of-type) {
     border-bottom: var(--global-border-width--normal) solid var(--global-color-primary--light);
   }
 
   /* To make cells look like left-aligned labels */
-  td:before {
+  table:has([data-col]) td:before {
     position: absolute;
     width: calc( 50% - var(--cell-pad-horz) );
     padding-right: 10px;
@@ -176,7 +176,7 @@ table p:last-child,
     left: var(--cell-pad-horz);
   }
 
-  tbody:not(thead + tbody) > tr:first-child > :is(td, th) {
+  table:has([data-col]) tbody:not(thead + tbody) > tr:first-child > :is(td, th) {
     border-top: none;
   }
 
