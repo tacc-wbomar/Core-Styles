@@ -220,7 +220,7 @@ table p:last-child,
     }
   }
 
-  table.has-table {
+  table:has([data-col]).has-table {
     & tr :is(td,th):last-child {
       border-bottom: unset;
     }
