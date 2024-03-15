@@ -42,7 +42,7 @@ table.nested-table {
 
 @media (max-width: 767px) {
 
-  table.has-table {
+  table:has([data-col]).has-table {
     & td:nth-child(3):not(:is(table.nested-table *) > *):before {
       content: none;
     }
@@ -61,7 +61,7 @@ table.nested-table {
     }
   }
 
-  table.nested-table {
+  table:has([data-col]).nested-table {
     border: unset;
 
     & tr {
