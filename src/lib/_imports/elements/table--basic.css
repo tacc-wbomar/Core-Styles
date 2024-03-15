@@ -190,7 +190,7 @@ table p:last-child,
     }
 
     /* To make each cell behave like a "row" */
-    & td {
+    &:has(thead) td {
       position: relative;
       padding-left: 50%;
     }
