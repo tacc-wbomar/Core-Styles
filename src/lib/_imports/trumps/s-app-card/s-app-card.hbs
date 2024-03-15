@@ -5,7 +5,7 @@
     <a href="#" class="app-card">
     {{else}}
     <div class="col col-12 col-md-6 col-xl-4">
-    <div class="app-card">
+    <div class="s-app-card">
     {{/if}}
       <h3>
         {{#if icon}}<i class="icon icon-user"></i>{{/if}}
@@ -15,17 +15,17 @@
       </h3>
       <p>{{desc}}</p>
       <ul>
-        {{#each feats}}
+        {{#each types}}
         <li>{{this}}</li>
         {{else}}
         <li>&nbsp;</li>
         {{/each}}
       </ul>
       <ul>
-      {{#each tags}}
+      {{#each flags}}
         <li>
-        {{#if (eq this "Popular")}}<strong>{{this}}</strong>
-        {{else}}{{this}}
+        {{#if this.should-highlight}}<strong>{{this.name}}</strong>
+        {{else}}{{this.name}}
         {{/if}}
         </li>
       {{/each}}
