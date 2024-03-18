@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.25.3] - 2024-03-15: Rebuild `s-app-card` as `c-app-card`
+
+### Fixed
+
+- feat: des-2697 add `c-app-card`, improve `s-cap-card` (#318)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.25.2...v2.25.3
+
 ## [2.25.2] - 2024-03-07: Fix Expanded Navbar Can Overflow Header
 
 ### Fixed
@@ -1029,7 +1037,8 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.25.2...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.25.3...HEAD
+[2.25.3]: https://github.com/TACC/Core-Styles/releases/tag/v2.25.3
 [2.25.2]: https://github.com/TACC/Core-Styles/releases/tag/v2.25.2
 [2.25.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.25.1
 [2.25.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.25.0
