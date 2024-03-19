@@ -24,7 +24,7 @@ tbody:not(thead + tbody) > tr:first-child > :is(td,th),
 
 
 @media (max-width: 767px) { 
-  :--table-has-data-col {
+  :--table--has-data-col {
     border-top: var(--global-border-width--normal) solid var(--global-color-primary--dark);
   }
 

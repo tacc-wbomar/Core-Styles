@@ -2,7 +2,7 @@
     .s-paragraph-table,
     .paragraph-table;
 
-@custom-selector :--table-has-data-col
+@custom-selector :--table--has-data-col
     :is(
         table:not(:has(thead)),
         table:has([data-col])
