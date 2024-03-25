@@ -1,3 +1,5 @@
 context:
   supportStyles:
-    - ../../assets/objects/o-secton.css
+    - ../../assets/objects/o-section.css
+    - ../../assets/components/c-overlay.css
+    - ../../assets/tools/media-queries.css
