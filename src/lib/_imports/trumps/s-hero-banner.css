@@ -1,22 +1,5 @@
 /* Banner */
-/* Content */
-
-/* To avoid banner overlay being off-screen */
-@media (--medium-and-above) {
-  .s-home__banner,
-  .s-home__content {
-    margin-inline: 116px;
-  }
-}
-
-
-
-
-
 /* Banner */
-
-
-
 /* Banner: Container */
 
 .s-home__banner {
@@ -30,15 +13,13 @@
 }
 @media (--medium-and-above) {
   .s-home__banner {
+    margin-inline: 116px;
     height: 55.5rem;
     display: block;
   }
 }
 
-
-
 /* Banner: Overlay */
-
 @media (--medium-and-above) {
   .o-section--banner .s-home__banner .o-section__banner-overlay {
     position: absolute;
@@ -48,6 +29,7 @@
     bottom: 50px;
   }
 }
+
 .o-section--banner .s-home__banner .o-section__banner-overlay {
   @extend %x-overlay--callout;
 
@@ -57,31 +39,14 @@
   color: var(--color-text);
   background-color: rgba(var(--color-bkgd-rgb), 0.9);
 }
-.o-section--banner.o-section--style-dark .s-home__banner .o-section__banner-overlay {
-  --color-text: var(--global-color-primary--xx-light);
-  --color-bkgd-rgb: var(--global-color-primary--xx-dark-rgb);
-}
+
 .o-section--banner.o-section--style-light .s-home__banner .o-section__banner-overlay {
   --color-text: var(--global-color-primary--xx-dark);
   --color-bkgd-rgb: var(--global-color-primary--xx-light-rgb);
 }
 
 
-
-/* Banner: Image */
-
-/* Temporary fix to get rid of white border on top of banner */
-.o-section--banner .o-section__banner-image {
-  top: 0%;
-  transform: translate(-50%, 0%);
-}
-
-
-
-
-
 /* Introduction */
-
 .s-home__intro {
   --left-buffer: 48px;
 
@@ -98,50 +63,4 @@
   font-size: 2.4rem; /* design deviates from standard to fit text on 2 lines */
 
   border-bottom: var(--global-border-width--normal) solid var(--global-color-primary--xx-dark);
-}
-
-
-
-
-
-/* Content */
-
-
-
-/* Content: Panels */
-
-/* First panel */
-@media (--wide-and-above) {
-  /* To match design */
-  .s-home__content > *:nth-child(1) { margin-right: 100px; }
-}
-@media (--medium-and-above) and (--wide-and-below) {
-  /* To prevent wrapping of `.s-focus-list` items */
-  .s-home__content > *:nth-child(1) { margin-right: 25px; }
-}
-
-/* Second panel */
-@media (--medium-and-above) {
-  .s-home__content > *:nth-child(2) {
-    /* To draw a border between grid items (that has existing gap) */
-    border-left:
-      var(--global-border-width--normal) solid
-      var(--global-color-primary--xx-dark);
-    --border-color: var(--global-color-primary--xx-dark);
-    padding-left: var(--gap);
-
-    /* To allow text to spill into right-hand margin of content */
-    margin-right: -35px; /* anywhere between when text wraps: -10px and -43px */
-  }
-}
-
-
-
-/* Content: Elements */
-
-.s-home__content h2 {
-  font-size: var(--global-font-size--large);
-}
-.s-home__content p {
-  font-weight: var(--medium);
 }
