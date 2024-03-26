@@ -1,15 +1,20 @@
 
+body > main {
+  margin-inline: unset;
+  padding-block: unset;
+  width: unset;
+}
+
 main {
   padding-block: unset;
   width: unset;
 }
 
-
 /* Banner */
 /* Content */
 
 /* To avoid banner overlay being off-screen */
-@media (width >= 992px) {
+@media (--medium-and-above) {
   .s-home__banner,
   .s-home__content {
     margin-inline: 116px;
@@ -29,13 +34,13 @@ main {
 .s-home__banner {
   position: relative; /* for `position: absolute` children */
 }
-@media (width < 992px) {
+@media (--medium-and-below) {
   .s-home__banner {
     height: auto;
     display: grid;
   }
 }
-@media (width >= 992px) {
+@media (--medium-and-above) {
   .s-home__banner {
     height: 55.5rem;
     display: block;
@@ -46,7 +51,7 @@ main {
 
 /* Banner: Overlay */
 
-@media (width >= 992px) {
+@media (--medium-and-above) {
   .o-section--banner .s-home__banner .o-section__banner-overlay {
     position: absolute;
     height: auto;
