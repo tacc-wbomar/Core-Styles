@@ -1,15 +1,3 @@
-
-body > main {
-  margin-inline: unset;
-  padding-block: unset;
-  width: unset;
-}
-
-main {
-  padding-block: unset;
-  width: unset;
-}
-
 /* Banner */
 /* Content */
 
@@ -156,33 +144,4 @@ main {
 }
 .s-home__content p {
   font-weight: var(--medium);
-}
-
-
-
-/* Content: Focus List */
-
-.s-home__content .s-focus-list {
-  font-size: var(--global-font-size--large);
-}
-
-
-
-/* Content: Icon List */
-
-.s-home__content .s-icon-list {
-  padding-left: 0;
-  margin-block: 46px;
-
-  /* line-height: 1.75; */
-
-  color: var(--global-color-primary--xx-dark);
-}
-.s-home__content .s-icon-list li + li {
-  margin-top: 40px;
-}
-@media (--wide-and-below) and (--medium-and-above) {
-  .s-home__content .s-icon-list {
-    --icon-size: 2em;
-  }
 }
