@@ -7,6 +7,85 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.25.3] - 2024-03-15: Rebuild `s-app-card` as `c-app-card`
+
+### Fixed
+
+- feat: des-2697 add `c-app-card`, improve `s-cap-card` (#318)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.25.2...v2.25.3
+
+## [2.25.2] - 2024-03-07: Fix Expanded Navbar Can Overflow Header
+
+### Fixed
+
+- fix: CMD-79 navbar expanded can overflow header (#315)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.25.1...v2.25.2
+
+## [2.25.1] - 2024-03-01: Revert Table Redesign (from 2.24.0)
+
+### Fixed
+
+- REVERT task/tup-534 Adds in media query for tables (#313)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.25.0...v2.25.1
+
+## [2.25.0] - 2024-03-01: Add `s-app-card`, Fix `<hr>`, Hack for Bootstrap 3
+
+### Added
+
+- feat: des-2697 s-app-card \& bootstrap 3 has-row--col-stretch-content-y (#304)
+
+### Fixed
+
+- hotfix: `<hr>` in blog hidden behind offset figure (#310)
+- hotfix: actually set hr color / fix typo (#311)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.24.1...v2.24.2
+
+## [2.24.1] - 2024-02-20: Fix/Update Version in Comment in Dist
+
+### Fixed
+
+- build: v2.24.X
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.24.0...v2.24.1
+
+
+## [2.24.0] - 2024-02-20: Table Redesign, Fix Button & Tag Component Bugs
+
+### Added
+
+- task/tup-534 Adds in media query for tables (#275)
+
+### Fixed
+
+- hotfix: center text horizontally in button (#307)
+- fix: import docs in base layer, like other clients (#303)
+- fix: c-tag padding should be static and less (#301)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.23.1...v2.24.0
+
+## [2.23.1] - 2024-01-11: Fix Button Link, Icon Alignment, Card Demo
+
+### Fixed
+
+- fix: CMS button--as-link has button padding (#298)
+- fix: publish contact card styles (#294)
+- Task/tup-674 Fix hanging indent (#289)
+
+### Changed
+
+- refactor: card image demo grid (#296)
+- refactor: c-card--image-bottom (#297)
+- refactor: more icon alignment (#293)
+
+### Updated
+
+- build(deps-dev): bump follow-redirects from 1.15.2 to 1.15.4 (#295)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.23.0...v2.23.1
 
 ## [2.23.0] - 2024-01-05: Irregular & Mailto Links, S-Drop-Cap, XX-Narrow
 
@@ -958,7 +1037,14 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.23.0...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.25.3...HEAD
+[2.25.3]: https://github.com/TACC/Core-Styles/releases/tag/v2.25.3
+[2.25.2]: https://github.com/TACC/Core-Styles/releases/tag/v2.25.2
+[2.25.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.25.1
+[2.25.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.25.0
+[2.24.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.24.1
+[2.24.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.24.0
+[2.23.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.23.1
 [2.23.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.23.0
 [2.22.6]: https://github.com/TACC/Core-Styles/releases/tag/v2.22.7
 [2.22.6]: https://github.com/TACC/Core-Styles/releases/tag/v2.22.5
