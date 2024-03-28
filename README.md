@@ -29,10 +29,10 @@ The shared styles for TACC WMA Workspace Portals & Websites
 
 ### A. Load from a Project
 
-> **Note**
+> [!NOTE]
 > This is likely the easier and simpler solution. Try this first.
 
-See [`HOWTO.md`](HOWTO.md).
+See [`QUICKSTART.md`](QUICKSTART.md).
 
 ### B. Install into a Project
 
