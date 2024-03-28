@@ -1,6 +1,6 @@
 # Quick Start
 
-Core-Styles is reusable CSS used by [TACC].
+Core-Styles is reusable CSS used by [TACC] and [TACC User Portal].
 
 ## Basic Usage
 
@@ -29,7 +29,7 @@ For just [custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--
 > For UI patterns and demos, see https://tacc.utexas.edu/static/ui/.
 
 > [!NOTE]
-> For a more-detailed walkthrough and options, see [../HOWTO.md](../HOWTO.md).
+> For a more-detailed walkthrough and options, see [HOWTO.md](HOWTO.md).
 
 ## Advanced Usage
 
@@ -37,3 +37,4 @@ For just [custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--
 
 [Node.js]: https://nodejs.org/
 [TACC]: https://www.tacc.utexas.edu/
+[TACC User Portal]: https://tacc.utexas.edu/portal
