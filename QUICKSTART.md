@@ -31,6 +31,9 @@ For just [custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--
 > [!NOTE]
 > For a more-detailed walkthrough and options, see [HOWTO.md](HOWTO.md).
 
+> [!IMPORTANT]
+> Core-Styles can [co-exist](docs/bootstrap.md) with Bootstrap 4.
+
 ## Advanced Usage
 
 [Install into a Project via Node.](README.md#b-install-into-a-project)
