@@ -18,11 +18,10 @@ For a dynamic web application:
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tacc/core-styles@2.25.3/dist/core-styles.portal.css" />
 ```
 
-For just [custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) e.g. colors, size, spacing, et cetera:
+For **only** [custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) e.g. colors, size, spacing, et cetera:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tacc/core-styles@2.25.3/dist/core-styles.base.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tacc/core-styles@2.25.3/dist/core-styles.portal.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tacc/core-styles@2.25.3/dist/core-styles.settings.css" />
 ```
 
 > [!TIP]
