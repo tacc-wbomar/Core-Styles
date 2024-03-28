@@ -1,7 +1,5 @@
 /* Banner */
-/* Banner */
 /* Banner: Container */
-
 .s-home__banner {
   position: relative; /* for `position: absolute` children */
 }
@@ -49,9 +47,7 @@
 /* Introduction */
 .s-home__intro {
   --left-buffer: 48px;
-
   padding: 24px 84px 36px var(--left-buffer);
-
   font-weight: bold;
 }
 
