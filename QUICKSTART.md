@@ -35,7 +35,7 @@ For **only** [custom properties](https://developer.mozilla.org/en-US/docs/Web/CS
 
 ## Advanced Usage
 
-[Install into a Project via Node.](README.md#b-install-into-a-project)
+[Install into a project via Node.](README.md#b-install-into-a-project)
 
 [Node.js]: https://nodejs.org/
 [TACC]: https://www.tacc.utexas.edu/
