@@ -56,8 +56,9 @@
   align-items: center;
   justify-content: center;
 
-  /* To achieve `height: min-content` and `space-around` */
-  margin-block: auto;
+  margin-top: auto; /* To achieve `height: min-content` and `space-around` */
+  margin-bottom: 18px; /* To align toward bottom of card */
+
   flex-grow: 0;
 
   &:is(ul) {
