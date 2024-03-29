@@ -57,7 +57,7 @@
   justify-content: center;
 
   margin-top: auto; /* To achieve `height: min-content` and `space-around` */
-  margin-bottom: 18px; /* To align toward bottom of card */
+  margin-bottom: 1.3em; /* To align toward bottom of card */
 
   flex-grow: 0;
 
