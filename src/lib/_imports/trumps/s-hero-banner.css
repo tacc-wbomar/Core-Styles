@@ -1,16 +1,23 @@
+.section-banner {
+  width: 100%;
+  overflow: hidden;
+  padding-block: 0;
+}
+
 /* Banner */
 /* Banner: Container */
-.s-home__banner {
+.s-home-banner__container {
   position: relative; /* for `position: absolute` children */
 }
+
 @media (--medium-and-below) {
-  .s-home__banner {
+  .s-home-banner__container {
     height: auto;
     display: grid;
   }
 }
 @media (--medium-and-above) {
-  .s-home__banner {
+  .s-home-banner__container {
     margin-inline: 116px;
     height: 55.5rem;
     display: block;
@@ -19,7 +26,7 @@
 
 /* Banner: Overlay */
 @media (--medium-and-above) {
-  .o-section--banner .s-home__banner .o-section__banner-overlay {
+  .s-home-banner__container .o-section__banner-overlay {
     position: absolute;
     height: auto;
     width: 475px;
@@ -28,30 +35,19 @@
   }
 }
 
-.o-section--banner .s-home__banner .o-section__banner-overlay {
-  @extend %x-overlay--callout;
-
-  --color-text: inherit;
-  --color-bkgd-rgb: var(--global-color-primary--normal);
-
-  color: var(--color-text);
-  background-color: rgba(var(--color-bkgd-rgb), 0.9);
+.s-home-banner__container .o-section__banner-overlay {
+  color: var(--global-color-primary--xx-dark);
+  background-color: rgba(var(--global-color-primary--xx-light-rgb), 0.9);
 }
-
-.o-section--banner.o-section--style-light .s-home__banner .o-section__banner-overlay {
-  --color-text: var(--global-color-primary--xx-dark);
-  --color-bkgd-rgb: var(--global-color-primary--xx-light-rgb);
-}
-
 
 /* Introduction */
-.s-home__intro {
+.s-home-banner__intro {
   --left-buffer: 48px;
   padding: 24px 84px 36px var(--left-buffer);
   font-weight: bold;
 }
 
-.s-home__intro h1 {
+.s-home-banner__intro h1 {
   margin-top: 0;
   padding-bottom: 14px;
   margin-bottom: 18px;
