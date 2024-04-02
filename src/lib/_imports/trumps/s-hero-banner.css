@@ -1,9 +1,3 @@
-.section-banner {
-  width: 100%;
-  overflow: hidden;
-  padding-block: 0;
-}
-
 /* Banner */
 /* Banner: Container */
 .s-home-banner__container {
@@ -32,6 +26,8 @@
     width: 475px;
     left: 0;
     bottom: 50px;
+
+    z-index: 2;
   }
 }
 
