@@ -22,7 +22,7 @@
 
 /* Banner: Overlay */
 @media (--medium-and-above) {
-  .s-home-banner .s-home-banner__overlay-message {
+  .s-home-banner article {
     position: absolute;
     height: auto;
     width: 475px;
@@ -32,18 +32,11 @@
   }
 }
 
-@media (--medium-and-below) {
-  .s-home-banner .s-home-banner__overlay-message {
-    position: relative;
-  }
-}
-
-.s-home-banner .s-home-banner__overlay-message {
+.s-home-banner article {
   color: var(--global-color-primary--xx-dark);
   background-color: rgba(var(--global-color-primary--xx-light-rgb), 0.9);
   z-index: 2;
-  --left-buffer: 48px;
-  padding: 24px 84px 36px var(--left-buffer);
+  padding: 24px 84px 36px 48px;
   font-weight: bold;
 
   & h1 {
@@ -56,7 +49,7 @@
 }
 
 /* Banner: Image */
-.s-home-banner__image {
+.s-home-banner__media {
   width: 100%;
   height: 100%;
   object-fit: cover;
