@@ -37,7 +37,7 @@
   color: var(--global-color-primary--xx-dark);
   font-weight: normal;
 
-  @extend .x-truncate--one-line;
+  @mixin x-truncate--one-line;
 }
 
 /* To darken close button */

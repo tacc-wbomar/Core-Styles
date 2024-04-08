@@ -219,7 +219,7 @@ a:--c-button--is-busy {
 /* Modifiers: Types: Truncate */
 
 :--c-button--can-truncate {
-  @extend .x-truncate--one-line;
+  @mixin x-truncate--one-line;
 }
 
 /* Modifiers: Types: Is Active */

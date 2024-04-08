@@ -32,8 +32,7 @@ Styleguide Tools.ExtendsAndMixins.Truncate
 
 /* One Line */
 
-.x-truncate--one-line,
-%x-truncate--one-line /* DEPRECATED */ {
+@define-mixin x-truncate--one-line {
 	text-overflow: var(--text-overflow, ellipsis);
 
 	overflow: hidden;
