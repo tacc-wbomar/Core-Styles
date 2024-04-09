@@ -266,7 +266,7 @@ a:--c-button--is-busy {
 /* Modifiers: Types: As Link */
 
 :--c-button--as-link {
-  @extend .x-link;
+  @mixin x-link;
 
   background: unset;
   border: unset;
@@ -277,10 +277,10 @@ a:--c-button--is-busy {
   font-weight: inherit;
 }
 :--c-button--as-link:where(:not(:--disabled)):hover {
-  @extend .x-link--hover;
+  @mixin x-link--hover;
 }
 :--c-button--as-link:where(:not(:--disabled)):active {
-  @extend .x-link--active;
+  @mixin x-link--active;
 }
 
 /* Modifiers: Types: Is Busy */

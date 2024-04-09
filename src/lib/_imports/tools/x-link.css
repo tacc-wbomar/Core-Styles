@@ -1,15 +1,15 @@
-.x-link {
+@define-mixin x-link {
   color: var(--global-color-accent--normal);
 
   text-decoration: none;
   text-underline-offset: 0.2em;
   text-decoration-thickness: var(--global-border-width--normal);
 }
-.x-link--disabled {
+@define-mixin x-link--disabled {
   opacity: 0.5;
   pointer-events: none;
 }
-.x-link--hover {
+@define-mixin x-link--hover {
   text-decoration-line: underline;
   text-decoration-style: solid;
 
@@ -17,26 +17,26 @@
   color: var(--global-color-accent--normal);
   text-decoration-thickness: var(--global-border-width--normal);
 }
-.x-link--active {
+@define-mixin x-link--active {
   text-decoration-line: underline;
   text-decoration-style: dotted;
 }
 
-.x-link--irregular {
-  @extend .x-link;
+@define-mixin x-link--irregular {
+  @mixin x-link;
 
   text-decoration-line: underline;
 }
-.x-link--irregular--disabled {
-  @extend .x-link--disabled;
+@define-mixin x-link--irregular--disabled {
+  @mixin x-link--disabled;
 }
-.x-link--irregular--hover {
-  @extend .x-link--hover;
+@define-mixin x-link--irregular--hover {
+  @mixin x-link--hover;
 
   text-decoration-style: dashed;
 }
-.x-link--irregular--active {
-  @extend .x-link--active;
+@define-mixin x-link--irregular--active {
+  @mixin x-link--active;
 
   text-decoration-style: dotted;
 }

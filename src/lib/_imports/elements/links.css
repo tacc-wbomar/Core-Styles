@@ -3,14 +3,14 @@
 @import url('../tools/x-link.css');
 
 a:not(:--c-button) {
-  @extend .x-link;
+  @mixin x-link;
 }
 a:not([href]) {
-  @extend .x-link--disabled;
+  @mixin x-link--disabled;
 }
 a:not(:--c-button):hover {
-  @extend .x-link--hover;
+  @mixin x-link--hover;
 }
 a:not(:--c-button):active {
-  @extend .x-link--active;
+  @mixin x-link--active;
 }
