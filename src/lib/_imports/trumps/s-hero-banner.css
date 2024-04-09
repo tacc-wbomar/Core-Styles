@@ -1,3 +1,5 @@
+@import url("../tools/media-queries.css");
+
 /* Banner */
 /* Banner: Container */
 @media (--medium-and-above) {
