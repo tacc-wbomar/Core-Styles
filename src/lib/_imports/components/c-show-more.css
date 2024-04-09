@@ -17,10 +17,10 @@ Styleguide: Components.ShowMore
 
 /* Many Lines */
 .c-show-more--many-lines .c-show-more__target {
-  @extend .x-truncate--many-lines;
+  @mixin x-truncate--many-lines;
 }
 .c-show-more--many-lines .c-show-more__state:checked ~ .c-show-more__target {
-  @extend .x-untruncate--many-lines;
+  @mixin x-untruncate--many-lines;
 }
 
 /* One Line */
@@ -28,7 +28,7 @@ Styleguide: Components.ShowMore
   @mixin x-truncate--one-line;
 }
 .c-show-more--one-line .c-show-more__state:checked ~ .c-show-more__target {
-  @extend .x-untruncate--one-line;
+  @mixin x-untruncate--one-line;
 }
 
 /* Show More / Show Less */
