@@ -43,13 +43,20 @@
 
 /* Skin */
 
-:--c-message--scope-section {
+@define-mixin c-message--scope-section {
   color: var(--global-color-primary--dark);
 }
+:--c-message--scope-section {
+  @mixin c-message--scope-section;
+}
 
-:--c-message--type-info:--c-message--scope-inline {
+@define-mixin c-message--type-info-c-message--scope-inline {
   color: var(--global-color-info--x-dark);
 }
+:--c-message--type-info:--c-message--scope-inline {
+  @mixin c-message--type-info-c-message--scope-inline;
+}
+
 :--c-message--type-success:--c-message--scope-inline {
   color: var(--global-color-success--x-dark);
 }
@@ -65,18 +72,52 @@
 
 /* To support icons (if needed) */
 /* SEE: ./admonition.css */
-:--c-message--type-info::before {
-  background-color: var(--global-color-info--normal);
+@define-mixin c-message--type-info {
+  &::before {
+    background-color: var(--global-color-info--normal);
+  }
 }
-:--c-message--type-success::before {
-  background-color: var(--global-color-success--normal);
+
+:--c-message--type-info {
+  @mixin c-message--type-info;
 }
-:--c-message--type-warning::before {
-  background-color: var(--global-color-warning--normal);
+
+@define-mixin c-message--type-success {
+  &::before {
+    background-color: var(--global-color-success--normal);
+  }
 }
-:--c-message--type-error::before {
-  background-color: var(--global-color-danger--normal);
+
+:--c-message--type-success {
+  @mixin c-message--type-success;
 }
-:--c-message--type-tip::before {
-  background-color: var(--global-color-extra--normal);
+
+@define-mixin c-message--type-warning {
+  &::before {
+    background-color: var(--global-color-warning--normal);
+  }
+}
+
+:--c-message--type-warning {
+  @mixin c-message--type-warning;
+}
+
+@define-mixin c-message--type-error {
+  &::before {
+    background-color: var(--global-color-danger--normal);
+  }
+}
+
+:--c-message--type-error {
+  @mixin c-message--type-error;
+}
+
+@define-mixin c-message--type-tip {
+  &::before {
+    background-color: var(--global-color-extra--normal);
+  }
+}
+
+:--c-message--type-tip {
+  @mixin c-message--type-tip;
 }

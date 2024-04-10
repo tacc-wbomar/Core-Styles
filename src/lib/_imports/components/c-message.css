@@ -5,14 +5,20 @@
 /* Elements */
 
 /* To prevent excess space at top and bottom of message */
-:--c-message > *:first-child {
+
+@define-mixin c-message { 
+  & > *:first-child {
   margin-top: 0;
-}
-:--c-message > *:last-child {
+  }
+
+  & > *:last-child {
   margin-bottom: 0;
+  }
 }
 
-
+:--c-message { 
+  @mixin c-message;
+}
 
 /* Modifiers */
 
