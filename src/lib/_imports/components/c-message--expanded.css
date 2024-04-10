@@ -33,18 +33,16 @@
 
 /* Structure */
 
-:--c-message--scope-section {
+/* Skin */
+@define-mixin c-message--scope-section {
+  color: var(--global-color-primary--dark);
+
+  /* Structure */
   --pad-vert: 20px;
   --pad-horz: 30px;
 
   border-width: var(--global-border-width--normal);
   border-style: solid;
-}
-
-/* Skin */
-
-@define-mixin c-message--scope-section {
-  color: var(--global-color-primary--dark);
 }
 :--c-message--scope-section {
   @mixin c-message--scope-section;
@@ -57,17 +55,32 @@
   @mixin c-message--type-info-c-message--scope-inline;
 }
 
-:--c-message--type-success:--c-message--scope-inline {
+@define-mixin c-message--type-success-c-message--scope-inline {
   color: var(--global-color-success--x-dark);
 }
-:--c-message--type-warning:--c-message--scope-inline {
+:--c-message--type-success:--c-message--scope-inline {
+  @mixin c-message--type-success-c-message--scope-inline;
+}
+
+@define-mixin c-message--type-warning-c-message--scope-inline {
   color: var(--global-color-warning--x-dark);
 }
-:--c-message--type-error:--c-message--scope-inline {
+:--c-message--type-warning:--c-message--scope-inline {
+  @mixin c-message--type-warning-c-message--scope-inline;
+}
+
+@define-mixin c-message--type-error-c-message--scope-inline {
   color: var(--global-color-danger--x-dark);
 }
-:--c-message--type-tip:--c-message--scope-inline {
+:--c-message--type-error:--c-message--scope-inline {
+  @mixin c-message--type-error-c-message--scope-inline;
+}
+
+@define-mixin c-message--type-tip-c-message--scope-inline {
   color: var(--global-color-extra--x-dark);
+}
+:--c-message--type-tip:--c-message--scope-inline {
+  @mixin c-message--type-tip-c-message--scope-inline;
 }
 
 /* To support icons (if needed) */

@@ -19,23 +19,23 @@
 
 .admonition:is(.tip) {
   @mixin c-message--type-tip;
-  @mixin c-message--type-info-c-message--scope-inline;
+  @mixin c-message--type-tip-c-message--scope-section;
 }
 .admonition:is(.hint) {
   @mixin c-message--type-success;
-  @extend :--c-message--type-success:--c-message--scope-section;
+  @mixin c-message--type-success-c-message--scope-section;
 }
 .admonition:is(.note, .attention) {
   @mixin c-message--type-info;
-  @extend :--c-message--type-info:--c-message--scope-section;
+  @mixin c-message--type-info-c-message--scope-section;
 }
 .admonition:is(.caution, .important) {
   @mixin c-message--type-warning;
-  @extend :--c-message--type-warning:--c-message--scope-section;
+  @mixin c-message--type-warning-c-message--scope-section;
 }
 .admonition:is(.warning, .error, .danger) {
   @mixin c-message--type-error;
-  @extend :--c-message--type-error:--c-message--scope-section;
+  @mixin c-message--type-error-c-message--scope-section;
 }
 
 /* To layout icon and content */
