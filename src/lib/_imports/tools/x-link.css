@@ -44,7 +44,8 @@
 @define-mixin link--irregular {
   @mixin link;
 
-  text-decoration-line: underline;
+@define-mixin link--irregular--disabled {
+  @mixin link--disabled;
 }
 /* DEPRECATED */
 .x-link--irregular {

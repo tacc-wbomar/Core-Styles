@@ -40,6 +40,11 @@ Styleguide Tools.Mixins.Truncate
   @mixin untruncate--many-lines;
 }
 
+.x-untruncate--many-lines,
+%x-untruncate--many-lines {
+  @mixin untruncate--many-lines;
+}
+
 /* One Line */
 
 @define-mixin truncate--one-line {
