@@ -78,16 +78,16 @@ pre {
 
 /* To apply link styles */
 & :--monospace--inline:where(a > *) {
-  @mixin x-link;
+  @mixin link;
 }
 & :--monospace--inline:where(a:not([href]) > *) {
-  @mixin x-link--disabled;
+  @mixin link--disabled;
 }
 & :--monospace--inline:where(a:hover > *) {
-  @mixin x-link--hover;
+  @mixin link--hover;
 }
 & :--monospace--inline:where(a:active > *) {
-  @mixin x-link--active;
+  @mixin link--active;
 }
 
 

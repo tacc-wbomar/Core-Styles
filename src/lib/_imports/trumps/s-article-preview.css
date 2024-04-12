@@ -81,7 +81,7 @@ Styleguide Trumps.Scopes.ArticlePreview
 }
 /* (List) */
 [class*="s-article-list--"] .s-article-preview h3 {
-  @mixin x-truncate--one-line;
+  @mixin truncate--one-line;
 }
 /* (List) Allocations */
 .s-article-list--allocations .s-article-preview h3 {
@@ -108,7 +108,7 @@ Styleguide Trumps.Scopes.ArticlePreview
 }
 /* (List) */
 [class*="s-article-list--"] .s-article-preview p:not(:first-child):not(:last-child) {
-  @mixin x-truncate--many-lines;
+  @mixin truncate--many-lines;
   --lines: 3;
 }
 /* (List) Allocations */

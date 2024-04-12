@@ -2,5 +2,5 @@
 
 /* To truncate paragraphs in specific tables */
 .s-truncated-table p {
-  @mixin x-truncate--many-lines;
+  @mixin truncate--many-lines;
 }

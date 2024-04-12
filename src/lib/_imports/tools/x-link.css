@@ -1,15 +1,25 @@
-@define-mixin x-link {
+@define-mixin link {
   color: var(--global-color-accent--normal);
 
   text-decoration: none;
   text-underline-offset: 0.2em;
   text-decoration-thickness: var(--global-border-width--normal);
 }
-@define-mixin x-link--disabled {
+
+.x-link {
+  @mixin link;
+}
+
+@define-mixin link--disabled {
   opacity: 0.5;
   pointer-events: none;
 }
-@define-mixin x-link--hover {
+
+.x-link--disabled {
+  @mixin link--disabled;
+}
+
+@define-mixin link--hover {
   text-decoration-line: underline;
   text-decoration-style: solid;
 
@@ -17,26 +27,55 @@
   color: var(--global-color-accent--normal);
   text-decoration-thickness: var(--global-border-width--normal);
 }
-@define-mixin x-link--active {
+
+.x-link--hover {
+  @mixin link--hover;
+}
+
+@define-mixin link--active {
   text-decoration-line: underline;
   text-decoration-style: dotted;
 }
 
-@define-mixin x-link--irregular {
-  @mixin x-link;
+.x-link--active {
+  @mixin link--active;
+}
+
+@define-mixin link--irregular {
+  @mixin link;
 
   text-decoration-line: underline;
 }
-@define-mixin x-link--irregular--disabled {
-  @mixin x-link--disabled;
+
+.x-link--irregular {
+  @mixin link--irregular;
 }
-@define-mixin x-link--irregular--hover {
-  @mixin x-link--hover;
+
+@define-mixin link--irregular--disabled {
+  @mixin link--disabled;
+}
+
+.x-link--irregular--disabled {
+  @mixin link--irregular--disabled;
+}
+
+
+@define-mixin link--irregular--hover {
+  @mixin link--hover;
 
   text-decoration-style: dashed;
 }
-@define-mixin x-link--irregular--active {
-  @mixin x-link--active;
+
+.x-link--irregular--hover {
+  @mixin link--irregular--hover;
+}
+
+@define-mixin link--irregular--active {
+  @mixin link--active;
 
   text-decoration-style: dotted;
+}
+
+.x-link--irregular--active {
+  @mixin link--irregular--active;
 }

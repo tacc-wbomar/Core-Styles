@@ -14,7 +14,7 @@ Styleguide Tools.ExtendsAndMixins.Truncate
 /* Many Lines */
 /* WARNING: Relies on proprietary and undocumented rules (that work well) */
 
-@define-mixin x-truncate--many-lines {
+@define-mixin truncate--many-lines {
   --lines: 2;
 
   display: -webkit-box;
@@ -23,21 +23,43 @@ Styleguide Tools.ExtendsAndMixins.Truncate
   overflow: hidden;
   -webkit-line-clamp: var(--lines);
 }
-@define-mixin x-untruncate--many-lines {
+
+.x-truncate--many-lines,
+%x-truncate--many-lines {
+  @mixin truncate--many-lines;
+}
+
+
+@define-mixin untruncate--many-lines {
   overflow: visible;
   -webkit-line-clamp: inherit;
 }
 
+.x-untruncate--many-lines,
+%x-untruncate--many-lines {
+  @mixin untruncate--many-lines;
+}
+
 /* One Line */
 
-@define-mixin x-truncate--one-line {
+@define-mixin truncate--one-line {
 	text-overflow: var(--text-overflow, ellipsis);
 
 	overflow: hidden;
 	white-space: nowrap;
 }
-@define-mixin x-untruncate--one-line {
+
+.x-truncate--one-line,
+%x-truncate--one-line {
+  @mixin truncate--one-line;
+}
+
+@define-mixin untruncate--one-line {
   overflow: visible;
 	white-space: normal;
 }
 
+.x-untruncate--one-line,
+%x-untruncate--one-line {
+  @mixin untruncate--one-line;
+}

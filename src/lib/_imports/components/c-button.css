@@ -219,7 +219,7 @@ a:--c-button--is-busy {
 /* Modifiers: Types: Truncate */
 
 :--c-button--can-truncate {
-  @mixin x-truncate--one-line;
+  @mixin truncate--one-line;
 }
 
 /* Modifiers: Types: Is Active */
@@ -266,7 +266,7 @@ a:--c-button--is-busy {
 /* Modifiers: Types: As Link */
 
 :--c-button--as-link {
-  @mixin x-link;
+  @mixin link;
 
   background: unset;
   border: unset;
@@ -277,10 +277,10 @@ a:--c-button--is-busy {
   font-weight: inherit;
 }
 :--c-button--as-link:where(:not(:--disabled)):hover {
-  @mixin x-link--hover;
+  @mixin link--hover;
 }
 :--c-button--as-link:where(:not(:--disabled)):active {
-  @mixin x-link--active;
+  @mixin link--active;
 }
 
 /* Modifiers: Types: Is Busy */

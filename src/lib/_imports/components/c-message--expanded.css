@@ -16,15 +16,15 @@
 /* To distinguish link from message text */
 :--c-message--scope-global a,
 :--c-message--scope-global :--c-button--as-link {
-  @mixin x-link--irregular;
+  @mixin link--irregular;
 }
 :--c-message--scope-global a:hover,
 :--c-message--scope-global :--c-button--as-link:hover {
-  @mixin x-link--irregular--hover;
+  @mixin link--irregular--hover;
 }
 :--c-message--scope-global a:active,
 :--c-message--scope-global :--c-button--as-link:active {
-  @mixin x-link--irregular--active;
+  @mixin link--irregular--active;
 }
 
 
@@ -32,12 +32,9 @@
 /* Modifiers */
 
 /* Structure */
-
-/* Skin */
 @define-mixin c-message--scope-section {
   color: var(--global-color-primary--dark);
 
-  /* Structure */
   --pad-vert: 20px;
   --pad-horz: 30px;
 
