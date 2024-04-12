@@ -5,6 +5,8 @@ plugins:
 
   postcss-extend: {}
 
+  postcss-mixins: {}
+
   postcss-preset-env:
     # https://github.com/csstools/postcss-preset-env#features
     stage: false

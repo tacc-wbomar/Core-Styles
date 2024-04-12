@@ -47,7 +47,8 @@
     "postcss-extend": "^1.0.5",
     "postcss-import": "^15.0.0",
     "postcss-preset-env": "^7.8.3",
-    "postcss-replace": "^2.0.1"
+    "postcss-replace": "^2.0.1",
+    "postcss-mixins": "^10.0.0"
   },
   "// peerDependencies": {
     "commander": "To create CLI",
@@ -69,7 +70,8 @@
     "@frctl/handlebars": "^1.2.15",
     "@frctl/mandelbrot": "^1.10.1",
     "minimist": "^1.2.7",
-    "npm-watch": "^0.11.0"
+    "npm-watch": "^0.11.0",
+    "postcss": "^8.4.38"
   },
   "watch": {
     "build:watch": {

@@ -6,8 +6,8 @@
 
 
 .admonition {
-  @extend :--c-message;
-  @extend :--c-message--scope-section;
+  @mixin c-message;
+  @mixin c-message--scope-section;
 }
 .admonition-title {
   font-weight: var(--bold);
@@ -18,24 +18,24 @@
 }
 
 .admonition:is(.tip) {
-  @extend :--c-message--type-tip;
-  @extend :--c-message--type-tip:--c-message--scope-section;
+  @mixin c-message--type-tip;
+  @mixin c-message--type-tip-c-message--scope-section;
 }
 .admonition:is(.hint) {
-  @extend :--c-message--type-success;
-  @extend :--c-message--type-success:--c-message--scope-section;
+  @mixin c-message--type-success;
+  @mixin c-message--type-success-c-message--scope-section;
 }
 .admonition:is(.note, .attention) {
-  @extend :--c-message--type-info;
-  @extend :--c-message--type-info:--c-message--scope-section;
+  @mixin c-message--type-info;
+  @mixin c-message--type-info-c-message--scope-section;
 }
 .admonition:is(.caution, .important) {
-  @extend :--c-message--type-warning;
-  @extend :--c-message--type-warning:--c-message--scope-section;
+  @mixin c-message--type-warning;
+  @mixin c-message--type-warning-c-message--scope-section;
 }
 .admonition:is(.warning, .error, .danger) {
-  @extend :--c-message--type-error;
-  @extend :--c-message--type-error:--c-message--scope-section;
+  @mixin c-message--type-error;
+  @mixin c-message--type-error-c-message--scope-section;
 }
 
 /* To layout icon and content */
