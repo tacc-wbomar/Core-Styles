@@ -59,6 +59,10 @@
   /* To achieve `height: min-content` and `space-around` */
   margin-block: auto;
   flex-grow: 0;
+
+  &:where(ul) {
+    padding-inline-start: 0;
+  }
 }
 :--c-app-card__types > :is(li, div, p) {
   display: inline;
