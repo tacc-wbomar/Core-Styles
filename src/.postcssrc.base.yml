@@ -3,7 +3,7 @@ plugins:
     path:
       - 'src/lib'
 
-  postcss-extend: {}
+  postcss-extend: {} # DEPRECATED
 
   postcss-mixins: {}
 

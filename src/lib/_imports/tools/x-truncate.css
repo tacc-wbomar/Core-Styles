@@ -1,16 +1,3 @@
-/*
-Truncate
-
-Styles that allow truncating text.
-
-%x-truncate--one-line     - Truncated text may only be one line tall.
-%x-untruncate--one-line   - Remove one-line truncation after it's added.
-%x-truncate--many-lines   - Truncated text may be many lines tall.
-%x-untruncate--many-lines - Remove many-lines truncation after it's added.
-
-Styleguide Tools.ExtendsAndMixins.Truncate
-*/
-
 /* Many Lines */
 /* WARNING: Relies on proprietary and undocumented rules (that work well) */
 
@@ -23,7 +10,7 @@ Styleguide Tools.ExtendsAndMixins.Truncate
   overflow: hidden;
   -webkit-line-clamp: var(--lines);
 }
-
+/* DEPRECATED */
 .x-truncate--many-lines,
 %x-truncate--many-lines {
   @mixin truncate--many-lines;
@@ -34,7 +21,7 @@ Styleguide Tools.ExtendsAndMixins.Truncate
   overflow: visible;
   -webkit-line-clamp: inherit;
 }
-
+/* DEPRECATED */
 .x-untruncate--many-lines,
 %x-untruncate--many-lines {
   @mixin untruncate--many-lines;
@@ -48,7 +35,7 @@ Styleguide Tools.ExtendsAndMixins.Truncate
 	overflow: hidden;
 	white-space: nowrap;
 }
-
+/* DEPRECATED */
 .x-truncate--one-line,
 %x-truncate--one-line {
   @mixin truncate--one-line;
@@ -58,7 +45,7 @@ Styleguide Tools.ExtendsAndMixins.Truncate
   overflow: visible;
 	white-space: normal;
 }
-
+/* DEPRECATED */
 .x-untruncate--one-line,
 %x-untruncate--one-line {
   @mixin untruncate--one-line;
