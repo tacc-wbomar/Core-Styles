@@ -1,9 +1,12 @@
+@import url("../tools/media-queries.css");
+
 /* Banner */
 /* Banner: Container */
 @media (--medium-and-above) {
   .s-home-banner {
     height: 55.5rem;
     width: 100vw;
+    max-width: 100%;
     display: block;
   }
 }
