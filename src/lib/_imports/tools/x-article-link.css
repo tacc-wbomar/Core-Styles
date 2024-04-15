@@ -12,7 +12,7 @@ Styles that allow visible link hover for article lists.
 %x-article-link-active           - Give link an active (click, enter) state
 %x-article-link-text             - Hide link text
 
-Styleguide Tools.ExtendsAndMixins.ArticleLink
+Styleguide Tools.Mixins.ArticleLink
 */
 
 /* To expand link to cover container */
