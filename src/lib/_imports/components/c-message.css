@@ -20,9 +20,11 @@
   @mixin message;
 }
 
+
+
 /* Modifiers */
 
-/* Structure */
+/* Modifiers: Structure */
 
 :--c-message--scope-inline,
 :--c-message--scope-section,
@@ -48,7 +50,7 @@
   text-align: center;
 }
 
-/* Skin */
+/* Modifiers: Skin */
 
 :--c-message--type {
   /* To let clients prematurely @extend (to reduce their later maintenance) */
