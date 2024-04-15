@@ -6,7 +6,7 @@
 
 /* To prevent excess space at top and bottom of message */
 
-@define-mixin message { 
+@define-mixin message {
   & > *:first-child {
     margin-top: 0;
   }
@@ -16,7 +16,7 @@
   }
 }
 
-:--c-message { 
+:--c-message {
   @mixin message;
 }
 
