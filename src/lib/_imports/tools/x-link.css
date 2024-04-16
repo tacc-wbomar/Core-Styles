@@ -43,6 +43,8 @@
 
 @define-mixin link--irregular {
   @mixin link;
+
+  text-decoration-line: underline;
 }
 /* DEPRECATED */
 .x-link--irregular {
