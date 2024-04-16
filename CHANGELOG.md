@@ -7,6 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.26.0] - 2024-04-16: Add Hero Banner, Add `ifno` Helper, Fix App Card
+
+### Added
+
+- feat: wp-280 add "ifno" helper for default values (#337)
+- CMD 105: CMS: Hero Banner Pattern (#324, #328, #331)
+
+### Fixed
+
+- fix: des-2725 c-app-card--types not centered (#334)
+
+### Updated
+
+- build(deps-dev): bump express from 4.18.2 to 4.19.2 (#325)
+- build(deps-dev): bump follow-redirects from 1.15.4 to 1.15.6 (#322)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.25.3...v2.26.0
+
 ## [2.25.3] - 2024-03-15: Rebuild `s-app-card` as `c-app-card`
 
 ### Fixed
@@ -1037,7 +1055,8 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.25.3...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.26.0...HEAD
+[2.26.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.26.0
 [2.25.3]: https://github.com/TACC/Core-Styles/releases/tag/v2.25.3
 [2.25.2]: https://github.com/TACC/Core-Styles/releases/tag/v2.25.2
 [2.25.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.25.1
