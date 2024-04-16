@@ -44,9 +44,6 @@
 @define-mixin link--irregular {
   @mixin link;
 }
-@define-mixin link--irregular--disabled {
-  @mixin link--disabled;
-}
 /* DEPRECATED */
 .x-link--irregular {
   @mixin link--irregular;
