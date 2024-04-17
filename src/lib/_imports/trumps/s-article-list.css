@@ -175,17 +175,17 @@ Styleguide Trumps.Scopes.ArticleList
 .s-article-list--links p:not(:last-child) a::before {
   content: '';
 
-  @extend .x-article-link-stretch;
+  @mixin article-link-stretch;
 }
 .s-article-list--layout-gapless.s-article-list--links p:not(:last-child) a::before {
-  @extend .x-article-link-stretch--gapless;
+  @mixin article-link-stretch--gapless;
 }
 /* Give link state (pseudo-class) feedback */
 .s-article-list--links p:not(:last-child) a:hover::before {
-  @extend .x-article-link-hover;
+  @mixin article-link-hover;
 }
 .s-article-list--layout-gapless.s-article-list--links p:not(:last-child) a:hover::before {
-  @extend .x-article-link-hover--gapless;
+  @mixin article-link-hover--gapless;
 }
 
 
