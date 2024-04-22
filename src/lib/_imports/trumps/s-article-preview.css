@@ -220,17 +220,17 @@ Styleguide Trumps.Scopes.ArticlePreview
 .s-article-preview p:last-child > a {
   color: transparent; /* ensure Link _text_ is invisible (allow decoration) */
 
-  @extend .x-article-link-stretch;
+  @mixin article-link-stretch;
 }
 .s-article-list--layout-gapless .s-article-preview p:last-child > a {
-  @extend .x-article-link-stretch--gapless;
+  @mixin article-link-stretch--gapless;
 }
 /* Give link state (pseudo-class) feedback */
 .s-article-preview p:last-child > a:hover {
-  @extend .x-article-link-hover;
+  @mixin article-link-hover;
 }
 .s-article-list--layout-gapless .s-article-preview p:last-child > a:hover {
-  @extend .x-article-link-hover--gapless;
+  @mixin article-link-hover--gapless;
 }
 
 
