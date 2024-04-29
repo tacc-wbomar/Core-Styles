@@ -42,13 +42,6 @@
 
 
 
-/* Title */
-:--c-app-card__title > .icon {
-  vertical-align: middle;
-}
-
-
-
 /* Types */
 :--c-app-card__types {
   display: flex;
