@@ -1,7 +1,12 @@
-/* Load accent colors without scope */
-@import url("../settings/color.accent--blue.css");
-
-/* Set scope for accent colors */
-/* Override accent colors from base */
-@custom-selector :--light-context-safe
-  :root;
+/* Sample code for tapis-project/authenticator#67 */
+:root {
+  --global-color-accent--xxx-light: #dfeafe;
+  --global-color-accent--xx-light: #caddfe;
+  --global-color-accent--x-light: #AAC7FF;
+  --global-color-accent--light: #86aeff;
+  --global-color-accent--normal: #003399;
+  --global-color-accent--dark: #002266;
+  --global-color-accent--x-dark: #001133;
+  --global-color-accent--xx-dark: #021230;
+  --global-color-accent--xxx-dark: #000a22;
+}
