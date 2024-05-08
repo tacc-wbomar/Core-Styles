@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - fix: BentonSans font update (93cddd5)
 
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.26.0...v2.26.1
+
 ## [2.26.0] - 2024-04-16: Add Hero Banner, Add `ifno` Helper, Fix App Card
 
 ### Added
