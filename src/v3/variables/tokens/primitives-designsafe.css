@@ -69,6 +69,8 @@
   --spacing-11: 5.5rem;
   --spacing-12: 6rem;
   --spacing-13: 6.5rem;
+  /* XXX: Inaccurate */
+  /*
   --font-weight-100: 6.25rem;
   --font-weight-200: 12.5rem;
   --font-weight-300: 18.75rem;
@@ -78,4 +80,5 @@
   --font-weight-700: 43.75rem;
   --font-weight-800: 50rem;
   --font-weight-900: 56.25rem;
+  */
 }
