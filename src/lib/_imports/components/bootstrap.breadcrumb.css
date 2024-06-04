@@ -1,12 +1,14 @@
 @import url("../tools/x-breadcrumbs.css");
 
-ul.breadcrumbs {
+.breadcrumb {
   @mixin x-breadcrumbs;
+}
+.breadcrumb:is(ol, ul) {
   @mixin x-breadcrumbs--list;
 }
-ul.breadcrumbs li {
+.breadcrumb li {
   @mixin x-breadcrumbs__list-item;
 }
-ul.breadcrumbs li + li {
+.breadcrumb li + li {
   @mixin x-breadcrumbs__list-item--prefix-separator;
 }
