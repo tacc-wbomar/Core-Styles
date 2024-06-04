@@ -3,7 +3,7 @@ Breadcrumbs
 
 A list of links to ancestor navigation (pages or sections that are a parent, grandparent, et cetera of the current page or section) and the current page or section itself.
 
-- `.s-breadcrumbs`: root class for <nav>, <... [role="nav"]>, or <ol>
+- `.s-breadcrumbs`: root class for <nav> (major nav) or <ol> (minor nav)
 - `.s-breadcrumbs-via-ul`: alternate root class for <ul> (not recommended)
 
 Notice: A scope class is used to enforce appropriate semantic HTML.
@@ -25,51 +25,37 @@ Markup:
     <li><a href="/"><span>Science</span></a></li>
     <li><span>Publications</span></li>
 </ol>
+<!-- Inaccurate Markup -->
+<!-- FAQ: Do not use this unless changing the markup is impractical -->
+<div class="s-breadcrumbs--via-ul">
+    <ul>
+        <li><a href="/"><span>Home</span></a></li>
+        <li><a href="/"><span>Science</span></a></li>
+        <li><span>Publications</span></li>
+    </ul>
+</div>
 
 Styleguide Trumps.Scopes.Breadcrumbs
 */
-
-
-
-
-
-/* Base i.e. Container */
+@import url("../tools/x-breadcrumbs.css");
 
 .s-breadcrumbs:is(nav),
 .s-breadcrumbs-via-ul {
-  padding-top: var(--global-space--above-breadcrumbs);
-  margin-bottom: var(--global-space--under-breadcrumbs);
-
-  font-size: var(--global-font-size--x-small);
+  @mixin x-breadcrumbs;
 }
 
-
-
-/* Elements i.e. Content */
-
-/* To undo default list styles */
 .s-breadcrumbs:is(nav) ol,
 .s-breadcrumbs-via-ul ul {
-  list-style: none; /* overwrite browser styles */
-  padding-left: unset; /* undo html-elements.css */
-  margin-bottom: unset; /* undo html-elements.css */
-
-  font-weight: var(--global-font-weight--medium);
+  @mixin x-breadcrumbs__list;
 }
 
 .s-breadcrumbs:is(ol) li,
 .s-breadcrumbs:is(nav) ol li,
 .s-breadcrumbs-via-ul ul li {
-  display: inline-block;
+  @mixin x-breadcrumbs__list-item;
 }
-
-.s-breadcrumbs:is(ol) li + li::before,
-.s-breadcrumbs:is(nav) ol li + li::before,
-.s-breadcrumbs-via-ul ul li + li::before {
-  content: ' > ';
-}
-
-.s-breadcrumbs:is(nav) ol li:last-child,
-.s-breadcrumbs-via-ul ul li:last-child {
-  font-weight: var(--bold);
+.s-breadcrumbs:is(ol) li + li,
+.s-breadcrumbs:is(nav) ol li + li,
+.s-breadcrumbs-via-ul ul li + li {
+  @mixin x-breadcrumbs__list-item--prefix-separator;
 }

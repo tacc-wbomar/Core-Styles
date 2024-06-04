@@ -1,5 +1,12 @@
-@import url("../trumps/s-breadcrumbs.css");
+@import url("../tools/x-breadcrumbs.css");
 
 ul.breadcrumbs {
-  @extend .s-breadcrumbs-via-ul;
+  @mixin x-breadcrumbs;
+  @mixin x-breadcrumbs--list;
+}
+ul.breadcrumbs li {
+  @mixin x-breadcrumbs__list-item;
+}
+ul.breadcrumbs li + li {
+  @mixin x-breadcrumbs__list-item--prefix-separator;
 }

@@ -1,0 +1,60 @@
+/*
+Breadcrumbs
+
+A list of links to ancestor navigation (pages or sections that are a parent, grandparent, et cetera of the current page or section) and the current page or section itself.
+
+.x-breadcrumbs                              - The breadcrumbs container
+.x-breadcrumbs--list                        - The list element (as the container)
+.x-breadcrumbs__list                        - The list element (as a child of the container)
+.x-breadcrumbs__list-item                   - All list items
+.x-breadcrumbs__list-item--suffix-separator - Add spearator after list items
+.x-breadcrumbs__list-item--prefix-separator - Add spearator before list items
+
+Styleguide Tools.Mixins.Breadcrumbs
+*/
+
+
+
+/* Container */
+
+@define-mixin x-breadcrumbs {
+  padding-top: var(--global-space--above-breadcrumbs);
+  margin-bottom: var(--global-space--under-breadcrumbs);
+
+  font-size: var(--global-font-size--x-small);
+}
+
+
+
+/* Content */
+
+/* To undo default list (`<ol>`, `<ul>`) styles */
+@define-mixin x-breadcrumbs--list {
+  list-style: none; /* overwrite browser styles */
+  padding-left: unset; /* undo html-elements.css */
+  margin-bottom: unset; /* undo html-elements.css */
+
+  font-weight: var(--global-font-weight--medium);
+}
+@define-mixin x-breadcrumbs__list {
+  @mixin x-breadcrumbs--list;
+}
+
+@define-mixin x-breadcrumbs__list-item {
+  display: inline-block;
+
+  &:last-child {
+    font-weight: var(--bold);
+  }
+}
+
+@define-mixin x-breadcrumbs__list-item--suffix-separator {
+  &::after {
+    content: ' > ';
+  }
+}
+@define-mixin x-breadcrumbs__list-item--prefix-separator {
+  &::before {
+    content: ' > ';
+  }
+}
