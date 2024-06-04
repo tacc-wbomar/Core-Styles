@@ -8,6 +8,8 @@ Core Styles styles:
 
 TACC projects should prefer Core Styles to Bootstrap.[^2]
 
+**Any support is for [Bootstrap v4](https://getbootstrap.com/docs/4.0) unless otherwie noted.**
+
 | regular CSS <u>replaces</u> | Bootstrap
 | - | -
 | [Grid](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grid) (on [Core Portal])* | [Grid](https://getbootstrap.com/docs/4.0/layout/grid/)
@@ -32,7 +34,7 @@ TACC projects should prefer Core Styles to Bootstrap.[^2]
 | Core Styles <u>changes</u> | Bootstrap
 | - | -
 | [Container](https://tacc.utexas.edu/static/ui/components/detail/bootstrap--container.html) | [Grid](https://getbootstrap.com/docs/4.0/layout/grid/): Container
-| [Breadcrumb](https://github.com/TACC/Core-Styles/blob/v2.27.0/src/lib/_imports/components/bootstrap.breadcrumb.css) | [Breadcrumb](https://getbootstrap.com/docs/4.0/components/breadcrumb/)
+| [Breadcrumb](https://github.com/TACC/Core-Styles/blob/v2.27.0/src/lib/_imports/components/bootstrap3.breadcrumb.css) | [Breadcrumb (**v3**)](https://getbootstrap.com/docs/4.0/components/breadcrumb/)
 | [Modal](https://tacc.utexas.edu/static/ui/components/detail/bootstrap--modal.html) | [Modal](https://getbootstrap.com/docs/4.0/components/modal/)
 | [Nav Tabs](https://tacc.utexas.edu/static/ui/components/detail/bootstrap--nav-tabs.html) | Navs: [Tabs](https://getbootstrap.com/docs/4.0/components/navs/#tabs)
 | [Pagination](https://github.com/TACC/Core-Styles/blob/v2.14.0/src/lib/_imports/components/bootstrap.pagination.css) | [Pagination](https://getbootstrap.com/docs/4.0/components/pagination/)
