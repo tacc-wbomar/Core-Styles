@@ -1,0 +1,5 @@
+@import url("../trumps/s-breadcrumbs.css");
+
+.breadcrumbs {
+  @extend .s-breadcrumbs-via-ul;
+}
