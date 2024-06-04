@@ -2,6 +2,8 @@
 
 .breadcrumb {
   @mixin x-breadcrumbs;
+
+  padding-bottom: unset;
 }
 .breadcrumb:is(ol, ul) {
   @mixin x-breadcrumbs--list;
