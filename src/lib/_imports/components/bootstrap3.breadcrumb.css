@@ -4,6 +4,7 @@
   @mixin x-breadcrumbs;
 
   padding-bottom: unset;
+  padding-right: unset;
 }
 .breadcrumb:is(ol, ul) {
   @mixin x-breadcrumbs--list;

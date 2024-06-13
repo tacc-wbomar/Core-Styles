@@ -47,7 +47,7 @@ Any support is for [Bootstrap v4](https://getbootstrap.com/docs/4.0) unless othe
 | Core Styles <u>changes</u> | Bootstrap
 | - | -
 | [Container](https://tacc.utexas.edu/static/ui/components/detail/bootstrap--container.html) | [Grid](https://getbootstrap.com/docs/4.0/layout/grid/): Container
-| Breadcrumb (coming soon) | [Breadcrumb (**v3**)](https://getbootstrap.com/docs/4.0/components/breadcrumb/)
+| [Breadcrumb](https://tacc.utexas.edu/static/ui/components/detail/bootstrap3--breadcrumb) | [Breadcrumb (**v3**)](https://getbootstrap.com/docs/4.0/components/breadcrumb/)
 | [Modal](https://tacc.utexas.edu/static/ui/components/detail/bootstrap--modal.html) | [Modal](https://getbootstrap.com/docs/4.0/components/modal/)
 | [Nav Tabs](https://tacc.utexas.edu/static/ui/components/detail/bootstrap--nav-tabs.html) | Navs: [Tabs](https://getbootstrap.com/docs/4.0/components/navs/#tabs)
 | [Pagination](https://github.com/TACC/Core-Styles/blob/v2.14.0/src/lib/_imports/components/bootstrap.pagination.css) | [Pagination](https://getbootstrap.com/docs/4.0/components/pagination/)
