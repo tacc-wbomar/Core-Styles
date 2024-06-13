@@ -21,8 +21,6 @@ Core-Styles v3 will support Bootstrap differently, but will retain existing comp
 
 Any support is for [Bootstrap v4](https://getbootstrap.com/docs/4.0) unless otherwise noted.
 
-**Any support is for [Bootstrap v4](https://getbootstrap.com/docs/4.0) unless otherwie noted.**
-
 | regular CSS <u>replaces</u> | Bootstrap
 | - | -
 | [Grid](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grid) (on [Core Portal])\* | [Grid](https://getbootstrap.com/docs/4.0/layout/grid/)
