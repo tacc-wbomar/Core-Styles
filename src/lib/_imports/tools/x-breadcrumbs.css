@@ -18,18 +18,16 @@ Styleguide Tools.Mixins.Breadcrumbs
 /* Container */
 
 @define-mixin x-breadcrumbs {
-  padding-top: var(--global-space--above-breadcrumbs);
-  margin-bottom: var(--global-space--under-breadcrumbs);
+  padding-top: var(--global-space--above-breadcrumbs, 45px);
+  margin-bottom: var(--global-space--under-breadcrumbs, 40px);
 
-  font-size: var(--global-font-size--x-small);
+  font-size: var(--global-font-size--x-small, 1.4rem);
 }
-
-
 
 /* Content */
 
 @define-mixin x-breadcrumbs--list {
-  font-weight: var(--global-font-weight--medium);
+  font-weight: var(--global-font-weight--medium, 500);
 
   /* To undo default browser list (`<ol>`, `<ul>`) styles */
   list-style: none;
@@ -47,7 +45,7 @@ Styleguide Tools.Mixins.Breadcrumbs
   display: inline-block;
 
   &:last-child {
-    font-weight: var(--bold);
+    font-weight: var(--global-font-weight--bold, 700);
   }
 }
 
