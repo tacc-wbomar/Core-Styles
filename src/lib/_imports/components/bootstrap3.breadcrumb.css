@@ -13,10 +13,13 @@
 .breadcrumb li {
   @mixin x-breadcrumbs__list-item;
 }
+.breadcrumb > .active {
+  color: inherit;
+}
 .breadcrumb li + li {
   @mixin x-breadcrumbs__list-item--prefix-separator;
 }
 .breadcrumb li + li::before {
-    padding: unset;
-    color: inherit;
+  padding: unset;
+  color: inherit;
 }
