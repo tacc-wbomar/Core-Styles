@@ -3,6 +3,7 @@
 .breadcrumb {
   @mixin x-breadcrumbs;
 
+  background-color: unset;
   padding-bottom: unset;
   padding-right: unset;
 }
@@ -14,4 +15,8 @@
 }
 .breadcrumb li + li {
   @mixin x-breadcrumbs__list-item--prefix-separator;
+}
+.breadcrumb li + li::before {
+    padding: unset;
+    color: inherit;
 }
