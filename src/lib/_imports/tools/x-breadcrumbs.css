@@ -4,9 +4,13 @@ Breadcrumbs
 A list of links to ancestor navigation (pages or sections that are a parent, grandparent, et cetera of the current page or section) and the current page or section itself.
 
 .x-breadcrumbs                              - The breadcrumbs container
+.x-breadcrumbs-major                          (for major navigation)
 .x-breadcrumbs--list                        - The list element as the container
+.x-breadcrumbs-major--list                    (for major navigation)
 .x-breadcrumbs__list                        - The list element as a child of the container
+.x-breadcrumbs-major__list                    (for major navigation)
 .x-breadcrumbs__list-item                   - All list items
+.x-breadcrumbs-major__list-item               (for major navigation)
 .x-breadcrumbs__list-item--suffix-separator - Add spearator after list items
 .x-breadcrumbs__list-item--prefix-separator - Add spearator before list items
 
@@ -58,9 +62,7 @@ Styleguide Tools.Mixins.Breadcrumbs
 @define-mixin x-breadcrumbs__list-item--suffix-separator {
   &::after { content: ' > '; }
 }
-@define-mixin x-breadcrumbs-major__list-item--suffix-separator {}
 
 @define-mixin x-breadcrumbs__list-item--prefix-separator {
   &::before { content: ' > '; }
 }
-@define-mixin x-breadcrumbs-major__list-item--prefix-separator {}
