@@ -39,23 +39,23 @@ Styleguide Trumps.Scopes.Breadcrumbs
 */
 @import url("../tools/x-breadcrumbs.css");
 
-.s-breadcrumbs:is(nav),
+.s-breadcrumbs:where(nav),
 .s-breadcrumbs-via-ul {
   @mixin x-breadcrumbs;
 }
 
-.s-breadcrumbs:is(nav) ol,
+.s-breadcrumbs:where(nav) ol,
 .s-breadcrumbs-via-ul ul {
   @mixin x-breadcrumbs__list;
 }
 
-.s-breadcrumbs:is(ol) li,
-.s-breadcrumbs:is(nav) ol li,
+.s-breadcrumbs:where(ol) li,
+.s-breadcrumbs:where(nav) ol li,
 .s-breadcrumbs-via-ul ul li {
   @mixin x-breadcrumbs__list-item;
 }
-.s-breadcrumbs:is(ol) li + li,
-.s-breadcrumbs:is(nav) ol li + li,
+.s-breadcrumbs:where(ol) li + li,
+.s-breadcrumbs:where(nav) ol li + li,
 .s-breadcrumbs-via-ul ul li + li {
   @mixin x-breadcrumbs__list-item--prefix-separator;
 }
