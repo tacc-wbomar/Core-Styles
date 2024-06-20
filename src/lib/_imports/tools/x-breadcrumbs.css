@@ -17,45 +17,50 @@ Styleguide Tools.Mixins.Breadcrumbs
 
 /* Container */
 
-@define-mixin x-breadcrumbs {
+@define-mixin x-breadcrumbs {}
+@define-mixin x-breadcrumbs-major {
   padding-top: var(--global-space--above-breadcrumbs, 45px);
   margin-bottom: var(--global-space--under-breadcrumbs, 40px);
-
   font-size: var(--global-font-size--x-small, 1.4rem);
 }
 
 /* Content */
 
 @define-mixin x-breadcrumbs--list {
-  font-weight: var(--global-font-weight--medium, 500);
-
   /* To undo default browser list (`<ol>`, `<ul>`) styles */
   list-style: none;
   padding-left: unset;
   margin-top: unset;
 }
+@define-mixin x-breadcrumbs-major--list {
+  font-weight: var(--global-font-weight--medium, 500);
+}
+
 @define-mixin x-breadcrumbs__list {
   @mixin x-breadcrumbs--list;
 
   /* To undo default browser list (`<ol>`, `<ul>`) styles */
   margin-bottom: unset;
 }
+@define-mixin x-breadcrumbs-major__list {
+  @mixin x-breadcrumbs-major--list;
+}
 
 @define-mixin x-breadcrumbs__list-item {
   display: inline-block;
-
+}
+@define-mixin x-breadcrumbs-major__list-item {
   &:last-child {
     font-weight: var(--global-font-weight--bold, 700);
   }
 }
 
 @define-mixin x-breadcrumbs__list-item--suffix-separator {
-  &::after {
-    content: ' > ';
-  }
+  &::after { content: ' > '; }
 }
+@define-mixin x-breadcrumbs-major__list-item--suffix-separator {}
+
 @define-mixin x-breadcrumbs__list-item--prefix-separator {
-  &::before {
-    content: ' > ';
-  }
+  &::before { content: ' > '; }
 }
+@define-mixin x-breadcrumbs-major__list-item--prefix-separator {}

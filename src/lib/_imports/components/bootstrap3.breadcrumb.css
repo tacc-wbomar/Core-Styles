@@ -2,6 +2,7 @@
 
 .breadcrumb {
   @mixin x-breadcrumbs;
+  @mixin x-breadcrumbs-major;
 
   background-color: unset;
   padding-bottom: unset;
@@ -9,9 +10,11 @@
 }
 .breadcrumb:where(ol, ul) {
   @mixin x-breadcrumbs--list;
+  @mixin x-breadcrumbs-major--list;
 }
 .breadcrumb li {
   @mixin x-breadcrumbs__list-item;
+  @mixin x-breadcrumbs-major__list-item;
 }
 .breadcrumb > .active {
   color: inherit;
