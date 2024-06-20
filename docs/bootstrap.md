@@ -4,7 +4,7 @@
 
 Because [several TACC projects load Bootstrap (internal document)](https://tacc-main.atlassian.net/wiki/x/khJv).
 
-- independent of Bootstrap
+- independent of Bootstrap\
     <sup>(to the best of its authors' knowledge and efforts)</sup>
 - alters some Bootstrap styles\
     <sup>(to look like Core Styles)</sup>
