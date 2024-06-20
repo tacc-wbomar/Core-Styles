@@ -27,7 +27,7 @@ Markup:
 </ol>
 <!-- Inaccurate Markup -->
 <!-- FAQ: Do not use this unless changing the markup is impractical -->
-<div class="s-breadcrumbs--via-ul">
+<div class="s-breadcrumbs-via-ul">
     <ul>
         <li><a href="/"><span>Home</span></a></li>
         <li><a href="/"><span>Science</span></a></li>
@@ -40,11 +40,13 @@ Styleguide Trumps.Scopes.Breadcrumbs
 @import url("../tools/x-breadcrumbs.css");
 
 .s-breadcrumbs:where(nav),
+.s-breadcrumbs:where(ol),
 .s-breadcrumbs-via-ul {
   @mixin x-breadcrumbs;
 }
 
 .s-breadcrumbs:where(nav) ol,
+.s-breadcrumbs:where(ol),
 .s-breadcrumbs-via-ul ul {
   @mixin x-breadcrumbs__list;
 }
