@@ -10,6 +10,9 @@
 .breadcrumb:where(.breadcrumb-major) {
   @mixin x-breadcrumbs-major;
 }
+.breadcrumb:where(:not(.breadcrumb-major)) {
+  padding-top: unset;
+}
 
 .breadcrumb:where(ol, ul) {
   @mixin x-breadcrumbs--list;
@@ -17,7 +20,7 @@
 .breadcrumb:where(ol, ul):where(.breadcrumb-major) {
   @mixin x-breadcrumbs-major--list;
 }
-x
+
 .breadcrumb li {
   @mixin x-breadcrumbs__list-item;
 }
