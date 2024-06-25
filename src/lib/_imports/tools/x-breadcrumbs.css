@@ -31,6 +31,10 @@ Styleguide Tools.Mixins.Breadcrumbs
 /* Content */
 
 @define-mixin x-breadcrumbs--list {
+  /* To remove whitespace between items (but still allow text wrap) */
+  display: flex;
+  flex-wrap: wrap;
+
   /* To undo default browser list (`<ol>`, `<ul>`) styles */
   list-style: none;
   padding-left: unset;
@@ -51,7 +55,8 @@ Styleguide Tools.Mixins.Breadcrumbs
 }
 
 @define-mixin x-breadcrumbs__list-item {
-  display: inline-block;
+  /* To remove whitespace around text */
+  display: inline-flex;
 }
 @define-mixin x-breadcrumbs-major__list-item {
   &:last-child {
@@ -59,10 +64,19 @@ Styleguide Tools.Mixins.Breadcrumbs
   }
 }
 
-@define-mixin x-breadcrumbs__list-item--suffix-separator {
-  &::after { content: ' > '; }
+@define-mixin x-breadcrumbs__list-item--separator {
+  &::after,
+  &::before {
+    padding-inline: 0.5ch;
+  }
 }
+@define-mixin x-breadcrumbs__list-item--suffix-separator {
+  @mixin x-breadcrumbs__list-item--separator;
 
+  &::after { content: ">"; }
+}
 @define-mixin x-breadcrumbs__list-item--prefix-separator {
-  &::before { content: ' > '; }
+  @mixin x-breadcrumbs__list-item--separator;
+
+  &::before { content: ">"; }
 }

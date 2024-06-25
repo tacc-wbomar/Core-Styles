@@ -32,6 +32,5 @@ x
   @mixin x-breadcrumbs__list-item--prefix-separator;
 }
 .breadcrumb li + li::before {
-  padding: unset;
   color: inherit;
 }
