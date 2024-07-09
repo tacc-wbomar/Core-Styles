@@ -1,6 +1,6 @@
 {
   "name": "@tacc/core-styles",
-  "version": "2.25.2",
+  "version": "2.27.0",
   "license": "MIT",
   "author": "TACC ACI WMA <wma-portals@gmail.com>",
   "description": "CSS source and processor for TACC Core-CMS and Core-Portal.",
@@ -41,11 +41,12 @@
     "js-yaml": "^4.1.0",
     "merge-lite": "^1.0.2",
     "node-cmd": "^5.0.0",
-    "postcss": "^8.4.18",
+    "postcss": "^8.4.38",
     "postcss-banner": "^4.0.1",
     "postcss-cli": "^10.0.0",
     "postcss-extend": "^1.0.5",
     "postcss-import": "^15.0.0",
+    "postcss-mixins": "^10.0.1",
     "postcss-preset-env": "^7.8.3",
     "postcss-replace": "^2.0.1"
   },
@@ -59,7 +60,7 @@
     "postcss-banner": "To prepend preserved comment to built stylesheets",
     "postcss-cli": "To process CSS (the simplest and cheapest PostCSS runner)",
     "postcss-import": "To import CSS files at build-time",
-    "postcss-extend": "To extend CSS rule sets at build-time",
+    "postcss-extend": "(DEPRECATED) To extend CSS rule sets at build-time",
     "postcss-preset-env": "To use future CSS features now",
     "// postcss-preset-env": "Using bleeding edge because https://github.com/csstools/postcss-plugins/issues/481#issuecomment-1334903391",
     "postcss-replace": "To edit relative paths to fonts"

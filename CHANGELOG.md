@@ -7,6 +7,50 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.27.0] - 2024-06-20: Add Bootstrap 3 `.breadcrumb`, PostCSS `@mixin`
+
+### Added
+
+- feat: DES-2806 breadcrumbs ignore html whitespace (#348)
+- feat: DES-2806 breadcrumbs via mixin \& sans `.s-` prefix (#346, #349)
+- feat: WP-280 install postcss-mixins (#347)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.26.1...v2.27.0
+
+## [2.26.1] - 2024-05-08: Update/Fix `BentonSans` Fonts
+
+### Fixed
+
+- fix: BentonSans font update (93cddd5)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.26.0...v2.26.1
+
+## [2.26.0] - 2024-04-16: Add Hero Banner, Add `ifno` Helper, Fix App Card
+
+### Added
+
+- feat: wp-280 add "ifno" helper for default values (#337)
+- CMD 105: CMS: Hero Banner Pattern (#324, #328, #331)
+
+### Fixed
+
+- fix: des-2725 c-app-card--types not centered (#334)
+
+### Updated
+
+- build(deps-dev): bump express from 4.18.2 to 4.19.2 (#325)
+- build(deps-dev): bump follow-redirects from 1.15.4 to 1.15.6 (#322)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.25.3...v2.26.0
+
+## [2.25.3] - 2024-03-15: Rebuild `s-app-card` as `c-app-card`
+
+### Fixed
+
+- feat: des-2697 add `c-app-card`, improve `s-cap-card` (#318)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.25.2...v2.25.3
+
 ## [2.25.2] - 2024-03-07: Fix Expanded Navbar Can Overflow Header
 
 ### Fixed
@@ -1029,7 +1073,11 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.25.2...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.27.0...HEAD
+[2.27.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.27.0
+[2.26.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.26.1
+[2.26.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.26.0
+[2.25.3]: https://github.com/TACC/Core-Styles/releases/tag/v2.25.3
 [2.25.2]: https://github.com/TACC/Core-Styles/releases/tag/v2.25.2
 [2.25.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.25.1
 [2.25.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.25.0

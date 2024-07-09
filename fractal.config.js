@@ -98,6 +98,10 @@ engine.handlebars.registerHelper('eq', function(a, b) {
 engine.handlebars.registerHelper('has', function(array, item) {
   return array.includes(item);
 });
+engine.handlebars.registerHelper('ifno', function(value, fallback) {
+  const output = value || fallback;
+  return new engine.handlebars.SafeString(output);
+});
 
 // Export
 module.exports = fractal;
