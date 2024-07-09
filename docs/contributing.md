@@ -53,4 +53,4 @@ Only appointed team members may release versions.
     `bin/annotate-tag.sh vN.N.N`\
     (where `N.N.N` is the version tag)
 1. Overwrite remote tag with annotated one:\
-    `git push --tags --force`
+    `git push --tags --force-with-lease`

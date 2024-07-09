@@ -1,7 +1,9 @@
 plugins:
   postcss-import: {}
 
-  postcss-extend: {}
+  postcss-extend: {} # DEPRECATED
+
+  postcss-mixins: {}
 
   postcss-preset-env:
     # https://github.com/csstools/postcss-preset-env#features
