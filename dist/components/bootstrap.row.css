@@ -1,1 +1,1 @@
-/*! @tacc/core-styles 2.26.1+ | MIT | github.com/TACC/Core-Styles */.col-stretch-content-y,.row-col-stretch-content-y .col{align-content:normal;display:grid}.has-row--col-stretch-content-y .row:has([class^=col-]){display:flex;flex-wrap:wrap}
+/*! @tacc/core-styles 2.28.0+ | MIT | github.com/TACC/Core-Styles */.col-stretch-content-y,.row-col-stretch-content-y .col{align-content:normal;display:grid}.has-row--col-stretch-content-y .row:has([class^=col-]){display:flex;flex-wrap:wrap}

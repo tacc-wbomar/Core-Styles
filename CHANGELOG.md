@@ -7,6 +7,42 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.28.0] - 2024-07-30: Provide & Skin Bootstrap 5 Border Spinner
+
+###  Added
+
+- feat: bootstrap5 border spinner (#359)
+- feat: shouldLoadBootstrap5 (#357)
+
+### Fixed
+
+- fix: disabled button text too hard to see (#358)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.27.1...v2.28.0
+
+## [2.27.1] - 2024-07-24: Deprecate Most CMS Guide Doc Classes
+
+## Changed
+
+- chore: pill line-height unnecessary (#353)
+- feat: CMD-143 deprecate most CMS document style class names (#355)
+
+## Updated
+
+- build(deps): bump ws, socket.io-client, engine.io and socket.io-adapter (#351)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.27.0...v2.28.0
+
+## [2.27.0] - 2024-06-20: Add Bootstrap 3 `.breadcrumb`, PostCSS `@mixin`
+
+### Added
+
+- feat: DES-2806 breadcrumbs ignore html whitespace (#348)
+- feat: DES-2806 breadcrumbs via mixin \& sans `.s-` prefix (#346, #349)
+- feat: WP-280 install postcss-mixins (#347)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.26.1...v2.27.0
+
 ## [2.26.1] - 2024-05-08: Update/Fix `BentonSans` Fonts
 
 ### Fixed
@@ -1063,7 +1099,10 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.26.1...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.28.0...HEAD
+[2.28.0]: https://github.com/TACC/Core-Styles/compare/v2.28.0...HEAD
+[2.27.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.27.1
+[2.27.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.27.0
 [2.26.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.26.1
 [2.26.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.26.0
 [2.25.3]: https://github.com/TACC/Core-Styles/releases/tag/v2.25.3

@@ -289,7 +289,7 @@ a:--c-button--is-busy {
   opacity: 0.5;
 }
 :--c-button--is-busy :--c-button__text {
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
 
@@ -336,4 +336,10 @@ a:--c-button--is-busy {
 }
 :--c-button__icon--after {
   margin-left: 0.5em;
+}
+
+/* To position Bootstrap spinner inside TACC's flex-based button */
+:--c-button .spinner-border {
+  align-self: center;
+  margin-left: 0.5ch;
 }
