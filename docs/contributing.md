@@ -41,7 +41,8 @@ Only appointed team members may release versions.
     <sub>Commit substantial unexpected changes via independent PR.</sub>
 1. Update `CHANGELOG.md`.
 1. Update version via:\
-    `npm version vN.N.N`
+    `npm version vN.N.N`\
+    (where `N.N.N` is the version tag)
 1. Build with new version:\
     `npm run build:css`
 1. Commit, push, PR, review, merge.
@@ -49,8 +50,14 @@ Only appointed team members may release versions.
     `npm publish --access public`\
     <sub>Project build will automatically occur before publish.</sub>
 1. Create release and tag on GitHub.
-1. Annotate Github's tag:\
-    `bin/annotate-tag.sh vN.N.N`\
-    (where `N.N.N` is the version tag)
-1. Overwrite remote tag with annotated one:\
-    `git push --tags --force-with-lease`
+1. Fetch the latest tags.\
+    `git fetch --tags`
+1. Check whether tag is annotated.\
+    `git describe --always`\
+    (expect `vN.N.N` i.e. the version tag)
+1. **If** tag is **not** annotated, **then**:
+    1. Annotate Github's tag:\
+        `bin/annotate-tag.sh vN.N.N`\
+        (where `N.N.N` is the version tag)
+    1. Overwrite remote tag with annotated one:\
+        `git push --tags --force`
