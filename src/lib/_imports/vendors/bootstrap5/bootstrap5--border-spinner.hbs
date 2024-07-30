@@ -6,17 +6,13 @@
   <dt>Spinner in Bootstrap Button</dt>
   <dd>
     <button class="btn btn-primary" type="button" disabled>
-      <span>Login</span>
-      <span class="visually-hidden" role="status">Loading...</span>
-      <span class="spinner-border" aria-hidden="true"></span>
+      {{> @action--loading }}
     </button>
   </dd>
   <dt>Spinner in a TACC Button</dt>
   <dd>
     <button class="c-button c-button--primary c-button--is-busy" type="button" disabled>
-      <span>Login</span>
-      <span class="u-hide--visually" role="status">Loading...</span>
-      <span class="spinner-border" aria-hidden="true"></span>
+      {{> @action--loading }}
     </button>
   </dd>
   <dt>Spinner in a Form</dt>
@@ -29,18 +25,14 @@
           <dd class="c-form">
             <footer class="c-form__buttons">
               <button class="c-form__button" data-state="busy" type="submit" disabled>
-                <span>Login</span>
-                <span class="u-hide--visually" role="status">Loading...</span>
-                <span class="spinner-border" aria-hidden="true"></span>
+                {{> @action--loading }}
               </button>
             </footer>
           </dd>
           <dt>Other Button</dt>
           <dd class="c-form">
             <button data-state="busy" type="button" disabled>
-              <span>Login</span>
-              <span class="u-hide--visually" role="status">Loading...</span>
-              <span class="spinner-border" aria-hidden="true"></span>
+                {{> @action--loading }}
             </button>
           </dd>
         </dl>
@@ -52,18 +44,14 @@
           <dd class="s-form">
             <footer>
               <button data-state="busy" type="submit" disabled>
-                <span>Login</span>
-                <span class="u-hide--visually" role="status">Loading...</span>
-                <span class="spinner-border" aria-hidden="true"></span>
+                {{> @action--loading }}
               </button>
             </footer>
           </dd>
           <dt>Other Button</dt>
           <dd class="s-form">
             <button data-state="busy" type="button" disabled>
-              <span>Login</span>
-              <span class="u-hide--visually" role="status">Loading...</span>
-              <span class="spinner-border" aria-hidden="true"></span>
+                {{> @action--loading }}
             </button>
           </dd>
         </dl>
