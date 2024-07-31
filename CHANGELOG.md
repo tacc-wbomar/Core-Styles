@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
-## [2.29.1] - 2024-07-31: Use `@mixin`, Deprecate `@extend`
+## [2.29.1] - 2024-07-31: Accent Color for Form Submit Button Busy State
 
 ### Fixed
 
