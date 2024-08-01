@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.30.0] - 2024-07-31: Readonly Fields, S-Form Fieldsets
+
+### Added
+
+- feat: style read-only fields (#367, #368)
+
+### Fixed
+
+- fix: should support fieldsets in an `s-form` (#365)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.29.1...v2.30.0
+
 ## [2.29.1] - 2024-07-31: Accent Color for Form Submit Button Busy State
 
 ### Fixed
@@ -1115,7 +1127,8 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.29.1...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.30.0...HEAD
+[2.30.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.30.0
 [2.29.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.29.1
 [2.29.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.29.0
 [2.28.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.28.0
