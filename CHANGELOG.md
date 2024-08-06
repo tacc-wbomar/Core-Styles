@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.30.1] - 2024-08-06: Disable Busy Buttons
+
+### Fixed
+
+- fix: disable busy buttons (#370)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.30.0...v2.30.1
+
 ## [2.30.0] - 2024-07-31: Readonly Fields, S-Form Fieldsets
 
 ### Added
@@ -1127,7 +1135,8 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.30.0...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.30.1...HEAD
+[2.30.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.30.1
 [2.30.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.30.0
 [2.29.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.29.1
 [2.29.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.29.0
