@@ -19,8 +19,8 @@
   .x-message--scope-section.x-message--type-error {
     @mixin message--type-error---message--scope-section;
   }
-  .x-message--scope-section.x-message--type-tip {
-    @mixin message--type-tip---message--scope-section;
+  .x-message--scope-section.x-message--type-extra {
+    @mixin message--type-extra---message--scope-section;
   }
 
   .x-message--scope-global {
