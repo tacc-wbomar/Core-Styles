@@ -73,11 +73,11 @@
   @mixin message--type-error---message--scope-inline;
 }
 
-@define-mixin message--type-tip---message--scope-inline {
+@define-mixin message--type-extra---message--scope-inline {
   color: var(--global-color-extra--x-dark);
 }
-:--c-message--type-tip:--c-message--scope-inline {
-  @mixin message--type-tip---message--scope-inline;
+:--c-message--type-extra:--c-message--scope-inline {
+  @mixin message--type-extra---message--scope-inline;
 }
 
 /* To support icons (if needed) */
@@ -122,12 +122,12 @@
   @mixin message--type-error;
 }
 
-@define-mixin message--type-tip {
+@define-mixin message--type-extra {
   &::before {
     background-color: var(--global-color-extra--normal);
   }
 }
 
-:--c-message--type-tip {
-  @mixin message--type-tip;
+:--c-message--type-extra {
+  @mixin message--type-extra;
 }

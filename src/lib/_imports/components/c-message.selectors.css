@@ -18,6 +18,9 @@
 @custom-selector :--c-message--type-error
     .c-message--type-error,
     .message--type-error;
+@custom-selector :--c-message--type-extra
+    .c-message--type-extra,
+    .message--type-extra;
 
 @custom-selector :--c-message--scope
     [class*="message--scope-"];

@@ -61,6 +61,6 @@
 :--c-message--type-error:not(:--c-message--scope-global) {
   color: var(--global-color-danger--dark);
 }
-:--c-message--type-tip:not(:--c-message--scope-global) {
+:--c-message--type-extra:not(:--c-message--scope-global) {
   color: var(--global-color-extra--dark);
 }
