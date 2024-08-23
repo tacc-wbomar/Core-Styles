@@ -13,9 +13,9 @@
 @custom-selector :--c-form__errors_list
     :--c-form__errors;
 @custom-selector :--c-form__errors--form /* submission errors */
-    :is(.c-form > .c-form__errors);
+    .c-form > .c-form__errors;
 @custom-selector :--c-form__errors--field /* validation errors */
-    :is(.c-form__field .c-form__errors);
+    .c-form__field .c-form__errors;
 
 @custom-selector :--c-form__field
     .c-form__field;
