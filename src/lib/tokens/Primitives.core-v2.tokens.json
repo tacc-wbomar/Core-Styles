@@ -113,7 +113,7 @@
         "$type": "color",
         "$value": "#d7d7d7"
       },
-      "normal": {
+      "medium": {
         "$type": "color",
         "$value": "#afafaf"
       },
@@ -121,11 +121,11 @@
         "$type": "color",
         "$value": "#707070"
       },
-      "x-dark": {
+      "dark-x": {
         "$type": "color",
         "$value": "#484848"
       },
-      "xx-dark": {
+      "dark-2x": {
         "$type": "color",
         "$value": "#222222"
       }
@@ -144,7 +144,7 @@
           "$type": "color",
           "$value": "#86aeff"
         },
-        "normal": {
+        "medium": {
           "$type": "color",
           "$value": "#003399"
         },
@@ -174,7 +174,7 @@
           "$type": "color",
           "$value": "#d5b57c"
         },
-        "normal": {
+        "medium": {
           "$type": "color",
           "$value": "#877453"
         },
@@ -204,7 +204,7 @@
           "$type": "color",
           "$value": "#92ccc5"
         },
-        "normal": {
+        "medium": {
           "$type": "color",
           "$value": "#61a39c"
         },
@@ -234,7 +234,7 @@
           "$type": "color",
           "$value": "#ffffff"
         },
-        "normal": {
+        "medium": {
           "$type": "color",
           "$value": "#ffffff"
         },
@@ -262,7 +262,7 @@
           "$type": "color",
           "$value": "#fcaf91"
         },
-        "normal": {
+        "medium": {
           "$type": "color",
           "$value": "#ed4c11"
         },
@@ -284,7 +284,7 @@
           "$type": "color",
           "$value": "#fed880"
         },
-        "normal": {
+        "medium": {
           "$type": "color",
           "$value": "#f2b327"
         },
@@ -306,7 +306,7 @@
           "$type": "color",
           "$value": "#93f6cd"
         },
-        "normal": {
+        "medium": {
           "$type": "color",
           "$value": "#10f7a9"
         },
@@ -328,7 +328,7 @@
           "$type": "color",
           "$value": "#b4d0f9"
         },
-        "normal": {
+        "medium": {
           "$type": "color",
           "$value": "#3f85f4"
         },

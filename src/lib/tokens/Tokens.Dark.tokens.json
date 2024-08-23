@@ -62,7 +62,7 @@
       "$type": "dimension",
       "$value": "{spacing.1}"
     },
-    "normal": {
+    "medium": {
       "$type": "dimension",
       "$value": "{spacing.2}"
     },
@@ -87,19 +87,19 @@
       },
       "light-x": {
         "$type": "color",
-        "$value": "{color.neutral.xx-dark}"
+        "$value": "{color.neutral.dark-2x}"
       },
       "light": {
         "$type": "color",
-        "$value": "{color.neutral.x-dark}"
+        "$value": "{color.neutral.dark-x}"
       },
-      "normal": {
+      "medium": {
         "$type": "color",
         "$value": "{color.neutral.dark}"
       },
       "dark": {
         "$type": "color",
-        "$value": "{color.neutral.normal}"
+        "$value": "{color.neutral.medium}"
       },
       "dark-x": {
         "$type": "color",
@@ -114,7 +114,7 @@
       "1": {
         "light-2x": {
           "$type": "color",
-          "$value": "#dfeafe"
+          "$value": "#ffffff"
         },
         "light-x": {
           "$type": "color",
@@ -124,17 +124,21 @@
           "$type": "color",
           "$value": "{color.accent.1.light-x}"
         },
-        "normal": {
+        "medium": {
           "$type": "color",
           "$value": "{color.accent.1.light}"
         },
         "dark": {
           "$type": "color",
-          "$value": "{color.accent.1.normal}"
+          "$value": "{color.accent.1.medium}"
         },
         "dark-x": {
           "$type": "color",
           "$value": "{color.accent.1.dark}"
+        },
+        "dark-2x": {
+          "$type": "color",
+          "$value": "{color.accent.1.dark-x}"
         }
       },
       "2": {
@@ -150,17 +154,21 @@
           "$type": "color",
           "$value": "{color.accent.2.light-x}"
         },
-        "normal": {
+        "medium": {
           "$type": "color",
           "$value": "{color.accent.2.light}"
         },
         "dark": {
           "$type": "color",
-          "$value": "{color.accent.2.normal}"
+          "$value": "{color.accent.2.medium}"
         },
         "dark-x": {
           "$type": "color",
           "$value": "{color.accent.2.dark}"
+        },
+        "dark-2x": {
+          "$type": "color",
+          "$value": "{color.accent.2.dark-x}"
         }
       },
       "3": {
@@ -176,17 +184,21 @@
           "$type": "color",
           "$value": "{color.accent.3.light-x}"
         },
-        "normal": {
+        "medium": {
           "$type": "color",
           "$value": "{color.accent.3.light}"
         },
         "dark": {
           "$type": "color",
-          "$value": "{color.accent.3.normal}"
+          "$value": "{color.accent.3.medium}"
         },
         "dark-x": {
           "$type": "color",
           "$value": "{color.accent.3.dark}"
+        },
+        "dark-2x": {
+          "$type": "color",
+          "$value": "{color.accent.3.dark-x}"
         }
       },
       "4": {
@@ -202,17 +214,21 @@
           "$type": "color",
           "$value": "{color.accent.4.light-x}"
         },
-        "normal": {
+        "medium": {
           "$type": "color",
           "$value": "{color.accent.4.light}"
         },
         "dark": {
           "$type": "color",
-          "$value": "{color.accent.4.normal}"
+          "$value": "{color.accent.4.medium}"
         },
         "dark-x": {
           "$type": "color",
           "$value": "{color.accent.4.dark}"
+        },
+        "dark-2x": {
+          "$type": "color",
+          "$value": "{color.accent.4.dark-x}"
         }
       }
     },
@@ -220,15 +236,15 @@
       "info": {
         "light-x": {
           "$type": "color",
-          "$value": "{color.neutral.xx-dark}"
+          "$value": "{color.neutral.dark-2x}"
         },
         "light": {
           "$type": "color",
-          "$value": "{color.neutral.x-dark}"
+          "$value": "{color.neutral.dark-x}"
         },
-        "normal": {
+        "medium": {
           "$type": "color",
-          "$value": "{color.neutral.normal}"
+          "$value": "{color.neutral.medium}"
         },
         "dark": {
           "$type": "color",
@@ -248,9 +264,9 @@
           "$type": "color",
           "$value": "{color.traffic.bad.dark}"
         },
-        "normal": {
+        "medium": {
           "$type": "color",
-          "$value": "{color.traffic.bad.normal}"
+          "$value": "{color.traffic.bad.medium}"
         },
         "dark": {
           "$type": "color",
@@ -270,9 +286,9 @@
           "$type": "color",
           "$value": "{color.traffic.warn.dark}"
         },
-        "normal": {
+        "medium": {
           "$type": "color",
-          "$value": "{color.traffic.warn.normal}"
+          "$value": "{color.traffic.warn.medium}"
         },
         "dark": {
           "$type": "color",
@@ -292,9 +308,9 @@
           "$type": "color",
           "$value": "{color.traffic.good.dark}"
         },
-        "normal": {
+        "medium": {
           "$type": "color",
-          "$value": "{color.traffic.good.normal}"
+          "$value": "{color.traffic.good.medium}"
         },
         "dark": {
           "$type": "color",
@@ -314,9 +330,9 @@
           "$type": "color",
           "$value": "{color.traffic.other.dark}"
         },
-        "normal": {
+        "medium": {
           "$type": "color",
-          "$value": "{color.traffic.other.normal}"
+          "$value": "{color.traffic.other.medium}"
         },
         "dark": {
           "$type": "color",
@@ -328,13 +344,5 @@
         }
       }
     }
-  },
-  "regular": {
-    "$type": "dimension",
-    "$value": "{font-weight.400}"
-  },
-  "bold": {
-    "$type": "dimension",
-    "$value": "{font-weight.800}"
   }
 }
