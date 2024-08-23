@@ -49,7 +49,7 @@
       "value": "{font-weight.900}"
     }
   },
-  "spacing": {
+  "space": {
     "small-2x": {
       "type": "dimension",
       "value": "{spacing.fourth}"
@@ -81,33 +81,33 @@
   },
   "color": {
     "gray": {
-      "light-xx": {
+      "light-2x": {
         "type": "color",
         "value": "#000000"
       },
       "light-x": {
         "type": "color",
-        "value": "{color.neutral.dark-2x}"
+        "value": "{colors.neutral.dark-2x}"
       },
       "light": {
         "type": "color",
-        "value": "{color.neutral.dark-x}"
+        "value": "{colors.neutral.dark-x}"
       },
       "medium": {
         "type": "color",
-        "value": "{color.neutral.dark}"
+        "value": "{colors.neutral.dark}"
       },
       "dark": {
         "type": "color",
-        "value": "{color.neutral.medium}"
+        "value": "{colors.neutral.medium}"
       },
       "dark-x": {
         "type": "color",
-        "value": "{color.neutral.light}"
+        "value": "{colors.neutral.light}"
       },
-      "dark-xx": {
+      "dark-2x": {
         "type": "color",
-        "value": "{color.neutral.light-x}"
+        "value": "{colors.neutral.light-x}"
       }
     },
     "hue": {
@@ -118,27 +118,27 @@
         },
         "light-x": {
           "type": "color",
-          "value": "{color.accent.1.light-2x}"
+          "value": "{colors.accent.1.light-2x}"
         },
         "light": {
           "type": "color",
-          "value": "{color.accent.1.light-x}"
+          "value": "{colors.accent.1.light-x}"
         },
         "medium": {
           "type": "color",
-          "value": "{color.accent.1.light}"
+          "value": "{colors.accent.1.light}"
         },
         "dark": {
           "type": "color",
-          "value": "{color.accent.1.medium}"
+          "value": "{colors.accent.1.medium}"
         },
         "dark-x": {
           "type": "color",
-          "value": "{color.accent.1.dark}"
+          "value": "{colors.accent.1.dark}"
         },
         "dark-2x": {
           "type": "color",
-          "value": "{color.accent.1.dark-x}"
+          "value": "{colors.accent.1.dark-x}"
         }
       },
       "2": {
@@ -148,27 +148,27 @@
         },
         "light-x": {
           "type": "color",
-          "value": "{color.accent.2.light-2x}"
+          "value": "{colors.accent.2.light-2x}"
         },
         "light": {
           "type": "color",
-          "value": "{color.accent.2.light-x}"
+          "value": "{colors.accent.2.light-x}"
         },
         "medium": {
           "type": "color",
-          "value": "{color.accent.2.light}"
+          "value": "{colors.accent.2.light}"
         },
         "dark": {
           "type": "color",
-          "value": "{color.accent.2.medium}"
+          "value": "{colors.accent.2.medium}"
         },
         "dark-x": {
           "type": "color",
-          "value": "{color.accent.2.dark}"
+          "value": "{colors.accent.2.dark}"
         },
         "dark-2x": {
           "type": "color",
-          "value": "{color.accent.2.dark-x}"
+          "value": "{colors.accent.2.dark-x}"
         }
       },
       "3": {
@@ -178,27 +178,27 @@
         },
         "light-x": {
           "type": "color",
-          "value": "{color.accent.3.light-2x}"
+          "value": "{colors.accent.3.light-2x}"
         },
         "light": {
           "type": "color",
-          "value": "{color.accent.3.light-x}"
+          "value": "{colors.accent.3.light-x}"
         },
         "medium": {
           "type": "color",
-          "value": "{color.accent.3.light}"
+          "value": "{colors.accent.3.light}"
         },
         "dark": {
           "type": "color",
-          "value": "{color.accent.3.medium}"
+          "value": "{colors.accent.3.medium}"
         },
         "dark-x": {
           "type": "color",
-          "value": "{color.accent.3.dark}"
+          "value": "{colors.accent.3.dark}"
         },
         "dark-2x": {
           "type": "color",
-          "value": "{color.accent.3.dark-x}"
+          "value": "{colors.accent.3.dark-x}"
         }
       },
       "4": {
@@ -208,27 +208,27 @@
         },
         "light-x": {
           "type": "color",
-          "value": "{color.accent.4.light-2x}"
+          "value": "{colors.accent.4.light-2x}"
         },
         "light": {
           "type": "color",
-          "value": "{color.accent.4.light-x}"
+          "value": "{colors.accent.4.light-x}"
         },
         "medium": {
           "type": "color",
-          "value": "{color.accent.4.light}"
+          "value": "{colors.accent.4.light}"
         },
         "dark": {
           "type": "color",
-          "value": "{color.accent.4.medium}"
+          "value": "{colors.accent.4.medium}"
         },
         "dark-x": {
           "type": "color",
-          "value": "{color.accent.4.dark}"
+          "value": "{colors.accent.4.dark}"
         },
         "dark-2x": {
           "type": "color",
-          "value": "{color.accent.4.dark-x}"
+          "value": "{colors.accent.4.dark-x}"
         }
       }
     },
@@ -236,111 +236,111 @@
       "info": {
         "light-x": {
           "type": "color",
-          "value": "{color.neutral.dark-2x}"
+          "value": "{colors.neutral.dark-2x}"
         },
         "light": {
           "type": "color",
-          "value": "{color.neutral.dark-x}"
+          "value": "{colors.neutral.dark-x}"
         },
         "medium": {
           "type": "color",
-          "value": "{color.neutral.medium}"
+          "value": "{colors.neutral.medium}"
         },
         "dark": {
           "type": "color",
-          "value": "{color.neutral.light}"
+          "value": "{colors.neutral.light}"
         },
         "dark-x": {
           "type": "color",
-          "value": "{color.neutral.light-x}"
+          "value": "{colors.neutral.light-x}"
         }
       },
       "danger": {
         "light-x": {
           "type": "color",
-          "value": "{color.traffic.bad.dark-x}"
+          "value": "{colors.traffic.bad.dark-x}"
         },
         "light": {
           "type": "color",
-          "value": "{color.traffic.bad.dark}"
+          "value": "{colors.traffic.bad.dark}"
         },
         "medium": {
           "type": "color",
-          "value": "{color.traffic.bad.medium}"
+          "value": "{colors.traffic.bad.medium}"
         },
         "dark": {
           "type": "color",
-          "value": "{color.traffic.bad.light}"
+          "value": "{colors.traffic.bad.light}"
         },
         "dark-x": {
           "type": "color",
-          "value": "{color.traffic.bad.light-x}"
+          "value": "{colors.traffic.bad.light-x}"
         }
       },
       "warn": {
         "light-x": {
           "type": "color",
-          "value": "{color.traffic.warn.dark-x}"
+          "value": "{colors.traffic.warn.dark-x}"
         },
         "light": {
           "type": "color",
-          "value": "{color.traffic.warn.dark}"
+          "value": "{colors.traffic.warn.dark}"
         },
         "medium": {
           "type": "color",
-          "value": "{color.traffic.warn.medium}"
+          "value": "{colors.traffic.warn.medium}"
         },
         "dark": {
           "type": "color",
-          "value": "{color.traffic.warn.light}"
+          "value": "{colors.traffic.warn.light}"
         },
         "dark-x": {
           "type": "color",
-          "value": "{color.traffic.warn.light-x}"
+          "value": "{colors.traffic.warn.light-x}"
         }
       },
       "success": {
         "light-x": {
           "type": "color",
-          "value": "{color.traffic.good.dark-x}"
+          "value": "{colors.traffic.good.dark-x}"
         },
         "light": {
           "type": "color",
-          "value": "{color.traffic.good.dark}"
+          "value": "{colors.traffic.good.dark}"
         },
         "medium": {
           "type": "color",
-          "value": "{color.traffic.good.medium}"
+          "value": "{colors.traffic.good.medium}"
         },
         "dark": {
           "type": "color",
-          "value": "{color.traffic.good.light}"
+          "value": "{colors.traffic.good.light}"
         },
         "dark-x": {
           "type": "color",
-          "value": "{color.traffic.good.light-x}"
+          "value": "{colors.traffic.good.light-x}"
         }
       },
       "extra": {
         "light-x": {
           "type": "color",
-          "value": "{color.traffic.other.dark-x}"
+          "value": "{colors.traffic.other.dark-x}"
         },
         "light": {
           "type": "color",
-          "value": "{color.traffic.other.dark}"
+          "value": "{colors.traffic.other.dark}"
         },
         "medium": {
           "type": "color",
-          "value": "{color.traffic.other.medium}"
+          "value": "{colors.traffic.other.medium}"
         },
         "dark": {
           "type": "color",
-          "value": "{color.traffic.other.light}"
+          "value": "{colors.traffic.other.light}"
         },
         "dark-x": {
           "type": "color",
-          "value": "{color.traffic.other.light-x}"
+          "value": "{colors.traffic.other.light-x}"
         }
       }
     }

@@ -99,7 +99,7 @@
       "value": "4px"
     }
   },
-  "color": {
+  "colors": {
     "neutral": {
       "light-2x": {
         "type": "color",
