@@ -8,6 +8,7 @@ Markup: s-header.html
 
 Styleguide Trumps.Scopes.Header.Bootstrap
 */
+@design-tokens url('../../tokens/Tokens.core-v2.Light.tokens.json') format('style-dictionary3');
 
 .s-header .dropdown-item {
   color: #212529;
