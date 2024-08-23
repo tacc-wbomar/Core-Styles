@@ -16,7 +16,7 @@ Styleguide Trumps.Scopes.Header.Bootstrap
 .s-header .dropdown-item:hover {
   color: #16181b;
   text-decoration: none;
-  background-color: rgba( from var(--global-color-primary--light) r g b, 0.3);
+  background-color: rgba( from design-token('color.gray.light') r g b / 0.3 );
 }
 .s-header .dropdown-item.active,
 .s-header .dropdown-item:active {
