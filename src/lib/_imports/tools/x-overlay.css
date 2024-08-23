@@ -8,6 +8,7 @@ Colored boxes that appear atop a large image (like a banner).
 
 Styleguide Tools.Mixins.Overlay
 */
+@design-tokens url('../../tokens/Tokens.core-v2.Light.tokens.json') format('style-dictionary3');
 
 %x-overlay--curtain {
   color: inherit;

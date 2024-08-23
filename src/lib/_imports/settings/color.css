@@ -96,7 +96,7 @@
 
   --global-color-info--weak: rgb( from design-token('color.note.info.medium') r g b / 0.125 );
   --global-color-danger--weak: rgb( from design-token('color.note.danger.medium') r g b / 0.125 );
-  --global-color-warning--weak: rgb( from design-token('color.note.warning.medium') r g b / 0.125 );
+  --global-color-warning--weak: rgb( from design-token('color.note.warn.medium') r g b / 0.125 );
   --global-color-success--weak: rgb( from design-token('color.note.success.medium') r g b / 0.125 );
   --global-color-extra--weak: rgb( from design-token('color.note.extra.medium') r g b / 0.125 );
 
