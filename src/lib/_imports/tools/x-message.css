@@ -26,7 +26,7 @@
   background-color: var(--global-color-danger--x-light);
   border-color: var(--global-color-danger--normal);
 }
-@define-mixin message--type-tip---message--scope-section {
+@define-mixin message--type-extra---message--scope-section {
   background-color: var(--global-color-extra--x-light);
   border-color: var(--global-color-extra--normal);
 }

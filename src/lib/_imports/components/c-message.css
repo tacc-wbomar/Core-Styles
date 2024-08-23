@@ -33,7 +33,7 @@
 :--c-message--type-success,
 :--c-message--type-warning,
 :--c-message--type-error,
-:--c-message--type-tip {
+:--c-message--type-extra {
   /* FAQ: So alternate class name @extend can not fail on missing selectors */
 }
 :--c-message--scope {
@@ -88,12 +88,12 @@
   @mixin message--type-error---message--scope-section;
 }
 
-@define-mixin message--type-tip---message--scope-section {
+@define-mixin message--type-extra---message--scope-section {
   background-color: var(--global-color-extra--x-light);
   border-color: var(--global-color-extra--normal);
 }
-:--c-message--type-tip:--c-message--scope-section {
-  @mixin message--type-tip---message--scope-section;
+:--c-message--type-extra:--c-message--scope-section {
+  @mixin message--type-extra---message--scope-section;
 }
 
 @define-mixin message--scope-global {
