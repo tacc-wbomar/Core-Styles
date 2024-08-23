@@ -37,7 +37,7 @@
 
 .s-home-banner article {
   color: var(--global-color-primary--xx-dark);
-  background-color: rgba(var(--global-color-primary--xx-light-rgb), 0.9);
+  background-color: rgba( from var(--global-color-primary--xx-light) r g b, 0.9);
   z-index: 2;
   padding: 24px 84px 36px 48px;
   font-weight: bold;

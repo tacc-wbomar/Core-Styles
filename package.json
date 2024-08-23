@@ -36,6 +36,7 @@
   "homepage": "https://github.com/TACC/Core-Styles",
   "repository": "git@github.com:TACC/Core-Styles.git",
   "peerDependencies": {
+    "@csstools/postcss-design-tokens": "^4.0.1",
     "commander": "^9.4.1",
     "cssnano": "^5.1.15",
     "js-yaml": "^4.1.0",
@@ -51,6 +52,7 @@
     "postcss-replace": "^2.0.1"
   },
   "// peerDependencies": {
+    "@csstools/postcss-design-tokens": "To convert design tokens to custom properties",
     "commander": "To create CLI",
     "cssnano": "To minify CSS",
     "js-yaml": "To parse PostCSS configs",
