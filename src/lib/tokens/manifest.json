@@ -1,0 +1,46 @@
+{
+  "name": "Design Tokens",
+  "collections": {
+    "Primitives": {
+      "modes": {
+        "core-v3": [
+          "Primitives.core-v3.tokens.json"
+        ],
+        "core-v2": [
+          "Primitives.core-v2.tokens.json"
+        ],
+        "core-v1": [
+          "Primitives.core-v1.tokens.json"
+        ],
+        "ds": [
+          "Primitives.ds.tokens.json"
+        ]
+      }
+    },
+    "Tokens": {
+      "modes": {
+        "Light": [
+          "Tokens.Light.tokens.json"
+        ],
+        "Dark": [
+          "Tokens.Dark.tokens.json"
+        ]
+      }
+    },
+    "Matt Testing": {
+      "modes": {
+        "Primary": [
+          "Matt Testing.Primary.tokens.json"
+        ],
+        "Secondary": [
+          "Matt Testing.Secondary.tokens.json"
+        ]
+      }
+    }
+  },
+  "styles": {
+    "text": [
+      "text.styles.tokens.json"
+    ]
+  }
+}

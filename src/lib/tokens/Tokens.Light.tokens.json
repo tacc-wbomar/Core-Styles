@@ -1,0 +1,340 @@
+{
+  "weight": {
+    "thin": {
+      "$type": "dimension",
+      "$value": "{font-weight.100}"
+    },
+    "extralight": {
+      "$type": "dimension",
+      "$value": "{font-weight.200}"
+    },
+    "light": {
+      "$type": "dimension",
+      "$value": "{font-weight.300}"
+    },
+    "light-x": {
+      "$type": "dimension",
+      "$value": "{weight.extralight}"
+    },
+    "regular": {
+      "$type": "dimension",
+      "$value": "{font-weight.400}"
+    },
+    "medium": {
+      "$type": "dimension",
+      "$value": "{font-weight.500}"
+    },
+    "semibold": {
+      "$type": "dimension",
+      "$value": "{font-weight.600}"
+    },
+    "bold": {
+      "$type": "dimension",
+      "$value": "{font-weight.700}"
+    },
+    "extrabold": {
+      "$type": "dimension",
+      "$value": "{font-weight.800}"
+    },
+    "bold-x": {
+      "$type": "dimension",
+      "$value": "{weight.extrabold}"
+    },
+    "black": {
+      "$type": "dimension",
+      "$value": "{weight.extrabold}"
+    },
+    "trueblack": {
+      "$type": "dimension",
+      "$value": "{font-weight.900}"
+    }
+  },
+  "spacing": {
+    "small-2x": {
+      "$type": "dimension",
+      "$value": "{spacing.fourth}"
+    },
+    "small-x": {
+      "$type": "dimension",
+      "$value": "{spacing.half}"
+    },
+    "small": {
+      "$type": "dimension",
+      "$value": "{spacing.1}"
+    },
+    "normal": {
+      "$type": "dimension",
+      "$value": "{spacing.2}"
+    },
+    "large": {
+      "$type": "dimension",
+      "$value": "{spacing.3}"
+    },
+    "large-x": {
+      "$type": "dimension",
+      "$value": "{spacing.4}"
+    },
+    "large-2x": {
+      "$type": "dimension",
+      "$value": "{spacing.5}"
+    }
+  },
+  "color": {
+    "gray": {
+      "light-xx": {
+        "$type": "color",
+        "$value": "{color.neutral.light-2x}"
+      },
+      "light-x": {
+        "$type": "color",
+        "$value": "{color.neutral.light-x}"
+      },
+      "light": {
+        "$type": "color",
+        "$value": "{color.neutral.light}"
+      },
+      "normal": {
+        "$type": "color",
+        "$value": "{color.neutral.normal}"
+      },
+      "dark": {
+        "$type": "color",
+        "$value": "{color.neutral.dark}"
+      },
+      "dark-x": {
+        "$type": "color",
+        "$value": "{color.neutral.x-dark}"
+      },
+      "dark-xx": {
+        "$type": "color",
+        "$value": "{color.neutral.xx-dark}"
+      }
+    },
+    "hue": {
+      "1": {
+        "light-2x": {
+          "$type": "color",
+          "$value": "{color.accent.1.light-2x}"
+        },
+        "light-x": {
+          "$type": "color",
+          "$value": "{color.accent.1.light-x}"
+        },
+        "light": {
+          "$type": "color",
+          "$value": "{color.accent.1.light}"
+        },
+        "normal": {
+          "$type": "color",
+          "$value": "{color.accent.1.normal}"
+        },
+        "dark": {
+          "$type": "color",
+          "$value": "{color.accent.1.dark}"
+        },
+        "dark-x": {
+          "$type": "color",
+          "$value": "{color.accent.1.dark-x}"
+        }
+      },
+      "2": {
+        "light-2x": {
+          "$type": "color",
+          "$value": "{color.accent.2.light-2x}"
+        },
+        "light-x": {
+          "$type": "color",
+          "$value": "{color.accent.2.light-x}"
+        },
+        "light": {
+          "$type": "color",
+          "$value": "{color.accent.2.light}"
+        },
+        "normal": {
+          "$type": "color",
+          "$value": "{color.accent.2.normal}"
+        },
+        "dark": {
+          "$type": "color",
+          "$value": "{color.accent.2.dark}"
+        },
+        "dark-x": {
+          "$type": "color",
+          "$value": "{color.accent.2.dark-x}"
+        }
+      },
+      "3": {
+        "light-2x": {
+          "$type": "color",
+          "$value": "{color.accent.3.light-2x}"
+        },
+        "light-x": {
+          "$type": "color",
+          "$value": "{color.accent.3.light-x}"
+        },
+        "light": {
+          "$type": "color",
+          "$value": "{color.accent.3.light}"
+        },
+        "normal": {
+          "$type": "color",
+          "$value": "{color.accent.3.normal}"
+        },
+        "dark": {
+          "$type": "color",
+          "$value": "{color.accent.3.dark}"
+        },
+        "dark-x": {
+          "$type": "color",
+          "$value": "{color.accent.3.dark-x}"
+        }
+      },
+      "4": {
+        "light-2x": {
+          "$type": "color",
+          "$value": "{color.accent.4.light-2x}"
+        },
+        "light-x": {
+          "$type": "color",
+          "$value": "{color.accent.4.light-x}"
+        },
+        "light": {
+          "$type": "color",
+          "$value": "{color.accent.4.light}"
+        },
+        "normal": {
+          "$type": "color",
+          "$value": "{color.accent.4.normal}"
+        },
+        "dark": {
+          "$type": "color",
+          "$value": "{color.accent.4.dark}"
+        },
+        "dark-x": {
+          "$type": "color",
+          "$value": "{color.accent.4.dark-x}"
+        }
+      }
+    },
+    "note": {
+      "info": {
+        "light-x": {
+          "$type": "color",
+          "$value": "{color.neutral.light-x}"
+        },
+        "light": {
+          "$type": "color",
+          "$value": "{color.neutral.light}"
+        },
+        "normal": {
+          "$type": "color",
+          "$value": "{color.neutral.dark}"
+        },
+        "dark": {
+          "$type": "color",
+          "$value": "{color.neutral.x-dark}"
+        },
+        "dark-x": {
+          "$type": "color",
+          "$value": "{color.neutral.xx-dark}"
+        }
+      },
+      "danger": {
+        "light-x": {
+          "$type": "color",
+          "$value": "{color.traffic.bad.light-x}"
+        },
+        "light": {
+          "$type": "color",
+          "$value": "{color.traffic.bad.light}"
+        },
+        "normal": {
+          "$type": "color",
+          "$value": "{color.traffic.bad.normal}"
+        },
+        "dark": {
+          "$type": "color",
+          "$value": "{color.traffic.bad.dark}"
+        },
+        "dark-x": {
+          "$type": "color",
+          "$value": "{color.traffic.bad.dark-x}"
+        }
+      },
+      "warn": {
+        "light-x": {
+          "$type": "color",
+          "$value": "{color.traffic.warn.light-x}"
+        },
+        "light": {
+          "$type": "color",
+          "$value": "{color.traffic.warn.light}"
+        },
+        "normal": {
+          "$type": "color",
+          "$value": "{color.traffic.warn.normal}"
+        },
+        "dark": {
+          "$type": "color",
+          "$value": "{color.traffic.warn.dark}"
+        },
+        "dark-x": {
+          "$type": "color",
+          "$value": "{color.traffic.warn.dark-x}"
+        }
+      },
+      "success": {
+        "light-x": {
+          "$type": "color",
+          "$value": "{color.traffic.good.light-x}"
+        },
+        "light": {
+          "$type": "color",
+          "$value": "{color.traffic.good.light}"
+        },
+        "normal": {
+          "$type": "color",
+          "$value": "{color.traffic.good.normal}"
+        },
+        "dark": {
+          "$type": "color",
+          "$value": "{color.traffic.good.dark}"
+        },
+        "dark-x": {
+          "$type": "color",
+          "$value": "{color.traffic.good.dark-x}"
+        }
+      },
+      "extra": {
+        "light-x": {
+          "$type": "color",
+          "$value": "{color.traffic.other.light-x}"
+        },
+        "light": {
+          "$type": "color",
+          "$value": "{color.traffic.other.light}"
+        },
+        "normal": {
+          "$type": "color",
+          "$value": "{color.traffic.other.normal}"
+        },
+        "dark": {
+          "$type": "color",
+          "$value": "{color.traffic.other.dark}"
+        },
+        "dark-x": {
+          "$type": "color",
+          "$value": "{color.traffic.other.dark-x}"
+        }
+      }
+    }
+  },
+  "regular": {
+    "$type": "dimension",
+    "$value": "{font-weight.400}"
+  },
+  "bold": {
+    "$type": "dimension",
+    "$value": "{font-weight.800}"
+  }
+}
