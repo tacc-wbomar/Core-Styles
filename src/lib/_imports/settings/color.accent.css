@@ -1,3 +1,5 @@
+@design-tokens url('../../tokens/Tokens.core-v3.Light.tokens.json') format('style-dictionary3');
+
 :--dark-context-safe {
   --global-color-accent--xx-light: #FFFFFF; /* v2 was #dfeafe */
   --global-color-accent--x-light: design-token('color.hue.1.light-2x');
