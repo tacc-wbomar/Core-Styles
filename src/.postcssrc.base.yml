@@ -8,10 +8,10 @@ plugins:
   postcss-mixins: {}
 
   postcss-preset-env:
-    # https://github.com/csstools/postcss-preset-env#features
+    # https://github.com/csstools/postcss-plugins/tree/main/plugin-packs/postcss-preset-env#stage
     stage: false
 
-    # https://github.com/csstools/postcss-preset-env/blob/master/src/lib/plugins-by-id.js#L35
+    # https://github.com/csstools/postcss-plugins/blob/main/plugin-packs/postcss-preset-env/FEATURES.md
     features:
       custom-media-queries: true
       media-query-ranges: true
