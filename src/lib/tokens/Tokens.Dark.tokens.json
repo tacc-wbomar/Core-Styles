@@ -230,36 +230,6 @@
         "value": "{colors.accent.4.dark-x}"
       }
     },
-    "ivory": {
-      "light-2x": {
-        "type": "color",
-        "value": "#ffffff"
-      },
-      "light-x": {
-        "type": "color",
-        "value": "{colors.accent.4.light-2x}"
-      },
-      "light": {
-        "type": "color",
-        "value": "{colors.accent.4.light-x}"
-      },
-      "medium": {
-        "type": "color",
-        "value": "{colors.accent.4.light}"
-      },
-      "dark": {
-        "type": "color",
-        "value": "{colors.accent.4.medium}"
-      },
-      "dark-x": {
-        "type": "color",
-        "value": "{colors.accent.4.dark}"
-      },
-      "dark-2x": {
-        "type": "color",
-        "value": "{colors.accent.4.dark-x}"
-      }
-    },
     "info": {
       "light-x": {
         "type": "color",

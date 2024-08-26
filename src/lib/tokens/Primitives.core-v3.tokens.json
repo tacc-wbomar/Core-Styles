@@ -103,27 +103,27 @@
     "neutral": {
       "light-2x": {
         "type": "color",
-        "value": "#fffbfa"
+        "value": "#fcfdf3"
       },
       "light-x": {
         "type": "color",
-        "value": "#f6f0ef"
+        "value": "#e2e1d8"
       },
       "light": {
         "type": "color",
-        "value": "#e5dfde"
+        "value": "#cdcac3"
       },
       "medium": {
         "type": "color",
-        "value": "#cec9c8"
+        "value": "#a29e98"
       },
       "dark": {
         "type": "color",
-        "value": "#7d7877"
+        "value": "#7e7974"
       },
       "dark-x": {
         "type": "color",
-        "value": "#4b4746"
+        "value": "#4b4744"
       },
       "dark-2x": {
         "type": "color",
@@ -249,36 +249,6 @@
         "dark-2x": {
           "type": "color",
           "value": "#332c04"
-        }
-      },
-      "5": {
-        "light-2x": {
-          "type": "color",
-          "value": "#fcfdf3"
-        },
-        "light-x": {
-          "type": "color",
-          "value": "#f2f3e9"
-        },
-        "light": {
-          "type": "color",
-          "value": "#e1e2d8"
-        },
-        "medium": {
-          "type": "color",
-          "value": "#cacbc2"
-        },
-        "dark": {
-          "type": "color",
-          "value": "#797a72"
-        },
-        "dark-x": {
-          "type": "color",
-          "value": "#484841"
-        },
-        "dark-2x": {
-          "type": "color",
-          "value": "#2c2d26"
         }
       }
     },
