@@ -110,238 +110,264 @@
         "value": "{colors.neutral.dark-2x}"
       }
     },
-    "hue": {
-      "1": {
-        "light-2x": {
-          "type": "color",
-          "value": "{colors.accent.1.light-2x}"
-        },
-        "light-x": {
-          "type": "color",
-          "value": "{colors.accent.1.light-x}"
-        },
-        "light": {
-          "type": "color",
-          "value": "{colors.accent.1.light}"
-        },
-        "medium": {
-          "type": "color",
-          "value": "{colors.accent.1.medium}"
-        },
-        "dark": {
-          "type": "color",
-          "value": "{colors.accent.1.dark}"
-        },
-        "dark-x": {
-          "type": "color",
-          "value": "{colors.accent.1.dark-x}"
-        },
-        "dark-2x": {
-          "type": "color",
-          "value": "{colors.accent.1.dark-2x}"
-        }
+    "blue": {
+      "light-2x": {
+        "type": "color",
+        "value": "{colors.accent.1.light-2x}"
       },
-      "2": {
-        "light-2x": {
-          "type": "color",
-          "value": "{colors.accent.2.light-2x}"
-        },
-        "light-x": {
-          "type": "color",
-          "value": "{colors.accent.2.light-x}"
-        },
-        "light": {
-          "type": "color",
-          "value": "{colors.accent.2.light}"
-        },
-        "medium": {
-          "type": "color",
-          "value": "{colors.accent.2.medium}"
-        },
-        "dark": {
-          "type": "color",
-          "value": "{colors.accent.2.dark}"
-        },
-        "dark-x": {
-          "type": "color",
-          "value": "{colors.accent.2.dark-x}"
-        },
-        "dark-2x": {
-          "type": "color",
-          "value": "{colors.accent.2.dark-2x}"
-        }
+      "light-x": {
+        "type": "color",
+        "value": "{colors.accent.1.light-x}"
       },
-      "3": {
-        "light-2x": {
-          "type": "color",
-          "value": "{colors.accent.3.light-2x}"
-        },
-        "light-x": {
-          "type": "color",
-          "value": "{colors.accent.3.light-x}"
-        },
-        "light": {
-          "type": "color",
-          "value": "{colors.accent.3.light}"
-        },
-        "medium": {
-          "type": "color",
-          "value": "{colors.accent.3.medium}"
-        },
-        "dark": {
-          "type": "color",
-          "value": "{colors.accent.3.dark}"
-        },
-        "dark-x": {
-          "type": "color",
-          "value": "{colors.accent.3.dark-x}"
-        },
-        "dark-2x": {
-          "type": "color",
-          "value": "{colors.accent.3.dark-2x}"
-        }
+      "light": {
+        "type": "color",
+        "value": "{colors.accent.1.light}"
       },
-      "4": {
-        "light-2x": {
-          "type": "color",
-          "value": "{colors.accent.4.light-2x}"
-        },
-        "light-x": {
-          "type": "color",
-          "value": "{colors.accent.4.light-x}"
-        },
-        "light": {
-          "type": "color",
-          "value": "{colors.accent.4.light}"
-        },
-        "medium": {
-          "type": "color",
-          "value": "{colors.accent.4.medium}"
-        },
-        "dark": {
-          "type": "color",
-          "value": "{colors.accent.4.dark}"
-        },
-        "dark-x": {
-          "type": "color",
-          "value": "{colors.accent.4.dark-x}"
-        },
-        "dark-2x": {
-          "type": "color",
-          "value": "{colors.accent.4.dark-2x}"
-        }
+      "medium": {
+        "type": "color",
+        "value": "{colors.accent.1.medium}"
+      },
+      "dark": {
+        "type": "color",
+        "value": "{colors.accent.1.dark}"
+      },
+      "dark-x": {
+        "type": "color",
+        "value": "{colors.accent.1.dark-x}"
+      },
+      "dark-2x": {
+        "type": "color",
+        "value": "{colors.accent.1.dark-2x}"
       }
     },
-    "note": {
-      "info": {
-        "light-x": {
-          "type": "color",
-          "value": "{colors.neutral.light-x}"
-        },
-        "light": {
-          "type": "color",
-          "value": "{colors.neutral.light}"
-        },
-        "medium": {
-          "type": "color",
-          "value": "{colors.neutral.dark}"
-        },
-        "dark": {
-          "type": "color",
-          "value": "{colors.neutral.dark-x}"
-        },
-        "dark-x": {
-          "type": "color",
-          "value": "{colors.neutral.dark-2x}"
-        }
+    "orange": {
+      "light-2x": {
+        "type": "color",
+        "value": "{colors.accent.2.light-2x}"
       },
-      "danger": {
-        "light-x": {
-          "type": "color",
-          "value": "{colors.traffic.bad.light-x}"
-        },
-        "light": {
-          "type": "color",
-          "value": "{colors.traffic.bad.light}"
-        },
-        "medium": {
-          "type": "color",
-          "value": "{colors.traffic.bad.medium}"
-        },
-        "dark": {
-          "type": "color",
-          "value": "{colors.traffic.bad.dark}"
-        },
-        "dark-x": {
-          "type": "color",
-          "value": "{colors.traffic.bad.dark-x}"
-        }
+      "light-x": {
+        "type": "color",
+        "value": "{colors.accent.2.light-x}"
       },
-      "warn": {
-        "light-x": {
-          "type": "color",
-          "value": "{colors.traffic.warn.light-x}"
-        },
-        "light": {
-          "type": "color",
-          "value": "{colors.traffic.warn.light}"
-        },
-        "medium": {
-          "type": "color",
-          "value": "{colors.traffic.warn.medium}"
-        },
-        "dark": {
-          "type": "color",
-          "value": "{colors.traffic.warn.dark}"
-        },
-        "dark-x": {
-          "type": "color",
-          "value": "{colors.traffic.warn.dark-x}"
-        }
+      "light": {
+        "type": "color",
+        "value": "{colors.accent.2.light}"
       },
-      "success": {
-        "light-x": {
-          "type": "color",
-          "value": "{colors.traffic.good.light-x}"
-        },
-        "light": {
-          "type": "color",
-          "value": "{colors.traffic.good.light}"
-        },
-        "medium": {
-          "type": "color",
-          "value": "{colors.traffic.good.medium}"
-        },
-        "dark": {
-          "type": "color",
-          "value": "{colors.traffic.good.dark}"
-        },
-        "dark-x": {
-          "type": "color",
-          "value": "{colors.traffic.good.dark-x}"
-        }
+      "medium": {
+        "type": "color",
+        "value": "{colors.accent.2.medium}"
       },
-      "extra": {
-        "light-x": {
-          "type": "color",
-          "value": "{colors.traffic.other.light-x}"
-        },
-        "light": {
-          "type": "color",
-          "value": "{colors.traffic.other.light}"
-        },
-        "medium": {
-          "type": "color",
-          "value": "{colors.traffic.other.medium}"
-        },
-        "dark": {
-          "type": "color",
-          "value": "{colors.traffic.other.dark}"
-        },
-        "dark-x": {
-          "type": "color",
-          "value": "{colors.traffic.other.dark-x}"
-        }
+      "dark": {
+        "type": "color",
+        "value": "{colors.accent.2.dark}"
+      },
+      "dark-x": {
+        "type": "color",
+        "value": "{colors.accent.2.dark-x}"
+      },
+      "dark-2x": {
+        "type": "color",
+        "value": "{colors.accent.2.dark-2x}"
+      }
+    },
+    "yellow": {
+      "light-2x": {
+        "type": "color",
+        "value": "{colors.accent.3.light-2x}"
+      },
+      "light-x": {
+        "type": "color",
+        "value": "{colors.accent.3.light-x}"
+      },
+      "light": {
+        "type": "color",
+        "value": "{colors.accent.3.light}"
+      },
+      "medium": {
+        "type": "color",
+        "value": "{colors.accent.3.medium}"
+      },
+      "dark": {
+        "type": "color",
+        "value": "{colors.accent.3.dark}"
+      },
+      "dark-x": {
+        "type": "color",
+        "value": "{colors.accent.3.dark-x}"
+      },
+      "dark-2x": {
+        "type": "color",
+        "value": "{colors.accent.3.dark-2x}"
+      }
+    },
+    "vanilla": {
+      "light-2x": {
+        "type": "color",
+        "value": "{colors.accent.4.light-2x}"
+      },
+      "light-x": {
+        "type": "color",
+        "value": "{colors.accent.4.light-x}"
+      },
+      "light": {
+        "type": "color",
+        "value": "{colors.accent.4.light}"
+      },
+      "medium": {
+        "type": "color",
+        "value": "{colors.accent.4.medium}"
+      },
+      "dark": {
+        "type": "color",
+        "value": "{colors.accent.4.dark}"
+      },
+      "dark-x": {
+        "type": "color",
+        "value": "{colors.accent.4.dark-x}"
+      },
+      "dark-2x": {
+        "type": "color",
+        "value": "{colors.accent.4.dark-2x}"
+      }
+    },
+    "ivory": {
+      "light-2x": {
+        "type": "color",
+        "value": "{colors.accent.5.light-2x}"
+      },
+      "light-x": {
+        "type": "color",
+        "value": "{colors.accent.5.light-x}"
+      },
+      "light": {
+        "type": "color",
+        "value": "{colors.accent.5.light}"
+      },
+      "medium": {
+        "type": "color",
+        "value": "{colors.accent.5.medium}"
+      },
+      "dark": {
+        "type": "color",
+        "value": "{colors.accent.5.dark}"
+      },
+      "dark-x": {
+        "type": "color",
+        "value": "{colors.accent.5.dark-x}"
+      },
+      "dark-2x": {
+        "type": "color",
+        "value": "{colors.accent.5.dark-2x}"
+      }
+    },
+    "info": {
+      "light-x": {
+        "type": "color",
+        "value": "{colors.neutral.light-x}"
+      },
+      "light": {
+        "type": "color",
+        "value": "{colors.neutral.light}"
+      },
+      "medium": {
+        "type": "color",
+        "value": "{colors.neutral.dark}"
+      },
+      "dark": {
+        "type": "color",
+        "value": "{colors.neutral.dark-x}"
+      },
+      "dark-x": {
+        "type": "color",
+        "value": "{colors.neutral.dark-2x}"
+      }
+    },
+    "danger": {
+      "light-x": {
+        "type": "color",
+        "value": "{colors.traffic.bad.light-x}"
+      },
+      "light": {
+        "type": "color",
+        "value": "{colors.traffic.bad.light}"
+      },
+      "medium": {
+        "type": "color",
+        "value": "{colors.traffic.bad.medium}"
+      },
+      "dark": {
+        "type": "color",
+        "value": "{colors.traffic.bad.dark}"
+      },
+      "dark-x": {
+        "type": "color",
+        "value": "{colors.traffic.bad.dark-x}"
+      }
+    },
+    "warning": {
+      "light-x": {
+        "type": "color",
+        "value": "{colors.traffic.warn.light-x}"
+      },
+      "light": {
+        "type": "color",
+        "value": "{colors.traffic.warn.light}"
+      },
+      "medium": {
+        "type": "color",
+        "value": "{colors.traffic.warn.medium}"
+      },
+      "dark": {
+        "type": "color",
+        "value": "{colors.traffic.warn.dark}"
+      },
+      "dark-x": {
+        "type": "color",
+        "value": "{colors.traffic.warn.dark-x}"
+      }
+    },
+    "success": {
+      "light-x": {
+        "type": "color",
+        "value": "{colors.traffic.good.light-x}"
+      },
+      "light": {
+        "type": "color",
+        "value": "{colors.traffic.good.light}"
+      },
+      "medium": {
+        "type": "color",
+        "value": "{colors.traffic.good.medium}"
+      },
+      "dark": {
+        "type": "color",
+        "value": "{colors.traffic.good.dark}"
+      },
+      "dark-x": {
+        "type": "color",
+        "value": "{colors.traffic.good.dark-x}"
+      }
+    },
+    "extra": {
+      "light-x": {
+        "type": "color",
+        "value": "{colors.traffic.other.light-x}"
+      },
+      "light": {
+        "type": "color",
+        "value": "{colors.traffic.other.light}"
+      },
+      "medium": {
+        "type": "color",
+        "value": "{colors.traffic.other.medium}"
+      },
+      "dark": {
+        "type": "color",
+        "value": "{colors.traffic.other.dark}"
+      },
+      "dark-x": {
+        "type": "color",
+        "value": "{colors.traffic.other.dark-x}"
       }
     }
   }
