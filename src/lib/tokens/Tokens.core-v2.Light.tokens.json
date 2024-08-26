@@ -250,6 +250,36 @@
           "type": "color",
           "value": "#ffffff"
         }
+      },
+      "5": {
+        "light-2x": {
+          "type": "color",
+          "value": "#ffffff"
+        },
+        "light-x": {
+          "type": "color",
+          "value": "#ffffff"
+        },
+        "light": {
+          "type": "color",
+          "value": "#ffffff"
+        },
+        "medium": {
+          "type": "color",
+          "value": "#ffffff"
+        },
+        "dark": {
+          "type": "color",
+          "value": "#ffffff"
+        },
+        "dark-x": {
+          "type": "color",
+          "value": "#ffffff"
+        },
+        "dark-2x": {
+          "type": "color",
+          "value": "#ffffff"
+        }
       }
     },
     "traffic": {
