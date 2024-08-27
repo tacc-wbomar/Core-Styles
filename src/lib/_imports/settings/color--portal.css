@@ -1,6 +1,6 @@
 @import url("../settings/color.accent.css");
 
-@design-tokens url('../../tokens/Tokens.core-v3.Light.tokens.json') format('style-dictionary3');
+@design-tokens url('../../tokens/Tokens.core-v2.Light.tokens.json') format('style-dictionary3');
 
 /* Set scope for accent colors */
 @custom-selector :--light-context-safe
