@@ -107,46 +107,46 @@
       },
       "light-x": {
         "type": "color",
-        "value": "#e3e1d8"
+        "value": "#e2e1d8"
       },
       "light": {
         "type": "color",
-        "value": "#c2bdb6"
+        "value": "#cdcac3"
       },
       "medium": {
         "type": "color",
-        "value": "#847f7b"
+        "value": "#a29e98"
       },
       "dark": {
         "type": "color",
-        "value": "#4e4947"
+        "value": "#7e7974"
       },
       "dark-x": {
         "type": "color",
-        "value": "#231f1e"
+        "value": "#4b4744"
       },
       "dark-2x": {
         "type": "color",
-        "value": "#0b0b0b"
+        "value": "#2f2b2a"
       }
     },
     "accent": {
       "1": {
         "light-2x": {
           "type": "color",
-          "value": "#f3faff"
+          "value": "#f9fcff"
         },
         "light-x": {
           "type": "color",
-          "value": "#d2e4f0"
+          "value": "#e5f4ff"
         },
         "light": {
           "type": "color",
-          "value": "#b0cfe5"
+          "value": "#c3e6ff"
         },
         "medium": {
           "type": "color",
-          "value": "#78a5c3"
+          "value": "#a3d1f1"
         },
         "dark": {
           "type": "color",
@@ -168,15 +168,15 @@
         },
         "light-x": {
           "type": "color",
-          "value": "#fed8c4"
+          "value": "#ffeee5"
         },
         "light": {
           "type": "color",
-          "value": "#fbba97"
+          "value": "#fed8c4"
         },
         "medium": {
           "type": "color",
-          "value": "#eb7b35"
+          "value": "#ffb892"
         },
         "dark": {
           "type": "color",
@@ -184,7 +184,7 @@
         },
         "dark-x": {
           "type": "color",
-          "value": "#733202"
+          "value": "#683a20"
         },
         "dark-2x": {
           "type": "color",
@@ -194,27 +194,27 @@
       "3": {
         "light-2x": {
           "type": "color",
-          "value": "#fef8ee"
+          "value": "#fefbf6"
         },
         "light-x": {
           "type": "color",
-          "value": "#fedba0"
+          "value": "#fff0d7"
         },
         "light": {
           "type": "color",
-          "value": "#fcbf49"
+          "value": "#fedba0"
         },
         "medium": {
           "type": "color",
-          "value": "#cc9300"
+          "value": "#fcbf49"
         },
         "dark": {
           "type": "color",
-          "value": "#9d710f"
+          "value": "#9d710d"
         },
         "dark-x": {
           "type": "color",
-          "value": "#5e4205"
+          "value": "#58441f"
         },
         "dark-2x": {
           "type": "color",
@@ -224,19 +224,19 @@
       "4": {
         "light-2x": {
           "type": "color",
-          "value": "#fff9df"
+          "value": "#fefcf1"
         },
         "light-x": {
           "type": "color",
-          "value": "#eae2b7"
+          "value": "#fbf3c8"
         },
         "light": {
           "type": "color",
-          "value": "#d4cca2"
+          "value": "#eae2b7"
         },
         "medium": {
           "type": "color",
-          "value": "#a79f76"
+          "value": "#d4cca1"
         },
         "dark": {
           "type": "color",
@@ -248,7 +248,7 @@
         },
         "dark-2x": {
           "type": "color",
-          "value": "#342c04"
+          "value": "#332c04"
         }
       }
     },
