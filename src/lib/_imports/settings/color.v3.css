@@ -40,7 +40,8 @@
   --global-color-accent--dark: design-token('colors.accent.1.dark');
   --global-color-accent--x-dark: design-token('colors.accent.1.dark-x');
   --global-color-accent--xx-dark: design-token('colors.accent.1.dark-2x');
-  --global-color-accent--xxx-dark: #000000;
+  --global-color-accent--xxx-dark: #000000; /* DEPRECATED */
+
   --global-color-secondary--xx-light: design-token('colors.accent.2.light-2x');
   --global-color-secondary--x-light: design-token('colors.accent.2.light-x');
   --global-color-secondary--light: design-token('colors.accent.2.light');
@@ -49,6 +50,7 @@
   --global-color-secondary--x-dark: design-token('colors.accent.2.dark-x');
   --global-color-secondary--xx-dark: design-token('colors.accent.2.dark-2x');
   --global-color-tertiary--xx-light: design-token('colors.accent.3.light-2x');
+
   --global-color-tertiary--x-light: design-token('colors.accent.3.light-x');
   --global-color-tertiary--light: design-token('colors.accent.3.light');
   --global-color-tertiary--normal: design-token('colors.accent.3.medium');
