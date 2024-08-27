@@ -58,6 +58,10 @@
   --global-color-tertiary--x-dark: design-token('colors.accent.3.dark-x');
   --global-color-tertiary--xx-dark: design-token('colors.accent.3.dark-2x');
 
+  /* DEPRECATED */
+  --global-color-accent--secondary: var(--global-color-secondary--normal);
+  --global-color-accent--tertiary: var(--global-color-tertiary--normal);
+
   /* State */
 
   --global-color-info--x-light: design-token('color.info.light-x');
