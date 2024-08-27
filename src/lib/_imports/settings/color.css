@@ -95,6 +95,7 @@
   --global-color-extra--dark: design-token('color.extra.dark');
   --global-color-extra--x-dark: design-token('color.extra.dark-x');
 
+  /* DEPRECATED */
   --global-color-info--weak: rgb( from design-token('color.info.medium') r g b / 0.125 );
   --global-color-danger--weak: rgb( from design-token('color.danger.medium') r g b / 0.125 );
   --global-color-warning--weak: rgb( from design-token('color.warning.medium') r g b / 0.125 );
