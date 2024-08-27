@@ -114,6 +114,6 @@
   /* DEPRECATED */
   /* TODO: Rely on :--light-context and :--dark-context instead */
 
-  --global-color-link-on-light--normal: design-token('color.v2.blue.light-2x');
-  --global-color-link-on-dark--normal: design-token('color.v2.blue.light-2x');
+  --global-color-link-on-light--normal: var(--global-color-accent--normal);
+  --global-color-link-on-dark--normal: var(--global-color-accent--xxx-light);
 }
