@@ -454,124 +454,278 @@
         "value": "{colors.neutral.dark-2x}"
       }
     },
-    "blue": {
-      "light-2x": {
-        "type": "color",
-        "value": "{colors.accent.1.light-2x}"
+    "ds": {
+      "blue": {
+        "light-2x": {
+          "type": "color",
+          "value": "{colors.accent.1.light-2x}"
+        },
+        "light-x": {
+          "type": "color",
+          "value": "{colors.accent.1.light-x}"
+        },
+        "light": {
+          "type": "color",
+          "value": "{colors.accent.1.light}"
+        },
+        "medium": {
+          "type": "color",
+          "value": "{colors.accent.1.medium}"
+        },
+        "dark": {
+          "type": "color",
+          "value": "{colors.accent.1.dark}"
+        },
+        "dark-x": {
+          "type": "color",
+          "value": "{colors.accent.1.dark-x}"
+        },
+        "dark-2x": {
+          "type": "color",
+          "value": "{colors.accent.1.dark-2x}"
+        }
       },
-      "light-x": {
-        "type": "color",
-        "value": "{colors.accent.1.light-x}"
+      "teal": {
+        "light-2x": {
+          "type": "color",
+          "value": "{colors.accent.2.light-2x}"
+        },
+        "light-x": {
+          "type": "color",
+          "value": "{colors.accent.2.light-x}"
+        },
+        "light": {
+          "type": "color",
+          "value": "{colors.accent.2.light}"
+        },
+        "medium": {
+          "type": "color",
+          "value": "{colors.accent.2.medium}"
+        },
+        "dark": {
+          "type": "color",
+          "value": "{colors.accent.2.dark}"
+        },
+        "dark-x": {
+          "type": "color",
+          "value": "{colors.accent.2.dark-x}"
+        },
+        "dark-2x": {
+          "type": "color",
+          "value": "{colors.accent.2.dark-2x}"
+        }
       },
-      "light": {
-        "type": "color",
-        "value": "{colors.accent.1.light}"
-      },
-      "medium": {
-        "type": "color",
-        "value": "{colors.accent.1.medium}"
-      },
-      "dark": {
-        "type": "color",
-        "value": "{colors.accent.1.dark}"
-      },
-      "dark-x": {
-        "type": "color",
-        "value": "{colors.accent.1.dark-x}"
-      },
-      "dark-2x": {
-        "type": "color",
-        "value": "{colors.accent.1.dark-2x}"
+      "yellow": {
+        "light-2x": {
+          "type": "color",
+          "value": "{colors.accent.3.light-2x}"
+        },
+        "light-x": {
+          "type": "color",
+          "value": "{colors.accent.3.light-x}"
+        },
+        "light": {
+          "type": "color",
+          "value": "{colors.accent.3.light}"
+        },
+        "medium": {
+          "type": "color",
+          "value": "{colors.accent.3.medium}"
+        },
+        "dark": {
+          "type": "color",
+          "value": "{colors.accent.3.dark}"
+        },
+        "dark-x": {
+          "type": "color",
+          "value": "{colors.accent.3.dark-x}"
+        },
+        "dark-2x": {
+          "type": "color",
+          "value": "{colors.accent.3.dark-2x}"
+        }
       }
     },
-    "orange": {
-      "light-2x": {
+    "v3": {
+      "raisin": {
         "type": "color",
-        "value": "{colors.accent.2.light-2x}"
+        "value": "{colors.neutral.dark-2x}"
       },
-      "light-x": {
+      "blue": {
         "type": "color",
-        "value": "{colors.accent.2.light-x}"
+        "value": "{colors.accent.1.dark-2x}",
+        "light": {
+          "type": "color",
+          "value": "{colors.accent.1.dark-x}"
+        },
+        "lighter": {
+          "type": "color",
+          "value": "{colors.accent.1.dark}"
+        }
       },
-      "light": {
+      "orange": {
         "type": "color",
-        "value": "{colors.accent.2.light}"
+        "value": "{colors.accent.2.dark}",
+        "dark": {
+          "type": "color",
+          "value": "{colors.accent.2.dark-x}"
+        },
+        "light": {
+          "type": "color",
+          "value": "{colors.accent.2.medium}"
+        }
       },
-      "medium": {
+      "yellow": {
         "type": "color",
-        "value": "{colors.accent.2.medium}"
+        "value": "{colors.accent.3.medium}",
+        "dark": {
+          "type": "color",
+          "value": "{colors.accent.3.dark}"
+        },
+        "light": {
+          "type": "color",
+          "value": "{colors.accent.3.light}"
+        }
       },
-      "dark": {
+      "vanilla": {
         "type": "color",
-        "value": "{colors.accent.2.dark}"
+        "value": "{colors.accent.4.light-x}",
+        "darker": {
+          "type": "color",
+          "value": "{colors.accent.4.medium}"
+        },
+        "dark": {
+          "type": "color",
+          "value": "{colors.accent.4.light}"
+        }
       },
-      "dark-x": {
+      "ivory": {
         "type": "color",
-        "value": "{colors.accent.2.dark-x}"
-      },
-      "dark-2x": {
-        "type": "color",
-        "value": "{colors.accent.2.dark-2x}"
+        "value": "{colors.neutral.light-2x}"
       }
     },
-    "yellow": {
-      "light-2x": {
-        "type": "color",
-        "value": "{colors.accent.3.light-2x}"
+    "v2": {
+      "blue": {
+        "light-2x": {
+          "type": "color",
+          "value": "{colors.accent.1.light-2x}"
+        },
+        "light-x": {
+          "type": "color",
+          "value": "{colors.accent.1.light-x}"
+        },
+        "light": {
+          "type": "color",
+          "value": "{colors.accent.1.light}"
+        },
+        "medium": {
+          "type": "color",
+          "value": "{colors.accent.1.medium}"
+        },
+        "dark": {
+          "type": "color",
+          "value": "{colors.accent.1.dark}"
+        },
+        "dark-x": {
+          "type": "color",
+          "value": "{colors.accent.1.dark-x}"
+        },
+        "dark-2x": {
+          "type": "color",
+          "value": "{colors.accent.1.dark-2x}"
+        }
       },
-      "light-x": {
-        "type": "color",
-        "value": "{colors.accent.3.light-x}"
+      "gold": {
+        "light-2x": {
+          "type": "color",
+          "value": "{colors.accent.2.light-2x}"
+        },
+        "light-x": {
+          "type": "color",
+          "value": "{colors.accent.2.light-x}"
+        },
+        "light": {
+          "type": "color",
+          "value": "{colors.accent.2.light}"
+        },
+        "medium": {
+          "type": "color",
+          "value": "{colors.accent.2.medium}"
+        },
+        "dark": {
+          "type": "color",
+          "value": "{colors.accent.2.dark}"
+        },
+        "dark-x": {
+          "type": "color",
+          "value": "{colors.accent.2.dark-x}"
+        },
+        "dark-2x": {
+          "type": "color",
+          "value": "{colors.accent.2.dark-2x}"
+        }
       },
-      "light": {
-        "type": "color",
-        "value": "{colors.accent.3.light}"
-      },
-      "medium": {
-        "type": "color",
-        "value": "{colors.accent.3.medium}"
-      },
-      "dark": {
-        "type": "color",
-        "value": "{colors.accent.3.dark}"
-      },
-      "dark-x": {
-        "type": "color",
-        "value": "{colors.accent.3.dark-x}"
-      },
-      "dark-2x": {
-        "type": "color",
-        "value": "{colors.accent.3.dark-2x}"
+      "teal": {
+        "light-2x": {
+          "type": "color",
+          "value": "{colors.accent.3.light-2x}"
+        },
+        "light-x": {
+          "type": "color",
+          "value": "{colors.accent.3.light-x}"
+        },
+        "light": {
+          "type": "color",
+          "value": "{colors.accent.3.light}"
+        },
+        "medium": {
+          "type": "color",
+          "value": "{colors.accent.3.medium}"
+        },
+        "dark": {
+          "type": "color",
+          "value": "{colors.accent.3.dark}"
+        },
+        "dark-x": {
+          "type": "color",
+          "value": "{colors.accent.3.dark-x}"
+        },
+        "dark-2x": {
+          "type": "color",
+          "value": "{colors.accent.3.dark-2x}"
+        }
       }
     },
-    "vanilla": {
-      "light-2x": {
-        "type": "color",
-        "value": "{colors.accent.4.light-2x}"
-      },
-      "light-x": {
-        "type": "color",
-        "value": "{colors.accent.4.light-x}"
-      },
-      "light": {
-        "type": "color",
-        "value": "{colors.accent.4.light}"
-      },
-      "medium": {
-        "type": "color",
-        "value": "{colors.accent.4.medium}"
-      },
-      "dark": {
-        "type": "color",
-        "value": "{colors.accent.4.dark}"
-      },
-      "dark-x": {
-        "type": "color",
-        "value": "{colors.accent.4.dark-x}"
-      },
-      "dark-2x": {
-        "type": "color",
-        "value": "{colors.accent.4.dark-2x}"
+    "v1": {
+      "purple": {
+        "light-2x": {
+          "type": "color",
+          "value": "{colors.accent.1.light-2x}"
+        },
+        "light-x": {
+          "type": "color",
+          "value": "{colors.accent.1.light-x}"
+        },
+        "light": {
+          "type": "color",
+          "value": "{colors.accent.1.light}"
+        },
+        "medium": {
+          "type": "color",
+          "value": "{colors.accent.1.medium}"
+        },
+        "dark": {
+          "type": "color",
+          "value": "{colors.accent.1.dark}"
+        },
+        "dark-x": {
+          "type": "color",
+          "value": "{colors.accent.1.dark-x}"
+        },
+        "dark-2x": {
+          "type": "color",
+          "value": "{colors.accent.1.dark-2x}"
+        }
       }
     },
     "info": {

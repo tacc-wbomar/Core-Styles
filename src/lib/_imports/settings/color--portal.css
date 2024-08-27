@@ -1,8 +1,8 @@
-/* Load accent colors without scope */
 @import url("../settings/color.accent.css");
 
+@design-tokens url('../../tokens/Tokens.core-v3.Light.tokens.json') format('style-dictionary3');
+
 /* Set scope for accent colors */
-/* Override accent colors from base */
 @custom-selector :--light-context-safe
   :root;
 
