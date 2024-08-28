@@ -17,6 +17,8 @@ const TOKEN_FILE_DEST = `${__dirname}/../lib/tokens/${BRAND_PATTERN}.json`;
 function build() {
   let vars = getJsonFromYaml(TOKEN_FILE_SRC);
 
+  console.log('Creating tokens for ' + BRAND_LIST.join(', '));
+
   BRAND_LIST.forEach(brand => {
     buildTokenFile(vars, brand);
   });
@@ -28,8 +30,6 @@ function build() {
  * @param {string} brand - The brand of variables to get
  */
 function buildTokenFile(vars, brand) {
-  console.log(`Creating ${brand} tokens`);
-
   const dest = getTokenFileName(brand);
   const tokens = getBrandTokens(vars, brand);
 
