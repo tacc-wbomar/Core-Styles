@@ -41,6 +41,8 @@
 /* To layout icon and content */
 .admonition {
   --icon-block-width: 65px;
+  --pad-vert: 20px; /* c-message--expanded */
+  --pad-horz: 30px; /* c-message--expanded */
 
   display: grid;
   grid-template-columns: var(--icon-block-width) minmax(0, 1fr);
@@ -48,6 +50,7 @@
 
   padding-block: var(--pad-vert);
   padding-right: var(--pad-horz);
+  padding-left: 0;
 }
 /* To "stretch" icon to parent height */
 .admonition::before {

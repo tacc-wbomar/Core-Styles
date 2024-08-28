@@ -7,17 +7,14 @@
 /* Errors */
 
 :--form__errors--form {
-  @extend :--c-message;
-  @extend :--c-message--type;
-  @extend :--c-message--type-error;
-  @extend :--c-message--scope;
-  @extend :--c-message--scope-section;
-  @extend :--c-message--type-error:--c-message--scope-section;
+  @mixin message;
+  @mixin message--type-error;
+  @mixin message--scope-section;
+  @mixin message--type-error---message--scope-section;
 }
 :--form__errors--field li {
-  @extend :--c-message;
-  @extend :--c-message--type;
-  @extend :--c-message--type-error;
-  @extend :--c-message--scope;
-  @extend :--c-message--scope-inline;
+  @mixin message;
+  @mixin message--type-error;
+  @mixin message--scope-inline;
+  @mixin message--type-error---message--scope-inline;
 }
