@@ -12,7 +12,7 @@
 }
 :--form__errors--field li {
   @mixin message;
-  @extend :--c-message--type-error;
+  @mixin message--type-error;
   @mixin message--scope-inline;
   @mixin message--type-error---c-message--scope-inline;
 }
