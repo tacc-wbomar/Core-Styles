@@ -7,6 +7,22 @@
     @mixin message;
   }
 
+  .x-message--scope-inline.x-message--type-info {
+    @mixin message--type-info---message--scope-inline;
+  }
+  .x-message--scope-inline.x-message--type-success {
+    @mixin message--type-success---message--scope-inline;
+  }
+  .x-message--scope-inline.x-message--type-warning {
+    @mixin message--type-warning---message--scope-inline;
+  }
+  .x-message--scope-inline.x-message--type-error {
+    @mixin message--type-error---message--scope-inline;
+  }
+  .x-message--scope-inline.x-message--type-extra {
+    @mixin message--type-extra---message--scope-inline;
+  }
+
   .x-message--scope-section.x-message--type-info {
     @mixin message--type-info---message--scope-section;
   }
