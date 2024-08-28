@@ -44,7 +44,7 @@ function buildTokenFile(vars, brand) {
  */
 function getBrandTokens(vars, brand) {
   const source = vars[`Primitives/${brand}`];
-  const tokens = vars[`Tokens/${MODE}`];
+  const tokens = structuredClone(vars[`Tokens/${MODE}`]);
 
   BRAND_LIST.forEach(key => {
     if (key !== brand) {
