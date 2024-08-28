@@ -20,6 +20,7 @@
     "start": "fractal start --sync",
     "build": "npm run build:css && npm run build:demo",
     "build:css": "bin/build.js --build-id=$npm_config_build_id",
+    "build:tokens": "bin/build-tokens.js",
     "postbuild:css": "rm -rf dist/fonts && cp -r src/lib/fonts dist/fonts",
     "prebuild:demo": "rm -rf dist/_utils && cp -r src/lib/_utils dist/_utils",
     "prestart": "npm run prebuild:demo",
