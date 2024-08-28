@@ -8,19 +8,19 @@
   }
 
   .x-message--scope-section.x-message--type-info {
-    @mixin message--type-info--message--scope-section;
+    @mixin message--type-info---message--scope-section;
   }
   .x-message--scope-section.x-message--type-success {
-    @mixin message--type-success--message--scope-section;
+    @mixin message--type-success---message--scope-section;
   }
   .x-message--scope-section.x-message--type-warning {
-    @mixin message--type-warning--message--scope-section;
+    @mixin message--type-warning---message--scope-section;
   }
   .x-message--scope-section.x-message--type-error {
-    @mixin message--type-error--message--scope-section;
+    @mixin message--type-error---message--scope-section;
   }
   .x-message--scope-section.x-message--type-extra {
-    @mixin message--type-extra--message--scope-section;
+    @mixin message--type-extra---message--scope-section;
   }
 
   .x-message--scope-global {
