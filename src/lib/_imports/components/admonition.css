@@ -43,6 +43,10 @@
   @mixin message--has-icon---message--type-error;
   @mixin message--type-error---message--scope-section;
 }
+/* To change certain icons */
+.admonition:is(.tip)::before { content: "☀"; }
+.admonition:is(.warning)::before { content: "𝖷"; }
+.admonition:is(.error, .danger)::before { content: "ⓧ"; }
 
 /* To adjust spacing for certain elements */
 .admonition > .admonition-title + p { margin-top: 5px; }
