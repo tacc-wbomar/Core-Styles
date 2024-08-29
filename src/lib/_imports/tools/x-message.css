@@ -1,17 +1,30 @@
+@import url('../tools/x-link.css');
+@import url("../components/c-button.selectors.css");
+
+
 /* Elements */
 
-@define-mixin message {
-  padding: 10px;
+/* To prevent excess space at top and bottom of message */
 
-  /* To prevent excess space at top and bottom of message */
-  & > *:first-child { margin-top: 0; }
-  & > *:last-child { margin-bottom: 0; }
+@define-mixin message {
+  & > *:first-child {
+    margin-top: 0;
+  }
+
+  & > *:last-child {
+    margin-bottom: 0;
+  }
 }
 
 
 
 /* Modifiers */
 
+/* Modifiers: Scope-Inline & Type-* */
+
+@define-mixin message--scope-inline {
+  /* no common styles */
+}
 @define-mixin message--type-info---message--scope-inline {
   color: var(--global-color-info--x-dark);
 }
@@ -28,17 +41,28 @@
   color: var(--global-color-extra--x-dark);
 }
 
+/* Modifiers: Scope-Section & Type-* */
+
+@define-mixin message--scope-section {
+  color: var(--global-color-primary--dark);
+
+  border-width: var(--global-border-width--normal);
+  border-style: solid;
+
+  padding-block: 15px;
+  padding-inline: 20px;
+}
 @define-mixin message--type-info---message--scope-section {
   background-color: var(--global-color-info--x-light);
   border-color: var(--global-color-info--normal);
 }
 @define-mixin message--type-success---message--scope-section {
   background-color: var(--global-color-success--x-light);
-  border-color: var(--global-color-success--normal);
+  border-color: var(--global-color-success--x-dark);
 }
 @define-mixin message--type-warning---message--scope-section {
   background-color: var(--global-color-warning--x-light);
-  border-color: var(--global-color-warning--normal);
+  border-color: var(--global-color-warning--dark);
 }
 @define-mixin message--type-error---message--scope-section {
   background-color: var(--global-color-danger--x-light);
@@ -49,8 +73,55 @@
   border-color: var(--global-color-extra--normal);
 }
 
+/* Modifiers: Scope-Global */
+
 @define-mixin message--scope-global {
   color: var(--global-color-primary--xx-light);
   background-color: var(--global-color-accent--secondary);
   border-color: var(--global-color-primary--dark);
+
+  padding-block: 15px;
+  padding-inline: 20px;
+
+  border-width: 0;
+  text-align: center;
+
+  /* To avoid clash of link color with message color */
+  & a,
+  & :--c-button--as-link {
+    color: inherit !important; /* override :hover and :active */
+  }
+  /* To distinguish link from message text */
+  & a,
+  & :--c-button--as-link {
+    @mixin link--irregular;
+  }
+  & a:hover,
+  & :--c-button--as-link:hover {
+    @mixin link--irregular--hover;
+  }
+  & a:active,
+  & :--c-button--as-link:active {
+    @mixin link--irregular--active;
+  }
+}
+
+/* Modifiers: Type */
+
+/* To support icons (if needed) */
+/* SEE: ./admonition.css */
+@define-mixin message--type-info {
+  &::before { background-color: var(--global-color-info--normal); }
+}
+@define-mixin message--type-success {
+  &::before { background-color: var(--global-color-success--dark); }
+}
+@define-mixin message--type-warning {
+  &::before { background-color: var(--global-color-warning--normal); }
+}
+@define-mixin message--type-error {
+  &::before { background-color: var(--global-color-danger--normal); }
+}
+@define-mixin message--type-extra {
+  &::before { background-color: var(--global-color-extra--normal); }
 }

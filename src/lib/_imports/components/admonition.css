@@ -1,6 +1,4 @@
-@import url("../components/c-message.css");
-@import url("../components/c-message--expanded.css");
-@import url("../components/c-message.selectors.css");
+@import url("../tools/x-message.css");
 @import url("../tools/selectors.monospace.css");
 
 

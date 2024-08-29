@@ -25,31 +25,7 @@ variants:
     hidden: true
   - name: type
     label: by Type
-    status: prototype
-  - name: type-portal
-    label: by Type (Portal)
     status: ready
-    view: 'x-message--type.hbs'
-    context:
-      shouldLoadPortal: true
-  - name: type-cms
-    label: by Type (CMS)
-    status: ready
-    view: 'x-message--type.hbs'
-    context:
-      shouldLoadCMS: true
   - name: scope
     label: by Scope
-    status: prototype
-  - name: scope-portal
-    label: by Scope (Portal)
     status: ready
-    view: 'x-message--scope.hbs'
-    context:
-      shouldLoadPortal: true
-  - name: scope-cms
-    label: by Scope (CMS)
-    status: ready
-    view: 'x-message--scope.hbs'
-    context:
-      shouldLoadCMS: true
