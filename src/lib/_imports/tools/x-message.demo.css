@@ -7,6 +7,9 @@
     @mixin message;
   }
 
+  .x-message--scope-inline {
+    @mixin message--scope-inline;
+  }
   .x-message--scope-inline.x-message--type-info {
     @mixin message--type-info---message--scope-inline;
   }
@@ -23,6 +26,9 @@
     @mixin message--type-extra---message--scope-inline;
   }
 
+  .x-message--scope-section {
+    @mixin message--scope-section;
+  }
   .x-message--scope-section.x-message--type-info {
     @mixin message--type-info---message--scope-section;
   }

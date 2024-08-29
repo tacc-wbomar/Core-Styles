@@ -1,3 +1,4 @@
+@import url("../tools/x-message.css");
 @import url("../tools/selectors.form.css");
 
 
@@ -8,11 +9,11 @@
   @mixin message;
   @mixin message--type-error;
   @mixin message--scope-section;
-  @mixin message--type-error---c-message--scope-section;
+  @mixin message--type-error---message--scope-section;
 }
 :--form__errors--field li {
   @mixin message;
   @mixin message--type-error;
   @mixin message--scope-inline;
-  @mixin message--type-error---c-message--scope-inline;
+  @mixin message--type-error---message--scope-inline;
 }
