@@ -20,7 +20,7 @@ variants:
   - name: default
     hidden: true
   - name: type
-    label: by Type (Shared)
+    label: by Type
     status: ready
   - name: type-portal
     label: by Type (Portal)
@@ -34,7 +34,7 @@ variants:
     context:
       shouldLoadCMS: true
   - name: scope
-    label: by Scope (Shared)
+    label: by Scope
     status: ready
   - name: scope-portal
     label: by Scope (Portal)
