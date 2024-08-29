@@ -16,12 +16,18 @@
 }
 :--c-message--type-success:--c-message--scope-inline {
   @mixin message--type-success---message--scope-inline;
+  @mixin message--has-icon---message--type-success;
+  @mixin message--has-icon;
 }
 :--c-message--type-warning:--c-message--scope-inline {
   @mixin message--type-warning---message--scope-inline;
+  @mixin message--has-icon---message--type-warning;
+  @mixin message--has-icon;
 }
 :--c-message--type-error:--c-message--scope-inline {
   @mixin message--type-error---message--scope-inline;
+  @mixin message--has-icon---message--type-error;
+  @mixin message--has-icon;
 }
 :--c-message--type-extra:--c-message--scope-inline {
   @mixin message--type-extra---message--scope-inline;
@@ -48,20 +54,4 @@
 
 :--c-message--scope-global {
   @mixin message--scope-global;
-}
-
-:--c-message--type-info {
-  @mixin message--type-info;
-}
-:--c-message--type-success {
-  @mixin message--type-success;
-}
-:--c-message--type-warning {
-  @mixin message--type-warning;
-}
-:--c-message--type-error {
-  @mixin message--type-error;
-}
-:--c-message--type-extra {
-  @mixin message--type-extra;
 }
