@@ -5,10 +5,15 @@
 
 .admonition {
   @mixin message;
-  @mixin message--scope-section;
   @mixin message--has-icon;
+  @mixin message--scope-section;
+  @mixin message--has-icon---message--scope-section;
+
+  --icon-block-width: 65px;
+  --icon-size: 36px;
 
   padding-block: 20px;
+  padding-inline: 30px;
 }
 .admonition-title {
   font-weight: var(--bold);
@@ -21,31 +26,23 @@
 .admonition:is(.tip) {
   @mixin message--has-icon---message--type-extra;
   @mixin message--type-extra---message--scope-section;
-  @mixin message--has-icon---message--type-extra---message--scope-section;
 }
 .admonition:is(.hint) {
   @mixin message--has-icon---message--type-success;
   @mixin message--type-success---message--scope-section;
-  @mixin message--has-icon---message--type-success---message--scope-section;
 }
 .admonition:is(.note, .attention) {
   @mixin message--has-icon---message--type-info;
   @mixin message--type-info---message--scope-section;
-  @mixin message--has-icon---message--type-info---message--scope-section;
 }
 .admonition:is(.caution, .important) {
   @mixin message--has-icon---message--type-warning;
   @mixin message--type-warning---message--scope-section;
-  @mixin message--has-icon---message--type-warning---message--scope-section;
 }
 .admonition:is(.warning, .error, .danger) {
   @mixin message--has-icon---message--type-error;
   @mixin message--type-error---message--scope-section;
-  @mixin message--has-icon---message--type-error---message--scope-section;
 }
-
-/* To change certain icons */
-.admonition:is(.warning)::before { content: "𝖷"; }
 
 /* To adjust spacing for certain elements */
 .admonition > .admonition-title + p { margin-top: 5px; }

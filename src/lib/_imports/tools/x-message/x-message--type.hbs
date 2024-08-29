@@ -7,15 +7,9 @@
     {{> @x-message--single type=this.name
         scope="section" title="Section" content=this.content}}
     {{> @x-message--single type=this.name
-        scope="global" title="Global" content=this.content}}
-  </dd>
-  <dd>
-    {{> @x-message--single type=this.name
-        scope="inline" title="Inline" needs="icon" content=this.content}}
-    {{> @x-message--single type=this.name
         scope="section" title="Section" needs="icon" content=this.content}}
     {{> @x-message--single type=this.name
-        scope="global" title="Global" needs="icon" content=this.content}}
+        scope="global" title="Global" content=this.content}}
   </dd>
   {{/each}}
 </dl>

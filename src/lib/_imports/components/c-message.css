@@ -13,23 +13,24 @@
 }
 :--c-message--type-info:--c-message--scope-inline {
   @mixin message--type-info---message--scope-inline;
-  @mixin message--has-icon---message--type-info---message--scope-inline;
 }
 :--c-message--type-success:--c-message--scope-inline {
   @mixin message--type-success---message--scope-inline;
-  @mixin message--has-icon---message--type-success---message--scope-inline;
+  @mixin message--has-icon---message--type-success;
+  @mixin message--has-icon;
 }
 :--c-message--type-warning:--c-message--scope-inline {
   @mixin message--type-warning---message--scope-inline;
-  @mixin message--has-icon---message--type-warning---message--scope-inline;
+  @mixin message--has-icon---message--type-warning;
+  @mixin message--has-icon;
 }
 :--c-message--type-error:--c-message--scope-inline {
   @mixin message--type-error---message--scope-inline;
-  @mixin message--has-icon---message--type-error---message--scope-inline;
+  @mixin message--has-icon---message--type-error;
+  @mixin message--has-icon;
 }
 :--c-message--type-extra:--c-message--scope-inline {
   @mixin message--type-extra---message--scope-inline;
-  @mixin message--has-icon---message--type-extra---message--scope-inline;
 }
 
 :--c-message--scope-section {
@@ -53,8 +54,4 @@
 
 :--c-message--scope-global {
   @mixin message--scope-global;
-}
-
-:--c-message--has-icon {
-  @mixin message--has-icon;
 }

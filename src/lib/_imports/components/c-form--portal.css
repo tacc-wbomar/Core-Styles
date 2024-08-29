@@ -14,5 +14,4 @@
   @mixin message;
   @mixin message--scope-inline;
   @mixin message--type-error---message--scope-inline;
-  @mixin message--has-icon---message--type-error---message--scope-inline;
 }

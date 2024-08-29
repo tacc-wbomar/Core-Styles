@@ -1,10 +1,10 @@
 status: ready
 context:
   types:
-    - name: success
-      content: Notify user of a successful event.
     - name: info
       content: Notify user of any details that are <strong>not</strong> a problem.
+    - name: success
+      content: Notify user of a successful event.
     - name: warning
       content: Notify user of an <strong>un</strong>successful event that <em>could prevent</em> functionality.
     - name: error

@@ -1,7 +1,29 @@
+@import url('../tools/x-message.css');
+
 @import url("./c-message.selectors.css");
 
-:--c-message--scope-inline,
-:--c-message--scope-section,
-:--c-message--scope-global {
+
+
+:--c-message {
   font-size: var(--global-font-size--small);
+}
+
+:--c-message--type-info:--c-message--scope-section:--c-message--has-icon {
+  &::before { display: none; }
+}
+
+:--c-message--type-success:--c-message--scope-section {
+  @mixin message--has-icon---message--type-success;
+  @mixin message--has-icon---message--scope-section;
+  @mixin message--has-icon;
+}
+:--c-message--type-warning:--c-message--scope-section {
+  @mixin message--has-icon---message--type-warning;
+  @mixin message--has-icon---message--scope-section;
+  @mixin message--has-icon;
+}
+:--c-message--type-error:--c-message--scope-section {
+  @mixin message--has-icon---message--type-error;
+  @mixin message--has-icon---message--scope-section;
+  @mixin message--has-icon;
 }

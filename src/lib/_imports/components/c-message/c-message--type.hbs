@@ -9,13 +9,5 @@
     {{> @c-message--single type=this.name
         scope="global" title="Global" content=this.content}}
   </dd>
-  <dd>
-    {{> @c-message--single type=this.name
-        scope="inline" title="Inline" needs="icon" content=this.content}}
-    {{> @c-message--single type=this.name
-        scope="section" title="Section" needs="icon" content=this.content}}
-    {{> @c-message--single type=this.name
-        scope="global" title="Global" needs="icon" content=this.content}}
-  </dd>
   {{/each}}
 </dl>

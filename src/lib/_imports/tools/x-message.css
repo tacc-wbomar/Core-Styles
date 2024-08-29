@@ -23,34 +23,42 @@
 /* Modifiers: Scope-Inline & Type-* */
 
 @define-mixin message--scope-inline {
-  /* no common styles */
+  & > * {
+    display: inline;
+  }
+
+  /* IMPORTANT: Inline message has icon by default */
+  @mixin message--has-icon;
+  &::before {
+    margin-right: 0.5ch;
+
+    color: var(--icon-color);
+  }
 }
 @define-mixin message--type-info---message--scope-inline {
-  color: var(--global-color-info--x-dark);
+  /* no common styles */
 }
 @define-mixin message--type-success---message--scope-inline {
-  color: var(--global-color-success--x-dark);
+  /* no common styles */
 }
 @define-mixin message--type-warning---message--scope-inline {
-  color: var(--global-color-warning--x-dark);
+  /* no common styles */
 }
 @define-mixin message--type-error---message--scope-inline {
-  color: var(--global-color-danger--x-dark);
+  color: var(--global-color-danger--dark);
 }
 @define-mixin message--type-extra---message--scope-inline {
-  color: var(--global-color-extra--x-dark);
+  /* no common styles */
 }
 
 /* Modifiers: Scope-Section & Type-* */
 
 @define-mixin message--scope-section {
-  color: var(--global-color-primary--dark);
-
   border-width: var(--global-border-width--normal);
   border-style: solid;
 
-  padding-block: 15px;
-  padding-inline: 20px;
+  padding-block: 8px;
+  padding-inline: 12px;
 }
 @define-mixin message--type-info---message--scope-section {
   background-color: var(--global-color-info--x-light);
@@ -66,7 +74,7 @@
 }
 @define-mixin message--type-error---message--scope-section {
   background-color: var(--global-color-danger--x-light);
-  border-color: var(--global-color-danger--normal);
+  border-color: var(--global-color-danger--dark);
 }
 @define-mixin message--type-extra---message--scope-section {
   background-color: var(--global-color-extra--x-light);
@@ -80,8 +88,8 @@
   background-color: var(--global-color-accent--secondary);
   border-color: var(--global-color-primary--dark);
 
-  padding-block: 15px;
-  padding-inline: 20px;
+  padding-block: 8px;
+  padding-inline: 12px;
 
   border-width: 0;
   text-align: center;
@@ -108,12 +116,21 @@
 
 /* Modifiers: Icon */
 
-/* To style icon */
 @define-mixin message--has-icon {
-  --icon-block-width: 65px;
+  &::before {
+    font-family: var(--icon);
+  }
+}
+
+/* IMPORTANT: Inline message has icon by default */
+
+/* IMPORTANT: Section message NO icon by default */
+@define-mixin message--has-icon---message--scope-section {
+  --icon-block-width: 32px;
+  --icon-size: 16px;
 
   position: relative;
-  border-left: var(--icon-block-width) solid transparent;
+  border-left-width: var(--icon-block-width);
 
   &::before {
     position: absolute;
@@ -124,7 +141,7 @@
     margin-left: var(--global-border-width--normal);
 
     color: var(--global-color-primary--xx-light);
-    font-size: 36px;
+    font-size: var(--icon-size);
 
     /* To take up left column */
     grid-row: 1 / span 99; /* 99 is for arbitrary implicit row count */
@@ -138,49 +155,27 @@
 
 /* NOTE: Client is expected to overwrite these */
 @define-mixin message--has-icon---message--type-info {
-  &::before { content: "☀"; }
+  --icon-color: var(--global-color-info--normal);
+
+  &::before { content: "✎"; }
 }
 @define-mixin message--has-icon---message--type-success {
+  --icon-color: var(--global-color-success--x-dark);
+
   &::before { content: "✓"; }
 }
 @define-mixin message--has-icon---message--type-warning {
+  --icon-color: var(--global-color-warning--dark);
+
   &::before { content: "⚠"; }
 }
 @define-mixin message--has-icon---message--type-error {
-  &::before { content: "𝗫"; }
+  --icon-color: var(--global-color-danger--dark);
+
+  &::before { content: "⚠"; }
 }
 @define-mixin message--has-icon---message--type-extra {
+  --icon-color: var(--global-color-extra--normal);
+
   &::before { content: "✎"; }
-}
-
-@define-mixin message--has-icon---message--type-info---message--scope-inline {
-  &::before { color: var(--global-color-info--normal); }
-}
-@define-mixin message--has-icon---message--type-success---message--scope-inline {
-  &::before { color: var(--global-color-success--dark); }
-}
-@define-mixin message--has-icon---message--type-warning---message--scope-inline {
-  &::before { color: var(--global-color-warning--normal); }
-}
-@define-mixin message--has-icon---message--type-error---message--scope-inline {
-  &::before { color: var(--global-color-danger--normal); }
-}
-@define-mixin message--has-icon---message--type-extra---message--scope-inline {
-  &::before { color: var(--global-color-extra--normal); }
-}
-
-@define-mixin message--has-icon---message--type-info---message--scope-section {
-  &::before { background-color: var(--global-color-info--normal); }
-}
-@define-mixin message--has-icon---message--type-success---message--scope-section {
-  &::before { background-color: var(--global-color-success--dark); }
-}
-@define-mixin message--has-icon---message--type-warning---message--scope-section {
-  &::before { background-color: var(--global-color-warning--normal); }
-}
-@define-mixin message--has-icon---message--type-error---message--scope-section {
-  &::before { background-color: var(--global-color-danger--normal); }
-}
-@define-mixin message--has-icon---message--type-extra---message--scope-section {
-  &::before { background-color: var(--global-color-extra--normal); }
 }
