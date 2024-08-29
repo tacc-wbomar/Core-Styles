@@ -48,4 +48,8 @@
   .x-message--scope-global {
     @mixin message--scope-global;
   }
+
+  .x-message--has-icon {
+    @mixin message--has-icon;
+  }
 }

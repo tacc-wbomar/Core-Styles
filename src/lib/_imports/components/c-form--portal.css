@@ -7,13 +7,12 @@
 
 :--form__errors--form {
   @mixin message;
-  @mixin message--type-error;
   @mixin message--scope-section;
   @mixin message--type-error---message--scope-section;
 }
 :--form__errors--field li {
   @mixin message;
-  @mixin message--type-error;
   @mixin message--scope-inline;
   @mixin message--type-error---message--scope-inline;
+  @mixin message--has-icon---message--type-error---message--scope-inline;
 }

@@ -11,5 +11,15 @@
     {{> @c-message--single scope=this.name
         type="error" title="Error" content=this.content}}
   </dd>
+  <dd>
+    {{> @c-message--single scope=this.name
+        type="success" title="Success" needs="icon" content=this.content}}
+    {{> @c-message--single scope=this.name
+        type="info" title="Info" needs="icon" content=this.content}}
+    {{> @c-message--single scope=this.name
+        type="warning" title="Warning" needs="icon" content=this.content}}
+    {{> @c-message--single scope=this.name
+        type="error" title="Error" needs="icon" content=this.content}}
+  </dd>
   {{/each}}
 </dl>
