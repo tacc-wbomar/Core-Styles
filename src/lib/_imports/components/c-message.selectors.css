@@ -33,3 +33,7 @@
 @custom-selector :--c-message--scope-global
     .c-message--scope-global,
     .message--scope-global;
+
+@custom-selector :--c-message--has-icon
+    .c-message--has-icon,
+    .message--has-icon;

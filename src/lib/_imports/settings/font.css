@@ -28,6 +28,7 @@ Styleguide Settings.CustomProperties.Font
   --sans--portal: "Roboto", sans-serif;
   --serif: sans-serif;
   --mono: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  --icon: "Hiragino Sans", monospace;
 
   /* Weight */
   /* https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight */
