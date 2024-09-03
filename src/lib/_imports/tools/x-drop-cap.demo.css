@@ -6,8 +6,4 @@
   .x-drop-cap::first-letter {
     @mixin drop-cap;
   }
-
-  .x-drop-cap--webkit::first-letter {
-    @mixin drop-cap--webkit;
-  }
 }
