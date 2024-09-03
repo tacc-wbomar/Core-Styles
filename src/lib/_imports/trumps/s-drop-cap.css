@@ -3,5 +3,4 @@
 .s-drop-cap::first-letter,
 .s-drop-cap > p:first-of-type::first-letter {
   @mixin drop-cap;
-  @mixin drop-cap--webkit;
 }
