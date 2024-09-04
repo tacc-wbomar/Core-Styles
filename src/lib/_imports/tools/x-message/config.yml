@@ -1,4 +1,4 @@
-status: wip
+status: ready
 context:
   supportStyles:
     - ../../assets/tools/x-message.demo.css
