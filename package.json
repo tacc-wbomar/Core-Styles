@@ -80,6 +80,9 @@
       "patterns": "src/**/*",
       "extensions": "css",
       "ignore": "fractal.server.refresh.css"
+    },
+    "build:watch": {
+      "patterns": "src/**/tokens.json"
     }
   }
 }
