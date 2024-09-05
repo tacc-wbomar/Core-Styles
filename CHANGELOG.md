@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.32.1] - 2024-09-05: Fix `:--dark-context-safe` & Deprecated Vars
+
+### Fixed
+
+- fix: docs \& portal not parse `:--dark-context-safe` (#388)
+- fix: portal deprecated colors (#387)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.32.0...v2.32.1
+
 ## [2.32.0] - 2024-09-05: Purple Accent to Blue, Add Design Tokens & Weights
 
 ### Added
@@ -1172,7 +1181,8 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.32.0...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.32.1...HEAD
+[2.32.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.32.1
 [2.32.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.32.0
 [2.31.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.31.0
 [2.30.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.30.1
