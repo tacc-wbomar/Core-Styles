@@ -51,6 +51,7 @@ Styleguide Settings.CustomProperties.Font
   --ultra-black: 950;
 }
 
+/* DEPRECATED */
 /* For backwards-compatibility with v0, v1, v2.23 */
 :root {
   --global-font-family--sans--cms: var(--sans--cms);
