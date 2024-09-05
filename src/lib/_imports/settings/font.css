@@ -31,11 +31,11 @@ Styleguide Settings.CustomProperties.Font
   --icon: "Hiragino Sans", monospace;
 
   /* Weight */
-  /* https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight */
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight#common_weight_name_mapping */
   --regular: 400;
   --medium: 500;
   --bold: 700;
-  --black: 800;
+  --black: 900;
 }
 
 /* For backwards-compatibility with v0, v1, v2.23 */
