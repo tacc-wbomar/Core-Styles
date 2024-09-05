@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.32.0] - 2024-09-05: Purple Accent to Blue, Add Design Tokens & Weights
+
+### Added
+
+- enhance: CMD-182 design tokens (#372)
+- feat: all font-weight vars (#385)
+
+### Fixed
+
+- fix: font weight black should be 900 not 800 (#384)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.31.0...v2.32.0
+
 ## [2.31.0] - 2024-09-03: Portal v2 Message Style, Drop-Cap Mixin
 
 ### Added
