@@ -20,6 +20,7 @@
     "start": "fractal start --sync",
     "build": "npm run build:css && npm run build:demo",
     "build:css": "bin/build.js --build-id=$npm_config_build_id",
+    "build:tokens": "bin/build-tokens.js",
     "postbuild:css": "rm -rf dist/fonts && cp -r src/lib/fonts dist/fonts",
     "prebuild:demo": "rm -rf dist/_utils && cp -r src/lib/_utils dist/_utils",
     "prestart": "npm run prebuild:demo",
@@ -36,6 +37,7 @@
   "homepage": "https://github.com/TACC/Core-Styles",
   "repository": "git@github.com:TACC/Core-Styles.git",
   "peerDependencies": {
+    "@csstools/postcss-design-tokens": "^4.0.1",
     "commander": "^9.4.1",
     "cssnano": "^5.1.15",
     "js-yaml": "^4.1.0",
@@ -51,6 +53,7 @@
     "postcss-replace": "^2.0.1"
   },
   "// peerDependencies": {
+    "@csstools/postcss-design-tokens": "To convert design tokens to custom properties",
     "commander": "To create CLI",
     "cssnano": "To minify CSS",
     "js-yaml": "To parse PostCSS configs",
@@ -77,6 +80,9 @@
       "patterns": "src/**/*",
       "extensions": "css",
       "ignore": "fractal.server.refresh.css"
+    },
+    "build:watch": {
+      "patterns": "src/**/tokens.json"
     }
   }
 }

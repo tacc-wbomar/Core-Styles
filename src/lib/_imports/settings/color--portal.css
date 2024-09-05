@@ -1,16 +1,18 @@
-/* Load accent colors without scope */
-@import url("../settings/color.accent--purple.css");
+@import url("../settings/color.accent.css");
+
+@design-tokens url('../../tokens/v2.json') format('style-dictionary3');
 
 /* Set scope for accent colors */
-/* Override accent colors from base */
 @custom-selector :--light-context-safe
   :root;
 
 /* Override other colors from base */
 /* FAQ: Updating portal colors was delayed (to reduce complexity of TUP redesign) */
 :root {
-  /* TODO: Update clients to use --global-color-accent--xx-light instead */
-  --global-color-accent--alt: #d2cce7;
-  /* TODO: Update clients to use --global-color-accent--x-light instead */
-  --global-color-accent--weak: #6039cc40; /* similar to #E3D7FD on #f4f4f4 */
+  /* DEPRECATED */
+  --global-color-accent--alt: var(--global-color-accent--xx-light);
+  --global-color-accent--weak: var(--global-color-accent--x-light);
+  --global-color-success--weak: rgb( from design-token('color.success.medium') r g b / 0.5);
+  --global-color-warning--weak: rgb( from design-token('color.warning.medium') r g b / 0.5);
+  --global-color-danger--weak: rgb( from design-token('color.danger.medium') r g b / 0.5);
 }
