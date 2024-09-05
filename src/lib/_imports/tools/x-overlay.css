@@ -12,11 +12,11 @@ Styleguide Tools.Mixins.Overlay
 
 %x-overlay--curtain {
   color: inherit;
-  background-color: rgba( from design-token('color.gray.medium'), 0.65 );
+  background-color: rgb( from design-token('color.gray.medium') r g b / 0.65 );
   backdrop-filter: blur(6px);
 }
 
 %x-overlay--callout {
   color: inherit;
-  background-color: rgba( from design-token('color.gray.medium'), 0.90 );
+  background-color: rgb( from design-token('color.gray.medium') r g b / 0.90 );
 }
