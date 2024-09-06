@@ -1,4 +1,5 @@
 @import url("../tools/selectors.css");
+@import url("../components/c-button.selectors.css");
 
 @import url("./s-footer.properties.css");
 
@@ -18,11 +19,12 @@
   padding-inline: var(--pad-horz--thin);
 }
 
-.s-footer a:not(:hover) {
-  color: var(--global-color-primary--light);
+.s-footer a:not(:--c-button, :hover) {
+    color: var(--global-color-primary--light)
 }
-.s-footer a:hover {
-  color: var(--global-color-accent--light-old);
+
+.s-footer a:not(:--c-button):hover {
+    color: var(--global-color-accent--light-old)
 }
 
 .s-footer :--heading {
