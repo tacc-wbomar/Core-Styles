@@ -13,7 +13,8 @@
   :--c-card--plain;
 @custom-selector :--dark-context
   .c-recognition--style-dark,
-  :--o-section--dark;
+  :--o-section--dark,
+  .s-footer;
 
 @custom-selector :--light-context-safe
   :where(:--dark-context :--light-context);
