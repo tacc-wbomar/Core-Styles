@@ -1,3 +1,5 @@
+@import url("../tools/selectors.css");
+
 @import url("./s-footer.properties.css");
 
 .s-footer {
@@ -21,6 +23,10 @@
 }
 .s-footer a:hover {
   color: var(--global-color-accent--light-old);
+}
+
+.s-footer :--heading {
+  color: var(--global-color-primary--xx-light);
 }
 
 /* Let paragraphs behave normally */
