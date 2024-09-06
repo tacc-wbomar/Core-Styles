@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.33.0] - 2024-09-06: Heading & Link Color in `s-footer`, Fix Build Watch
+
+### Added
+
+- enhance: white headings in s-footer (#391)
+- enhance: accent color in s-footer (#390, #392)
+
+### Fixed
+
+- fix: npm run watch not working on css (#393)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.32.1...v2.33.0
+
 ## [2.32.1] - 2024-09-05: Fix `:--dark-context-safe` & Deprecated Vars
 
 ### Fixed
@@ -1181,7 +1194,8 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.32.1...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.33.0...HEAD
+[2.33.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.33.0
 [2.32.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.32.1
 [2.32.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.32.0
 [2.31.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.31.0
