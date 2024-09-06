@@ -73,11 +73,16 @@
     "@frctl/handlebars": "^1.2.15",
     "@frctl/mandelbrot": "^1.10.1",
     "minimist": "^1.2.7",
-    "npm-watch": "^0.11.0"
+    "npm-watch": "^0.13.0"
   },
   "watch": {
     "build:watch": {
-      "patterns": "src/**/tokens.json"
+      "patterns": "src/**/*",
+      "extensions": "css,json",
+      "ignore": [
+        "fractal.server.refresh.css",
+        "tokens/*.json"
+      ]
     }
   }
 }
