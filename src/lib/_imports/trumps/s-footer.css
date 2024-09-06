@@ -37,3 +37,8 @@
 }
 .s-footer > p:first-of-type { margin-top: 0; }
 .s-footer > p:last-of-type { margin-bottom: 0; }
+
+/* To suggest semantic solution for horiontal lines */
+.s-footer hr {
+    margin-block: 1rem;
+}
