@@ -16,9 +16,11 @@
   padding-inline: var(--pad-horz--thin);
 }
 
-.s-footer a {
-  /* NOTE: Design by M.S. (for TACC), confirmed by H.P. (for TACC CMS) */
+.s-footer a:not(:hover) {
   color: var(--global-color-primary--light);
+}
+.s-footer a:hover {
+  color: var(--global-color-accent--light-old);
 }
 
 /* Let paragraphs behave normally */
