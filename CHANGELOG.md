@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.33.1] - 2024-09-09: Restore v1/Portal Messages
+
+## 🪲 Fixed
+
+- fix: revert PR #377 manually since design tokens (#396, #397)
+
+## ⚠️ Changed
+
+- refactor: simpler global message links styles (#395)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.33.0...v2.33.1
+
 ## [2.33.0] - 2024-09-06: Heading & Link Color in `s-footer`, Fix Build Watch
 
 ### Added
@@ -1194,7 +1206,8 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.33.0...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.33.1...HEAD
+[2.33.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.33.1
 [2.33.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.33.0
 [2.32.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.32.1
 [2.32.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.32.0
