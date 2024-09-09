@@ -21,19 +21,19 @@
 }
 
 :--c-message--type-info {
-  @mixin message-v1--type-info color;
+  @mixin message-v1--type-info;
 }
 :--c-message--type-success {
-  @mixin message-v1--type-success color;
+  @mixin message-v1--type-success;
 }
 :--c-message--type-warning {
-  @mixin message-v1--type-warning color;
+  @mixin message-v1--type-warning;
 }
 :--c-message--type-error {
-  @mixin message-v1--type-error color;
+  @mixin message-v1--type-error;
 }
 :--c-message--type-extra {
-  @mixin message-v1--type-extra color;
+  @mixin message-v1--type-extra;
 }
 
 :--c-message--type-info:--c-message--scope-section {
