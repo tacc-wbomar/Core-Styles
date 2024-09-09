@@ -1,21 +1,8 @@
-@import url("../settings/color.accent.css");
-
-@design-tokens url('../../tokens/v2.json') format('style-dictionary3');
+@import url("./color--portal.v1.css");
+@import url("./color--portal.v2.css");
 
 /* Set scope for accent colors */
 @custom-selector :--light-context-safe
   :root;
 @custom-selector :--dark-context-safe
   .u-dark-context;
-
-
-/* Override other colors from base */
-/* FAQ: Updating portal colors was delayed (to reduce complexity of TUP redesign) */
-:root {
-  /* DEPRECATED */
-  --global-color-accent--alt: var(--global-color-accent--x-light);
-  --global-color-accent--weak: var(--global-color-accent--xx-light);
-  --global-color-success--weak: rgb( from design-token('color.success.medium') r g b / 0.5);
-  --global-color-warning--weak: rgb( from design-token('color.warning.medium') r g b / 0.5);
-  --global-color-danger--weak: rgb( from design-token('color.danger.medium') r g b / 0.5);
-}
