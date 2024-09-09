@@ -56,6 +56,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [2.31.0] - 2024-09-03: Portal v2 Message Style, Drop-Cap Mixin
 
+> **Warning**
+> Portal v1 message style restored in [2.33.1].
+
 ### Added
 
 - feat: let s-drop-cap be used intuitively (#381)
