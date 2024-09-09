@@ -9,11 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [2.33.1] - 2024-09-09: Restore v1/Portal Messages
 
-## 🪲 Fixed
+### Fixed
 
 - fix: revert PR #377 manually since design tokens (#396, #397)
 
-## ⚠️ Changed
+### Changed
 
 - refactor: simpler global message links styles (#395)
 
