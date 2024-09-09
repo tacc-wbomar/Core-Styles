@@ -94,23 +94,22 @@
   border-width: 0;
   text-align: center;
 
-  /* To avoid clash of link color with message color */
-  & a,
-  & :--c-button--as-link {
-    color: inherit !important; /* override :hover and :active */
-  }
-  /* To distinguish link from message text */
-  & a,
-  & :--c-button--as-link {
-    @mixin link--irregular;
-  }
-  & a:hover,
-  & :--c-button--as-link:hover {
-    @mixin link--irregular--hover;
-  }
-  & a:active,
-  & :--c-button--as-link:active {
-    @mixin link--irregular--active;
+  & :is(a, :--c-button--as-link) {
+    /* To distinguish link from message text */
+    & {
+      @mixin link--irregular;
+    }
+    &:hover {
+      @mixin link--irregular--hover;
+    }
+    &:active {
+      @mixin link--irregular--active;
+    }
+
+    /* To avoid clash of link color with message color */
+    &:is(*, :hover, :active) {
+      color: inherit;
+    }
   }
 }
 
