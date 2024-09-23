@@ -106,6 +106,9 @@
 
 :--c-card > a:not(:--c-button),
 :--c-card > p > a:not(:--c-button) {
+    /* XXX: Prevents text around it from wrapping if link spans two lines */
+    /* FAQ: To fix on client, `class="d-inline"` or `style="display: inline"` */
+    /* ???: Why does this use `inline-flex`? */
     display: inline-flex;
     align-items: baseline;
 }
