@@ -60,23 +60,6 @@ function config(customConfigFiles = [], cssVersion) {
 }
 
 /**
- * Customize the merge for specific use cases
- * @param {*} targetValue - value for the key for target object
- * @param {*} currentValue - value for the key for current object
- * @param {string} key - the key for both objects
- * @param {object} targetObject - the object receiving new values
- * @param {object} currentObject - the object providing new values
- * @see https://lodash.com/docs/4.17.15#mergeWith (`customizer`)
- */
-function customizeMerge(
-  targetValue, currentValue, key, targetObject, currentObject
-) {
-  if (key === 'postcss-import-url') {
-    return targetValue.concat(currentValue)
-  }
-}
-
-/**
  * Update the value for the CSS version in given config data
  * @param {object} config - The config data in which to update the version
  * @param {string} version - The version identifier
