@@ -26,9 +26,27 @@ function config(customConfigFiles = [], cssVersion) {
   // Initialize final config file
   emptyOrCreateFile(NEW_CONFIG_FILE);
 
+  // Manipulate config order
+  configFiles.forEach((nextFile) => {
+    const testJson = getConfigObject(nextFile);
+
+    // The 'postcss-import-url' should be moved to front of config
+    if (Object.hasOwn(testJson, 'postcss-import-url')) {
+      configObjects.unshift({
+        'postcss-import-url': newJson['postcss-import-url']
+      });
+    }
+  });
+
   // Merge configs in order
   configFiles.forEach((nextFile) => {
     newJson = getConfigObject(nextFile);
+
+    // The 'postcss-import-url' would have been moved to front of config
+    if (Object.hasOwn(newJson, 'postcss-import-url')) {
+      delete newJson['postcss-import-url'];
+    }
+
     configObjects.push(newJson);
   });
   const mergedJson = merge(...configObjects);
@@ -39,6 +57,23 @@ function config(customConfigFiles = [], cssVersion) {
 
   // Write final config file
   fs.writeFileSync(NEW_CONFIG_FILE, configYaml, 'utf8');
+}
+
+/**
+ * Customize the merge for specific use cases
+ * @param {*} targetValue - value for the key for target object
+ * @param {*} currentValue - value for the key for current object
+ * @param {string} key - the key for both objects
+ * @param {object} targetObject - the object receiving new values
+ * @param {object} currentObject - the object providing new values
+ * @see https://lodash.com/docs/4.17.15#mergeWith (`customizer`)
+ */
+function customizeMerge(
+  targetValue, currentValue, key, targetObject, currentObject
+) {
+  if (key === 'postcss-import-url') {
+    return targetValue.concat(currentValue)
+  }
 }
 
 /**
