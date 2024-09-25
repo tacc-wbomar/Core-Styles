@@ -26,7 +26,7 @@ function config(customConfigFiles = [], cssVersion) {
   // Initialize final config file
   emptyOrCreateFile(NEW_CONFIG_FILE);
 
-  // Manipulate config order
+  // Manipulate final config
   configFiles.forEach((nextFile) => {
     const testJson = getConfigObject(nextFile);
 
