@@ -31,9 +31,12 @@ function config(customConfigFiles = [], cssVersion) {
     const testJson = getConfigObject(nextFile);
 
     // The 'postcss-import-url' should be moved to front of config
-    if (Object.hasOwn(testJson, 'postcss-import-url')) {
+    if (testJson.plugins && 'postcss-import-url' in testJson.plugins) {
+
       configObjects.unshift({
-        'postcss-import-url': newJson['postcss-import-url']
+        'plugins': {
+          'postcss-import-url': testJson.plugins['postcss-import-url']
+        }
       });
     }
   });
@@ -43,8 +46,9 @@ function config(customConfigFiles = [], cssVersion) {
     newJson = getConfigObject(nextFile);
 
     // The 'postcss-import-url' would have been moved to front of config
-    if (Object.hasOwn(newJson, 'postcss-import-url')) {
-      delete newJson['postcss-import-url'];
+    if (newJson.plugins && 'postcss-import-url' in newJson.plugins) {
+
+      delete newJson.plugins['postcss-import-url'];
     }
 
     configObjects.push(newJson);
