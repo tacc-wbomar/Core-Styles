@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
-## [2.34.0] - 2024-09-27: support `@mixin overlay`, `postcss-import-url`
+## [2.34.0] - 2024-09-27: Support `@mixin overlay`, `postcss-import-url`
 
 ### Added
 
