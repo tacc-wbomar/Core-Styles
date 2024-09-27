@@ -7,18 +7,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
-## [2.33.1] - 2024-09-09: Restore v1/Portal Messages
-
-### Fixed
-
-- fix: revert PR #377 manually since design tokens (#396, #397)
-
-### Changed
-
-- refactor: simpler global message links styles (#395)
-
-**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.33.0...v2.33.1
-
 ## [2.34.0] - 2024-09-27: support `@mixin overlay`, `postcss-import-url`
 
 ### Added
@@ -31,6 +19,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - build(deps-dev): bump express from 4.19.2 to 4.21.0 (#399)
 
 **Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.33.1...v2.34.0
+
+## [2.33.1] - 2024-09-09: Restore v1/Portal Messages
+
+### Fixed
+
+- fix: revert PR #377 manually since design tokens (#396, #397)
+
+### Changed
+
+- refactor: simpler global message links styles (#395)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.33.0...v2.33.1
 
 ## [2.33.0] - 2024-09-06: Heading & Link Color in `s-footer`, Fix Build Watch
 
