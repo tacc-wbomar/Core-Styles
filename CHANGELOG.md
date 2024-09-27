@@ -19,6 +19,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 **Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.33.0...v2.33.1
 
+## [2.34.0] - 2024-09-27: support `@mixin overlay`, `postcss-import-url`
+
+### Added
+
+- feat: WP-280 @mixin overlay (#402)
+- feat: support postcss-import-url if configured (#401)
+
+### Updated
+
+- build(deps-dev): bump express from 4.19.2 to 4.21.0 (#399)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.33.1...v2.34.0
+
 ## [2.33.0] - 2024-09-06: Heading & Link Color in `s-footer`, Fix Build Watch
 
 ### Added
@@ -1209,7 +1222,8 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.33.1...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.34.0...HEAD
+[2.34.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.34.0
 [2.33.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.33.1
 [2.33.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.33.0
 [2.32.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.32.1
