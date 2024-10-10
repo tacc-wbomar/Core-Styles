@@ -24,7 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- feat: WP-280 @mixin overlay (#402)
+- feat: WP-280 `@mixin` overlay (#402)
 - feat: support postcss-import-url if configured (#401)
 
 ### Updated
