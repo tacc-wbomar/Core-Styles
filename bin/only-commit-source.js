@@ -8,18 +8,18 @@ function findBuiltFiles( dir ) {
   for ( const file of files ) {
     const filePath = path.join( dir, file );
     const relativePath = path.relative( path.join( __dirname, '../src'), filePath );
-    const isDirectory = (fs.statSync( filePath )).isDirectory();
+    const isDirectory = fs.statSync( filePath ).isDirectory();
 
     if ( isDirectory ) {
-      builtFiles = builtFiles.concat( findBuiltFiles( filePath ));
+      builtFiles.push(...findBuiltFiles( filePath ));
       continue;
     }
 
     const isProbablyBuilt = filePath.endsWith('.css');
     const shouldIgnore = (
-      relativePath.match(/^lib\/_imports\/[^/]+\/[^/]+\/[^/]+\.css$/)
-      || relativePath.match('_imports/vendors')
-      || filePath.endsWith('README.css')
+      /^lib\/_imports\/[^/]+\/[^/]+\/[^/]+\.css$/.test(relativePath) ||
+      relativePath.includes('_imports/vendors') ||
+      filePath.endsWith('README.css')
     );
 
     if ( isProbablyBuilt && ! shouldIgnore ) {
@@ -31,17 +31,19 @@ function findBuiltFiles( dir ) {
 }
 
 const sourceDir = path.join( __dirname, '../', 'src');
-const filesBuilt = findBuiltFiles( sourceDir );
+const sourceFiles = findBuiltFiles( sourceDir );
 
-if ( filesBuilt.length > 0 ) {
+if ( sourceFiles.length > 0 ) {
   console.error(
-    `Found ${filesBuilt.length} dist files in source. Remove to permit publish:`
+    `Found ${sourceFiles.length} dist files in source. Remove to permit publish:`
   );
-  filesBuilt.forEach( file =>
+  sourceFiles.forEach( file =>
     console.error(`- ${file}`)
   );
 
   process.exit(1);
 } else {
-  console.log('No dist files found in source. Ready to publish.');
+  console.log(
+    'No dist files found in source. Ready to publish.'
+  );
 }
