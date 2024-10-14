@@ -40,4 +40,6 @@ if ( filesBuilt.length > 0 ) {
   );
 
   process.exit(1);
+} else {
+  console.log('No dist files found in source. Ready to publish.');
 }
