@@ -4,9 +4,6 @@ node_modules
 # PostCSS
 .postcssrc.yml
 
-# Core-Styles
-dist
-
 # Fractal
 demo
 ## Files used directly by demo but not clients, yet provided via dist
