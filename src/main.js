@@ -26,7 +26,7 @@ function buildStylesheets(input, output, opts = {}) {
   const buildOpts = {
     verbose: opts.verbose || null,
     baseMirrorDir: opts.baseMirrorDir || null,
-    fileExt: opts.fileExt || null,
+    fileExt: opts.fileExt || `.css`,
   };
 
   const inputResolved = resolve(input);
