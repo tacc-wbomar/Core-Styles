@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 
@@ -7,7 +9,7 @@ function findBuiltFiles( dir ) {
 
   for ( const file of files ) {
     const filePath = path.join( dir, file );
-    const relativePath = path.relative( path.join( __dirname, '../src'), filePath );
+    const relativePath = path.relative( path.join( __dirname, '../'), filePath );
     const isDirectory = fs.statSync( filePath ).isDirectory();
 
     if ( isDirectory ) {
@@ -17,14 +19,14 @@ function findBuiltFiles( dir ) {
 
     const isProbablyBuilt = filePath.endsWith('.css');
     const shouldIgnore = (
-      /^lib\/_imports\/[^/]+\/[^/]+\/[^/]+\.css$/.test(relativePath) ||
+      /_imports\/[^/]+\/[^/]+\/[^/]+\.css$/.test(relativePath) ||
       filePath.endsWith('fractal.server.refresh.css') ||
       relativePath.includes('_imports/vendors') ||
       filePath.endsWith('README.css')
     );
 
     if ( isProbablyBuilt && ! shouldIgnore ) {
-      builtFiles.push(filePath);
+      builtFiles.push( relativePath );
     }
   }
 
