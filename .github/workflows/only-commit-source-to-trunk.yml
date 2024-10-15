@@ -1,10 +1,11 @@
 # Do not let built-in-place files be comitted to `main` branch
 name: Lint
-on: [push]
-# on:
-#   push:
-#     branches:
-#       - main
+on:
+  pull_request:
+    branches:
+      - epic/v3
+    paths:
+      - '**.css'
 jobs:
   lint:
     runs-on: ubuntu-latest
