@@ -26,7 +26,7 @@
     "build:each": "bin/build-each.js",
     "build:tokens": "bin/build-tokens.js",
     "postbuild:css": "rm -rf dist/fonts && cp -r src/lib/fonts dist/fonts",
-    "prebuild:demo": "rm -rf dist/_utils && cp -r src/lib/_utils dist/_utils",
+    "prebuild:demo": "rm -rf dist/scripts && cp -r src/lib/_imports/scripts dist/scripts",
     "prestart": "npm run prebuild:demo",
     "build:demo": "fractal build",
     "test": "bin/test.js && echo \"Test output at 'dist/_tests' (compare to test input)\"",

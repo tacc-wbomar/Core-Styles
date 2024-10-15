@@ -46,4 +46,4 @@ To add wider [Bootstrap Grid](https://getbootstrap.com/docs/4.0/layout/grid/) co
   </tbody>
 </table>
 
-<script src="{{path '/assets/_utils/js/open-ext-links-in-new-window.js'}}" />
+<script src="{{path '/assets/scripts/open-ext-links-in-new-window.js'}}" />

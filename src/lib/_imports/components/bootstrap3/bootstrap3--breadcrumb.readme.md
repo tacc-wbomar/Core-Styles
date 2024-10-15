@@ -5,4 +5,4 @@ To skin [Bootstrap 3 Breadcrumbs](https://getbootstrap.com/docs/3.3/components/#
 | `.breadcrumb .breadcrumb-major` | Major navigation |
 | `.breadcrumb` | No font styling nor extra spacing |
 
-<script src="{{path '/assets/_utils/js/open-ext-links-in-new-window.js'}}" />
+<script src="{{path '/assets/scripts/open-ext-links-in-new-window.js'}}" />
