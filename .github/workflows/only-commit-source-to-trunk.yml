@@ -10,8 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Lint (Directories)
+      - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: '20.x'
-      - run: npm run lint:dirs
+      - name: Lint directories
+        run: npm run lint:dirs
