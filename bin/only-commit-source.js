@@ -7,6 +7,7 @@ function findBuiltFiles( dir ) {
   let builtFiles = [];
   const files = fs.readdirSync( dir );
 
+
   for ( const file of files ) {
     const filePath = path.join( dir, file );
     const relativePath = path.relative( path.join( __dirname, '../'), filePath );
