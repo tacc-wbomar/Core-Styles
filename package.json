@@ -26,7 +26,6 @@
     "build:each": "bin/build-each.js",
     "build:tokens": "bin/build-tokens.js",
     "postbuild:css": "bin/copy-to-dist.sh",
-    "prestart": "npm run prebuild:demo",
     "build:demo": "fractal build",
     "test": "bin/test.js && echo \"Test output at 'dist/_tests' (compare to test input)\"",
     "lint": "npm run lint:dirs",
