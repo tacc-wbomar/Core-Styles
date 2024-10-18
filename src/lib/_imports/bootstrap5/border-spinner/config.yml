@@ -1,5 +1,3 @@
-context:
-  shouldLoadBootstrap5: true
 variants:
   - name: default
     label: Bootstrap
@@ -7,6 +5,6 @@ variants:
     label: TACC
     status: ready
     context:
+      shouldSkipPattern: false
       supportStyles:
         - ../../assets/trumps/u-hide.css
-        - ../../assets/bootstrap5/border-spinner.css
