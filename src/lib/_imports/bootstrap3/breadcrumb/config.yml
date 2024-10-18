@@ -6,3 +6,6 @@ variants:
     status: ready
     context:
       shouldSkipPattern: false
+  # partials
+  - name: list
+    hidden: true
