@@ -8,6 +8,14 @@ DEST_ROOT="dist/"
 source_path="$SOURCE_ROOT"
 dest_path="$DEST_ROOT"
 
+# Copy vendor stylesheets (while preserving directory structure)
+source_path="${SOURCE_ROOT}_imports/"
+echo "Copy vendor stylesheets from '$source_path' to '$DEST_ROOT'"
+rsync -av --prune-empty-dirs --include='*/' --include='*/vendor/*.css' --exclude='*' "$source_path" "$DEST_ROOT" \
+|| { echo "Error copying"; exit 1; }
+
+echo "Copied vendor stylesheets."
+
 # Copy other files
 dirs=("scripts" "fonts" "tokens")
 for dir in "${dirs[@]}"; do

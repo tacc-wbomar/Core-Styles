@@ -1,7 +1,7 @@
 /*
 Spinner (Bootstrap 5)
 
-Port only the Bootstrap 5 spinner styles that LoadingSpinner needs in tup-ui.
+Port only the Bootstrap 5 spinner styles used by known client [TACC/tup-ui: `LoadingSpinner`](https://github.com/TACC/tup-ui/blob/v1.1.10/libs/core-components/src/lib/LoadingSpinner/LoadingSpinner.global.css#L27-L42).
 
 - [Reactstrap: Components: Spinners](https://react-bootstrap.github.io/components/spinners/)
 - [Bootstrap 5: Components: Spinners](https://getbootstrap.com/docs/5.0/components/spinners/)
