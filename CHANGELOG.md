@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.35.1] - 2024-10-24: Fix Image Card and Bootstrap Demo Bugs
+
+### Fixed
+
+* fix(c-card): image card padding not unset (#412)
+* fix(demo): Bootstrap patterns loads v3 instead of v4 (#410)
+
 ## [2.35.0] - 2024-09-27: Truncate `c-app-card` Desc to 2 Lines
 
 ### Added
@@ -1235,7 +1242,8 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.35.0...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.35.1...HEAD
+[2.35.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.35.1
 [2.35.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.35.0
 [2.34.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.34.0
 [2.33.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.33.1
