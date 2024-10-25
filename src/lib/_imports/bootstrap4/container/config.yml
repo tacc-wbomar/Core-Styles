@@ -8,6 +8,7 @@ context:
 variants:
   - name: default
     label: Bootstrap
+    status: reference
   - name: tacc
     label: TACC
     status: ready
