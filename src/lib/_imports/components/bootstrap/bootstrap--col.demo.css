@@ -3,3 +3,9 @@
 .col > p {
   margin-block: 1rem
 }
+
+.demo-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
