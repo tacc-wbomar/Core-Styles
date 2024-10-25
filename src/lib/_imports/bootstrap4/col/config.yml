@@ -1,0 +1,13 @@
+order: 3
+label: 'Grid: Col'
+context:
+  supportStyles:
+    - ../../assets/components/c-card.css
+variants:
+  - name: default
+    label: Bootstrap
+  - name: tacc
+    label: TACC
+    status: ready
+    context:
+      shouldSkipPattern: false

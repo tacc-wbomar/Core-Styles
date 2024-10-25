@@ -83,7 +83,7 @@
   "watch": {
     "build:watch": {
       "patterns": "src/**/*",
-      "extensions": "css,json",
+      "extensions": "css,postcss,json",
       "ignore": [
         "fractal.server.refresh.css",
         "tokens/*.json"

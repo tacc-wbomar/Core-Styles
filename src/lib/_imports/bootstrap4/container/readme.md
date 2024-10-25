@@ -17,10 +17,10 @@ To add wider [Bootstrap Grid](https://getbootstrap.com/docs/4.0/layout/grid/) co
   <thead>
     <tr>
       <th></th>
-      <th>Extra extra large <br>
+      <th>Extra extra wide <br>
         <small>≥1680px</small>
       </th>
-      <th>Extra extra extra large <br>
+      <th>Extra extra extra wide <br>
         <small>≥1920px</small>
       </th>
     </tr>
