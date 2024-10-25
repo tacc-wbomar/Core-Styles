@@ -7,12 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.36.0] - 2024-10-25: Dark and Muted Bootstrap Columns
+
+### Added
+
+- feat(bootstrap4): columns -dark and -muted (#414, #415)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.35.1...v2.36.0
+
 ## [2.35.1] - 2024-10-24: Fix Image Card and Bootstrap Demo Bugs
 
 ### Fixed
 
 * fix(c-card): image card padding not unset (#412)
 * fix(demo): Bootstrap patterns loads v3 instead of v4 (#410)
+
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.35.0...v2.35.1
 
 ## [2.35.0] - 2024-09-27: Truncate `c-app-card` Desc to 2 Lines
 
@@ -1242,7 +1253,8 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.35.1...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.36.0...HEAD
+[2.36.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.36.0
 [2.35.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.35.1
 [2.35.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.35.0
 [2.34.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.34.0
