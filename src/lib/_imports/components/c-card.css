@@ -64,12 +64,15 @@
 :--c-card--standard-2,
 :--o-section--muted :--c-card--standard,
 :--o-section--muted :--c-card--plain,
+.col-muted :--c-card--standard,
+.col-muted :--c-card--plain,
 :--c-card :--c-card--standard,
 :--c-card :--c-card--plain {
     background-color: var(--global-color-primary--xx-light);
 }
 :--c-card--standard-2,
 :--o-section--muted :--c-card--standard,
+.col-muted :--c-card--standard,
 :--c-card :--c-card--standard {
     border-top-color: var(--global-color-accent--tertiary);
 }
@@ -77,22 +80,31 @@
 /* On Muted + Within Card & On Dark + Within Card */
 :--o-section--muted :--c-card :--c-card--plain,
 :--o-section--muted :--c-card :--c-card--standard,
+.col-muted :--c-card :--c-card--plain,
+.col-muted :--c-card :--c-card--standard,
 :--o-section--dark :--c-card :--c-card--plain,
-:--o-section--dark :--c-card :--c-card--standard {
+:--o-section--dark :--c-card :--c-card--standard,
+.col-dark :--c-card :--c-card--plain,
+.col-dark :--c-card :--c-card--standard {
     background-color: var(--global-color-primary--x-light);
 }
 
 /* On Dark */
 :--c-card--standard-3,
 :--o-section--dark :--c-card--standard,
-:--o-section--dark :--c-card--plain {
+:--o-section--dark :--c-card--plain,
+.col-dark :--c-card--standard,
+.col-dark :--c-card--plain {
     background-color: var(--global-color-primary--xx-light);
     border-top-color: var(--global-color-accent--secondary);
 }
 /* To color text with greater specificity than .o-section does */
 :--o-section--dark :--c-card--plain > *:not(a, button),
 :--o-section--dark :--c-card--standard > *:not(a, button),
-:--o-section--dark :--c-card--standard-N > *:not(a, button) {
+:--o-section--dark :--c-card--standard-N > *:not(a, button),
+.col-dark :--c-card--plain > *:not(a, button),
+.col-dark :--c-card--standard > *:not(a, button),
+.col-dark :--c-card--standard-N > *:not(a, button) {
     color: var(--global-color-primary--xx-dark);
 }
 
@@ -106,6 +118,9 @@
 
 :--c-card > a:not(:--c-button),
 :--c-card > p > a:not(:--c-button) {
+    /* XXX: Prevents text around it from wrapping if link spans two lines */
+    /* FAQ: To fix on client, `class="d-inline"` or `style="display: inline"` */
+    /* ???: Why does this use `inline-flex`? */
     display: inline-flex;
     align-items: baseline;
 }

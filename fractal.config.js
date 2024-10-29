@@ -112,6 +112,10 @@ engine.handlebars.registerHelper('dataColAttr', function(row, val, cols) {
 
   return (columnHeading) ? `data-col="${columnHeading}"` : '';
 });
+engine.handlebars.registerHelper('ifno', function(value, fallback) {
+  const output = value || fallback;
+  return new engine.handlebars.SafeString(output);
+});
 
 // Export
 module.exports = fractal;

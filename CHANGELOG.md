@@ -7,6 +7,222 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.36.0] - 2024-10-25: Dark and Muted Bootstrap Columns
+
+### Added
+
+- feat(bootstrap4): columns -dark and -muted (#414, #415)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.35.1...v2.36.0
+
+## [2.35.1] - 2024-10-24: Fix Image Card and Bootstrap Demo Bugs
+
+### Fixed
+
+* fix(c-card): image card padding not unset (#412)
+* fix(demo): Bootstrap patterns loads v3 instead of v4 (#410)
+
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.35.0...v2.35.1
+
+## [2.35.0] - 2024-09-27: Truncate `c-app-card` Desc to 2 Lines
+
+### Added
+
+* enhance: DSAPP-57 limit height of c-app-card desc by @wesleyboar in https://github.com/TACC/Core-Styles/pull/405
+
+### Updated
+
+* build(deps): bump cookie, socket.io and express by @dependabot in https://github.com/TACC/Core-Styles/pull/404
+
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.34.0...v2.35.0
+
+## [2.34.0] - 2024-09-27: Support `@mixin overlay`, `postcss-import-url`
+
+### Added
+
+- feat: WP-280 `@mixin` overlay (#402)
+- feat: support postcss-import-url if configured (#401)
+
+### Updated
+
+- build(deps-dev): bump express from 4.19.2 to 4.21.0 (#399)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.33.1...v2.34.0
+
+## [2.33.1] - 2024-09-09: Restore v1/Portal Messages
+
+### Fixed
+
+- fix: revert PR #377 manually since design tokens (#396, #397)
+
+### Changed
+
+- refactor: simpler global message links styles (#395)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.33.0...v2.33.1
+
+## [2.33.0] - 2024-09-06: Heading & Link Color in `s-footer`, Fix Build Watch
+
+### Added
+
+- enhance: white headings in s-footer (#391)
+- enhance: accent color in s-footer (#390, #392)
+
+### Fixed
+
+- fix: npm run watch not working on css (#393)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.32.1...v2.33.0
+
+## [2.32.1] - 2024-09-05: Fix `:--dark-context-safe` & Deprecated Vars
+
+### Fixed
+
+- fix: docs \& portal not parse `:--dark-context-safe` (#388)
+- fix: portal deprecated colors (#387)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.32.0...v2.32.1
+
+## [2.32.0] - 2024-09-05: Purple Accent to Blue, Add Design Tokens & Weights
+
+### Added
+
+- enhance: CMD-182 design tokens (#372)
+- feat: all font-weight vars (#385)
+
+### Fixed
+
+- fix: font weight black should be 900 not 800 (#384)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.31.0...v2.32.0
+
+## [2.31.0] - 2024-09-03: Portal v2 Message Style, Drop-Cap Mixin
+
+> **Warning**
+> Portal **v1** message style restored in [2.33.1].
+
+### Added
+
+- feat: let s-drop-cap be used intuitively (#381)
+- feat: drop-cap mixin (#380, #382)
+- enhance: standardize message icon support (#379)
+
+### Fixed
+
+- fix: x-message styles (#376)
+- fix: admonition type "tip" has no color (#374)
+
+### Changed
+
+- refactor: move message mixins to x-message (#378)
+- refactor: use v2/cms colors for compact/portal messages (#377)
+
+### Updated
+
+- deps: postcss preset env v6 to v10 (#373)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.30.1...v2.31.0
+
+## [2.30.1] - 2024-08-06: Disable Busy Buttons
+
+### Fixed
+
+- fix: disable busy buttons (#370)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.30.0...v2.30.1
+
+## [2.30.0] - 2024-07-31: Readonly Fields, S-Form Fieldsets
+
+### Added
+
+- feat: style read-only fields (#367, #368)
+
+### Fixed
+
+- fix: should support fieldsets in an `s-form` (#365)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.29.1...v2.30.0
+
+## [2.29.1] - 2024-07-31: Accent Color for Form Submit Button Busy State
+
+### Fixed
+
+- fix: form submit buttons busy state no accent hue (#361)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.29.0...v2.29.1
+
+## [2.29.0] - 2024-07-30: Use `@mixin`, Deprecate `@extend`
+
+### Added
+
+- feat: wp-280 use `@mixin`, deprecate `@extend` (#333)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.28.0...v2.29.0
+
+## [2.28.0] - 2024-07-30: Provide & Skin Bootstrap 5 Border Spinner
+
+###  Added
+
+- feat: bootstrap5 border spinner (#359)
+- feat: shouldLoadBootstrap5 (#357)
+
+### Fixed
+
+- fix: disabled button text too hard to see (#358)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.27.1...v2.28.0
+
+## [2.27.1] - 2024-07-24: Deprecate Most CMS Guide Doc Classes
+
+## Changed
+
+- chore: pill line-height unnecessary (#353)
+- feat: CMD-143 deprecate most CMS document style class names (#355)
+
+## Updated
+
+- build(deps): bump ws, socket.io-client, engine.io and socket.io-adapter (#351)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.27.0...v2.28.0
+
+## [2.27.0] - 2024-06-20: Add Bootstrap 3 `.breadcrumb`, PostCSS `@mixin`
+
+### Added
+
+- feat: DES-2806 breadcrumbs ignore html whitespace (#348)
+- feat: DES-2806 breadcrumbs via mixin \& sans `.s-` prefix (#346, #349)
+- feat: WP-280 install postcss-mixins (#347)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.26.1...v2.27.0
+
+## [2.26.1] - 2024-05-08: Update/Fix `BentonSans` Fonts
+
+### Fixed
+
+- fix: BentonSans font update (93cddd5)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.26.0...v2.26.1
+
+## [2.26.0] - 2024-04-16: Add Hero Banner, Add `ifno` Helper, Fix App Card
+
+### Added
+
+- feat: wp-280 add "ifno" helper for default values (#337)
+- CMD 105: CMS: Hero Banner Pattern (#324, #328, #331)
+
+### Fixed
+
+- fix: des-2725 c-app-card--types not centered (#334)
+
+### Updated
+
+- build(deps-dev): bump express from 4.18.2 to 4.19.2 (#325)
+- build(deps-dev): bump follow-redirects from 1.15.4 to 1.15.6 (#322)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.25.3...v2.26.0
+
 ## [2.25.3] - 2024-03-15: Rebuild `s-app-card` as `c-app-card`
 
 ### Fixed
@@ -1037,7 +1253,25 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.25.3...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.36.0...HEAD
+[2.36.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.36.0
+[2.35.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.35.1
+[2.35.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.35.0
+[2.34.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.34.0
+[2.33.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.33.1
+[2.33.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.33.0
+[2.32.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.32.1
+[2.32.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.32.0
+[2.31.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.31.0
+[2.30.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.30.1
+[2.30.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.30.0
+[2.29.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.29.1
+[2.29.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.29.0
+[2.28.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.28.0
+[2.27.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.27.1
+[2.27.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.27.0
+[2.26.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.26.1
+[2.26.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.26.0
 [2.25.3]: https://github.com/TACC/Core-Styles/releases/tag/v2.25.3
 [2.25.2]: https://github.com/TACC/Core-Styles/releases/tag/v2.25.2
 [2.25.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.25.1

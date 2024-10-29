@@ -1,3 +1,5 @@
+@import url('../tools/x-truncate.css');
+
 @custom-selector :--c-app-card
   .c-app-card;
 
@@ -28,7 +30,7 @@
 
   text-align: center;
 
-  &:is(a) {
+  &:where(a) {
     color: inherit;
 
     &:hover {
@@ -48,6 +50,12 @@
 }
 
 
+/* Desc */
+:--c-app-card__desc {
+    @mixin truncate--many-lines;
+}
+
+
 
 /* Types */
 :--c-app-card__types {
@@ -60,11 +68,11 @@
   margin-block: auto;
   flex-grow: 0;
 
-  &:is(ul) {
+  &:where(ul) {
     padding-inline-start: 0;
   }
 }
-:--c-app-card__types > :is(li, div, p) {
+:--c-app-card__types > :where(li, div, p) {
   display: inline;
 }
 :--c-app-card__types > :not(:last-child)::after {
@@ -81,7 +89,7 @@
   flex-direction: row;
   justify-content: space-between;
 
-  &:is(ul) {
+  &:where(ul) {
     list-style: none;
     padding-inline-start: 0;
     margin-block: unset;
