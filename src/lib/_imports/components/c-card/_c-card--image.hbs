@@ -27,7 +27,7 @@
 
 {{else}}
 
-  <h3>Card - Image {{position}}</h3>
+  <h3 id="card-image-{{position}}">Card - Image {{position}}</h3>
   <p>{{> @text-of-one-paragraph-short }}</p>
   {{#if tall}}
   {{> @message tag="p" type="warning" scope="inline" content="Narrow images might not fill space available. Just use a wider image." }}
