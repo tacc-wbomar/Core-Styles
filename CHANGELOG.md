@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
-## [2.37.0] - 2024-10-31: Dark and Muted Bootstrap Columns
+## [2.37.0] - 2024-10-31: Linked Images in Cards
 
 ### Added
 
