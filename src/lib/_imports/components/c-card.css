@@ -326,7 +326,8 @@
 }
 
 /* Image: Link */
-
+/* FAQ: Disabled image link UX in TACC/Core-Styles#422 */
+/*
 :--c-card__image-link {
     @mixin block-link;
 }
@@ -339,6 +340,7 @@
 :--c-card__image-link:active {
     @mixin block-link--active;
 }
+*/
 
 /* Image: Contact Card */
 
