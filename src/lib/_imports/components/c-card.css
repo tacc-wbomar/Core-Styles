@@ -326,7 +326,7 @@
 }
 
 /* Image: Link */
-/* FAQ: Disabled in TACC/Core-Styles#422 */
+/* FAQ: Disabled image link UX in TACC/Core-Styles#422 */
 /*
 :--c-card__image-link {
     @mixin block-link;

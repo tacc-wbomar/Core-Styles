@@ -54,9 +54,5 @@
 @custom-selector :--c-card__image
     :--c-card img,
     :--c-card__image-link;
-
-/* FAQ: Disabled in TACC/Core-Styles#422 */
-/*
 @custom-selector :--c-card__image-link
     :--c-card a:has(> img);
-*/
