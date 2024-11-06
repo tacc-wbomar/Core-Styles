@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.37.2] - 2024-11-06: Do Not Build Demo on Publish
+
+### Removed
+
+- chore: on publish, do not build demo nor add docs (a097e42)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.37.1...v2.37.2
+
 ## [2.37.1] - 2024-11-06: Fix Linked Images in Cards
 
 ### Changed
@@ -1273,7 +1281,8 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.37.1...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.37.2...HEAD
+[2.37.2]: https://github.com/TACC/Core-Styles/releases/tag/v2.37.2
 [2.37.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.37.1
 [2.37.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.37.0
 [2.36.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.36.0
