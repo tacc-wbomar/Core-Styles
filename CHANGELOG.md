@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [2.37.1] - 2024-11-06: Fix Linked Images in Cards
+
+### Changed
+
+- enhance: remove card image hover state (#422)
+
+### Fixed
+
+- fix: c-card image link selector too broad (#421)
+
+**Full Changelog**: https://github.com/TACC/Core-Styles/compare/v2.37.0...v2.37.1
+
 ## [2.37.0] - 2024-10-31: Linked Images in Cards
 
 ### Added
@@ -1261,7 +1273,8 @@ See [2.5.0] instead.
 
 Initial working code. (This code may not work on all environments.)
 
-[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.37.0...HEAD
+[unreleased]: https://github.com/TACC/Core-Styles/compare/v2.37.1...HEAD
+[2.37.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.37.1
 [2.37.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.37.0
 [2.36.0]: https://github.com/TACC/Core-Styles/releases/tag/v2.36.0
 [2.35.1]: https://github.com/TACC/Core-Styles/releases/tag/v2.35.1
