@@ -23,6 +23,7 @@ Styleguide Trumps.Scopes.Header
             UPDATE: As of PR #312, this has likely changed (untested). */
 
 .s-header {
+  --header-major-border-width: 1px;
   font-size: var(--global-font-size--medium); /* NO-R/EM: Overwrite `bootstrap.3.3.7.css` */
   font-weight: var(--bold);
   letter-spacing: 0.025px; /* 14px * 0.025em equals design-requested 0.35px */
@@ -39,7 +40,7 @@ Styleguide Trumps.Scopes.Header
   -moz-osx-font-smoothing: grayscale;
 
   /* To hide border, set this in theme to match `--header-bkgd-color` value */
-  border-bottom: 1px solid var(--header-major-border-color);
+  border-bottom: var(--header-major-border-width) solid var(--header-major-border-color);
 }
 
 /* Affiliation */
@@ -96,48 +97,58 @@ Styleguide Trumps.Scopes.Header
 /* Navigation: Links */
 
 .s-header .nav-link {
-  --line-height: 24px;
-  --border-width: 4px;
-  --border-offset: calc(var(--nav-padding-vert) - var(--border-width));
-  --border-color: var(--global-color-secondary--light);
 
-  /* The nav vertical padding does not match the link border, so the alignment
-     of the link border with the bottom of the header is off by small amount */
-  position: relative;
-  top: var(--border-offset);
-
-  line-height: var(--line-height);
+  border-color: transparent;
+  border-style: solid;
+  border-width: 0 0 4px;
 
   /* If link text uses 2 lines, header grows taller (but it must not do so) */
   white-space: nowrap;
 }
 
-@media (--medium-and-above) {
-  .s-header .nav-item {
-      display: flex;
+@define-mixin header__nav-link--tall {
+  &.s-header .nav-item {
+    display: flex;
+  }
+
+  &.s-header .nav-link {
+    display: flex;
+    align-items: center;
+
+    --move-text-back-to-middle: var(--nav-padding-vert);
+    --move-underline-to-bottom: calc( var(--nav-padding-vert) + var(--header-major-border-width) );
+
+    /* To align the underline of a hovered link to bottom of header */
+    /* FAQ: Increase link height to match header, then push link back up */
+    position: relative;
+    height: calc( 100% + var(--move-underline-to-bottom) + var(--move-text-back-to-middle) );
+    top: calc( var(--move-text-back-to-middle) * -1 );
   }
 }
-
-.s-header .nav-link {
-  display: flex;
-  align-items: center;
+@media (--x-narrow-and-above) {
+  .navbar-expand-sm { @mixin header__nav-link--tall; }
+}
+@media (--narrow-and-above) {
+  .navbar-expand-md { @mixin header__nav-link--tall; }
+}
+@media (--medium-and-above) {
+  .navbar-expand-lg { @mixin header__nav-link--tall; }
+}
+@media (--wide-and-above) {
+  .navbar-expand-xl { @mixin header__nav-link--tall; }
 }
 
 .s-header .nav-link:hover,
 .s-header .nav-link:focus,
 .s-header .nav-link:active,
 .s-header .nav-item.active .nav-link {
-  border-width: 0 0 var(--border-width);
-  border-style: solid;
-  border-color: var(--border-color);
-  margin-bottom: calc(var(--border-width) * -1);
+  border-color: var(--global-color-secondary--light);
 }
 /* HACK: Using an ID selector, because Bootstrap has overspecific selectors */
 #s-header .nav-link,
 /* HACK: Support `span.nav-link` having children `a` and `a.dropdown-toggle-split` */
 #s-header .nav-link > a {
   color: var(--header-text-color);
-  /* text-decoration: none; */ /* already provided by Bootstrap */
 }
 
 /* Navigation: Links: Responsive Design */
